@@ -1,6 +1,35 @@
 <!-- CSS Definitions -->
 
 /* ############################################## --
+ Code for grid containers. Copied from:
+ https://www.w3schools.com/css/css_grid_container.asp
+ My understanding? - think I get this one ... but!
+ Pity number of columns is fixed?? I choose 3 for now.
+ Do I have to repeat for different column counts?
+
+ Mabe I can override with a local grid-template-columns?
+ Experiment later.
+-- ############################################## */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* ############################################## --
+ Code for grid containers. END.
+-- ############################################## */
+
+/* ############################################## --
  Code for popups. Copied wholesale from:
  https://www.w3schools.com/howto/howto_js_popup.asp
  My understanding? - Partial :-(
