@@ -10,9 +10,23 @@
  Mabe I can override with a local grid-template-columns?
  Experiment later.
 -- ############################################## */
-
 .grid-container {
- /* justify-content: space-evenly; width: 30%;*/
+  display: grid;
+  height: 400px;
+  align-content: start;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+ /*.grid-container {
+ justify-content: space-evenly; width: 30%;
   display: grid;  align-content: start; grid-gap: 10px;
   grid-template-columns: auto; auto; auto;
   background-color: Yellow; padding: 10px;
@@ -20,7 +34,7 @@
 .grid-container > div {
   background-color: White;
   border: 1px solid black; text-align: center; font-size: 14px;
-}
+}*/
 
 /* ############################################## --
  Code for grid containers. END.
