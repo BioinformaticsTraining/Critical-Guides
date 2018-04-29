@@ -12,9 +12,9 @@
 -- ############################################## */
 
 .grid-container {
-  justify-content: space-evenly; width: 100%;
+  justify-content: space-evenly; width: 30%;
   display: grid;  align-content: center; grid-gap: 10px;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: auto; auto; auto;
   background-color: Yellow; padding: 10px;
 }
 .grid-container > div {
