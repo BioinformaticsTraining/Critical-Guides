@@ -12,13 +12,13 @@
 -- ############################################## */
 
 .grid-container {
-  justify-content: space-evenly; width: 30%;
+ /* justify-content: space-evenly; width: 30%;*/
   display: grid;  align-content: start; grid-gap: 10px;
   grid-template-columns: auto; auto; auto;
   background-color: Yellow; padding: 10px;
 }
 .grid-container > div {
-  background-color: Coral;
+  background-color: White;
   border: 1px solid black; text-align: center; font-size: 14px;
 }
 
