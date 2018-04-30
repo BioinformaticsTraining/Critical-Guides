@@ -8,7 +8,7 @@
 
 <script src="../JavaScript/Script.js"></script>
 
-<title>Critical Guides for Bioinformatics</title>
+<title>Critical Guide - Command Line UNIX for Bioinformatics</title>
 
 </head>
  
@@ -34,44 +34,82 @@
   <tr/>
 </table><br><br>
      
-<!-- Course Title and Desciption - Something like -->
+<!-- Guide Title - Something like -->
 
-<h1 style="text-align:center";>An Introduction to basic Web Based Bioinformatics</h1>
+<h1 style="text-align:center";>Critical Guide - Command Line UNIX for Bioinformatics</h1>
 
-Offer a Clock ... why not :-)
-https://www.w3schools.com/js/default.asp
+<!-- Offer a Clock ... why not :-)
+https://www.w3schools.com/js/default.asp -->
 
 <button type="button"
-onclick="document.getElementById('Timer').innerHTML = Date()">
-Click here to display Date and Time.</button>
-<p id="Timer"></p>
+onclick="document.getElementById('Start_Time').innerHTML = Date()">
+Click to record your <b>Start</b> time.</button>
+<p id="Start_Time"></p>
 
-NOTES<br><br>
+<h2>Guide Overview</h2>
+
+<div style="background-color:Moccasin; width: 800px">
+
+<p>There are very many
+
+</div>
+
+<h2>Preliminaries</h2>
+
+<div style="background-color:Moccasin; width: 800px">
 
 <p>Maybe start with a video on directory structure?
-Looked at existing ... not impressed! Quality poor and too much testostrone nerd release.
+Looked at existing ... not impressed! Quality poor and too much testosterone nerd release.
 
-Need to do it myself
+Need to do it myself?
 Points:
-/ ... correspondance (vaguely) with C:\
-tree hyracrchy ... wobder how one  spells that?
-relative to cd addressing - ./fiddle/diddle (default so same as fiffle/diddle)
+/ ... correspondence (vaguely) with C:\
+tree hierarchy ... wonder how one  spells that?
+relative to cd addressing - ./fiddle/diddle (default so same as piffle/diddle)
 relative to home - ~/fiddle/diddle
 absolute - /home/hero/fiddle/diddle
 based around picture like<br>
-<img src="Images/directory-tree.png" alt="Foooey!" height="100" width="120">
+<img src="Images/directory-tree.png" alt="Hooey!" height="100" width="120">
 </p>
+</div>
 
-<br><br>
+<h2>A simple exercise.</h2>
 
-<a href="http://man7.org/linux/man-pages/man1/cd.1p.html"<strong>cd</strong><a><br>
+<div style="background-color:Moccasin; width: 800px">
+
+<p>In which we strive to introduce as many common UNIX commands as is practical.</p>
+
+<p>Every time a new command is used, a link to the official Manual Pages for that command is provided. Here you can wallow in the full unabridged story. The exercise represents a brutally abridged practical overview.</p>
+
+<p>Where it was felt to be helpful, the way a step of the exercise could be achieved using a typical LINUX GUI environment (default Ubuntu) is offered.</p>
+
+<p><b><u>Hint:</u></b> Especially when the commands of the exercise are long,
+               why not <b>Copy/Paste</b> from this page?</p>
+</div>
+
+<div style="background-color:LightGreen; width: 800px">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/cd.1p.html"
+                 <strong>cd</strong><a>.
+  This command enables a user to move around the UNIX File System.
+  That is, to <b>c</b>hange the working <b>d</b>irectory.
+</div><br>
+
 cd<br>
+
+<a href="http://www.hall-woodhouse.co.uk/explore-our-beers">badger<a><br>.
+
 cd Desktop<br>
 
-<a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
+<div style="background-color:LightGreen; width: 800px">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"
+                 <strong>mkdir</strong><a>.
+  A command for <b>m</b>a<n>k</b>ing <b>dir</b>ectories.
+</div><br>
+
+
 mkdir ProjectX<br>
      
-<details style="background-color:Cyan;">
+<details style="background-color:Cyan; width: 800px">
   <summary>Click for GUI equivalent.</summary>
   <div class="grid-container" id="grid_mkdir01">
     <div class="popup" onmouseover="Popup_Text(document.getElementById('mkdir01_Popup'))")">
@@ -84,7 +122,7 @@ mkdir ProjectX<br>
     </div>
     <div class="popup" onmouseover="Popup_Text(document.getElementById('mkdir02_Popup'))")">
       <div class="container">
-        <img src="Images/mkdir02.png" alt="Curses!" style="height:275px; width:225px;">
+        <img src="Images/mkdir02.png" alt="Curses!" style="height:350px; width:245px;">
         <span class="popuptext" id="mkdir02_Popup" style="text-align:center;">
               Right hand mouse click on the new <b>Untitled Folder</b> icon.
               Select <b>Rename</b>.
@@ -103,7 +141,7 @@ mkdir ProjectX<br>
 
 cd ProjectX<br>
 
-<details style="background-color:Cyan;">
+<details style="background-color:Cyan; width: 800px">
   <summary>Click for GUI equivalent.</summary>
   <div class="grid-container" id="grid_cd01">
     <div class="popup" onmouseover="Popup_Text(document.getElementById('cd00_Popup'))")">
@@ -123,7 +161,77 @@ cd ProjectX<br>
   </div>
 </details><br>
 
-<a href="http://man7.org/linux/man-pages/man1/ls.1p.html"<strong>ls</strong><a><br>
+<div style="background-color:LightGreen; width: 800px">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/ls.1p.html"
+                 <strong>ls</strong><a>.
+  A command to <b>l</b>i<b>s</b>t the contents of a directory.
+</div><br>
+
+ls<br>
+
+<div style="background-color:LightGreen; width: 800px">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/touch.1p.html"
+                 <strong>touch</strong><a>. 
+  In the exercise, we use <b>touch</b> to create new empty files
+  and to update the modification times of existing files.
+</div><br>
+  
+
+touch a<br>
+
+touch b c aa bb cc abc def ghi<br>
+
+ls<br>
+
+ls -l<br>
+
+touch ???
+
+<div style="background-color:LightGreen; width: 800px">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
+                 <strong>ln</strong><a>.
+  A command to make <b>l</b>i<b>n</b>ks to files/directories.
+</div><br>
+
+<dev style="background-color:PaleGoldenrod;">
+  <b><i>Checkpoint</i></b>
+
+  What is the consequence of the command:<br><br>
+
+  <b>ls -lrt</b><br><br>
+
+  {Hint: The 
+    <a href="http://man7.org/linux/man-pages/man1/ls.1p.html"<strong>ls Manual Page</strong><a>
+                          might help a trifle}<br>
+
+  <details style="background-color:LightGoldenrodYellow; width: 800px">
+  <summary>Answer.</summary>
+
+    <div class="popup" onmouseover="Popup_Text(document.getElementById('cd00_Popup'))")">
+      <div class="container">
+        <img src="Images/mkdir03.png" alt="Curses!" style="height:150px; width:150px;">
+        <span class="popuptext" id="cd00_Popup" style="text-align:center;">
+              Double Click on the <b>ProjectX</b> folder icon.</span>
+      </div>
+    </div>
+    <div class="popup" onmouseover="Popup_Text(document.getElementById('cd01_Popup'))")">
+      <div class="container">
+        <img src="Images/EmptyFolder.png" alt="Curses!" style="height:300px; width:300px;">
+        <span class="popuptext" id="cd01_Popup" style="text-align:center;">
+              Admire the emptiness of the Folder/Directory called <b>ProjectX</b>.</span>
+      </div>
+    </div>
+  </div>
+</details><br>
+
+
+
+
+
+
+
+
+
 <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html"<strong>rmdir</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/rm.1p.html"<strong>rm</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/cat.1p.html"<strong>cat</strong><a><br>
@@ -136,6 +244,10 @@ cd ProjectX<br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
-<a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
+
+<button type="button"
+onclick="document.getElementById('End_Time').innerHTML = Date()">
+Click to display your <b>Finish</b> time.</button>
+<p id="End_Time"></p>
 
 </body></html> 
