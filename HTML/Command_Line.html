@@ -343,6 +343,44 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   </div>
 </details>
 
+<div class="new_command">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/mv.1p.html"
+                 <strong>mv</strong><a>.
+  A command to rename files/directories or move them between directories.
+</div>
+
+<p>Move all the <b>files</b> with single letter names into the <b>directory dirI</b> with the command:</p>
+
+<p class="command">
+  <b>mv ? dirI</b>
+</p>
+
+<p>In this context, '<n>?</b>' is a wild card representing a single character.
+   So this command reads:<br>
+   "move all <b>files</b> names with any single character
+   into the <b>directory</b> called <b>dirI</b>"</p>
+
+<p>Continue in fashion logical to move all the <b>files</b> with two letter names into the <b>directory dirII</b> with the command:</p>
+
+<p class="command">
+  <b>mv ?? dirII</b>
+</p>
+
+and ever predictably, move the <b>files</b> with three character names to <b>dirIII</b> with the command:
+
+<p class="command">
+  <b>mv ??? dirIII</b>
+</p>
+
+<div class="new_command">
+  Introducing <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
+                 <strong>ln</strong><a>.
+  A command to make <b>l</b>i<b>n</b>ks to files/directories.
+</div>
+
+A link is equivant to a Windows shortcut. Using links can enable a file/directory to be accessed from different places 
+
+
 <p class="command">
  <b>ls -l</b>
 </p>
@@ -351,51 +389,56 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <b>touch ???</b>
 </p>
 
-<div class="new_command">
-  Introducing <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
-                 <strong>ln</strong><a>.
-  A command to make <b>l</b>i<b>n</b>ks to files/directories.
-</div>
-<div class="new_command">
-  Introducing <a href="http://man7.org/linux/man-pages/man1/mv.1p.html"
-                 <strong>mv</strong><a>.
-  A command to rename files/directories or move them between directories.
-</div>
+
 <br>
 
 <div style="background-color:PaleGoldenrod;">
   <h3><i><u>Checkpoint</u></i></h3>
 
   <p><b>Commands introduced thus far are:</b>
+  <ol>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/cd.1p.html"
+            <strong>cd</strong><a>.
+            <b>c</b>hange the working <b>d</b>irectory.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html"
+            <strong>pwd</strong><a>.
+            <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"
+            <strong>mkdir</strong><a>.
+            <b>m</b>a<n>k</b>es <b>dir</b>ectories.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/ls.1p.html"
+            <strong>ls</strong><a>.
+            <b>l</b>i<b>s</b>ts the contents of a directory.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/touch.1p.html"
+            <strong>touch</strong><a>. 
+            Creates new empty files and updates the modification times of existing files.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/mv.1p.html"
+             <strong>mv</strong><a>.
+             Renames or <b>m</b>o<b>v</b>es <b>files</b> and <b>directories</b>.
+    </li>
+    <li>
+      <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
+            <strong>ln</strong><a>.
+            Creates <b>l</b>i<b>n</b>ks to files/directories.
+    </li>
+  </ol>
 
-  <p><a href="http://man7.org/linux/man-pages/man1/cd.1p.html"
-                   <strong>cd</strong><a>.
-     <b>c</b>hange the working <b>d</b>irectory.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/pwd.1p.html"
-                   <strong>pwd</strong><a>.
-    <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"
-                   <strong>mkdir</strong><a>.
-    <b>m</b>a<n>k</b>es <b>dir</b>ectories.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/ls.1p.html"
-                   <strong>ls</strong><a>.
-    <b>l</b>i<b>s</b>ts the contents of a directory.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/touch.1p.html"
-                   <strong>touch</strong><a>. 
-    Creates new empty files and updates the modification times of existing files.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
-                   <strong>ln</strong><a>.
-    Creates <b>l</b>i<b>n</b>ks to files/directories.
-  </p>
-  <p><a href="http://man7.org/linux/man-pages/man1/mv.1p.html"
-                   <strong>mv</strong><a>.
-    Renames or <b>m</b>o<b>v</b>es <b>files</b> and <b>directories</b>.
-  </p>
+  <p><b>Concepts/tricks introduced thus far are:</b>
+  <ol>
+    <li>'<b>?</b>' as a single character wild card.</li>
+    <li>'<b>*</b>' as a mult-character wild card.</li>
+  </ol>
 
   <p> Next some simple questions to test your understanding.</p>
   <p>What is the consequence of the command:</p>
@@ -412,8 +455,19 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
       <summary>Answer.</summary>
         <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:424px; width:800px;">
       </details>
-    </ol>
-  </div>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+  </ol>
+</div>
 
 <br><br><br><br>
 <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html"<strong>rmdir</strong><a><br>
@@ -423,7 +477,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
 <a href="http://man7.org/linux/man-pages/man1/echo.1p.html"<strong>echo</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/wget.1.html"<strong>wget</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man3/history.3.html"<strong>history</strong><a><br>
-<a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
+<a href="http://man7.org/linux/man-pages/man1/cp.1p.html"<strong>cp</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"<strong>mkdir</strong><a><br>
