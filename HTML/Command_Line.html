@@ -343,6 +343,27 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   </div>
 </details>
 
+<p>Most <b>UNIX commands</b> can be customised by the use of <b>switches</b>.</p>
+
+   <p><b>Switches</b> are specified immediately after the command itself
+   and prefixed by '<b>-</b>'.</p>
+
+   <p>The full range of available switches for any given command is included
+   in its manual pages.</p>
+
+   <p>Inspect the contents of <b>ProjectX</b> once more, but this time,
+   request a little more detail using <b>ls</b> with the <b>l switch</b>.</p>
+
+<p class="command">
+  <b>ls -l</b>
+</p>
+
+<details class="comment">
+  <summary>Comment</summary>
+  <img src="Images/lslong01.png" alt="Curses!" style="height:566px; width:800px;">
+</details>
+
+<br>
 <div class="new_command">
   Introducing <a href="http://man7.org/linux/man-pages/man1/mv.1p.html"
                  <strong>mv</strong><a>.
@@ -372,13 +393,39 @@ and ever predictably, move the <b>files</b> with three character names to <b>dir
   <b>mv ??? dirIII</b>
 </p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="new_command">
   Introducing <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
                  <strong>ln</strong><a>.
   A command to make <b>l</b>i<b>n</b>ks to files/directories.
 </div>
 
-A link is equivant to a Windows shortcut. Using links can enable a file/directory to be accessed from different places 
+A link is equivant to a Windows shortcut. Using links can enable a file/directory to be accessed from different places.
+
+Make a link from the working directory (ProjectX) to the file a, now in the directory dirI with the command:
+
+ln -s dirI/a .
+
 
 
 <p class="command">
@@ -388,7 +435,6 @@ A link is equivant to a Windows shortcut. Using links can enable a file/director
 <p class="command">
   <b>touch ???</b>
 </p>
-
 
 <br>
 
