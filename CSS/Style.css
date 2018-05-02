@@ -1,4 +1,38 @@
-<!-- CSS Definitions -->
+/* CSS Definitions */
+
+/* ############################################## --
+ Class definitions.
+ https://www.w3schools.com/html/html_css.asp
+-- ############################################## */
+
+/* p for Exercise Commands  */
+
+p.command {
+    background-color: Black; color: White;
+    font-family: courier; font-size: 20px;
+    width: 450px;   
+}
+
+/* div for Exercise New Commands */
+
+div.new_command {
+    background-color: LightGreen; border-style: double;
+    width: 800px
+}
+
+/* details for Exercise Comments */
+
+details.comment {
+    background-color: LightYellow;
+    width: 100px;
+}
+
+/* details for GUI Equivalents */
+
+details.gui {
+    background-color:Cyan;
+    width: 900px;
+}
 
 /* ############################################## --
  Code for grid containers. Copied from:
@@ -12,15 +46,15 @@
 -- ############################################## */
 
 .grid-container {
-  justify-content: space-evenly; width: 30%;
+  justify-content: space-evenly;
   display: grid;  align-content: start; grid-gap: 10px;
-  grid-template-columns: auto; auto; auto;
-  background-color: Yellow; padding: 10px;
+  grid-template-columns: auto auto auto;
+  background-color: Yellow;
 }
 
 .grid-container > div {
-  background-color: White;
-  border: 1px solid black; text-align: center; font-size: 16px;
+  background-color: Yellow;
+  text-align: center; font-size: 16px;
 }
 
 /* ############################################## --
