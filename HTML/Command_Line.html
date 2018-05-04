@@ -512,6 +512,18 @@ and ever predictably, move the <b>files</b> with three character names to <b>dir
   <b>mv ??? dirIII</b>
 </p>
 
+Examine the consequences of your actions with the command:
+
+<p class="command">
+ <b>ls -R</b>
+</p>
+
+<details class="comment">
+  <summary>Comment</summary>
+  <img src="Images/mv05.png" alt="Curses!" style="height:552px; width:800px;">
+</details>
+
+<br>
 <div class="new_command">
   Introducing <a href="http://man7.org/linux/man-pages/man1/ln.1p.html"
                  <strong>ln</strong><a>.
@@ -526,7 +538,7 @@ Make a <b>link</b> from the <b>working</b> directory (<b>ProjectX</b>) to the fi
  <b>ln -s dirI/a .</b>
 </p>
 
-<p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>. <b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here. <b>Wikipedia</b> deals with <a href="https://en.wikipedia.org/wiki/Hard_link"<strong>hard</strong><a> & <a href="https://en.wikipedia.org/wiki/Symbolic_link"<strong>symbolic</strong><a> links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>, which is by far the most common intention, you must use the '<b>-s</b>' switch, as we did here.
+<p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>. <b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here. <b>Wikipedia</b> deals with <a href="https://en.wikipedia.org/wiki/Hard_link"><strong>hard</strong><a> & <a href="https://en.wikipedia.org/wiki/Symbolic_link"><strong>symbolic</strong><a> links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>, which is by far the most common intention, you must use the '<b>-s</b>' switch, as we did here.
 
 <p class="command">
  <b>ln -s dirII/a Link_to_aa</b>
@@ -544,18 +556,91 @@ Make a <b>link</b> from the <b>working</b> directory (<b>ProjectX</b>) to the fi
 Hidden files<br>
 
 <p class="command">
-  <b>ls -lR</b>
+  <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
 </p>
 
 <p class="command">
-  <b>ls -l</b>
+  <b>ls</b>
 </p>
 
 <p class="command">
-  <b>ls -la</b>
+  <b>ls -a</b>
 </p>
 
+<div class="suggestion">
+  <p><b>Suggestion:</b></p>
 
+  <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
+
+  <p>The <b>command line</b> is cruel! One mistake and it does not work!</p>
+
+  <p>This <b>command</b> could be very tricky if you had not the option of
+     <b>Copy</b>/<b>Paste</b> from this web page!</p>
+
+  <p>In a pevious "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
+     But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
+     be avoided altogether.</p>
+
+  <p>Basically, if you enter enough of a <b>filename</b>/<b>directory name</b>/<b>command</b>
+     (according to context) to allow the system to know what you wish to type next,
+     you need only to press the <b>Tab</b> key and <b>UNIX</b> will type on up to the
+     next point where ambiguity exists (often to "<b>Completion</b>").</p>
+
+  <p>As a practical example, why not create the next command as follows?:</p>
+
+  <ol>
+    <li>
+      Type in:
+      <p class="lcommand">
+        <b>mv .</b>
+      </p>
+    </li>
+    <li>
+      Press the <b>Tab</b> key.
+      <p>As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
+      <b>UNIX</b> can expand your efforts faultlessly to:
+      <p class="lcommand">
+        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me </b>
+      </p>
+    <li>
+      Add another '<b>.</b>' to the end of this poetry
+      <p class="lcommand">
+        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me .</b>
+      </p>
+    </li>
+    <li>
+      Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
+      (nearly) the job for you!
+      <p class="lcommand">
+        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me
+              .Cats_in_the_cupboard_but_they_dont_see_me</b>
+      </p>
+    <li>The object is to remove the '<b>.</b>' from the beginning of the long filename,
+        thus unhiding the file.
+
+        <p>To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
+        and delete it. Done!</p>
+    </li>
+  </ol>
+  <p><b>En Passant</b>: The message of the filename here is but one of the many wisdoms
+     of one, <b>Huddie Leadbetter</b>
+     (<a href="https://en.wikipedia.org/wiki/Lead_Belly"><b>Lead Belly</b><a>"
+     to his very closest acquaintences). You can read the entirity
+     <a href="http://www.lyricsmode.com/lyrics/l/leadbelly/rock_island_line.html"><b>Here</b><a>,
+     or even hear it <a href="https://www.youtube.com/watch?v=E2iiS-neZls"><b>Here</b><a>.</p>
+
+  <p><b>Finally</b>: If <b>UNIX</b> cannot complete because of ambiguities,
+     press the <b>Tab</b> key twice and <b>UNIX</b> will display all the
+     possible ways to complete your thoughts.</p>
+</div>
+
+<p class="lcommand">
+  <b>mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me</b>
+</p>
+
+<p class="command">
+  <b>ls</b>
+</p>
 
 
 
@@ -607,11 +692,13 @@ Hidden files<br>
 
   <p><b>Concepts/tricks introduced thus far are:</b>
   <ol type="1">
+    <li>Customising commands with <b>switches</b>.</li>
+    <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
     <li>Using '<b>?</b>' as a single character wild card.</li>
     <li>Using '<b>*</b>' as a mult-character wild card.</li>
     <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue
-    <li>Customising commands with <b>switches</b>.</li>
-    <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
+    <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys
+    <li><b>Tab Completion</b>.
   </ol>
 
   <p><b>Reflections:</b>
@@ -627,7 +714,7 @@ Hidden files<br>
 
   <p>{Hint: The
      <a href="http://man7.org/linux/man-pages/" <strong>Linux Manual Pages</strong><a>
-    wil be invaluable}</p>
+    will be invaluable}</p>
   <ol type="1">
     <li>
       Describe the effects of the command:

@@ -13,6 +13,13 @@ p.command {
     width: 450px;   
 }
 
+/* p for Long Exercise Commands  */
+
+p.lcommand {
+    background-color: Black; color: White;
+    font-family: courier; font-size: 12px;
+    width: 750px;   
+}
 /* div for Suggestions */
 
 div.suggestion {
