@@ -46,47 +46,65 @@ onclick="document.getElementById('Start_Time').innerHTML = Date()">
 Click to record your <b>Start</b> time.</button>
 <p id="Start_Time"></p>
 
-<h2>Guide Overview</h2>
+<!--
+  Some sort of Overview
+  Unclear where this should go?
+  I try stream of whatever and see where it leads -->
 
-<div style="background-color:Moccasin; width: 800px">
+<div class="ramble">
 
-<p>There are very many
+  <h2>Guide Objectives.</h2>
 
+<p>Many <b>Bioinformatics</b> objectives can be achieved using Web sites (<b>NCBI</b>, <b>EBI</b>, <b>Expasy</b> and many more) and/or software with intuitive <b>G</b>raphical <b>U</b>ser <b>I</b>nterfaces (<b>GUI</b>s). However, many more cannot, especially those involving large datasets, experimental software and compute intensive tasks are involved. In such circumstances, the stark environment of the <b>UNIX</b> command line is the preferred (often the only) choice.</p>
+
+<p>As most researchers will not have the luxurious option of delegating all their computing activities to an "expert <b>Bioinformatition</b>", it is sensible for all to, at the very least, have some familiarity with the <b>UNIX command line</b>. It is the objective of this "<b>Critical Sheet</b>" to start the complete beginner on the journey towards such an understanding.</p>
+
+  <p>It would not be practical to attempt a full competence with <b>UNIX</b> here. More modest targets include:
+    <ol>
+      <li>A superficial familiarity with the most common <b>UNIX commands</b></li>
+      <li>Knowledge of how to build upon this familiarity easily (i.e. read the <b>Manual</b>!)</li>
+      <li>An acceptance of the conceptual link between using the command line and more familiar
+          <b>GUI</b> based environments (e.g. <b>Windows</b>)
+      <li>An acceptance that learning a bit of <b>UNIX</b> is indeed useful</li>
+    </ol>
+  </p>
+
+  <h2>Guide Structure</h2>
+
+  <p>The approach of this Guide is to lead the user through a simple exercise that provides a showcase for all the most common <b>UNIX commands</b> as well as a few "<i>tricks</i>" that, hopefully, make life a little easier. At many stages, users will be offered the opportunity to consider how the effects of a <b>UNIX command</b> might be achieved (if clumsily) using a typical <b>LINUX GUI</b>. Whenever a new command is introduced, a <b>link</b> to the relevant <b>Manual Pages</b> will be provided.</p>
+
+  <p>In the first stages of the exercise, no effort is made to include any "<i>Biological Purpose</i>". We just meander through an investigation of <b>Basic UNIX commands</b>. Later on, the exercise will include some relevant data files and attempt to do some vaguely "<i>meaningful things</i>".</p>
+
+  <h2>Guide Prerequisites</h2>
+
+  <p>Beyond a level of computer literacy that is unavoidable in this technologically over soaked era, hardly anything really.</p>
+
+  <p>However, it would help to understand the way <b>files</b> and <b>directories</b> (<b>folders</b> if you prefer) are arranged and referenced in a <b>UNIX</b> environment however. If you feel the need, spend a few minutes glancing through the <b>Video</b> below. 
+  <details class="video">
+  <summary><b>UNIX File Structure & Reference - A video</b></summary>
+    <video width="320" height="240" controls preload>
+      <source src="Videos/DotPlots.webm"></src>
+    </video>
+  </details>
 </div>
 
-<h2>Preliminaries</h2>
+<h2>The exercise.</h2>
 
-<div style="background-color:Moccasin; width: 800px">
+<div class="ramble">
 
-<p>Maybe start with a video on directory structure?
-Looked at existing ... not impressed! Quality poor and too much testosterone nerd release.
+  <p>In which we strive to introduce as many common <b>UNIX</b> commands as is practical.</p>
 
-Need to do it myself?
-Points:
-/ ... correspondence (vaguely) with C:\
-tree hierarchy ... wonder how one  spells that?
-relative to cd addressing - ./fiddle/diddle (default so same as piffle/diddle)
-relative to home - ~/fiddle/diddle
-absolute - /home/hero/fiddle/diddle
-based around picture like<br>
-<img src="Images/directory-tree.png" alt="Hooey!" height="100" width="120">
-</p>
-</div>
-
-<h2>A simple exercise.</h2>
-
-<div style="background-color:Moccasin; width: 800px">
-
-<p>In which we strive to introduce as many common UNIX commands as is practical.</p>
-
-<p>Every time a new command is used, a link to the official Manual Pages for that command is provided. Here you can wallow in the full unabridged story. The exercise represents a brutally abridged practical overview.</p>
+  <p>Every time a new command is used, a link to the official Manual Pages for that command is provided.
+     Here you can wallow in the full unabridged story. The exercise represents a brutally
+     abridged practical overview.</p>
 
 <p>Where it was felt to be helpful, the way a step of the exercise could be achieved using a typical <b>LINUX GUI</b> environment (default <b>Ubuntu</b>) is offered.</p>
 
-So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally do this) and follow along. First some rather function free warm up, leading eventually to use of the command line to achieve vaguely Bioinformatic objectives.
+<p>So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally do this) and follow along. First some rather function free warm up, leading eventually to use of the command line to achieve vaguely Bioinformatic objectives.</p>
 
 <p><b><u>Hint:</u></b> Especially when the commands of the exercise are long,
                why not <b>Copy/Paste</b> from this page?</p>
+
 </div>
 
 <br>
@@ -158,7 +176,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <img src="Images/mkdir04.png" alt="Curses!" style="height:274px; width:800px;">
 </details>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -217,7 +235,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <img src="Images/cd-ls01.png" alt="Curses!" style="height:323px; width:800px;">
 </details>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -255,7 +273,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <b>touch a</b>
 </p>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -285,7 +303,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
         <img src="Images/touch03.png" alt="Curses!"
              style="height:151px; width:300px;">
         <span class="popuptext" id="touch03_Popup" style="text-align:center;">
-              Admire the magnifence of the new <b>file</b>,
+              Admire the magnificence of the new <b>file</b>,
               imaginatively called <b>a</b>.</span>
       </div>
     </div>
@@ -298,7 +316,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
  <b>touch b c aa bb cc abc def ghi</b>
 </p>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -333,7 +351,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <img src="Images/touch-mkdir-ls01.png" alt="Curses!" style="height:567px; width:800px;">
 </details>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -373,7 +391,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <img src="Images/lslong01.png" alt="Curses!" style="height:570px; width:800px;">
 </details>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -437,7 +455,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
   <img src="Images/mv01.png" alt="Curses!" style="height:586px; width:800px;">
 </details>
 
-<details class="gui"">
+<details class="gui">
   <summary><b>GUI</b> equivalent.</summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
@@ -477,7 +495,7 @@ So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally d
 
 <br>
 <div class="suggestion">
-  <p><b>Suggestion:</b></p>
+  <b><u>Suggestion:</u></b>
 
   <p>If you press the '<b>&uarr;</b>' key the last command you issued will be reissued.
      Repeatedly pressing '<b>&uarr;</b>' will take you further and further back
@@ -555,7 +573,7 @@ Make a <b>link</b> from the <b>working</b> directory (<b>ProjectX</b>) to the fi
 
 Hidden files<br>
 
-<p class="command">
+<p class="lcommand">
   <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
 </p>
 
@@ -568,7 +586,7 @@ Hidden files<br>
 </p>
 
 <div class="suggestion">
-  <p><b>Suggestion:</b></p>
+  <b><u>Suggestion:</u></b>
 
   <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
 
@@ -577,7 +595,7 @@ Hidden files<br>
   <p>This <b>command</b> could be very tricky if you had not the option of
      <b>Copy</b>/<b>Paste</b> from this web page!</p>
 
-  <p>In a pevious "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
+  <p>In a previous "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
      But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
      be avoided altogether.</p>
 
@@ -625,7 +643,7 @@ Hidden files<br>
   <p><b>En Passant</b>: The message of the long <b>filename</b> here is but one of the many wisdoms
      given to humanity by the great sage of the New World, <b>Huddie Leadbetter</b>
      (<a href="https://en.wikipedia.org/wiki/Lead_Belly"><b>Lead Belly</b><a>"
-     to his very closest acquaintences). You can read it in context
+     to his very closest acquaintances). You can read it in context
      <a href="http://www.lyricsmode.com/lyrics/l/leadbelly/rock_island_line.html"><b>Here</b><a>,
      or even hear it <a href="https://www.youtube.com/watch?v=E2iiS-neZls"><b>Here</b><a>.</p>
 
@@ -691,7 +709,7 @@ Hidden files<br>
     <li>Customising commands with <b>switches</b>.</li>
     <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
     <li>Using '<b>?</b>' as a single character wild card.</li>
-    <li>Using '<b>*</b>' as a mult-character wild card.</li>
+    <li>Using '<b>*</b>' as a multi-character wild card.</li>
     <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue
     <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys
     <li><b>Tab Completion</b>.

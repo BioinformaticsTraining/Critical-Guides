@@ -20,6 +20,14 @@ p.lcommand {
     font-family: courier; font-size: 12px;
     width: 750px;   
 }
+
+/* div for blocks of rambling text */
+
+div.ramble {
+    background-color: Moccasin; border-style: solid;
+    width: 800px;
+}
+
 /* div for Suggestions */
 
 div.suggestion {
@@ -46,6 +54,13 @@ details.comment {
 details.gui {
     background-color:Cyan;
     width: 900px;
+}
+
+/* details for Videos */
+
+details.video {
+    background-color:Plum;
+    width: 500px;
 }
 
 /* ############################################## --
