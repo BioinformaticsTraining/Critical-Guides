@@ -376,8 +376,8 @@ Click to record your <b>Start</b> time.</button>
    <p><b>Switches</b> are specified immediately after the command itself
    and prefixed by '<b>-</b>'.</p>
 
-   <p>The full range of available switches for any given command is included
-   in its manual pages.</p>
+   <p>The full range of available switches for any given command is included in its
+      <a href="http://man7.org/linux/man-pages/" <strong>Manual Pages</strong><a>.</p>
 
    <p>Inspect the contents of <b>ProjectX</b> once more, but this time,
    request a little more detail using <b>ls</b> with the <b>l switch</b>.</p>
@@ -505,12 +505,25 @@ Click to record your <b>Start</b> time.</button>
 
   <p>As the next command is very similar to the last, you could:
     <ol>
-      <li>Press the '<b>&uarr;</b>' key once</li>
-      <li>Press the '<b>&larr;</b>' key as many times as it takes to get the cursor
-          to where you need an extra '<b>?</b>' character</li>
-      <li>Add the extra '<b>?</b>' character</li>
-      <li>Press the &#8629; key to enter the edited command
-          (no need to navigate back to the end of the line)
+      <li>
+        Press the '<b>&uarr;</b>' key once, to bring
+        <p class="command">
+          <b>mv ? dirI</b>
+        </p>
+        back into view.
+      </li>
+      <li>
+        Press the '<b>&larr;</b>' key as many times as it takes to get the cursor
+        over the '<b>?</b>' character</li>
+      <li>
+        Add an extra '<b>?</b>' character</li> to make the next istruction
+        <p class="command">
+          <b>mv ?? dirII</b>
+        </p>
+      <li>
+        Press the &#8629; key to enter the edited command
+        (no need to navigate back to the end of the line)
+      </li>
     </ol>
   <p>
 
@@ -524,13 +537,13 @@ Click to record your <b>Start</b> time.</button>
   <b>mv ?? dirII</b>
 </p>
 
-and ever predictably, move the <b>files</b> with three character names to <b>dirIII</b> with the command:
+<p>and ever predictably, move the <b>files</b> with three character names to <b>dirIII</b> with the command:</p>
 
 <p class="command">
   <b>mv ??? dirIII</b>
 </p>
 
-Examine the consequences of your actions with the command:
+<p>Examine the consequences of your actions with the command:</p>
 
 <p class="command">
  <b>ls -R</b>
@@ -550,46 +563,50 @@ Examine the consequences of your actions with the command:
 
 <p>A <b>link</b> is broadly equivalent to a <b>Windows</b> shortcut. Using <b>links</b> can enable a <b>file</b>/<b>directory</b> to be accessed from different places.</p>
 
-Make a <b>link</b> from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>a</b> (now in the directory <b>dirI</b>), with the command:
+<p>Make a <b>link</b> from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>a</b> (now in the directory <b>dirI</b>), with the command:</p>
 
 <p class="command">
  <b>ln -s dirI/a .</b>
 </p>
 
-<p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>. <b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here. <b>Wikipedia</b> deals with <a href="https://en.wikipedia.org/wiki/Hard_link"><strong>hard</strong><a> & <a href="https://en.wikipedia.org/wiki/Symbolic_link"><strong>symbolic</strong><a> links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>, which is by far the most common intention, you must use the '<b>-s</b>' switch.
+<p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>. <b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here. <b>Wikipedia</b> deals with <a href="https://en.wikipedia.org/wiki/Hard_link"><strong>hard</strong><a> & <a href="https://en.wikipedia.org/wiki/Symbolic_link"><strong>symbolic</strong><a> links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>, which is by far the most common intention, you must use the '<b>-s</b>' switch.</p>
 
 <p>If the <b>link</b> is to be given name that is different to that of the linked <b>file</b>, clearly, that name must be specified</p>
 
-In this command, only the directory in which the <b>link</b> was to reside was specified ('<b>.</b>', i.e. <b>ProjectX</b>).</p>
+<p>In this command, only the directory in which the <b>link</b> was to reside was specified ('<b>.</b>', i.e. <b>ProjectX</b>).</p>
 
-<p>Now create a <b>symbolic link</b>, not having the same name as the linked <b>file</b>. Specifically, a <b>link</b> called <b>Link_to_aa</b>, from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>aa</b> (now in the directory <b>dirII</b>), with the command:
+<p>Now create a <b>symbolic link</b>, not having the same name as the linked <b>file</b>. Specifically, a <b>link</b> called <b>Link_to_aa</b>, from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>aa</b> (now in the directory <b>dirII</b>), with the command:</p>
 
 <p class="command">
  <b>ln -s dirII/aa Link_to_aa</b>
 </p>
 
-Inspect the effects of your last few instructions, with the command:
+<p>Inspect the effects of your last few instructions, with the command:</p>
 
 <p class="command">
  <b>ls -l</b>
 </p>
+
 <details class="comment">
   <summary>Comment</summary>
   <img src="Images/ln01.png" alt="Curses!" style="height:430px; width:800px;">
 </details>
 
-
-
-
-Hidden files<br>
+<p>Make just one more empty file with the poetry drenched command:</p>
 
 <p class="lcommand">
   <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
 </p>
 
+<p>Note that the name of the file you have just breathed life into, begins with a '<b>.</b>'!</p>
+
+<p>Search for it amongst its brothers with the command:</p>
+
 <p class="command">
   <b>ls</b>
 </p>
+
+xxxxxxxxxxxx I sleep!
 
 <p class="command">
   <b>ls -a</b>
