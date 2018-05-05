@@ -598,7 +598,8 @@ Click to record your <b>Start</b> time.</button>
   <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
 </p>
 
-<p>Note that the name of the file you have just breathed life into, begins with a '<b>.</b>'!</p>
+<p>Note that the name of the <b>file</b> into which you have just breathed life,
+   begins with a '<b>.</b>'!</p>
 
 <p>Search for it amongst its brothers with the command:</p>
 
@@ -606,12 +607,29 @@ Click to record your <b>Start</b> time.</button>
   <b>ls</b>
 </p>
 
-xxxxxxxxxxxx I sleep!
+<p>Nowhere to be seen?</p>
+
+<p><b>Files</b> (and <b>Directories</b>) with names that commence with a '<b>.</b>' are considered as <b>Hidden</b> by <b>UNIX</b>. Generally, they will not be displayed by <b>ls</b>.</p>
+
+<p>You will find many <b>Hidden Files</b> in your <b>Home Directory</b> ('<b>~</b>'). These being <b>Configuration Files</b> (and <b>Directories</b>) for  various software packages, plus an assortment of other <b>System Files</b>. These are important <b>files</b> and <b>directories</b> that must be present. However, generally, a user would not wish to be constantly reminded of their presence.</p>
+
+<p>Try again with the command:</p>
 
 <p class="command">
   <b>ls -a</b>
 </p>
 
+<p>See it now?</p>
+
+<p>The '<b>-a</b>' <b>switch</b> for <b>ls</b> requests that <b>a</b>ll <b>Files</b> be displayed
+   (including <b>Hidden</b> ones).
+
+<details class="comment">
+  <summary>Comment</summary>
+  <img src="Images/hidden01.png" alt="Curses!" style="height:417px; width:800px;">
+</details>
+
+<br>
 <div class="suggestion">
   <b><u>Suggestion:</u></b>
 
@@ -674,18 +692,23 @@ xxxxxxxxxxxx I sleep!
      <a href="http://www.lyricsmode.com/lyrics/l/leadbelly/rock_island_line.html"><b>Here</b><a>,
      or even hear it <a href="https://www.youtube.com/watch?v=E2iiS-neZls"><b>Here</b><a>.</p>
 
-  <p><b>Finally</b>: If <b>UNIX</b> cannot complete because of ambiguities,
+  <p><b>Finally</b>: If <b>UNIX</b> cannot Tab Complete a line because of ambiguities,
      press the <b>Tab</b> key twice and <b>UNIX</b> will display all the
-     possible ways to complete your thoughts.</p>
+     possible ways to continue your intentions manually.</p>
 </div>
 
+<p>You can "unhide" your lengthy creation with the mega command:</p>
+ 
 <p class="lcommand">
   <b>mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me</b>
 </p>
 
+<p>Test your files new visible staus with the command:</p>
+
 <p class="command">
   <b>ls</b>
 </p>
+     ..........................here..................
 
 <div style="background-color:PaleGoldenrod;">
   <h3><i><u>Checkpoint</u></i></h3>
