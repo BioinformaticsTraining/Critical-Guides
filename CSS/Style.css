@@ -42,6 +42,13 @@ div.new_command {
     width: 800px
 }
 
+/* div for Exercise Checkpoints */
+
+div.checkpoints {
+    background-color: PaleGoldenrod; border-style: solid;
+    width: 800px
+}
+
 /* details for Exercise Comments */
 
 details.comment {
