@@ -21,6 +21,13 @@ p.lcommand {
     width: 750px;   
 }
 
+/* p for Hints  */
+
+p.hint {
+    background-color: Lime; color: DarkSlateGray;
+    width: 600px;   
+}
+
 /* div for blocks of rambling text */
 
 div.ramble {
@@ -35,17 +42,10 @@ div.suggestion {
     width: 800px;
 }
 
-/* div for Exercise New Commands */
-
-div.new_command {
-    background-color: LightGreen; border-style: double;
-    width: 800px
-}
-
 /* div for Exercise Checkpoints */
 
-div.checkpoints {
-    background-color: PaleGoldenrod; border-style: solid;
+div.checkpoint {
+    background-color: AntiqueWhite; border-style: solid;
     width: 800px
 }
 
@@ -60,7 +60,7 @@ details.comment {
 
 details.gui {
     background-color:Cyan;
-    width: 920px;
+    width: 910px;
 }
 
 /* details for Videos */
@@ -68,6 +68,27 @@ details.gui {
 details.video {
     background-color:Plum;
     width: 500px;
+}
+
+/* class for Major Sections */
+
+.msect {
+    background: LavenderBlush;
+    width: 910px;
+}
+
+/* class for Sections List*/
+
+.lsect {
+    background: LavenderBlush; padding: 10px;
+    width: 900px;
+}
+
+/* class for Exercise New Commands */
+
+.new_command {
+    background-color: LightGreen; border-style: double;
+    width: 800px
 }
 
 /* ############################################## --
@@ -83,7 +104,7 @@ details.video {
 
 .grid-container {
   justify-content: space-evenly;
-  display: grid;  align-content: start; grid-gap: 10px;
+  display: grid;  align-content: start; grid-gap: 5px;
   grid-template-columns: auto auto auto;
   background-color: Yellow;
 }
