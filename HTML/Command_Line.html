@@ -510,416 +510,434 @@ Click to record your <b>Start</b> time.</button>
            A command to rename files/directories or <b>m</b>o<b>v</b>e them between <b>directories</b>.</p>
       </div>
 
-<p>Move all the <b>files</b> with single letter names into the <b>directory dirI</b> with the command:</p>
+      <p>Move all the <b>files</b> with single letter names into the <b>directory dirI</b> with the command:</p>
 
-<p class="command">
-  <b>mv ? dirI</b>
-</p>
-
-<details class="comment">
-  <summary><span class="comsum">Comment</span></summary>
-  <img src="Images/mv01.png" alt="Curses!" style="height:586px; width:800px;">
-</details>
-
-<details class="gui">
-  <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
-  <div class="grid-container2">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mv02_Popup'))")">
-      <div class="container">
-        <img src="Images/mv02.png" alt="Curses!"
-             style="height:263px; width:300px;">
-        <span class="popuptext" id="mv02_Popup" style="text-align:center;">
-              Select all single letter filenames
-              (Click on each while holding the <b>Ctrl</b> key down).
-              Right hand mouse click on the selected icons.
-              Select <b>Cut</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mv03_Popup'))")">
-      <div class="container">
-        <img src="Images/mv03.png" alt="Curses!"
-             style="height:226px; width:300px;">
-        <span class="popuptext" id="mv03_Popup" style="text-align:center;">
-              Open the <b>dirI</b> directory (double click on its icon).
-              Right hand mouse click in the <b>dirI</b> background.
-              Select <b>Paste</b>.</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mv04_Popup'))")">
-      <div class="container">
-        <img src="Images/mv04.png" alt="Curses!"
-             style="height:107px; width:300px;">
-        <span class="popuptext" id="mv04_Popup" style="text-align:center;">
-              Lo & Behold.</span>
-      </div>
-    </div>
-   </div>
-</details>
-
-<br>
-<div class="suggestion">
-  <h2>Suggestion:</h2>
-
-  <p>If you press the '<b>&uarr;</b>' key the last command you issued will be reissued.
-     Repeatedly pressing '<b>&uarr;</b>' will take you further and further back
-     through as many commands as your system is configured to remember.
-     Why not, try it?
-     The '<b>&darr;</b>' key moves you forward through your <b>command history</b>.</p>
-
-  <p>As the next command is very similar to the last, you could:
-    <ol>
-      <li>
-        Press the '<b>&uarr;</b>' key once, to bring back into view.
-        <p class="command">
-          <b>mv ? dirI</b>
-        </p>
-      </li>
-      <li>
-        Press the '<b>&larr;</b>' key as many times as it takes to get
-        the cursor over the '<b>?</b>' character.<br><br>
-      </li>
-      <li>
-        Add an extra '<b>?</b>' character to make the next instruction.
-        <p class="command">
-          <b>mv ?? dirII</b>
-        </p>
-      <li>
-        Press the &#8629; key to enter the edited command
-        (no need to navigate back to the end of the line).
-      </li>
-    </ol>
-  <p>
-
-  <p>Not much gain in this case,
-  but a wonderful trick when dealing with typos in a long command!</p>
-</div>
-
-<p>Continue in fashion logical to move all the <b>files</b> with two letter names into the <b>directory dirII</b> with the command:</p>
-
-<p class="command">
-  <b>mv ?? dirII</b>
-</p>
-
-<p>and ever predictably, move the <b>files</b> with three character names to <b>dirIII</b> with the command:</p>
-
-<p class="command">
-  <b>mv ??? dirIII</b>
-</p>
-
-<p>Examine the consequences of your actions with the command:</p>
-
-<p class="command">
- <b>ls -R</b>
-</p>
-
-<details class="comment">
-  <summary><span class="comsum">Comment</span></summary>
-  <img src="Images/mv05.png" alt="Curses!" style="height:552px; width:800px;">
-</details><br>
-
-<div class="new_command">
-  <p>Introducing
-     <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
-     A command to make <b>l</b>i<b>n</b>ks to <b>files<b>/</b>directories</b>.</p>
-</div>
-
-<p>A <b>link</b> is broadly equivalent to a <b>Windows</b> shortcut. Using <b>links</b> can enable a <b>file</b>/<b>directory</b> to be accessed from different places.</p>
-
-<p>Make a <b>link</b> from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>a</b> (now in the directory <b>dirI</b>), with the command:</p>
-
-<p class="command">
- <b>ln -s dirI/a .</b>
-</p>
-
-<p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>.
-<b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here. <b>Wikipedia</b> deals withf
-<a href="https://en.wikipedia.org/wiki/Hard_link" target="_blank"><b>hard</b></a> & 
-<a href="https://en.wikipedia.org/wiki/Symbolic_link" target="_blank"><b>symbolic</b></a>
-links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>,
-which is by far the most common intention, you must use the '<b>-s</b>' switch.</p>
-
-<p>If the <b>link</b> is to be given name that is different to that of the linked <b>file</b>, clearly, that name must be specified</p>
-
-<p>In this command, only the directory in which the <b>link</b> was to reside was specified ('<b>.</b>', i.e. <b>ProjectX</b>).</p>
-
-<p>Now create a <b>symbolic link</b>, not having the same name as the linked <b>file</b>. Specifically, a <b>link</b> called <b>Link_to_aa</b>, from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>aa</b> (now in the directory <b>dirII</b>), with the command:</p>
-
-<p class="command">
- <b>ln -s dirII/aa Link_to_aa</b>
-</p>
-
-<p>Inspect the effects of your last few instructions, with the command:</p>
-
-<p class="command">
- <b>ls -l</b>
-</p>
-
-<details class="comment">
-  <summary><span class="comsum">Comment</span></summary>
-  <img src="Images/ln01.png" alt="Curses!" style="height:430px; width:800px;">
-</details>
-
-<p>Make just one more empty file with the poetry drenched command:</p>
-
-<p class="lcommand">
-  <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
-</p>
-
-<p>Note that the name of the <b>file</b> into which you have just breathed life,
-   begins with a '<b>.</b>'!</p>
-
-<p>Search for it amongst its brothers with the command:</p>
-
-<p class="command">
-  <b>ls</b>
-</p>
-
-<p>Nowhere to be seen?</p>
-
-<p><b>Files</b> (and <b>Directories</b>) with names that commence with a '<b>.</b>' are considered as <b>Hidden</b> by <b>UNIX</b>. Generally, they will not be displayed by <b>ls</b>.</p>
-
-<p>You will find many <b>Hidden Files</b> in your <b>Home Directory</b> ('<b>~</b>'). These being <b>Configuration Files</b> (and <b>Directories</b>) for  various software packages, plus an assortment of other <b>System Files</b>. These are important <b>files</b> and <b>directories</b> that must be present. However, generally, a user would not wish to be constantly reminded of their presence.</p>
-
-<p>Try again with the command:</p>
-
-<p class="command">
-  <b>ls -a</b>
-</p>
-
-<p>See it now?</p>
-
-<p>The '<b>-a</b>' <b>switch</b> for <b>ls</b> requests that <b>a</b>ll <b>Files</b> be displayed
-   (including <b>Hidden</b> ones).
-
-<details class="comment">
-  <summary><span class="comsum">Comment</span></summary>
-  <img src="Images/hidden01.png" alt="Curses!" style="height:417px; width:800px;">
-</details>
-
-<details class="gui">
-  <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
-  <div class="grid-container2">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('hidden02_Popup'))")">
-      <div class="container">
-        <img src="Images/hidden02.png" alt="Curses!"
-             style="height:220px; width:300px;">
-        <span class="popuptext" id="hidden02_Popup" style="text-align:center;">
-              By default, Hidden items are not displayed
-              in the <b>GUI</b> environment</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('hidden03_Popup'))")">
-      <div class="container">
-        <img src="Images/hidden03.png" alt="Curses!"
-             style="height:262px; width:300px;">
-        <span class="popuptext" id="hidden03_Popup" style="text-align:center;">
-              To amend this secretive behaviour,
-              from the <b>View</b> drop down menu at the top of your screen,
-              Select <b>Show Hidden Files</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('hidden04_Popup'))")">
-      <div class="container">
-        <img src="Images/hidden04.png" alt="Curses!"
-             style="height:220px; width:300px;">
-        <span class="popuptext" id="hidden04_Popup" style="text-align:center;">
-              Voila!.</span>
-      </div>
-    </div>
-   </div>
-</details>
-
-<br>
-<div class="suggestion">
-  <h2>Suggestion:</h2>
-
-  <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
-
-  <p>The <b>command line</b> is cruel! One typing mistake and it does not work!</p>
-
-  <p>This <b>command</b> could be very tricky if you had not the option of
-     <b>Copy</b>/<b>Paste</b> from this web page!</p>
-
-  <p>In a previous "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
-     But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
-     be avoided altogether.</p>
-
-  <p>Basically, if you enter enough of a <b>filename</b>/<b>directory name</b>/<b>command</b>
-     (according to context) to allow the system to know what you wish to type next,
-     you need only to press the <b>Tab</b> key and <b>UNIX</b> will type on up to the
-     next point where ambiguity exists (often to "<b>Completion</b>").</p>
-
-  <p>As a practical example, why not create the next command as follows?:</p>
-
-  <ol>
-    <li>
-      Type in:
-      <p class="lcommand">
-        <b>mv .</b>
+      <p class="command">
+        <b>mv ? dirI</b>
       </p>
-    </li>
-    <li>
-      Press the <b>Tab</b> key.<br><br>
-      As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
-      <b>UNIX</b> can expand your efforts faultlessly to:
-      <p class="lcommand">
-        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me </b>
-      </p>
-    <li>
-      Add another '<b>.</b>' to the end of this poetry
-      <p class="lcommand">
-        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me .</b>
-      </p>
-    </li>
-    <li>
-      Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
-      (nearly) the job for you!
-      <p class="lcommand">
-        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me
-              .Cats_in_the_cupboard_but_they_dont_see_me</b>
-      </p>
-    <li>The object is to remove the '<b>.</b>' from the beginning of the long filename,
-        thus unhiding the file.<br><br>
 
-        To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
-        and delete it. Done!
-    </li>
-  </ol>
-  <p><b>En Passant</b>: The message of the long <b>filename</b> here is but one of the many wisdoms
-     given to humanity by the great sage of the New World, <b>Huddie Leadbetter</b> (
-     <a href="https://en.wikipedia.org/wiki/Lead_Belly" target="_blank">
-     <b>Lead Belly</b></a>"
-     to his very closest acquaintances). You can read it in context
-     <a href="http://www.lyricsmode.com/lyrics/l/leadbelly/rock_island_line.html"
-     target="_blank"><b>Here</b></a>,
-     or even hear it
-     <a href="https://www.youtube.com/watch?v=E2iiS-neZls"
-     target="_blank"><b>Here</b></a>.</p>
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/mv01.png" alt="Curses!" style="height:586px; width:800px;">
+      </details>
 
-  <p><b>Finally</b>: If <b>UNIX</b> cannot <b>Tab Complete</b> a line because of ambiguities,
-     press the <b>Tab</b> key twice and <b>UNIX</b> will display all the
-     possible ways to continue your intentions manually.</p>
-</div>
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container2">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mv02_Popup'))")">
+            <div class="container">
+              <img src="Images/mv02.png" alt="Curses!"
+                   style="height:263px; width:300px;">
+              <span class="popuptext" id="mv02_Popup" style="text-align:center;">
+                    Select all single letter filenames
+                    (Click on each while holding the <b>Ctrl</b> key down).
+                    Right hand mouse click on the selected icons.
+                    Select <b>Cut</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mv03_Popup'))")">
+            <div class="container">
+              <img src="Images/mv03.png" alt="Curses!"
+                   style="height:226px; width:300px;">
+              <span class="popuptext" id="mv03_Popup" style="text-align:center;">
+                    Open the <b>dirI</b> directory (double click on its icon).
+                    Right hand mouse click in the <b>dirI</b> background.
+                    Select <b>Paste</b>.</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mv04_Popup'))")">
+            <div class="container">
+              <img src="Images/mv04.png" alt="Curses!"
+                   style="height:107px; width:300px;">
+              <span class="popuptext" id="mv04_Popup" style="text-align:center;">
+                    Lo & Behold.</span>
+            </div>
+          </div>
+         </div>
+      </details>
 
-<p>You can "unhide" your lengthy creation with the mega command:</p>
+      <br>
+      <div class="suggestion">
+        <h2>Suggestion:</h2>
+
+        <p>If you press the '<b>&uarr;</b>' key the last command you issued will be reissued.
+           Repeatedly pressing '<b>&uarr;</b>' will take you further and further back
+           through as many commands as your system is configured to remember.
+           Why not, try it?
+           The '<b>&darr;</b>' key moves you forward through your <b>command history</b>.</p>
+
+        <p>As the next command is very similar to the last, you could:
+          <ol>
+            <li>
+              Press the '<b>&uarr;</b>' key once, to bring back into view.
+              <p class="command">
+                <b>mv ? dirI</b>
+              </p>
+            </li>
+            <li>
+              Press the '<b>&larr;</b>' key as many times as it takes to get
+              the cursor over the '<b>?</b>' character.<br><br>
+            </li>
+            <li>
+              Add an extra '<b>?</b>' character to make the next instruction.
+              <p class="command">
+                <b>mv ?? dirII</b>
+              </p>
+            <li>
+              Press the &#8629; key to enter the edited command
+              (no need to navigate back to the end of the line).
+            </li>
+          </ol>
+        <p>
+
+        <p>Not much gain in this case,
+           but a wonderful trick when dealing with typos in a long command!</p>
+      </div>
+
+      <p>Continue in fashion logical to move all the <b>files</b> with two letter names into the
+         <b>directory dirII</b> with the command:</p>
+
+      <p class="command">
+        <b>mv ?? dirII</b>
+      </p>
+
+      <p>and ever predictably, move the <b>files</b> with three character names to <b>dirIII</b> with the command:</p>
+
+      <p class="command">
+        <b>mv ??? dirIII</b>
+      </p>
+
+      <p>Examine the consequences of your actions with the command:</p>
+
+      <p class="command">
+       <b>ls -R</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/mv05.png" alt="Curses!" style="height:552px; width:800px;">
+      </details><br>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
+           A command to make <b>l</b>i<b>n</b>ks to <b>files<b>/</b>directories</b>.</p>
+      </div>
+
+      <p>A <b>link</b> is broadly equivalent to a <b>Windows</b> shortcut. Using <b>links</b> can
+         enable a <b>file</b>/<b>directory</b> to be accessed from different places.</p>
+
+      <p>Make a <b>link</b> from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>)
+         to the file <b>a</b> (now in the directory <b>dirI</b>), with the command:</p>
+
+      <p class="command">
+       <b>ln -s dirI/a .</b>
+      </p>
+
+      <p>By default (strangely in my opinion), <b>ln</b> will make <b>hard links</b>.
+         <b>hard links</b> are ... well, <b><i>hard</i></b> ... beyond what we should consider here.
+         <b>Wikipedia</b> deals with
+         <a href="https://en.wikipedia.org/wiki/Hard_link" target="_blank"><b>hard</b></a> & 
+         <a href="https://en.wikipedia.org/wiki/Symbolic_link" target="_blank"><b>symbolic</b></a>
+         links fairly gently if you are curious. To make a simple <b>symbolic</b> or <b>soft link</b>,
+         which is by far the most common intention, you must use the '<b>-s</b>' switch.</p>
+
+      <p>If the <b>link</b> is to be given name that is different to that of the linked <b>file</b>,
+         clearly, that name must be specified</p>
+
+      <p>In this command, only the directory in which the <b>link</b> was to reside was specified
+         ('<b>.</b>', i.e. <b>ProjectX</b>).</p>
+
+      <p>Now create a <b>symbolic link</b>, not having the same name as the linked <b>file</b>.
+         Specifically, a <b>link</b> called <b>Link_to_aa</b>, from the <b>working</b> directory
+         ('<b>.</b>', i.e. <b>ProjectX</b>) to the file <b>aa</b> (now in the directory <b>dirII</b>),
+         with the command:</p>
+
+      <p class="command">
+       <b>ln -s dirII/aa Link_to_aa</b>
+      </p>
+
+      <p>Inspect the effects of your last few instructions, with the command:</p>
+
+      <p class="command">
+       <b>ls -l</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/ln01.png" alt="Curses!" style="height:430px; width:800px;">
+      </details>
+
+      <p>Make just one more empty file with the poetry drenched command:</p>
+
+      <p class="lcommand">
+        <b>touch .Cats_in_the_cupboard_but_they_dont_see_me</b>
+      </p>
+
+      <p>Note that the name of the <b>file</b> into which you have just breathed life,
+         begins with a '<b>.</b>'!</p>
+
+      <p>Search for it amongst its brothers with the command:</p>
+
+      <p class="command">
+        <b>ls</b>
+      </p>
+
+      <p>Nowhere to be seen?</p>
+
+      <p><b>Files</b> (and <b>Directories</b>) with names that commence with a '<b>.</b>'
+         are considered as <b>Hidden</b> by <b>UNIX</b>. Generally, they will not be
+         displayed by <b>ls</b>.</p>
+
+      <p>You will find many <b>Hidden Files</b> in your <b>Home Directory</b> ('<b>~</b>').
+         These being <b>Configuration Files</b> (and <b>Directories</b>) for  various software
+         packages, plus an assortment of other <b>System Files</b>. These are important
+         <b>files</b> and <b>directories</b> that must be present. However, generally, a user
+         would not wish to be constantly reminded of their presence.</p>
+
+      <p>Try again with the command:</p>
+
+      <p class="command">
+        <b>ls -a</b>
+      </p>
+
+      <p>See it now?</p>
+
+      <p>The '<b>-a</b>' <b>switch</b> for <b>ls</b> requests that <b>a</b>ll <b>Files</b> be displayed
+         (including <b>Hidden</b> ones).
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/hidden01.png" alt="Curses!" style="height:417px; width:800px;">
+      </details>
+
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container2">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('hidden02_Popup'))")">
+            <div class="container">
+              <img src="Images/hidden02.png" alt="Curses!"
+                   style="height:220px; width:300px;">
+              <span class="popuptext" id="hidden02_Popup" style="text-align:center;">
+                    By default, Hidden items are not displayed
+                    in the <b>GUI</b> environment</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('hidden03_Popup'))")">
+            <div class="container">
+              <img src="Images/hidden03.png" alt="Curses!"
+                   style="height:262px; width:300px;">
+              <span class="popuptext" id="hidden03_Popup" style="text-align:center;">
+                    To amend this secretive behaviour,
+                    from the <b>View</b> drop down menu at the top of your screen,
+                    Select <b>Show Hidden Files</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('hidden04_Popup'))")">
+            <div class="container">
+              <img src="Images/hidden04.png" alt="Curses!"
+                   style="height:220px; width:300px;">
+              <span class="popuptext" id="hidden04_Popup" style="text-align:center;">
+                    Voila!.</span>
+            </div>
+          </div>
+         </div>
+      </details>
+
+      <br>
+      <div class="suggestion">
+        <h2>Suggestion:</h2>
+
+        <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
+
+        <p>The <b>command line</b> is cruel! One typing mistake and it does not work!</p>
+
+        <p>This <b>command</b> could be very tricky if you had not the option of
+           <b>Copy</b>/<b>Paste</b> from this web page!</p>
+
+        <p>In a previous "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
+           But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
+           be avoided altogether.</p>
+
+        <p>Basically, if you enter enough of a <b>filename</b>/<b>directory name</b>/<b>command</b>
+           (according to context) to allow the system to know what you wish to type next,
+           you need only to press the <b>Tab</b> key and <b>UNIX</b> will type on up to the
+           next point where ambiguity exists (often to "<b>Completion</b>").</p>
+
+        <p>As a practical example, why not create the next command as follows?:</p>
+
+        <ol>
+          <li>
+            Type in:
+            <p class="lcommand">
+              <b>mv .</b>
+            </p>
+          </li>
+          <li>
+            Press the <b>Tab</b> key.<br><br>
+            As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
+            <b>UNIX</b> can expand your efforts faultlessly to:
+            <p class="lcommand">
+              <b>mv .Cats_in_the_cupboard_but_they_dont_see_me </b>
+            </p>
+          <li>
+            Add another '<b>.</b>' to the end of this poetry
+            <p class="lcommand">
+              <b>mv .Cats_in_the_cupboard_but_they_dont_see_me .</b>
+            </p>
+          </li>
+          <li>
+            Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
+            (nearly) the job for you!
+            <p class="lcommand">
+              <b>mv .Cats_in_the_cupboard_but_they_dont_see_me
+                    .Cats_in_the_cupboard_but_they_dont_see_me</b>
+            </p>
+          <li>The object is to remove the '<b>.</b>' from the beginning of the long filename,
+              thus unhiding the file.<br><br>
+
+              To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
+              and delete it. Done!
+          </li>
+        </ol>
+        <p><b>En Passant</b>: The message of the long <b>filename</b> here is but one of the many wisdoms
+           given to humanity by the great sage of the New World, <b>Huddie Leadbetter</b> (
+           <a href="https://en.wikipedia.org/wiki/Lead_Belly" target="_blank">
+           <b>Lead Belly</b></a>"
+           to his very closest acquaintances). You can read it in context
+           <a href="http://www.lyricsmode.com/lyrics/l/leadbelly/rock_island_line.html"
+           target="_blank"><b>Here</b></a>,
+           or even hear it
+           <a href="https://www.youtube.com/watch?v=E2iiS-neZls" target="_blank">
+           <b>Here</b></a>.</p>
+
+        <p><b>Finally</b>: If <b>UNIX</b> cannot <b>Tab Complete</b> a line because of ambiguities,
+           press the <b>Tab</b> key twice and <b>UNIX</b> will display all the
+           possible ways to continue your intentions manually.</p>
+      </div>
+
+      <p>You can "unhide" your lengthy creation with the mega command:</p>
  
-<p class="lcommand">
-  <b>mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me</b>
-</p>
+      <p class="lcommand">
+        <b>mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me</b>
+      </p>
 
-<p>Test your files new visibility status with the command:</p>
+      <p>Test your files new visibility status with the command:</p>
 
-<p class="command">
-  <b>ls</b>
-</p>
+      <p class="command">
+        <b>ls</b>
+      </p>
 
-<details class="comment">
-  <summary><span class="comsum">Comment</span></summary>
-  <img src="Images/hidden06.png" alt="Figh!" style="height:308px; width:800px;">
-</details><br>
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/hidden06.png" alt="Figh!" style="height:308px; width:800px;">
+      </details><br>
 
-<div class="new_command">
-  <p>Introducing 
-     <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>.
-     A command to copy <b>files</b> and/or <b>directories</b>.</p>
-</div>
+      <div class="new_command">
+        <p>Introducing 
+           <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>.
+           A command to copy <b>files</b> and/or <b>directories</b>.</p>
+      </div>
 
-<p>First, <b>c</b>o<b>p</b>y the <b>file aaa</b>, which is currently in the <b>directory dirIII</b>, to the <b>Current Working Directory</b> ('<b>.</b>', also known as <b>ProjectX</b>) with the command:</p>
+      <p>First, <b>c</b>o<b>p</b>y the <b>file aaa</b>, which is currently in the <b>directory dirIII</b>,
+         to the <b>Current Working Directory</b> ('<b>.</b>', also known as <b>ProjectX</b>)
+         with the command:</p>
 
-<p class="command">
-  <b>cp dirIII/abc .</b>
-</p>
+      <p class="command">
+        <b>cp dirIII/abc .</b>
+      </p>
 
-<p>and then follow the advice of Brian (Wilson that is) and his melodious family.
-<a href="https://www.youtube.com/watch?v=N0DWT-VO5pQ" target="_blank"> Do it again!</a>.</p>
+      <p>and then follow the advice of Brian (Wilson that is) and his melodious family.
+      <a href="https://www.youtube.com/watch?v=N0DWT-VO5pQ" target="_blank"> Do it again!</a>.</p>
 
-<p class="hint">
-  {<b><i>Hint:</i></b> What an excellent moment to remember the <b>&uarr;</b> trick!}
-</p>
+      <p class="hint">
+        {<b><i>Hint:</i></b> What an excellent moment to remember the <b>&uarr;</b> trick!}
+      </p>
 
-<p class="command">
-  <b>cp dirIII/abc .</b>
-</p>
+      <p class="command">
+        <b>cp dirIII/abc .</b>
+      </p>
 
-<p>and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destroy the
-   effect of the first?</p>
+      <p>and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destroy the
+         effect of the first?</p>
 
-<p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always
-   really know what you are doing, and that it is inconceivable that you might occassionally
-   drift into the inadvertant. Dangerous in the extreme! Especially for those of us who have
-   advanced far into the years of mental meander.</p>
+      <p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always
+         really know what you are doing, and that it is inconceivable that you might occassionally
+         drift into the inadvertant. Dangerous in the extreme! Especially for those of us who have
+         advanced far into the years of mental meander.</p>
 
-<p>You can encourage a degree of caution into the system with the <b>-i</b> switch for
-   <b>cp</b> (and similar commands). This switch instructs <b>cp</b> to <b>i</b>nterrogate
-   the user before executing any irreversibly destructive operation.
-   Try it here with the command:</p>
+      <p>You can encourage a degree of caution into the system with the <b>-i</b> switch for
+         <b>cp</b> (and similar commands). This switch instructs <b>cp</b> to <b>i</b>nterrogate
+         the user before executing any irreversibly destructive operation.
+         Try it here with the command:</p>
 
-<p class="command">
-  <b>cp -i dirIII/def abc</b>
-</p>
+      <p class="command">
+        <b>cp -i dirIII/def abc</b>
+      </p>
 
-<p>I copy a different file only to break the monotany, the proposal to destroy once more <b>abc</b>, is the issue.</p>
+      <p>I copy a different file only to break the monotany, the proposal to destroy once more
+        <b>abc</b>, is the issue.</p>
 
-<p>Hopefully, because of the <b>-i</b> switch, the system has petulantly inquired whether you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>. Answer as best suits your whim.</p>
+      <p>Hopefully, because of the <b>-i</b> switch, the system will petulantly inquire whether
+         you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>. Answer as best suits your whim.</p>
 
-<div class="new_command">
-  <p>Introducing
-     <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
-     A command to copy <b>files</b> and/or <b>directories</b>.</p>
-</div>
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cp-i01.png" alt="Curses!" style="height:348px; width:800px;">
+      </details>
 
+cp -p
 
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
+           A command to create <b>command</b> aliases.</p>
+      </div>
 
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
+           A command to remove <b>command</b> aliases.</p>
+      </div>
 
-cp -i cp -p
+      <p>The exercise directory you created so long ago, is now awash with a delight of files, links
+         and directories of minmimal purpose! The time has come to clean up and start afresh.</p>
 
+      <p>In the next phase of this exercise, the aim will be to use the commands that have been introduced
+         to answer some discernable, biologically related, queries.</p>
 
-
-
-
-
-
-
-
-
-
-
-<p>The exercise directory you created so long ago, is now awash with a delight of files, links and directories of minmimal purpose! The time has come to clean up and start afresh.</p>
-
-<p>In the next phase of this exercise, the aim will be to use the commands that have been introduced to answer some discernable, biologically related, queries.</p>
-
-<div class="new_command">
-  <p>Introducing
-     <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
-     A command to <b>r</b>e<b>m</b>ove files/directories.</p>
-</div>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
+           A command to <b>r</b>e<b>m</b>ove files/directories.</p>
+      </div>
 
 rm *
 
 ls 
 
-<div class="new_command">
-  <p>Introducing
-     <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
-     A command to <b>r</b>e<b>m</b>ove empty <b>dir</b>ectories.</p>
-</div>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
+           A command to <b>r</b>e<b>m</b>ove empty <b>dir</b>ectories.</p>
+      </div>
 
 rmdir *
 
 ls
 
-<div class="new_command">
-  <p>Introducing
-     <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
-     A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
-     in a <b>terminal</b>.</p>
-</div>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
+           A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
+           in a <b>terminal</b>.</p>
+      </div>
 
 rm rmdir uae of * to go before the Checkpoint<br>
 Then change of emphasis!<br>
@@ -939,110 +957,130 @@ An anonymous fasta file?<br>
 some blast results {wgete -r} - cannot run blast aas would require installation (I tink? .. maybe not?)<br><br>
 <br>
 
-<div class="checkpoint">
-  <h3><i><u>Checkpoint</u></i></h3>
+      <div class="checkpoint">
+        <h2><i><u>Checkpoint</u></i></h2>
 
-  <p><b>Commands introduced thus far are:</b>
-  <ol type="1">
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><b>cd</b></a>.
-             <b>c</b>hange the working <b>d</b>irectory.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html" target="_blank"><b>pwd</b></a>.
-             <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a>.
-             <b>m</b>a<n>k</b>es <b>dir</b>ectories.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
-             <b>l</b>i<b>s</b>ts the contents of a directory.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
-             Creates new empty files and updates the modification times of existing files.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
-             Renames or <b>m</b>o<b>v</b>es <b>files</b> and <b>directories</b>.
-    </li>
-    <li>
-      <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
-             Creates <b>l</b>i<b>n</b>ks to files/directories.
-    </li>
-  </ol>
+        <p><b>Commands introduced thus far are:</b>
+        <ol type="1">
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><b>cd</b></a>.
+                   <b>c</b>hange the working <b>d</b>irectory.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html" target="_blank"><b>pwd</b></a>.
+                   <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a>.
+                   <b>m</b>a<n>k</b>es <b>dir</b>ectories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
+                   <b>l</b>i<b>s</b>ts the contents of a directory.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
+                   Creates new empty files and updates the modification times of existing files.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
+                   Renames or <b>m</b>o<b>v</b>es <b>files</b> and <b>directories</b>.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
+                   Creates <b>l</b>i<b>n</b>ks to files/directories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
+                   Creates <b>command</b> aliases.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
+                   Removes <b>command</b> aliases.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
+                   <b>r</b>e<b>m</b>oves files/directories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
+                   <b>r</b>e<b>m</b>oves empty <b>dir</b>ectories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
+                   Display the <b>man</b>ual pages for a specified <b>UNIX command</b>.
+          </li>
+        </ol>
 
-  <p><b>Concepts/tricks introduced thus far are:</b>
-  <ol type="1">
-    <li>Customising commands with <b>switches</b>.</li>
-    <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
-    <li>Using '<b>?</b>' as a single character wild card.</li>
-    <li>Using '<b>*</b>' as a multi-character wild card.</li>
-    <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue
-    <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys
-    <li><b>Tab Completion</b>.
-  </ol>
+        <p><b>Concepts/tricks introduced thus far are:</b>
+        <ol type="1">
+          <li>Customising commands with <b>switches</b>.</li>
+          <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
+          <li>Using '<b>?</b>' as a single character wild card.</li>
+          <li>Using '<b>*</b>' as a multi-character wild card.</li>
+          <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue
+          <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys
+          <li><b>Tab Completion</b>.
+        </ol>
 
-  <p><b>Reflections:</b>
-  <ol type="1">
-    <li>Everything done thus far can be achieved either from the <b>command line</b>
-        or the <b>Linux GUI</b>.</li>
-    <li>The <b>GUI</b> option is intuitive, but at times, clumsy.</li>
-    <li>The <b>command line</b> requires effort to learn, but is generally more efficient,
-        particularly when repetitive operations are involved.</li>
-  </ol>
+        <p><b>Reflections:</b>
+        <ol type="1">
+          <li>Everything done thus far can be achieved either from the <b>command line</b>
+              or the <b>Linux GUI</b>.</li>
+          <li>The <b>GUI</b> option is intuitive, but at times, clumsy.</li>
+          <li>The <b>command line</b> requires effort to learn, but is generally more efficient,
+              particularly when repetitive operations are involved.</li>
+        </ol>
 
-  <p> Now some simple questions to test your understanding.</p>
+        <p> Now some simple questions to test your understanding.</p>
 
-  <p class="hint">
-    {<b><i>Hint</i></b>: The
-     <a href="http://man7.org/linux/man-pages/" target="_blank"><b>Linux Manual Pages</b></a>
-    will be invaluable}
-  </p>
-
-  <ol type="1">
-    <li>
-      <p class="smarg">Describe the effects of the command:</p>
-      <p class="command">
-        <b><a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank">ls</a>
-        -lrt</b>
-      </p>
-      <details class="comment" style="background-color="AntiqueWhite">
-      <summary><span class="comsum">Answer.</span></summary>
-        <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:403px; width:760px;">
-      </details>
-    </li>
-    <li>
-      <p class="smarg">With but a single command, using
-         <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
-         how could you create the nest of optimistic directories:
-        <p class="command">
-           ~/Desktop/Here/comes/the/sun
+        <p class="hint">
+          {<b><i>Hint</i></b>: The
+           <a href="http://man7.org/linux/man-pages/" target="_blank"><b>Linux Manual Pages</b></a>
+          will be invaluable}
         </p>
-      </p>
-      <p class="smarg">Let
-           Let<a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
-               <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
-           and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
-           encourage you in your struggles.</p>
-      <details class="comment" style="background-color="AntiqueWhite">
-      <summary><span class="comsum">Answer.</span></summary>
-        <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
-      </details>
-    </li>
-    <li>
-      <p class="smarg">With but a single command, using
-           <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
-           would you remove the functionless tower of empty directories created in the previous question?</p>
-      <details class="comment" style="background-color="AntiqueWhite">
-      <summary><span class="comsum">Answer.</span></summary>
-        <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:480px; width:760px;">
-      </details><br>
-    </li>
-  </ol>
-</div>
+
+        <ol type="1">
+          <li>
+            <p class="smarg">Describe the effects of the command:</p>
+            <p class="command">
+              <b><a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank">ls</a>
+              -lrt</b>
+            </p>
+            <details class="comment" style="background-color="AntiqueWhite">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:403px; width:760px;">
+            </details>
+          </li>
+          <li>
+            <p class="smarg">With but a single command, using
+               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
+               how could you create the nest of optimistic directories:
+              <p class="command">
+                 ~/Desktop/Here/comes/the/sun
+              </p>
+            </p>
+            <p class="smarg">Let
+                 Let<a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
+                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
+                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
+                 encourage you in your struggles.</p>
+            <details class="comment" style="background-color="AntiqueWhite">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
+            </details>
+          </li>
+          <li>
+            <p class="smarg">With but a single command, using
+                 <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
+                 would you remove the functionless tower of empty directories created in the previous question?</p>
+            <details class="comment" style="background-color="AntiqueWhite">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:480px; width:760px;">
+            </details><br>
+          </li>
+        </ol>
+      </div>
 
 <!-- #######################################################################################
      #######################################################################################

@@ -1,0 +1,34 @@
+cd
+pwd
+cd Desktop
+mkdir ProjectX
+cd ProjectX
+ls
+touch a
+touch b c aa bb cc abc def ghi
+mkdir dirI dirII dirIII dirIV dirV
+ls
+ls -l
+mv ? dirI
+mv ?? dirII
+mv ??? dirIII
+ls -R
+ln -s dirI/a .
+ln -s dirII/aa Link_to_aa
+ls -l
+touch .Cats_in_the_cupboard_but_they_dont_see_me
+ls
+ls -a
+mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me
+ls
+cp dirIII/abc .
+cp dirIII/abc .
+cp -i dirIII/def abc
+cp -i
+cp -p
+rm *
+ls 
+rmdir *
+ls
+
+
