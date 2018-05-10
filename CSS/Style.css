@@ -5,11 +5,38 @@
  https://www.w3schools.com/html/html_css.asp
 -- ############################################## */
 
+/* Text justification for all p, div, h2 */
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 15px; margin-right: 15px;
+}
+
+div {
+    margin-left: 15px; margin-right: 15px;
+}
+
+h2 {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 15px; margin-right: 15px;
+}
+
+/* p with no left margin (for lists?) */
+
+p.smarg {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 15px;
+}
+
 /* p for Exercise Commands  */
 
 p.command {
     background-color: Black; color: White;
-    font-family: courier; font-size: 20px;
+    font-family: courier; font-size: 22px;
+    position: relative; left: 20px;
     width: 450px;   
 }
 
@@ -18,7 +45,8 @@ p.command {
 p.lcommand {
     background-color: Black; color: White;
     font-family: courier; font-size: 12px;
-    width: 750px;   
+    position: relative; left: 20px;
+    width: 700px;   
 }
 
 /* p for Hints  */
@@ -38,29 +66,47 @@ div.ramble {
 /* div for Suggestions */
 
 div.suggestion {
-    background-color: PeachPuff; border-style: solid;
+    background-color: PeachPuff;
+    border-style: solid;
     width: 800px;
 }
 
 /* div for Exercise Checkpoints */
 
 div.checkpoint {
-    background-color: AntiqueWhite; border-style: solid;
+    background-color: AntiqueWhite;
+    border-style: solid;
     width: 800px
+}
+
+/* span for GUI Equivalents Summary*/
+
+span.guisum {
+    display: inline-block;
+    width: 200px;
+    background-color: DarkGray; 
+}
+
+/* span for Comment Summary*/
+
+span.comsum {
+    display: inline-block;
+    width: 200px;
+    background-color: LightGray; 
 }
 
 /* details for Exercise Comments */
 
 details.comment {
-    background-color: LightYellow;
-    width: 100px;
+    background-color: LavenderBlush;
+    width: 400px;
 }
 
 /* details for GUI Equivalents */
 
 details.gui {
-    background-color:Cyan;
-    width: 910px;
+    background-color:LavenderBlush;
+    width: 906px;
 }
 
 /* details for Videos */
@@ -73,22 +119,22 @@ details.video {
 /* class for Major Sections */
 
 .msect {
-    background: LavenderBlush;
-    width: 910px;
+    background: LavenderBlush; border-right: 106px;
+    width: 800px;
 }
 
 /* class for Sections List*/
 
 .lsect {
-    background: LavenderBlush; padding: 10px;
-    width: 900px;
+    background: LavenderBlush; padding: 50px;
+    width: 856px;
 }
 
 /* class for Exercise New Commands */
 
 .new_command {
     background-color: LightGreen; border-style: double;
-    width: 800px
+    width: 800px;
 }
 
 /* ############################################## --

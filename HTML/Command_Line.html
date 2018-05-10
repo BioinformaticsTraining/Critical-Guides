@@ -51,22 +51,6 @@ Click to record your <b>Start</b> time.</button>
      Makes it look a bit more like other websites maybe?
      Apparently my efforts are 1990s?
      Apparently I should use a scheme?
-     Apparently the cosmetics matter more then the content?
-
-     I need to hear what is wrong with the ideas
-       ... not the bloody colors I choose?
-       ... not the shape and style of the page!
-       ... am I selling sausages?
-
-     I am not sure the whole arrangement of what I am doing is right or not
-     I really suspect not!
-     I seem to be writing the BOM in HTML!! This is not what I set out to do.
-     If it does not work, tell me! I go do something else.
-
-     Not pretty enough? I do not care!!! Maybe do something about that
-     if/when content proves worthy of the effort!
-
-     Why am I doing this anyway ... the sun is shining and I no longer give a shit!
 -->
 
 <!-- #######################################################################################
@@ -77,7 +61,8 @@ Click to record your <b>Start</b> time.</button>
 <ol class="lsect">
   <li>
     <details class="msect">
-    <summary>Introduction (Objectives, Structure, Prerequisites)<br></summary>
+    <summary><b>Introduction:</b>
+             (Objectives, Structure, Prerequisites)</summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -89,42 +74,64 @@ Click to record your <b>Start</b> time.</button>
       Unclear where this should go?
       I try stream of whatever and see where it leads -->
 
-<div class="ramble">
+      <div class="ramble">
 
-<h2>Guide Objectives.</h2>
+        <h2>Guide Objectives.</h2>
 
-<p>Many <b>Bioinformatics</b> objectives can be achieved using Web sites (<b>NCBI</b>, <b>EBI</b>, <b>Expasy</b> and many more) and/or software with intuitive <b>G</b>raphical <b>U</b>ser <b>I</b>nterfaces (<b>GUI</b>s). However, many more cannot, especially those involving large datasets, experimental software and compute intensive tasks are involved. In such circumstances, the stark environment of the <b>UNIX</b> command line is the preferred (often the only) choice.</p>
+        <p>Many <b>Bioinformatics</b> objectives can be achieved using Web sites (<b>NCBI</b>, <b>EBI</b>,
+           <b>Expasy</b> and many more) and/or software with intuitive <b>G</b>raphical <b>U</b>ser
+           <b>I</b>nterfaces (<b>GUI</b>s). However, many more cannot, especially those involving large datasets,
+           experimental software and compute intensive tasks are involved. In such circumstances, the stark
+           environment of the <b>UNIX</b> command line is the preferred (often the only) choice.</p>
 
-<p>As most researchers will not have the luxurious option of delegating all their computing activities to an "expert <b>Bioinformatition</b>", it is sensible for all to, at the very least, have some familiarity with the <b>UNIX command line</b>. It is the objective of this "<b>Critical Sheet</b>" to start the complete beginner on the journey towards such an understanding.</p>
+        <p>As most researchers will not have the luxurious option of delegating all their computing activities
+           to an "expert <b>Bioinformatition</b>", it is sensible for all to, at the very least, have some
+           familiarity with the <b>UNIX command line</b>. It is the objective of this "<b>Critical Sheet</b>"
+           to start the complete beginner on the journey towards such an understanding.</p>
 
-  <p>It would not be practical to attempt a full competence with <b>UNIX</b> here. More modest targets include:
-    <ol>
-      <li>A superficial familiarity with the most common <b>UNIX commands</b></li>
-      <li>Knowledge of how to build upon this familiarity easily (i.e. read the <b>Manual</b>!)</li>
-      <li>An acceptance of the conceptual link between using the command line and more familiar
-          <b>GUI</b> based environments (e.g. <b>Windows</b>)
-      <li>An acceptance that learning a bit of <b>UNIX</b> is indeed useful</li>
-    </ol>
-  </p>
+        <p>It would not be practical to attempt a full competence with <b>UNIX</b> here.
+           More modest targets include:
+          <ol>
+            <li>A superficial familiarity with the most common <b>UNIX commands</b></li>
+            <li>Knowledge of how to build upon this familiarity easily (i.e. read the <b>Manual</b>!)</li>
+            <li>An acceptance of the conceptual link between using the command line and more familiar
+                <b>GUI</b> based environments (e.g. <b>Windows</b>)
+            <li>An acceptance that learning a bit of <b>UNIX</b> is indeed useful</li>
+          </ol>
+        </p>
+  
+        <h2>Guide Structure</h2>
 
-  <h2>Guide Structure</h2>
+        <p>The approach of this Guide is to lead the user through a simple exercise that provides
+           a showcase for all the most common <b>UNIX commands</b> as well as a few "<i>tricks</i>"
+           that, hopefully, make life a little easier.
+           At many stages, users will be offered the opportunity to consider how the effects of a
+           <b>UNIX command</b> might be achieved (if clumsily) using a typical <b>LINUX GUI</b>.
+           Whenever a new command is introduced, a <b>link</b>
+           to the relevant <b>Manual Pages</b> will be provided.</p>
 
-  <p>The approach of this Guide is to lead the user through a simple exercise that provides a showcase for all the most common <b>UNIX commands</b> as well as a few "<i>tricks</i>" that, hopefully, make life a little easier. At many stages, users will be offered the opportunity to consider how the effects of a <b>UNIX command</b> might be achieved (if clumsily) using a typical <b>LINUX GUI</b>. Whenever a new command is introduced, a <b>link</b> to the relevant <b>Manual Pages</b> will be provided.</p>
+        <p>In the first stages of the exercise, no effort is made to include any "<i>Biological
+           Purpose</i>". We just meander through an investigation of <b>Basic UNIX commands</b>.
+           Later on, the exercise will include some relevant data
+           files and attempt to do some vaguely "<i>meaningful things</i>".</p>
 
-  <p>In the first stages of the exercise, no effort is made to include any "<i>Biological Purpose</i>". We just meander through an investigation of <b>Basic UNIX commands</b>. Later on, the exercise will include some relevant data files and attempt to do some vaguely "<i>meaningful things</i>".</p>
+        <h2>Guide Prerequisites</h2>
 
-  <h2>Guide Prerequisites</h2>
+        <p>Beyond a level of computer literacy that is unavoidable in this technologically over
+           soaked era, hardly anything really.</p>
 
-  <p>Beyond a level of computer literacy that is unavoidable in this technologically over soaked era, hardly anything really.</p>
+        <p>However, it would help to understand the way <b>files</b> and <b>directories</b>
+           (<b>folders</b> if you prefer) are arranged and referenced in a <b>UNIX</b> environment
+           however. If you feel the need, spend a few minutes glancing through the <b>Video</b> below.
 
-  <p>However, it would help to understand the way <b>files</b> and <b>directories</b> (<b>folders</b> if you prefer) are arranged and referenced in a <b>UNIX</b> environment however. If you feel the need, spend a few minutes glancing through the <b>Video</b> below. 
-  <details class="video">
-  <summary><b>UNIX File Structure & Reference - A video</b></summary>
-    <video width="320" height="240" controls preload>
-      <source src="Videos/DotPlots.webm"></src>
-    </video>
-  </details>
-</div>
+        <details class="video">
+        <summary><b>UNIX File Structure & Reference - A video</b></summary>
+          <video width="320" height="240" controls preload>
+            <source src="Videos/DotPlots.webm"></src>
+          </video>
+        </details><br>
+
+      </div>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -137,7 +144,8 @@ Click to record your <b>Start</b> time.</button>
   </li>
   <li>
     <details class="msect">
-    <summary>Exercise - Part I: A familiarisation with some Basic UNIX Commands</summary>
+    <summary><b>Exercise - Part I:</b>
+             A familiarisation with some Basic UNIX Commands</summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -145,361 +153,362 @@ Click to record your <b>Start</b> time.</button>
      #######################################################################################
      ####################################################################################### -->
 
-<div class="ramble">
+      <div class="ramble">
 
-  <h2>A familiarisation with some Basic UNIX Commands.</h2>
+        <h2>A familiarisation with some Basic UNIX Commands.</h2>
 
-  <p>In which we strive to introduce as many common <b>UNIX</b> commands as is practical.</p>
+        <p>In which we strive to introduce as many common <b>UNIX</b> commands as is practical.</p>
 
-  <p>Every time a new command is used, a link to the official Manual Pages for that command is provided.
-     Here you can wallow in the full unabridged story. The exercise represents a brutally
-     abridged practical overview.</p>
+        <p>Every time a new command is used, a link to the official Manual Pages for that command
+           is provided. Here you can wallow in the full unabridged story. The exercise represents
+           a brutally abridged practical overview.</p>
 
-<p>Where it was felt to be helpful, the way a step of the exercise could be achieved using a typical <b>LINUX GUI</b> environment (default <b>Ubuntu</b>) is offered.</p>
+        <p>Where it was felt to be helpful, the way a step of the exercise could be achieved using
+           a typical <b>LINUX GUI</b> environment (default <b>Ubuntu</b>) is offered.</p>
 
-<p>So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally do this) and follow along. First some rather function free warm up, leading eventually to use of the command line to achieve vaguely Bioinformatic objectives.</p>
+        <p>So, open a fresh command line terminal window (<b>Ctrl-Alt-t</b> will normally do this)
+           and follow along. First some rather function free warm up, leading eventually to use of
+           the command line to achieve vaguely Bioinformatic objectives.</p>
 
-<p class="hint">
-  {<b><i>Hint</i></b>: Especially when the commands of the exercise are long,
-               why not <b>Copy/Paste</b> from this page?}
-</p>
+        <p class="hint">
+           {<b><i>Hint</i></b>: Especially when the commands of the exercise are long,
+           why not <b>Copy/Paste</b> from this page?}</p>
 
-</div>
+      </div><br>
 
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><b>cd</b></a>.
-  This command enables a user to move around the UNIX File System.
-  That is, to <b>c</b>hange the working <b>d</b>irectory.
-</div>
-
-<p>First ensure we all start in the same place with the simple command:</p>
-
-<p class="command">
-  <b>cd</b>
-</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/cd01.png" alt="Curses!" style="height:485px; width:800px;">
-</details>
-
-<br>
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html" target="_blank"><b>pwd</b></a>.
-  This command reports the absolute address of the working directory.
-  That is, it <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
-</div>
-
-<p>Confirm the <b>working directory</b> is as expected with the command:</p>
-
-<p class="command">
- <b>pwd</b>
-</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:424px; width:800px;">
-</details>
-
-<p>Move into your <b>Desktop</b> directory with the command:</p>
-
-<p class="command">
- <b>cd Desktop</b>
-</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/cd02.png" alt="Curses!" style="height:403px; width:800px;">
-</details>
-
-<br>
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a>.
-  A command for <b>m</b>a<n>k</b>ing <b>dir</b>ectories.
-</div>
-
-<p>Make a new directory in which to continue the exercise with the command:</p>
-
-<p class="command">
-  <b>mkdir ProjectX</b>
-</p>
-<p>Take a look at your graphical <b>Desktop</b>. You should be able to see an icon representing your creation.</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/mkdir04.png" alt="Curses!" style="height:274px; width:800px;">
-</details>
-
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mkdir01_Popup'))")">
-      <div class="container">
-        <img src="Images/mkdir01.png" alt="Curses!"
-             style="height:145px; width:205px;">
-        <span class="popuptext" id="mkdir01_Popup" style="text-align:center;">
-              Right hand mouse click in the <b>Desktop</b> background.
-              Select <b>New Folder</b>.</span>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><b>cd</b></a>.
+           This command enables a user to move around the UNIX File System.
+           That is, to <b>c</b>hange the working <b>d</b>irectory.</p>
       </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mkdir02_Popup'))")">
-      <div class="container">
-        <img src="Images/mkdir02.png" alt="Curses!"
-             style="height:350px; width:245px;">
-        <span class="popuptext" id="mkdir02_Popup" style="text-align:center;">
-              Right hand mouse click on the new <b>Untitled Folder</b> icon.
-              Select <b>Rename</b>.
-              Enter <b>ProjectX</b>.</span>
+
+      <p>First ensure we all start in the same place with the simple command:</p>
+
+      <p class="command">
+        <b>cd</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cd01.png" alt="Curses!" style="height:485px; width:800px;">
+      </details><br>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html" target="_blank"><b>pwd</b></a>.
+           This command reports the absolute address of the working directory.
+           That is, it <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.</p>
       </div>
-    </div>                                                                         
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mkdir03_Popup'))")">
-      <div class="container" style="width=30%">
-        <img src="Images/mkdir03.png" alt="Curses!"
-             style="height:150px; width:150px;">
-        <span class="popuptext" id="mkdir03_Popup" style="text-align:center;">
-              Admire new Folder/Directory called <b>ProjectX</b>.</span>
+
+      <p>Confirm the <b>working directory</b> is as expected with the command:</p>
+
+      <p class="command">
+        <b>pwd</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:424px; width:800px;">
+      </details>
+
+      <p>Move into your <b>Desktop</b> directory with the command:</p>
+
+      <p class="command">
+         <b>cd Desktop</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cd02.png" alt="Curses!" style="height:403px; width:800px;">
+      </details><br>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a>.
+           A command for <b>m</b>a<n>k</b>ing <b>dir</b>ectories.</p>
       </div>
-    </div>
-  </div>
-</details>
 
-<p>Having made the directory <b>ProjectX</b>, make it the current working directory with the command:</p>
+      <p>Make a new directory in which to continue the exercise with the command:</p>
 
-<p class="command">
-  <b>cd ProjectX</b>
-</p>
+      <p class="command">
+        <b>mkdir ProjectX</b>
+      </p>
 
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
-  A command to <b>l</b>i<b>s</b>t the contents of a directory.
-</div>
+      <p>Take a look at your graphical <b>Desktop</b>. You should be able to see an icon
+         representing your creation.</p>
 
-<p>... and then display the contents of <b>ProjectX</b> with the command:</p>
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/mkdir04.png" alt="Curses!" style="height:274px; width:800px;">
+      </details>
 
-<p class="command">
-  <b>ls</b>
-</p>
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mkdir01_Popup'))")">
+            <div class="container">
+              <img src="Images/mkdir01.png" alt="Curses!"
+                   style="height:145px; width:205px;">
+              <span class="popuptext" id="mkdir01_Popup" style="text-align:center;">
+                    Right hand mouse click in the <b>Desktop</b> background.
+                    Select <b>New Folder</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mkdir02_Popup'))")">
+            <div class="container">
+              <img src="Images/mkdir02.png" alt="Curses!"
+                   style="height:350px; width:245px;">
+              <span class="popuptext" id="mkdir02_Popup" style="text-align:center;">
+                    Right hand mouse click on the new <b>Untitled Folder</b> icon.
+                    Select <b>Rename</b>.
+                    Enter <b>ProjectX</b>.</span>
+            </div>
+          </div>                                                                         
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mkdir03_Popup'))")">
+            <div class="container" style="width=30%">
+              <img src="Images/mkdir03.png" alt="Curses!"
+                   style="height:150px; width:150px;">
+              <span class="popuptext" id="mkdir03_Popup" style="text-align:center;">
+                    Admire new Folder/Directory called <b>ProjectX</b>.</span>
+            </div>
+          </div>
+        </div>
+      </details>
 
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/cd-ls01.png" alt="Curses!" style="height:323px; width:800px;">
-</details>
+      <p>Having made the directory <b>ProjectX</b>, make it the current working directory with the command:</p>
 
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('cd00_Popup'))")">
-      <div class="container">
-        <img src="Images/mkdir03.png" alt="Curses!"
-             style="height:150px; width:150px;">
-        <span class="popuptext" id="cd00_Popup" style="text-align:center;">
-              Double Click on the <b>ProjectX</b> folder icon.</span>
+      <p class="command">
+        <b>cd ProjectX</b>
+      </p>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
+           A command to <b>l</b>i<b>s</b>t the contents of a directory.</p>
       </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('cd01_Popup'))")">
-      <div class="container">
-        <img src="Images/EmptyFolder.png" alt="Curses!"
-             style="height:300px; width:300px;">
-        <span class="popuptext" id="cd01_Popup" style="text-align:center;">
-              Admire the emptiness of the Folder/Directory called <b>ProjectX</b>.</span>
+
+      <p>... and then display the contents of <b>ProjectX</b> with the command:</p>
+
+      <p class="command">
+        <b>ls</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cd-ls01.png" alt="Curses!" style="height:323px; width:800px;">
+      </details>
+
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('cd00_Popup'))")">
+            <div class="container">
+              <img src="Images/mkdir03.png" alt="Curses!"
+                   style="height:150px; width:150px;">
+              <span class="popuptext" id="cd00_Popup" style="text-align:center;">
+                    Double Click on the <b>ProjectX</b> folder icon.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('cd01_Popup'))")">
+            <div class="container">
+              <img src="Images/EmptyFolder.png" alt="Curses!"
+                   style="height:300px; width:300px;">
+              <span class="popuptext" id="cd01_Popup" style="text-align:center;">
+                    Admire the emptiness of the Folder/Directory called <b>ProjectX</b>.</span>
+            </div>
+          </div>
+        </div>
+      </details><br>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
+           In the exercise, we use <b>touch</b> to create new empty files
+           and to update the modification times of existing files.</p>
       </div>
-    </div>
-  </div>
-</details>
 
-<br>
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
-  In the exercise, we use <b>touch</b> to create new empty files
-  and to update the modification times of existing files.
-</div>
+      <p>Begin to populate <b>ProjectX</b> with an empty file called "<b>a</b>", with the command:</p>
 
-<p>Begin to populate <b>ProjectX</b> with an empty file called "<b>a</b>", with the command:</p>
+      <p class="command">
+        <b>touch a</b>
+      </p>
 
-<p class="command">
-  <b>touch a</b>
-</p>
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('touch01_Popup'))")">
+            <div class="container">
+              <img src="Images/touch01.png" alt="Curses!"
+                   style="height:190px; width:300px;">
+              <span class="popuptext" id="touch01_Popup" style="text-align:center;">
+                    Right hand mouse click in the opened <b>ProjectX</b> background.
+                    Select <b>Empty Document</b> from the <b>Next Document</b> menu.</span>
+             </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('touch02_Popup'))")">
+            <div class="container">
+              <img src="Images/touch02.png" alt="Curses!"
+                   style="height:338px; width:300px;">
+              <span class="popuptext" id="touch02_Popup" style="text-align:center;">
+                    Right hand mouse click on the new <b>Untitled Document</b> icon.
+                    Select <b>Rename</b>.
+                    Enter <b>a</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('touch03_Popup'))")">
+            <div class="container">
+              <img src="Images/touch03.png" alt="Curses!"
+                   style="height:151px; width:300px;">
+              <span class="popuptext" id="touch03_Popup" style="text-align:center;">
+                    Admire the magnificence of the new <b>file</b>,
+                    imaginatively called <b>a</b>.</span>
+            </div>
+          </div>
+        </div>
+      </details>
 
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('touch01_Popup'))")">
-      <div class="container">
-        <img src="Images/touch01.png" alt="Curses!"
-             style="height:190px; width:300px;">
-        <span class="popuptext" id="touch01_Popup" style="text-align:center;">
-              Right hand mouse click in the opened <b>ProjectX</b> background.
-              Select <b>Empty Document</b> from the <b>Next Document</b> menu.</span>
+      <p><b>touch</b> can make lots of fine new empty <b>files</b> in one go. Do this with the command:</p>
+
+      <p class="command">
+        <b>touch b c aa bb cc abc def ghi</b>
+      </p>
+
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('touch04_Popup'))")">
+            <div class="container">
+              <img src="Images/touch04.png" alt="Curses!"
+                   style="height:267px; width:400px;">
+              <span class="popuptext" id="touch04_Popup" style="text-align:center;">
+                    Repeat the formula for the creation of the file <b>a</b>
+                    for each of the other <b>8</b> new files.
+                    <b><i>Incredibly tedious!!</i></b>.
+                    The command line is typically the best choice for repeated operations.</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <p>While in the mode of creating useless things, why not a splendour of <b>directories</b>
+         with the command:</p>
+
+      <p class="command">
+        <b>mkdir dirI dirII dirIII dirIV dirV</b>
+      </p>
+
+      <p>Finally, inspect your handiwork with the command:</p>
+
+      <p class="command">
+        <b>ls</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/touch-mkdir-ls01.png" alt="Curses!" style="height:567px; width:800px;">
+      </details>
+
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('mkdirls01_Popup'))")">
+            <div class="container">
+              <img src="Images/mkdirls01.png" alt="Curses!"
+                   style="height:239px; width:400px;">
+              <span class="popuptext" id="mkdirls01_Popup" style="text-align:center;">
+                    Repeat the formula for the creation of the <b>ProjectX</b> directory
+                    for each of the <b>5</b> new directories.
+                    Again,<b><i>Incredibly tedious!!</i></b>.
+                    The command line is far more efficient.
+                    As the file and directory icons are all displayed by default,
+                    no graphical analogy for the <b>ls</b> is necessary.</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <p>Most <b>UNIX commands</b> can be customised by the use of <b>switches</b>.</p>
+
+         <p><b>Switches</b> are specified immediately after the command itself
+            and prefixed by '<b>-</b>'.</p>
+
+         <p>The full range of available switches for any given command is included in its
+            <a href="http://man7.org/linux/man-pages/" target="_blank"><b>Manual Pages</b></a>.</p>
+
+         <p>Inspect the contents of <b>ProjectX</b> once more, but this time,
+            request a little more detail using <b>ls</b> with the <b>l switch</b>.</p>
+
+      <p class="command">
+        <b>ls -l</b>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/lslong01.png" alt="Curses!" style="height:570px; width:800px;">
+      </details>
+
+      <details class="gui">
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+        <div class="grid-container">
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('lsl01_Popup'))")">
+            <div class="container">
+              <img src="Images/lsl01.png" alt="Curses!"
+                   style="height:200px; width:300px;">
+              <span class="popuptext" id="lsl01_Popup" style="text-align:center;">
+                    From the <b>View</b> drop down menu at the top of your screen,
+                    Select <b>List</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('lsl02_Popup'))")">
+            <div class="container">
+              <img src="Images/lsl02.png" alt="Curses!"
+                   style="height:212px; width:300px;">
+              <span class="popuptext" id="lsl02_Popup" style="text-align:center;">
+                    The <b>Icons</b> retreat and are replaced by a textual <b>List</b>.<br>
+                    From the <b>View</b> drop down menu at the top of your screen,
+                    Select <b>Visible Columns...</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('lsl03_Popup'))")">
+            <div class="container">
+              <img src="Images/lsl03.png" alt="Curses!"
+                   style="height:246px; width:250px;">
+              <span class="popuptext" id="lsl03_Popup" style="text-align:center;">
+                    In the form that leaps forth, turn on
+                    <b>Owner</b>, <b>Group</b>and <b>Permissions</b>.</span>
+            </div>
+          </div>
+          <div class="popup" onmouseover=
+                     "Popup_Text(document.getElementById('lsl04_Popup'))")">
+            <div class="container">
+              <img src="Images/lsl04.png" alt="Curses!"
+                   style="height:266px; width:300px;">
+              <span class="popuptext" id="lsl04_Popup" style="text-align:center;">
+                    Well, more or less the same display. But, what a performance!!</span>
+            </div>
+          </div>
+        </div>
+      </details><br>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
+           A command to rename files/directories or <b>m</b>o<b>v</b>e them between <b>directories</b>.</p>
       </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('touch02_Popup'))")">
-      <div class="container">
-        <img src="Images/touch02.png" alt="Curses!"
-             style="height:338px; width:300px;">
-        <span class="popuptext" id="touch02_Popup" style="text-align:center;">
-              Right hand mouse click on the new <b>Untitled Document</b> icon.
-              Select <b>Rename</b>.
-              Enter <b>a</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('touch03_Popup'))")">
-      <div class="container">
-        <img src="Images/touch03.png" alt="Curses!"
-             style="height:151px; width:300px;">
-        <span class="popuptext" id="touch03_Popup" style="text-align:center;">
-              Admire the magnificence of the new <b>file</b>,
-              imaginatively called <b>a</b>.</span>
-      </div>
-    </div>
-  </div>
-</details>
-
-<p><b>touch</b> can make lots of fine new empty <b>files</b> in one go. Do this with the command:</p>
-
-<p class="command">
- <b>touch b c aa bb cc abc def ghi</b>
-</p>
-
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('touch04_Popup'))")">
-      <div class="container">
-        <img src="Images/touch04.png" alt="Curses!"
-             style="height:267px; width:400px;">
-        <span class="popuptext" id="touch04_Popup" style="text-align:center;">
-              Repeat the formula for the creation of the file <b>a</b>
-              for each of the other <b>8</b> new files.
-              <b><i>Incredibly tedious!!</i></b>.
-              The command line is typically the best choice for repeated operations.</span>
-      </div>
-    </div>
-  </div>
-</details>
-
-<p>While in the mode of creating useless things, why not a splendour of <b>directories</b> with the command:</p>
-
-<p class="command">
- <b>mkdir dirI dirII dirIII dirIV dirV</b>
-</p>
-
-<p>Finally, inspect your handiwork with the command:</p>
-
-<p class="command">
-  <b>ls</b>
-</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/touch-mkdir-ls01.png" alt="Curses!" style="height:567px; width:800px;">
-</details>
-
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('mkdirls01_Popup'))")">
-      <div class="container">
-        <img src="Images/mkdirls01.png" alt="Curses!"
-             style="height:239px; width:400px;">
-        <span class="popuptext" id="mkdirls01_Popup" style="text-align:center;">
-              Repeat the formula for the creation of the <b>ProjectX</b> directory
-              for each of the <b>5</b> new directories.
-              Again,<b><i>Incredibly tedious!!</i></b>.
-              The command line is far more efficient.
-              As the file and directory icons are all displayed by default,
-              no graphical analogy for the <b>ls</b> is necessary.</span>
-      </div>
-    </div>
-  </div>
-</details>
-
-<p>Most <b>UNIX commands</b> can be customised by the use of <b>switches</b>.</p>
-
-   <p><b>Switches</b> are specified immediately after the command itself
-   and prefixed by '<b>-</b>'.</p>
-
-   <p>The full range of available switches for any given command is included in its
-      <a href="http://man7.org/linux/man-pages/" target="_blank"><b>Manual Pages</b></a>.</p>
-
-   <p>Inspect the contents of <b>ProjectX</b> once more, but this time,
-   request a little more detail using <b>ls</b> with the <b>l switch</b>.</p>
-
-<p class="command">
-  <b>ls -l</b>
-</p>
-
-<details class="comment">
-  <summary>Comment</summary>
-  <img src="Images/lslong01.png" alt="Curses!" style="height:570px; width:800px;">
-</details>
-
-<details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
-  <div class="grid-container">
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('lsl01_Popup'))")">
-      <div class="container">
-        <img src="Images/lsl01.png" alt="Curses!"
-             style="height:200px; width:300px;">
-        <span class="popuptext" id="lsl01_Popup" style="text-align:center;">
-              From the <b>View</b> drop down menu at the top of your screen,
-              Select <b>List</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('lsl02_Popup'))")">
-      <div class="container">
-        <img src="Images/lsl02.png" alt="Curses!"
-             style="height:212px; width:300px;">
-        <span class="popuptext" id="lsl02_Popup" style="text-align:center;">
-              The <b>Icons</b> retreat and are replaced by a textual <b>List</b>.<br>
-              From the <b>View</b> drop down menu at the top of your screen,
-              Select <b>Visible Columns...</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('lsl03_Popup'))")">
-      <div class="container">
-        <img src="Images/lsl03.png" alt="Curses!"
-             style="height:246px; width:250px;">
-        <span class="popuptext" id="lsl03_Popup" style="text-align:center;">
-              In the form that leaps forth, turn on
-              <b>Owner</b>, <b>Group</b>and <b>Permissions</b>.</span>
-      </div>
-    </div>
-    <div class="popup" onmouseover=
-               "Popup_Text(document.getElementById('lsl04_Popup'))")">
-      <div class="container">
-        <img src="Images/lsl04.png" alt="Curses!"
-             style="height:266px; width:300px;">
-        <span class="popuptext" id="lsl04_Popup" style="text-align:center;">
-              Well, more or less the same display. But, what a performance!!</span>
-      </div>
-    </div>
-   </div>
-</details>
-
-<br>
-<div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
-  A command to rename files/directories or <b>m</b>o<b>v</b>e them between <b>directories</b>.
-</div>
 
 <p>Move all the <b>files</b> with single letter names into the <b>directory dirI</b> with the command:</p>
 
@@ -508,12 +517,12 @@ Click to record your <b>Start</b> time.</button>
 </p>
 
 <details class="comment">
-  <summary>Comment</summary>
+  <summary><span class="comsum">Comment</span></summary>
   <img src="Images/mv01.png" alt="Curses!" style="height:586px; width:800px;">
 </details>
 
 <details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
+  <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
                "Popup_Text(document.getElementById('mv02_Popup'))")">
@@ -552,7 +561,7 @@ Click to record your <b>Start</b> time.</button>
 
 <br>
 <div class="suggestion">
-  <b><u>Suggestion:</u></b>
+  <h2>Suggestion:</h2>
 
   <p>If you press the '<b>&uarr;</b>' key the last command you issued will be reissued.
      Repeatedly pressing '<b>&uarr;</b>' will take you further and further back
@@ -563,23 +572,23 @@ Click to record your <b>Start</b> time.</button>
   <p>As the next command is very similar to the last, you could:
     <ol>
       <li>
-        Press the '<b>&uarr;</b>' key once, to bring
+        Press the '<b>&uarr;</b>' key once, to bring back into view.
         <p class="command">
           <b>mv ? dirI</b>
         </p>
-        back into view.
       </li>
       <li>
-        Press the '<b>&larr;</b>' key as many times as it takes to get the cursor
-        over the '<b>?</b>' character</li>
+        Press the '<b>&larr;</b>' key as many times as it takes to get
+        the cursor over the '<b>?</b>' character.<br><br>
+      </li>
       <li>
-        Add an extra '<b>?</b>' character</li> to make the next istruction
+        Add an extra '<b>?</b>' character to make the next instruction.
         <p class="command">
           <b>mv ?? dirII</b>
         </p>
       <li>
         Press the &#8629; key to enter the edited command
-        (no need to navigate back to the end of the line)
+        (no need to navigate back to the end of the line).
       </li>
     </ol>
   <p>
@@ -607,15 +616,14 @@ Click to record your <b>Start</b> time.</button>
 </p>
 
 <details class="comment">
-  <summary>Comment</summary>
+  <summary><span class="comsum">Comment</span></summary>
   <img src="Images/mv05.png" alt="Curses!" style="height:552px; width:800px;">
-</details>
+</details><br>
 
-<br>
 <div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
-  A command to make <b>l</b>i<b>n</b>ks to <b>files<b>/</b>directories</b>.
+  <p>Introducing
+     <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
+     A command to make <b>l</b>i<b>n</b>ks to <b>files<b>/</b>directories</b>.</p>
 </div>
 
 <p>A <b>link</b> is broadly equivalent to a <b>Windows</b> shortcut. Using <b>links</b> can enable a <b>file</b>/<b>directory</b> to be accessed from different places.</p>
@@ -650,7 +658,7 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
 </p>
 
 <details class="comment">
-  <summary>Comment</summary>
+  <summary><span class="comsum">Comment</span></summary>
   <img src="Images/ln01.png" alt="Curses!" style="height:430px; width:800px;">
 </details>
 
@@ -687,12 +695,12 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
    (including <b>Hidden</b> ones).
 
 <details class="comment">
-  <summary>Comment</summary>
+  <summary><span class="comsum">Comment</span></summary>
   <img src="Images/hidden01.png" alt="Curses!" style="height:417px; width:800px;">
 </details>
 
 <details class="gui">
-  <summary><b>GUI</b> equivalent.</summary>
+  <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
   <div class="grid-container">
     <div class="popup" onmouseover=
                "Popup_Text(document.getElementById('hidden02_Popup'))")">
@@ -729,11 +737,11 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
 
 <br>
 <div class="suggestion">
-  <b><u>Suggestion:</u></b>
+  <h2>Suggestion:</h2>
 
   <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
 
-  <p>The <b>command line</b> is cruel! One mistake and it does not work!</p>
+  <p>The <b>command line</b> is cruel! One typing mistake and it does not work!</p>
 
   <p>This <b>command</b> could be very tricky if you had not the option of
      <b>Copy</b>/<b>Paste</b> from this web page!</p>
@@ -757,8 +765,8 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
       </p>
     </li>
     <li>
-      Press the <b>Tab</b> key.
-      <p>As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
+      Press the <b>Tab</b> key.<br><br>
+      As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
       <b>UNIX</b> can expand your efforts faultlessly to:
       <p class="lcommand">
         <b>mv .Cats_in_the_cupboard_but_they_dont_see_me </b>
@@ -777,10 +785,10 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
               .Cats_in_the_cupboard_but_they_dont_see_me</b>
       </p>
     <li>The object is to remove the '<b>.</b>' from the beginning of the long filename,
-        thus unhiding the file.
+        thus unhiding the file.<br><br>
 
-        <p>To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
-        and delete it. Done!</p>
+        To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
+        and delete it. Done!
     </li>
   </ol>
   <p><b>En Passant</b>: The message of the long <b>filename</b> here is but one of the many wisdoms
@@ -812,15 +820,14 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
 </p>
 
 <details class="comment">
-  <summary>Comment</summary>
+  <summary><span class="comsum">Comment</span></summary>
   <img src="Images/hidden06.png" alt="Figh!" style="height:308px; width:800px;">
-</details>
+</details><br>
 
-<br>
 <div class="new_command">
-  Introducing 
-  <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>.
-  A command to copy <b>files</b> and/or <b>directories</b>.
+  <p>Introducing 
+     <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>.
+     A command to copy <b>files</b> and/or <b>directories</b>.</p>
 </div>
 
 <p>First, <b>c</b>o<b>p</b>y the <b>file aaa</b>, which is currently in the <b>directory dirIII</b>, to the <b>Current Working Directory</b> ('<b>.</b>', also known as <b>ProjectX</b>) with the command:</p>
@@ -829,8 +836,8 @@ which is by far the most common intention, you must use the '<b>-s</b>' switch.<
   <b>cp dirIII/abc .</b>
 </p>
 
-and then follow the advice of Brian (Wilson that is) and his melodious family.
-<a href="https://www.youtube.com/watch?v=N0DWT-VO5pQ" target="_blank"> Do it again!</a>.
+<p>and then follow the advice of Brian (Wilson that is) and his melodious family.
+<a href="https://www.youtube.com/watch?v=N0DWT-VO5pQ" target="_blank"> Do it again!</a>.</p>
 
 <p class="hint">
   {<b><i>Hint:</i></b> What an excellent moment to remember the <b>&uarr;</b> trick!}
@@ -840,11 +847,18 @@ and then follow the advice of Brian (Wilson that is) and his melodious family.
   <b>cp dirIII/abc .</b>
 </p>
 
-and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destroy the effect of the first?
+<p>and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destroy the
+   effect of the first?</p>
 
-<p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always really know what you are doing, and that it is inconceivable that you might occassionally drift into the inadvertant. Dangerous in the extreme! Especially for those of us who have advanced far into the years of mental meander.</p>
+<p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always
+   really know what you are doing, and that it is inconceivable that you might occassionally
+   drift into the inadvertant. Dangerous in the extreme! Especially for those of us who have
+   advanced far into the years of mental meander.</p>
 
-<p>You can encourage a degree of caution into the system with the <b>-i</b> switch for <b>cp</b> (and similar commands). This switch instructs <b>cp</b> to <b>i</b>nterrogate the user before executing any irreversibly destructive operation. Try it here with the command:</p>
+<p>You can encourage a degree of caution into the system with the <b>-i</b> switch for
+   <b>cp</b> (and similar commands). This switch instructs <b>cp</b> to <b>i</b>nterrogate
+   the user before executing any irreversibly destructive operation.
+   Try it here with the command:</p>
 
 <p class="command">
   <b>cp -i dirIII/def abc</b>
@@ -854,11 +868,10 @@ and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destr
 
 <p>Hopefully, because of the <b>-i</b> switch, the system has petulantly inquired whether you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>. Answer as best suits your whim.</p>
 
-<br>
 <div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
-  A command to copy <b>files</b> and/or <b>directories</b>.
+  <p>Introducing
+     <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
+     A command to copy <b>files</b> and/or <b>directories</b>.</p>
 </div>
 
 
@@ -881,34 +894,31 @@ cp -i cp -p
 
 <p>In the next phase of this exercise, the aim will be to use the commands that have been introduced to answer some discernable, biologically related, queries.</p>
 
-<br>
 <div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
-  A command to <b>r</b>e<b>m</b>ove files/directories.
+  <p>Introducing
+     <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
+     A command to <b>r</b>e<b>m</b>ove files/directories.</p>
 </div>
 
 rm *
 
 ls 
 
-<br>
 <div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
-  A command to <b>r</b>e<b>m</b>ove empty <b>dir</b>ectories.
+  <p>Introducing
+     <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
+     A command to <b>r</b>e<b>m</b>ove empty <b>dir</b>ectories.</p>
 </div>
 
 rmdir *
 
 ls
 
-<br>
 <div class="new_command">
-  Introducing
-  <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
-  A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
-  in a <b>terminal</b>.
+  <p>Introducing
+     <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
+     A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
+     in a <b>terminal</b>.</p>
 </div>
 
 rm rmdir uae of * to go before the Checkpoint<br>
@@ -994,40 +1004,42 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
 
   <ol type="1">
     <li>
-      Describe the effects of the command:
+      <p class="smarg">Describe the effects of the command:</p>
       <p class="command">
         <b><a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank">ls</a>
         -lrt</b>
       </p>
-      <details class="comment">
-      <summary>Answer.</summary>
-        <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:424px; width:800px;">
+      <details class="comment" style="background-color="AntiqueWhite">
+      <summary><span class="comsum">Answer.</span></summary>
+        <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:403px; width:760px;">
       </details>
     </li>
     <li>
-      With but a single command, using
-      <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
-      how could you create the nest of optimistic directories:
-      <p class="command">
-        ~/Desktop/Here/comes/the/sun
+      <p class="smarg">With but a single command, using
+         <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
+         how could you create the nest of optimistic directories:
+        <p class="command">
+           ~/Desktop/Here/comes/the/sun
+        </p>
       </p>
-      Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
-          <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
-      and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
-      encourage you in your struggles.
-      <details class="comment">
-      <summary>Answer.</summary>
-        <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:454px; width:800px;">
+      <p class="smarg">Let
+           Let<a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
+               <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
+           and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
+           encourage you in your struggles.</p>
+      <details class="comment" style="background-color="AntiqueWhite">
+      <summary><span class="comsum">Answer.</span></summary>
+        <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
       </details>
     </li>
     <li>
-      With but a single command, using
-      <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
-      would you remove the functionless tower of empty directories created in the previous question?
-      <details class="comment">
-      <summary>Answer.</summary>
-        <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:505px; width:800px;">
-      </details>
+      <p class="smarg">With but a single command, using
+           <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
+           would you remove the functionless tower of empty directories created in the previous question?</p>
+      <details class="comment" style="background-color="AntiqueWhite">
+      <summary><span class="comsum">Answer.</span></summary>
+        <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:480px; width:760px;">
+      </details><br>
     </li>
   </ol>
 </div>
@@ -1043,7 +1055,8 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
   </li>
   <li>
     <details class="msect">
-    <summary>Exercise - Part II: Using Command Line UNIX to achieve Biological Objectives</summary>
+    <summary><b>Exercise - Part II:</b>
+              Using Command Line UNIX to achieve Biological Objectives</summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -1056,8 +1069,7 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
 <a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/wget.1.html" target="_blank"><b>wget</b></a><br>
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/less.1p.html" target="_blank"><b>less</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/pipe.1p.html" target="_blank"><b>pipe</b></a><br>
+<a href="http://man7.org/linux/man-pages/man1/less.1.html" target="_blank"><b>less</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/wc.1p.html" target="_blank"><b>wc</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/head.1p.html" target="_blank"><b>head</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/tail.1p.html" target="_blank"><b>tail</b></a><br>
@@ -1066,11 +1078,11 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank"><b>mkdir</b></a><br>
 
-Concepts:
+<p>Concepts:<br><br>
 
-     pipes
-     redirecting output to file
-     very basic scripts
+     pipes<br>
+     redirecting output to file<br>
+     very basic scripts</p><br>
 
 <!-- #######################################################################################
      #######################################################################################
