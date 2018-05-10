@@ -161,6 +161,22 @@ details.video {
 }
 
 /* ############################################## --
+ Code for grid containers with two columns.
+-- ############################################## */
+
+.grid-container2 {
+  justify-content: space-evenly;
+  display: grid;  align-content: start; grid-gap: 5px;
+  grid-template-columns: auto auto;
+  background-color: Yellow;
+}
+
+.grid-container2 > div {
+  background-color: Yellow;
+  text-align: center; font-size: 14px;
+}
+
+/* ############################################## --
  Code for grid containers. END.
 -- ############################################## */
 
