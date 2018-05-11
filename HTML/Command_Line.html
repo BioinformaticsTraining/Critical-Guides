@@ -530,7 +530,7 @@ Click to record your <b>Start</b> time.</button>
               <img src="Images/mv02.png" alt="Curses!"
                    style="height:263px; width:300px;">
               <span class="popuptext" id="mv02_Popup" style="text-align:center;">
-                    Select all single letter filenames
+                    Select all single letter file names
                     (Click on each while holding the <b>Ctrl</b> key down).
                     Right hand mouse click on the selected icons.
                     Select <b>Cut</b>.</span>
@@ -627,7 +627,7 @@ Click to record your <b>Start</b> time.</button>
            A command to make <b>l</b>i<b>n</b>ks to <b>files<b>/</b>directories</b>.</p>
       </div>
 
-      <p>A <b>link</b> is broadly equivalent to a <b>Windows</b> shortcut. Using <b>links</b> can
+      <p>A <b>link</b> is broadly equivalent to a <b>Windows</b> short-cut. Using <b>links</b> can
          enable a <b>file</b>/<b>directory</b> to be accessed from different places.</p>
 
       <p>Make a <b>link</b> from the <b>working</b> directory ('<b>.</b>', i.e. <b>ProjectX</b>)
@@ -754,7 +754,7 @@ Click to record your <b>Start</b> time.</button>
       <div class="suggestion">
         <h2>Suggestion:</h2>
 
-        <p>The next <b>command</b> involves typing long <b>filenames</b> accurately.</p>
+        <p>The next <b>command</b> involves typing long <b>file names</b> accurately.</p>
 
         <p>The <b>command line</b> is cruel! One typing mistake and it does not work!</p>
 
@@ -765,7 +765,7 @@ Click to record your <b>Start</b> time.</button>
            But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
            be avoided altogether.</p>
 
-        <p>Basically, if you enter enough of a <b>filename</b>/<b>directory name</b>/<b>command</b>
+        <p>Basically, if you enter enough of a <b>file name</b>/<b>directory name</b>/<b>command</b>
            (according to context) to allow the system to know what you wish to type next,
            you need only to press the <b>Tab</b> key and <b>UNIX</b> will type on up to the
            next point where ambiguity exists (often to "<b>Completion</b>").</p>
@@ -799,14 +799,14 @@ Click to record your <b>Start</b> time.</button>
               <b>mv .Cats_in_the_cupboard_but_they_dont_see_me
                     .Cats_in_the_cupboard_but_they_dont_see_me</b>
             </p>
-          <li>The object is to remove the '<b>.</b>' from the beginning of the long filename,
+          <li>The object is to remove the '<b>.</b>' from the beginning of the long file name,
               thus unhiding the file.<br><br>
 
               To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
               and delete it. Done!
           </li>
         </ol>
-        <p><b>En Passant</b>: The message of the long <b>filename</b> here is but one of the many wisdoms
+        <p><b>En Passant</b>: The message of the long <b>file name</b> here is but one of the many wisdoms
            given to humanity by the great sage of the New World, <b>Huddie Leadbetter</b> (
            <a href="https://en.wikipedia.org/wiki/Lead_Belly" target="_blank">
            <b>Lead Belly</b></a>"
@@ -868,8 +868,8 @@ Click to record your <b>Start</b> time.</button>
          effect of the first?</p>
 
       <p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always
-         really know what you are doing, and that it is inconceivable that you might occassionally
-         drift into the inadvertant. Dangerous in the extreme! Especially for those of us who have
+         really know what you are doing, and that it is inconceivable that you might occasionally
+         drift into the inadvertent. Dangerous in the extreme! Especially for those of us who have
          advanced far into the years of mental meander.</p>
 
       <p>You can encourage a degree of caution into the system with the <b>-i</b> switch for
@@ -881,16 +881,52 @@ Click to record your <b>Start</b> time.</button>
         <b>cp -i dirIII/def abc</b>
       </p>
 
-      <p>I copy a different file only to break the monotany, the proposal to destroy once more
+      <p>I copy a different file only to break the monotony, the proposal to destroy once more
         <b>abc</b>, is the issue.</p>
 
       <p>Hopefully, because of the <b>-i</b> switch, the system will petulantly inquire whether
-         you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>. Answer as best suits your whim.</p>
+         you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>.
+         Answer as best suits your whim.</p>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
         <img src="Images/cp-i01.png" alt="Curses!" style="height:348px; width:800px;">
       </details>
+
+      <p>You have now achieved a merry presence of <b>files</b>, <b>directories</b> and <b>links</b> in the
+         <b>ProjectX directory</b>.</p>
+
+      <p>To view your creations with appropriate pride, you can use the <b>ls</b> command, however,
+         plain <b>ls</b> only <b>l</b>i<b>s</b>ts what is actually in <b>ProjectX</b>. To see what is
+         lurking in the <b>subdirectories</b> of <b>ProjectX</b>, the '<b>-R</b>' </b>switch</b> is required.
+         This </b>switch</b> requests <b>ls</b> to work <b>R</b>ecursively and show all that resides in the
+         <b>current working directory</b> AND all <b>subdirectories</b> to an arbitrary depth. The case of the
+        '<b>-R</b>' switch is essential. '<b>-r</b>' has a very different function, as you will discover.</p>
+
+      <p>Try this out with the command:<p>
+
+      <p class="command">
+        <b>ls; ls -R</b>
+      </p>
+
+      <p class="hint"><b><i>Note</i></b>: You may issue <b>2</b> (or more) <b>commands</b> on the
+         same line, if separated with a '<b>;</b>'. You may well need to suppress the question
+         "Why?", but I merely inform of that which is allowed.</p>
+
+      <p class="hint"><b><i>Note</i></b>: Strictly, <b>all commands</b>, including the last/only
+         one of a line, should be terminated with a '<b>;</b>', but even <b>UNIX</b> can be
+         occasionally tolerant.</p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/ls-R01.png" alt="Curses!" style="height:396px; width:800px;">
+      </details>
+
+
+
+
+
+
 
 cp -p
 
@@ -905,12 +941,6 @@ cp -p
            <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
            A command to remove <b>command</b> aliases.</p>
       </div>
-
-      <p>The exercise directory you created so long ago, is now awash with a delight of files, links
-         and directories of minmimal purpose! The time has come to clean up and start afresh.</p>
-
-      <p>In the next phase of this exercise, the aim will be to use the commands that have been introduced
-         to answer some discernable, biologically related, queries.</p>
 
       <div class="new_command">
         <p>Introducing
@@ -939,13 +969,13 @@ ls
            in a <b>terminal</b>.</p>
       </div>
 
-rm rmdir uae of * to go before the Checkpoint<br>
+rm rmdir use of * to go before the Checkpoint<br>
 Then change of emphasis!<br>
 wget real file or 4<br>
 rgep sed wc to extract information from same<br>
 plus anything else that comes to mind<br>
 .... rather loose thoughts here, plan has melted somewhat :-(<br>
-I think play it by ear for a trifle and then reveise as muse speaks to one.<br>
+I think play it by ear for a trifle and then revise as muse speaks to one.<br>
 
 <br>
 maybe start with a fatq file? {wget}<br>
@@ -1015,13 +1045,14 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
         <p><b>Concepts/tricks introduced thus far are:</b>
         <ol type="1">
           <li>Customising commands with <b>switches</b>.</li>
-          <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.
+          <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.</li>
           <li>Using '<b>?</b>' as a single character wild card.</li>
           <li>Using '<b>*</b>' as a multi-character wild card.</li>
-          <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue
-          <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys
-          <li><b>Tab Completion</b>.
-        </ol>
+          <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue.</li>
+          <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys.</li>
+          <li><b>Tab Completion</b>.</li>
+          <li>Using multiple '<b>;</b>' separated <b>commands</b> on one line.</li>
+       </ol>
 
         <p><b>Reflections:</b>
         <ol type="1">
@@ -1049,7 +1080,7 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
             </p>
             <details class="comment" style="background-color="AntiqueWhite">
             <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:403px; width:760px;">
+              <img src="Images/lslrt01.png" alt="Fiddlesticks!" style="height:539px; width:760px;">
             </details>
           </li>
           <li>
@@ -1057,7 +1088,25 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
                <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
                how could you create the nest of optimistic directories:
               <p class="command">
-                 ~/Desktop/Here/comes/the/sun
+                 <b>~/Desktop/Here/comes/the/sun</b>
+              </p>
+            </p>
+            <p class="smarg">Let
+                 Let<a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
+                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
+                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
+                 encourage you in your struggles.</p>
+            <details class="comment" style="background-color="AntiqueWhite">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
+            </details>
+          </li>
+          <li>
+            <p class="smarg">With but a single command, using
+               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
+               how could you create the nest of optimistic directories:
+              <p class="command">
+                 <b>~/Desktop/Here/comes/the/sun</b>
               </p>
             </p>
             <p class="smarg">Let
@@ -1079,8 +1128,24 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
               <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:480px; width:760px;">
             </details><br>
           </li>
+          <li>
+            <p class="smarg">The exercise directory you created so long ago, is now awash with a delight of files, links
+               and directories of minimal purpose! The time has come to clean up and start afresh.</p>
+
+            <p class="smarg">How, with but a single command, using
+                 <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>,
+                 would you remove everything that remains in ProjectX?</p>
+            <details class="comment" style="background-color="AntiqueWhite">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/rmdirp01.png" alt="Fiddlesticks!" style="height:480px; width:760px;">
+            </details><br>
+          </li>
         </ol>
       </div>
+
+      <p>In the next phase of this exercise, the aim will be to use the commands that have been introduced
+         to answer some discernible, biologically related, queries.</p>
+
 
 <!-- #######################################################################################
      #######################################################################################
