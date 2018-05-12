@@ -1215,7 +1215,56 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
   <li>
     <details class="msect">
     <summary><b>Exercise - Part II:</b>
-              Using Command Line UNIX to achieve Biological Objectives</summary>
+              <b>blast</b> from the <b>command line</b></summary>
+
+<!-- #######################################################################################
+     #######################################################################################
+     #######################################################################################
+     #######################################################################################
+     ####################################################################################### -->
+
+<p><a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/">
+          Documentation</a></p>
+<p><a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2">
+          Installation Guide</a></p>
+<p><a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/">
+          Download Site</a></p>
+<p><a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ncbi-blast-2.7.1+-x64-linux.tar.gz">
+          Download for linux</a></p>
+
+      <p class="lcommand">
+        <b>wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ncbi-blast-2.7.1+-x64-linux.tar.gz</b>
+      </p>
+
+      <p class="command">
+        <b>ncbi-blast-2.7.1+/bin/blastp</b>
+      </p>
+
+      <p class="lcommand">
+        <b>alias blastp="~/Desktop/ProjectX/blast/ncbi-blast-2.7.1+/bin/blastp"</b>
+      </p>
+
+      <p class="lcommand">
+        <b>wget https://github.com/BioinformaticsTraining/Critical-Guides/raw/gh-pages/Data/proteins.fasta</b>
+      </p>
+
+      <p class="lcommand">
+        <b>blastp -query proteins.fasta -db swissprot -out blastout -remote</b>
+      </p>
+
+<!-- #######################################################################################
+     #######################################################################################
+     #######################################################################################
+     #######################################################################################
+     ####################################################################################### -->
+
+    </details>
+    <br>
+  </li>
+  <li>
+    <details class="msect">
+    <summary><b>Exercise - Part III:</b>
+              Something with a fastq file?</summary>
 
 <!-- #######################################################################################
      #######################################################################################
