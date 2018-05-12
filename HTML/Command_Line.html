@@ -896,7 +896,7 @@ Click to record your <b>Start</b> time.</button>
       <p>You have now achieved a merry presence of <b>files</b>, <b>directories</b> and <b>links</b> in the
          <b>ProjectX directory</b>.</p>
 
-      <p>To view your creations with appropriate pride, you can use the <b>ls</b> command, however,
+      <p>To view your creations, with appropriate pride, you can use the <b>ls</b> command, however,
          plain <b>ls</b> only <b>l</b>i<b>s</b>ts what is actually in <b>ProjectX</b>. To see what is
          lurking in the <b>subdirectories</b> of <b>ProjectX</b>, the '<b>-R</b>' </b>switch</b> is required.
          This </b>switch</b> requests <b>ls</b> to work <b>R</b>ecursively and show all that resides in the
@@ -922,19 +922,48 @@ Click to record your <b>Start</b> time.</button>
         <img src="Images/ls-R01.png" alt="Curses!" style="height:396px; width:800px;">
       </details>
 
-
-
-
-
-
-
-cp -p
-
+      <br>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
            A command to create <b>command</b> aliases.</p>
       </div>
+
+      <p>Using the <b>alias command</b>, it is possible to define short <b>aliases</b> for
+         clumsy commands you might find yourself using frequently. By itself, <b>alias</b>
+         will list all the </b>aliases</b> currently defined.</p>
+
+      <p>Investigate with the ejaculation:</p>
+
+      <p class="command">
+        <b>alias</b>
+      </p>
+
+      <p>Your list may differ from mine, depending on the <b>UNIX</b> you are using, but it will
+         probably be similar. The <b>aliases</b> listed are defaults, defined by the system in
+         a <b>hidden file</b> in your home
+         directory. the name of this <b>file</b> will vary according to your flavour of <b>UNIX</b>, for
+         me it is called '<b>.bashrc</b>'. By editing this file, you can add or remove <b>aliases</b> at will.
+
+     <p><b>Aliases</b> defined from the <b>command line</b> only apply in the terminal in which
+        the <b>command</b> was issued.
+
+     <p><b>Aliases</b> defined in <b>.bashrc</b> (or equivalent) apply in all terminals automatically.
+        All commands in <b>.bashrc</b> are executed everytime a new terminal is made.
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/alias01.png" alt="By the Lord Harry!" style="height:437px; width:800px;">
+      </details>
+
+     <p>If you were concerned about the cavalier way <b>cp</b> copies over existing files, you might
+        consider the <b>alias command</b>:
+
+      <p class="command">
+        <b>alias cp="cp -i" </b>
+      </p>
+
+      <p>After this <b>command</b>, every <b>cp</b> command will act as if the '<b>-i</b>' switch had been appended.
 
       <div class="new_command">
         <p>Introducing
@@ -942,6 +971,13 @@ cp -p
            A command to remove <b>command</b> aliases.</p>
       </div>
 
+      <p>To get rid of aliases you no longer need, use the unalias command. For example:
+
+      <p class="command">
+        <b>unalias cp </b>
+      </p>
+
+      <br>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
@@ -968,6 +1004,10 @@ ls
            A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
            in a <b>terminal</b>.</p>
       </div>
+
+
+
+cp -p
 
 rm rmdir use of * to go before the Checkpoint<br>
 Then change of emphasis!<br>
