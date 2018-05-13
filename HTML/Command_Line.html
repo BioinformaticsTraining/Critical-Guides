@@ -191,8 +191,8 @@ Click to record your <b>Start</b> time.</button>
            the command line to achieve vaguely Bioinformatic objectives.</p>
 
         <p class="hint">
-           {<b><i>Hint</i></b>: Especially when the commands of the exercise are long,
-           why not <b>Copy/Paste</b> from this page?}</p>
+           {<b><i>Hint</i></b>: Especially when commands are long,
+           why not <b>Copy/Paste</b> them from this page?}</p>
 
       </div><br>
 
@@ -997,6 +997,40 @@ Click to record your <b>Start</b> time.</button>
         <b>unalias cp </b>
       </p>
 
+      <p>cp only works for simple files. If you want to copy directories
+         (and their contents) you must emply the '-r' switch.
+
+      <p> Make a new directory, copy all the curret contents of ProjectX into it AND move
+          into that directory with the three commands (all on the same line:
+
+      <p class="mcommand">
+        <b>mkdir Project_copy; cp * Project_copy; cd Project_copy;</b>
+      </p>
+
+      <p class="hint"><b><i>Note:</i></b> As seen previously, '?' is a wildcard standing for
+         any single character. '*', used here, is a wildcard standing for any number of contiguous
+         characters up to the next End Of Line (EOL).<br>
+
+         So "cp * Project_copy" reads "Copy the entire contents of the current working directory into Project_copy".</p>
+ 
+      <p>By George! That was exicitng! As mentioned previously, the terminating ';' is not mandatory, but does no harm.
+
+      <p>You should have got an error message pointing out just how unreasonable it was for you to ask the directory
+         Project_copy to be copied into itself. Other than that, all should have gone swimmingly, as you might like
+         to confirm with a bold:</b>
+
+      <p class="command">
+        <b>cd ..; ls -R</b>
+      </p>
+
+      <p class="hint"><b><i>Note:</i></b> As seen previously, '?' is a wildcard standing for
+         any single character. '*', used here, is a wildcard standing for any number of contiguous
+         characters up to the next End Of Line (EOL).<br>
+
+         So "cp * Project_copy" reads "Copy the entire contents of the current working directory into Project_copy".</p>
+ 
+
+
       <br>
       <div class="new_command">
         <p>Introducing
@@ -1245,7 +1279,7 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
       <div class="new_command">
         <p>Introducing
            <a href="<a href="http://man7.org/linux/man-pages/man1/wget.1.html" target="_blank"><b>wget</b></a>.
-           A command to, from the <b>w</b>eb<b>, <b>get</b>files.</p>
+           A command to, from the <b>w</b>eb, <b>get</b> files.</p>
       </div>
 
       <p>First, glance through the possibilities offered at the blast
