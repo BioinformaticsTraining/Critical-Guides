@@ -46,13 +46,22 @@ p.command {
     width: 450px;   
 }
 
+/* p for medium Exercise Commands  */
+
+p.mcommand {
+    background-color: Black; color: White;
+    font-family: courier; font-size: 12px;
+    position: relative; left: 20px;
+    width: 700px;   
+}
+
 /* p for Long Exercise Commands  */
 
 p.lcommand {
     background-color: Black; color: White;
     font-family: courier; font-size: 12px;
     position: relative; left: 20px;
-    width: 700px;   
+    width: 750px;   
 }
 
 /* p for Hints  */
@@ -104,7 +113,7 @@ span.comsum {
 /* details for Exercise Comments */
 
 details.comment {
-    background-color: AntiqueWhite;
+    background-color: auto;
     width: 400px;
 }
 
