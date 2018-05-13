@@ -41,7 +41,7 @@ p.smarg {
 
 p.command {
     background-color: Black; color: White;
-    font-family: courier; font-size: 22px;
+    font-family: courier; font-size: 22px; font-weight: bold;
     position: relative; left: 20px;
     width: 450px;   
 }
@@ -50,7 +50,7 @@ p.command {
 
 p.mcommand {
     background-color: Black; color: White;
-    font-family: courier; font-size: 12px;
+    font-family: courier; font-size: 12px; font-weight: bold;
     position: relative; left: 20px;
     width: 700px;   
 }
@@ -59,7 +59,7 @@ p.mcommand {
 
 p.lcommand {
     background-color: Black; color: White;
-    font-family: courier; font-size: 12px;
+    font-family: courier; font-size: 12px; font-weight: bold;
     position: relative; left: 20px;
     width: 750px;   
 }
@@ -108,6 +108,20 @@ span.comsum {
     display: inline-block;
     width: 200px;
     background-color: LightGray; 
+}
+
+/* span for Command text*/
+
+span.comtxt {
+    display: inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 16px; font-style: bold;
+}
+
+/* span for Quotes*/
+
+span.quote {
+    font-style: italic;
 }
 
 /* details for Exercise Comments */
