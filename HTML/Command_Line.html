@@ -423,7 +423,7 @@ Click to record your <b>Start</b> time.</button>
       <p>While in the mode of creating useless things, why not a splendour of <b>directories</b>
          with the command:</p>
 
-      <p class="command">
+      <p class="mcommand">
         <b>mkdir dirI dirII dirIII dirIV dirV</b>
       </p>
 
@@ -693,7 +693,7 @@ Click to record your <b>Start</b> time.</button>
 
       <p>Make just one more empty file with the poetry drenched command:</p>
 
-      <p class="mcommand">
+      <p class="lmcommand">
         touch .Cats_in_the_cupboard_but_they_dont_see_me
       </p>
 
@@ -803,19 +803,19 @@ Click to record your <b>Start</b> time.</button>
             Press the <b>Tab</b> key.<br><br>
             As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
             <b>UNIX</b> can expand your efforts faultlessly to:
-            <p class="mcommand">
+            <p class="smcommand">
               mv .Cats_in_the_cupboard_but_they_dont_see_me
             </p>
           <li>
             Add another '<b>.</b>' to the end of this poetry
-            <p class="mcommand">
+            <p class="smcommand">
               mv .Cats_in_the_cupboard_but_they_dont_see_me .
             </p>
           </li>
           <li>
             Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
             (nearly) the job for you!
-            <p class="mcommand">
+            <p class="lcommand">
               mv .Cats_in_the_cupboard_but_they_dont_see_me
                     .Cats_in_the_cupboard_but_they_dont_see_me
             </p>
@@ -844,7 +844,7 @@ Click to record your <b>Start</b> time.</button>
 
       <p>You can "unhide" your lengthy creation with the mega command:</p>
  
-      <p class="mcommand">
+      <p class="lcommand">
         mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me
       </p>
 
@@ -965,20 +965,20 @@ Click to record your <b>Start</b> time.</button>
          directory. the name of this <b>file</b> will vary according to your flavour of <b>UNIX</b>, for
          me it is called '<b>.bashrc</b>'. By editing this file, you can add or remove <b>aliases</b> at will.
 
-     <p><b>Aliases</b> defined from the <b>command line</b> only apply in the terminal in which
-        the <b>command</b> was issued.
+      <p><b>Aliases</b> defined from the <b>command line</b> only apply in the terminal in which
+         the <b>command</b> was issued.
 
-     <p><b>Aliases</b> defined in <b>.bashrc</b> (or equivalent) apply in all terminals automatically.
-        All commands in <b>.bashrc</b> are executed everytime a new terminal is made.
+      <p><b>Aliases</b> defined in <b>.bashrc</b> (or equivalent) apply in all terminals automatically.
+         All commands in <b>.bashrc</b> are executed everytime a new terminal is made.
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
         <img src="Images/alias01.png" alt="By the Lord Harry!" style="height:437px; width:800px;">
       </details>
 
-     <p>If you were concerned about the cavalier way <b>cp</b> copies over existing files, you might
+      <p>If you were concerned about the cavalier way <b>cp</b> copies over existing files, you might
         consider the <b>alias command</b>:
-
+ 
       <p class="command">
         alias cp="cp -i"
       </p>
@@ -997,25 +997,103 @@ Click to record your <b>Start</b> time.</button>
         unalias cp
       </p>
 
-      <p>cp only works for simple files. If you want to copy directories
-         (and their contents) you must emply the '-r' switch.
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a>.
+           A command to <b>echo</b> text. Typically to the <b>terminal</b> to make output a bit more readable</p>
+      </div>
 
-      <p> Make a new directory, copy all the curret contents of ProjectX into it AND move
-          into that directory with the three commands (all on the same line:
+      <p> Now make a new <b>directory</b> in which to make a copy of all the wonders created thus far.
+          Do this, checking the file status before and afterwards, with the <b>three</b>
+          commands (all on the same line):
 
       <p class="mcommand">
-        mkdir Project_copy; cp * Project_copy; cd Project_copy;
+        ls; mkdir Project_copy; echo 1; ls;
+      </p>
+ 
+      <p class="hint"><b><i>Note:</i></b> The simple use of <b>echo</b> to separate the
+        outputs of each major step of the <b>multiple command</b> line.
       </p>
 
-      <p class="hint"><b><i>Note:</i></b> As seen previously, '<b>?</b>' is a <b>wildcard</b> standing for
-         any single character. '<b>*</b>', used here, is also a <b>wildcard</b> standing for any number of contiguous
-         characters up to the next <b>E</b>nd <b>O</b>f <b>L</b>ine (<b>EOL</b>).<br>
-
-         So "<span class=comtxt>cp * Project_copy</span>" reads "<span class="quote">Copy the entire contents of the current
-         working directory into Project_copy</span>".</p>
- 
       <p>By George! That was exicitng! As mentioned previously, the terminating '<b>;</b>' is not mandatory,
          but does no harm.
+      </p>
+
+      <p>Next <b>c</b>o<b>p</b>y all items from <b>ProjectX</b> to <b>Project_copy</b>,
+         checking the file status of <b>Project_copy</b> before and
+         after, with the commands (all on the same line):
+
+      <p class="lcommand">
+        echo 1; ls Project_copy; echo 2; cp * Project_copy;  echo 3; ls Project_copy;
+      </p>
+ 
+      <div class="hint">
+        <p><b><i>Note:</i></b> As seen previously, '<b>?</b>' is a <b>wildcard</b> standing for
+          any single character. '<b>*</b>', used here, is also a <b>wildcard</b> standing for any number of contiguous
+          characters up to the next <b>E</b>nd <b>O</b>f <b>L</b>ine (<b>EOL</b>).
+        </p>
+
+        <p>So "<span class=comtxt>cp * Project_copy</span>" reads 
+           "<span class="quote">Copy all the <b>files</b> and <b>links</b> of the <b>current
+           working directory</b> into <b>Project_copy</b></span>".
+        </p>
+      </div>
+
+      <p>Partial success? But <b>cp</b> complains and refuses to oblige when asked to
+         <b>c</b>o<b>p</b>y <b>directories</b>!
+      </p>
+
+      <p>By default, <b>cp</b> only works for simple <b>files</b> (and <b>links</b>).
+         If you want to <b>c</b>o<b>p</b>y <b>directories</b>
+         (and their contents) you must employ the '<b>-r</b>' <b>switch</b>. The '<b>-r</b>'
+         <b>switch</b> entices <b>cp</b> to work <b>r</b>ecursively through a <b>directory</b> hierarchy.
+      </p>
+
+      <p>Try again to <b>c</b>o<b>p</b>y the directories (checking effects with ls) with the commands:
+
+      <p class="lmcommand">
+        cp -r d* Project_copy; ls Project_copy;
+      </p>
+ 
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cp-r01.png" alt="By the Lord Harry!" style="height:416px; width:800px;">
+      </details>
+
+      <div class="hint">
+        <p><b><i>Note:</i></b> At first glance, the previous two <b>cp commands</b> could be amalgamated into
+        "<span class=comtxt>cp * Project_copy</span>". This would work fine, except it would invite
+        <b>cp</b> to <b>c</b>o<b>p</b>y <b>Project_copy</b> into itself!
+
+        <p>This system would splutter objections and then try so to do. It would even succeed to a degree that
+           would vary upon the aphabetic order of the contents of <b>ProjectX</b> (which determines the order in which
+           the elements of <b>ProjectX</b> are copied).
+
+        <p>Particularly as copying <b>Project_copy</b> into itself is no part of the object here,
+           I decide to avoid the issue and use the handy fact that all the directories we
+           <b><i>DO</i></b> need to copy have names beginning
+           with'<b>d</b>'. However, experiment to see what I mean if you wish.
+           Try renaming <b>Project_copy</b> to <b>0Project_copy</b>
+           and see the difference it makes. Can you explain why?
+        </p>
+      </div>
+
+
+******************************************* 
+
+
+        <p>As mentioned previously, '<b>.</b>' is shorthand for
+          "<span class=quote>the <b>current working directory</b></span>"
+          (<b>Project_copy</b> previous to this command). '<b>..</b>'
+          is shorthand for "<span class=quote>the <b>parent directory</b> of the
+          <b>current working directory</b></span>". This would be
+          <b>ProjectX</b> previous to this command.
+        </p>
+
+        <p>So, "<span class=comtxt>cd ..</span>" reads as
+          "<span class="quote">Move up the <b>directory hierarchy</b> one level</span>".
+        </p>
+      </div>
 
       <p>You should have got an error message pointing out just how unreasonable it was for you to ask the directory
          <b>Project_copy</b> to be copied into itself. Other than that, all should have gone swimmingly, as you might like
@@ -1025,15 +1103,25 @@ Click to record your <b>Start</b> time.</button>
         cd ..; ls -R
       </p>
 
-      <p class="hint"><b><i>Note:</i></b> As mentioned previously, '<b>.</b>' is shorthand for
-        "the current working directory" (Project_copy previous to this command). '<b>..</b>'
-        is shorthand for the parent directory of the current working directory". This would be
-        <b>ProjectX</b> previous to this command. So, "<span class=comtxt>cd ..</span>" reads as
-        "<span class="quotes">"Move up the directory hierarchy one level</span>".</p>
+      <div class="hint">
+        <p><b><i>Note:</i></b> As mentioned previously, '<b>.</b>' is shorthand for
+          "<span class=quote>the <b>current working directory</b></span>"
+          (<b>Project_copy</b> previous to this command). '<b>..</b>'
+          is shorthand for "<span class=quote>the <b>parent directory</b> of the
+          <b>current working directory</b></span>". This would be
+          <b>ProjectX</b> previous to this command.
+        </p>
 
-        So "<span class=comtxt>cp * Project_copy</span>" reads "<span class="quotes>Copy the
-        entire contents of the current working directory into Project_copy</span>".</p>
+        <p>So, "<span class=comtxt>cd ..</span>" reads as
+          "<span class="quote">Move up the <b>directory hierarchy</b> one level</span>".
+        </p>
+      </div>
  
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cp-r01.png" alt="Hail to thee my rambling boy!" style="height:437px; width:800px;">
+      </details>
+
       <br>
       <div class="new_command">
         <p>Introducing
@@ -1041,9 +1129,37 @@ Click to record your <b>Start</b> time.</button>
            A command to <b>r</b>e<b>m</b>ove files/directories.</p>
       </div>
 
-rm *
+      <p>Finally, for this section of the exercise, a couple of <b>commands</b> for destroying some of the
+         <b>file</b>, <b>link</b> and <b>directory</b> masterpieces thus far created from the ether.
+      </p>
 
-ls 
+      <p>As the intention is to target first the contents of Project_copy, move back into that fine
+         directory with the command:
+      </p>
+
+      <p class="command">
+        cd Project_copy
+      </p>
+
+      <p>and then use the <b>command rm</b> to <b>r</b>e<b>m</b>ove all the files whose name begin with an '<b>a</b>', examining
+         the situation both before and after the destruction, with the commands:
+      </p>
+
+      <p class="command">
+        ls; rm a*; ls;
+      </p>
+
+      <p>All as you expected?
+      </p>
+
+      <p>Be a little more vicious, ask to <b>r</b>e<b>m</b>ove everything this time, with the commands:
+      </p>
+
+      <p class="command">
+        ls; rm *; ls;
+      </p>
+
+******************************************* 
 
       <div class="new_command">
         <p>Introducing
@@ -1061,8 +1177,6 @@ ls
            A command to display the <b>man</b>ual pages for a specified <b>UNIX command</b>,
            in a <b>terminal</b>.</p>
       </div>
-
-
 
 cp -p
 
@@ -1124,6 +1238,10 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
           <li>
             <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
                    Removes <b>command</b> aliases.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a>
+                   displays text to the <b>ST</b>andar<b>D OUT</b>put (<b>STDOUT</b>, typically the <b>terminal</b>)
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
@@ -1347,7 +1465,6 @@ some blast results {wgete -r} - cannot run blast aas would require installation 
 
 <a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a><br>
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/less.1.html" target="_blank"><b>less</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/wc.1p.html" target="_blank"><b>wc</b></a><br>

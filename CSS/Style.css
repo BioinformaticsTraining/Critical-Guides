@@ -42,17 +42,35 @@ p.smarg {
 p.command {
     background-color: Black; color: White;
     font-family: courier; font-size: 22px; font-weight: bold;
-    position: relative; left: 20px;
+    position: relative; left: 15px;
     width: 450px;   
 }
 
-/* p for medium Exercise Commands  */
+/* p for long medium Exercise Commands  */
+
+p.lmcommand {
+    background-color: Black; color: White;
+    font-family: courier; font-size: 16px; font-weight: bold;
+    position: relative; left: 15px;
+    width: 725px;   
+}
+
+/* p for short medium Exercise Commands  */
 
 p.mcommand {
     background-color: Black; color: White;
+    font-family: courier; font-size: 16px; font-weight: bold;
+    position: relative; left: 15px;
+    width: 450px;   
+}
+
+/* p for medium Exercise Commands smaller font size  */
+
+p.mscommand {
+    background-color: Black; color: White;
     font-family: courier; font-size: 12px; font-weight: bold;
-    position: relative; left: 20px;
-    width: 700px;   
+    position: relative; left: 15px;
+    width: 675px;   
 }
 
 /* p for Long Exercise Commands  */
@@ -60,15 +78,8 @@ p.mcommand {
 p.lcommand {
     background-color: Black; color: White;
     font-family: courier; font-size: 12px; font-weight: bold;
-    position: relative; left: 20px;
-    width: 750px;   
-}
-
-/* p for Hints  */
-
-p.hint {
-    background-color: Lime; color: DarkSlateGray;
-    width: 750px;   
+    position: relative; left: 15px;
+    width: 700px;   
 }
 
 /* div for blocks of rambling text */
@@ -115,7 +126,7 @@ span.comsum {
 span.comtxt {
     display: inline-block;
     background-color: Black; color: White;
-    font-family: courier; font-size: 16px; font-style: bold;
+    font-family: courier; font-size: 16px; font-weight: bold;
 }
 
 /* span for Quotes*/
@@ -165,6 +176,14 @@ details.video {
     background-color: LightGreen; border-style: double;
     width: 800px;
 }
+
+/* class for Hints  */
+
+.hint {
+    background-color: Lime; color: DarkSlateGray;
+    width: 750px;   
+}
+
 
 /* ############################################## --
  Code for grid containers. Copied from:
