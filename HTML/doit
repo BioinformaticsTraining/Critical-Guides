@@ -44,6 +44,7 @@ unalias cp
 ls; mkdir Project_copy; echo 1; ls;
 echo 1; ls Project_copy; echo 2; cp * Project_copy; echo 3; ls Project_copy;
 cp -r d* Project_copy; echo 1; ls Project_copy;
-
-
+cd Project_copy
+ls; rm a*; echo 1; ls;
+rm *; echo 1; ls;
 

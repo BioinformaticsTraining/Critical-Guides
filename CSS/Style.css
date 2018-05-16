@@ -37,51 +37,6 @@ p.smarg {
     margin-right: 15px;
 }
 
-/* p for Exercise Commands  */
-
-p.command {
-    background-color: Black; color: White;
-    font-family: courier; font-size: 22px; font-weight: bold;
-    position: relative; left: 15px;
-    width: 450px;   
-}
-
-/* p for long medium Exercise Commands  */
-
-p.lmcommand {
-    background-color: Black; color: White;
-    font-family: courier; font-size: 16px; font-weight: bold;
-    position: relative; left: 15px;
-    width: 725px;   
-}
-
-/* p for short medium Exercise Commands  */
-
-p.mcommand {
-    background-color: Black; color: White;
-    font-family: courier; font-size: 16px; font-weight: bold;
-    position: relative; left: 15px;
-    width: 450px;   
-}
-
-/* p for medium Exercise Commands smaller font size  */
-
-p.mscommand {
-    background-color: Black; color: White;
-    font-family: courier; font-size: 12px; font-weight: bold;
-    position: relative; left: 15px;
-    width: 675px;   
-}
-
-/* p for Long Exercise Commands  */
-
-p.lcommand {
-    background-color: Black; color: White;
-    font-family: courier; font-size: 12px; font-weight: bold;
-    position: relative; left: 15px;
-    width: 700px;   
-}
-
 /* div for blocks of rambling text */
 
 div.ramble {
@@ -119,6 +74,76 @@ span.comsum {
     display: inline-block;
     width: 200px;
     background-color: LightGray; 
+}
+
+/* span for Exercise Commands 22px */
+
+span.command {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 22px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 20px */
+
+span.command20 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 20px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 18px */
+
+span.command18 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 18px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 16px */
+
+span.command16 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 16px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 14px */
+
+span.command14 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 14px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 12px */
+
+span.command12 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 12px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 10px */
+
+span.command10 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 10px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
 }
 
 /* span for Command text*/
@@ -180,7 +205,7 @@ details.video {
 /* class for Hints  */
 
 .hint {
-    background-color: Lime; color: DarkSlateGray;
+    background-color: Lime; color: Maroon;
     width: 750px;   
 }
 
