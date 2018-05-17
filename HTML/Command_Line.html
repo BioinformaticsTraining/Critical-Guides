@@ -1480,7 +1480,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part II:</b>
-              <b>blast</b> from the <b>command line</b></summary>
+              Using <b>blast</b> from the <b>command line</b></summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -1488,20 +1488,49 @@ Click to record your <b>Start</b> time.</button>
      #######################################################################################
      ####################################################################################### -->
 
-      <p>In order to use blast, it must first be installed.</p>
+      <div class="ramble">
+
+        <h2>Using <b>blast</b> from the <b>command line</b></h2>
+
+        <p>I will assume you have all, at least, heard of <b>blast</b>?.
+           It is probably the most used peice of Bioinformatics software,
+           usually run from the <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI web site</a> using a browser.
+           Its prime purpose is to compare query sequences with sequence databases to discover similar sequences
+           that might represent homologous entities.
+        </p>
+
+        <p>In this section of the exercise, the plan is to:
+          <ol>
+            <li>Download and install the <b>blast</b> package.</li>
+            <li>Get some Human protein query sequences.</li>
+            <li>Compare the query sequences to a suitable datbase at the NCBI.</li>
+            <li>Examine the output to determine what the query sequences might be.</li>
+          </ol>
+        </p>
+
+        <p>Familiarity with the UNIX commands met in th previus stages of the exercise will
+           be assumed. Further cmmands will be introduced as they are required. 
+
+      </div><br>
+
+      <p>In order to use <b>blast</b>, it must first be installed.
+      </p>
 
       <p>This we will do very crudely, as the installation and/or learning use any software
          package properly is not the objective here.
+      </p>
 
       <p>To set up blast (or similar) properly, you need full (
          <a href="https://en.wikipedia.org/wiki/Superuser"> Superuser</a>) access to your computer.
          and to have read through the
-         <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/"> Documentation</a></p>.
+         <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/"> Documentation</a>.
+      </p>
 
       <p>For now, I will just guide you through the vital bits of the 
          <a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2"> Installation Guide</a>,
          with the objective of getting just one function of the blast suite operational for a demonstration
-         of the possibilities.</p>
+         of the possibilities.
+      </p>
 
       <div class="new_command">
         <p>Introducing
