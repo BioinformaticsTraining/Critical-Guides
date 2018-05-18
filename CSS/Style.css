@@ -181,6 +181,29 @@ details.video {
     width: 500px;
 }
 
+/* img classes to position images within text.
+   https://www.w3schools.com/cssref/tryit.asp?filename=trycss_vertical-align */
+
+img.bl { /* Default */
+    vertical-align: baseline;
+}
+
+img.tt {
+    vertical-align: text-top;
+}
+
+img.tb {
+    vertical-align: text-bottom;
+}
+
+img.sub {
+    vertical-align: sub;
+}
+
+img.sup {
+    vertical-align: super;
+}
+
 /* class for Major Sections */
 
 .msect {

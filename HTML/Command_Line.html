@@ -1458,7 +1458,9 @@ Click to record your <b>Start</b> time.</button>
                  would you remove everything that remains in ProjectX?</p>
             <details class="comment">
             <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/rmdirp01.png" alt="John (the Conquerooo) has abandoned me!" style="height:480px; width:760px;">
+              <img src="Images/rmdirp01.png"
+                   alt="John (the Conquerooo) has abandoned me!"
+                   style="height:480px; width:760px;">
             </details><br>
           </li>
         </ol>
@@ -1493,8 +1495,8 @@ Click to record your <b>Start</b> time.</button>
         <h2>Using <b>blast</b> from the <b>command line</b></h2>
 
         <p>I will assume you have all, at least, heard of <b>blast</b>?.
-           It is probably the most used peice of Bioinformatics software,
-           usually run from the <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI web site</a> using a browser.
+           It is undoubtedly the most used peice of Bioinformatics software,
+           usually run from the <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi"><b>NCBI</b> web site</a> using a browser.
            Its prime purpose is to compare query sequences with sequence databases to discover similar sequences
            that might represent homologous entities.
         </p>
@@ -1508,10 +1510,16 @@ Click to record your <b>Start</b> time.</button>
           </ol>
         </p>
 
-        <p>Familiarity with the UNIX commands met in th previus stages of the exercise will
+        <p>Familiarity with the <b>UNIX commands</b> met in th previus stages of the exercise will
            be assumed. Further cmmands will be introduced as they are required. 
 
       </div><br>
+
+<!-- #######################################################################################
+     ########## Software Installation. #####################################################
+     ####################################################################################### -->
+
+      <h3>blast Installation.</h3>
 
       <p>In order to use <b>blast</b>, it must first be installed.
       </p>
@@ -1520,7 +1528,7 @@ Click to record your <b>Start</b> time.</button>
          package properly is not the objective here.
       </p>
 
-      <p>To set up blast (or similar) properly, you need full (
+      <p>To set up <b>blast</b> (or similar) properly, you need full (
          <a href="https://en.wikipedia.org/wiki/Superuser"> Superuser</a>) access to your computer.
          and to have read through the
          <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/"> Documentation</a>.
@@ -1528,7 +1536,7 @@ Click to record your <b>Start</b> time.</button>
 
       <p>For now, I will just guide you through the vital bits of the 
          <a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2"> Installation Guide</a>,
-         with the objective of getting just one function of the blast suite operational for a demonstration
+         with the objective of getting just one function of the <b>blast</b> suite operational for a demonstration
          of the possibilities.
       </p>
 
@@ -1539,14 +1547,57 @@ Click to record your <b>Start</b> time.</button>
       </div>
 
       <p>First, glance through the possibilities offered at the blast
-      <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/"> Download Site</a>
-             and select the appropriate version of blast to download.
+      <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/"> <b>Download Site</b></a>
+             and select the appropriate version of <b>blast</b> to download.
 
-      <p class="hint"><b><i>Note:</i></b> For the purposes of this exercise, I will assume you need
-         <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ncbi-blast-2.7.1+-x64-linux.tar.gz"> 
-         the same version as I do</a>.
-         If not, go for the tar option that matches your Operating System.
+      <p class="hint"><b><i>Note:</i></b> For the purposes of this exercise, I will assume you need 
+         the same version as I do.
+         If not, select the version that best suits your operating system ...<br>
+        <img src="Images/blast_options.png" alt="Morning again! and my soul is still sleeping."
+             style="display:block; margin-left:auto; margin-right:auto; height:295px; width:500px;">
       </p>
+
+<!-- Morning again! and my soul is still sleeping.
+     Morning again! and my dreams are still leaping.
+     Morning again! hope is aseeping.
+     Morning again! and my whole is still weeping.
+     Maybe its best that my baby went creeping?
+
+     DPJ, 2018, acknowledging the reflections of the great M. Waters, circa 1964,
+     expressed on the sad occassion when a lady of more than averagely
+     sized legs (not to mention, hips of substantial mass), hailing from
+     the Mississippi Delta .... showed the poorest of taste by deserting
+     M in the early hours, having (no doubt) exhausted the poor boy with
+     her over developed womanly demands throughout the hours God wisely
+     chose to render dark and dream infested!
+-->
+
+      <p> The next task is to download your chosen <b>blast</b> version.
+          This, you might with justice observe, could be done from the web site you are
+          studying with a well aimed click of the mouse. However, without pausing to splutter
+          any sort of confused defence, I suggest the use of wget from th ecommand line.
+
+      <p> If you require the same version as I. then you could Copy/Paste the command:
+      </p>
+
+      <p>
+        <span class="command12">
+          wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ncbi-blast-2.7.1+-x64-linux.tar.gz
+        </span>
+      </p>
+
+      <p>If you needed a different version. or just like doing things "the hard way", you can
+         probably discover the URL you need by hovering your mouse of the relevant version and
+         looking at the bottom of your screen. The address is normally displayed there.
+      </p>
+
+      <p>Better still, you could Copy the required URL from the 
+
+        <img src="Images/blast_options02.png" alt="Morning again! and my dreams are still leaping."
+             style="display:block; margin-left:auto; margin-right:auto; height:324px; width:500px;">
+
+        <img src="Images/blast_install03.png" alt="Morning again! hope is aseeping."
+             style="display:block; margin-left:auto; margin-right:auto; height:73px; width:200px;">
 
       <div class="new_command">
         <p>Introducing
@@ -1554,11 +1605,22 @@ Click to record your <b>Start</b> time.</button>
            A command to <b>ar</b>chive, and optionally compress, file hieracharies into a single file.</p>
       </div>
 
-      <p>
-        <span class="command12">
-          wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ncbi-blast-2.7.1+-x64-linux.tar.gz
-        </span>
-      </p>
+      <div class="hint">
+        <p><b><i>Note</i></b>: <b>tar</b> stands for <b>t</b>ape <b>ar</b>chive. Remember <b>tapes</b>? Considered very
+           good idea in the <b>1960</b>s and <b>70</b>s ... along with <b>mini-skirts</b>
+           <img class="tt" src="Images/mini_tape.jpg" alt="Gone pitchin' avec Howlin'!"
+                style="height:257px; width:200px;">.
+        </p>
+
+        <p><b>
+            <img class="tt" src="Images/wotan.jpg" alt="The thrill? C'est fin ... BB has left the planet!"
+                style="height:126px; width:200px;">Dr Who</b> (the original <b><i>REAL </i></b>one) was also a big fan.
+        </p>
+
+        <p>Not so common in these days of little rhyme and sparce reason,
+           but ... <b>Command Line Unix</b> has a fine feel for the past.
+        </p>
+      </div>
 
       <p>
         <span class="command">
@@ -1567,13 +1629,19 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>
-        <span class="command1">
+        <span class="command18">
           alias blastp="~/Desktop/ProjectX/blast/ncbi-blast-2.7.1+/bin/blastp"
         </span>
       </p>
 
+<!-- #######################################################################################
+     ########## Data Acquisition. ##########################################################
+     ####################################################################################### -->
+
+      <h3>Acquiring some Query data.</h3>
+
       <p>
-        <span class="command12">
+        <span class="command10">
           wget https://github.com/BioinformaticsTraining/Critical-Guides/raw/gh-pages/Data/Query_Sequences.tar.gz
         </span>
       </p>
@@ -1583,6 +1651,158 @@ Click to record your <b>Start</b> time.</button>
           blastp -query proteins.fasta -db swissprot -out blastout -remote -num_descriptions 1 -num_alignments 1
         </span>
       </p>
+
+      <div class="checkpoint">
+        <h2><i><u>Checkpoint</u></i></h2>
+
+        <p><b>Commands introduced in this section are:</b>
+        <ol type="1">
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/tar.1.html" target="_blank"><b>tar</b></a>.
+                   <b>ar</b>chives, and optionally compresses, file hieracharies into a single file.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/wget.1.html" target="_blank"><b>wget</b></a>.
+                   <b>get</b>s files from the <b>w</b>eb.</p>.
+          </li>
+<!--          <li>
+            <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
+                   <b>l</b>i<b>s</b>ts the contents of a directory.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
+                   Creates empty files and updates the
+                   modification times of existing items.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
+                   Renames or <b>m</b>o<b>v</b>es files/directories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
+                   Creates <b>l</b>i<b>n</b>ks to files/directories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>
+                   <b>c</b>o<b>p</b>ies
+                   files/links/directories.
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
+                   Creates <b>command</b> aliases.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
+                   Removes <b>command</b> aliases.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a>
+                   Displays text to the <b>ST</b>andar<b>D OUT</b>put (<b>STDOUT</b>, typically the <b>terminal</b>).
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
+                   <b>r</b>e<b>m</b>oves files/directories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
+                   <b>r</b>e<b>m</b>oves empty <b>dir</b>ectories.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
+                   Display the <b>man</b>ual pages for a specified <b>UNIX command</b>.
+          </li>   -->
+        </ol>
+
+        <p><b>Concepts/tricks introduced in this section are:</b>
+        <ol type="1">
+          <li>Redirecting command output to a file.</li>
+<!--          <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.</li>
+          <li>Using '<b>?</b>' as a single character wild card.</li>
+          <li>Using '<b>*</b>' as a multi-character wild card.</li>
+          <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue.</li>
+          <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys.</li>
+          <li><b>Tab Completion</b>.</li>
+          <li>Using multiple '<b>;</b>' separated <b>commands</b> on one line.</li>   -->
+       </ol>
+
+        <p><b>Reflections:</b>
+        <ol type="1">
+<!--          <li>Everything done thus far can be achieved either from the <b>command line</b>
+              or the <b>Linux GUI</b>.</li>
+          <li>The <b>GUI</b> option is intuitive, but at times, clumsy.</li>
+          <li>The <b>command line</b> requires effort to learn, but is generally more efficient,
+              particularly when repetitive operations are involved.</li> -->
+        </ol>
+
+        <p> Now some simple questions to test your understanding.</p>
+
+        <p class="hint">
+          {<b><i>Hint</i></b>: The
+           <a href="http://man7.org/linux/man-pages/" target="_blank"><b>Linux Manual Pages</b></a>
+          will be invaluable}
+        </p>
+
+        <ol type="1">
+          <li>
+          </li>
+ <!--         <li>
+            <p class="smarg">With but a single command, using
+               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
+               how could you create the nest of optimistic directories:
+              <p class="command">
+                 ~/Desktop/Here/comes/the/sun
+              </p>
+            </p>
+            <p class="smarg">
+                 Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
+                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
+                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
+                 encourage you in your struggles.</p>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
+            </details>
+          </li>
+          <li>
+            <p class="smarg">With but a single command, using
+               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
+               how could you create the nest of optimistic directories:
+              <p class="command">
+                 ~/Desktop/Here/comes/the/sun
+              </p>
+            </p>
+            <p class="smarg">
+                 Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
+                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
+                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
+                 encourage you in your struggles.</p>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
+            </details>
+          </li>
+          <li>
+            <p class="smarg">With but a single command, using
+                 <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
+                 would you remove the functionless tower of empty directories created in the previous question?</p>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/rmdirp01.png" alt="My mojo just don't work on you!" style="height:480px; width:760px;">
+            </details><br>
+          </li>
+          <li>
+            <p class="smarg">The exercise directory you created so long ago, is now awash with a delight of files, links
+               and directories of minimal purpose! The time has come to clean up and start afresh.</p>
+
+            <p class="smarg">How, with but a single command, using
+                 <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>,
+                 would you remove everything that remains in ProjectX?</p>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+              <img src="Images/rmdirp01.png" alt="John (the Conquerooo) has abandoned me!" style="height:480px; width:760px;">
+            </details><br>
+          </li>  -->
+        </ol>
+      </div>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -1638,6 +1858,7 @@ Click to record your <b>Start</b> time.</button>
      #######################################################################################
      ####################################################################################### -->
 
+<!--
 cp -p
 
 rm rmdir use of * to go before the Checkpoint<br>
@@ -1660,7 +1881,7 @@ An anonymous fasta file?<br>
 some blast results {wgete -r} - cannot run blast aas would require installation (I tink? .. maybe not?)<br><br>
 install blast! Do not be a wimp!
 
-
+-->
 
 <button type="button"
 onclick="document.getElementById('End_Time').innerHTML = Date()">
