@@ -1395,9 +1395,10 @@ Click to record your <b>Start</b> time.</button>
         <ol type="1">
           <li>
             <p class="smarg">Describe the effects of the command:</p>
-            <p class="command">
-              <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank">ls</a>
-              -lrt
+            <p>
+              <span class="command">
+                <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html" target="_blank">ls</a> -lrt
+              </span>
             </p>
             <details class="comment">
             <summary><span class="comsum">Answer.</span></summary>
@@ -1408,27 +1409,10 @@ Click to record your <b>Start</b> time.</button>
             <p class="smarg">With but a single command, using
                <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
                how could you create the nest of optimistic directories:
-              <p class="command">
+            <p>
+              <span class="command">
                  ~/Desktop/Here/comes/the/sun
-              </p>
-            </p>
-            <p class="smarg">
-                 Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
-                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
-                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
-                 encourage you in your struggles.</p>
-            <details class="comment">
-            <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
-            </details>
-          </li>
-          <li>
-            <p class="smarg">With but a single command, using
-               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
-               how could you create the nest of optimistic directories:
-              <p class="command">
-                 ~/Desktop/Here/comes/the/sun
-              </p>
+              </span>
             </p>
             <p class="smarg">
                  Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
@@ -1447,7 +1431,11 @@ Click to record your <b>Start</b> time.</button>
             <details class="comment">
             <summary><span class="comsum">Answer.</span></summary>
               <img src="Images/rmdirp01.png" alt="My mojo just don't work on you!" style="height:480px; width:760px;">
-            </details><br>
+            </details>
+          </li>
+          <li>
+            <p class="smarg"> Something to showcase "cp -p" ... i.e preservation of time stamp.
+            </p>
           </li>
           <li>
             <p class="smarg">The exercise directory you created so long ago, is now awash with a delight of files, links
@@ -1510,8 +1498,8 @@ Click to record your <b>Start</b> time.</button>
           </ol>
         </p>
 
-        <p>Familiarity with the <b>UNIX commands</b> met in th previus stages of the exercise will
-           be assumed. Further cmmands will be introduced as they are required. 
+        <p>Familiarity with the <b>UNIX commands</b> met in the previous stages of the exercise will
+           be assumed. Further commands will be introduced as they are required. 
 
       </div><br>
 
@@ -1663,74 +1651,24 @@ Click to record your <b>Start</b> time.</button>
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/wget.1.html" target="_blank"><b>wget</b></a>.
-                   <b>get</b>s files from the <b>w</b>eb.</p>.
-          </li>
-<!--          <li>
-            <a href="http://man7.org/linux/man-pages/man1/ls.1p.html" target="_blank"><b>ls</b></a>.
-                   <b>l</b>i<b>s</b>ts the contents of a directory.
+                   <b>get</b>s files from the <b>w</b>eb.
           </li>
           <li>
-            <a href="http://man7.org/linux/man-pages/man1/touch.1p.html" target="_blank"><b>touch</b></a>. 
-                   Creates empty files and updates the
-                   modification times of existing items.
+            <a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a>.
+                   Con<b>cat</b>inates files.
           </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/mv.1p.html" target="_blank"><b>mv</b></a>.
-                   Renames or <b>m</b>o<b>v</b>es files/directories.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/ln.1p.html" target="_blank"><b>ln</b></a>.
-                   Creates <b>l</b>i<b>n</b>ks to files/directories.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/cp.1p.html" target="_blank"><b>cp</b></a>
-                   <b>c</b>o<b>p</b>ies
-                   files/links/directories.
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/alias.1p.html" target="_blank"><b>alias</b></a>.
-                   Creates <b>command</b> aliases.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/unalias.1p.html" target="_blank"><b>unalias</b></a>.
-                   Removes <b>command</b> aliases.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/echo.1p.html" target="_blank"><b>echo</b></a>
-                   Displays text to the <b>ST</b>andar<b>D OUT</b>put (<b>STDOUT</b>, typically the <b>terminal</b>).
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>.
-                   <b>r</b>e<b>m</b>oves files/directories.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>.
-                   <b>r</b>e<b>m</b>oves empty <b>dir</b>ectories.
-          </li>
-          <li>
-            <a href="http://man7.org/linux/man-pages/man1/man.1p.html" target="_blank"><b>man</b></a>.
-                   Display the <b>man</b>ual pages for a specified <b>UNIX command</b>.
-          </li>   -->
         </ol>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
         <ol type="1">
           <li>Redirecting command output to a file.</li>
-<!--          <li>Files whose names begin with a '<b>.</b>' are <b>Hidden Files</b>.</li>
-          <li>Using '<b>?</b>' as a single character wild card.</li>
-          <li>Using '<b>*</b>' as a multi-character wild card.</li>
-          <li>Using the '<b>&uarr;</b>' key to recall previous commands for edit & reissue.</li>
-          <li><b>Navigating</b> & <b>Editing commands</b>, using the '<b>&larr;</b>' & '<b>&rarr;</b>' keys.</li>
-          <li><b>Tab Completion</b>.</li>
-          <li>Using multiple '<b>;</b>' separated <b>commands</b> on one line.</li>   -->
-       </ol>
+        </ol>
 
         <p><b>Reflections:</b>
         <ol type="1">
-<!--          <li>Everything done thus far can be achieved either from the <b>command line</b>
-              or the <b>Linux GUI</b>.</li>
-          <li>The <b>GUI</b> option is intuitive, but at times, clumsy.</li>
-          <li>The <b>command line</b> requires effort to learn, but is generally more efficient,
-              particularly when repetitive operations are involved.</li> -->
+          <li>Pasting into a termonal.</li>
+          <li></li>
+          <li></li>
         </ol>
 
         <p> Now some simple questions to test your understanding.</p>
@@ -1744,63 +1682,14 @@ Click to record your <b>Start</b> time.</button>
         <ol type="1">
           <li>
           </li>
- <!--         <li>
-            <p class="smarg">With but a single command, using
-               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
-               how could you create the nest of optimistic directories:
-              <p class="command">
-                 ~/Desktop/Here/comes/the/sun
-              </p>
-            </p>
-            <p class="smarg">
-                 Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
-                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
-                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
-                 encourage you in your struggles.</p>
-            <details class="comment">
-            <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
-            </details>
+          <li>
           </li>
           <li>
-            <p class="smarg">With but a single command, using
-               <a href="http://man7.org/linux/man-pages/man1/mkdir.1p.html"><b>mkdir</b><a>,
-               how could you create the nest of optimistic directories:
-              <p class="command">
-                 ~/Desktop/Here/comes/the/sun
-              </p>
-            </p>
-            <p class="smarg">
-                 Let <a href="https://www.youtube.com/watch?v=GwmVfewqu7I" target="_blank"><b>George</b></a>,
-                     <a href="https://www.youtube.com/watch?v=dEC_97p3C0k" target="_blank"><b>Ritchie</b></a>
-                 and <a href="https://www.youtube.com/watch?v=H2XCgcxsvTg" target="_blank"><b>Nina</b></a>
-                 encourage you in your struggles.</p>
-            <details class="comment">
-            <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/mkdirp01.png" alt="Fiddlesticks!" style="height:431px; width:760px;">
-            </details>
           </li>
           <li>
-            <p class="smarg">With but a single command, using
-                 <a href="http://man7.org/linux/man-pages/man1/rmdir.1p.html" target="_blank"><b>rmdir</b></a>,
-                 would you remove the functionless tower of empty directories created in the previous question?</p>
-            <details class="comment">
-            <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/rmdirp01.png" alt="My mojo just don't work on you!" style="height:480px; width:760px;">
-            </details><br>
           </li>
           <li>
-            <p class="smarg">The exercise directory you created so long ago, is now awash with a delight of files, links
-               and directories of minimal purpose! The time has come to clean up and start afresh.</p>
-
-            <p class="smarg">How, with but a single command, using
-                 <a href="http://man7.org/linux/man-pages/man1/rm.1p.html" target="_blank"><b>rm</b></a>,
-                 would you remove everything that remains in ProjectX?</p>
-            <details class="comment">
-            <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/rmdirp01.png" alt="John (the Conquerooo) has abandoned me!" style="height:480px; width:760px;">
-            </details><br>
-          </li>  -->
+          </li>
         </ol>
       </div>
 
@@ -1823,8 +1712,36 @@ Click to record your <b>Start</b> time.</button>
      #######################################################################################
      #######################################################################################
      ####################################################################################### -->
+      <div class="ramble">
 
-<a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a><br>
+        <h2>Something with a fastq file?</b></h2>
+
+        <p>I will assume you have all, at least, heard of <b>fastq</b> files?.
+           If you would find it useful, I offer a short video outlining the wonders of the
+           fastq format and related issues.
+
+        <details class="video">
+        <summary><b>UNIX File Structure & Reference - A video</b></summary>
+          <video width="320" height="240" controls preload>
+            <source src="Videos/DotPlots.webm"></src>
+          </video>
+        </details><br>
+
+        </p>
+
+        <p>In this section of the exercise, the plan is to:
+          <ol>
+            <li>Get a couple of <b><i>very small</i></b> fastq files representing forward and reverse read pairs.</li>
+            <li>Examine, concatinate and sort them into the shape required by the mapping software.</li>
+            <li>What else? Definitely not run HTS software!.</li>
+          </ol>
+        </p>
+
+        <p>Familiarity with the <b>UNIX commands</b> met in the previus stages of the exercise will
+           be assumed. Further commands will be introduced as they are required. 
+
+      </div><br>
+
 <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a><br>
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/less.1.html" target="_blank"><b>less</b></a><br>
@@ -1859,21 +1776,7 @@ Click to record your <b>Start</b> time.</button>
      ####################################################################################### -->
 
 <!--
-cp -p
 
-rm rmdir use of * to go before the Checkpoint<br>
-Then change of emphasis!<br>
-wget real file or 4<br>
-rgep sed wc to extract information from same<br>
-plus anything else that comes to mind<br>
-.... rather loose thoughts here, plan has melted somewhat :-(<br>
-I think play it by ear for a trifle and then revise as muse speaks to one.<br>
-
-<br>
-maybe start with a fastq file? {wget}<br>
-count the reads? {cat pipe wc}?<br><br>
-
-cat two fastq files together and sort to get read pairs right? I think Daniel does this?
 
 initial look {head tail less less -S}<br><br>
 
