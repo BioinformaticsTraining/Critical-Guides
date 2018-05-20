@@ -37,6 +37,25 @@ p.smarg {
     margin-right: 15px;
 }
 
+/* Table for Checkout Section 2*/
+
+table#co01 {
+    display:block; margin-left:auto; margin-right:auto;
+    border:1px solid black; border-collapse: collapse;
+    width:98%; background:pink;
+}
+
+table#co01 th {
+    border:1px solid black;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+table#co01 td {
+    border:1px solid black;
+}
+
 /* div for blocks of rambling text */
 
 div.ramble {
@@ -126,12 +145,32 @@ span.command14 {
     min-width: 150px; max-width: 800;   
 }
 
+/* span for Exercise Commands 13px */
+
+span.command13 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 14px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
 /* span for Exercise Commands 12px */
 
 span.command12 {
     display:inline-block;
     background-color: Black; color: White;
     font-family: courier; font-size: 12px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 150px; max-width: 800;   
+}
+
+/* span for Exercise Commands 11px */
+
+span.command11 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 11px; font-weight: bold;
     position: relative; left: 15px;
     min-width: 150px; max-width: 800;   
 }
@@ -144,14 +183,6 @@ span.command10 {
     font-family: courier; font-size: 10px; font-weight: bold;
     position: relative; left: 15px;
     min-width: 150px; max-width: 800;   
-}
-
-/* span for Command text*/
-
-span.comtxt {
-    display: inline-block;
-    background-color: Black; color: White;
-    font-family: courier; font-size: 16px; font-weight: bold;
 }
 
 /* span for Quotes*/
@@ -230,6 +261,14 @@ img.sup {
 .hint {
     background-color: Lime; color: Maroon;
     width: 750px;   
+}
+
+/* class for Command text*/
+
+.comtxt {
+    display: inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 16px; font-weight: bold;
 }
 
 
