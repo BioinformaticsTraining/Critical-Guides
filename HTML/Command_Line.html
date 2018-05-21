@@ -1215,7 +1215,9 @@ Click to record your <b>Start</b> time.</button>
  
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/rm01.png" alt="Hail to thee my rambling boy!" style="height:414px; width:800px;">
+        <img src="Images/rm01.png"
+             alt="Hail to thee my rambling boy!"
+             style="height:414px; width:800px;">
       </details>
 
       <br>
@@ -1239,7 +1241,9 @@ Click to record your <b>Start</b> time.</button>
  
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/rmdir01.png" alt="Muddy are the Waters in which we must Wade!" style="height:557px; width:800px;">
+        <img src="Images/rmdir01.png"
+             alt="Muddy are the Waters in which we must Wade!"
+             style="height:557px; width:800px;">
       </details>
 
 <!-- Muddy are the Waters in which we must Wade!
@@ -1266,7 +1270,9 @@ Click to record your <b>Start</b> time.</button>
  
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/rmdir02.png" alt="Many the tears to be shed in the shade" style="height:309px; width:800px;">
+        <img src="Images/rmdir02.png"
+             alt="Many the tears to be shed in the shade"
+             style="height:309px; width:800px;">
       </details>
 
       <p>Finally, <b>Project_copy</b> is empty and all the remains is to
@@ -1295,7 +1301,9 @@ Click to record your <b>Start</b> time.</button>
  
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/rmdir03.png" alt="sicklied gray the dreich mist into which we must fade" style="height:295px; width:800px;">
+        <img src="Images/rmdir03.png"
+             alt="sicklied gray the dreich mist into which we must fade"
+             style="height:295px; width:800px;">
       </details>
 
       <br>
@@ -1834,10 +1842,10 @@ Click to record your <b>Start</b> time.</button>
              (to make a <b>tar</b> file from a directory hierarchy, one would use <b>c</b> in place of <b>x</b>).</li>
           <li><b>v</b> - Invites tar to be <b>v</b>erbose and report its progress as it goes.
               Particulalrly important for large <b>tar files</b> which would otherwise just go silent
-              for ages, which can be disconcering for those of us loe on faith.
+              for ages, which can be disconcering for those of us low on faith.
           <li><b>z</b> - Warns <b>tar</b> that it must uncompress (<b>z</b>ip) the <b>tar</b>
               file before it starts (or, if used
-              with <b>c</b> rather than <b>x</b>, it must compress (<b>z</b>ip) the tar file it is creating).
+              with <b>c</b> rather than <b>x</b>, it must compress (un<b>z</b>ip) the <b>tar</b> file it is creating).
           <li><b>f</b> - <b>tar</b> is to extract from or archive to a file (whose name is the next parameter).
               <b>tar</b> is usually used with files, but there are alternatives, that maybe we should
               leave to another time.
@@ -1854,15 +1862,72 @@ Click to record your <b>Start</b> time.</button>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/tar01.png" alt="Maybe its best that my baby went creeping" style="height:624px; width:800px;">
+        <img src="Images/tar01.png" alt="Maybe its best that my baby went creeping" style="height:655px; width:800px;">
+      </details>
+
+      <p>Strictly speaking, you are now finished with the <b>compressed tar file</b> you downloaded
+         from the <b>NCBI</b>. However, why not keep it for a while, in case things go wrong and you
+         need to install afresh. I suggest you <b>m</b>o<b>v</b>e it into the directory created by its expansion.
+      </p>
+
+      <p>
+        <span class="command">
+          mv ncbi-blast-2.7.1+-x64-linux.tar.gz ncbi-blast-2.7.1+
+        </span>
+      </p>
+
+      <p>For easier access, make a link with a short name to the blast installation Directory.
+
+      <p>
+        <span class="command">
+          ln -s blast ncbi-blast-2.7.1+
+        </span>
+      </p>
+
+      <p>Take a look at the structure of the install directory. The chatter of <b>tar</b> should have given
+         you a good idea of that which was being created, be reinforcement is always healthy.
+      </p>
+
+      <p>
+        <span class="command">
+          ls -R blast
+        </span>
+      </p>
+
+       <p>Note the "<i>Teenage First Flagon of Woodpecker Cider</i>"
+          <span style="color:lime; background-color:black; font-family:courier;"><b>green</b></span>
+          chosen to make the programs glow.
+          All executable files are priveliged to emit the gruesome hue.
+      </p>
+
+      <p>Take a close look at the one <b>blast package</b> program we are going to use for our
+         first demonstrate the wonders of <b>blast</b>.
+      </p>
+
+      <p>
+        <span class="command">
+          ls -l blast/bin/blastp
+        </span>
+      </p>
+
+      <p>See that it is enabled for execution by its owner (you), the group to which you
+         belong <b><i>AND</i></b> anybody else who just happens to be passing by.
+         No wonder it is <span style="color:lime; background-color:black; font-family:courier;">
+         <b>green</b></span>!
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/tar02.png" alt="Maybe its best that my baby went creeping" style="height:655px; width:800px;">
       </details>
 
 
 
+Les Paul
+https://www.youtube.com/watch?v=eXjs7LV_i2I
 
-
-
-
+Rev Gary Whistling Blues
+https://www.youtube.com/watch?v=LLd1E3wJ7zE
 
 
 
