@@ -1786,15 +1786,18 @@ Click to record your <b>Start</b> time.</button>
       </div>
 
       <div class="hint">
-        <p><b><i>Note</i></b>: <b>tar</b> stands for <b>t</b>ape <b>ar</b>chive. Remember <b>tapes</b>? Considered very
+        <p><b><i>Note</i></b>: <b>tar</b> stands for <b>t</b>ape <b>ar</b>chive.
+           Remember <b>tapes</b>? Considered very
            good idea in the <b>1960</b>s and <b>70</b>s ... along with <b>mini-skirts</b>
            <img class="tt" src="Images/mini_tape.jpg" alt="Gone pitchin' avec Howlin'!"
                 style="height:257px; width:200px;">.
         </p>
 
         <p><b>
-            <img class="tt" src="Images/wotan.jpg" alt="The thrill? C'est fin ... BB has left the planet!"
-                style="height:126px; width:200px;">Dr Who</b> (the original <b><i>REAL </i></b>one) was also a big fan.
+            <img class="tt" src="Images/wotan.jpg"
+                 alt="The thrill? C'est fin ... BB has left the planet!"
+                 style="height:126px; width:200px;">
+                 Dr Who</b> (the original <b><i>REAL </i></b>one) was also a big fan.
         </p>
 
         <p>Not so common in these days of little rhyme and sparce reason,
@@ -1802,8 +1805,10 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
-      <p>Very pretty, but the <b>blast package</b> is not a lot of use as a <b>compressed tar file</b>.
-         You need to use the program <b>tar</b> to expand it back into the original directories thus:
+      <p>Very pretty, but the <b>blast package</b> is not a lot
+         of use as a <b>compressed tar file</b>.
+         You need to use the program <b>tar</b> to expand it
+         back into the original directories thus:
       </p>
 
       <p>
@@ -1814,7 +1819,8 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p>
-           <b><i>Note</i></b>: If you are not simply <b>Copy</b>/<b>Pasting</b> from this page ...
+           <b><i>Note</i></b>: If you are not simply
+           <b>Copy</b>/<b>Pasting</b> from this page ...
            <b>Tab Completion</b> will save you much pain here.
         </p>
       </div>
@@ -1839,20 +1845,27 @@ Click to record your <b>Start</b> time.</button>
         </p>
         <ul>
           <li><b>x</b> - E<b>x</b>tract the contents of the <b>tar</b> file
-             (to make a <b>tar</b> file from a directory hierarchy, one would use <b>c</b> in place of <b>x</b>).</li>
+              (to make a <b>tar</b> file from a directory hierarchy,
+              one would use <b>c</b> in place of <b>x</b>).</li>
           <li><b>v</b> - Invites tar to be <b>v</b>erbose and report its progress as it goes.
-              Particulalrly important for large <b>tar files</b> which would otherwise just go silent
+              Particulalrly important for large <b>tar files</b>
+              which would otherwise just go silent
               for ages, which can be disconcering for those of us low on faith.
-          <li><b>z</b> - Warns <b>tar</b> that it must uncompress (<b>z</b>ip) the <b>tar</b>
+          <li><b>z</b> - Warns <b>tar</b> that it must uncompress
+              (<b>z</b>ip) the <b>tar</b>
               file before it starts (or, if used
-              with <b>c</b> rather than <b>x</b>, it must compress (un<b>z</b>ip) the <b>tar</b> file it is creating).
-          <li><b>f</b> - <b>tar</b> is to extract from or archive to a file (whose name is the next parameter).
-              <b>tar</b> is usually used with files, but there are alternatives, that maybe we should
+              with <b>c</b> rather than <b>x</b>, it must compress
+             (un<b>z</b>ip) the <b>tar</b> file it is creating).
+          <li><b>f</b> - <b>tar</b> is to extract from or archive
+              to a file (whose name is the next parameter).
+              <b>tar</b> is usually used with files, but there are
+              alternatives, that maybe we should
               leave to another time.
         </ul>
       </div>
 
-      <p>Examine the consequences of extracting the contents of the <b>blast package tar file</b>:
+      <p>Examine the consequences of extracting the contents of the
+         <b>blast package tar file</b>:
 
       <p>
         <span class="command">
@@ -1862,30 +1875,37 @@ Click to record your <b>Start</b> time.</button>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/tar01.png" alt="Maybe its best that my baby went creeping" style="height:655px; width:800px;">
+        <img src="Images/tar01.png"
+             alt="Maybe its best that my baby went creeping"
+             style="height:655px; width:800px;">
       </details>
-
-      <p>Strictly speaking, you are now finished with the <b>compressed tar file</b> you downloaded
-         from the <b>NCBI</b>. However, why not keep it for a while, in case things go wrong and you
-         need to install afresh. I suggest you <b>m</b>o<b>v</b>e it into the directory created by its expansion.
-      </p>
-
-      <p>
-        <span class="command">
-          mv ncbi-blast-2.7.1+-x64-linux.tar.gz ncbi-blast-2.7.1+
-        </span>
-      </p>
 
       <p>For easier access, make a link with a short name to the blast installation Directory.
 
       <p>
         <span class="command">
-          ln -s blast ncbi-blast-2.7.1+
+          ln -s ncbi-blast-2.7.1+ blast; ls -l;
         </span>
       </p>
 
-      <p>Take a look at the structure of the install directory. The chatter of <b>tar</b> should have given
-         you a good idea of that which was being created, be reinforcement is always healthy.
+      <p>Strictly speaking, you are now finished with the <b>compressed
+         tar file</b> you downloaded
+         from the <b>NCBI</b>. However, why not keep it for a while,
+         in case things go wrong and you
+         need to install afresh. I suggest you <b>m</b>o<b>v</b>e it
+         into the directory created by its expansion.
+      </p>
+
+      <p>
+        <span class="command">
+          mv ncbi-blast-2.7.1+-x64-linux.tar.gz blast
+        </span>
+      </p>
+
+      <p>Take a look at the structure of the install directory.
+         The chatter of <b>tar</b> should have given
+         you a good idea of that which was being created, be
+         reinforcement is always healthy.
       </p>
 
       <p>
@@ -1895,12 +1915,14 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
        <p>Note the "<i>Teenage First Flagon of Woodpecker Cider</i>"
-          <span style="color:lime; background-color:black; font-family:courier;"><b>green</b></span>
+          <span style="color:lime; background-color:black; font-family:courier;">
+          <b>green</b></span>
           chosen to make the programs glow.
           All executable files are priveliged to emit the gruesome hue.
       </p>
 
-      <p>Take a close look at the one <b>blast package</b> program we are going to use for our
+      <p>Take a close look at the one <b>blast package</b>
+         program we are going to use for our
          first demonstrate the wonders of <b>blast</b>.
       </p>
 
@@ -1910,47 +1932,76 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>See that it is enabled for execution by its owner (you), the group to which you
-         belong <b><i>AND</i></b> anybody else who just happens to be passing by.
-         No wonder it is <span style="color:lime; background-color:black; font-family:courier;">
+      <p>See that it is enabled for execution by its owner (you),
+         the group to which you
+         belong <b><i>AND</i></b> anybody else who just happens
+         to be passing by.
+         No wonder it is
+         <span style="color:lime; background-color:black; font-family:courier;">
          <b>green</b></span>!
       </p>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/tar02.png" alt="Maybe its best that my baby went creeping" style="height:655px; width:800px;">
+        <img src="Images/tar02.png"
+             alt="Maybe its best that my baby went creeping"
+             style="height:551px; width:800px;">
       </details>
 
 
-
-Les Paul
-https://www.youtube.com/watch?v=eXjs7LV_i2I
-
-Rev Gary Whistling Blues
-https://www.youtube.com/watch?v=LLd1E3wJ7zE
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <p>In order to run any of the <b>blastp package</b> programs, you need to type in the
+         directory path to the program as well as the program name. So to start
+         <b>blastp</b> you would need to give the command:
 
       <p>
         <span class="command">
-          ncbi-blast-2.7.1+/bin/blastp
+          blast/bin/blastp
         </span>
+      </p>
+
+      <p>which will acheive only petulant complaint as <b>blastp</b> cannot do anything
+         sesnsible if you do not give more information (minimally a <b>Query Sequence</b> and
+         a <b>Database</b> to be searched).
+      </p>
+
+      <p>There are several ways to arrange things so that just the program name is
+         required to start a program. One, not the most sensible, is to set up an <b>alias</b>.
+         To do this for <b>blastp</b>, you need to issue the command: 
       </p>
 
       <p>
         <span class="command18">
-          alias blastp="~/Desktop/ProjectX/blast/ncbi-blast-2.7.1+/bin/blastp"
+          alias blastp="~/Desktop/ProjectX/blast/bin/blastp"
+        </span>
+      </p>
+
+      <p>We will consider a more sensible way to acheive the same goal a little later.
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: The path to <b>blastp</b> is specified relative to
+           the users <b>Home Directory</b> ('<b>~</b>'). For this user, '<b>~</b>'
+           is a fixed point which means that the <b>alias</b>ed command "<b>blastp</b>"
+           will work independant of the <b>Working Directory</b> current at the time
+           the command is issued.
+        </p>
+      </div>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: Any <b>alias</b> set up as here, will only work for
+           the specifc <b>terminal</b> session of its creation. To make an <b>alias</b>
+           that will work for a given user in all his/her <b>terminal</b> sessions, the
+           <b>alias</b> command must be edited into the <b>.bashrc</b> hidden file
+           (or equivalent) which lives in that users <b>Home Directory</b>.
+        </p>
+      </div>
+
+      <p>Now just typing the program name, <b>blastp</b>, should evoke the same flurry
+         of complaint that the previous longer command brought forth. Try it.
+      </p>
+
+      <p>
+        <span class="command18">
+          blastp
         </span>
       </p>
 
@@ -1960,17 +2011,44 @@ https://www.youtube.com/watch?v=LLd1E3wJ7zE
 
       <h3>Acquiring some Query data.</h3>
 
+      <p>To proceed sensibly, we now need some <b>Query Sequences</b>.
+         I have some set up for you to download with <b>wget</b>.
+         Imagine some deep and meaningful research activities that generate
+         nine <b>Mystery Human Proteins</b> as you issue the command:
+      </p>
+
       <p>
         <span class="command11">
           wget https://github.com/BioinformaticsTraining/Critical-Guides/raw/gh-pages/Data/Query_Sequences.tar.gz
         </span>
       </p>
 
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a>.
+                   A command to con<b>cat</b>inate files.
+      </div>
+
+<p>************************************************</p>
+
       <p>
         <span class="command12">
           blastp -query proteins.fasta -db swissprot -out blastout -remote -num_descriptions 1 -num_alignments 1
         </span>
       </p>
+
+      <p>This should not take too long but ... maybe long enough to whistle a merry tune?
+         Possibly you might enjoy the assistance of the Reverand Davis?
+         A little ditty expressing aspirations atypically more easily associated with secular carnality rather
+         than the somewhat higher thought for which dear Gary is better known?
+      </p>
+
+      <p>Or you might like to try a touch of Les? Although I feel he slides away from perfect pitch
+         once or three times in the course of this one.
+         <a href="https://www.youtube.com/watch?v=eXjs7LV_i2I" target="_blank"> Les Paul<a><br>
+         <a href="https://www.youtube.com/watch?v=LLd1E3wJ7zE" target="_blank"> Rev Gary Whistling Blues<a><br>
+      </p>
+
 
       <div class="checkpoint">
         <h2><i><u>Checkpoint</u></i></h2>
