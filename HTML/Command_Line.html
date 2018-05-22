@@ -1616,12 +1616,12 @@ Click to record your <b>Start</b> time.</button>
 
         <p>In this section of the exercise, the plan is to:
           <ol>
-            <li>Download and install the <b>blast</b> package.</li>
+            <li>Download and install the <b>blast package</b>.</li>
             <li>Get some Human protein query sequences.</li>
-            <li>Compare the query sequences to a suitable datbase at the NCBI.</li>
+            <li>Compare the query sequences to a suitable database at the <b>NCBI</b>.</li>
             <li>Examine the output to determine what the query sequences might be.</li>
-            <li>Use the Environment Variable PATH to enable to entire blast package.</li>
-            <li>Use a DNA Query against swissprot to illustrate that PATH works.<li>
+            <li>Amend the <b>Environment Variable PATH</b> to enable to entire <b>blast package</b>.</li>
+            <li>Use a DNA Query against swissprot to illustrate that amended <b>PATH</b> works.<li>
           </ol>
         </p>
 
@@ -1654,8 +1654,10 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>For now, I will just guide you through the vital bits of the 
-         <a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2"> Installation Guide</a>,
-         with the objective of getting just one function of the <b>blast</b> suite operational for a demonstration
+         <a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2">
+                  Installation Guide</a>
+         , with the objective of getting just one function of the
+         <b>blast</b> suite operational for a demonstration
          of the possibilities.
       </p>
 
@@ -1748,7 +1750,8 @@ Click to record your <b>Start</b> time.</button>
           </span>
         </p>
 
-        <p>and <b>Paste</b> in the <b>URL</b> you copied to complete the line using the <b>Edit Menu</b> of your
+        <p>and <b>Paste</b> in the <b>URL</b> you copied to complete the line
+           using the <b>Edit Menu</b> of your
            <b>terminal</b> (probably at the top of yur screen)
            <img class="tt"src="Images/blast_install03.png" alt="Morning again! hope is aseeping."
                 style="display:inline-block;height:92px; width:250px;">.
@@ -2005,6 +2008,13 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/blastp01.png"
+             alt="Home today? Been away! Must hide back witout delay."
+             style="height:563px; width:800px;">
+      </details>
+
 <!-- #######################################################################################
      ########## Data Acquisition. ##########################################################
      ####################################################################################### -->
@@ -2023,11 +2033,188 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p>Take a quick look to check your data has arrived safely.
+
+      <p>
+        <span class="command">
+          ls -l
+        </span>
+      </p>
+
+      <p>Jolly good, but you need to e<b>x</b>tract the sequences
+         from the
+         <b>compressed tar file</b> before they can be useful.
+      </p>
+
+      <p>
+        <span class="command">
+          tar xvzf Query_Sequences.tar.gz
+        </span>
+      </p>
+
+      <p>A glance to examine the consequences of your actions once
+         again would be sagacious.
+      </p>
+
+      <p>
+        <span class="command">
+          ls
+        </span>
+      </p>
+
+      <p>The Mystery Query Sequences are all tidily in a directory
+         called <span class="comtxt"
+                      style="color:blue">Query_Sequences</span>,
+         as you can check with the command:
+      </p>
+
+      <p>
+        <span class="command">
+          ls Query_Sequences
+        </span>
+      </p>
+
+      <p>I suggest you leave them there and make <b>links</b>
+         from the <b>Working Directory</b> to allow easy access.
+         The command, as you could work out for yourselves
+         by now, is:
+      </p>
+
+      <p>
+        <span class="command">
+          ln -s Query_Sequences/* .; ls;
+        </span>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cat02.png"
+             alt="Home today? Been away! Must hide back witout delay."
+             style="height:563px; width:800px;">
+      </details>
+
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a>.
                    A command to con<b>cat</b>inate files.
       </div>
+
+      <p>Ever curious, you might like to display the contents of one or more of these
+         <b>Mystery Sequence Files</b>? There are many ways to do this. For small files
+         such as you have here, the command <b>cat</b> is a good as any, Try:
+
+      <p>
+        <span class="command">
+          cat sequence01.fasta
+        </span>
+      </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: Strictly speaking, <b>cat</b> is for con<b>cat</b>onating
+           a number of separate
+           files into a single entity. The full form of the command (which we will employ
+           soon) is:
+        </p>
+
+        <p>
+          <span class="command">
+            cat a b c d e f > X
+          </span>
+        </p>
+
+        <p>which reads "glue to gether in order (con<b>cat</b>onate that is) the files
+           <b>a</b>, <b>b</b>, <b>c</b>, <b>d</b>, <b>e</b> and <b>f</b> and put the result
+           into ('<b>></b>') an new file called <b>X</b>.
+        </p>
+
+        <p>if you omit the "<b>> X</b>" bit:
+        </p>
+
+        <p>
+          <span class="command">
+            cat a b c d e f
+          </span>
+        </p>
+
+        <p>the con<b>cat</b>onated files are output to the
+           <b>ST</b>andard <b>OUT</b>put (<b>STDOUT</b>, usually the <b>terminal</b>).
+        </p>
+
+        <p>which makes the command read "con<b>cat</b>onate the files <b>a</b>, <b>b</b>,
+           <b>c</b>, <b>d</b>, <b>e</b> and <b>f</b> and display the result in the <b>terminal</b>"
+
+        <p>if you only <b>cat</b> one file, that is OK as far as <b>UNIX</b> is concerned.
+        </p>
+
+        <p>
+          <span class="command">
+            cat a
+          </span>
+        </p>
+
+        <p>The command now reads "display the file <b>a</b> in the <b>terminal</b>",
+           which is a very useful way to use <b>cat</b> for smallish files.
+        </p>
+      
+      </div>
+
+      <p>Pretty Mysterious! Take a look at all the new sequence file with the command:
+
+      <p>
+        <span class="command">
+          cat *.fasta
+        </span>
+      </p>
+
+      <p><b>blastp</b> can search for matches with more than one <b>Query Sequence</b> at a time.
+         In order to make this possible, all the <b>Query sequences</b> must be in a single file.
+         To make such a multiple sequence file for the <b>Mystey Protein Sequences</b>, use the command:
+      </p>
+
+      <p>
+        <span class="command">
+          cat sequence??.fasta > proteins.fasta
+        </span>
+      </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: Yes of course you could use the low poetry alternative:
+        </p>
+
+        <p>
+          <span class="command">
+            cat *.fasta > proteins.fasta
+          </span>
+        </p>
+
+        <p>but I fancied something a little more prettier that might remind you of the
+           single character wildcard '<b>?</b>'.
+        </p>
+
+        <p>if you omit the "<b>> X</b>" bit:
+        </p>
+      
+      </div>
+
+      <p>Time to check the position:
+      </p>
+
+      <p>
+        <span class="command">
+          ls; cat proteins.fasta;
+        </span>
+      </p>
+
+      <p>To find all is exactly as you expected.
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/cat02.png"
+             alt="Home today? Been away! Must hide back witout delay."
+             style="height:563px; width:800px;">
+      </details>
+
+
 
 <p>************************************************</p>
 
@@ -2076,7 +2263,7 @@ Click to record your <b>Start</b> time.</button>
 
         <p><b>Reflections:</b>
         <ol type="1">
-          <li>Pasting into a termonal.</li>
+          <li><b>Copy</b>/<b>Pasting</b> from/to a <b>terminal</b>.</li>
           <li></li>
           <li></li>
         </ol>
