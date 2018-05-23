@@ -1634,7 +1634,7 @@ Click to record your <b>Start</b> time.</button>
      ########## Software Installation. #####################################################
      ####################################################################################### -->
 
-      <h3>blast Installation.</h3>
+      <h3><u>blast Installation.</u></h3>
 
       <p>In order to use <b>blast</b>, it must first be installed.
          Assuming you completed all the previous section and answered all the questions in the
@@ -1844,27 +1844,35 @@ Click to record your <b>Start</b> time.</button>
       </div>
 
       <div class="hint">
+
         <p><b><i>Note</i></b>: The parameters for <b>tar</b> translate as follows:
         </p>
+
         <ul>
+
           <li><b>x</b> - E<b>x</b>tract the contents of the <b>tar</b> file
               (to make a <b>tar</b> file from a directory hierarchy,
               one would use <b>c</b> in place of <b>x</b>).</li>
+
           <li><b>v</b> - Invites tar to be <b>v</b>erbose and report its progress as it goes.
               Particulalrly important for large <b>tar files</b>
               which would otherwise just go silent
-              for ages, which can be disconcering for those of us low on faith.
+              for ages, which can be disconcering for those of us low on faith.</li>
+
           <li><b>z</b> - Warns <b>tar</b> that it must uncompress
               (<b>z</b>ip) the <b>tar</b>
               file before it starts (or, if used
               with <b>c</b> rather than <b>x</b>, it must compress
-             (un<b>z</b>ip) the <b>tar</b> file it is creating).
+             (un<b>z</b>ip) the <b>tar</b> file it is creating).</li>
+
           <li><b>f</b> - <b>tar</b> is to extract from or archive
               to a file (whose name is the next parameter).
               <b>tar</b> is usually used with files, but there are
               alternatives, that maybe we should
-              leave to another time.
+              leave to another time.</li>
+
         </ul>
+
       </div>
 
       <p>Examine the consequences of extracting the contents of the
@@ -1981,21 +1989,25 @@ Click to record your <b>Start</b> time.</button>
       <p>We will consider a more sensible way to acheive the same goal a little later.
 
       <div class="hint">
+
         <p><b><i>Note</i></b>: The path to <b>blastp</b> is specified relative to
            the users <b>Home Directory</b> ('<b>~</b>'). For this user, '<b>~</b>'
            is a fixed point which means that the <b>alias</b>ed command "<b>blastp</b>"
            will work independant of the <b>Working Directory</b> current at the time
            the command is issued.
         </p>
+
       </div>
 
       <div class="hint">
+
         <p><b><i>Note</i></b>: Any <b>alias</b> set up as here, will only work for
            the specifc <b>terminal</b> session of its creation. To make an <b>alias</b>
            that will work for a given user in all his/her <b>terminal</b> sessions, the
            <b>alias</b> command must be edited into the <b>.bashrc</b> hidden file
            (or equivalent) which lives in that users <b>Home Directory</b>.
         </p>
+
       </div>
 
       <p>Now just typing the program name, <b>blastp</b>, should evoke the same flurry
@@ -2019,7 +2031,7 @@ Click to record your <b>Start</b> time.</button>
      ########## Data Acquisition. ##########################################################
      ####################################################################################### -->
 
-      <h3>Acquiring some Query data.</h3>
+      <h3><u>Acquiring some Query data.</u></h3>
 
       <p>To proceed sensibly, we now need some <b>Query Sequences</b>.
          I have some set up for you to download with <b>wget</b>.
@@ -2238,7 +2250,23 @@ Click to record your <b>Start</b> time.</button>
              style="height:421px; width:800px;">
       </details>
 
+<!-- #######################################################################################
+     ########## Using blastp. ##############################################################
+     ####################################################################################### -->
 
+      <h3><u>Running a blast package program.</u></h3>
+
+      <p>Finally, we are ready to run a database search with the <b>blast programs</b>!
+         Specifically <b>blastp</b> which compares <b>Protein Query Sequences</b> with <b>Protein Sequence Databases</b>.
+      </p>
+
+      <p>I will just give you a command that works here. Read the manual to learn more.
+         Here we concentrate on the mechanics of the <b>command line</b>,
+         not the many subtleties of using running <b>blast programs</b>.
+         Note however, that all the information <b>blastp</b> needs is provided in the
+         one command. No interaction whatsoever. <b>blastp</b> is designed to run from <b>scripts</b>
+         at times when no one is around to answer ony last minute doubts in which it may desire to indulge.
+      </p>
 
       <p>
         <span class="command12">
@@ -2246,16 +2274,45 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <div class="hint">
+
+        <p><b><i>Note</i></b>: I relent, but very briefly:
+        </p>
+
+        <ul>
+
+          <li><b>blastp</b> - is the name of the program to run</li>
+          <li><b>-query proteins.fasta</b> specifies the file in which the <b>9 Query Sequences</b> are to be found</li>
+
+          <li><b>-db swissprot</b> specifies the name of the <b>d</b>ata<b>b</b>ase at the <b>NCBI</b> to be searched</li>
+
+          <li><b>-out blastout</b> specifies the name of the file into which the search output should be directed</li>
+
+          <li><b>-remote</b> specifies that the database to be searched is remote, that is, at the <b>NCBI</b>
+              rather than on your computer (local)</li>
+
+          <li><b> -num_descriptions 1</b> specifies that only the details of the one best match be reported</li>
+
+          <li><b> -num_alignments 1</b> specifies that only the alignment of the one best match be reported</li>
+
+        </ul>
+
+        <p>Unusual settings perhaps? But <b>blastp</b> will cope.
+        </p>
+
+      </div>
+
       <p>This should not take too long but ... maybe long enough to whistle a merry tune?
-         Possibly you might enjoy the assistance of the Reverand Davis?
-         A little ditty expressing aspirations atypically more easily associated with secular carnality rather
-         than the somewhat higher thought for which dear Gary is better known?
+         Possibly you might enjoy the assistance of the
+         <a href="https://www.youtube.com/watch?v=LLd1E3wJ7zE" target="_blank"> Reverand Davis?<a>.
+         A little ditty expressing aspirations, atypically, more easily associated with secular carnality
+         than the somewhat higher thoughts for which dear Gary is better known?
       </p>
 
-      <p>Or you might like to try a touch of Les? Although I feel he slides away from perfect pitch
+      <p>Or you might like to try a touch of
+         <a href="https://www.youtube.com/watch?v=eXjs7LV_i2I" target="_blank"> Les?<a>.
+         Although I feel he slides away from perfect pitch
          once or three times in the course of this one.
-         <a href="https://www.youtube.com/watch?v=eXjs7LV_i2I" target="_blank"> Les Paul<a><br>
-         <a href="https://www.youtube.com/watch?v=LLd1E3wJ7zE" target="_blank"> Rev Gary Whistling Blues<a><br>
       </p>
 
 
