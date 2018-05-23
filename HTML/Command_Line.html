@@ -2360,6 +2360,67 @@ Click to record your <b>Start</b> time.</button>
              style="height:562px; width:800px;">
       </details>
 
+      <br>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a>.
+                   A command search for string matches within text files.
+      </div>
+
+      <p>blah
+      </p>
+
+      <p>
+        <span class="command">
+          grep ">" proteins.fasta
+        </span>
+      </p>
+
+      <img src="Images/grep01.png"alt="xxx"
+           style="display:block; margin-left:auto; margin-right:auto; height:126px; width:200px;">
+
+      <p>
+        <span class="command">
+          grep RecName blastout
+        </span>
+      </p>
+
+      <img src="Images/grep02.png"alt="xxx"
+           style="display:block; margin-left:auto; margin-right:auto; height:266px; width:600px;">
+
+      <p>
+        <span class="command">
+          grep RecName blastout | grep ">"
+        </span>
+      </p>
+
+      <img src="Images/grep03.png"alt="xxx"
+           style="display:block; margin-left:auto; margin-right:auto; height:128px; width:600px;">
+
+      <br>
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/sed.1p.html" target="_blank"><b>sed</b></a>.
+                   A <b>s</b>tream <b>ed</b>itor.
+      </div>
+
+      <p>
+        <span class="command">
+          sed "s/Mystery Protein ???/PAX/" proteins.fasta
+        </span>
+      </p>
+
+      <p>
+        <span class="command18">
+          sed "s/Mystery Protein ???/PAX/" proteins.fasta | sed "s/@@@@@/HUMAN/"
+        </span>
+      </p>
+
+      <p>
+        <span class="command12">
+          sed "s/Mystery Protein ???/PAX/" proteins.fasta | sed "s/@@@@@/HUMAN/" > proteins_revealed.fasta
+        </span>
+      </p>
 
 <p>************************************************</p>
 Examine output <br>
@@ -2393,7 +2454,8 @@ less, grep, sed, printenv, assignment, system variables <br>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
         <ol type="1">
-          <li>Redirecting command output to a file.</li>
+          <li>Redirecting command output to a file ('<b>></b>').</li>
+          <li>Simple use of '<b>|</b>' (<b>pipes</b>).</li>
         </ol>
 
         <p><b>Reflections:</b>
@@ -2477,7 +2539,7 @@ less, grep, sed, printenv, assignment, system variables <br>
 
       </div><br>
 
-<a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a><br>
+
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
 
 <a href="http://man7.org/linux/man-pages/man1/wc.1p.html" target="_blank"><b>wc</b></a><br>
@@ -2485,7 +2547,7 @@ less, grep, sed, printenv, assignment, system variables <br>
 <a href="http://man7.org/linux/man-pages/man1/tail.1p.html" target="_blank"><b>tail</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/chmod.1p.html" target="_blank"><b>chmod</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/sort.1p.html" target="_blank"><b>sort</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/sed.1p.html" target="_blank"><b>sed</b></a><br>
+<br>
 
 
 <p>Concepts:<br><br>
