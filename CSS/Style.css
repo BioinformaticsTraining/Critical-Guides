@@ -322,6 +322,21 @@ img.sup {
 }
 
 /* ############################################## --
+ Code for grid containers with two columns, no colours, left adjustment.
+-- ############################################## */
+
+.grid-container2p {
+  justify-content: space-evenly;
+  display: grid;  align-content: start; grid-gap: 2px;
+  grid-template-columns: auto auto;
+  background-color: auto;
+}
+.grid-container2p > div {
+  background-color: auto;
+  text-align: left; font-size: 14px;
+}
+
+/* ############################################## --
  Code for grid containers. END.
 -- ############################################## */
 
