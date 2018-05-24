@@ -867,7 +867,7 @@ Click to record your <b>Start</b> time.</button>
             Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
             (nearly) the job for you!
             <p>
-              <span class="command14">
+              <span class="command12">
                 mv .Cats_in_the_cupboard_but_they_dont_see_me
                       .Cats_in_the_cupboard_but_they_dont_see_me
               </span>
@@ -2367,7 +2367,14 @@ Click to record your <b>Start</b> time.</button>
                    A command search for string matches within text files.
       </div>
 
-      <p>blah
+      <p>Used simply, <b>grep</b> will search through a text file and display only the
+         lines of that file which match a given search key. 
+      </p>
+
+      <p><b>grep</b> can be useful here to generate a simple list of the
+         <b>Information Lines</b> for the <b>9 Query Sequences</b> given to <b>blastp</b>.
+         As these lines, <b><i>uniquely</b></i>, include the character '<b>></b>',
+         this can be acheived with the command:
       </p>
 
       <p>
@@ -2376,19 +2383,42 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <div class="grid-container2p">
+      <div class="hint">
+        <p>
+          <b><i>Note</i></b>: Generally, there is no need to put the search term
+          for <b>grep</b> in quotes (although you can if you wish).
+          Here, however, it is essential as '<b>></b>' has a meaning on the <b>command line</b>.
+          If it were not quoted (thus explicitly declaring it <b><i>just a text character</b></i>)
+          it would be interpretted as a request to redirect the output of <b>grep</b>
+          (without parameters?) into the file <b>protein.fasta</b>.
+        </p>
 
-        <div style="display:block; width:600px;">
-          <p class="smarg">         aaaaaaaaaaa dddddddddd  fffffffff f  f f f f f f  f f  f 
-            d d d d d d d d d d d d d d d d d d d d dddddddddddd d d d ddddddddddd d d d dddddddddddddddd d d d d d d
-            f f f f ffffffffffffffff f f f f ff
-          </p>
-        </div>
-
-        <img src="Images/grep01.png"alt="xxx"
-             style="display:inline-block; height:126px; width:200px;">
-
+        <p>As <b>grep</b> does not work without parameters, this would lead to an error
+           message displayed in the <b>terminal</b> <b><i>AND</i></b> the file <b>protein.fasta</b> being
+           destroyed and replaced by an empty file of the same name!!
+        </p>
       </div>
+
+      <details class="commenta">
+      <summary><span class="comsum">Comment</span></summary>
+        <div class="grid-container2p">
+          <div style="display:block; width:400px;">
+            <p>Just the lines commencing with a '<b>></b>' are displayed.
+               These show how all the <b>Query Sequences</b> are <i>Mysterious</i>
+               and are helpfully numbered <b>1</b> to <b>9</b>.
+           </p>
+
+           <p>Jolly Good!
+           </p>
+          </div>
+          <img src="Images/grep01.png"alt="xxx"
+               style="display:inline-block; height:126px; width:200px;">
+        </div>
+      </details>
+
+      <p>The lines in the <b>blastp</b> output that identify the best hits contain the word(?) "<b>RecName</b>".
+         To isolate these lines, you could try the command: 
+      </p>
 
       <p>
         <span class="command">
@@ -2396,19 +2426,35 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <div class="grid-container2p">
-
-        <div style="display:block; width:200px;">
-          <p class="smarg">         aaaaaaaaaaa dddddddddd  fffffffff f  f f f f f f  f f  f 
-            d d d d d d d d d d d d d d d d d d d d dddddddddddd d d d ddddddddddd d d d dddddddddddddddd d d d d d d
-            f f f f ffffffffffffffff f f f f ff
-          </p>
+      <details class="commenta">
+      <summary><span class="comsum">Comment</span></summary>
+        <div class="grid-container2p">
+          <div style="display:block; width:400px;">
+            <p>Lines containing "<b>RecName</b>" are displayed as requested.
+            </p>
+            <p>The desired answer can be determined from this output, but,
+            there is a lot of repetition?
+            </p>
+            <p>Maybe a cleaner display can be acheived?
+            </p>
+          </div>
+          <img src="Images/grep02.png"alt="xxx"
+               style="display:block; height:222px; width:500px;">
         </div>
+      </details>
 
-        <img src="Images/grep02.png"alt="xxx"
-             style="display:block; margin-left:auto; margin-right:auto; height:266px; width:600px;">
+      <p>Fine, but too much information! <b>One line</b> per <b>Mystery Sequence</b> would be ideal.
+         This could be acheived by selecting only the lines from the current <b>grep</b> output that contain a '<b>></b>'.
+      </p>
 
-      </div>
+      <p>This can best be acheived (in a single command and without messy
+         intermediate temporary files) using a "<b>pipe</b>".
+      </p>
+
+      <p>A "<b>pipe</b>" being a mechanism for passing the output of one
+         command directly on to another. The symbol to ask that a <b>pipe</b>
+         be implemented is the character '<b>|</b>' and it is used thus:
+      </p>
 
       <p>
         <span class="command">
@@ -2416,19 +2462,44 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <div class="grid-container2p">
-        <div style="display:block; width:200px;">
-          <p class="smarg">         aaaaaaaaaaa dddddddddd  fffffffff f  f f f f f f  f f  f 
+      <div class="hint">
+        <p><b><i>Note</i></b>: This command reads:
+          <table id="co02">
+            <tr>
+              <th style="width:30%"><b>Command section</b></th>
+              <th><b>Interpretation</b></th>
+            </tr>
+            <tr>
+              <td><span class="comtxt">grep RecName blastout</span></td>
+              <td>Select all lines in the file <b>blastout</b> containing the word "<b>RecName</b>"</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">|</span></td>
+              <td><b><i>DO NOT</i></b> display the output generated so far!
+                  Instead, <b>pipe</b> it forward to the next <b>command section</b></td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">grep ">"</span></td>
+              <td>Select all lines from the preceeding <b>pipe</b> that contain the characer
+                  '<b>></b>' and display them in the <b>terminal</b></td>
+            </tr>
+          </table>
+          <br>
+        </p>
+      </div>
+
+      <details class="commenta">
+      <summary><span class="comsum">Comment</span></summary>
+        <div class="grid-container2p">
+          <div style="display:block; width:400px;">
+            aaaaaaaaaaa dddddddddd  fffffffff f  f f f f f f  f f  f 
             d d d d d d d d d d d d d d d d d d d d dddddddddddd d d d ddddddddddd d d d dddddddddddddddd d d d d d d
             f f f f ffffffffffffffff f f f f ff
-          </p>
-
+          </div>
+          <img src="Images/grep03.png"alt="xxx"
+               style="display:block; height:107px; width:500px;">
         </div>
-
-        <img src="Images/grep03.png"alt="xxx"
-             style="display:block; margin-left:auto; margin-right:auto; height:128px; width:600px;">
-
-      </div>
+      </details>
 
       <br>
       <div class="new_command">

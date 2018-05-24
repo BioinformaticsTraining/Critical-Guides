@@ -56,6 +56,24 @@ table#co01 td {
     border:1px solid black;
 }
 
+/* Table for grep note Section 2*/
+
+table#co02 {
+    display:block; margin-left:auto; margin-right:auto;
+    border:1px solid black; border-collapse: collapse;
+    width:98%; background:pink;
+}
+
+table#co02 th {
+    border:1px solid black;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+table#co02 td {
+    border:1px solid black;
+}
 /* div for blocks of rambling text */
 
 div.ramble {
@@ -208,6 +226,12 @@ details.comment {
     width: 400px;
 }
 
+/* details for Exercise Comments alternative */
+
+details.commenta {
+    background-color: auto;
+    width: 900px;
+}
 /* details for GUI Equivalents */
 
 details.gui {
@@ -332,7 +356,7 @@ img.sup {
   background-color: auto;
 }
 .grid-container2p > div {
-  background-color: auto;
+  background-color: lightblue;
   text-align: left; font-size: 14px;
 }
 
