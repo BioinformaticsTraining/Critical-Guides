@@ -2636,11 +2636,64 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
 <!-- #######################################################################################
-     ########## Using tblastn. ##############################################################
+     ########## Using blastx. ##############################################################
      ####################################################################################### -->
 
-      <h3><u>Running the blast package program tblastn.</u></h3>
+      <h3><u>Running the blast package program blastx.</u></h3>
 
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/printenv.1.html" target="_blank"><b>printenv</b></a>.
+                   A command to list active <b>System Variables</b>.
+      </div>
+
+      <p>
+        <span class="command">
+          printenv
+        </span>
+      </p>
+
+      <p>
+        <span class="command">
+          printenv | grep PATH
+        </span>
+      </p>
+
+      <p>
+        <span class="command">
+          printenv | grep ^PATH
+        </span>
+      </p>
+
+      <p>
+        <span class="command">
+          PATH=~/Desktp/ProjectX/blast/bin/:$PATH;
+        </span>
+      </p>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/export.1p.html" target="_blank"><b>export</b></a>.
+                   A command to activate <b>System Variables</b>.
+      </div>
+
+      <p>
+        <span class="command">
+          export PATH;
+        </span>
+      </p>
+
+      <p>
+        <span class="command14">
+          wget https://github.com/BioinformaticsTraining/Critical-Guides/raw/gh-pages/Data/mrna.fasta
+        </span>
+      </p>
+
+      <p>
+        <span class="command12">
+          blastx -query mrna.fasta -db swissprot -out blastxout -remote -num_descriptions 1 -num_alignments 1
+        </span>
+      </p>
 
 
 <p>************************************************</p>
@@ -2669,17 +2722,38 @@ printenv, assignment, system variables <br>
             <a href="http://man7.org/linux/man-pages/man1/cat.1p.html" target="_blank"><b>cat</b></a>.
                    Con<b>cat</b>enates files.
           </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/less.1.html" target="_blank"><b>less</b></a>.
+                   A command with which to browse text files.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a>.
+                   searches for string matches within text files.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/sed.1p.html" target="_blank"><b>sed</b></a>.
+                   A <b>s</b>tream <b>ed</b>itor.
+          </li>
+          <li>
+           <a href="http://man7.org/linux/man-pages/man1/printenv.1.html" target="_blank"><b>printenv</b></a>.
+                   A command to list active <b>System Variables</b>.
+          </li>
+          <li>
+           <a href="http://man7.org/linux/man-pages/man1/export.1p.html" target="_blank"><b>export</b></a>.
+                   A command to activate <b>System Variables</b>.
+          </li>
         </ol>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
         <ol type="1">
           <li>Redirecting command output to a file ('<b>></b>').</li>
+          <li><b>Copy</b>/<b>Pasting</b> from/to a <b>terminal</b>.</li>
           <li>Simple use of '<b>|</b>' (<b>pipes</b>).</li>
         </ol>
 
         <p><b>Reflections:</b>
         <ol type="1">
-          <li><b>Copy</b>/<b>Pasting</b> from/to a <b>terminal</b>.</li>
+          <li></li>
           <li></li>
           <li></li>
         </ol>
@@ -2762,7 +2836,6 @@ printenv, assignment, system variables <br>
 
 
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
-
 <a href="http://man7.org/linux/man-pages/man1/wc.1p.html" target="_blank"><b>wc</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/head.1p.html" target="_blank"><b>head</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/tail.1p.html" target="_blank"><b>tail</b></a><br>
