@@ -1164,7 +1164,7 @@ Click to record your <b>Start</b> time.</button>
         <p>Particularly as copying <b>Project_copy</b> into itself is no part of the object here,
            I decide to avoid the issue and use the handy fact that all the directories we
            <b><i>DO</i></b> need to copy have names beginning
-           with'<b>d</b>'. However, experiment to see what I mean if you wish.
+           with '<b>d</b>'. However, experiment to see what I mean if you wish.
            Try renaming <b>Project_copy</b> to <b>0Project_copy</b>
            and see the difference it makes. Can you explain why?
         </p>
@@ -2254,7 +2254,7 @@ Click to record your <b>Start</b> time.</button>
      ########## Using blastp. ##############################################################
      ####################################################################################### -->
 
-      <h3><u>Running a blast package program.</u></h3>
+      <h3><u>Running the blast package program blastp.</u></h3>
 
       <p>Finally, we are ready to run a database search with the <b>blast programs</b>!
          Specifically <b>blastp</b> which compares <b>Protein Query Sequences</b>
@@ -2593,10 +2593,28 @@ Click to record your <b>Start</b> time.</button>
              style="height:564px; width:800px;">
       </details>
 
+      <p>Fine so far, but should we not also record the <b>humanity</b> of these
+         proteins by swapping out all the "<b><i>@@@@@</i></b>" strings for "<b><i>HUMAN</i></b>"?
+         A simple matter with a <b>pipe</b> into a second invocation of <b>sed</b>, thus:
+      </p>
+
       <p>
         <span class="command18">
           sed "s/Mystery Protein ???/PAX/" proteins.fasta | sed "s/@@@@@/HUMAN/"
         </span>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/sed01.png"
+             alt="Home today? Been away! Must hide back without delay."
+             style="height:548px; width:800px;">
+      </details>
+
+      <p>Job done? Except we really should save the edited version of
+         <b>protein.fasta</b> in a new file, for perpetuity.
+         A trivial matter, just redirect ('<b>></b>') the output of the
+         last command from the terminal into a new file, thus:
       </p>
 
       <p>
@@ -2605,16 +2623,34 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p>Maybe just check all went well?
+      </p>
+
+      <p>
+        <span class="command12">
+          ls; cat proteins_revealed.fasta
+        </span>
+      </p>
+
+      <p>should suffice.
+      </p>
+
+<!-- #######################################################################################
+     ########## Using tblastn. ##############################################################
+     ####################################################################################### -->
+
+      <h3><u>Running the blast package program tblastn.</u></h3>
+
+
+
 <p>************************************************</p>
-Examine output <br>
-pax proteins! <br>
 PATH <br>
 tblastwhatever ... the DNA against swissprot one <br>
 By george! pax6 mrna! <br>
 
 use <br>
 
-less, grep, sed, printenv, assignment, system variables <br>
+printenv, assignment, system variables <br>
 <p>************************************************</p>
       <div class="checkpoint">
         <h2><i><u>Checkpoint</u></i></h2>
