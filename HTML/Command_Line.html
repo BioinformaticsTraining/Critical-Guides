@@ -1498,7 +1498,7 @@ Click to record your <b>Start</b> time.</button>
                  should be avoided. So:
               </p>
  
-              <table id="co01">
+              <table class="c1" id="co01">
                 <tr>
                   <th>Command</th>
                   <th>Working Directory</th>
@@ -2464,7 +2464,7 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p><b><i>Note</i></b>: This command reads:
-          <table id="co02">
+          <table class="c2" id="co02">
             <tr>
               <th style="width:30%"><b>Command section</b></th>
               <th><b>Interpretation</b></th>
@@ -2530,11 +2530,68 @@ Click to record your <b>Start</b> time.</button>
                    A <b>s</b>tream <b>ed</b>itor.
       </div>
 
+      <p><b>sed</b> is a "<b><i>s</b>tream <b>ed</b>itor</i>". That is to say, it reads
+        (<b>streams</b> if you prefer) in a text file(s), applies a set of prescribed
+        editing operations and then spews (<b>streams</b> if you prefer) out the edited text.
+      </p>
+
+      <p><b>sed</b> can be quite complicated. Its sophisticated use requires a good understanding of
+        <a hhref="https://en.wikipedia.org/wiki/Regular_expression"><b>Regular Expressions</b></a>
+        and leads to the writing of enormously long and unintelligible commands!
+        You can even join a <a href="http://www.guckes.net/sed/mail.php3"> sed user group</a>
+        and follow the conversations of the true devotees.
+        Joining such a community can be interesting, but ... also possibly an 
+        indication that it might be time to seek help?
+      </p>
+
+      <p>That being said, using <b>sed</b> to simply substitute one text string for another
+         throughout a file is easy, and very useful. We will restrict ourselves to this
+         one trick here. The goal being to replace the <i>Mystery</i> in the file
+         <b>proteins.fasta</b> with the eternal truths of <b>PAX</b>!
+      </p>
+
+      <p>With this this noble end in mind, commence thus:
+      </p>
+
       <p>
         <span class="command">
           sed "s/Mystery Protein ???/PAX/" proteins.fasta
         </span>
       </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: This command reads:
+          <table class="c2" id="co03">
+            <tr>
+              <th style="width:38%"><b>Command section</b></th>
+              <th><b>Interpretation</b></th>
+            </tr>
+            <tr>
+              <td><span class="comtxt">sed</span></td>
+              <td>start up the <b>s</b>tream <b>ed</b>itor <b>sed</b>"</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">"s/Mystery Protein ???/PAX/"</span></td>
+              <td>The edit to be performed is: Every time the character string
+                  "<b><i>Mystery Protein ???</i></b>" is discovered, remove it and
+                  <b>s</b>ubstitute the string "<b><i>PAX</i></b>"</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">proteins.fasta</span></td>
+              <td>Apply the specified edits to the contents of the file
+                  <b>proteins.fasta</b> and pour the edited output into the <b>terminal</b></td>
+            </tr>
+          </table>
+          <br>
+        </p>
+      </div>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/sed01.png"
+             alt="Home today? Been away! Must hide back without delay."
+             style="height:564px; width:800px;">
+      </details>
 
       <p>
         <span class="command18">

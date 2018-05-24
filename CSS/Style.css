@@ -39,39 +39,39 @@ p.smarg {
 
 /* Table for Checkout Section 2*/
 
-table#co01 {
+table.c1 {
     display:block; margin-left:auto; margin-right:auto;
     border:1px solid black; border-collapse: collapse;
     width:98%; background:pink;
 }
 
-table#co01 th {
+table.c1 th {
     border:1px solid black;
     text-align: center;
     background-color: red;
     color: white;
 }
 
-table#co01 td {
+table.c1 td {
     border:1px solid black;
 }
 
 /* Table for grep note Section 2*/
 
-table#co02 {
+table.c2 {
     display:block; margin-left:auto; margin-right:auto;
     border:1px solid black; border-collapse: collapse;
     width:98%; background:pink;
 }
 
-table#co02 th {
+table.c2 th {
     border:1px solid black;
     text-align: center;
     background-color: red;
     color: white;
 }
 
-table#co02 td {
+table.c2 td {
     border:1px solid black;
 }
 /* div for blocks of rambling text */
