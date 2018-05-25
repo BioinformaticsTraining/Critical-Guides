@@ -2644,7 +2644,7 @@ Click to record your <b>Start</b> time.</button>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/printenv.1.html" target="_blank"><b>printenv</b></a>.
-                   A command to list active <b>System Variables</b>.
+                   A command to list active <b>System Environment Variables</b>.
       </div>
 
       <p>Before running one more program from the <b>blast package</b>, it would be good to investigate
@@ -2653,7 +2653,7 @@ Click to record your <b>Start</b> time.</button>
          it can help itself directly.
       </p>
 
-      <p><b>UNIX</b> uses <b>Systems Variables</b> to customise a variety of its functions. You can invite them all
+      <p><b>UNIX</b> uses <b>System Environment Variables</b> to customise a variety of its functions. You can invite them all
          to be poured onto your <b>terminal</b>, in gay profusion, with the command:
       </p>
 
@@ -2686,28 +2686,165 @@ Click to record your <b>Start</b> time.</button>
           printenv | grep ^PATH
         </span>
       </p>
-****************************************************
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: In the context of grep:
+           <br>The '<b>^</b>' chacter means "<b>Start of line</b>"<br>
+           <br>The '<b>$</b>' chacter means "<b>End of line</b>"<br>
+        </p>
+
+        <p>So this command asks the output of <b>printenv</b> to be filtered for
+           <b>System Variables</b> whose name <b><i>STARTS</i></b> with the term "<b>PATH</b>".
+           There should only be one.
+        </p>
+      </div>
+
+      <p>The precise <b>PATH</b> for your machine will vary with
+         flavour of UNIX and how your machine has been configured.
+         The way you need to <b>enhance</b> the <b>PATH</b> is, however, consistent.
+      </p>
+
+      <p>You need to prefix the value of the <b>Variable PATH</b> with the
+         <b>directory</b> that contains the <b>blast executables</b>
+         (<b>programs</b> for the most part).
+         This will cause the <b>System</b> to search for the <b>program</b>
+         associated with any command you issue, beginning with the
+         <b>bin</b>ary directory of your <b>blast installation</b>.
+      </p>
+
+      <p>Thus the whole of the <b>blast package</b> is enabled with the command:
+      </p>
+
       <p>
         <span class="command">
           PATH=~/Desktop/ProjectX/blast/bin/:$PATH;
         </span>
       </p>
 
+      <div class="hint">
+        <p><b><i>Note</i></b>: <br>
+        The <b>elements</b> (<b>directories</b>) of the <b>PATH Variable</b>
+        are separated by <b>colons</b>.<br>
+        Prefixing a <b>Variable Name</b> with '<b>$</b>' references the
+        <b><i>VALUE</i></b> of the <b>Variable</b>, rather than its <b>Name</b>.<br>
+
+        <p>So, the command above reads 
+          <table class="c2" id="co04">
+            <tr>
+              <th style="width:42%"><b>Command section</b></th>
+              <th style="width:48%"><b>Interpretation</b></th>
+            </tr>
+            <tr>
+              <td><span class="comtxt">PATH=</span></td>
+              <td>The new value of the variable <b>PATH</b> will be ... </td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">~/Desktop/ProjectX/blast/bin/</span></td>
+              <td>The binary directory of the new blast installation ...</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">:</span></td>
+              <td>followed by ...</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">$PATH</span></td>
+              <td>its previous value</td>
+            </tr>
+          </table>
+        </p>
+      </div>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: As always, the effect of this command only applies to the
+           <b>current terminal session</b>. To make it universal, for the current user,
+           it must be incorporated in the file <b>.bashrc</b> (or equivalent).
+      </div>
+
+      <p>To check the effect of your <b>PATH</b> extension, you can use
+         the command <b>printenv</b> in a more targetted fashion, thus:
+      </p>
+
+      <p>
+        <span class="command">
+          printenv PATH;
+        </span>
+      </p>
+
+      <p>Or you could acheive exactly the same effect with echo, thus:
+      </p>
+
+      <p>
+        <span class="command">
+          echo $PATH;
+        </span>
+      </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: <b>echo</b> is a more general command than <b>printenv</b>.
+           It has no reason to suppose its arguement is an <b>Environment Variable</b>,
+           so you must explicitly state you wish to <b>echo</b> the <b>Value</b> of the
+           variable <b>PATH</b>, by prefixing <b>PATH</b> with '<b>$</b>'.
+        </p>
+
+        <p>The command <span class="comtxt">echo $PATH;</span> will display exactly <span class="comtxt">PATH</span>
+        </p>
+      </div>
+
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/export.1p.html" target="_blank"><b>export</b></a>.
                    A command to activate <b>System Variables</b>.
       </div>
-
+      <p>I lied! Just amending the <b>PATH</b> variable is not sufficient. You also need to
+         <b>export</b> the new value to make it part of the <b>System Environment</b> and so, <b>active</b>.
+         The command to make this happen is:
+      </p>
       <p>
         <span class="command">
           export PATH;
         </span>
       </p>
 
+      <p>Finally, we are ready to go! The program to run next is <b>blastx</b>. <b>blastx</b>
+         takes a <b>DNA sequence</b>, translates this sequence in all <b>6 reading frames</b>
+         (<b>3 forward</b>, <b>3 reverse</b>) and then searches through a <b>Protein sequence
+         Database</b> for matches. So first get a <b>Mystery mRNA sequence</b> from the ether
+         using trusty <b>wget</b>:
+      </p>
+
       <p>
         <span class="command14">
           wget https://github.com/BioinformaticsTraining/Critical-Guides/raw/gh-pages/Data/mrna.fasta
+        </span>
+      </p>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/head.1.html" target="_blank"><b>head</b></a>.
+                   A command to display the first few lines of a text file</b>.
+      </div>
+
+      <p>
+        <span class="command">
+          head mrna.fasta;
+        </span>
+      </p>
+
+      <div class="new_command">
+        <p>Introducing
+           <a href="http://man7.org/linux/man-pages/man1/tail.1.html" target="_blank"><b>tail</b></a>.
+                   A command to display the last few lines of a text file</b>.
+      </div>
+
+      <p>
+        <span class="command">
+          tail mrna.fasta;
+        </span>
+      </p>
+
+      <p>
+        <span class="command">
+          tail -50 mrna.fasta;
         </span>
       </p>
 
@@ -2750,7 +2887,7 @@ printenv, assignment, system variables <br>
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a>.
-                   searches for string matches within text files.
+                   Searches for string matches within text files.
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/sed.1p.html" target="_blank"><b>sed</b></a>.
@@ -2762,7 +2899,15 @@ printenv, assignment, system variables <br>
           </li>
           <li>
            <a href="http://man7.org/linux/man-pages/man1/export.1p.html" target="_blank"><b>export</b></a>.
-                   A command to activate <b>System Variables</b>.
+                   Activates new <b>System Variables</b>.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/head.1.html" target="_blank"><b>head</b></a>.
+                   Displays the first few lines of a text file</b>.
+          </li>
+          <li>
+            <a href="http://man7.org/linux/man-pages/man1/tail.1.html" target="_blank"><b>tail</b></a>.
+                   Display the last few lines of a text file</b>.
           </li>
         </ol>
 
@@ -2859,8 +3004,6 @@ printenv, assignment, system variables <br>
 
 <a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/wc.1p.html" target="_blank"><b>wc</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/head.1p.html" target="_blank"><b>head</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/tail.1p.html" target="_blank"><b>tail</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/chmod.1p.html" target="_blank"><b>chmod</b></a><br>
 <a href="http://man7.org/linux/man-pages/man1/sort.1p.html" target="_blank"><b>sort</b></a><br>
 <br>
