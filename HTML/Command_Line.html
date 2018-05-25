@@ -2821,13 +2821,21 @@ Click to record your <b>Start</b> time.</button>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/head.1.html" target="_blank"><b>head</b></a>.
-                   A command to display the first few lines of a text file</b>.
+                   A command to display the first few lines of a text file.
       </div>
+
+      <p>Use <b>head</b> to view the first few (<b>10</b>) lines of the new sequence file <b>mrna.fasta</b>
+      </p>
 
       <p>
         <span class="command">
           head mrna.fasta;
         </span>
+      </p>
+
+      <p>Note the first line of the file "<b>>xxxx-Human-mRNA</b>".
+         Your task is to substitute the <b>xxxx</b> for something more meaningful.
+         <b><i>No guessing!!!</b></i> 
       </p>
 
       <div class="new_command">
@@ -2836,10 +2844,24 @@ Click to record your <b>Start</b> time.</button>
                    A command to display the last few lines of a text file</b>.
       </div>
 
+      <p>Use <b>tail</b> to view the last few (<b>10</b>) lines of the new sequence file <b>mrna.fasta</b> 
+      </p>
+
       <p>
         <span class="command">
           tail mrna.fasta;
         </span>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/headtail01.png"
+             alt="Sleep Deep."
+             style="height:565px; width:800px;">
+      </details>
+
+      <p>Both <b>head</b> and <b>tail</b> can be enticed to display
+         a number of lines specified with a simple switch as here:
       </p>
 
       <p>
@@ -2847,7 +2869,7 @@ Click to record your <b>Start</b> time.</button>
           tail -50 mrna.fasta;
         </span>
       </p>
-
+******************************************************************
       <p>
         <span class="command12">
           blastx -query mrna.fasta -db swissprot -out blastxout -remote -num_descriptions 1 -num_alignments 1
