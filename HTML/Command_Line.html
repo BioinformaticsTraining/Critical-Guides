@@ -2647,10 +2647,26 @@ Click to record your <b>Start</b> time.</button>
                    A command to list active <b>System Variables</b>.
       </div>
 
+      <p>Before running one more program from the <b>blast package</b>, it would be good to investigate
+         how to enable the whole package sensibly. Rather than making an extensive set of <b>aliases</b>,
+         a far better strategy would be to tell the system where the <b>blast programs</b> are, so that
+         it can help itself directly.
+      </p>
+
+      <p><b>UNIX</b> uses <b>Systems Variables</b> to customise a variety of its functions. You can invite them all
+         to be poured onto your <b>terminal</b>, in gay profusion, with the command:
+      </p>
+
       <p>
         <span class="command">
           printenv
         </span>
+      </p>
+
+      <p>Amongst the garrulous throng will be <b>Variables</b> including the term "<b>PATH</b>" in their name.
+         These are,typically, lists of <b>directory names</b> in which the <b>System</b> is invited to seek various
+         items of pith and moment. You can easily pick these out for closer scrutiny by <b>piping</b> the
+         <b>printenv</b> output through a suitable <b>grep</b> command, thus:
       </p>
 
       <p>
@@ -2659,15 +2675,21 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p>Amongst the "<b>PATH</b>" <b>Variables</b>, the one that defines all the <b>directories</b>
+         in which the system should search for programs is called simply "<b>PATH</b>". As it is the
+         only variable that <b><i>STARTS</i></b> with the term "<b>PATH</b>", it can be isolated by giving <b>grep</b>
+         a little more information, thus:
+      </p>
+
       <p>
         <span class="command">
           printenv | grep ^PATH
         </span>
       </p>
-
+****************************************************
       <p>
         <span class="command">
-          PATH=~/Desktp/ProjectX/blast/bin/:$PATH;
+          PATH=~/Desktop/ProjectX/blast/bin/:$PATH;
         </span>
       </p>
 
