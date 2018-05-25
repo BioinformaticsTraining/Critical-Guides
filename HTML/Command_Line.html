@@ -2689,8 +2689,8 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p><b><i>Note</i></b>: In the context of grep:
-           <br>The '<b>^</b>' chacter means "<b>Start of line</b>"<br>
-           <br>The '<b>$</b>' chacter means "<b>End of line</b>"<br>
+           <br>The '<b>^</b>' character means "<b>Start of line</b>"<br>
+           <br>The '<b>$</b>' character means "<b>End of line</b>"<br>
         </p>
 
         <p>So this command asks the output of <b>printenv</b> to be filtered for
@@ -2761,7 +2761,7 @@ Click to record your <b>Start</b> time.</button>
       </div>
 
       <p>To check the effect of your <b>PATH</b> extension, you can use
-         the command <b>printenv</b> in a more targetted fashion, thus:
+         the command <b>printenv</b> in a more targeted fashion, thus:
       </p>
 
       <p>
@@ -2770,7 +2770,7 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>Or you could acheive exactly the same effect with echo, thus:
+      <p>Or you could achieve exactly the same effect with echo, thus:
       </p>
 
       <p>
@@ -2781,7 +2781,7 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p><b><i>Note</i></b>: <b>echo</b> is a more general command than <b>printenv</b>.
-           It has no reason to suppose its arguement is an <b>Environment Variable</b>,
+           It has no reason to suppose its argument is an <b>Environment Variable</b>,
            so you must explicitly state you wish to <b>echo</b> the <b>Value</b> of the
            variable <b>PATH</b>, by prefixing <b>PATH</b> with '<b>$</b>'.
         </p>
@@ -2869,12 +2869,45 @@ Click to record your <b>Start</b> time.</button>
           tail -50 mrna.fasta;
         </span>
       </p>
-******************************************************************
+
+      <p>Now set <b>blastx</b> going, comparing the <b>Mystery mRNA</b> against <b>swissprot</b>,
+         looking for the one best hit. A very similar command to that used for <b>blastp</b>.
+      </p>
+
       <p>
         <span class="command12">
           blastx -query mrna.fasta -db swissprot -out blastxout -remote -num_descriptions 1 -num_alignments 1
         </span>
       </p>
+
+      <p>Browse the <b>blastx</b> output with <b>less</b>:
+
+      <p>
+        <span class="command">
+          less blastxout
+        </span>
+      </p>
+
+      <p>You should agree that the best hit is exact!
+         So focus in on the single most informative line with
+         the same trick you used for the <b>blastp</b> output:
+      </p>
+
+      <p>
+        <span class="command">
+          grep RecName blastxout | grep ">"
+        </span>
+      </p>
+
+      <p><i>By the Lord Harry!</i> Could this be an <b>mRNA</b> of the <b>Human PAX6 protein</b>? <i>Quelle surprise!</i>
+         Use <b>sed</b> to <b>demystify</b> the <b>mrna.fasta</b> data file ... and we are done!!!
+
+      <p>
+        <span class="command">
+          sed "s/xxxx/PAX6/" mrna.fasta > mrna_revealed.fasta
+        </span>
+      </p>
+
 
 
 <p>************************************************</p>
