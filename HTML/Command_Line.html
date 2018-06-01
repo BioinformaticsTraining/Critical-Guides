@@ -3032,7 +3032,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part III:</b>
-              Something with a fastq file?</summary>
+              Examination and Simple Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -3041,24 +3041,23 @@ Click to record your <b>Start</b> time.</button>
      ####################################################################################### -->
       <div class="ramble">
 
-        <h2>Something with a fastq file?</b></h2>
+        <h2>Examination and Simple Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</h2>
 
         <p>I will assume you have all, at least, heard of <b>fastq</b> files?.
            If you would find it useful, I offer a short video outlining the wonders of the
            fastq format and related issues.
 
-        <details class="video">
-        <summary><b>UNIX File Structure & Reference - A video</b></summary>
-          <video width="320" height="240" controls preload>
-            <source src="Videos/DotPlots.webm"></src>
-          </video>
-        </details><br>
-
+          <details class="video">
+          <summary><b>FASTQ File Format - A video</b></summary>
+            <video width="320" height="240" controls preload>
+              <source src="Videos/DotPlots.webm"></src>
+            </video>
+          </details>
         </p>
 
         <p>In this section of the exercise, the plan is to:
           <ol>
-            <li>Get a couple of <b><i>very small</i></b> fastq files representing forward and reverse read pairs.</li>
+            <li>Get a couple of <b><i>very small</i></b> <b>fastq</b> files representing forward and reverse read pairs.</li>
             <li>Examine, concatenate and sort them into the shape required by the mapping software.</li>
             <li>What else? Definitely not run HTS software!.</li>
           </ol>
@@ -3069,15 +3068,58 @@ Click to record your <b>Start</b> time.</button>
 
       </div><br>
 
+      <p>I will assume you are sitting comfortably in your <b>ProjectX</b> directory?
+         If not, I feel sure you know how to get there by now.
+      </p>
+
+      <p>Begin by making a directory specific to this exercise section,
+         and then making it the Current Working Directory with the commands:
+      </p>
+
       <p>
         <span class="command">
           mkdir HTS; cd HTS;
         </span>
       </p>
 
+      <p>Now you need some data files.
+         I have two ready for you so you do not have to actually do any sequencing.
+         The files are improbably small, as we are not trying to do any real analysis here,
+         rather to look at the tools which might be useful, if we were.
+      </p>
+
+      <p>The files contain paired reads. The first file contains forward reads,
+         the second reverse reads. Corresponding reads from each file come from either
+         end of the same template. If this is all new to you, maybe the following video will help?
+      </p>
+
+      <details class="video">
+      <summary><b>Read Pairs - A video</b></summary>
+        <video width="320" height="240" controls preload>
+          <source src="Videos/DotPlots.webm"></src>
+        </video>
+      </details>
+
+      <p>The overall objective of this section is to merge the two read files to make
+         a third file that contains all the reads as a series of matched pairs. That is:
+        <ul>
+          <li>read <b>1</b> from file <b>1</b></li>
+          <li>read <b>1</b> from file <b>2</b></li>
+          <li>read <b>2</b> from file <b>1</b></li>
+          <li>read <b>2</b> from file <b>2</b> ... and so on and so on ...</li>
+        </ul> 
+      </p>
+
+      <p>Now that is so wonderfully clear, get the first file using <b>wget</b> thus:
+      </p>
+
       <p>
         <span class="command14">
-          wget https://github.com/dsobral/ELB/raw/master/fastq_examples/paired_end_example_1.fastq.gz        </span>
+          wget https://github.com/dsobral/ELB/raw/master/fastq_examples/paired_end_example_1.fastq.gz
+        </span>
+      </p>
+
+      <p>and then the second file in remarkably similar fashion, thus:
       </p>
 
       <p>
