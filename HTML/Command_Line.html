@@ -3068,12 +3068,12 @@ Click to record your <b>Start</b> time.</button>
 
       </div><br>
 
-      <p>I will assume you are sitting comfortably in your <b>ProjectX</b> directory?
-         If not, I feel sure you know how to get there by now.
+      <p>I assume you are sitting comfortably in your <b>ProjectX</b> directory?
+         If not, do whatever it takes to get there.
       </p>
 
-      <p>Begin by making a directory specific to this exercise section,
-         and then making it the Current Working Directory with the commands:
+      <p>Create a directory specific to this section,
+         and make it the <b>Current Working Directory</b> with the commands:
       </p>
 
       <p>
@@ -3083,14 +3083,14 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>Now you need some data files.
-         I have two ready for you so you do not have to actually do any sequencing.
+         I have two ready for you, so you do not have to actually do any sequencing!
          The files are improbably small, as we are not trying to do any real analysis here,
-         rather to look at the tools which might be useful, if we were.
+         rather the object is to look at the tools which might be useful, if we were.
       </p>
 
       <p>The files contain paired reads. The first file contains forward reads,
-         the second reverse reads. Corresponding reads from each file come from either
-         end of the same template. If this is all new to you, maybe the following video will help?
+         the second corresponding reverse reads. That is, corresponding reads from each file come from opposite
+         ends of the same template. If this is all new to you, maybe the following video will help?
       </p>
 
       <details class="video">
@@ -3128,30 +3128,70 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p>Time for a swift examination of the consequences of
+         your data acquisition.
+      </p>
+
       <p>
         <span class="command">
           ls -l
         </span>
       </p>
 
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS01.png"
+             alt="Sleep Deep."
+             style="height:553px; width:800px;">
+      </details>
+      <br>
+
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/file.1.html" target="_blank"><b>file</b></a>.
-                   A command to display the type and other properties of a <b>file</b>.</p>
+                   A command to display the type and other
+                   properties of a <b>file</b>.</p>
       </div>
+
+      <p><b>ls</b> tells one most of what one might wish to
+         know of the
+         files you have downloaded, however, you can do a bit
+         better with the command <b>file</b>.
+      </p>
 
       <p>
         <span class="command">
           file *
         </span>
       </p>
+      <p>All jolly fascinating stuff! Although a
+         feeling of information overload is hard to
+         repress, unless you are the mother of, or
+         considering becoming affianced to one of
+         these fine files.
+      </p>
 
       <div class="new_command">
         <p>Introducing
-           <a href="http://www.manpagez.com/man/1/gzip/" target="_blank"><b>gzip/gunzip</b></a>.
-                   A command to archive/unarchive (<b>zip</b>/<b>unzip</b>) a <b>file hierarchy</b>.</p>
+           <a href="http://www.manpagez.com/man/1/gzip/"
+                   target="_blank"><b>gzip/
+                   gunzip</b></a>.
+                   A command to archive/unarchive
+                   (<b>zip</b>/<b>unzip</b>) a <b>file
+                   hierarchy</b>.</p>
       </div>
 
+      <p>The vital fact to observe, is that these files
+         have been compressed (<b>zip</b>ped) by the program
+         <b>gzip</b> (hence the file extension '<b>.gz</b>').
+         This is a very good idea for real <b>fastq</b> files,
+         because they are massive! Typically, <b>HTS</b>
+         software works directly on compressed files.
+         However, whilst these files are compressed, it will
+         be very difficult to look at them and to
+         manipulated their contents. Accordingly, proceed
+         to uncompressed (<b>unzip</b>) them thus:
+      </p>
 
       <p>
         <span class="command">
@@ -3159,9 +3199,24 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <div class="hint">
+        <p>
+          <b><i>Note</i></b>: The prefix '<b>g</b>'
+          for the programs <b>gzip</b> and <b>gunzip</b>,
+          reflects that thes programs are
+          <a href= "https://en.wikipedia.org/wiki/GNU"
+             target="_blank"> <b>GNU</b></a> programs.
+          There are also standard <b>UNIX</b> programs
+          <b>zip</b> and <b>unzip</b> available.
+          These perform essentially indentically, however,
+          the <b>GNU</b> versions are generally more popular,
+          which is why I use them here.
+        </p>
+      </div>
+
       <p>
         <span class="command">
-          ls -l
+          ls -l; file *;
         </span>
       </p>
 
@@ -3266,16 +3321,12 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-<a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
-<a href="http://man7.org/linux/man-pages/man1/chmod.1p.html" target="_blank"><b>chmod</b></a><br>
-<br>
+      <p>
+        <span class="command">
+          gzip paired.fastq
+        </span>
+      </p>
 
-
-<p>Concepts:<br><br>
-
-     pipes<br>
-     redirecting output to file<br>
-     very basic scripts</p><br>
       <br>
       <div class="checkpoint">
         <h2><i><u>Checkpoint</u></i></h2>
@@ -3335,7 +3386,43 @@ Click to record your <b>Start</b> time.</button>
 
         <p><b>Reflections:</b>
         <ol type="1">
-          <li></li>
+          <li>
+            As I feel sure you will agree, following through
+            this exercise is more than a little artificial.
+            I supply you with all the commands exactly as you
+            need them. Clearly this will not be the case once
+            you return to "<i>The Real World</i>".
+            <br><br>
+            So what then? I suggest you should not expect, or
+            even strive for, complete fluency with all the
+            commands introduced here (but a small subset of
+            that which is available). I urge you to deem it
+            sufficient to aim for an understanding of what is
+            possible and commit to memory only the bare essentials.
+            <br><br>
+            In contrast to the situation of yore, when one's only
+            resource was a tatty printed manual (remember those?),
+            from which vital pages had been diverted to other
+            purpose, further sheets were no longer in their
+            logical posion ...  and the whole thing was out of
+            date anyway, you have the miracle of
+            an <b>online manual</b>
+            AND ... <b>google</b> (or equivalent)!!!! Use them!
+            Look up stuff continuously! Gloriously, <b>google</b>
+            has not the capacity to sneer when you ask the same
+            question more than once (yet!).
+            <br><br>
+            I submit that few are really fluent with all this
+            nonsense. To be so requires that one does very little
+            else but talk to computers (often diminishing one's
+            capacity to communicate with one's fellow man/woman!).
+            Beware! study closely the creatures of the night to
+            which I refer.
+            <br><br>
+            Most people, including myself, start with a vague
+            idea of what is required and then, just "look it up"!
+            That is certainly the way these notes have evolved.
+          </li>
           <li></li>
           <li></li>
         </ol>
@@ -3387,4 +3474,15 @@ onclick="document.getElementById('End_Time').innerHTML = Date()">
 Click to display your <b>Finish</b> time.</button>
 <p id="End_Time"></p>
 
-</body></html> 
+</body></html>
+
+
+<!-- 
+<p>Concepts:<br><br>
+very basic scripts</p><br>
+<a href="http://man7.org/linux/man-pages/man3/history.3.html" target="_blank"><b>history</b></a><br>
+<a href="http://man7.org/linux/man-pages/man1/chmod.1p.html" target="_blank"><b>chmod</b></a><br>
+<br>
+ -->
+
+
