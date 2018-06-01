@@ -2861,12 +2861,12 @@ Click to record your <b>Start</b> time.</button>
       </details>
 
       <p>Both <b>head</b> and <b>tail</b> can be enticed to display
-         a number of lines specified with a simple switch as here:
+         a number of lines specified with the '<b>-n</b>' switch as here:
       </p>
 
       <p>
         <span class="command">
-          tail -50 mrna.fasta;
+          tail -n 50 mrna.fasta;
         </span>
       </p>
 
@@ -3181,7 +3181,7 @@ Click to record your <b>Start</b> time.</button>
                    hierarchy</b>.</p>
       </div>
 
-      <p>The vital fact to observe, is that these files
+      <p>The vital fact to observe here, is that these files
          have been compressed (<b>zip</b>ped) by the program
          <b>gzip</b> (hence the file extension '<b>.gz</b>').
          This is a very good idea for real <b>fastq</b> files,
@@ -3214,10 +3214,52 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
+      <p>Examine the consequences of your decompressing with
+         both <b>ls</b> and <b>file</b>, thus:
+      </p>
+
       <p>
         <span class="command">
           ls -l; file *;
         </span>
+      </p> 
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS02.png"
+             alt="Sleep Deep."
+             style="height:257px; width:800px;">
+      </details>
+
+      <p>Now your date files are both plain text, it is possible
+         to browse them with <b>less</b>. Try the first one so:
+      </p>
+
+      <p>
+        <span class="command">
+          less paired_end_example_1.fastq
+        </span>
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS03.png"
+             alt="Sleep Deep."
+             style="height:555px; width:800px;">
+      </details>
+
+      <div class="hint">
+        <p>
+          <b><i>Note</i></b>: Just in case ...
+          when you have seen enough, it is the '<b>q</b>'
+          key that gets you out of <b>less</b>!.
+        </p>
+      </div>
+
+      <p>The long lines are a problem when trying to
+         understand the content of these files.
+         Try for a clearer view by using the
+         '<b>-S</b>' <b>switch</b> with <b>less</b>, thus:
       </p>
 
       <p>
@@ -3226,17 +3268,50 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>
-        <span class="command">
-          head *
-        </span>
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS04.png"
+             alt="Sleep Deep."
+             style="height:568px; width:800px;">
+      </details>
+
+      <p>Focus on just the first <b>2 reads</b>
+         (<b>8</b> lines) from each file
+         using <b>head</b> thus:
       </p>
 
       <p>
         <span class="command">
-          tail *
+          head -n 8 *
         </span>
       </p>
+
+      <p>The depth of annotation is not impressive, but,
+         I assure you, you are looking at the first two
+         reads pairs.
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS05.png"
+             alt="Sleep Deep."
+             style="height:562px; width:800px;">
+      </details>
+
+      <p>In the name of balance, take a quick look at
+         the last <b>2 read pairs</b> with <b>tail</b>:
+      </p>
+      <p>
+        <span class="command">
+          tail -n 8 *
+        </span>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS06.png"
+             alt="Sleep Deep."
+             style="height:539px; width:800px;">
+      </details>
 
       <p>
         <span class="command">
@@ -3348,7 +3423,8 @@ Click to record your <b>Start</b> time.</button>
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/split.1.html" target="_blank"><b>split</b></a>.
-                   <b>split</b>s text into multiple sections of a <b>fixed number of lines</b>.
+                   <b>split</b>s text into multiple sections of a
+                   <b>fixed number of lines</b>.
           </li>
           <li>
             <a href="http://man7.org/linux/man-pages/man1/sort.1.html" target="_blank"><b>sort</b></a>.
