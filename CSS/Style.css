@@ -173,6 +173,15 @@ span.command16 {
     min-width: 120px; max-width: 800;   
 }
 
+/* span for Exercise Commands 15px */
+
+span.command15 {
+    display:inline-block;
+    background-color: Black; color: White;
+    font-family: courier; font-size: 15px; font-weight: bold;
+    position: relative; left: 15px;
+    min-width: 120px; max-width: 800;   
+}
 /* span for Exercise Commands 14px */
 
 span.command14 {
