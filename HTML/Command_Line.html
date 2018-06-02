@@ -3476,10 +3476,62 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
+      <p>Having thoroughly examined the contents of the
+         two data files, the objective now is to combine
+         them into the arrangement expected by the
+         relevant <b>HTS</b> software.
+      </p>
+
+      <p>That is, we need to combine all the <b>reads</b>
+         into a single file such that each of the <b>3,485
+         read pairs</b> are together, first the <b>forward
+         read</b> then the <b>reverse read</b>.
+      </p>
+
+      <p>As a first step, I suggest you <b>split</b> each of
+         the two read files you have into <b>3,485</b>
+         peices. In each peice, there will be a <b>single
+         read</b>. You need to name the peices
+         (<b>files</b>) such that you can distiguish
+         <b>forward reads</b> from <b>reverse reads
+         <i>AND</i></b> the <b>position</b> of each read
+         in its <b>fastq file of origin</b>.
+      </p>
+
+      <p>This can be done with the program <b>split</b>.
+         By default, split will break a file into hunks of
+         <b>1000 lines</b>. You need hunks of <b>4 lines</b>,
+         which you can request  using the '<b>-l</b>' switch.
+      </p>
+
+      <p>By default, <b>split</b> will name all the <b>4
+         line files</b> it creates in a way that, if
+         sorted alphabetically, reflects the order in which
+         the contents resided in the original <b>fastq
+         file</b>. All file names will be prefixed
+         by an '<b>x</b>'.
+      </p>
+
+      <p>That is fine, except you want the prefix to
+          record whether the read in the file is
+          <b>forward</b> or reverse. You can specify a
+          cutomised prefix at the end of the command
+          (after the name of the file to be split).
+          I suggest '<b>f-</b>' for forward and
+          '<b>r-</b>' for reverse.
+      </p>
+
+      <p>so to <b>split</b> the <b>forward read
+         fastq file</b>, the command is:
+      </p>
+
       <p>
         <span class="command">
           split -l 4 paired_end_example_1.fastq f-
         </span>
+      </p>
+
+      <p>and to <b>split</b> the <b>reverse read fastq file</b>, the command is:
       </p>
 
       <p>
