@@ -3055,7 +3055,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part III:</b>
-              Examination and Simple Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</summary>
+              Examination and Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</summary>
 
 <!-- #######################################################################################
      #######################################################################################
@@ -3064,7 +3064,7 @@ Click to record your <b>Start</b> time.</button>
      ####################################################################################### -->
       <div class="ramble">
 
-        <h2>Examination and Simple Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</h2>
+        <h2>Examination and Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</h2>
 
         <p>I will assume you have all, at least, heard of <b>fastq</b> files?.
            If you would find it useful, I offer a short video outlining the wonders of the
@@ -3228,12 +3228,12 @@ Click to record your <b>Start</b> time.</button>
         <p>
           <b><i>Note</i></b>: The prefix '<b>g</b>'
           for the programs <b>gzip</b> and <b>gunzip</b>,
-          reflects that thes programs are
+          reflects that these programs are
           <a href= "https://en.wikipedia.org/wiki/GNU"
              target="_blank"> <b>GNU</b></a> programs.
           There are also standard <b>UNIX</b> programs
           <b>zip</b> and <b>unzip</b> available.
-          These perform essentially indentically, however,
+          These perform essentially identically, however,
           the <b>GNU</b> versions are generally more popular,
           which is why I use them here.
         </p>
@@ -3340,8 +3340,8 @@ Click to record your <b>Start</b> time.</button>
       </details>
 
       <p>The first line of each <b>read</b> identifies that
-         <b>read</b> (if rather sparcely). As you will have seen
-         with less(?), all indentification lines begin
+         <b>read</b> (if rather sparsely). As you will have seen
+         with less(?), all identification lines begin
          "<b>@SRR</b>".
       </p>
 
@@ -3419,7 +3419,7 @@ Click to record your <b>Start</b> time.</button>
          wanders into the smaller hours of the jolly old morning!
       </p>
 
-      <p>Anyway, motivations aside, a mouse splitting marvelous
+      <p>Anyway, motivations aside, a mouse splittingly marvellous
          way of counting the number of <b>reads</b> is to
          generate all
          the <b>read identifier lines</b> (as you already
@@ -3472,7 +3472,9 @@ Click to record your <b>Start</b> time.</button>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/split.1.html" target="_blank"><b>split</b></a>.
-                   A command to <b>split</b> text into multiple sections of a <b>fixed number of lines</b>.
+                   A command to <b>split</b> text into
+                   multiple sections of a <b>fixed
+                   number of lines</b>.
         </p>
       </div>
 
@@ -3490,11 +3492,11 @@ Click to record your <b>Start</b> time.</button>
 
       <p>As a first step, I suggest you <b>split</b> each of
          the two read files you have into <b>3,485</b>
-         peices. In each peice, there will be a <b>single
-         read</b>. You need to name the peices
-         (<b>files</b>) such that you can distiguish
+         pieces. In each piece, there will be a <b>single
+         read</b>. You need to name the pieces
+         (<b>files</b>) such that you can distinguish
          <b>forward reads</b> from <b>reverse reads
-         <i>AND</i></b> the <b>position</b> of each read
+         <i>AND</i></b> know the <b>position</b> of each read
          in its <b>fastq file of origin</b>.
       </p>
 
@@ -3515,8 +3517,8 @@ Click to record your <b>Start</b> time.</button>
       <p>That is fine, except you want the prefix to
           record whether the read in the file is
           <b>forward</b> or reverse. You can specify a
-          cutomised prefix at the end of the command
-          (after the name of the file to be split).
+          customised prefix at the end of the command
+          (after the name of the file to be <b>split</b>).
           I suggest '<b>f-</b>' for forward and
           '<b>r-</b>' for reverse.
       </p>
@@ -3531,7 +3533,8 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>and to <b>split</b> the <b>reverse read fastq file</b>, the command is:
+      <p>and to <b>split</b> the <b>reverse read
+         fastq file</b>, the command is:
       </p>
 
       <p>
@@ -3540,28 +3543,201 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p>You have now created an outrage of tiny files,
+         each containing a single read. This you can
+         confirm with the commands:
+      </p>
+
       <p>
         <span class="command">
-          ls; cat r-zdkm
+          ls ?-*; cat r-zdkm
         </span>
       </p>
 
+      <div class="hint">
+        <p>
+          <b><i>Note</i></b>: Just in case:<br>
+          <span class="comtxt14">ls ?-*;</span> reads "List
+          (<b>ls</b>) all files whose name begins with any
+          single character ('<b>?</b>') followed by a minus
+          sign ('<b>-</b>') followed by anything you wish
+          ('<b>*</b>')". Which amount to "all the files
+          generated by <b>split</b>". If you include the
+          <b>original fastq files</b> by just using
+          <span class="comtxt14">ls;</span>, the output
+          is unbalanced (less beautiful) because the
+          <b>fastq files</b> have longer names.
+        </p>
+      </div>
+
+      <p>Certainly are a lot of files! Why not count them?
+      </p>
+
+      <p>
+        <span class="command">
+          ls ?-* | wc -l
+        </span>
+      </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: Should this work?<br>
+           <span class="comtxt14">wc -l</span> counts lines.
+           <b>ls</b> generates an output that lists several
+           file names to the line (depending upon the
+           <b>font</b> you are using and the <b>width</b> of
+           your <b>terminal</b>).
+        </p>
+
+        <p>True, except when the output of <b>ls</b> is
+           <b>piped</b> or directed into a file with a
+           <b>greater than</b> character ('<b>></b>').
+        </p>
+
+        <p>Then it is always only one file name per line.
+          You can force <b>ls</b> to display just one file
+          name per line in the terminal too, by using the
+          <b>switch</b> '<b>-1</b>'
+        </p>
+
+        <p><b><i>Warning</i></b>: there is no general switch
+          '<b>-< number ></b>'! '<b>-2</b>' '<b>-3</b>'
+          <b>etcetera</b> do not work, just '<b>-1</b>'.
+        </p>
+      </div>
+
+      <p><b>6,970</b>! Which is <b>2</b> * <b>3,485</b>!!
+         Just as expected.
+      </p>
+
+      <p>This, I computed in less than a second,
+         unaided by my watch, telephone or some
+         unidentifiable plastic excrescence found at the
+         bottom of a packet of breakfast cereal ...
+         a skill that was lost to the barely weaned
+         dribbling hordes who mewled and puked amongst
+         the pearls of wisdom I laid before them way back
+         in the early <b>1980</b>s! Evolution is provably
+         multi-directional! I imagine <b>4C</b>
+         (<b>1981</b> vintage) are now
+         swinging from branch to branch in the depths of
+         the <b>New Forest</b> as one types! Keep an eye out should
+         you be passing that way ... let them know I dream
+         uncomfortably of them still.
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS09.png"
+             alt="Sleep Deep."
+             style="height:563px; width:800px;">
+      </details>
+
+      <br>
       <div class="new_command">
         <p>Introducing
-           <a href="http://man7.org/linux/man-pages/man1/sort.1.html" target="_blank"><b>sort</b></a>.
+           <a href="http://man7.org/linux/man-pages/man1/sort.1.html"
+            target="_blank"><b>sort</b></a>.
                    A command to <b>sort</b> text.
         </p>
       </div>
 
+      <p>Having exploded the original two tidy files into
+         several thousand pieces, the task now is to glue
+         them all back together in the right order into a
+         single <b>fastq</b> file.
+      </p>
+
+      <p>Unfortunately, the file names are not named as
+         conveniently as one might imagine for this purpose.
+         If you simply listed all the <b>split</b> products
+         with <b>ls</b>, you would get all the <b>forward
+         reads</b> ahead of the <b>reverse</b> ones. You want
+         them appropriately <b>interleaved</b>. To prove this
+         assertion, try the command:
+      </p>
+
       <p>
         <span class="command">
-          ls | sort -t - -k 2
+          ls -1 ?-*
+        </span>
+      </p>
+
+      <p>and then scroll up and down your terminal output a
+         few hundred <b>yards</b> (marginally
+         reduced <b>metres</b>).
+      </p>
+
+      <p>It will be necessary to sort this list of file
+         names before using it to direct the construction
+         of a <b>read pair fastq file</b>.
+      </p>
 
       <div class="hint">
-        <p>
-          <b><i>Note</i></b>: If one had used postfix rather than prefix ... one would not need to sort!! But one bloody wants to sort ... so there!!
+        <p><b><i>Note</i></b>: Well ... to be completely
+           truthful, "necessary" is putting it a
+           trifle strongly.
+
+        <p>Had we appended '<b>-f</b>' and '<b>-r</b>'
+           rather than prefixing '<b>f-</b>' and
+           '<b>r-</b>', the default alphabetic ordering of
+           <b>ls</b> would be exactly as required!
         </p>
+
+        <p>To <b>append</b> rather than <b>prefix</b>,
+           you would need to
+           employ the '<b>--additional-suffix</b>' switch and to
+           resist adding a customised prefix to the <b>split</b>
+           command line.
+        </p>
+
+        <p>So the command:<br>
+           <span class="comtxt14">
+             split -l 4 paired_end_example_1.fastq f-
+           </span><br>
+           would be replaced by:<br>
+           <span class="comtxt14">
+           split -l 4 --additional-suffix -f
+           paired_end_example_1.fastq
+           </span>
+        </p>
+
+        <img src="Images/HTSHint.png"
+             alt="Sleep Deep."
+             style="display:block;
+                    margin-left:auto; margin-right:auto;
+                    height:319px; width:700px;">
+
+        <p>As you can see from the illustration, this would have
+           resulted in files that <b>ls</b> would interleave
+           exactly as
+           required, by default!
+        </p>
+
+        <p>I offer two excuses for leaving things the clumsy and
+           imperfect way they are.
+        </p>
+
+        <ol>
+          <li>I only noticed the "<i>better way</i>"
+              about ten minutes ago
+              and am far too lazy to change everything around now!
+          </li>
+          <li>Having the file names the way they are gives me an
+              excellent excuse to introduce
+              the new command '<b>sort</b>'
+              <b><i>AND</i></b> the concept of embedding
+              the ouput of one
+              command within another.
+          </li>
+        </ol>
       </div>
+''''''''''''''''''''''
+      <p>
+        <span class="command">
+          ls ?-* | sort -t - -k 2
+        </span>
+      </p>
+
 
       <p>
         <span class="command">
@@ -3645,8 +3821,11 @@ Click to record your <b>Start</b> time.</button>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
         <ol type="1">
-          <li>Use of the '<b>-S</b>' <b>switch</b> with <b>less</b>, to view files with long lines.</li>
-          <li>Use of back ticks ("`") to associate with the <b><i>VALUE</i></b> of a command rather than the command itself.</li>
+          <li>Use of the '<b>-S</b>' <b>switch</b> with
+              <b>less</b>, to view files with long lines.</li>
+          <li>Use of back ticks ("`") to embed the
+              <b><i>VALUE</i></b> of one command within
+              another.</li>
 <!--          <li>Simple use of '<b>|</b>' (<b>pipes</b>).</li>
           <li>Simple use of <b>Environment Variables</b></li> -->
         </ol>
@@ -3671,7 +3850,7 @@ Click to record your <b>Start</b> time.</button>
             resource was a tatty printed manual (remember those?),
             from which vital pages had been diverted to other
             purpose, further sheets were no longer in their
-            logical posion ...  and the whole thing was out of
+            logical position ...  and the whole thing was out of
             date anyway, you have the miracle of
             an <b>online manual</b>
             AND ... <b>google</b> (or equivalent)!!!! Use them!
