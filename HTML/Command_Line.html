@@ -3401,6 +3401,7 @@ Click to record your <b>Start</b> time.</button>
              style="height:541px; width:800px;">
       </details>
 
+      <br>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/wc.1.html" target="_blank"><b>wc</b></a>.
@@ -3410,9 +3411,43 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
+      <p>It would be good, at this point, to know just how
+         many <b>read pairs</b> we were dealing with ... Well,
+         actually, it does not matter a jot, but that is the
+         sort of pompous nonsense one finds oneself introducing
+         into these ghastly exercises when their composition
+         wanders into the smaller hours of the jolly old morning!
+      </p>
+
+      <p>Anyway, motivations aside, a mouse splitting marvelous
+         way of counting the number of <b>reads</b> is to
+         generate all
+         the <b>read identifier lines</b> (as you already
+         have done)
+         and to <b>pipe</b> their jostling mass though a program
+         called <b>wc</b>.
+      </p>
+
+      <p><b>wc</b>, by default, will count all the
+         <b>characters</b>, <b>words</b> and <b>lines</b>
+         as they pass by, thus generating <b>3
+         counts</b>. Using <b>switches</b>, it is possible
+         to engender restraint. Here, the interest is in
+         the number of <b>lines</b> only, as that count
+         corresponds to the number of <b>reads</b>.
+         Accordingly, the <b>switch</b> to use is '<b>-l</b>'.
+         So, to count the forward reads try:
+      </p>
+
       <p>
         <span class="command">
           grep ^@SRR paired_end_example_1.fastq | wc -l
+        </span>
+      </p>
+
+      <p>and to <b>count</b> all the <b>reverse reads</b>,
+         the command is clearly:
+      </p>
 
       <p>
         <span class="command">
@@ -3420,6 +3455,20 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
+      <p> Well I make it <b>3485</b> in both cases. The number is
+          not so vital, but the fact that the count is the
+          same for both <b>forward</b> and <b>reverse reads</b>
+          is a great comfort!
+      </p>
+
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/HTS08.png"
+             alt="Sleep Deep."
+             style="height:295px; width:800px;">
+      </details>
+
+      <br>
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/split.1.html" target="_blank"><b>split</b></a>.
@@ -3430,6 +3479,8 @@ Click to record your <b>Start</b> time.</button>
       <p>
         <span class="command">
           split -l 4 paired_end_example_1.fastq f-
+        </span>
+      </p>
 
       <p>
         <span class="command">
@@ -3581,7 +3632,7 @@ Click to record your <b>Start</b> time.</button>
             else but talk to computers (often diminishing one's
             capacity to communicate with one's fellow man/woman!).
             Beware! study closely the creatures of the night to
-            which I refer.
+            whom I refer.
             <br><br>
             Most people, including myself, start with a vague
             idea of what is required and then, just "look it up"!
