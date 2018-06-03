@@ -38,12 +38,12 @@ p.smarg {
     margin-right: 15px;
 }
 
-/* Table for Checkout Section 2*/
+/* Table 95% - default, sort of?*/
 
 table.c1 {
     display:block; margin-left:auto; margin-right:auto;
     border:1px solid black; border-collapse: collapse;
-    width:98%; background:pink;
+    width:95%; background:pink;
 }
 
 table.c1 th {
@@ -57,12 +57,12 @@ table.c1 td {
     border:1px solid black;
 }
 
-/* Table for grep note Section 2*/
+/* Table 70%*/
 
 table.c2 {
     display:block; margin-left:auto; margin-right:auto;
     border:1px solid black; border-collapse: collapse;
-    width:98%; background:pink;
+    width:70%; background:pink;
 }
 
 table.c2 th {
@@ -399,7 +399,7 @@ img.sup {
  only works if you only ever want 1 popup???
  a second invocation "pops" the first popup?
  I do not fully understand why. It should work.
- Seems one cannot overwrite the first popup dwfinition?
+ Seems one cannot overwrite the first popup definition?
  Anyway, solution is to pass the popup as a parameter
  having made each popup with a new id.
  I WIN! At the cost of hours. During which I learned some stuff

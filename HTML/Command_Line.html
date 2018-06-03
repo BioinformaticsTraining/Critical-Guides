@@ -1511,7 +1511,7 @@ Click to record your <b>Start</b> time.</button>
                  should be avoided. So:
               </p>
  
-              <table class="c1" id="co01">
+              <table class="c1">
                 <tr>
                   <th>Command</th>
                   <th>Working Directory</th>
@@ -2482,7 +2482,7 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p><b><i>Note</i></b>: This command reads:
-          <table class="c2" id="co02">
+          <table class="c1">
             <tr>
               <th style="width:30%"><b>Command section</b></th>
               <th><b>Interpretation</b></th>
@@ -2554,17 +2554,22 @@ Click to record your <b>Start</b> time.</button>
         editing operations and then spews (<b>streams</b> if you prefer) out the edited text.
       </p>
 
-      <p><b>sed</b> can be quite complicated. Its sophisticated use requires a good understanding of
-        <a hhref="https://en.wikipedia.org/wiki/Regular_expression"><b>Regular Expressions</b></a>
-        and leads to the writing of enormously long and unintelligible commands!
-        You can even join a <a href="http://www.guckes.net/sed/mail.php3"> sed user group</a>
-        and follow the conversations of the true devotees.
-        Joining such a community can be interesting, but ... also possibly an 
-        indication that it might be time to seek help?
+      <p><b>sed</b> can be quite complicated. Its sophisticated use
+         requires a good understanding of
+         <a hhref="https://en.wikipedia.org/wiki/Regular_expression">
+         <b>Regular Expressions</b></a>
+         and leads to the writing of enormously long and unintelligible commands!
+         You can even join a <a href="http://www.guckes.net/sed/mail.php3">
+         sed user group</a>
+         and follow the conversations of the true devotees.
+         Joining such a community can be interesting, but ... also possibly an 
+         indication that it might be time to seek help?
       </p>
 
-      <p>That being said, using <b>sed</b> to simply substitute one text string for another
-         throughout a file is easy, and very useful. We will restrict ourselves to this
+      <p>That being said, using <b>sed</b> to simply substitute one
+         text string for another
+         throughout a file is easy, and very useful. We will restrict
+         ourselves to this
          one trick here. The goal being to replace the <i>Mystery</i> in the file
          <b>proteins.fasta</b> with the eternal truths of <b>PAX</b>!
       </p>
@@ -2580,10 +2585,10 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="hint">
         <p><b><i>Note</i></b>: This command reads:
-          <table class="c2" id="co03">
+          <table class="c1">
             <tr>
-              <th style="width:38%"><b>Command section</b></th>
-              <th><b>Interpretation</b></th>
+              <th style="width:40%"><b>Command section</b></th>
+              <th style="width:auto"><b>Interpretation</b></th>
             </tr>
             <tr>
               <td><span class="comtxt">sed</span></td>
@@ -2749,10 +2754,10 @@ Click to record your <b>Start</b> time.</button>
         <b><i>VALUE</i></b> of the <b>Variable</b>, rather than its <b>Name</b>.<br>
 
         <p>So, the command above reads 
-          <table class="c2" id="co04">
+          <table class="c1">
             <tr>
-              <th style="width:42%"><b>Command section</b></th>
-              <th style="width:48%"><b>Interpretation</b></th>
+              <th style="width:36%"><b>Command section</b></th>
+              <th style="width:50%"><b>Interpretation</b></th>
             </tr>
             <tr>
               <td><span class="comtxt">PATH=</span></td>
@@ -3620,7 +3625,8 @@ Click to record your <b>Start</b> time.</button>
          multi-directional! I imagine <b>4C</b>
          (<b>1981</b> vintage) are now
          swinging from branch to branch in the depths of
-         the <b>New Forest</b> as one types! Keep an eye out should
+         the <b>New Forest</b> as one types! Keep an
+         eye open should
          you be passing that way ... let them know I dream
          uncomfortably of them still.
       </p>
@@ -3731,19 +3737,139 @@ Click to record your <b>Start</b> time.</button>
           </li>
         </ol>
       </div>
-''''''''''''''''''''''
+
+      <p>Consider the form of the file names that have
+         been created. It is as follows:
+
+        <table class="c2">
+          <tr>
+            <th style="width:6%"><b>Field Number</b></th>
+            <th style="width:20%"><b>Field Name</b></th>
+            <th style="width:37%"><b>Field Value</b></th>
+          </tr>
+          <tr>
+            <td style="text-align:center"><b>1</b></td>
+            <td><b>Read Direction</b></td>
+            <td><b>f</b> or <b>r</b></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><b>-</b></td>
+            <td><b>Field Separator</b></td>
+            <td><b>-</b></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><b>2</b></td>
+            <td><b>Read Position</b></td>
+            <td>Text alphabetically reflecting
+                <b>Read Position</b></td>
+          </tr>
+        </table>
+      </p>
+
+      <p><b>ls</b> will order these file names alphabetically,
+         taking regard of the whole name. What you require
+         is that the list of file names generated by
+         <b>ls</b> be sorted again by <b>Field Number 2</b>
+         (<b>Read Position</b>) and then by
+         <b>Field Number 1</b> (<b>Read Direction</b>).
+         You need not concern yourself with the second sort
+         key as that will be consistent naturally (there are
+         only two values and their order will always naturally
+         be <b>f</b> followed by <b>r</b>, which is correct).
+      </p>
+
+      <p> With a bit of thought, this second <b>sort</b>ing
+          can be done with
+          the program <b>sort</b>.
+      </p>
+
+      <p>The first issue is that, by default, <b>sort</b> expects
+         <b>fields</b> (<b>sort keys</b>) to be separted
+         by <b>spaces</b> (or <b>tabs</b>).
+         Here '<b>-</b>' is used as a field separater. You need
+         to inform <b>sort</b> of this fact by using the
+         '<b>-t</b>' switch.
+      </p>
+
+      <p>By default, <b>sort</b> will <b>sort</b> on
+         <b>keys</b> in the
+         order they occur. Here it is desired that the files
+         are sorted on the </b>second key</b>, not the
+         <b>first</b>. This
+         you can specify using the '<b>-k</b>' switch.
+      </p>
+
+      <p>Now you just need to <b>pipe</b> the output of
+         <b>ls</b> that you
+         have already seen into an appropriately switched
+         invocation of <b>sort</b>. Just like this:
+      </p>
+
       <p>
         <span class="command">
           ls ?-* | sort -t - -k 2
         </span>
       </p>
 
+      <details class="comment">
+      <summary><span class="comsum">Comment</span></summary>
+        <img src="Images/sort01.png"
+             alt="Sleep Deep."
+             style="height:561px; width:800px;">
+      </details>
+
+      <p>The next stage is to use <b>cat</b> to stick all the
+         little files generated by <b>split</b> together in the
+         order you have just persuaded <b>ls</b> and
+         <b>sort</b> to output.
+      </p>
+
+      <p>To do this, you need to have a way to embed the
+         output of one command (its <b>value</b>, if you like)
+         into another. This can be done using
+         <b>back ticks</b> ('<b>`</b>').
+      </p>
+
+      <p>By enclosing a command in <b>back ticks</b>, you create
+         a reference to the output of that command rather
+         than the command itself.
+      </p>
+
+      <p>So the command to create
+         the <b>Read Pair fastq file</b> for which we have
+         been striving is:
+      </p>
 
       <p>
         <span class="command">
           cat `ls ?-* | sort -t - -k 2` > paired.fastq
         </span>
       </p>
+
+      <div class="hint">
+        <p><b><i>Note</i></b>: This command reads:
+          <table class="c1">
+            <tr>
+              <th style="width:40%"><b>Command section</b></th>
+              <th><b>Interpretation</b></th>
+            </tr>
+            <tr>
+              <td><span class="comtxt">cat</span></td>
+              <td>Con<b>cat</b>onate, in order, all the files that follow"</td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">
+                 `ls ?-* | sort -t - -k 2`</span></td>
+              <td>The list of files generated by the command <span class="comtxt">
+                  ls ?-* | sort -t - -k 2</span></td>
+            </tr>
+            <tr>
+              <td><span class="comtxt">> paired.fastq</span></td>
+              <td>directing the output ('<b>></b>') into a new file called <b>paired.fastq</b></td>
+            </tr>
+          </table><br>
+        </p>
+      </div>
 
       <p>
         <span class="command">
