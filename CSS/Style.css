@@ -35,7 +35,7 @@ h3 {
 p.smarg {
     text-align: justify;
     text-justify: inter-word;
-    margin-right: 15px;
+    margin-left: 0px; margin-right: 15px;
 }
 
 /* Table 95% - default, sort of?*/
