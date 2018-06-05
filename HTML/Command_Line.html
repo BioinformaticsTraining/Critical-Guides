@@ -72,7 +72,9 @@
      
 <!-- Guide Title - Something like -->
 
-<h1 style="text-align:center";>Critical Guide - Command Line UNIX for Bioinformatics</h1>
+<h1 style="text-align:center";>
+   Critical Guide - Command Line UNIX for Bioinformatics
+</h1>
 
 <!-- Offer a Clock ... why not :-)
 https://www.w3schools.com/js/default.asp -->
@@ -89,24 +91,21 @@ Click to record your <b>Start</b> time.</button>
      Apparently I should use a scheme?
 -->
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
 <ol class="lsect">
   <li>
     <details class="msect">
     <summary><b>Introduction:</b>
              (Objectives, Structure, Prerequisites)</summary>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
-<!--
-      Some sort of Overview
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+<!--  Some sort of Overview
       Unclear where this should go?
       I try stream of whatever and see where it leads -->
 
@@ -114,18 +113,30 @@ Click to record your <b>Start</b> time.</button>
 
         <h2>Guide Objectives.</h2>
 
-        <p>Many <b>Bioinformatics</b> objectives can be achieved using Web sites (<b>NCBI</b>, <b>EBI</b>,
-           <b>Expasy</b> and many more) and/or software with intuitive <b>G</b>raphical <b>U</b>ser
-           <b>I</b>nterfaces (<b>GUI</b>s). However, many more cannot, especially those involving large datasets,
-           experimental software and compute intensive tasks are involved. In such circumstances, the stark
-           environment of the <b>UNIX</b> command line is the preferred (often the only) choice.</p>
+        <p>Many <b>Bioinformatics</b> objectives can be achieved
+           using Web sites (<b>NCBI</b>, <b>EBI</b>,
+           <b>Expasy</b> and many more) and/or software with
+           intuitive <b>G</b>raphical <b>U</b>ser
+           <b>I</b>nterfaces (<b>GUI</b>s). However, many more
+           cannot, especially those involving large datasets,
+           experimental software and compute intensive tasks are
+           involved. In such circumstances, the stark
+           environment of the <b>UNIX</b> command line is the
+           preferred (often the only) choice.
+        </p>
 
-        <p>As most researchers will not have the luxurious option of delegating all their computing activities
-           to an "expert <b>Bioinformatition</b>", it is sensible for all to, at the very least, have some
-           familiarity with the <b>UNIX command line</b>. It is the objective of this "<b>Critical Sheet</b>"
-           to start the complete beginner on the journey towards such an understanding.</p>
+        <p>As most researchers will not have the luxurious option
+           of delegating all their computing activities
+           to an "expert <b>Bioinformatition</b>", it is sensible
+           for all to, at the very least, have some
+           familiarity with the <b>UNIX command line</b>. It is
+           the objective of this "<b>Critical Sheet</b>"
+           to start the complete beginner on the journey towards
+           such an understanding.
+        </p>
 
-        <p>It would not be practical to attempt a full competence with <b>UNIX</b> here.
+        <p>It would not be practical to attempt a full competence
+           with <b>UNIX</b> here.
            More modest targets include:
           <ol>
             <li>A superficial familiarity with the most
@@ -148,33 +159,49 @@ Click to record your <b>Start</b> time.</button>
   
         <h2>Guide Structure</h2>
 
-        <p>The approach of this Guide is to lead the user through a simple exercise that provides
-           a showcase for all the most common <b>UNIX commands</b> as well as a few "<i>tricks</i>"
+        <p>The approach of this Guide is to lead the user through
+           a simple exercise that provides
+           a showcase for all the most common <b>UNIX commands</b>
+           as well as a few "<i>tricks</i>"
            that, hopefully, make life a little easier.
-           At many stages, users will be offered the opportunity to consider how the effects of a
-           <b>UNIX command</b> might be achieved (if clumsily) using a typical <b>LINUX GUI</b>.
+           At many stages, users will be offered the opportunity
+           to consider how the effects of a
+           <b>UNIX command</b> might be achieved (if clumsily)
+           using a typical <b>LINUX GUI</b>.
            Whenever a new command is introduced, a <b>link</b>
            to the relevant
            <a href="http://man7.org/linux/man-pages/"
               target="_blank"><b>Manual Pages</b></a>
-           will be provided.</p>
+           will be provided.
+        </p>
 
-        <p>In the first stages of the exercise, no effort is made to include any "<i>Biological
-           Purpose</i>". We just meander through an investigation of <b>Basic UNIX commands</b>.
+        <p>In the first stages of the exercise, no effort is made
+           to include any "<i>Biological
+           Purpose</i>". We just meander through an investigation
+           of <b>Basic UNIX commands</b>.
            Later on, the exercise will include some relevant data
-           files and attempt to do some vaguely "<i>meaningful things</i>".</p>
+           files and attempt to do some vaguely "<i>meaningful
+           things</i>".
+        </p>
 
         <h2>Guide Prerequisites</h2>
 
-        <p>Beyond a level of computer literacy that is unavoidable in this technologically over
-           soaked era, hardly anything really.</p>
+        <p>Beyond a level of computer literacy that is unavoidable
+           in this technologically over
+           soaked era, hardly anything really.
+        </p>
 
-        <p>However, it would help to understand the way <b>files</b> and <b>directories</b>
-           (<b>folders</b> if you prefer) are arranged and referenced in a <b>UNIX</b> environment
-           however. If you feel the need, spend a few minutes glancing through the <b>Video</b> below.
+        <p>However, it would help to understand the way
+           <b>files</b> and <b>directories</b>
+           (<b>folders</b> if you prefer) are arranged and
+           referenced in a <b>UNIX</b> environment
+           however. If you feel the need, spend a few minutes
+           glancing through the <b>Video</b> below.
+        </p>
 
         <details class="video">
-        <summary><b>UNIX File Structure & Reference - A video</b></summary>
+        <summary><b>UNIX File Structure & Reference - A video</b>
+        </summary>
           <video width="320" height="240" controls preload>
             <source src="Videos/DotPlots.webm"></src>
           </video>
@@ -182,41 +209,44 @@ Click to record your <b>Start</b> time.</button>
 
       </div>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
-    </details>
-    <br>
+    </details><br>
   </li>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part I:</b>
-             A familiarisation with some Basic UNIX Commands</summary>
+             A familiarisation with some Basic UNIX Commands
+    </summary>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
       <div class="ramble">
 
         <h2>A familiarisation with some Basic UNIX Commands.</h2>
 
-        <p>In which we strive to introduce as many common <b>UNIX</b> commands as is practical.</p>
+        <p>In which we strive to introduce as many common
+           <b>UNIX</b> commands as is practical.
+        </p>
 
         <p>Every time a new command is used, a link to the official
            <a href="http://man7.org/linux/man-pages/"
               target="_blank"><b>Manual Pages</b></a>
            for that command
-           is provided. Here you can wallow in the full unabridged story. The exercise represents
-           a brutally abridged practical overview.</p>
+           is provided. Here you can wallow in the full unabridged
+           story. The exercise represents
+           a brutally abridged practical overview.
+        </p>
 
-        <p>Where it was felt to be helpful, the way a step of the exercise could be achieved using
-           a typical <b>LINUX GUI</b> environment (default <b>Ubuntu</b>) is offered.</p>
+        <p>Where it was felt to be helpful, the way a step of the
+           exercise could be achieved using
+           a typical <b>LINUX GUI</b> environment (default
+           <b>Ubuntu</b>) is offered.
+        </p>
 
         <p>So, open a fresh command line terminal window
            (<b>Ctrl-Alt-t</b> will normally do this)
@@ -224,12 +254,12 @@ Click to record your <b>Start</b> time.</button>
            free warm up, leading eventually to use of
            the command line to achieve vaguely
            Bioinformatic objectives.
-         </p>
+        </p>
 
-         <p class="hint">{<b><i>Hint</i></b>:
+        <p class="hint">{<b><i>Hint</i></b>:
            Especially when commands are long,
            why not <b>Copy/Paste</b> them from this page?}
-         </p>
+        </p>
       </div><br>
 
       <div class="new_command">
@@ -254,19 +284,25 @@ Click to record your <b>Start</b> time.</button>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/cd01.png" alt="Curses!" style="height:485px; width:800px;">
+        <img src="Images/cd01.png"
+             alt="Curses!"
+             style="height:485px; width:800px;">
       </details><br>
 
       <div class="new_command">
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/pwd.1p.html"
               target="_blank"><b>pwd</b></a>.
-           This command reports the absolute address of the working directory.
-           That is, it <b>p</b>rints the <b>w</b>orking <b>d</b>irectory.
+           This command reports the absolute address of the
+           working directory.
+           That is, it <b>p</b>rints the <b>w</b>orking
+           <b>d</b>irectory.
         </p>
       </div>
 
-      <p>Confirm the <b>working directory</b> is as expected with the command:</p>
+      <p>Confirm the <b>working directory</b> is as expected
+         with the command:
+      </p>
 
       <p>
         <span class="command">
@@ -275,11 +311,16 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <details class="comment">
-      <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/pwd01.png" alt="Fiddlesticks!" style="height:424px; width:800px;">
+      <summary><span class="comsum">Comment</span>
+      </summary>
+        <img src="Images/pwd01.png"
+             alt="Fiddlesticks!"
+             style="height:424px; width:800px;">
       </details>
 
-      <p>Move into your <b>Desktop</b> directory with the command:</p>
+      <p>Move into your <b>Desktop</b> directory with the
+         command:
+      </p>
 
       <p>
         <span class="command">
@@ -288,8 +329,11 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <details class="comment">
-      <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/cd02.png" alt="Curses!" style="height:403px; width:800px;">
+      <summary><span class="comsum">Comment</span>
+      </summary>
+        <img src="Images/cd02.png"
+             alt="Curses!"
+             style="height:403px; width:800px;">
       </details><br>
 
       <div class="new_command">
@@ -300,7 +344,9 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
-      <p>Make a new directory in which to continue the exercise with the command:</p>
+      <p>Make a new directory in which to continue the exercise
+         with the command:
+      </p>
 
       <p>
         <span class="command">
@@ -308,36 +354,49 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>Take a look at your graphical <b>Desktop</b>. You should be able to see an icon
-         representing your creation.</p>
+      <p>Take a look at your graphical <b>Desktop</b>.
+         You should be able to see an icon
+         representing your creation.
+      </p>
 
       <details class="comment">
-      <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/mkdir04.png" alt="Curses!" style="height:274px; width:800px;">
+      <summary><span class="comsum">Comment</span>
+      </summary>
+        <img src="Images/mkdir04.png"
+             alt="Curses!"
+             style="height:274px; width:800px;">
       </details>
 
       <details class="gui">
-      <summary><span class="guisum"><b>GUI</b> equivalent.</span></summary>
+      <summary><span class="guisum"><b>GUI</b> equivalent.</span>
+      </summary>
         <div class="grid-container">
           <div class="popup" onmouseover=
                      "Popup_Text(document.getElementById('mkdir01_Popup'))")">
             <div class="container">
-              <img src="Images/mkdir01.png" alt="Curses!"
+              <img src="Images/mkdir01.png"
+                   alt="Curses!"
                    style="height:145px; width:205px;">
               <span class="popuptext" id="mkdir01_Popup" style="text-align:center;">
-                    Right hand mouse click in the <b>Desktop</b> background.
-                    Select <b>New Folder</b>.</span>
+                    Right hand mouse click in the
+                    <b>Desktop</b> background.
+                    Select <b>New Folder</b>.
+              </span>
             </div>
           </div>
           <div class="popup" onmouseover=
                      "Popup_Text(document.getElementById('mkdir02_Popup'))")">
             <div class="container">
-              <img src="Images/mkdir02.png" alt="Curses!"
+              <img src="Images/mkdir02.png"
+                   alt="Curses!"
                    style="height:350px; width:245px;">
-              <span class="popuptext" id="mkdir02_Popup" style="text-align:center;">
-                    Right hand mouse click on the new <b>Untitled Folder</b> icon.
+              <span class="popuptext"
+                    id="mkdir02_Popup" style="text-align:center;">
+                    Right hand mouse click on the new
+                    <b>Untitled Folder</b> icon.
                     Select <b>Rename</b>.
-                    Enter <b>ProjectX</b>.</span>
+                    Enter <b>ProjectX</b>.
+              </span>
             </div>
           </div>                                                                         
           <div class="popup" onmouseover=
@@ -477,16 +536,19 @@ Click to record your <b>Start</b> time.</button>
               <img src="Images/touch04.png" alt="Curses!"
                    style="height:267px; width:400px;">
               <span class="popuptext" id="touch04_Popup" style="text-align:center;">
-                    Repeat the formula for the creation of the file <b>a</b>
+                    Repeat the formula for the creation of the
+                    file <b>a</b>
                     for each of the other <b>8</b> new files.
                     <b><i>Incredibly tedious!!</i></b>.
-                    The command line is typically the best choice for repeated operations.</span>
+                    The command line is typically the best choice
+                    for repeated operations.</span>
             </div>
           </div>
         </div>
       </details>
 
-      <p>While in the mode of creating useless things, why not a splendour of <b>directories</b>
+      <p>While in the mode of creating useless things, why not
+         a splendour of <b>directories</b>
          with the command:</p>
 
        <p>
@@ -912,23 +974,39 @@ Click to record your <b>Start</b> time.</button>
       <div class="suggestion">
         <h2>Suggestion:</h2>
 
-        <p>The next <b>command</b> involves typing long <b>file names</b> accurately.</p>
+        <p>The next <b>command</b> involves typing long
+           <b>file names</b> accurately.
+        </p>
 
-        <p>The <b>command line</b> is cruel! One typing mistake and it does not work!</p>
+        <p>The <b>command line</b> is cruel! One typing mistake
+           and it does not work!
+        </p>
 
-        <p>This <b>command</b> could be very tricky if you had not the option of
-           <b>Copy</b>/<b>Paste</b> from this web page!</p>
+        <p>This <b>command</b> could be very tricky if you had
+           not the option of
+           <b>Copy</b>/<b>Paste</b> from this web page!
+        </p>
 
-        <p>In a previous "<b>Suggestion</b>", you saw how typos might be corrected with minimal pain.
-           But ... better still ... using what is known as "<b>Tab Completion</b>" most typos could
-           be avoided altogether.</p>
+        <p>In a previous "<b>Suggestion</b>", you saw how typos
+           might be corrected with minimal pain.
+           But ... better still ... using what is known as
+           "<b>Tab Completion</b>" most typos could
+           be avoided altogether.
+        </p>
 
-        <p>Basically, if you enter enough of a <b>file name</b>/<b>directory name</b>/<b>command</b>
-           (according to context) to allow the system to know what you wish to type next,
-           you need only to press the <b>Tab</b> key and <b>UNIX</b> will type on up to the
-           next point where ambiguity exists (often to "<b>Completion</b>").</p>
+        <p>Basically, if you enter enough of a
+           <b>file name</b>/<b>directory name</b>/<b>command</b>
+           (according to context) to allow the system to know
+           what you wish to type next,
+           you need only to press the <b>Tab</b> key and
+           <b>UNIX</b> will type on up to the
+           next point where ambiguity exists (often to
+           "<b>Completion</b>").
+        </p>
 
-        <p>As a practical example, why not create the next command as follows?:</p>
+        <p>As a practical example, why not create the next
+           command as follows?:
+        </p>
 
         <ol>
           <li>
@@ -941,7 +1019,8 @@ Click to record your <b>Start</b> time.</button>
           </li>
           <li>
             Press the <b>Tab</b> key.<br><br>
-            As only one item in <b>ProjectX</b> begins with a '<b>.</b>',
+            As only one item in <b>ProjectX</b> begins
+            with a '<b>.</b>',
             <b>UNIX</b> can expand your efforts faultlessly to:
             <p>
               <span class="command">
@@ -957,7 +1036,8 @@ Click to record your <b>Start</b> time.</button>
             </p>
           </li>
           <li>
-            Press the <b>Tab</b> key once more and <b>UNIX</b> will finish
+            Press the <b>Tab</b> key once more and
+            <b>UNIX</b> will finish
             (nearly) the job for you!
             <p>
               <span class="command12">
@@ -965,15 +1045,20 @@ Click to record your <b>Start</b> time.</button>
                       .Cats_in_the_cupboard_but_they_dont_see_me
               </span>
             </p>
-          <li>The object is to remove the '<b>.</b>' from the beginning of the long file name,
+          <li>The object is to remove the '<b>.</b>' from the
+              beginning of the long file name,
               thus unhiding the file.<br><br>
 
-              To do this, use the <b>&larr;</b> key to move to the offending '<b>.</b>'
+              To do this, use the <b>&larr;</b> key to move to
+              the offending '<b>.</b>'
               and delete it. Done!
           </li>
         </ol>
-        <p><b>En Passant</b>: The message of the long <b>file name</b> here is but one of the many wisdoms
-           given to humanity by the great sage of the New World, <b>Huddie Leadbetter</b> (
+
+        <p><b>En Passant</b>: The message of the long
+           <b>file name</b> here is but one of the many wisdoms
+           given to humanity by the great sage of the New World,
+           <b>Huddie Leadbetter</b> (
            <a href="https://en.wikipedia.org/wiki/Lead_Belly"
               target="_blank">
            <b>Lead Belly</b></a>"
@@ -989,18 +1074,23 @@ Click to record your <b>Start</b> time.</button>
 
         <p><b>Finally</b>: If <b>UNIX</b> cannot <b>Tab Complete</b> a line because of ambiguities,
            press the <b>Tab</b> key twice and <b>UNIX</b> will display all the
-           possible ways to continue your intentions manually.</p>
+           possible ways to continue your intentions manually.
+        </p>
       </div>
 
-      <p>You can "unhide" your lengthy creation with the mega command:</p>
+      <p>You can "unhide" your lengthy creation with
+         the mega command:
+      </p>
  
       <p>
         <span class="command14">
-          mv .Cats_in_the_cupboard_but_they_dont_see_me Cats_in_the_cupboard_but_they_dont_see_me
+          mv .Cats_in_the_cupboard_but_they_dont_see_me
+              Cats_in_the_cupboard_but_they_dont_see_me
         </span>
       </p>
 
-      <p>Test your files new visibility status with the command:</p>
+      <p>Test your files new visibility status with the command:
+      </p>
 
       <p>
         <span class="command">
@@ -1010,7 +1100,9 @@ Click to record your <b>Start</b> time.</button>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/hidden06.png" alt="Figh!" style="height:308px; width:800px;">
+        <img src="Images/hidden06.png"
+             alt="Figh!"
+             style="height:308px; width:800px;">
       </details><br>
 
       <div class="new_command">
@@ -1022,9 +1114,12 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
-      <p>First, <b>c</b>o<b>p</b>y the <b>file aaa</b>, which is currently in the <b>directory dirIII</b>,
-         to the <b>Current Working Directory</b> ('<b>.</b>', also known as <b>ProjectX</b>)
-         with the command:</p>
+      <p>First, <b>c</b>o<b>p</b>y the <b>file aaa</b>, which
+         is currently in the <b>directory dirIII</b>,
+         to the <b>Current Working Directory</b> ('<b>.</b>',
+         also known as <b>ProjectX</b>)
+         with the command:
+      </p>
 
       <p>
         <span class="command">
@@ -1032,7 +1127,8 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>and then follow the advice of Brian (Wilson that is) and his melodious family.
+      <p>and then follow the advice of Brian (Wilson that is)
+         and his melodious family.
          <a href="https://www.youtube.com/watch?v=N0DWT-VO5pQ"
             target="_blank"> Do it again!</a>.</p>
 
@@ -1040,29 +1136,32 @@ Click to record your <b>Start</b> time.</button>
          to remember the <b>&uarr;</b> trick!}
       </p>
 
-      </p>
-
       <p>
         <span class="command">
           cp dirIII/abc .
         </span>
       </p>
 
-      <p>and ... it worked? But! ... no warning that second <b>c</b>o<b>p</b>y will destroy the
-         effect of the first?
+      <p>and ... it worked? But! ... no warning that second
+         <b>c</b>o<b>p</b>y will destroy the effect of the first?
       </p>
 
-      <p>In the strong and silent <b>Command Line</b> world, it is rather assumed that you always
-         really know what you are doing, and that it is inconceivable that you might occasionally
-         drift into the inadvertent. Dangerous in the extreme! Especially for those of us who have
+      <p>In the strong and silent <b>Command Line</b> world,
+         it is rather assumed that you always
+         really know what you are doing, and that it is
+         inconceivable that you might occasionally
+         drift into the inadvertent. Dangerous in the extreme!
+         Especially for those of us who have
          advanced far into the years of mental meander.
       </p>
 
-      <p>You can encourage a degree of caution into the system with the <b>-i</b> switch for
-         <b>cp</b> (and similar commands). This switch instructs <b>cp</b> to <b>i</b>nterrogate
-         the user before executing any irreversibly destructive operation.
-         Try it here with the command:
-       </p>
+      <p>You can encourage a degree of caution into the system
+         with the <b>-i</b> switch for
+         <b>cp</b> (and similar commands). This switch instructs
+         <b>cp</b> to <b>i</b>nterrogate
+         the user before executing any irreversibly destructive
+         operation. Try it here with the command:
+      </p>
 
       <p>
         <span class="command">
@@ -1070,18 +1169,23 @@ Click to record your <b>Start</b> time.</button>
         </span>
       </p>
 
-      <p>I copy a different file only to break the monotony, the proposal to destroy once more
+      <p>I copy a different file only to break the monotony,
+         the proposal to destroy once more
          <b>abc</b>, is the issue.
       </p>
 
-      <p>Hopefully, because of the <b>-i</b> switch, the system will politely inquire whether
-         you really wanted to destroy the original <b>abc</b> with a new <b>abc</b>.
+      <p>Hopefully, because of the <b>-i</b> switch, the system
+         will politely inquire whether
+         you really wanted to destroy the original <b>abc</b>
+         with a new <b>abc</b>.
          Answer as best suits your whim.
       </p>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/cp-i01.png" alt="Curses!" style="height:348px; width:800px;">
+        <img src="Images/cp-i01.png"
+             alt="Curses!"
+             style="height:348px; width:800px;">
       </details>
 
       <p>You have now achieved a merry presence of <b>files</b>, <b>directories</b> and <b>links</b> in the
@@ -1596,7 +1700,9 @@ Click to record your <b>Start</b> time.</button>
               particularly when repetitive operations are involved.</li>
         </ol>
 
-        <p> Now some simple questions to test your understanding.</p>
+        <p><b>Now some simple questions to test your
+           understanding.</b>
+        </p>
 
         <p class="hint"><b><i>Hint</i></b>: The
            <a href="http://man7.org/linux/man-pages/"
@@ -1716,8 +1822,7 @@ Click to record your <b>Start</b> time.</button>
                 </tr>
                 <tr>
                   <td><span class="comtxt">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         Here/comes/the/sun</span></td>
                   <td style="text-align:center; width:18%;">
                       <span style="text-align: center;">
@@ -1736,29 +1841,37 @@ Click to record your <b>Start</b> time.</button>
 
             <details class="comment">
             <summary><span class="comsum">Answer.</span></summary>
-              <img src="Images/rmdirp01.png" alt="My mojo just don't work on you!" style="height:538px; width:760px;">
-              <img src="Images/rmdirp02.png" alt="Never did, come to think of it." style="height:473px; width:760px;">
+              <img src="Images/rmdirp01.png"
+                   alt="My mojo just don't work on you!"
+                   style="height:538px; width:760px;">
+              <img src="Images/rmdirp02.png"
+                   alt="Never did, come to think of it."
+                   style="height:473px; width:760px;">
             </details>
 
           </li>
 
           <li>
 
-            <p class="smarg"> Something to showcase "cp -p" ... i.e preservation of time stamp.
+            <p class="smarg"> Something to showcase "cp -p" ...
+                              i.e preservation of time stamp.
             </p>
 
           </li>
 
           <li>
 
-            <p class="smarg">The exercise directory you created so long ago, is now awash with a delight of files, links
-               and directories of minimal purpose! The time has come to clean up and start afresh.
+            <p class="smarg">
+               The exercise directory you created
+               so long ago, is now awash with a delight of
+               files, links and directories of minimal purpose!
+               The time has come to clean up and start afresh.
             </p>
 
             <p class="smarg">How, with but a single command, using
-                 <a href="http://man7.org/linux/man-pages/man1/rm.1p.html"
-                    target="_blank"><b>rm</b></a>,
-                 would you remove everything that remains in <b>ProjectX</b>?
+               <a href="http://man7.org/linux/man-pages/man1/rm.1p.html"
+                  target="_blank"><b>rm</b></a>,
+               would you remove everything that remains in <b>ProjectX</b>?
             </p>
 
             <details class="comment">
@@ -1774,15 +1887,14 @@ Click to record your <b>Start</b> time.</button>
 
       </div>
 
-      <p>In the next phase of this exercise, the aim will be to use the commands that have been introduced
+      <p>In the next phase of this exercise, the aim will be to use
+         the commands that have been introduced
          to answer some biologically related, queries.
       </p>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
     </details>
     <br>
@@ -1790,47 +1902,62 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part II:</b>
-              Using <b>blast</b> from the <b>command line</b></summary>
+              Using <b>blast</b> from the <b>command line</b>
+    </summary>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
       <div class="ramble">
 
         <h2>Using <b>blast</b> from the <b>command line</b></h2>
 
-        <p>I will assume you have all, at least, heard of <b>blast</b>?.
-           It is undoubtedly the most used piece of Bioinformatics software,
+        <p>I will assume you have all, at least, heard of
+           <b>blast</b>?.
+           It is undoubtedly the most used piece of
+           Bioinformatics software,
            usually run from the
            <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi"
               target="_blank"><b>NCBI</b>
            web site</a> using a browser.
-           Its prime purpose is to compare query sequences with sequence databases to discover
-           similar sequences that might represent homologous entities.
+           Its prime purpose is to compare query sequences with
+           sequence databases to discover
+           similar sequences that might represent homologous
+           entities.
         </p>
 
         <p>In this section of the exercise, the plan is to:
           <ol>
-            <li>Download and install the <b>blast package</b>.</li>
-            <li>Get some Human protein query sequences.</li>
-            <li>Compare the query sequences to a suitable database at the <b>NCBI</b>.</li>
-            <li>Examine the output to determine what the query sequences might be.</li>
-            <li>Amend the <b>Environment Variable PATH</b> to enable to entire <b>blast package</b>.</li>
-            <li>Use a DNA Query against swissprot to illustrate that amended <b>PATH</b> works.<li>
+            <li>Download and install the <b>blast package</b>.
+            </li>
+            <li>Get some Human protein query sequences.
+            </li>
+            <li>Compare the query sequences to a suitable database
+                at the <b>NCBI</b>.
+            </li>
+            <li>Examine the output to determine what the query
+                sequences might be.
+            </li>
+            <li>Amend the <b>Environment Variable PATH</b> to
+                enable to entire <b>blast package</b>.
+            </li>
+            <li>Use a DNA Query against swissprot to illustrate
+                that amended <b>PATH</b> works.
+            <li>
           </ol>
         </p>
 
-        <p>Familiarity with the <b>UNIX commands</b> met in the previous stages of the exercise will
-           be assumed. Further commands will be introduced as they are required. 
+        <p>Familiarity with the <b>UNIX commands</b> met in the previous
+           stages of the exercise will be assumed. Further commands will be
+           introduced as they are required. 
+        </p>
 
       </div><br>
 
-<!-- #######################################################################################
-     ########## Software Installation. #####################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ########## Software Installation. ############ ---
+---- ############################################## -->
 
       <h3><u>blast Installation.</u></h3>
 
@@ -1854,10 +1981,11 @@ Click to record your <b>Start</b> time.</button>
             target="_blank"> Documentation</a>.
       </p>
 
-      <p>For now, I will just guide you through the vital bits of the 
+      <p>For now, I will just guide you through the vital
+         bits of the 
          <a href="http://nebc.nerc.ac.uk/bioinformatics/documentation/blast/netblast.html#2"
-            target="_blank">Installation Guide</a>
-         , with the objective of getting just one function of the
+            target="_blank">Installation Guide</a>,
+         with the objective of getting just one function of the
          <b>blast</b> suite operational for a demonstration
          of the possibilities.
       </p>
@@ -1870,7 +1998,8 @@ Click to record your <b>Start</b> time.</button>
         </p>
       </div>
 
-      <p>First, you need to download the entire blast package from the <b>NCBI</b> (where it is developed).
+      <p>First, you need to download the entire blast package
+         from the <b>NCBI</b> (where it is developed).
          Take a look through the possibilities offered at the blast
          <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/"
             target="_blank"> <b>Download Site</b></a>
@@ -2014,7 +2143,9 @@ Click to record your <b>Start</b> time.</button>
 
       <details class="comment">
       <summary><span class="comsum">Comment</span></summary>
-        <img src="Images/wget01.png" alt="Morning again! and my whole is aweeping." style="height:367px; width:800px;">
+        <img src="Images/wget01.png"
+             alt="Morning again! and my whole is aweeping." 
+             style="height:367px; width:800px;">
       </details>
 
       <br>
@@ -2294,9 +2425,9 @@ Click to record your <b>Start</b> time.</button>
              style="height:563px; width:800px;">
       </details>
 
-<!-- #######################################################################################
-     ########## Data Acquisition. ##########################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ########## Data Acquisition. ################# ---
+---- ############################################## -->
 
       <h3><u>Acquiring some Query data.</u></h3>
 
@@ -2372,12 +2503,14 @@ Click to record your <b>Start</b> time.</button>
              style="height:558px; width:800px;">
       </details>
 
-      <p> Just as a tidy after thought, why not tidy the <b>compressed tar file</b>
-          that contains the <b>Query Sequences</b> into the <b>Query_Sequences Directory</b>?
-          I never like to get rid of these files until I am really sure their use is over,
-          but it is good to have them out of the way.
-      <p>
+      <p>Just as a tidy after thought, why not tidy the
+         <b>compressed tar file</b> that contains the
+         <b>Query Sequences</b> into the <b>Query_Sequences Directory</b>?
+         I never like to get rid of these files until I am really sure
+         their use is over, but it is good to have them out of the way.
+      </p>
 
+      <p>
         <span class="command">
           mv Query_Sequences.tar.gz Query_Sequences
         </span>
@@ -2535,9 +2668,11 @@ Click to record your <b>Start</b> time.</button>
              style="height:421px; width:800px;">
       </details>
 
-<!-- #######################################################################################
-     ########## Using blastp. ##############################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ########## Using blastp. ##################### ---
+---- ############################################## ---
+---- ############################################## -->
 
       <h3><u>Running the blast package program blastp.</u></h3>
 
@@ -2682,7 +2817,8 @@ Click to record your <b>Start</b> time.</button>
       <br>
       <div class="new_command">
         <p>Introducing
-           <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" target="_blank"><b>grep</b></a>.
+           <a href="http://man7.org/linux/man-pages/man1/grep.1p.html" 
+              target="_blank"><b>grep</b></a>.
                    A command search for string matches
                    within text files.
         </p>
@@ -3046,9 +3182,9 @@ Click to record your <b>Start</b> time.</button>
       <p>should suffice.
       </p>
 
-<!-- #######################################################################################
-     ########## Using blastx. ##############################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ########## Using blastx. ##################### ---
+---- ############################################## -->
 
       <h3><u>Running the blast package program blastx.</u></h3>
 
@@ -3056,7 +3192,8 @@ Click to record your <b>Start</b> time.</button>
         <p>Introducing
            <a href="http://man7.org/linux/man-pages/man1/printenv.1.html"
               target="_blank"><b>printenv</b></a>.
-                   A command to list active <b>System Environment Variables</b>.
+                   A command to list active <b>System
+                   Environment Variables</b>.
         </p>
       </div>
 
@@ -3463,51 +3600,49 @@ Click to record your <b>Start</b> time.</button>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
         <ol type="1">
-          <li>Redirecting command output to a file ('<b>></b>').</li>
-          <li><b>Copy</b>/<b>Pasting</b> from/to a <b>terminal</b>.</li>
-          <li>Simple use of '<b>|</b>' (<b>pipes</b>).</li>
-          <li>Simple use of <b>Environment Variables</b></li>
+          <li>Redirecting command output to a file ('<b>></b>').
+          </li>
+          <li><b>Copy</b>/<b>Pasting</b> from/to a <b>terminal</b>.
+          </li>
+          <li>Simple use of '<b>|</b>' (<b>pipes</b>).
+          </li>
+          <li>Simple use of <b>Environment Variables</b>
+          </li>
         </ol>
 
         <p><b>Reflections:</b>
         <ol type="1">
-          <li>How easy it is to install a quite large <b>program package</b> for personal use.</li>
-          <li></li>
-          <li></li>
+          <li>How easy it is to install a quite large
+              <b>program package</b> for personal use.
+          </li>
         </ol>
 
-        <p> Now some simple questions to test your understanding.</p>
+        <p><b>Now some simple questions to test your
+           understanding.</b>
+        </p>
 
         <p class="hint">
            <b><i>Hint</i></b>: The
            <a href="http://man7.org/linux/man-pages/"
-              target="_blank"><b>Linux Manual Pages</b></a>
+              target="_blank">
+              <b>Linux Manual Pages</b></a>
            (and/or the
            <a href="http://man7.org/linux/man-pages/man1/man.1p.html"
               target="_blank"><b>man</b></a>
-            command) will be invaluable.
+           command) will be invaluable.
         </p>
 
         <ol type="1">
-          <li>use tar to make a tar from everything done in this section, then mv it up one?
+          <li>use tar to make a tar from everything done in
+              this section, then mv it up one?
               to maybe make it a hidden file? or rm it? or ...
-          </li>
-          <li>
-          </li>
-          <li>
-          </li>
-          <li>
-          </li>
-          <li>
           </li>
         </ol>
       </div>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
     </details>
     <br>
@@ -3515,19 +3650,25 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part III:</b>
-              Examination and Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</summary>
+             Examination and Analysis of
+             <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing
+             (<b>HTS</b>) Data
+    </summary>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
       <div class="ramble">
 
-        <h2>Examination and Analysis of <b>H</b>igh <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data</h2>
+        <h2>Examination and Analysis of <b>H</b>igh
+            <b>T</b>hroughput <b>S</b>equencing (<b>HTS</b>) Data
+        </h2>
 
-        <p>I will assume you have all, at least, heard of <b>fastq</b> files?.
-           If you would find it useful, I offer a short video outlining the wonders of the
+        <p>I will assume you have all, at least, heard of
+           <b>fastq</b> files?.
+           If you would find it useful, I offer a short video
+           outlining the wonders of the
            fastq format and related issues.
 
           <details class="video">
@@ -3540,23 +3681,34 @@ Click to record your <b>Start</b> time.</button>
 
         <p>In this section of the exercise, the plan is to:
           <ol>
-            <li>Get a couple of <b><i>very small</i></b> <b>fastq</b> files representing forward and reverse read pairs.</li>
-            <li>Examine, concatenate and sort them into the shape required by the mapping software.</li>
-            <li>What else? Definitely not run HTS software!.</li>
+            <li>Get a couple of <b><i>very small</i></b>
+                <b>fastq</b> files representing forward and
+                reverse read pairs.
+            </li>
+            <li>Examine, concatenate and sort them into the
+                shape required by the mapping software.
+            </li>
+            <li>What else? Definitely not run HTS software!.
+            </li>
           </ol>
         </p>
 
-        <p>Familiarity with the <b>UNIX commands</b> met in the previous stages of the exercise will
-           be assumed. Further commands will be introduced as they are required. 
+        <p>Familiarity with the <b>UNIX commands</b> met in the
+           previous stages of the exercise will
+           be assumed. Further commands will be introduced as
+           they are required. 
+        </p>
 
       </div><br>
 
-      <p>I assume you are sitting comfortably in your <b>ProjectX</b> directory?
+      <p>I assume you are sitting comfortably in your
+         <b>ProjectX</b> directory?
          If not, do whatever it takes to get there.
       </p>
 
       <p>Create a directory specific to this section,
-         and make it the <b>Current Working Directory</b> with the commands:
+         and make it the <b>Current Working Directory</b> with
+         the commands:
       </p>
 
       <p>
@@ -3637,7 +3789,8 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <details class="comment">
-      <summary><span class="comsum">Comment</span></summary>
+      <summary><span class="comsum">Comment</span>
+      </summary>
         <img src="Images/HTS01.png"
              alt="Sleep Deep."
              style="height:553px; width:800px;">
@@ -3664,6 +3817,7 @@ Click to record your <b>Start</b> time.</button>
           file *
         </span>
       </p>
+
       <p>All jolly fascinating stuff! Although a
          feeling of information overload is hard to
          repress, unless you are the mother of, or
@@ -4495,6 +4649,8 @@ Click to record your <b>Start</b> time.</button>
         <h2><i><u>Checkpoint</u></i></h2>
 
         <p><b>Commands introduced in this section are:</b>
+        </p>
+
         <ol type="1">
           <li>
             <a href="http://man7.org/linux/man-pages/man1/file.1.html"
@@ -4530,6 +4686,8 @@ Click to record your <b>Start</b> time.</button>
         </ol>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
+        </p>
+
         <ol type="1">
           <li>Use of the '<b>-S</b>' <b>switch</b> with
               <b>less</b>, to view files with long lines.
@@ -4541,6 +4699,8 @@ Click to record your <b>Start</b> time.</button>
         </ol>
 
         <p><b>Reflections:</b>
+        </p>
+
         <ol type="1">
           <li>
             As I feel sure you will agree, following through
@@ -4581,19 +4741,20 @@ Click to record your <b>Start</b> time.</button>
           </li>
         </ol>
 
-        <p> Now some simple questions to test your understanding.</p>
+        <p><b>Now some simple questions to test your
+           understanding.</b>
+        </p>
 
-        <div class="hint">
-          <p>
-            <b><i>Hint</i></b>: The
-             <a href="http://man7.org/linux/man-pages/"
-                target="_blank"><b>Linux Manual Pages</b></a>
-            (and/or the
-            <a href="http://man7.org/linux/man-pages/man1/man.1p.html"
-               target="_blank"><b>man</b></a>
-            command) will be invaluable.
-          </p>
-        </div>
+
+        <p class="hint">
+          <b><i>Hint</i></b>: The
+           <a href="http://man7.org/linux/man-pages/"
+              target="_blank"><b>Linux Manual Pages</b></a>
+          (and/or the
+          <a href="http://man7.org/linux/man-pages/man1/man.1p.html"
+             target="_blank"><b>man</b></a>
+          command) will be invaluable.
+        </p>
 
         <ol type="1">
           <li>
@@ -4601,46 +4762,47 @@ Click to record your <b>Start</b> time.</button>
         </ol>
       </div>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
     </details><br>
   </li>
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
   <li>
     <details class="msect">
     <summary><b>Exercise - Part IV:</b>
              Writing scripts (programs) in bash.</summary>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
       <div class="ramble">
 
         <h2>Writing scripts (programs) in bash.</h2>
 
-        <p>Need ideas, themes, topics here.</p>
+        <p>Need ideas, themes, topics here.
+        </p>
 
         <p>Every time a new command is used, a link to the official
            <a href="http://man7.org/linux/man-pages/"
               target="_blank"><b>Manual Pages</b></a>
            for that command
-           is provided. Here you can wallow in the full unabridged story. The exercise represents
-           a brutally abridged practical overview.</p>
+           is provided. Here you can wallow in the full unabridged
+           story. The exercise represents
+           a brutally abridged practical overview.
+        </p>
 
-        <p>Where it was felt to be helpful, the way a step of the exercise could be achieved using
-           a typical <b>LINUX GUI</b> environment (default <b>Ubuntu</b>) is offered.</p>
+        <p>Where it was felt to be helpful, the way a step of the
+           exercise could be achieved using
+           a typical <b>LINUX GUI</b> environment (default
+           <b>Ubuntu</b>) is offered.
+        </p>
 
         <p>So, open a fresh command line terminal window
            (<b>Ctrl-Alt-t</b> will normally do this)
@@ -4663,36 +4825,41 @@ Click to record your <b>Start</b> time.</button>
         <h2><i><u>Checkpoint</u></i></h2>
 
         <p><b>Commands introduced in this section are:</b>
+        </p>
+
         <ol type="1">
           <li>
           </li>
         </ol>
 
         <p><b>Concepts/tricks introduced in this section are:</b>
+        </p>
+
         <ol type="1">
           <li>
           </li>
         </ol>
 
         <p><b>Reflections:</b>
+        </p>
+
         <ol type="1">
           <li>
           </li>
         </ol>
 
-        <p> Now some simple questions to test your understanding.</p>
+        <p><b>Now some simple questions to test your
+           understanding.</b>
+        </p>
 
-        <div class="hint">
-          <p>
-            <b><i>Hint</i></b>: The
-             <a href="http://man7.org/linux/man-pages/"
-                target="_blank"><b>Linux Manual Pages</b></a>
-            (and/or the
-            <a href="http://man7.org/linux/man-pages/man1/man.1p.html"
-               target="_blank"><b>man</b></a>
-            command) will be invaluable.
-          </p>
-        </div>
+        <p class="hint"><b><i>Hint</i></b>: The
+           <a href="http://man7.org/linux/man-pages/"
+              target="_blank"><b>Linux Manual Pages</b></a>
+           (and/or the
+           <a href="http://man7.org/linux/man-pages/man1/man.1p.html"
+              target="_blank"><b>man</b></a>
+           command) will be invaluable.
+        </p>
 
         <ol type="1">
           <li>
@@ -4702,18 +4869,15 @@ Click to record your <b>Start</b> time.</button>
     </details>
   </li>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
 </ol>
 
-<!-- #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     #######################################################################################
-     ####################################################################################### -->
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
 
 <button type="button"
 onclick="document.getElementById('End_Time').innerHTML = Date()">
