@@ -79,7 +79,8 @@ table.c2 td {
 
 div.ramble {
     background-color: Moccasin; border-style: solid;
-    width: 800px;
+    max-width: 800px;
+    margin-right: auto;
 }
 
 /* div for Suggestions */
@@ -293,6 +294,7 @@ img.sup {
 .msect {
     background: LavenderBlush; border-right: 106px;
     width: 800px;
+    margin-right: auto;
 }
 
 /* class for Sections List*/
@@ -300,7 +302,7 @@ img.sup {
 .lsect {
     background: LavenderBlush; padding: 50px;
     max-width: 960px;
-    margin: inherit;
+    margin: auto;
 }
 
 /* class for Exercise New Commands */
@@ -315,7 +317,8 @@ img.sup {
 
 .hint {
     background-color: Lime; color: Maroon;
-    max-width: 750px; margin: inherit;
+    max-width: 750px;
+    margin-right: auto;
 }
 
 /* class for Command text 16 px - default */
