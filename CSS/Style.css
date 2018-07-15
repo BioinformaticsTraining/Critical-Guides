@@ -299,21 +299,23 @@ img.sup {
 
 .lsect {
     background: LavenderBlush; padding: 50px;
-    width: 856px;
+    max-width: 960px;
+    margin: inherit;
 }
 
 /* class for Exercise New Commands */
 
 .new_command {
     background-color: LightGreen; border-style: double;
-    width: 800px;
+    max-width: 800px;
+    margin-right: auto;
 }
 
 /* class for Hints  */
 
 .hint {
     background-color: Lime; color: Maroon;
-    width: 750px;   
+    max-width: 750px; margin: inherit;
 }
 
 /* class for Command text 16 px - default */
