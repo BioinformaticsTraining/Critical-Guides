@@ -370,8 +370,9 @@ Click to record your <b>Start</b> time.</button>
             <p><b>Part (i)</b>
             </p>
 
-            <p>Download the file <a href="../Data/sequences.fasta">
-                                 <b>sequences.fasta</b></a>,
+            <p>Download the file
+               <a href="../Data/sequences.fasta"
+                  target="_blank"> <b>sequences.fasta</b></a>,
                and put the file in your <b>Current Working
                Directory</b>.
             </p>
@@ -424,6 +425,78 @@ Click to record your <b>Start</b> time.</button>
             </p>
 
             <p><b>Part (i)</b>
+            </p>
+
+            <p>Download the file
+               <a href="../Data/reads.fastq"
+                  target="_blank"> <b>reads.fastq</b></a>,
+               and put the file in your <b>Current Working
+               Directory</b>.
+            </p>
+
+            <p>This is a very very small <b>fastq</b> file.
+
+            <p>I will assume you have all, at least, heard of
+               <b>fastq</b> files?.
+            </p>
+
+            <p><b>fastq</b> is a file format for <b>H</b>igh
+               <b>T</b>hroughput <b>S</b>equencing
+               (<b>HTS</b>) reads,
+               usually each fastq file will contain
+               millions of reads.
+            </p>
+
+            <p>If you wish to know more about this format,
+               we offer a short video outlining the wonders of the
+              <b>fastq Format</b> and related issues.
+            </p>
+
+            <details class="video">
+            <summary><b>FASTQ File Format - A video</b></summary>
+              <video width="320" height="240" controls preload>
+                <source src="Videos/00-FASTQ_PHRED_ASCII-Part_1/00-FASTQ_PHRED_ASCII-Part_1.mp4"></src>
+              </video>
+            </details>
+
+            <p>However, all you <b><u><i>need</i></u></b> to
+               know about this format to do this exercise is;
+            </p>
+
+            <ol>
+              <li>Each <b>read</b> uses <b>4</b>
+                  lines of the file</li>
+              <li>The first line of each read is the
+                  <b>Annotation</b> line and begins with
+                  a "<b>@</b>"</li>
+            </ol><br>
+
+            <p><b>Part (ii)</b>
+            </p>
+
+            <p>Write code to read in the file
+               <b>reads.fasta</b> one line at a time and
+               then print out only the sequence
+               <b>Annotation Lines</b>
+               (the ones that start with a '<b>@</b>'.
+
+               When the entire file is read, print out the
+               number of <b>Reads</b> its contained.
+            </p>
+
+            <p><b>Part (iii)</b>
+            </p>
+
+            <p>Using the <b>Python</b> command <b>break</b>,
+               Amend the code of <b>Part (ii)</b> so that
+               only the reads with <b>Annotation Lines</b>
+               less than <b>@SRR1030347.124000</b>
+               are processed.
+            </p>
+
+            <p>It is safe to assume that the reads are
+               strictly ordered by their
+               <b>Annotation Lines</b>.
             </p>
 
             <details class="comment">

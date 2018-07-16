@@ -294,7 +294,7 @@ img.sup {
 .msect {
     background: LavenderBlush; border-right: 106px;
     width: 800px;
-    margin-right: auto;
+    margin: auto;
 }
 
 /* class for Sections List*/
