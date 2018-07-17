@@ -444,7 +444,7 @@ Click to record your <b>Start</b> time.</button>
               Sounds far trickier than it is, honest!
             </div>
 
-          <p><b><u>Pseudo-Code</u></b><br><br>
+          <p><b><u>Pseudo-Code</u></b><br>
             <div class="pseudo">
               Decide (<b>randomly</b>) upon a value for
               the first term<br>
@@ -452,18 +452,87 @@ Click to record your <b>Start</b> time.</button>
               <b>n</b>, the number of terms to be computed<br>
               Display the <b>Random Start Values</b> nicely<br>
               For each term to be computed & displayed<br>
-              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
-              <b>Odd term?</b>
-              <b>Subtract 2 from last term</b> to give new term<br>
-              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
-              <b>Even term?</b>
-              <b>Double last term</b> to give new term<br>
-              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
-              Display new term
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <b>Odd term</b>?
+              <b>Subtract 2 from last term</b> to give
+              <b>new term</b><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <b>Even term</b>?
+              <b>Double last term</b> to give <b>new term</b><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              Display <b>new term</b>
             </div>
           </p>
 
-      
+          <p><b><u>Code</u></b><br>
+            <div class="code16">
+              import random as r;
+              <span Class="codecomm16">
+                # Import Library to enable random number generation
+              </span><br><br>
+              term = r.randint(1,7);
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # Choose initial Value for a Sequence term.
+              </span><br>
+              Number_of_terms = r.randint(5,10);
+              <span Class="codecomm16">
+                # Choose how many Sequence terms to compute.
+              </span><br><br>
+              <span Class="codecomm16">
+                # Make public Initial Starting Value
+                & Number of terms to compute.
+              </span><br>
+              print "Initial Sequence Value is: " +
+                            str(term);<br>
+              print "Number of terms to compute is: " +
+                            str(Number_of_terms);<br><br>
+              for term_count in range(1,Number_of_terms + 1):
+              <span Class="codecomm16">
+                # For each term:
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              if term_count % 2 == 0:
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # If the term is even,
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              term = 2 * term;
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # multiply by 2,
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              else:
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;</code>
+                # otherwise,
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              term = term - 2;
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # subtract 2.
+              </span><br><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              print "Term " + str(term_count) + " is " + str(term);
+              <span Class="codecomm16">
+                # Print the New Term.
+              </span><br><br>
+            </div>
+
         </li>
 
         <li>
@@ -471,6 +540,17 @@ Click to record your <b>Start</b> time.</button>
           <p class="smarg"><b><u>Example 3</u></b>
              (Read a file, line by line):
           </p>
+
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+
+            </div>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            <div class="code16">
+
+            </div>
 
         </li>
 
@@ -480,6 +560,17 @@ Click to record your <b>Start</b> time.</button>
              (Read a file, character by character):
           </p>
 
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+
+            </div>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            <div class="code16">
+
+            </div>
+
         </li>
 
         <li>
@@ -488,6 +579,17 @@ Click to record your <b>Start</b> time.</button>
              (Read a file, using a URL):
           </p>
 
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+
+            </div>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            <div class="code">
+
+            </div>
+
         </li>
 
         <li>
@@ -495,12 +597,34 @@ Click to record your <b>Start</b> time.</button>
           <p class="smarg"><b><u>Example 6</u></b>:
           </p>
 
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+
+            </div>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            <div class="code">
+
+            </div>
+
         </li>
 
         <li>
 
           <p class="smarg"><b><u>Example 7</u></b>:
           </p>
+
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+
+            </div>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            <div class="code">
+
+            </div>
 
         </li>
 
