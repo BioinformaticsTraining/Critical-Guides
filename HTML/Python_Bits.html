@@ -310,16 +310,16 @@ Click to record your <b>Start</b> time.</button>
       <p>Essentially, the basic <b>For Loop</b> is of
          the form:<br><br>
 
-         <span class="code"><b>For </b>
-         &lt;<i>Control Variable</i>&gt;
+         <div class="code">For </b>
+         <span style="font-weight:normal;"><i>&lt;Control Variable</i>&gt;</span>
          <b>in </b>
-         &lt;<i>List</i>&gt;<b>:<br>
+         <span style="font-weight:normal;"><i>&lt;List&gt;</i></span>:<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-         </b></span>
+         </div>
       </p>
 
       <h3>Some Examples</h3>
@@ -328,14 +328,26 @@ Click to record your <b>Start</b> time.</button>
 
         <li>
 
-          <p class="smarg"><b><u>Example 1</u></b>:
+          <p class="smarg"><b><u>Example 1</u></b>
+             (Control by simple list):
           </p>
 
-          <p><b><u>Pseudo-Code</u></b><br><br>
-            <span class="pseudo"> Compute and display
+          <p><b><u>Problem</u></b><br>
+            <div class="problem">Compute and display
               the number of each
               <b>Base Type</b> in a given <b>DNA Sequence</b>
-            </span>
+            </div>
+          </p>
+
+          <p><b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+              Define the <b>DNA Sequence</b> to be analysed<br><br>
+              For every possible <b>Base Type</b><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Compute and display
+              how many of that
+              <b>Base Type</b> are included in the target
+              <b>DNA Sequence</b>
+            </div>
           </p>
 
           <p><b><u>Code</u></b><br><br>
@@ -343,10 +355,10 @@ Click to record your <b>Start</b> time.</button>
             of any description?
           </p>
 
-          <p>This would work fine:<br><br>
+          <p>This would work fine:<br>
 
-            <span class="code16">
-              <b>dna = "AGCTTCGACTTGAGC";
+            <div class="code16">
+              dna = "AGCTTCGACTTGAGC";
               <span Class="codecomm16">
                 # Define the DNA for analysis<br><br>
               </span>
@@ -364,9 +376,9 @@ Click to record your <b>Start</b> time.</button>
               </span>
               print "G Count is: " + str(dna.count("G"));
               <span Class="codecomm16">
-                # Count & Display the 'G' count<br></b>
+                # Count & Display the 'G' count<br>
               </span>
-            </span>
+            </div>
           </p>
 
           <p>Try it by <b>Copy/Paste</b> into the
@@ -387,8 +399,10 @@ Click to record your <b>Start</b> time.</button>
           <p>The proper code solution is to use a simple
              <b>Counting Loop</b>, something like:<br>
             <div class="code16">
-              <b>dna = "AGCTTCGACTTGAGC";<span Class="codecomm16">
-              # Define the DNA for analysis<br><br></span>
+              dna = "AGCTTCGACTTGAGC";
+              <span Class="codecomm16">
+                # Define the DNA for analysis<br><br>
+              </span>
               for bp in ["A","C","G","T"]:
               <span Class="codecomm16">
                 # <i>bp</i> is the &lt;<i>Control
@@ -409,28 +423,69 @@ Click to record your <b>Start</b> time.</button>
 
         <li>
 
-          <p class="smarg"><b><u>Example 2</u></b>:
+          <p class="smarg"><b><u>Example 2</u></b>
+             (Control by simple numeric range):
+          </p>
+
+          <p><b><u>The problem</u></b><br>
+            <div class="problem">
+              Consider the <b>Numerical Sequence</b> in which
+              each term is alternately:
+              <ul>
+                <li><b>2</b> less than the previous term</li>
+                <li><b>Twice</b> the previous term</li>
+              </ul>
+              From a <b>Random Initial Integer</b> value
+              between <b>1</b> and <b>7</b>, compute and
+              display the first <b>n</b> terms, where
+              <b>n</b> is a randomly generated value
+              between <b>5</b> and <b>10</b>.<br><br>
+
+              Sounds far trickier than it is, honest!
+            </div>
+
+          <p><b><u>Pseudo-Code</u></b><br><br>
+            <div class="pseudo">
+              Decide (<b>randomly</b>) upon a value for
+              the first term<br>
+              Decide (<b>randomly</b>) upon a value for,
+              <b>n</b>, the number of terms to be computed<br>
+              Display the <b>Random Start Values</b> nicely<br>
+              For each term to be computed & displayed<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              <b>Odd term?</b>
+              <b>Subtract 2 from last term</b> to give new term<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              <b>Even term?</b>
+              <b>Double last term</b> to give new term<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              Display new term
+            </div>
+          </p>
+
+      
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 3</u></b>
+             (Read a file, line by line):
           </p>
 
         </li>
 
         <li>
 
-          <p class="smarg"><b><u>Example 3</u></b>:
+          <p class="smarg"><b><u>Example 4</u></b>
+             (Read a file, character by character):
           </p>
 
         </li>
 
         <li>
 
-          <p class="smarg"><b><u>Example 4</u></b>:
-          </p>
-
-        </li>
-
-        <li>
-
-          <p class="smarg"><b><u>Example 5</u></b>:
+          <p class="smarg"><b><u>Example 5</u></b>
+             (Read a file, using a URL):
           </p>
 
         </li>

@@ -120,7 +120,7 @@ span.comsum {
 .code {
     display:inline-block;
     background-color: White; color: Black;
-    font-family: courier; font-size: 18px;
+    font-family: courier; font-size: 18px; font-weight: bold;
     width: 800;
 }
 
@@ -129,7 +129,7 @@ span.comsum {
 .code18 {
     display:inline-block;
     background-color: White; color: Black;
-    font-family: courier; font-size: 18px;
+    font-family: courier; font-size: 18px; font-weight: bold;
     width: 800;
 }
 
@@ -138,7 +138,7 @@ span.comsum {
 .code16 {
     display:inline-block;
     background-color: White;
-    font-family: courier; font-size: 16px;
+    font-family: courier; font-size: 16px; font-weight: bold;
     width: 800px;
 }
 
@@ -147,7 +147,7 @@ span.comsum {
 .codecomm16 {
     display:inline;
     background-color: White; color: Blue;
-    font-family: courier; font-size: 16px;
+    font-family: courier; font-size: 16px; font-weight: bold;
     width: 800px;
 }
 
@@ -347,6 +347,13 @@ img.sup {
 .new_command {
     background-color: LightGreen; border-style: double;
     max-width: 800px;
+    margin-right: auto;
+}
+
+/* class for Problem Definitions */
+
+.problem {
+    background-color: Gainsboro; color: auto;
     margin-right: auto;
 }
 
