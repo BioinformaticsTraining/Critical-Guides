@@ -13,4 +13,6 @@ for term_count in range(1,Number_of_terms + 1): # For each term:
     else:                             # otherwise, 
         term = term - 2;              # subtract 2. 
 
-    print "Term " + str(term_count) + " is " + str(term); # Print the New Term. 
+    print "Term " + str(term_count) + " is " + str(term); # Print the New Term.
+ 
+

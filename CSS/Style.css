@@ -350,6 +350,13 @@ img.sup {
     margin-right: auto;
 }
 
+/* class for Experiments */
+
+.experiment {
+    background-color: Linen; color: auto;
+    margin-right: auto;
+}
+
 /* class for Problem Definitions */
 
 .problem {
