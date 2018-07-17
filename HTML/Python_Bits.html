@@ -265,11 +265,11 @@ Click to record your <b>Start</b> time.</button>
 
           <p>For this section, it will be assumed that you
              are familiar with the types of <b>Loop Structure</b>
-             that can be incorporated in an <b>Alogorithm</b>.
+             that can be incorporated in an <b>Algorithm</b>.
           </p>
 
-          <p>We offer a short Video to discuss as much as
-             is relevant.
+          <p>We offer a short Video to discuss as much of
+             these issues as is relevant here.
           </p>
 
           <p>Class time will not be allocated to this material,
@@ -299,13 +299,162 @@ Click to record your <b>Start</b> time.</button>
 
       </div>
 
-      <p>Then the syntax with trivial examples??
+      <h2><u>SYNTAX for Python Loop Structures</u></h2>
+
+      <p> In outline, the patterns for all <b>Python Loops</b>
+          are disarmingly straight forward.
       </p>
 
-      <p>Hand held exercise using Y/N code??
+      <h2>Counting (For) Loops</h2>
+
+      <p>Essentially, the basic <b>For Loop</b> is of
+         the form:<br><br>
+
+         <span class="code"><b>For </b>
+         &lt;<i>Control Variable</i>&gt;
+         <b>in </b>
+         &lt;<i>List</i>&gt;<b>:<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+         </b></span>
       </p>
 
-      <p>Exercises with answers withheld??
+      <h3>Some Examples</h3>
+
+      <ol>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 1</u></b>:
+          </p>
+
+          <p><b><u>Pseudo-Code</u></b><br><br>
+            <span class="pseudo"> Compute and display
+              the number of each
+              <b>Base Type</b> in a given <b>DNA Sequence</b>
+            </span>
+          </p>
+
+          <p><b><u>Code</u></b><br><br>
+            Well, you could argue you do not need a <b>Loop</b>
+            of any description?
+          </p>
+
+          <p>This would work fine:<br><br>
+
+            <span class="code16">
+              <b>dna = "AGCTTCGACTTGAGC";
+              <span Class="codecomm16">
+                # Define the DNA for analysis<br><br>
+              </span>
+              print "A Count is: " + str(dna.count("A"));
+              <span Class="codecomm16">
+                # Count & Display the 'A' count<br>
+              </span>
+              print "C Count is: " + str(dna.count("C"));
+              <span Class="codecomm16">
+                # Count & Display the 'C' count<br>
+              </span>
+              print "T Count is: " + str(dna.count("T"));
+              <span Class="codecomm16">
+                # Count & Display the 'T' count<br>
+              </span>
+              print "G Count is: " + str(dna.count("G"));
+              <span Class="codecomm16">
+                # Count & Display the 'G' count<br></b>
+              </span>
+            </span>
+          </p>
+
+          <p>Try it by <b>Copy/Paste</b> into the
+             <b>Python Interpreter</b>.
+          </p>
+
+          <p>But the code is very clumsy and repetitive, even
+             when counting <b>Base Pairs</b>, of which there are
+             but <b>4</b> types.
+          </p>
+
+          <p>Imagine how horrible the code would appear for
+             the analogous analysis of a <b>Protein
+             Sequence</b>, comprised of <b>20</b>
+             different <b>Amino Acid</b> possibilities!
+          </p>
+
+          <p>The proper code solution is to use a simple
+             <b>Counting Loop</b>, something like:<br>
+            <div class="code16">
+              <b>dna = "AGCTTCGACTTGAGC";<span Class="codecomm16">
+              # Define the DNA for analysis<br><br></span>
+              for bp in ["A","C","G","T"]:
+              <span Class="codecomm16">
+                # <i>bp</i> is the &lt;<i>Control
+                Variable</i>&gt;
+                <i>[A,C,G,T]</i> is the
+                &lt;<i>List</i>&gt<br>
+              </span>
+              &nbsp;&nbsp;&nbsp;
+              print bp + " Count is: " +
+              str(dna.count(bp));
+              <span Class="codecomm16">
+                  # Count & Display base types<br>
+              </span>
+            </div>
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 2</u></b>:
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 3</u></b>:
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 4</u></b>:
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 5</u></b>:
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 6</u></b>:
+          </p>
+
+        </li>
+
+        <li>
+
+          <p class="smarg"><b><u>Example 7</u></b>:
+          </p>
+
+        </li>
+
+      </ol>
+
+      <p>
+      </p>
+
+      <p>
       </p>
 
       <div class="checkpoint">
@@ -344,6 +493,8 @@ Click to record your <b>Start</b> time.</button>
           <li>
             <p class="smarg"><b><u>Exercise 1</u></b>:
             </p>
+
+            <p>Building xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
             <p><b>Part (i)</b>
             </p>
@@ -478,7 +629,6 @@ Click to record your <b>Start</b> time.</button>
 
             <p><b>Part (i)</b>
             </p>
-
 
             <details class="comment">
             <summary><span class="comsum">Answer.</span>
@@ -630,8 +780,8 @@ Click to record your <b>Start</b> time.</button>
              that can be incorporated in an <b>Alogorithm</b>.
           </p>
 
-          <p>We offer a short Video to discuss as much as
-             is relevant.
+          <p>We offer a short Video to discuss as much of
+             these issues as is relevant here.
           </p>
 
           <p>Class time will not be allocated to this material,
@@ -671,15 +821,12 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>
-        <span class="command">
-          mkdir HTS; cd HTS;
-        </span>
       </p>
 
       <p>Then the syntax with trivial examples??
       </p>
 
-      <p>Hand held exercise using Y/N code??
+      <p>
       </p>
 
       <div class="checkpoint">

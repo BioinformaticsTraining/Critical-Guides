@@ -114,6 +114,43 @@ span.comsum {
     width: 200px;
     background-color: LightGray; 
 }
+
+/* Class for Code Blocks */
+
+.code {
+    display:inline-block;
+    background-color: White; color: Black;
+    font-family: courier; font-size: 18px;
+    width: 800;
+}
+
+/* Class for Code Blocks 18px (Default) */
+
+.code18 {
+    display:inline-block;
+    background-color: White; color: Black;
+    font-family: courier; font-size: 18px;
+    width: 800;
+}
+
+/* Class for Code Blocks 16px */
+
+.code16 {
+    display:inline-block;
+    background-color: White;
+    font-family: courier; font-size: 16px;
+    width: 800px;
+}
+
+/* Class for Code Comment Blocks 16px */
+
+.codecomm16 {
+    display:inline;
+    background-color: White; color: Blue;
+    font-family: courier; font-size: 16px;
+    width: 800px;
+}
+
 /* span for Exercise Commands 22px */
 
 span.command18 {
@@ -310,6 +347,13 @@ img.sup {
 .new_command {
     background-color: LightGreen; border-style: double;
     max-width: 800px;
+    margin-right: auto;
+}
+
+/* class for Pseudo Code */
+
+.pseudo {
+    background-color: Cornsilk; color: auto;
     margin-right: auto;
 }
 
