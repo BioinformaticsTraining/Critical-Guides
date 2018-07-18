@@ -276,6 +276,13 @@ span.quote {
     font-style: italic;
 }
 
+/* details for Examples */
+
+details.example {
+    background-color: MistyRose;
+    width: 906px;
+}
+
 /* details for Exercise Comments */
 
 details.comment {

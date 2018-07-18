@@ -151,12 +151,12 @@ Click to record your <b>Start</b> time.</button>
            <b>UNIX Command Line</b> will be unnecessary.
         </p>
 
-        <p>Accordingly, here is offerred a short video outlining
+        <p>Accordingly, here is offered a short video outlining
            how the <b>UNIX Files</b> and <b>Directories</b> are
            organised and addressed.
         </p>
 
-        <p>Also offerred is a link to a <b>UNIX Command
+        <p>Also offered is a link to a <b>UNIX Command
            Line Tutorial</b>.
            Going through just <b>Part I</b> should be well
            sufficient for this course.
@@ -192,12 +192,12 @@ Click to record your <b>Start</b> time.</button>
            <b>UNIX</b> to meet the requirements of this
            Training Course.
 
-        <p><b><u>A quizz</u></b>, wait until the Delivery
+        <p><b><u>A quiz</u></b>, wait until the Delivery
            version is ready and the
            login to <b>Room 32COU</b> as a Student.
            <a href="https://b.socrative.com/login/student"
               target="_blank">
-                  <b>Click here for the quizz</b>.</a><br>
+                  <b>Click here for the quiz</b>.</a><br>
         </p>
 
       </div>
@@ -225,7 +225,7 @@ Click to record your <b>Start</b> time.</button>
 
         <h2>Scalar Values & Variables??</h2>
 
-        <p>python as a calculator ... introduce the alebra ...
+        <p>python as a calculator ... introduce the algebra ...
            As Alegra does already
         </p>
 
@@ -273,7 +273,7 @@ Click to record your <b>Start</b> time.</button>
           </p>
 
           <p>Class time will not be allocated to this material,
-             so you are urged to take a few momwnts to go through
+             so you are urged to take a few moments to go through
              the Video before the class starts.
           </p>
 
@@ -289,12 +289,12 @@ Click to record your <b>Start</b> time.</button>
           </details>
         </p>
 
-        <p><b><u>A quizz</u></b>, wait until the
+        <p><b><u>A quiz</u></b>, wait until the
            Delivery version is ready and the
            login to <b>Room 32COU</b> as a Student.
            <a href="https://b.socrative.com/login/student"
               target="_blank">
-                  <b>Click here for the quizz</b>.</a><br>
+                  <b>Click here for the quiz</b>.</a><br>
         </p>
 
       </div>
@@ -308,12 +308,14 @@ Click to record your <b>Start</b> time.</button>
       <h2>Counting (For) Loops</h2>
 
       <p>Essentially, the basic <b>For Loop</b> is of
-         the form:<br><br>
+         the form:<br>
 
          <div class="code">For </b>
-         <span style="font-weight:normal;"><i>&lt;Control Variable</i>&gt;</span>
+         <span style="font-weight:normal;">
+         <i>&lt;Control Variable</i>&gt;</span>
          <b>in </b>
-         <span style="font-weight:normal;"><i>&lt;List&gt;</i></span>:<br>
+         <span style="font-weight:normal;">
+         <i>&lt;List&gt;</i></span>:<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
          &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
@@ -322,6 +324,129 @@ Click to record your <b>Start</b> time.</button>
          </div>
       </p>
 
+      <h2>Test at the Bottom (While) Loops</h2>
+
+      <p>The basic <b>While Loop</b> is of
+         the form:<br>
+
+         <div class="code">While </b>
+         <span style="font-weight:normal;">
+           <i>&lt;Conditional</i>&gt;:
+         </span><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+         </div>
+      </p>
+
+      <h2>Test at the Top (Repeat ... until) Loops</h2>
+
+      <p>There is no special syntax for this type of <b>Loop</b>.
+         If you want to implement one, you need to
+         "bend" what <b>Python</b> provides for other
+         forms of <b>Loop</b>.
+      </p>
+
+      <p>The easiest way to do this is to use a
+         <b>While loop</b> with a <i>&lt;Conditional</i>&gt;
+         that always evaluates to <b>True</b>. That is a
+         <b>While Loop</b> that, it left to its own devices,
+         would continue to <b>Loop</b> forever!
+      </p>
+
+      <p>In addition, an explicit <i>&lt;Conditional</i>&gt;
+         is added at the end of the <b>Loop</b> to detect the
+         appropriate moment to leave.
+      </p>
+
+      <p>The <b>Python command break</b> is used to request the
+         jump out of the <b>Loop</b>'s natural inclination for
+         perpetual revolution.
+      </p>
+
+      <p>Not particularly pretty, but it works fine and looks
+         something like the following:<br><br>
+
+         <div class="code">While True</b><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;if
+         <span style="font-weight:normal;">
+           <i>&lt;Conditional</i>&gt;:
+         </span> break<br>
+
+         </div>
+      </p>
+
+      <p class="hint"><b>Note</b>: Concerning 
+         <i>&lt;Conditional</i>&gt;s that always return
+         the value "<b>True</b>".<br><br>
+
+         <b>Python</b> includes the <b>Class bool</b>. An object
+         of the <b>Class bool</b> may take one of two values,
+         <b>True</b> or <b>False</b>.
+
+         <b>Python</b> offers the two "<b>Built in</b>" constants,
+         <b>True</b> (set to the <b>bool value True</b>)
+         and <b>False</b> (set to the <b>bool
+         value False</b>).<br><br>
+
+         These constants can be used to refer to the
+         two possible <b>bool</b> values in your code.
+         For example:<br><br> 
+
+         &nbsp;&nbsp;&nbsp;&nbsp;<b>while True</b><br><br>
+
+         which feels like a nice way to make the everlasting
+         <b>loop</b> required to me?<br><br>
+
+         Things are actually more flexible than the discussion
+         so far implies.The <b>Class bool</b> is a <b>Subclass</b>
+         of the <b>Class Integer</b>. That is to say, the values
+         <b>True</b> and <b>False</b> are really <b>Integers</b>
+         at some level
+         (<b>1</b> and <b>0</b> respectively). Therefore,
+         it is logical that
+         everywhere you could use <b>True</b>, you could also
+         use <b>1</b>. So:<br><br>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;<b>while 1</b><br><br>
+
+         would meet the current needs, if with a large
+         slice of avoidable enigma!<br><br>
+
+         If you like, it is OK to think of <b>True</b> and <b>1</b>
+         as "the same". That works. <b>But it is not
+         true</b>! Maybe to get a feel for the differences, try
+         throwing the following at the <b>Python
+         Interpreter</b> (one at a time!):<br><br>
+
+         <b>True False 6==6 6==7 True-1 False+3</b>
+         ... and similar<br><br>
+
+         If this makes things clear, Jolly Good. If not, then just
+         believe <b>True</b> is the same as <b>1</b>
+         and <b>False</b>
+         and <b>0</b> are equivalents (but not near me!).<br><br>
+
+         Finally, and practically, you can use either
+         a <b>boolean expression</b> (e.g. "<b>6==6</b>") or an
+         Integer expression (e.g. <b>"94*(3-4)"</b> for
+         the <b>while loop</b> 
+         <i>&lt;Conditional</i>&gt;.<br><br>
+
+         If you use an <b>Integer expression</b>, a result
+         of <b>1</b> is <b>True</b>, any other
+         result is <b>False</b>.
+       </p>
+
+      <details class="example">
+      <summary>Some Examples</summary>
       <h3>Some Examples</h3>
 
       <ol>
@@ -565,11 +690,11 @@ Click to record your <b>Start</b> time.</button>
                 <li>What exactly does <b>range(3,20,5)</b>
                     generate?
                     Check your speculation with the <b>Python
-                    Interpretter</b>.
+                    Interpreter</b>.
                 </li>
                 <li>What about <b>range(3,20)</b>?
                     Check your speculation with the <b>Python
-                    Interpretter</b>.
+                    Interpreter</b>.
                 </li>
                 <li>
                   <b>Copy/Paste</b> the code for this
@@ -588,7 +713,7 @@ Click to record your <b>Start</b> time.</button>
                     Extend the code to print out its value so
                     you can check your speculation.<br>
 
-                    Whle you are at it, why not also print
+                    While you are at it, why not also print
                     out the
                     <b>List</b> generated by<br>
 
@@ -689,12 +814,12 @@ Click to record your <b>Start</b> time.</button>
 
               Sequence_Count = 0;
               <span Class="codecomm16">
-                # Inintial the Annotation Line Counter variable
+                # Initialise the Annotation Line Counter variable
               </span><br>
               AA_Count = 0;
               <span Class="codecomm16">
                 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-                # Inintial the Amino Acid Counter variable
+                # Initialise the Amino Acid Counter variable
               </span><br><br>
 
               for Line in Sequence_file:
@@ -719,7 +844,7 @@ Click to record your <b>Start</b> time.</button>
               <code>&nbsp;&nbsp;&nbsp;</code>
               Sequence_Count += 1;
               <span Class="codecomm16">
-                # Increment the Sequence Couunter.
+                # Increment the Sequence Counter.
               </span><br>
               <code>&nbsp;&nbsp;&nbsp;</code>
               <code>&nbsp;&nbsp;&nbsp;</code>
@@ -732,7 +857,7 @@ Click to record your <b>Start</b> time.</button>
               <code>&nbsp;&nbsp;&nbsp;</code>
               AA_Count += len(Line);
               <span Class="codecomm16">
-                &nbsp;&nbsp;# Increment the Sequence Couunter.
+                &nbsp;&nbsp;# Increment the Sequence Counter.
               </span><br><br>
               <span Class="codecomm16">
                 # Print the Sequence & Amino Acid Counts
@@ -848,12 +973,11 @@ Click to record your <b>Start</b> time.</button>
 
           <p><b><u>Code</u></b>
             <div class="code">
-            </div>
-
-          <p><b><u>Experiments & Questions</u></b>
+            </div><p><b><u>Experiments & Questions</u></b>
             <div class="experiment">
             </div>
           </p>
+
         </li>
 
         <li>
@@ -880,6 +1004,7 @@ Click to record your <b>Start</b> time.</button>
           </p>
         </li>
       </ol>
+      </details>
 
       <p>
       </p>
@@ -931,7 +1056,7 @@ Click to record your <b>Start</b> time.</button>
 
             <p>Write some code to inquire of a user's health,
                requesting
-               the reponse "<b>Yes</b>" or "<b>No</b>".
+               the response "<b>Yes</b>" or "<b>No</b>".
             </p>
 
             <p>If the user responds in a way that is encouraging,
@@ -962,7 +1087,7 @@ Click to record your <b>Start</b> time.</button>
                Structure</b>, make the relevant
                part of the code of <b>Repeat</b> until the
                stupid user enters something
-               that is unequivicably <b>YES</b> or <b>NO</b>.
+               that is unequivocally <b>YES</b> or <b>NO</b>.
             </p>
                
             <p>Issue a stern reprimand each
@@ -1207,7 +1332,7 @@ Click to record your <b>Start</b> time.</button>
 
           <p>For this section, it will be assumed that you
              are familiar with the types of <b>Callable Unit</b>
-             that can be incorporated in an <b>Alogorithm</b>.
+             that can be incorporated in an <b>Algorithm</b>.
           </p>
 
           <p>We offer a short Video to discuss as much of
@@ -1215,7 +1340,7 @@ Click to record your <b>Start</b> time.</button>
           </p>
 
           <p>Class time will not be allocated to this material,
-             so you are urged to take a few momwnts to go through
+             so you are urged to take a few moments to go through
              the Video before the class starts.
           </p>
 
@@ -1234,12 +1359,12 @@ Click to record your <b>Start</b> time.</button>
           </details>
         </p>
 
-        <p><b><u>A quizz</u></b>, wait until the Delivery
+        <p><b><u>A quiz</u></b>, wait until the Delivery
            version is ready and the
            login to <b>Room 32COU</b> as a Student.
            <a href="https://b.socrative.com/login/student"
               target="_blank">
-                  <b>Click here for the quizz</b>.</a><br>
+                  <b>Click here for the quiz</b>.</a><br>
         </p>
 
       </div><br>
@@ -1385,7 +1510,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part V:</b>
-             User Defined Libraries ... or whatever nes calls them in
+             User Defined Libraries ... or whatever one calls them in
              Pythonese??
     </summary>
 
