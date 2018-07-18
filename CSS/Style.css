@@ -337,9 +337,11 @@ img.sup {
 /* class for Sections List*/
 
 .lsect {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background: LavenderBlush; padding: 50px;
-    max-width: 960px;
-    margin: auto;
+    width: 960px;
 }
 
 /* class for Exercise New Commands */

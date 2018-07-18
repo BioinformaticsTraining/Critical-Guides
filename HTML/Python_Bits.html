@@ -332,7 +332,7 @@ Click to record your <b>Start</b> time.</button>
              (Control by simple list):
           </p>
 
-          <p><b><u>Problem</u></b><br>
+          <p><b><u>The Problem</u></b><br>
             <div class="problem">Compute and display
               the number of each
               <b>Base Type</b> in a given <b>DNA Sequence</b>
@@ -464,7 +464,7 @@ Click to record your <b>Start</b> time.</button>
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br>
+          <p><b><u>Code</u></b>
             <div class="code16">
               import random as r;
               <span Class="codecomm16">
@@ -495,17 +495,13 @@ Click to record your <b>Start</b> time.</button>
               <code>&nbsp;&nbsp;&nbsp;</code>
               if term_count % 2 == 0:
               <span Class="codecomm16">
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
                 # If the term is even,
               </span><br>
               <code>&nbsp;&nbsp;&nbsp;</code>
               <code>&nbsp;&nbsp;&nbsp;</code>
               term = 2 * term;
               <span Class="codecomm16">
-                <code>&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;</code>
                 # multiply by 2,
               </span><br>
               <code>&nbsp;&nbsp;&nbsp;</code>
@@ -514,16 +510,13 @@ Click to record your <b>Start</b> time.</button>
                 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
                 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
                 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;</code>
                 # otherwise,
               </span><br>
               <code>&nbsp;&nbsp;&nbsp;</code>
-              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;</code>
               term = term - 2;
               <span Class="codecomm16">
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;</code>
                 # subtract 2.
               </span><br><br>
               <code>&nbsp;&nbsp;&nbsp;</code>
@@ -621,39 +614,194 @@ Click to record your <b>Start</b> time.</button>
         <li>
 
           <p class="smarg"><b><u>Example 3</u></b>
-             (Read a file, line by line):
+             (Read a file, line by line and
+             introducing <b>continue</b>):
           </p>
+
+          <p><b><u>The problem</u></b><br>
+            <div class="problem">
+              From a given <b>Fasta Format Protein
+              Sequence File</b>, count and print out all the
+              <b>Annotation lines</b> and count the
+              <b>Amino Acid Codes</b>.<br>
+              Generate a <b>Count Summary</b>.
+            </div>
 
           <p><b><u>Pseudo-Code</u></b><br>
             <div class="pseudo">
+              First find a suitable file and put it
+              somewhere handy.<br><br>
 
+              <b>Open</b> the file for <b>Reading</b><br>
+
+              Initialise an <b>Annotation Line Count</b><br>
+
+              Initialise an <b>Amino Acid Count</b><br>
+
+              Until the file is entirely read:<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              read the next line of the file<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              if it is an <b>Annotation line</b><br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              print it and <b>continue</b> reading the file<br>
+              <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+              Add the <b>Number of Amino Acids</b> found in
+              this line to the <b>Amino Acid Count</b><br><br>
+
+              Announce the <b>Amino Acid Total</b> to the impatient
+              millions who have, with leg crossed anticipation
+              been so long awaiting this moment of triumph
+              ... banners
+              furled ... vinho bottles uncorked ... bock
+              supered ... <br><br>
+              And then relax in the assurance of a job done
+              well, possibly with a nice cup of tea? enhanced
+              by a knowing, but also winning, smile.
+
+              <p class="hint"><b>Note</b>, that
+                 the <b>pseudo-code</b> appears to
+                 be suggesting a <b>Test at the Bottom Loop</b>
+                 here. Maybe it should be? ... from an
+                 <b>Algorithmic</b> view of things? But given the
+                 way <b>Python</b> inclines one to view
+                 the situation,
+                 a <b>For Loop</b> is the more appropriate
+                 way to go in this case.
+              </p>
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br><br>
+          <p><b><u>Code</u></b><br>
+            <p>First you need to download the file
+               <a href="../Data/homeobox_human.fasta"
+                  target="_blank"> <b>homeobox_human.fasta</b></a>,
+               and put it in your <b>Current Working
+               Directory</b>.
+            </p>
+
             <div class="code16">
+              Sequence_file = open("homeobox_human.fasta");
+              <span Class="codecomm16">
+                # Open the target file for reading
+              </span><br><br>
 
+              Sequence_Count = 0;
+              <span Class="codecomm16">
+                # Inintial the Annotation Line Counter variable
+              </span><br>
+              AA_Count = 0;
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # Inintial the Amino Acid Counter variable
+              </span><br><br>
+
+              for Line in Sequence_file:
+              <span Class="codecomm16">
+                &nbsp;&nbsp;# For each Line of Sequence_file
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              if Line[0] == ">":
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                # If this is an Annotation Line,
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              print Line;
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <code>&nbsp;&nbsp;&nbsp;</code>
+                # Print the Line,
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              Sequence_Count += 1;
+              <span Class="codecomm16">
+                # Increment the Sequence Couunter.
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              continue;
+              <span Class="codecomm16">
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# move to the top
+                of the Loop for the next Line
+              </span><br>
+              <code>&nbsp;&nbsp;&nbsp;</code>
+              AA_Count += len(Line);
+              <span Class="codecomm16">
+                &nbsp;&nbsp;# Increment the Sequence Couunter.
+              </span><br><br>
+              <span Class="codecomm16">
+                # Print the Sequence & Amino Acid Counts
+              </span><br>
+              print "There are " + str(Sequence_Count) + 
+              " Protein Sequences in the file"<br>
+              print "There are " + str(AA_Count) + 
+              " Amino Acid Codes in the file"
             </div>
+         </p>
 
+          <p>The <b>Python open Function</b> returns a
+             "<b>File Handle</b>" (fancy name for something
+             that points to the contents of the file that has
+             just been read).
+          </p>
+
+          <p>In <b>Python</b>, a file handle can be regarded
+             as <b>List</b> of the lines of the file,
+             in the order in which they are read.
+          </p>
+
+          <p> This is extremely convenient here! It means that
+              the <b>File Handle</b> (<b>Sequence_file</b>)
+              can be used directly as the <b>Loop</b > control
+              &lt;<i>List</i>&gt; for looking at the <b>File
+              homeobox_human.fasta</b> line by line.
+          </p>
+
+          <p><b><u>Experiments & Questions</u></b><br>
+            <div class="experiment">
+              <ol>
+                <li>
+                  <b>Copy/Paste</b> the code for this
+                  <b>Example</b> into a local file so you can
+                  amend/run it on your own computer.
+                </li>
+                <li>Edit the code to avoid the use
+                    of <b>continue</b>
+                </li>
+              </ol>
+            </div>
+          </p>
         </li>
 
         <li>
-
           <p class="smarg"><b><u>Example 4</u></b>
              (Read a file, character by character):
           </p>
 
-          <p><b><u>Pseudo-Code</u></b><br>
-            <div class="pseudo">
-
+          <p><b><u>The problem</u></b>
+            <div class="problem">
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br><br>
-            <div class="code16">
-
+          <p><b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
             </div>
+          </p>
 
+          <p><b><u>Code</u></b>
+            <div class="code16">
+            </div>
+          </p>
+
+          <p><b><u>Experiments & Questions</u></b>
+            <div class="experiment">
+            </div>
+          </p>
         </li>
 
         <li>
@@ -662,16 +810,24 @@ Click to record your <b>Start</b> time.</button>
              (Read a file, using a URL):
           </p>
 
-          <p><b><u>Pseudo-Code</u></b><br>
-            <div class="pseudo">
-
+          <p><b><u>The problem</u></b>
+            <div class="problem">
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br><br>
-            <div class="code">
-
+          <p><b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
             </div>
+          </p>
+
+          <p><b><u>Code</u></b><br>
+            <div class="code">
+            </div>
+
+          <p><b><u>Experiments & Questions</u></b>
+            <div class="experiment">
+            </div>
+          </p>
 
         </li>
 
@@ -680,37 +836,49 @@ Click to record your <b>Start</b> time.</button>
           <p class="smarg"><b><u>Example 6</u></b>:
           </p>
 
-          <p><b><u>Pseudo-Code</u></b><br>
-            <div class="pseudo">
-
+          <p><b><u>The problem</u></b>
+            <div class="problem">
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br><br>
-            <div class="code">
+          <p><b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
+            </div>
+          </p>
 
+          <p><b><u>Code</u></b>
+            <div class="code">
             </div>
 
+          <p><b><u>Experiments & Questions</u></b>
+            <div class="experiment">
+            </div>
+          </p>
         </li>
 
         <li>
-
           <p class="smarg"><b><u>Example 7</u></b>:
           </p>
 
-          <p><b><u>Pseudo-Code</u></b><br>
-            <div class="pseudo">
-
+          <p><b><u>The problem</u></b>
+            <div class="problem">
             </div>
           </p>
 
-          <p><b><u>Code</u></b><br><br>
-            <div class="code">
+          <p><b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
+            </div>
+          </p>
 
+          <p><b><u>Code</u></b>
+            <div class="code">
             </div>
 
+          <p><b><u>Experiments & Questions</u></b>
+            <div class="experiment">
+            </div>
+          </p>
         </li>
-
       </ol>
 
       <p>
@@ -819,7 +987,7 @@ Click to record your <b>Start</b> time.</button>
             <p>Download the file
                <a href="../Data/sequences.fasta"
                   target="_blank"> <b>sequences.fasta</b></a>,
-               and put the file in your <b>Current Working
+               and put it in your <b>Current Working
                Directory</b>.
             </p>
 
@@ -912,7 +1080,7 @@ Click to record your <b>Start</b> time.</button>
             <p>Download the file
                <a href="../Data/reads.fastq"
                   target="_blank"> <b>reads.fastq</b></a>,
-               and put the file in your <b>Current Working
+               and put it in your <b>Current Working
                Directory</b>.
             </p>
 
