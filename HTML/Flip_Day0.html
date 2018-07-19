@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+ 
+<link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+
+<script src="../JavaScript/Script.js"></script>
+
+<title>Pre-Course Preparation.
+</title>
+
+</head>
+ 
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+ 
+<body style="background-color:LightBlue;
+             font-family: 'Times New Roman', Times, serif;
+             font-size: 16px;">
+
+     
+<!-- Guide Title - Something like -->
+
+<h1 style="text-align:center";>
+   Preparation for Python Course
+</h1>
+
+<!-- Offer a Clock ... why not :-)
+https://www.w3schools.com/js/default.asp -->
+
+<button type="button"
+onclick="document.getElementById('Start_Time').innerHTML = Date()">
+Click to record your <b>Start</b> time.</button>
+<p id="Start_Time"></p>
+
+      <div class="ramble">
+
+        <h2>A minimal familiarity with the UNIX Commands Line</h2>
+
+        <div Style="color:Red">
+
+          <h2>Prerequisites</h2>
+
+          <p>Some familiarity with the <b>UNIX Command
+             Line</b> will be assumed for this course.
+             No class time will be dedicated to learning
+             <b>UNIX</b>.
+          </p>
+
+          <p>If you think this might be a problem for you,
+             please make use of the materials below.
+             They should be enough as you do not need to be
+             a <b>UNIX</b> expert.
+          </p>
+
+        </div>
+
+        <p>For many of you, instruction on the wonders of the
+           <b>UNIX Command Line</b> will be unnecessary.
+        </p>
+
+        <p>If this is the case for you, read no further,
+           see you Monday morning.
+        </p>
+
+        <p>If you have any doubts, here is offered a short
+           video outlining
+           how the <b>UNIX Files</b> and <b>Directories</b> are
+           organised and addressed.
+        </p>
+
+        <details class="video">
+        <summary><b>UNIX File Structure & Reference - A video</b>
+        </summary>
+          <video width="320" height="240" controls preload>
+            <source src="Videos/File_Structure/File_Structure.mp4">
+            </src>
+          </video>
+        </details>
+
+        <p>Also offered is a link to a <b>UNIX Command
+           Line Tutorial</b>.
+           Going through just <b>Part I</b> should be more than
+           sufficient for this course.
+        </p>
+
+        <p><a href="https://rawgit.com/BioinformaticsTraining/Critical-Guides/gh-pages/HTML/Command_Line.html"
+              target="_blank">Part I of this Tutorial</a>
+           should provide more than enough familiarity with
+           <b>UNIX</b> to meet the requirements of this
+           Training Course.
+        </p>
+
+      </div><br>
+
+<button type="button"
+onclick="document.getElementById('End_Time').innerHTML = Date()">
+Click to display your <b>Finish</b> time.</button>
+<p id="End_Time"></p>
+
+</body></html>
+

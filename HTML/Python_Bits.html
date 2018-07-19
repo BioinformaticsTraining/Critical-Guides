@@ -88,7 +88,7 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="ramble">
 
-       <h2>Some sort of  Manual Resource?</h2>
+       <h2>Some sort of Manual Resource?</h2>
 
         <p>The best I have found thus far. Looks good enough!!
         </p>
@@ -442,8 +442,17 @@ Click to record your <b>Start</b> time.</button>
          <i>&lt;Conditional</i>&gt;.<br><br>
 
          If you use an <b>Integer expression</b>, a result
-         of <b>1</b> is <b>True</b>, any other
-         result is <b>False</b>.
+         of <b>0</b> is <b>False</b>, any other
+         result is <b>True</b>. You can test this assertion
+         by presenting the <b>Python Interpretter</b> with
+         numbers given as <b>Arguments</b> to the <b>Built in
+         Function bool</b>. <b>bool</b> takes a <b>Numeric
+         Parameter</b> and returns the appropriate
+         <b>boolean</b> value. For example, try the
+         <b>Interpreter</b> with such as:<br><br>
+
+       <b>bool(-2) bool(-1) bool(0) bool(1) bool(2)
+       bool(3) ...</b><br>
        </p>
 
       <details class="example">
@@ -776,6 +785,9 @@ Click to record your <b>Start</b> time.</button>
               Add the <b>Number of Amino Acids</b> found in
               this line to the <b>Amino Acid Count</b><br><br>
 
+              <b>Close</b> the file (easy to forget to do
+              this but it is important.<br><br>
+
               Announce the <b>Amino Acid Total</b> to the impatient
               millions who have, with leg crossed anticipation
               been so long awaiting this moment of triumph
@@ -860,6 +872,10 @@ Click to record your <b>Start</b> time.</button>
               <span Class="codecomm16">
                 &nbsp;&nbsp;# Increment the Sequence Counter.
               </span><br><br>
+              Sequence_file.close();
+              <span Class="codecomm16">
+                # Close the file of sequences
+              </span><br><br>
               <span Class="codecomm16">
                 # Print the Sequence & Amino Acid Counts
               </span><br>
@@ -886,6 +902,12 @@ Click to record your <b>Start</b> time.</button>
               can be used directly as the <b>Loop</b > control
               &lt;<i>List</i>&gt; for looking at the <b>File
               homeobox_human.fasta</b> line by line.
+          </p>
+
+          <p>Leaving <b>open</b> files around, even when empty,
+             is not good practice. They should be neatly
+             <b>closed</b>, as here. It is all too easy to
+             forget to do this!
           </p>
 
           <p><b><u>Experiments & Questions</u></b><br>
@@ -1119,25 +1141,88 @@ Click to record your <b>Start</b> time.</button>
         <li>
 
           <p class="smarg"><b><u>Example 5</u></b>
-             (Read a file, using a URL):
+             (Read a remote file, using a Test at the bottom Loop):
           </p>
 
           <p><b><u>The problem</u></b>
             <div class="problem">
+              Read a file line by line, directly from the
+              <b>Uniprot Database</b>, and print it out.
+
+              For the purposes of this exercise, this must
+              be done using a <b>Test at the Bottom</b> loop.
             </div>
           </p>
 
           <p><b><u>Pseudo-Code</u></b>
             <div class="pseudo">
+              Import the code features that allow
+              remote file access<br><br>
+
+              Open the file from <b>Uniprot</b><br><br>
+
+              <b>Repeat</b> reading lines and printing them
+              <b>Until</b> there are no more lines<br><br>
+
+              Tidily close the remote file<br>
             </div>
           </p>
 
           <p><b><u>Code</u></b><br>
             <div class="code">
-            </div>
+              import urllib;
+              <span Class="codecomm16">
+                # import the code to access remote files.
+              </span><br><br>
+
+              File_URL =
+              'http://www.uniprot.org/uniprot/P12931.fasta';<br>
+              Sequence_file = urllib.urlopen(File_URL);
+              <span Class="codecomm16">
+                # Open remote file for reading.
+              </span><br><br>
+
+              while True:
+              <span Class="codecomm16">
+                &nbsp;&nbsp;# Repeat ...
+              </span><br>
+              &nbsp;&nbsp;&nbsp;Line = Sequence_file.readline();
+              <span Class="codecomm16">
+                # Read the next line using readline.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;if not Line: break;
+              <span Class="codecomm16">
+                # If at the end of the, stop reading/printing.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;print Line,
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                # print this Line and go round for more.
+              </span><br><br>
+
+              Sequence_file.close();
+               <span Class="codecomm16">
+                # Close file tidily.
+              </span><br>
+           </div>
 
           <p><b><u>Experiments & Questions</u></b>
             <div class="experiment">
+              <ul>
+                <li>Notice that the "<b>print Line</b>" command at the end of
+                    the <b>loop</b> is terminated with a <b>comma</b>
+                    ('<b>,</b>') rather then the usual <b>semi-colon</b>
+                    ('<b>;</b>').<br><br>
+
+                    Why do you suppose that might be?<br><br>
+
+                    What effect would changing the comma to a semi-colon
+                    have?<br><br>
+
+                    Why not make your own version of this code, edit it
+                    and find out?
+                </li>
+              </ul>
             </div>
           </p>
 
