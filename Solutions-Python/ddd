@@ -1,0 +1,15 @@
+Property_Names = "Price Stock Sold  Order";
+
+Category_Items = (("Category Food", "Egg ", "Bean", "Cake", "Chip"),
+                  ("Category Bits", "Sock", "Tie ", "Shoe"),
+                  ("Category Toys", "Car ", "Bear", "Doll ", "Book", "Ball"));
+
+
+
+for Category_Items in All_Items:
+    for Item in Category_Items:
+        if "Category" in Item
+            print "Table for the " + Item;
+            print Property_Names;
+        else
+            print Properties[Item];

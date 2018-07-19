@@ -97,7 +97,7 @@ Click to record your <b>Start</b> time.</button>
               target="_blank"> Python Online Tutorial/Manual</a>
         </p>
 
-        <p>Version 3.1 ... is this a problem for Allegra?
+        <p>Version 3.1 ... we are using 2.7 ... the manual for 2.7 is avaiaable and similar
         </p>
 
         <h2>Course Objectives.</h2>
@@ -434,9 +434,10 @@ Click to record your <b>Start</b> time.</button>
          and <b>False</b>
          and <b>0</b> are equivalents (but not near me!).<br><br>
 
-         Finally, and practically, you can use either
-         a <b>boolean expression</b> (e.g. "<b>6==6</b>") or an
-         Integer expression (e.g. <b>"94*(3-4)"</b> for
+         Finally, and to summarise, you can use either
+         a <b>boolean expression</b> (e.g. "<b>6==6</b>",
+         "<b>3>9</b>") or an
+         <b>Integer expression</b> (e.g. <b>"94*(3-4)"</b>) for
          the <b>while loop</b> 
          <i>&lt;Conditional</i>&gt;.<br><br>
 
@@ -905,21 +906,207 @@ Click to record your <b>Start</b> time.</button>
 
         <li>
           <p class="smarg"><b><u>Example 4</u></b>
-             (Read a file, character by character):
+             (lists of lists of list of lists ...):
           </p>
 
           <p><b><u>The problem</u></b>
             <div class="problem">
+              <p class="smarg">A shop sells "stuff"
+                that can be divided into categories<br>
+                Each category contains items<br>
+                Each item possesses properties<br>
+                Make a pretty table that displays all
+                the available data nicely
             </div>
           </p>
 
           <p><b><u>Pseudo-Code</u></b>
             <div class="pseudo">
+
+              <b><u>Organise the Data:</u></b><br><br>
+
+              Compose a <b>string</b> of all
+              item property names to be used as
+              <b>Title Row</b> for <b>Property Tables</b>.<br><br>
+ 
+              For each category, compose a <b>tuple</b>.<br>
+              Make the first <b>tuple</b> element
+              identify the category.<br>
+              All other <b>tuple</b> elements identify
+              the <b>items</b> of the category.<br><br>
+
+              Make a <b>tuple</b> whose elements are the
+              <b>Category tuples</b> (a <b>tuple</b>
+              of <b>tuples</b>).<br><br>
+
+              Compose a <b>dictionary</b>, for all items
+              from all categories,
+              associating <b>Property
+              Names</b> with <b>Property Values</b><br><br>
+
+              <b><u>Process the Data:</u></b><br><br>
+
+              Consider,in turn, each <b>Category tuple</b>
+              in the <b>tuple</b> of such <b>tuples</b>.<br><br>
+
+              Use the first <b>tuple</b> element to compose
+              a <b>Table Title</b>.<br>
+              Use the <b>Property Name</b> string to make a
+              <b>Header Row</b> for the <b>Table</b>.<br><br>
+
+              Use each of the remaining <b>tuple</b> elements to
+              make the rest of the rest of the <b>Table</b>.<br>
+              Each row is comprised of two parts.<br>
+              The first part is the <b>Item Name</b>, which
+              is the value of the <b>tuple</b> element.<br>
+              The second part is the value of the
+              <b>Properties Dictionary</b> element
+              whose <b>Key</b> is the <b>Item Name</b>.
             </div>
           </p>
 
           <p><b><u>Code</u></b>
             <div class="code16">
+
+              Property_Names =
+              "Name    Price   Stock   Sold    Order";
+              <span Class="codecomm16">
+                # Row Headers for all Tables
+              </span><br><br>
+
+              <span Class="codecomm16">
+                # A tuple of tuples for each Category.<br>
+                # Category tuples identify a Category and its items
+              </span><br>
+              All_Items = (("Category Food", "Egg ", "Bean",
+                            "Cake", "Chip"),<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ("Category Bits", "Sock", "Tie ", "Shoe"),<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ("Category Toys", "Car ", "Bear", "Doll",
+                                "Book", "Ball"));<br><br>
+
+              Properties = {
+              "Egg ":"  0.99      64     86      93",
+              <span Class="codecomm16">
+                &nbsp;&nbsp;
+                # A Dictionary for all items
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Book":"  4.99     326    390     400",
+              <span Class="codecomm16">
+                # and their properties.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Sock":"  1.11     343    456     297",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Cake":"  2.73     229    436     144",
+              <span Class="codecomm16">
+                # Item Names are acess Keys
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Ball":"  2.99     124    133     149",
+              <span Class="codecomm16">
+                # Item Properties are Keyed Values
+              </span><br>
+                
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Bean":"  0.34     897    992     931",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Bear":"  7.88      90     87      74",
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;# Note the order of Items can
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Tie ":"  3.11     257    201     222",
+              <span Class="codecomm16">
+                # be random (as here).
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Doll":"  3.99      42     50      63",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Chip":"  0.55     604    451     557",
+              <span Class="codecomm16">
+                # The order is not relevant
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Shoe":"  5.44     744    660     629",
+              <span Class="codecomm16">
+                # in most Dictionaries.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Car ":"  3.21     214    113     121",};<br><br>
+
+              for Category_Items in All_Items:
+              <span Class="codecomm16">
+                # For each Category tuple,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              for Item in Category_Items:
+              <span Class="codecomm16">
+                &nbsp;# Consider each Item in turn.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              if "Category" in Item:
+              <span Class="codecomm16">
+                # If this element identifies the Category,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print "Table for the " + Item;
+              <span Class="codecomm16">
+                # use it to make Table Title,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print Property_Names;
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                # and print a Header Row.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              else:
+               <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+               # If this element identifies the Item,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print Item + "   " + Properties[Item];
+               <span Class="codecomm16">
+                # print the Item Name.
+              </span><br>
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                # followed by its Properties.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              print;
+              <span Class="codecomm16">
+                # Print an empty line between Tables.
+              </span><br>
             </div>
           </p>
 
