@@ -1,0 +1,3 @@
+time python a 
+time python b > bb
+time python c > cc

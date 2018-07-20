@@ -28,13 +28,6 @@ def fib(n):
 # TEST BED:
 # =========
 
-print fib(24);    # expect ? dunno,, too hard!!
-print fib(6);     # expect 8 (1 1 2 3 5 8 ... )
-print fib(10);    # expect 55 (1 1 2 3 5 8 13 21 34 55 89... )
-print fib(11);    # expect 89 (1 1 2 3 5 8 13 21 34 55 89... )
-print fib(1);     # expect 1
-print fib(2);     # expect 1
-print fib(0);     # expect -1
-print fib(-5);    # expect -1
-
+for fib_no in range(1, 25):
+    print fib(fib_no);
 

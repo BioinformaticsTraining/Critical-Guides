@@ -283,6 +283,12 @@ details.example {
     width: 906px;
 }
 
+/* details for Answers */
+
+details.answer {
+    background-color: NavajoWhite;
+    width: 750px;
+}
 /* details for Exercise Comments */
 
 details.comment {
