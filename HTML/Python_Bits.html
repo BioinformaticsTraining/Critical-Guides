@@ -1798,28 +1798,217 @@ Click to record your <b>Start</b> time.</button>
         <ol>
           <li>
             <p class="smarg"><b><u>Example 1</u></b>
-               (??????????????):
+               (variable parameter count):
             </p>
 
-          <p><b><u>The problem</u></b>
+            <b>Part (i)</b><br><br>
+
+            <b><u>The problem</u></b>
             <div class="problem">
-            </div>
-          </p>
+              To compute and return the average of
+              <b>3</b> numbers.
+            </div><br>
 
-          <p><b><u>Pseudo-Code</u></b>
+            <b><u>Pseudo-Code</u></b>
             <div class="pseudo">
-            </div>
-          </p>
+              Add 'em up and divide by <b>3</b>.
+            </div><br>
 
-          <p><b><u>Code</u></b>
+            <b><u>Code</u></b><br>
             <div class="code">
-            </div>
+              def Average3 (Num01, Num02, Num03):<br>
+              &nbsp;&nbsp;&nbsp;
+              return ((Num01 + Num02 + Num03) / 3);<br><br>
 
-          <p><b><u>Experiments & Questions</u></b>
+              <span Class="codecomm16">
+              #TEST BED
+              </span><br>
+              <span Class="codecomm16">
+              #========
+              </span><br><br>
+
+              print  str(Average3(1 , 2, 4));
+              <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              # 3 Integers
+              </span><br>
+              print  str(Average3(0.1 , 2.95, 7));
+              <span Class="codecomm16">
+              # Mix float/Integer<br>
+              </span>
+            </div><br><br>
+
+            <b><u>Experiments & Questions</u></b>
             <div class="experiment">
-            </div>
-          </p>
+              <ul>
+                <li>
+                  Well ... that was easy!<br><br>
 
+                  But what if you wished to average an
+                  arbitrary number of values?<br><br>
+
+                  There is a number of ways you might
+                  do this, some more sensible than others.<br><br>
+
+                  Make your own copy of the <b>3</b> numbers code,
+                  and amend it to cope with many numbers,
+                  by allowing your function to receive
+                  a variable number of <b>Arguments</b>.<br><br>
+
+                  Maybe you should change the name
+                  of the <b>Function</b> whilst
+                  you are at it?
+
+                  <p class="hint">{<b><i>Hint</i></b>:
+                     To declare a <b>Parameter</b> that
+                     can receive multiple <b>Arguments</b>,
+                     you simply prepend a "*" to the
+                     <b>Parameter</b> name. For example:<br><br>
+
+                     <b>Average (*Numbers):</b><br><br>
+
+                     The <b>Parameter</b> can then be treated as
+                     a <b>list</b> within the body of
+                     the <b>Function</b>.<br>
+                   </p>
+
+                   My answer is:
+                   <a href=
+                      "../Solutions-Python/fun_Example1ia.py"
+                      target="_blank">
+                             <b>fun_Example1ia.py</b></a>
+                </li><br>
+
+                <li>
+                  Look carefully at my solution above.<br><br>
+
+                  In the <b>TEST BED Code</b>,
+                  I ask for:<br><br>
+
+                  <b>print str(AverageN(1 , 2, 4));</b><br><br>
+
+                  and receive the answer:<br><br>
+
+                  <b>2</b><br><br>
+
+                  Ummm? Is that right? Why <b>2</b>?
+                  and not <b>2.333333...</b>?<br><br>
+
+                  How could I persuade my code to
+                  give me the
+                  rather more convincing
+                  answer <b>2.3333333...</b>?<br><br>
+
+                  Fix it! My answer is:
+                   <a href=
+                      "../Solutions-Python/fun_Example1ib.py"
+                      target="_blank">
+                             <b>fun_Example1ib.py</b></a>
+                </li>
+              </ul>
+            </div><br>
+
+            <b>Part (ii)</b><br><br>
+
+            <b><u>The problem</u></b>
+            <div class="problem">
+              Start with the final <b>Part(i)</b> version that
+              uses a <b>Multiple Value Parameter</b> and does
+              not get confused with all <b>int Arguments</b>.<br>
+
+              Adapt the code to send a <b>list</b> of numbers
+              as an <b>Argument</b>.
+            </div><br>
+
+            <b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
+              Add all the <b>Numbers</b>
+              in the <b>list</b>.<br><br>
+
+              Divide by the length of the <b>list</b>.<br><br>
+
+              <b>return</b> the result.
+            </div><br>
+
+            <b><u>Code</u></b><br>
+            <div class="code">
+              My answer is:
+              <a href="../Solutions-Python/fun_Example1ii.py"
+                 target="_blank">
+                      <b>fun_Example1ii.py</b></a>
+            </div><br><br>
+
+            <b>Part (iii)</b><br><br>
+
+            <b><u>The problem</u></b>
+            <div class="problem">
+              Start with the <b>Part(ii)</b> version that
+              uses a <b>list Parameter</b>.<br><br>
+
+              Adapt the code to send a <b>tuple</b> of numbers
+              as an <b>Argument</b>.
+            </div><br>
+
+            <b><u>Pseudo-Code</u></b>
+            <div class="pseudo">
+              Add all the <b>Numbers</b>
+              in the <b>tuple</b>.<br><br>
+
+              Divide by the length of the <b>tuple</b>.<br><br>
+
+              <b>return</b> the result.
+            </div><br>
+
+            <b><u>Code</u></b><br>
+            <div class="code"><br>
+              My answer is:
+              <a href="../Solutions-Python/fun_Example1iii.py"
+                 target="_blank">
+                      <b>fun_Example1iii.py</b></a>
+            </div><br><br>
+
+            <b><u>Experiments & Questions</u></b>
+            <div class="experiment">
+              <ul>
+                <li>
+                  The interesting thing here is that the only
+                  change required to convert from a <b>list
+                  Argument</b> to a <b>tuple Argument</b> was
+                  in the <b>TEST BED Code</b>!<br><br>
+
+                  The <b>Code</b> for the <b>Function</b>
+                  remained unedited.<br><br>
+
+                  You already witnessed this in <b>Part(i)</b>
+                  of this <b>Example</b>. <b>The Function</b>
+                  was sent mixtures of <b>int</b>s and
+                  <b>float</b>s with no warning as too what
+                  to expect ... and all was well!
+
+                  So a <b>Function</b> is completely
+                  promiscuous concerning the type of
+                  its <b>Parameters</b>!
+                  Anything is accepted.<br><br>
+
+                  Of course, it is not always the case
+                  that anything works!
+                </li><br>
+                <li>
+                  Notice the <b>comma</b> added to the end
+                  of the last <b>tuple</b> of the
+                  <b>tuple</b> of <b>tuples</b>. That is:<br><br>
+
+                  <b>(2.9999,)</b><br><br>
+
+                  Remove this <b>comma</b> and you will
+                  get an <b>Error Condition</b>?<br><br>
+
+                  Why do you suppose that is? Why is the
+                  trailing <b>comma</b> so important, just
+                  in this <b>tuple</b> and none of the others?
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li>
@@ -1828,7 +2017,7 @@ Click to record your <b>Start</b> time.</button>
                 with Default Values):
             </p>
 
-            <p><b>Part (i)</b>
+            <b>Part (i)</b>
             </p>
 
             <b><u>The problem</u></b>
