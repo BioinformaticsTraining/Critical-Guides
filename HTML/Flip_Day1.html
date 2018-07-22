@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+ 
+<link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+
+<script src="../JavaScript/Script.js"></script>
+
+<title>Pre-Course Preparation Day 2.
+</title>
+
+</head>
+ 
+<body style="background-color:LightBlue;
+             font-family: 'Times New Roman', Times, serif;
+             font-size: 16px;">
+
+     
+<!-- Guide Title - Something like -->
+
+<h1 style="text-align:center";>
+   Preparation for Python Course
+</h1>
+
+<!-- Offer a Clock ... why not :-)
+https://www.w3schools.com/js/default.asp -->
+
+<button type="button"
+onclick="document.getElementById('Start_Time').innerHTML = Date()">
+Click to record your <b>Start</b> time.</button>
+<p id="Start_Time"></p>
+
+      <div class="ramble">
+
+        <h2>Repeating Code Blocks and related issues</h2>
+
+        <div Style="color:Red">
+
+          <h2>Prerequisites for Day 2</h2>
+
+          <p>An understanding of why (and in what ways) it is
+             important to be able to design and implement
+             <b>Repetitive Structures</b> would be helpful
+             pre-knowledge for tomorrow's exercises.
+          </p>
+
+          <p>To minimise the class time spent discussing
+             these simple ideas (many of you will have met
+             already) we urge you to find time this evening
+             to have a look at the following very short video:
+          </p>
+
+          <p>The video - Improving <b>Algorithm Design</b> 
+             by the use of <b>Repeat Structures</b> (<b>Loops</b>)
+            <details class="video">
+            <summary Style="color:black;"><b>Loops - A video</b>
+            </summary>
+              <video width="320" height="240" controls preload>
+                <source src="Videos/Loops/loops.mp4"></src>
+              </video>
+            </details>
+          </p>
+
+        <p>Also offered is a video outining the
+           wonders of the <b>FASTA</b> and
+           <b>FASTQ File Formats</b>.
+           This would be handy fo a couple of the exercises also.
+        </p>
+
+        <details class="video">
+        <summary Style="color:black;">
+                       <b>FASTQ File Format - A video</b>
+        </summary>
+          <video width="320" height="240" controls preload>
+            <source src="Videos/00-FASTQ_PHRED_ASCII-Part_1/00-FASTQ_PHRED_ASCII-Part_1.mp4"></src>
+          </video>
+        </details>
+      </div><br>
+
+<button type="button"
+onclick="document.getElementById('End_Time').innerHTML = Date()">
+Click to display your <b>Finish</b> time.</button>
+<p id="End_Time"></p>
+
+</body></html>
+
