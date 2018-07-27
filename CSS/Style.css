@@ -24,6 +24,7 @@ h2 {
 }
 
 h3 {
+    display : inline-block;
     text-align: justify;
     text-justify: inter-word;
     color: blue;
@@ -309,10 +310,10 @@ span.quote {
     font-style: italic;
 }
 
-/* details for Examples */
+/* Class for Examples */
 
-details.example {
-    background-color: auto;
+.example {
+    background-color: MistyRose;
     width: 906px;
 }
 
