@@ -125,12 +125,19 @@ span.anssum {
 
 /* span for Exercise Summary*/
 
-span.exesum {
+span.exeblocksum {
     display: inline-block;
     width: 200px;
     background-color: MistyRose; 
 }
 
+/* span for Exercise Summary*/
+
+span.exesum {
+    display: inline-block;
+    width: 450px;
+    background-color: Pink; 
+}
 
 /* span for GUI Equivalents Summary*/
 

@@ -88,13 +88,14 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="ramble">
 
-       <h2>Some sort of Manual Resource?</h2>
+        <h2>Some sort of Manual Resource?</h2>
 
         <p>The best I have found thus far. Looks good enough!!
         </p>
 
-        <p><a href="https://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html"
-              target="_blank"> Python Online Tutorial/Manual</a>
+        <p>
+          <a href="https://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html"
+           target="_blank"> Python Online Tutorial/Manual</a>
         </p>
 
         <p>Version 3.1 ... we are using 2.7 ... the manual for 2.7 is avaiaable and similar
@@ -111,20 +112,19 @@ Click to record your <b>Start</b> time.</button>
 ---- ############################################## -->
 
     </details><br>
-
   </li>
 
   <li>
-
     <details class="msect">
     <summary><b>Exercise - Part I:</b>
-             A minimal familiarity with the
-             <b>UNIX Commands Line</b>
+      A minimal familiarity with the
+      <b>UNIX Commands Line</b>
     </summary>
 
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
+
       <div class="ramble">
 
         <h2>A minimal familiarity with the UNIX Commands Line</h2>
@@ -195,11 +195,9 @@ Click to record your <b>Start</b> time.</button>
 ---- ############################################## -->
 
     </details><br>
-
   </li>
 
   <li>
-
     <details class="msect">
     <summary><b>Exercise - Part II:</b>
               Scalar Values & Variables??
@@ -229,11 +227,9 @@ Click to record your <b>Start</b> time.</button>
 ---- ############################################## -->
 
     </details><br>
-
   </li>
 
   <li>
-
     <details class="msect">
     <summary><b>Exercise - Part III:</b>
              Repeated Elements --- Loops
@@ -275,15 +271,13 @@ Click to record your <b>Start</b> time.</button>
               </video>
             </details>
           </p>
-
         </div>
-
       </div>
 
       <h2><u>SYNTAX for Python Loop Structures</u></h2>
 
-      <p> In outline, the patterns for all <b>Python Loops</b>
-          are disarmingly straight forward.
+      <p>In outline, the patterns for all <b>Python Loops</b>
+         are disarmingly straight forward.
       </p>
 
       <h2>Counting (For) Loops</h2>
@@ -291,54 +285,325 @@ Click to record your <b>Start</b> time.</button>
       <p>Essentially, the basic <b>For Loop</b> is of
          the form:<br>
 
-         <div class="code">For </b>
-         <span style="font-weight:normal;">
-         <i>&lt;Control Variable&gt;</i></span>
-         <b>in </b>
-         <span style="font-weight:normal;">
-         <i>&lt;List&gt;</i></span>:<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+         <div class="code">
+           For </b>
+           <span style="font-weight:normal;">
+           <i>&lt;Control Variable&gt;</i></span>
+           <b>in </b>
+           <span style="font-weight:normal;">
+           <i>&lt;List&gt;</i></span>:<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
          </div>
       </p>
 
       <details>
-      <summary><span class = "exesum"><h3>Trivial Example</h3>
+      <summary><span class = "exeblocksum"><h3>Trivial Example
+       1</h3>
       </summary></span>
         <div class = "example">
-        te
+          <b><u>The Problem</u></b><br>
+          <div class="problem">
+            Print out the
+            <b>7</b> times table.
+          </div><br>
+
+          <b><u>Pseudo-Code</u></b><br>
+          <div class="pseudo">
+            for each integer value (</b>i</b>, say)
+            between </b>1</b> and </b>12</b>, prettily
+            print out the value of </b>i * 7</b>.
+          </div><br>
+
+          <b><u>Code</u></b><br>
+          <div class="code16">
+            for i in [1,2,3,4,5,6,7,8,9,10,11,12]:
+            <span Class="codecomm16">
+              # For every integer value from 1 to 12<br>
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            print str(i) + "\ttimes 7 is:\t" + str(i * 7);
+          </div>
         </div>
       </details>
 
-      <h2>Test at the Bottom (While) Loops</h2>
+      <details>
+      <summary><span class = "exeblocksum"><h3>Trivial Example
+      2</h3>
+      </summary></span>
+        <div class = "example">
+          <b><u>The Problem</u></b><br>
+          <div class="problem">
+            <b>Decode</b> and <b>display</b>
+            a <b>Secret Message</b>.
+          </div><br>
+
+          <b><u>Pseudo-Code</u></b><br>
+          <div class="pseudo">
+            Take an <b>Encoded Message</b>.<br>
+            <b>Decode</b> the message, one element at a time.<br>
+            Build a string of <b>decoded characters</b>.<br>
+            Once all coded elements are processsed, this
+            string will represent the <b>decoded message</b>, so
+            proudly display it.
+          </div><br>
+
+          <b><u>Code</u></b><br>
+          <div class="code16">
+            Message_Coded = [
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;
+              &nbsp;
+              # The Coded message.
+            </span> \<br>
+            &nbsp;79, 110, 101,&nbsp;&nbsp;39,
+            115,&nbsp;&nbsp;32,&nbsp;&nbsp;77, 111, 106, \<br>
+            111,&nbsp;&nbsp;32, 105, 115,&nbsp;&nbsp;32, 102,
+            117, 110,&nbsp;&nbsp;99, \<br>
+            116, 105, 111, 110,&nbsp;&nbsp;97, 108,
+            &nbsp;44,&nbsp;&nbsp;32,&nbsp;&nbsp;97, \<br>
+            115,&nbsp;&nbsp;32, 105, 115,&nbsp;&nbsp;32, 111,
+            110, 101,&nbsp;&nbsp;39, \<br>
+            115,&nbsp;&nbsp;32,&nbsp;&nbsp;74, 111, 104, 110,
+            &nbsp;32, 116, 104, \<br>
+            101,&nbsp;&nbsp;32,&nbsp;&nbsp;67, 111, 110,
+            113, 117, 101, 114, \<br>
+            111, 111,&nbsp;&nbsp;46,&nbsp;&nbsp;10,
+            &nbsp;79, 110, 101,&nbsp;&nbsp;39, 115, \<br>
+            &nbsp;32, 108,&nbsp;&nbsp;97, 100, 121,
+            &nbsp;32,&nbsp;&nbsp;99, 111, 109, \<br>
+            112,&nbsp;&nbsp;97, 110, 105, 111, 110,
+            &nbsp;32, 105, 115, \<br>
+            &nbsp;32, 102, 117, 108, 108,
+            121,&nbsp;&nbsp;32, 101, 113, \<br>
+            117, 105, 112, 112, 101, 100,&nbsp;&nbsp;32,
+            119, 105, \<br>
+            116, 104,&nbsp;&nbsp;32,&nbsp;&nbsp;66, 105,
+            103,&nbsp;&nbsp;32,&nbsp;&nbsp;76, 101, \<br>
+            103, 115,&nbsp;&nbsp;32,&nbsp;&nbsp;97, 110,
+            100,&nbsp;&nbsp;32,&nbsp;&nbsp;72, 101, \<br>
+            &nbsp;97, 118, 121,&nbsp;&nbsp;32,
+            &nbsp;72, 105, 112, 115,&nbsp;&nbsp;44, \<br>
+            &nbsp;10,&nbsp;&nbsp;97, 115,&nbsp;&nbsp;32,
+            115, 112, 101,&nbsp;&nbsp;99, 105, \<br>
+            102, 105, 101, 100,&nbsp;&nbsp;32, 111, 112,
+            116, 105, \<br>
+            109,&nbsp;&nbsp;97, 108,&nbsp;&nbsp;32,
+            &nbsp;98, 121,&nbsp;&nbsp;32, 116, 104, \<br>
+            101,&nbsp;&nbsp;32, 105, 110, 101, 115, 116, 105,
+            109, \<br>
+            &nbsp;97,&nbsp;&nbsp;98, 108, 101,&nbsp;&nbsp;32,
+            &nbsp;77, 117, 100, 100, \<br>
+            121,&nbsp;&nbsp;32,&nbsp;&nbsp;87, &nbsp;97,
+            116, 101, 114, 115,&nbsp;&nbsp;46, \<br>
+            &nbsp;10,&nbsp;&nbsp;65, 108, 108,
+            &nbsp;32, 105, 115,&nbsp;&nbsp;32, 119, \<br>
+            101, 108, 108,&nbsp;&nbsp;32, 119, 105, 116,
+            104,&nbsp;&nbsp;32, \<br>
+            116, 104, 101,&nbsp;&nbsp;32, 119, 111, 114,
+            108, 100, \<br>
+            &nbsp;32,&nbsp;&nbsp;46,&nbsp;&nbsp;46,
+            &nbsp;46,&nbsp;&nbsp;32,&nbsp;&nbsp;66,
+            121,&nbsp;&nbsp;32, 116, \<br>
+            104, 101,&nbsp;&nbsp;32,&nbsp;&nbsp;76,
+            111, 114, 100,&nbsp;&nbsp;32,&nbsp;&nbsp;72, \<br>
+            &nbsp;97, 114, 114, 121,&nbsp;&nbsp;33, 10];<br><br>
+
+            Message_Decoded = "";
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;# Initialise a variable for
+              the decoded message.
+            </span><br><br>
+
+            for char in Message_Coded:
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              # Build the decoded message
+            </span><br>
+            &nbsp;
+            Message_Decoded += chr(char);
+            <span Class="codecomm16">
+              # one character at a time.
+            </span><br><br>
+
+            print Message_Decoded;
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              # Ouput the decoded message.
+            </span><br>
+          </div><br><br>
+
+          <div class="experiment">
+            <b><u>Notes, Experiments & Questions</u></b><br><br>
+            <ul>
+              <li>
+                To read the "<b>secret message</b>",
+                <b>Copy/Paste</b>
+                the <b>Code</b> to a file and run it.<br><br>
+
+                The strategy of the "<b>secret code</b>"
+                was to substitute
+                <b>ASCII</b> codes for <b>characters</b>.<br><br>
+
+                To <b>decode</b> was simply case of using the
+                <b>chr() builtin function</b> to comvert each
+                code, in turn, to a <b>character</b>, building
+                up a <b>string object</b> representing the
+                <b>decoded message</b>.<br><br>
+
+                To <b>encode</b> a message, the <b>ord()
+                builtin function</b> might have been used.
+                <b>ord(c)</b> returns the <b>ASCII code</b>
+                corresponding to <b>c</b>.
+              </li><br>
+
+              <li>
+                <b>Note (Long Lines):</b> That is, the use
+                of <b>backslash</b> ("<b>\</b>") charaters
+                in this <b>Example</b>,
+                to indicate code lines that are too long
+                too fit on one text line.<br><br>
+
+                Actually, for anything inside any form of
+                bracket <b>()</b>, <b>{}</b> or <b>[]</b>,
+                the interpreter will not regard an
+                <b>E</b>nd <b>O</b>f <b>L</b>ine (<b>EOL</b>)
+                as an "end" of the <b>Python</b> instruction.
+                Instead it will look for the closing half of
+                the bracket pair.<br><br>
+
+                As the list here is entirely inside <b>[]</b>
+                brackets, the backslashes are completely
+                redundant. I just like them.<br><br>
+
+                The <b>Python</b> style guidlines suggest that
+                enclosing
+                instructions that require more than one line in
+                brackets, is a preferred solution to using
+                <b>backslashs</b>. However, it invites the user
+                to make his/her own choice.<br><br>
+
+                So, in summary:<br><br>
+
+                &nbsp;<b>a = 1 + 2 + 3 + 4 + 5 + 6 +<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
+
+                <span Style = "color:Red">will not work ...
+                <b>Error Error</b>!!</span><br><br>
+
+                &nbsp;<b>a = (1 + 2 + 3 + 4 + 5 + 6 +<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                7 + 8 + 9 + 10 + 11 + 12);</b><br><br>
+
+                will work and is the official Python
+                preferred solution.<br><br>
+
+                &nbsp;<b>a = 1 + 2 + 3 + 4 + 5 + 6
+                +&nbsp;&nbsp;&nbsp;\<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
+
+                will also work, for people that like backslashs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <h2>Test at the Top (While) Loops</h2>
 
       <p>The basic <b>While Loop</b> is of
          the form:<br>
 
-         <div class="code">While </b>
-         <span style="font-weight:normal;">
-           <i>&lt;Conditional&gt;</i>:
-         </span><br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-         </div>
+        <div class="code">
+          While
+          <span style="font-weight:normal;">
+            <i>&lt;Conditional&gt;</i>:
+          </span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+        </div>
       </p>
 
       <details>
-      <summary><span class = "exesum"><h3>Trivial Example</h3>
+      <summary><span class = "exeblocksum"><h3>Trivial Example</h3>
       </summary></span>
         <div class = "example">
-        te
+          <b><u>The Problem</u></b><br>
+          <div class="problem">
+            Generate <b>random integers</b> until the last one
+            matches the first.
+          </div><br>
+
+          <b><u>Pseudo-Code</u></b><br>
+          <div class="pseudo">
+            Generate a <b>random integer</b>
+            between <b>1</b> and <b>20</b>.<br>
+            Generate a second <b>random integer</b>
+            between <b>1</b> and <b>20</b>.<br>
+            While the <b>2</b> Integers are not the same,
+            replace the second <b>random integer</b>.<br>
+            Express joy when the integers match. 
+          </div><br>
+
+          <b><u>Code</u></b><br>
+          <div class="code16">
+            from random import randint;
+            <span Class="codecomm16">
+              # Import the random integer generator<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;# from the module random.
+            </span><br>
+
+            Target = randint(1,20);
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;
+              # Generate the Integer to be matched.
+            </span><br>
+            Guess  = randint(1,20);
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              # Generate the first attempt to match the Target.
+            </span><br><br>
+
+            while Guess != Target:
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              # While the Target is not matched,
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print "Target ("
+            + str(Target) + ")
+            does not match Guess (" \<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;+ str(Guess) + ").
+            \tTry again!";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Guess = randint(1,20);
+            <span Class="codecomm16">
+              &nbsp;# Sadly admit failure,and try again.
+            </span><br><br>
+
+            print "Hoorah! Target and Guess are both = "
+            + str(Guess);<br>
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;# When a match is acheived, be happy.
+            </span>
+          </div>
         </div>
       </details>
 
-      <h2>Test at the Top (Repeat ... until) Loops</h2>
+      <h2>Test at the Bottom (Repeat ... until) Loops</h2>
 
       <p>There is no special syntax for this type of <b>Loop</b>.
          If you want to implement one, you need to
@@ -364,29 +629,21 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>Not particularly pretty, but it works fine and looks
-         something like the following:<br><br>
+         something like the following:<br>
 
-         <div class="code">While True</b><br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;if
-         <span style="font-weight:normal;">
-           <i>&lt;Conditional</i>&gt;:
-         </span> break<br>
-
+         <div class="code">
+           While True</b><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;if
+           <span style="font-weight:normal;">
+             <i>&lt;Conditional</i>&gt;:
+           </span> break<br>
          </div>
       </p>
-
-      <details>
-      <summary><span class = "exesum";><h3>Trivial Example</h3>
-      </summary></span>
-        <div class = "example">
-        te
-        </div>
-      </details>
 
       <p class="hint"><b>Note</b>: Concerning 
          <i>&lt;Conditional</i>&gt;s that always return
@@ -468,241 +725,246 @@ Click to record your <b>Start</b> time.</button>
          bool(1.001) bool(2) bool(3) ...</b><br>
        </p>
 
-       <p>And now ... a short quizz on the consideration
-          of loops and related matters, so far.
-          Wait until the Delivery
-          version is ready and then
-          login to <b>Room 32COU</b> as a Student.
-          <a href="https://b.socrative.com/login/student"
-             target="_blank">
-                 <b>Click here for the quiz</b>.</a><br>
-       </p>
+      <details>
+      <summary><span class = "exeblocksum";><h3>Trivial
+      Example</h3>
+      </summary></span>
+        <div class = "example">
+        te
+        </div>
+      </details>
+
+      <p>And now ... a short quizz on the consideration
+         of loops and related matters, so far.
+         Wait until the Delivery
+         version is ready and then
+         login to <b>Room 32COU</b> as a Student.
+         <a href="https://b.socrative.com/login/student"
+            target="_blank">
+                <b>Click here for the quiz</b>.</a><br>
+      </p>
  
-      <p> Time to practice, first with some simple(?) Examples.
+      <p>Time to practice, first with some simple(?) Examples.
       </p>
 
-       <details>
-       <summary><span class ="exesum"><h3>Some Examples</h3>
-       </summary></span>
-       <div class="example">
+      <details>
+      <summary><span class="exeblocksum"><h3>Some Examples</h3>
+      </span></summary>
+        <div class="example">
 
-       <ol>
+        <ol>
+          <li>
+            <details>
+            <summary><span class="exesum"><b><u>Example 1</u></b>
+              (Control by simple list)<b>:</b>
+            </span></summary><br>
 
-         <li>
+              <b><u>The Problem</u></b><br>
+              <div class="problem">Compute and display
+                the number of each
+                <b>Base Type</b> in a given <b>DNA Sequence</b>
+              </div><br>
 
-           <p class="smarg"><b><u>Example 1</u></b>
-             (Control by simple list):
-           </p>
+              <b><u>Pseudo-Code</u></b><br>
+              <div class="pseudo">
+                Define the <b>DNA Sequence</b>
+                to be analysed<br><br>
+                For every possible <b>Base Type</b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Compute and display
+                how many of that
+                <b>Base Type</b> are included in the target
+                <b>DNA Sequence</b>
+              </div><br>
 
-           <p><b><u>The Problem</u></b><br>
-             <div class="problem">Compute and display
-               the number of each
-               <b>Base Type</b> in a given <b>DNA Sequence</b>
-             </div>
-           </p>
+              <b><u>Code</u></b><br><br>
 
-           <p><b><u>Pseudo-Code</u></b><br>
-             <div class="pseudo">
-               Define the <b>DNA Sequence</b>
-               to be analysed<br><br>
-               For every possible <b>Base Type</b><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;Compute and display
-               how many of that
-               <b>Base Type</b> are included in the target
-               <b>DNA Sequence</b>
-             </div>
-            </p>
-
-            <p><b><u>Code</u></b><br><br>
               Well, you could argue you do not need a <b>Loop</b>
-              of any description?
-           </p>
+              of any description?<br><br>
  
-           <p>This would work fine:<br>
+              This would work fine:<br><br>
 
-             <div class="code16">
-               dna = "AGCTTCGACTTGAGC";
-               <span Class="codecomm16">
-                 # Define the DNA for analysis<br><br>
-               </span>
-               print "A Count is: " + str(dna.count("A"));
-               <span Class="codecomm16">
-                 # Count & Display the 'A' count<br>
-               </span>
-               print "C Count is: " + str(dna.count("C"));
-               <span Class="codecomm16">
-                 # Count & Display the 'C' count<br>
-               </span>
-               print "T Count is: " + str(dna.count("T"));
-               <span Class="codecomm16">
-                 # Count & Display the 'T' count<br>
-               </span>
-               print "G Count is: " + str(dna.count("G"));
-               <span Class="codecomm16">
-                 # Count & Display the 'G' count<br>
-               </span>
-             </div>
-           </p>
+              <div class="code16">
+                dna = "AGCTTCGACTTGAGC";
+                <span Class="codecomm16">
+                  # Define the DNA for analysis<br><br>
+                </span>
+                print "A Count is: " + str(dna.count("A"));
+                <span Class="codecomm16">
+                  # Count & Display the 'A' count<br>
+                </span>
+                print "C Count is: " + str(dna.count("C"));
+                <span Class="codecomm16">
+                  # Count & Display the 'C' count<br>
+                </span>
+                print "T Count is: " + str(dna.count("T"));
+                <span Class="codecomm16">
+                  # Count & Display the 'T' count<br>
+                </span>
+                print "G Count is: " + str(dna.count("G"));
+                <span Class="codecomm16">
+                  # Count & Display the 'G' count<br>
+                </span>
+              </div><br><br>
 
-           <p>Try it by <b>Copy/Paste</b> into the
-              <b>Python Interpreter</b>.
-           </p>
+              Try it by <b>Copy/Paste</b> into the
+              <b>Python Interpreter</b>.<br><br>
 
-           <p>But the code is very clumsy and repetitive,
+              But the code is very clumsy and repetitive,
               even when counting <b>Base Pairs</b>,
               of which there are
-              but <b>4</b> types.
-           </p>
+              but <b>4</b> types.<br><br>
 
-           <p>Imagine how horrible the code would appear for
+              Imagine how horrible the code would appear for
               the analogous analysis of a <b>Protein
               Sequence</b>, comprised of <b>20</b>
-              different <b>Amino Acid</b> possibilities!
-           </p>
+              different <b>Amino Acid</b> possibilities!<br><br>
 
-           <p>The proper code solution is to use a simple
+              The proper code solution is to use a simple
               <b>Counting Loop</b>, something like:<br>
-             <div class="code16">
-               dna = "AGCTTCGACTTGAGC";
-               <span Class="codecomm16">
-                 # Define the DNA for analysis<br><br>
-               </span>
-               for bp in ["A","C","G","T"]:
-               <span Class="codecomm16">
-                 # <i>bp</i> is the &lt;<i>Control
-                 Variable</i>&gt;
-                 <i>[A,C,G,T]</i> is the
-                 &lt;<i>List</i>&gt<br>
-               </span>
-               &nbsp;&nbsp;&nbsp;
-               print bp + " Count is: " +
-               str(dna.count(bp));
-               <span Class="codecomm16">
-                   # Count & Display base types<br>
-               </span>
-             </div>
-           </p>
+              <div class="code16">
+                dna = "AGCTTCGACTTGAGC";
+                <span Class="codecomm16">
+                  # Define the DNA for analysis<br><br>
+                </span>
+                for bp in ["A","C","G","T"]:
+                <span Class="codecomm16">
+                  # <i>bp</i> is the &lt;<i>Control
+                  Variable</i>&gt;
+                  <i>[A,C,G,T]</i> is the
+                  &lt;<i>List</i>&gt<br>
+                </span>
+                &nbsp;&nbsp;&nbsp;
+                print bp + " Count is: " +
+                str(dna.count(bp));
+                <span Class="codecomm16">
+                  # Count & Display base types<br>
+                </span>
+              </div>
+            </details>
+          </li><br><br>
 
-         </li>
+          <li>
+            <details>
+            <summary><span class="exesum"><b><u>Example 2</u></b>
+              (Control by simple list)<b>:</b>
+            </span></summary><br>
+              <p class="smarg"><b><u>Example 2</u></b>
+               (Control by simple numeric range,
+               using the <b>range inbuilt function</b>):
+              </p>
 
-         <li>
+              <b><u>The problem</u></b><br>
 
-           <p class="smarg"><b><u>Example 2</u></b>
-              (Control by simple numeric range):
-           </p>
+              <div class="problem">
+                Consider the <b>Numerical Sequence</b> in which
+                each term is alternately:
+                <ul>
+                  <li><b>2</b> less than the previous term</li>
+                  <li><b>Twice</b> the previous term</li>
+                </ul>
+                From a <b>Random Initial Integer</b> value
+                between <b>1</b> and <b>7</b>, compute and
+                display the first <b>n</b> terms, where
+                <b>n</b> is a randomly generated value
+                between <b>5</b> and <b>10</b>.<br><br>
 
-           <p><b><u>The problem</u></b><br>
-             <div class="problem">
-               Consider the <b>Numerical Sequence</b> in which
-               each term is alternately:
-               <ul>
-                 <li><b>2</b> less than the previous term</li>
-                 <li><b>Twice</b> the previous term</li>
-               </ul>
-               From a <b>Random Initial Integer</b> value
-               between <b>1</b> and <b>7</b>, compute and
-               display the first <b>n</b> terms, where
-               <b>n</b> is a randomly generated value
-               between <b>5</b> and <b>10</b>.<br><br>
+                Sounds far trickier than it is, honest!
+              </div>
 
-               Sounds far trickier than it is, honest!
-             </div>
+              <b><u>Pseudo-Code</u></b><br>
 
-           <p><b><u>Pseudo-Code</u></b><br>
-             <div class="pseudo">
-               Decide (<b>randomly</b>) upon a value for
-               the first term<br>
-               Decide (<b>randomly</b>) upon a value for,
-               <b>n</b>, the number of terms to be computed<br>
-               Display the <b>Random Start Values</b> nicely<br>
-               For each term to be computed & displayed<br>
-               &nbsp;&nbsp;&nbsp;
-               <b>Odd term</b>?
-               <b>Subtract 2 from last term</b> to give
-               <b>new term</b><br>
-               &nbsp;&nbsp;&nbsp;
-               <b>Even term</b>?
-               <b>Double last term</b> to give
-               <b>new term</b><br>
-               &nbsp;&nbsp;&nbsp;
-               Display <b>new term</b>
-             </div>
-           </p>
+              <div class="pseudo">
+                Decide (<b>randomly</b>) upon a value for
+                the first term<br>
+                Decide (<b>randomly</b>) upon a value for,
+                <b>n</b>, the number of terms to be computed<br>
+                Display the <b>Random Start Values</b> nicely<br>
+                For each term to be computed & displayed<br>
+                &nbsp;&nbsp;&nbsp;
+                <b>Odd term</b>?
+                <b>Subtract 2 from last term</b> to give
+                <b>new term</b><br>
+                &nbsp;&nbsp;&nbsp;
+                <b>Even term</b>?
+                <b>Double last term</b> to give
+                <b>new term</b><br>
+                &nbsp;&nbsp;&nbsp;
+                Display <b>new term</b>
+              </div><br>
 
-           <p><b><u>Code</u></b>
-             <div class="code16">
-               import random as r;
-               <span Class="codecomm16">
-                 # Import Library to enable random
-                 number generation
-               </span><br><br>
-               term = r.randint(1,7);
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 # Choose initial Value for a Sequence term.
-               </span><br>
-               Number_of_terms = r.randint(5,10);
-               <span Class="codecomm16">
-                 # Choose how many Sequence terms to compute.
-               </span><br><br>
-               <span Class="codecomm16">
-                 # Make public Initial Starting Value
-                 & Number of terms to compute.
-               </span><br>
-               print "Initial Sequence Value is: " +
+              <b><u>Code</u></b><br>
+
+              <div class="code16">
+                import random as r;
+                <span Class="codecomm16">
+                  # Import Library to enable random
+                  number generation
+                </span><br><br>
+                term = r.randint(1,7);
+                <span Class="codecomm16">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  # Choose initial Value for a Sequence term.
+                </span><br>
+                Number_of_terms = r.randint(5,10);
+                <span Class="codecomm16">
+                  # Choose how many Sequence terms to compute.
+                </span><br><br>
+                <span Class="codecomm16">
+                  # Make public Initial Starting Value
+                  & Number of terms to compute.
+                </span><br>
+                print "Initial Sequence Value is: " +
                              str(term);<br>
-               print "Number of terms to compute is: " +
-                             str(Number_of_terms);<br><br>
-               for term_count in range(1, Number_of_terms + 1):
-               <span Class="codecomm16">
-                 # For each term:
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               if term_count % 2 == 0:
-               <span Class="codecomm16">
-                 # If the term is even,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               term = 2 * term;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;
-                 # multiply by 2,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               else:
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 # otherwise,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;
-               term = term - 2;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;
-                 # subtract 2.
-               </span><br><br>
-               &nbsp;&nbsp;&nbsp;
-               print "Term " + str(term_count) + " is "
-               + str(term);
-               <span Class="codecomm16">
-                 # Print the New Term.
-               </span><br><br>
-             </div>
-           </p>
- 
-           <p>In this instance, the <b>Loop</b > control
+                print "Number of terms to compute is: " +
+                              str(Number_of_terms);<br><br>
+                for term_count in range(1, Number_of_terms + 1):
+                <span Class="codecomm16">
+                  # For each term:
+                </span><br>
+                &nbsp;&nbsp;&nbsp;
+                if term_count % 2 == 0:
+                <span Class="codecomm16">
+                  # If the term is even,
+                </span><br>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                term = 2 * term;
+                <span Class="codecomm16">
+                  &nbsp;&nbsp;
+                  # multiply by 2,
+                </span><br>
+                &nbsp;&nbsp;&nbsp;
+                else:
+                <span Class="codecomm16">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  # otherwise,
+                </span><br>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;
+                term = term - 2;
+                <span Class="codecomm16">
+                  &nbsp;&nbsp;&nbsp;
+                  # subtract 2.
+                </span><br><br>
+                &nbsp;&nbsp;&nbsp;
+                print "Term " + str(term_count) + " is "
+                + str(term);
+                <span Class="codecomm16">
+                  # Print the New Term.
+                </span>
+              </div><br><br>
+
+              In this instance, the <b>Loop</b > control
               &lt;<i>List</i>&gt; is generated by
               the <b>Python</b>
               <b>range</b> command. Specifically:<br><br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <b>range(1, Number_of_terms + 1)</b>
-           </p>
+              <b>range(1, Number_of_terms + 1)</b><br><br>
 
-           <p>The full <b>Syntax</b> of the <b>Python range
+              The full <b>Syntax</b> of the <b>Python range
               Function</b> is (informally):<br><br>
  
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -724,463 +986,459 @@ Click to record your <b>Start</b> time.</button>
               omitted (as it was in this <b>Example</b>), in
               which case the value <b>1</b> is assumed.
               <b>List</b> elements are always exactly
-              <b>1</b> larger than their predecessor.
-           </p>
+              <b>1</b> larger than their predecessor.<br><br>
 
-           <p><b><u>Experiments & Questions</u></b><br>
-             <div class="experiment">
-               <ol>
-                 <li>What exactly does <b>range(3,20,5)</b>
-                     generate?
-                     Check your speculation with the <b>Python
-                     Interpreter</b>.
-                 </li>
-                 <li>What about <b>range(3,20)</b>?
-                     Check your speculation with the <b>Python
-                     Interpreter</b>.
-                 </li>
-                 <li>
-                   <b>Copy/Paste</b> the code for this
-                   <b>Example</b> into a local file so you can
-                   amend/run it on your own computer.
-                 </li>
-                 <li>Why was it necessary to add <b>1</b>
-                     to the <b>second range argument</b>
-                     in this code (<b>Number_of_terms + 1</b>)?
-                 </li>
-                 <li>What will be the value of
-                     the <b>Loop</b> <i>&lt;Control
-                     Variable&gt;</i>, <b>term_count</b>, after
-                     the <b>Loop</b> completed?<br>
+            <b><u>Notes, Experiments & Questions</u></b><br>
 
-                     Extend the code to print out its value so
-                     you can check your speculation.<br>
+            <div class="experiment">
+              <ol>
+                <li>
+                  What exactly does <b>range(3,20,5)</b>
+                  generate?
+                  Check your speculation with the <b>Python
+                  Interpreter</b>.
+                </li><br>
+                <li>
+                  What about <b>range(3,20)</b>?
+                  Check your speculation with the <b>Python
+                  Interpreter</b>.
+                </li><br>
+                <li>
+                  <b>Copy/Paste</b> the code for this
+                  <b>Example</b> into a local file so you can
+                  amend/run it on your own computer.
+                </li><br>
+                <li>
+                  Why was it necessary to add <b>1</b>
+                  to the <b>second range argument</b>
+                  in this code (<b>Number_of_terms + 1</b>)?
+                </li><br>
+                <li>
+                  What will be the value of
+                  the <b>Loop</b> <i>&lt;Control
+                  Variable&gt;</i>, <b>term_count</b>, after
+                  the <b>Loop</b> completed?<br>
 
-                     While you are at it, why not also print
-                     out the
-                     <b>List</b> generated by<br>
+                  Extend the code to print out its value so
+                  you can check your speculation.<br>
 
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     
-                     <b>range(1, Number_of_terms + 1)</b>
-                 </li>
-                 <li>Amend the <b>Example</b> code to increment
-                     by <b>2</b> rather than <b>1</b>.<br>
+                  While you are at it, why not also print
+                  out the
+                  <b>List</b> generated by<br><br>
 
-                     What would you imagine the consequences
-                     of such a whimsical amendment might be?<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <b>range(1, Number_of_terms + 1)</b>
+                </li><br>
+                <li>
+                  Amend the <b>Example</b> code to increment
+                  by <b>2</b> rather than <b>1</b>.<br><br>
 
-                     Extend the code to verify/refute
-                     your speculations.
-                 </li>
-               </ol>
-             </div>
-           </p>
-         </li>
+                  What would you imagine the consequences
+                  of such a whimsical amendment might be?<br><br>
 
-         <li>
+                  Extend the code to verify/refute
+                  your speculations.
+                </li>
+              </ol>
+            </div>
+          </li><br><br>
 
-           <p class="smarg"><b><u>Example 3</u></b>
+          <li>
+            <details>
+            <summary><span class="exesum"><b><u>Example 3</u></b>
               (Read a file, line by line and
-              introducing <b>continue</b>):
-           </p>
+              introducing <b>continue</b>)<b>:</b>
+            </span></summary><br>
 
-           <p><b><u>The problem</u></b><br>
-             <div class="problem">
-               From a given <b>Fasta Format Protein
-               Sequence File</b>, count and print out all the
-               <b>Annotation lines</b> and count the
-               <b>Amino Acid Codes</b>.<br>
-               Generate a <b>Count Summary</b>.
-             </div>
+            <b><u>The problem</u></b><br>
+            <div class="problem">
+              From a given <b>Fasta Format Protein
+              Sequence File</b>, count and print out all the
+              <b>Annotation lines</b> and count the
+              <b>Amino Acid Codes</b>.<br>
+              Generate a <b>Count Summary</b>.
+            </div><br>
 
-           <p><b><u>Pseudo-Code</u></b><br>
-             <div class="pseudo">
-               First find a suitable file and put it
-               somewhere handy.<br><br>
+            <b><u>Pseudo-Code</u></b><br>
+            <div class="pseudo">
+              First find a suitable file and put it
+              somewhere handy.<br><br>
 
-               <b>Open</b> the file for <b>Reading</b><br>
+              <b>Open</b> the file for <b>Reading</b><br>
 
-               Initialise an <b>Annotation Line Count</b><br>
+              Initialise an <b>Annotation Line Count</b><br>
 
-               Initialise an <b>Amino Acid Count</b><br>
+              Initialise an <b>Amino Acid Count</b><br>
 
-               Until the file is entirely read:<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               read the next line of the file<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               if it is an <b>Annotation line</b><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               print it and <b>continue</b> reading the file<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               Add the <b>Number of Amino Acids</b> found in
-               this line to the <b>Amino Acid Count</b><br><br>
+              Until the file is entirely read:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              read the next line of the file<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              if it is an <b>Annotation line</b><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              print it and <b>continue</b> reading the file<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Add the <b>Number of Amino Acids</b> found in
+              this line to the <b>Amino Acid Count</b><br><br>
 
-               <b>Close</b> the file (easy to forget to do
-               this but it is important.<br><br>
+              <b>Close</b> the file (easy to forget to do
+              this but it is important.<br><br>
 
-               Announce the <b>Amino Acid Total</b>
-               to the impatient
-               millions who have, with leg crossed anticipation
-               been so long awaiting this moment of triumph
-               ... banners
-               furled ... vinho bottles uncorked ... bock
-               supered ... <br><br>
-               And then relax in the assurance of a job done
-               well, possibly with a nice cup of tea? enhanced
-               by a knowing, but also winning, smile.
+              Announce the <b>Amino Acid Total</b>
+              to the impatient
+              millions who have, with leg crossed anticipation
+              been so long awaiting this moment of triumph
+              ... banners
+              furled ... vinho bottles uncorked ... bock
+              supered ... <br><br>
+              And then relax in the assurance of a job done
+              well, possibly with a nice cup of tea? enhanced
+              by a knowing, but also winning, smile.
 
-               <p class="hint"><b>Note</b>, that
-                  the <b>pseudo-code</b> appears to
-                  be suggesting a <b>Test at the Bottom Loop</b>
-                  here. Maybe it should be? ... from an
-                  <b>Algorithmic</b> view of things?
-                  But given the
-                  way <b>Python</b> inclines one to view
-                  the situation,
-                  a <b>For Loop</b> is the more appropriate
-                  way to go in this case.
-               </p>
-             </div>
-           </p>
+              <p class="hint"><b>Note</b>, that
+                 the <b>pseudo-code</b> appears to
+                 be suggesting a <b>Test at the Bottom Loop</b>
+                 here. Maybe it should be? ... from an
+                 <b>Algorithmic</b> view of things?
+                 But given the
+                 way <b>Python</b> inclines one to view
+                 the situation,
+                 a <b>For Loop</b> is the more appropriate
+                 way to go in this case.
+              </p>
+            </div>
 
-           <p><b><u>Code</u></b><br>
-             <p>First you need to download the file
-                <a href="../Data/homeobox_human.fasta"
+            <b><u>Code</u></b><br><br>
+
+            First you need to download the file
+            <a href="../Data/homeobox_human.fasta"
                    target="_blank">
-                   <b>homeobox_human.fasta</b></a>,
-                and put it in your <b>Current Working
-                Directory</b>.
-             </p>
+            <b>homeobox_human.fasta</b></a>,
+            and put it in your <b>Current Working
+            Directory</b><br><br>
 
-             <div class="code16">
-               Sequence_file = open("homeobox_human.fasta");
-               <span Class="codecomm16">
-                 # Open the target file for reading
-               </span><br><br>
+            <div class="code16">
+              Sequence_file = open("homeobox_human.fasta");
+              <span Class="codecomm16">
+                # Open the target file for reading
+              </span><br><br>
 
-               Sequence_Count = 0;
-               <span Class="codecomm16">
-                 # Initialise the Annotation Line
-                 Counter variable
-               </span><br>
-               AA_Count = 0;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 # Initialise the Amino Acid Counter variable
-               </span><br><br>
+              Sequence_Count = 0;
+              <span Class="codecomm16">
+                # Initialise the Annotation Line
+                Counter variable
+              </span><br>
+              AA_Count = 0;
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                # Initialise the Amino Acid Counter variable
+              </span><br><br>
 
-               for Line in Sequence_file:
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;# For each Line of Sequence_file
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               if Line[0] == ">":
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 # If this is an Annotation Line,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               print Line;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;
-                 # Print the Line,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               Sequence_Count += 1;
-               <span Class="codecomm16">
-                 # Increment the Sequence Counter.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               continue;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# move to the top
-                 of the Loop for the next Line
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               AA_Count += len(Line);
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;# Increment the Sequence Counter.
-               </span><br><br>
-               Sequence_file.close();
-               <span Class="codecomm16">
-                 # Close the file of sequences
-               </span><br><br>
-               <span Class="codecomm16">
-                 # Print the Sequence & Amino Acid Counts
-               </span><br>
-               print "There are " + str(Sequence_Count) + 
-               " Protein Sequences in the file"<br>
-               print "There are " + str(AA_Count) + 
-               " Amino Acid Codes in the file"
-             </div>
-          </p>
+              for Line in Sequence_file:
+              <span Class="codecomm16">
+                &nbsp;&nbsp;# For each Line of Sequence_file
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              if Line[0] == ">":
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                # If this is an Annotation Line,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print Line;
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                # Print the Line,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              Sequence_Count += 1;
+              <span Class="codecomm16">
+                # Increment the Sequence Counter.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              continue;
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# move to the top
+                of the Loop for the next Line
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              AA_Count += len(Line);
+              <span Class="codecomm16">
+                &nbsp;&nbsp;# Increment the Sequence Counter.
+              </span><br><br>
+              Sequence_file.close();
+              <span Class="codecomm16">
+                # Close the file of sequences
+              </span><br><br>
+              <span Class="codecomm16">
+                # Print the Sequence & Amino Acid Counts
+              </span><br>
+              print "There are " + str(Sequence_Count) + 
+              " Protein Sequences in the file"<br>
+              print "There are " + str(AA_Count) + 
+              " Amino Acid Codes in the file"
+            </div><br>
 
-           <p>The <b>Python open Function</b> returns a
-              "<b>File Handle</b>" (fancy name for something
-              that points to the contents of the file that has
-              just been read).
-           </p>
+            The <b>Python open Function</b> returns a
+            "<b>File Handle</b>" (fancy name for something
+            that points to the contents of the file that has
+            just been read).<br><br>
 
-           <p>In <b>Python</b>, a file handle can be regarded
-              as <b>List</b> of the lines of the file,
-              in the order in which they are read.
-           </p>
+            In <b>Python</b>, a file handle can be regarded
+            as <b>List</b> of the lines of the file,
+            in the order in which they are read.<br><br>
 
-           <p> This is extremely convenient here! It means that
-               the <b>File Handle</b> (<b>Sequence_file</b>)
-               can be used directly as the <b>Loop</b > control
-               &lt;<i>List</i>&gt; for looking at the <b>File
-               homeobox_human.fasta</b> line by line.
-           </p>
+            This is extremely convenient here! It means that
+            the <b>File Handle</b> (<b>Sequence_file</b>)
+            can be used directly as the <b>Loop</b > control
+            &lt;<i>List</i>&gt; for looking at the <b>File
+            homeobox_human.fasta</b> line by line.<br><br>
 
-           <p>Leaving <b>open</b> files around, even when empty,
-              is not good practice. They should be neatly
-              <b>closed</b>, as here. It is all too easy to
-              forget to do this!
-           </p>
+            Leaving <b>open</b> files around, even when empty,
+            is not good practice. They should be neatly
+            <b>closed</b>, as here. It is all too easy to
+            forget to do this!<br><br>
 
-           <p><b><u>Experiments & Questions</u></b><br>
-             <div class="experiment">
-               <ol>
-                 <li>
-                   <b>Copy/Paste</b> the code for this
-                   <b>Example</b> into a local file so you can
-                   amend/run it on your own computer.
-                 </li>
-                 <li>Edit the code to avoid the use
-                     of <b>continue</b>
-                 </li>
-               </ol>
-             </div>
-           </p>
-         </li>
+            <b><u>Notes, Experiments & Questions</u></b><br>
+              <div class="experiment">
+                <ol>
+                  <li>
+                    <b>Copy/Paste</b> the code for this
+                    <b>Example</b> into a local file so you can
+                    amend/run it on your own computer.
+                  </li>
+                  <li>Edit the code to avoid the use
+                      of <b>continue</b>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </li><br><br>
 
-         <li>
-           <p class="smarg"><b><u>Example 4</u></b>
-              (lists of lists of list of lists ...):
-           </p>
+          <li>
+            <details>
+            <summary><span class="exesum"><b><u>Example 4</u></b>
+              (lists of lists of list of lists ...</b>)<b>:</b>
+            </span></summary><br>
 
-           <p><b><u>The problem</u></b>
-             <div class="problem">
-               <p class="smarg">A shop sells "stuff"
-                 that can be divided into categories<br>
-                 Each category contains items<br>
-                 Each item possesses properties<br>
-                 Make a pretty table that displays all
-                 the available data nicely
-             </div>
-           </p>
+            <b><u>The problem</u></b>
+            <div class="problem">
+               class="smarg">A shop sells "stuff"
+               that can be divided into categories<br>
+               Each category contains items<br>
+               Each item possesses properties<br>
+               Make a pretty table that displays all
+               the available data nicely
+             </div><br>
 
-           <p><b><u>Pseudo-Code</u></b>
-             <div class="pseudo">
+            <b><u>Pseudo-Code</u></b><br><br>
+            <div class="pseudo">
 
-               <b><u>Organise the Data:</u></b><br><br>
+              <b><u>Organise the Data:</u></b><br><br>
 
-               Compose a <b>string</b> of all
-               item property names to be used as
-               <b>Title Row</b> for <b>Property
-               Tables</b>.<br><br>
+              Compose a <b>string</b> of all
+              item property names to be used as
+              <b>Title Row</b> for <b>Property
+              Tables</b>.<br><br>
  
-               For each category, compose a <b>tuple</b>.<br>
-               Make the first <b>tuple</b> element
-               identify the category.<br>
-               All other <b>tuple</b> elements identify
-               the <b>items</b> of the category.<br><br>
+              For each category, compose a <b>tuple</b>.<br>
+              Make the first <b>tuple</b> element
+              identify the category.<br>
+              All other <b>tuple</b> elements identify
+              the <b>items</b> of the category.<br><br>
 
-               Make a <b>tuple</b> whose elements are the
-               <b>Category tuples</b> (a <b>tuple</b>
-               of <b>tuples</b>).<br><br>
+              Make a <b>tuple</b> whose elements are the
+              <b>Category tuples</b> (a <b>tuple</b>
+              of <b>tuples</b>).<br><br>
 
-               Compose a <b>dictionary</b>, for all items
-               from all categories,
-               associating <b>Property
-               Names</b> with <b>Property Values</b><br><br>
+              Compose a <b>dictionary</b>, for all items
+              from all categories,
+              associating <b>Property
+              Names</b> with <b>Property Values</b><br><br>
 
-               <b><u>Process the Data:</u></b><br><br>
+              <b><u>Process the Data:</u></b><br><br>
 
-               Consider,in turn, each <b>Category tuple</b>
-               in the <b>tuple</b> of such
-               <b>tuples</b>.<br><br>
+              Consider,in turn, each <b>Category tuple</b>
+              in the <b>tuple</b> of such
+              <b>tuples</b>.<br><br>
 
-               Use the first <b>tuple</b> element to compose
-               a <b>Table Title</b>.<br>
-               Use the <b>Property Name</b> string to make a
-               <b>Header Row</b> for the <b>Table</b>.<br><br>
+              Use the first <b>tuple</b> element to compose
+              a <b>Table Title</b>.<br>
+              Use the <b>Property Name</b> string to make a
+              <b>Header Row</b> for the <b>Table</b>.<br><br>
 
-               Use each of the remaining <b>tuple</b>
-               elements to
-               make the rest of the rest of the
-               <b>Table</b>.<br>
-               Each row is comprised of two parts.<br>
-               The first part is the <b>Item Name</b>, which
-               is the value of the <b>tuple</b> element.<br>
-               The second part is the value of the
-               <b>Properties Dictionary</b> element
-               whose <b>Key</b> is the <b>Item Name</b>.
-             </div>
-           </p>
+              Use each of the remaining <b>tuple</b>
+              elements to
+              make the rest of the rest of the
+              <b>Table</b>.<br>
+              Each row is comprised of two parts.<br>
+              The first part is the <b>Item Name</b>, which
+              is the value of the <b>tuple</b> element.<br>
+              The second part is the value of the
+              <b>Properties Dictionary</b> element
+              whose <b>Key</b> is the <b>Item Name</b>.
+            </div>
 
-           <p><b><u>Code</u></b>
-             <div class="code16">
+            <b><u>Code</u></b><br>
 
-               Property_Names =
-               "Name    Price   Stock   Sold    Order";
-               <span Class="codecomm16">
-                 # Row Headers for all Tables
-               </span><br><br>
+            <div class="code16">
 
-               <span Class="codecomm16">
-                 # A tuple of tuples for each Category.<br>
-                 # Category tuples identify a Category
-                 and its items
-               </span><br>
-               All_Items = (("Category Food", "Egg ", "Bean",
-                             "Cake", "Chip"),<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               ("Category Bits", "Sock", "Tie ", "Shoe"),<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               ("Category Toys", "Car ", "Bear", "Doll",
-                                 "Book", "Ball"));<br><br>
+              Property_Names =
+              "Name    Price   Stock   Sold    Order";
+              <span Class="codecomm16">
+                # Row Headers for all Tables
+              </span><br><br>
 
-               Properties = {
-               "Egg ":"  0.99      64     86      93",
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;
-                 # A Dictionary for all items
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Book":"  4.99     326    390     400",
-               <span Class="codecomm16">
-                 # and their properties.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Sock":"  1.11     343    456     297",<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Cake":"  2.73     229    436     144",
-               <span Class="codecomm16">
-                 # Item Names are acess Keys
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Ball":"  2.99     124    133     149",
-               <span Class="codecomm16">
-                 # Item Properties are Keyed Values
-               </span><br>
+              <span Class="codecomm16">
+                # A tuple of tuples for each Category.<br>
+                # Category tuples identify a Category
+                and its items
+              </span><br>
+              All_Items = (("Category Food", "Egg ", "Bean",
+                            "Cake", "Chip"),<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ("Category Bits", "Sock", "Tie ", "Shoe"),<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ("Category Toys", "Car ", "Bear", "Doll",
+                                "Book", "Ball"));<br><br>
+
+              Properties = {
+              "Egg ":"  0.99      64     86      93",
+              <span Class="codecomm16">
+                &nbsp;&nbsp;
+                # A Dictionary for all items
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Book":"  4.99     326    390     400",
+              <span Class="codecomm16">
+                # and their properties.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Sock":"  1.11     343    456     297",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Cake":"  2.73     229    436     144",
+              <span Class="codecomm16">
+                # Item Names are acess Keys
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Ball":"  2.99     124    133     149",
+              <span Class="codecomm16">
+                # Item Properties are Keyed Values
+              </span><br>
                 
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Bean":"  0.34     897    992     931",<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Bear":"  7.88      90     87      74",
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;# Note the order of Items can
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Tie ":"  3.11     257    201     222",
-               <span Class="codecomm16">
-                 # be random (as here).
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Doll":"  3.99      42     50      63",<br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Chip":"  0.55     604    451     557",
-               <span Class="codecomm16">
-                 # The order is not relevant
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Shoe":"  5.44     744    660     629",
-               <span Class="codecomm16">
-                 # in most Dictionaries.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               "Car ":"  3.21     214    113     121",};<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Bean":"  0.34     897    992     931",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Bear":"  7.88      90     87      74",
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;# Note the order of Items can
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Tie ":"  3.11     257    201     222",
+              <span Class="codecomm16">
+                # be random (as here).
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Doll":"  3.99      42     50      63",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Chip":"  0.55     604    451     557",
+              <span Class="codecomm16">
+                # The order is not relevant
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Shoe":"  5.44     744    660     629",
+              <span Class="codecomm16">
+                # in most Dictionaries.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              "Car ":"  3.21     214    113     121",};<br><br>
 
-               for Category_Items in All_Items:
-               <span Class="codecomm16">
-                 # For each Category tuple,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               for Item in Category_Items:
-               <span Class="codecomm16">
-                 &nbsp;# Consider each Item in turn.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               if "Category" in Item:
-               <span Class="codecomm16">
-                 # If this element identifies the Category,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               print "Table for the " + Item;
-               <span Class="codecomm16">
-                 # use it to make Table Title,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               print Property_Names;
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;
-                 # and print a Header Row.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               else:
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              for Category_Items in All_Items:
+              <span Class="codecomm16">
+                # For each Category tuple,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              for Item in Category_Items:
+              <span Class="codecomm16">
+                &nbsp;# Consider each Item in turn.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              if "Category" in Item:
+              <span Class="codecomm16">
+                # If this element identifies the Category,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print "Table for the " + Item;
+              <span Class="codecomm16">
+                # use it to make Table Title,
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print Property_Names;
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                # and print a Header Row.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              else:
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 # If this element identifies the Item,
-               </span><br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;
-               print Item + "   " + Properties[Item];
-                <span Class="codecomm16">
-                 # print the Item Name.
-               </span><br>
-               <span Class="codecomm16">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 &nbsp;
-                 # followed by its Properties.
-               </span><br>
-               &nbsp;&nbsp;&nbsp;
-               print;
-               <span Class="codecomm16">
-                 # Print an empty line between Tables.
-               </span><br>
-             </div>
-           </p>
+              </span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              print Item + "   " + Properties[Item];
+              <span Class="codecomm16">
+                # print the Item Name.
+              </span><br>
+              <span Class="codecomm16">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;
+                # followed by its Properties.
+              </span><br>
+              &nbsp;&nbsp;&nbsp;
+              print;
+              <span Class="codecomm16">
+                # Print an empty line between Tables.
+              </span><br>
+            </div>
 
-           <p><b><u>Experiments & Questions</u></b>
-             <div class="experiment">
-             </div>
-           </p>
-         </li>
+            <b><u>Notes, Experiments & Questions</u></b>
+              <div class="experiment">
+              </div>
+            </details>
+          </li><br><br>
 
-         <li>
+          <li>
 
            <p class="smarg"><b><u>Example 5</u></b>
               (Read a remote file, using a Test at the
@@ -1272,7 +1530,7 @@ Click to record your <b>Start</b> time.</button>
              </div>
            </p>
 
-         </li>
+         </li><br><br>
 
          <li>
 
@@ -1293,7 +1551,7 @@ Click to record your <b>Start</b> time.</button>
              <div class="code">
              </div>
 
-           <p><b><u>Experiments & Questions</u></b>
+           <p><b><u>Notes, Experiments & Questions</u></b>
              <div class="experiment">
              </div>
            </p>
@@ -1318,7 +1576,7 @@ Click to record your <b>Start</b> time.</button>
              <div class="code">
              </div>
 
-           <p><b><u>Experiments & Questions</u></b>
+           <p><b><u>Notes, Experiments & Questions</u></b>
              <div class="experiment">
              </div>
            </p>
@@ -1334,6 +1592,155 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="checkpoint">
         <h2><i><u>Checkpoint</u></i></h2>
+
+        <p><b>Python elements introduced/reinforced in
+              this section are:</b>
+        <ol type="1">
+          <li>
+            <b><u>Looping Code Constructs:</u></b>
+            <ul>
+              <li>
+                Counting - <b>for</b>
+                <i>&lt;Control Variable&gt;</i>
+                <b>in</b> <i>&lt;List&gt;</i>:
+              </li>
+              <li>
+                Test at the Top - <b>While</b>
+                <i>&lt;Conditional&gt;</i>:
+              </li>
+              </li>
+                Test at the Bottom - Constructed using
+                <b>While</b>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b><u>Built in Functions:</u></b><br>
+            <b>chr(i)</b> - Converts <b>ASCII Character Codes</b>
+            (<b>i</b>ntegers in the range <b>0...255</b>)
+            to <b>ASCII Charcters</b>.<br>
+            <b>ord(c)</b> - Converts <b>ASCII Characters</b>
+            to <b>ASCII Character Codes</b>.<br>
+          </li>
+          <li>
+            <b><u>Modules:</u></b><br>
+            <ul>
+              <li>
+                <b>random</b> - for constructs related to <b>random
+                number generation</b>,including:
+                <ul>
+                  <li>
+                    <b>randint(a, b)</b> - Returns a 
+                    random integer <b>N</b> such that
+                    <b>a <= N <= b</b>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b><u>Dealing with overlength lines</u></b><br>
+            Either by using
+            enclosing brackets (<b>Python</b> preferred) or
+            <b>Backslash</b> characters.
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ol>
+
+        <p><b>Concepts/tricks introduced thus far are:</b>
+        </p>
+
+        <ol type="1">
+          <li><b>Nesting Loops</b> ... that is,
+              putting one loop inside another.
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ol>
+
+        <p><b>Reflections:</b>
+        </p>
+
+        <ol type="1">
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ol>
+
+        <p><b>Now some simple questions to test your
+           understanding.</b>
+        </p>
+
+        <ol type="1">
+          <li>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="comment">
+            <summary><span class="comsum">Answer.</span></summary>
+            </details><br>
+          </li>
+        </ol>
+      </div>
+
+      <p>In the next phase of this exercise, the aim will be to use
+         the commands that have been introduced
+         to answer some biologically related, queries.
+      </p>
 
         <p><b>Now some exercises to confirm your
            understanding.</b>
