@@ -98,7 +98,7 @@ Click to record your <b>Start</b> time.</button>
            target="_blank"> Python Online Tutorial/Manual</a>
         </p>
 
-        <p>Version 3.1 ... we are using 2.7 ... the manual for 2.7 is avaiaable and similar
+        <p>Version 3.1 ... we are using 2.7 ... the manual for 2.7 is available and similar
         </p>
 
         <h2>Course Objectives.</h2>
@@ -179,7 +179,7 @@ Click to record your <b>Start</b> time.</button>
         </p>
 
         <p>In class time, there will be a short
-           <b><u>quiz</u></b> to assess everyones understanding.
+           <b><u>quiz</u></b> to assess everyone’s understanding.
            Wait until the Delivery
            version is ready, and then
            login to <b>Room 32COU</b> as a Student.
@@ -225,6 +225,392 @@ Click to record your <b>Start</b> time.</button>
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
+
+      <h2><u>Scalar Values and Variables.</u></h2>
+
+      <p>A <b>scalar value</b> is a single item of data.
+      </p>
+
+      <p><b>Scalar data items</b> can be one of a variety of
+         <b>types</b>.
+      </p>
+
+      <p>The <b>types</b> that will be discussed in
+         this consideration
+         of <b>PYTHON</b> will certainly include:<br>
+
+        <ul>
+          <li>
+            <b>int</b> - Integers, that is "<b>whole numbers</b>".
+          </li><br>
+          <li>
+            <b>float</b> - Floating point number, that is numbers
+            with something after the decimal point.
+          </li><br>
+          <li>
+            <b>bool</b> - Boolean values, that is
+            <b>True</b> or <b>False</b>.
+          </li><br>
+          <li>
+            <b>str</b> - A sequence of <b>characters</b>.
+          </li>
+        </ul>
+      </p>
+
+      <h2><u>The PYTHON Interpreter.</u></h2>
+
+      <p>The <b>PYTHON Interpreter</b> is the program that reads
+         your <b>PYTHON code</b>, and instructs the computer to
+         obey. If you are very lucky, the computer sometimes
+         actually does what you intended!
+      </p>
+
+      <p>You can use the <b>PYTHON Interpreter</b> in two
+         very different ways:<br>
+
+        <ul>
+          <li>
+            <b>Interactively</b> - great for running scripts one
+            line at a time, for testing out ideas or
+            new commands.<br><br>
+
+            Using the <b>PYTHON Interpreter</b>
+            interactively is rather like using a calculator
+            in fact.<br><br>
+
+            If the <b>PYTHON Interpreter</b> is started
+            interactively, it remains active having completed
+            a task(waiting for the
+            next interactive command) until explicitly
+            told to go away!
+          </li><br>
+          <li>
+            <b>Non-interactively</b> - in which the
+            <b>PYTHON Interpreter</b> is started to run an
+            entire <b>PYTHON script</b>. Once this is acheived,
+            the <b>PYTHON Interpreter</b>
+            will <b><i>NOT</i></b> wait for
+            further instruction, it will simply close down.
+          </li>
+        </ul>
+      </p>
+
+      <h3>Starting the <b>PYTHON Interpreter</b> in
+      interactive mode.</h3>
+
+      <p>To take a look at the wonders of scalars,
+         using the <b>PYTHON Interpreter interactively</b>
+         would seem the best plan.
+      </p>
+
+      <p>So:
+        <ul>
+          <li>
+            Start up a <b>Terminal</b>
+            (<b>Ctrl-Alt-T</b> usually does the trick).
+          </li><br>
+          <li>
+            Move into a suitable Directory.
+          </li><br>
+          <li>
+            Start up the <b>PYTHON Interpreter</b> in
+            <b>Interactive Mode</b> with the command:<br><br>
+            <span class="command">
+              python
+            </span><br><br>
+
+            to which the response should be something like:<br><br>
+
+            <span class="command">
+              Python 3.5.2 (default, Nov 23 2017, 16:37:01)<br>
+              [GCC 5.4.0 20160609] on linux<br>
+              Type "help", "copyright", "credits" or "license"
+              for more information.<br>
+              >>> 
+            </span><br>
+
+            <p class="hint"><b>Important Note</b>: If you are
+               using "<b>Python 2.?.?</b>", not all of what is
+               described here will work. I assume
+               "<b>Python 3.?.?</b>" which is not
+               backward compatible.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <h3> Basic Arithmatic with Integers.</h3>
+
+      <p>Now for some warm up arithmatic to get the
+         feel of things. Try the following and/or
+         similar:<br><br>
+
+        <span class="command">
+          >>> 3<br>
+          3<br>
+          >>> 3 + 4<br>
+          7<br>
+          >>> 3 - 4<br>
+          -1<br>
+          >>> 4 - 3<br>
+          1<br>
+          >>> 12 / 4<br>
+          3.0<br>
+          >>> 15 / 6<br>
+          2.5<br>
+          >>> 12 * 2<br>
+          24<br>
+          >>> 12 - 5 * 6<br>
+          -18<br>
+          >>> (12 - 5) * 6<br>
+          42<br>
+          >>>
+        </span><br><br>
+
+        <div class="hint"><b>Note</b>:
+          <ol>
+            <li>
+              Basic <b>Arithmetic Operators</b> are
+              those I would hope you expected (?)
+              <ul>
+                <li>
+                  <b>+</b>
+                   &nbsp;&nbsp;&nbsp;&nbsp;Addition
+                </li>
+                <li>
+                  <b>-</b>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtraction
+                </li>
+                <li>
+                  <b>/</b>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Division
+                </li>
+                <li>
+                  <b>*</b>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Multiplication
+                </li>
+              </ul>
+            </li><br>
+
+            <li>
+              All values input here are <b>int</b>
+              (<b>Integers</b>)
+            </li><br>
+
+            <li>
+              Where results can only be type <b>int</b>,
+              they are.<br><br>
+              <span class="command">
+                >>> 3 + 4<br>
+                7<br>
+                >>> 3 - 4<br>
+                -1<br>
+                >>> 4 - 3<br>
+                1<br>
+                >>> 12 * 2<br>
+                24<br>
+                >>>
+              </span>
+            </li><br>
+
+            <li>
+              Any division, even involving ony <b>ints</b>
+              could generate a <b>float</b> answer.<br><br>
+
+              Therefore all divisions generate
+              <b>float</b> answers (that is, values
+              including a decimal point).<br>
+              <span class="command">
+                >>> 12 / 4<br>
+                3.0<br>
+                >>> 15 / 6<br>
+                2.5<br>
+                >>>
+              </span>
+            </li><br>
+
+            <li>
+              If an expression that is a <b>single scalar value</b>
+              is entered, the <b>PYTHON Interpreter</b>
+              simply echoes that value.<br>
+              <span class="command">
+                >>> 3<br>
+                3<br>
+                >>>
+              </span>
+            </li><br>
+
+            <li>
+              parenthesis have their usual role
+              influencing operator precedence.<br>
+              <span class="command">
+                >>> 3<br>
+                3<br>
+                >>>
+              </span>
+            </li><br>
+          </ol>
+        </div>
+      </p>
+
+      <h3> Basic Arithmatic with Floating Point Numbers.</h3><br>
+
+      <p>
+        <span class="command">
+          >>> 1.1 + 4<br>
+          5.1<br>
+          >>> 1.0 + 4<br>
+          5.0<br>
+          >>> 1.9 - 0.4<br>
+          1.5<br>
+          >>> 3.4 * 2.1<br>
+          7.14<br>
+          >>> 3.4 / 2.1<br>
+          1.6190476190476188<br>
+          >>>
+        </span>
+      </p>
+
+      <p class="hint"><b>Note</b>: Any calculation involving
+         a <b>float</b> could result in a <b>float</b>
+         answer.<br><br>
+
+         Therefore the <b>PYTHON
+         Interpreter</b> delivers a <b>float</b>.
+      </p>
+
+      <h3> Exponentiation.</h3><br>
+
+      <p>
+        <span class="command">
+          >>> 3 ** 3<br>
+          27<br>
+          >>> 3 * 3 * 3<br>
+          27<br>
+          >>> 3.0 ** 3<br>
+          27.0<br>
+          >>> 9 ** 0.5<br>
+          3.0<br>
+          >>> 9 ** 0<br>
+          1<br>
+          >>>
+        </span>
+      </p>
+
+      <div class="hint"><b>Note</b>:<br>
+
+        <ol>
+          <li>
+            "<b>**</b> is used as the exponentiation
+            operator.<br><br>
+
+            That is, "<b>3 ** 3</b>" is "<b>3 raised
+            to the power 3</b>" (or "<b>3 * 3 * 3</b>").<br>
+
+            <span class="command">
+              >>> 3 ** 3<br>
+              27<br>
+              >>> 3 * 3 * 3<br>
+              27<br>
+              >>>
+            </span>
+          </li><br>
+
+          <li>
+            If all arguments are <b>Integer</b>,
+            the answer is <b>Integer</b>.<br><br>
+
+            If any argument is a <b>float</b>,
+            the answer is a <b>float</b>.<br>
+
+            <span class="command">
+              >>> 3.0 ** 3<br>
+              27.0<br>
+              >>>
+            </span>
+          </li><br>
+
+          <li>
+            "<b> ** 0.5</b>", of course, returns the<br>
+            <b>square root</b>.<br><br>
+
+            The are others ways to request the
+            <b>square root</b> of a number, as you will see.<br>
+
+            <span class="command">
+              >>> 9 ** 0.5<br>
+              3.0<br>
+              >>>
+            </span>
+          </li><br>
+        </ol>
+      </div>
+
+      <h3> Integer Division.</h3><br>
+
+      <p>
+        <span class="command">
+          >>> 12 // 4
+          3
+          >>> 12 // 4.0
+          3.0
+          >>> 14 // 4
+          3
+          >>> 14 % 4
+          2
+          >>> 
+        </span>
+      </p>
+
+      <div class="hint"><b>Note</b>:<br>
+
+        <ol>
+          <li>
+            "<b>//</b> is used to request Integer Division.<br><br>
+
+            That is, "<b>12 // 3</b>" is "<b>3</b>", but also
+            "<b>12 // 3</b>" is "<b>3</b>". 
+
+<br>
+
+            <span class="command">
+              >>> 3 ** 3<br>
+              27<br>
+              >>> 3 * 3 * 3<br>
+              27<br>
+              >>>
+            </span>
+          </li><br>
+
+          <li>
+            If all arguments are <b>Integer</b>,
+            the answer is <b>Integer</b>.<br><br>
+
+            If any argument is a <b>float</b>,
+            the answer is a <b>float</b>.<br>
+
+            <span class="command">
+              >>> 3.0 ** 3<br>
+              27.0<br>
+              >>>
+            </span>
+          </li><br>
+
+          <li>
+            "<b> ** 0.5</b>", of course, returns the<br>
+            <b>square root</b>.<br><br>
+
+            The are others ways to request the
+            <b>square root</b> of a number, as you will see.<br>
+
+            <span class="command">
+              >>> 9 ** 0.5<br>
+              3.0<br>
+              >>>
+            </span>
+          </li><br>
+        </ol>
+      </div>
 
     </details><br>
   </li>
@@ -346,7 +732,7 @@ Click to record your <b>Start</b> time.</button>
             Take an <b>Encoded Message</b>.<br>
             <b>Decode</b> the message, one element at a time.<br>
             Build a string of <b>decoded characters</b>.<br>
-            Once all coded elements are processsed, this
+            Once all coded elements are processed, this
             string will represent the <b>decoded message</b>, so
             proudly display it.
           </div><br>
@@ -433,7 +819,7 @@ Click to record your <b>Start</b> time.</button>
             print Message_Decoded;
             <span Class="codecomm16">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              # Ouput the decoded message.
+              # Output the decoded message.
             </span><br>
           </div><br><br>
 
@@ -450,7 +836,7 @@ Click to record your <b>Start</b> time.</button>
                 <b>ASCII</b> codes for <b>characters</b>.<br><br>
 
                 To <b>decode</b> was simply case of using the
-                <b>chr() builtin function</b> to comvert each
+                <b>chr() builtin function</b> to convert each
                 code, in turn, to a <b>character</b>, building
                 up a <b>string object</b> representing the
                 <b>decoded message</b>.<br><br>
@@ -463,7 +849,7 @@ Click to record your <b>Start</b> time.</button>
 
               <li>
                 <b>Note (Long Lines):</b> That is, the use
-                of <b>backslash</b> ("<b>\</b>") charaters
+                of <b>backslash</b> ("<b>\</b>") characters
                 in this <b>Example</b>,
                 to indicate code lines that are too long
                 too fit on one text line.<br><br>
@@ -480,11 +866,11 @@ Click to record your <b>Start</b> time.</button>
                 brackets, the backslashes are completely
                 redundant. I just like them.<br><br>
 
-                The <b>Python</b> style guidlines suggest that
+                The <b>Python</b> style guidelines suggest that
                 enclosing
                 instructions that require more than one line in
                 brackets, is a preferred solution to using
-                <b>backslashs</b>. However, it invites the user
+                <b>backslashes</b>. However, it invites the user
                 to make his/her own choice.<br><br>
 
                 So, in summary:<br><br>
@@ -508,7 +894,7 @@ Click to record your <b>Start</b> time.</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
 
-                will also work, for people that like backslashs.
+                will also work, for people that like backslashes.
               </li>
             </ul>
           </div>
@@ -591,14 +977,55 @@ Click to record your <b>Start</b> time.</button>
               &nbsp;# Sadly admit failure,and try again.
             </span><br><br>
 
-            print "Hoorah! Target and Guess are both = "
+            print "Hooray! Target and Guess are both = "
             + str(Guess);<br>
             <span Class="codecomm16">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;# When a match is acheived, be happy.
+              &nbsp;# When a match is achieved, be happy.
             </span>
+          </div><br><br>
+
+          <b><u>Notes, Experiments & Questions</u></b><br><br>
+          <div class="experiment">
+            <ul>
+              <li>
+                <b>While Loops</b> are very important and widely
+                used, however, a simple and convincing example
+                to show just the syntax is not easy to invent
+                if just dressing up a <b>For Loop</b> in
+                ill-fitting apparel is to be avoided!<br><br>
+
+                A <b>For Loop</b> can just count through a
+                number of determined states. A <b>While Loops</b>
+                requires some element of unpredictability
+                to be interesting (justified).<br><br>
+
+                I manufacture that here with
+                <b>pseudo random numbers</b>, which are
+                interesting in their own right. You need
+                the <b>random module</b> to access the
+                function <b>randint</b> in this example.
+                <b>randint(a,b)</b> generates and returns
+                a <b>pseudo random number</b>, <b>N</b> say,
+                in the range <b>a <= N <= b</b>.
+
+                Of course, there are lots of other good things
+                in <b>random</b>, you can list them with
+                command <b>dir(random)</b>. If any particularly
+                catch your eye, you can discover more with,
+                for example, <b>help(random.randint)</b>.
+              </li><br>
+
+              <li>
+                Here is another example of an over length
+                code line. I use a <b>backslash</b>, you
+                might have 
+                preferred to enclose the entirety of that
+                which is to be printed in parentheses, <b>()</b>.
+              </li>
+            </ul>
           </div>
         </div>
       </details>
@@ -714,7 +1141,7 @@ Click to record your <b>Start</b> time.</button>
          If you use an <b>Integer expression</b>, a result
          of <b>0</b> is <b>False</b>, any other
          result is <b>True</b>. You can test this assertion
-         by presenting the <b>Python Interpretter</b> with
+         by presenting the <b>Python Interpreter</b> with
          numbers given as <b>Arguments</b> to the <b>Built in
          Function bool</b>. <b>bool</b> takes a <b>Numeric
          Parameter</b> and returns the appropriate
@@ -726,15 +1153,105 @@ Click to record your <b>Start</b> time.</button>
        </p>
 
       <details>
-      <summary><span class = "exeblocksum";><h3>Trivial
-      Example</h3>
+      <summary><span class = "exeblocksum"><h3>Trivial Example
+       1</h3>
       </summary></span>
         <div class = "example">
-        te
+          <b><u>The Problem</u></b><br>
+          <div class="problem">
+            Generate <b>random integers</b> until the last one
+            matches the first.
+          </div><br>
+
+          <b><u>Pseudo-Code</u></b><br>
+          <div class="pseudo">
+            Generate a <b>random integer</b>
+            between <b>1</b> and <b>20</b>.<br>
+            Until a match is found, generate
+            further <b>random integers</b>
+            between <b>1</b> and <b>20</b>.<br>
+            Express joy when the integers match. 
+          </div><br>
+
+          <b><u>Code</u></b><br>
+          <div class="code16">
+            from random import randint;
+            <span Class="codecomm16">
+              # Import the random integer generator<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;# from the module random.
+            </span><br>
+
+            Target = randint(1,20);
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;
+              # Generate the Integer to be matched.
+            </span><br><br>
+
+            while True:
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              # While ...
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Guess = randint(1,20);
+            <span Class="codecomm16">
+              &nbsp;# Attempt to match the target.
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if Guess == Target:
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;# If the current
+              Guess matches the Target,
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;# Leave the Loop, Job done!
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;else:
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;# Otherwise, Sadly admit failure,and try again.
+            </span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print
+            "Target (" + str(Target) + ")
+            does not match Guess (" \<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+            str(Guess) + ").
+            \tTry again!";<br><br>
+
+            print "Hooray! Target and Guess are both = "
+            + str(Guess);<br>
+            <span Class="codecomm16">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;# When a match is achieved, be happy.
+            </span>
+          </div><br><br>
+
+          <b><u>Notes, Experiments & Questions</u></b><br><br>
+          <div class="experiment">
+            <ul>
+              <li>
+                This is essentially the second
+                "<b>While Loop<b>"
+                <b>Trivial Example</b> rearranged. Perhaps
+                it feels more natural as a <b>Test at the
+                Bottom Loop</b>? But both ways work.
+              </li><br>
+
+              <li>
+              </li>
+            </ul>
+          </div>
         </div>
       </details>
 
-      <p>And now ... a short quizz on the consideration
+      <p>And now ... a short quiz on the consideration
          of loops and related matters, so far.
          Wait until the Delivery
          version is ready and then
@@ -1329,7 +1846,7 @@ Click to record your <b>Start</b> time.</button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               "Cake":"  2.73     229    436     144",
               <span Class="codecomm16">
-                # Item Names are acess Keys
+                # Item Names are access Keys
               </span><br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1618,7 +2135,7 @@ Click to record your <b>Start</b> time.</button>
             <b><u>Built in Functions:</u></b><br>
             <b>chr(i)</b> - Converts <b>ASCII Character Codes</b>
             (<b>i</b>ntegers in the range <b>0...255</b>)
-            to <b>ASCII Charcters</b>.<br>
+            to <b>ASCII Characters</b>.<br>
             <b>ord(c)</b> - Converts <b>ASCII Characters</b>
             to <b>ASCII Character Codes</b>.<br>
           </li>
@@ -1639,7 +2156,7 @@ Click to record your <b>Start</b> time.</button>
             </ul>
           </li>
           <li>
-            <b><u>Dealing with overlength lines</u></b><br>
+            <b><u>Dealing with over length lines</u></b><br>
             Either by using
             enclosing brackets (<b>Python</b> preferred) or
             <b>Backslash</b> characters.
@@ -2075,7 +2592,7 @@ Click to record your <b>Start</b> time.</button>
           <li>
             <details class="answer">
             <summary><span class="anssum">Answers to Enza
-                                          chllenge 5.</span>
+                                          challenge 5.</span>
             </summary>
               <div class="answer">
                 My first answer to enza challenge is:
@@ -2162,7 +2679,7 @@ Click to record your <b>Start</b> time.</button>
         </div>
 
 
-        <p>In class, we will conduct a short quizz on the
+        <p>In class, we will conduct a short quiz on the
            content of the video and related matters.#
            Wait until the Delivery
            version is ready and then
@@ -2205,9 +2722,9 @@ Click to record your <b>Start</b> time.</button>
                <b>sin</b>, <b>tan</b>, <b>log</b>,
                <b>log10</b>, <b>radians</b> ...
            </li>
-           <li>An overpowering number of mathmatical
+           <li>An overpowering number of mathematical
                <b>functions</b> from the <b>numpy module</b>
-               (in the <b>python interpretter</b>, type
+               (in the <b>python interpreter</b>, type
                "<b>import numpy</b>" and then
                "<b>dir(numpy)</b>", for the full story).
            </li>
@@ -2217,7 +2734,7 @@ Click to record your <b>Start</b> time.</button>
       </p>
 
       <p>But there will always be the instance where the
-         exactly apprpriate function for a particular user
+         exactly appropriate function for a particular user
          need is not available.
       </p>
 
@@ -2334,7 +2851,7 @@ Click to record your <b>Start</b> time.</button>
                   <p class="hint">{<b><i>Hint</i></b>:
                      To declare a <b>Parameter</b> that
                      can receive multiple <b>Arguments</b>,
-                     you simply prepend a "*" to the
+                     you simply prepends a "*" to the
                      <b>Parameter</b> name. For example:<br><br>
 
                      <b>Average (*Numbers):</b><br><br>
@@ -2571,7 +3088,7 @@ Click to record your <b>Start</b> time.</button>
 
               &nbsp;&nbsp;&nbsp;
               <span Class="codecomm16">
-              # A Dictionary to assosiate 
+              # A Dictionary to associate 
               Codons with Amino Acid Codes.
               </span><br>
               &nbsp;&nbsp;&nbsp;
@@ -2823,7 +3340,7 @@ Click to record your <b>Start</b> time.</button>
               <b>Data Structures</b>) and convert it into
               a <b>Function</b> that <b>returns</b> the
               <b>Protein Sequence</b> instead of just
-              printing it.br><br>
+              printing it.<br><br>
 
               Print out the <b>Protein</b> translations,
               but as part of the <b>TEST BED</b> code
@@ -2918,7 +3435,7 @@ Click to record your <b>Start</b> time.</button>
                A <b>Default Value</b> is set up for a
                <b>Parameter</b> simply by adding the
                <b>Default Value</b> after the
-               <b>Parameter Name</b>, preceeded by an
+               <b>Parameter Name</b>, preceded by an
                "<b>=</b>" sign.
 
                In this case, the <b>def</b> line for
@@ -2930,7 +3447,7 @@ Click to record your <b>Start</b> time.</button>
                for it to be omitted would be an <b>Error</b>.
 
                <b>Reading_Frame</b> is an <b>Optional
-               Paramter</b>, if no <b>Argument</b> is
+               Parameter</b>, if no <b>Argument</b> is
                provided, a value of <b>1</b> will be assigned.
             </p><br>
 
@@ -2946,7 +3463,7 @@ Click to record your <b>Start</b> time.</button>
               continue with <b>Reading Frame 1</b>.<br><br>
 
               You need to reduce the <b>Length</b> of
-              the <b>RNA</b> by <b>(Readinng_Frame -1)
+              the <b>RNA</b> by <b>(Reading_Frame -1)
               </b><br><br>
 
               You need to start the <b>Codon_Start Loop</b>
@@ -3038,7 +3555,7 @@ Click to record your <b>Start</b> time.</button>
                of <b>false</b>, for a <b>N</b> answer.
             </p>
 
-            <p>If you would like a shortcut, my answer for the Y/N question in a loop is:
+            <p>If you would like a short cut, my answer for the Y/N question in a loop is:
                <a href="../Solutions-Python/Loops_Exercise1ii.py"
                   target="_blank"> <b>Loops_Exercise1ii.py</b></a>
             </p>
@@ -3169,7 +3686,7 @@ Click to record your <b>Start</b> time.</button>
                 <p>This is a common feature of recursive
                    solutions.
                    They can be beautifully simple and
-                   conceptually appealling.
+                   conceptually appealing.
                    They can also be grossly inefficient!
                 </p>
 
@@ -3271,7 +3788,7 @@ Click to record your <b>Start</b> time.</button>
                 </p>
 
                 <p>Finally, the third version answer here does
-                   not return a <b>Fibonnacci Number</b>
+                   not return a <b>Fibonacci Number</b>
                    as a variable?
                    Is it therefore <b>Procedure</b>?
                 </p>
