@@ -5,7 +5,7 @@
  https://www.w3schools.com/html/html_css.asp
 -- ############################################## */
 
-/* Text justification for all p, div, h2, h3 */
+/* Text justification for all p, div, h2, h3, h4 */
 
 p {
     text-align: justify;
@@ -30,6 +30,16 @@ h3 {
     color: blue;
     margin-top: 10px; margin-bottom: 10px;
     margin-left: 15px; margin-right: 15px;
+}
+
+hh4 {
+    display : inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 20px; font-weight: bold;
+    color: blue;
+    margin-top: 0px; margin-bottom: 0px;
+    margin-left: 0px; margin-right: 0px;
 }
 
 /* p with no left margin (for lists?) */
@@ -124,7 +134,7 @@ span.anssum {
     background-color: LemonChiffon; 
 }
 
-/* span for Exercise Summary*/
+/* span for Exercise Block Summary*/
 
 span.exeblocksum {
     display: inline-block;
@@ -381,12 +391,29 @@ img.sup {
     vertical-align: super;
 }
 
+/* class for Minor Sections */
+
+.minsect {
+    background: PapayaWhip  ; border-right: 106px;
+    width: 750px;
+    margin-left: 0px; margin-right: 15px;
+}
+
+/* span for Minor Sections Summary*/
+
+span.minsectsum {
+    display: inline-block;
+    width: 500px;
+    background-color: PapayaWhip; 
+}
+
 /* class for Major Sections */
 
 .msect {
     background: LavenderBlush; border-right: 106px;
     width: 800px;
-    margin: auto;
+    margin-left: 0px;
+    margin-right: 15px;
 }
 
 /* class for Sections List*/

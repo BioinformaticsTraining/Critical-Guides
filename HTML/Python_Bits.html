@@ -209,409 +209,533 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="ramble">
 
-        <h2>Scalar Values & Variables??</h2>
+        <h2>Scalar Values & Variables</h2>
 
-        <p>python as a calculator ... introduce the algebra ...
-           As Alegra does already
+        <p>A <b>Scalar Value</b> is a single item of data.
         </p>
 
-        <p>data types? Look up classes. Methods? Attributes?
-           Is here where one mentions OOP? Need to read and
-           look at existing materials
+        <p>A <b>Scalar Variable</b> is a named
+           "<i>Container</i>" in which a <b>Scalar Value</b>
+           can be stored.
         </p>
 
-      </div>
+        <p>There are different types of <b>Scalar Value</b>,
+           each with an associated range of properties.
+        </p>
+
+        <p>In this section, these entities will be
+           investigated using the <b>PYTHON
+           Interpreter</b> interactively.
+      </div><br>
 
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
+      <ol>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Scalar Values.</hh4>
+            </span>
+          </summary>
 
-      <h2><u>Scalar Values and Variables.</u></h2>
+            <div class="minsect">
 
-      <p>A <b>scalar value</b> is a single item of data.
-      </p>
+              <p>A <b>scalar value</b> is a single item of data.
+              </p>
 
-      <p><b>Scalar data items</b> can be one of a variety of
-         <b>types</b>.
-      </p>
+              <p><b>Scalar data items</b> can be one of
+                 a variety of <b>types</b>.
+              </p>
 
-      <p>The <b>types</b> that will be discussed in
-         this consideration
-         of <b>PYTHON</b> will certainly include:<br>
+              <p>The <b>types</b> that will be discussed at this
+                 juncture are:<br>
 
-        <ul>
-          <li>
-            <b>int</b> - Integers, that is "<b>whole numbers</b>".
-          </li><br>
-          <li>
-            <b>float</b> - Floating point number, that is numbers
-            with something after the decimal point.
-          </li><br>
-          <li>
-            <b>bool</b> - Boolean values, that is
-            <b>True</b> or <b>False</b>.
-          </li><br>
-          <li>
-            <b>str</b> - A sequence of <b>characters</b>.
-          </li>
-        </ul>
-      </p>
+                <ul>
+                  <li>
+                    <b>int</b> - Integers, that is
+                    "<b>whole numbers</b>".
+                  </li><br>
 
-      <h2><u>The PYTHON Interpreter.</u></h2>
+                  <li>
+                    <b>float</b> - Floating point number,
+                    that is numbers
+                    with something after the decimal point.
+                  </li><br>
 
-      <p>The <b>PYTHON Interpreter</b> is the program that reads
-         your <b>PYTHON code</b>, and instructs the computer to
-         obey. If you are very lucky, the computer sometimes
-         actually does what you intended!
-      </p>
+                  <li>
+                    <b>bool</b> - Boolean values, that is
+                    <b>True</b> or <b>False</b>.
+                  </li><br>
 
-      <p>You can use the <b>PYTHON Interpreter</b> in two
-         very different ways:<br>
+                  <li>
+                    <b>str</b> - A sequence of <b>Characters</b>.
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </details>
+        </li><br>
 
-        <ul>
-          <li>
-            <b>Interactively</b> - great for running scripts one
-            line at a time, for testing out ideas or
-            new commands.<br><br>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>The PYTHON Interpreter.</hh4>
+            </span>
+          </summary>
 
-            Using the <b>PYTHON Interpreter</b>
-            interactively is rather like using a calculator
-            in fact.<br><br>
+            <div class="minsect">
 
-            If the <b>PYTHON Interpreter</b> is started
-            interactively, it remains active having completed
-            a task(waiting for the
-            next interactive command) until explicitly
-            told to go away!
-          </li><br>
-          <li>
-            <b>Non-interactively</b> - in which the
-            <b>PYTHON Interpreter</b> is started to run an
-            entire <b>PYTHON script</b>. Once this is acheived,
-            the <b>PYTHON Interpreter</b>
-            will <b><i>NOT</i></b> wait for
-            further instruction, it will simply close down.
-          </li>
-        </ul>
-      </p>
+              <p>The <b>PYTHON Interpreter</b> is the program
+                 that reads your <b>PYTHON code</b>, and
+                 instructs the computer to obey. If you are
+                 very lucky, the computer sometimes
+                 actually does what you intended!
+              </p>
 
-      <h3>Starting the <b>PYTHON Interpreter</b> in
-      interactive mode.</h3>
+              <p>You can use the <b>PYTHON Interpreter</b> in two
+                 very different ways:<br>
+              </p>
 
-      <p>To take a look at the wonders of scalars,
-         using the <b>PYTHON Interpreter interactively</b>
-         would seem the best plan.
-      </p>
-
-      <p>So:
-        <ul>
-          <li>
-            Start up a <b>Terminal</b>
-            (<b>Ctrl-Alt-T</b> usually does the trick).
-          </li><br>
-          <li>
-            Move into a suitable Directory.
-          </li><br>
-          <li>
-            Start up the <b>PYTHON Interpreter</b> in
-            <b>Interactive Mode</b> with the command:<br><br>
-            <span class="command">
-              python
-            </span><br><br>
-
-            to which the response should be something like:<br><br>
-
-            <span class="command">
-              Python 3.5.2 (default, Nov 23 2017, 16:37:01)<br>
-              [GCC 5.4.0 20160609] on linux<br>
-              Type "help", "copyright", "credits" or "license"
-              for more information.<br>
-              >>> 
-            </span><br>
-
-            <p class="hint"><b>Important Note</b>: If you are
-               using "<b>Python 2.?.?</b>", not all of what is
-               described here will work. I assume
-               "<b>Python 3.?.?</b>" which is not
-               backward compatible.
-            </p>
-          </li>
-        </ul>
-      </p>
-
-      <h3> Basic Arithmatic with Integers.</h3>
-
-      <p>Now for some warm up arithmatic to get the
-         feel of things. Try the following and/or
-         similar:<br><br>
-
-        <span class="command">
-          >>> 3<br>
-          3<br>
-          >>> 3 + 4<br>
-          7<br>
-          >>> 3 - 4<br>
-          -1<br>
-          >>> 4 - 3<br>
-          1<br>
-          >>> 12 / 4<br>
-          3.0<br>
-          >>> 15 / 6<br>
-          2.5<br>
-          >>> 12 * 2<br>
-          24<br>
-          >>> 12 - 5 * 6<br>
-          -18<br>
-          >>> (12 - 5) * 6<br>
-          42<br>
-          >>>
-        </span><br><br>
-
-        <div class="hint"><b>Note</b>:
-          <ol>
-            <li>
-              Basic <b>Arithmetic Operators</b> are
-              those I would hope you expected (?)
               <ul>
                 <li>
-                  <b>+</b>
-                   &nbsp;&nbsp;&nbsp;&nbsp;Addition
-                </li>
+                  <b>Interactively</b> - great for running
+                  scripts one line at a time, for testing
+                  out ideas or new commands.<br><br>
+
+                  Using the <b>PYTHON Interpreter</b>
+                  interactively is rather like using a calculator
+                  in fact.<br><br>
+
+                  If the <b>PYTHON Interpreter</b> is started
+                  interactively, it remains active having completed
+                  a task(waiting for the
+                  next interactive command) until explicitly
+                  told to go away!
+                </li><br>
                 <li>
-                  <b>-</b>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtraction
-                </li>
-                <li>
-                  <b>/</b>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Division
-                </li>
-                <li>
-                  <b>*</b>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Multiplication
+                  <b>Non-interactively</b> - in which the
+                  <b>PYTHON Interpreter</b> is started to run an
+                  entire <b>PYTHON script</b>. Once this
+                  is acheived, the <b>PYTHON Interpreter</b>
+                  will <b><i>NOT</i></b> wait for
+                  further instruction, it will simply close down.
                 </li>
               </ul>
-            </li><br>
+            </div>
+          </details>
+        </li><br>
 
-            <li>
-              All values input here are <b>int</b>
-              (<b>Integers</b>)
-            </li><br>
-
-            <li>
-              Where results can only be type <b>int</b>,
-              they are.<br><br>
-              <span class="command">
-                >>> 3 + 4<br>
-                7<br>
-                >>> 3 - 4<br>
-                -1<br>
-                >>> 4 - 3<br>
-                1<br>
-                >>> 12 * 2<br>
-                24<br>
-                >>>
-              </span>
-            </li><br>
-
-            <li>
-              Any division, even involving ony <b>ints</b>
-              could generate a <b>float</b> answer.<br><br>
-
-              Therefore all divisions generate
-              <b>float</b> answers (that is, values
-              including a decimal point).<br>
-              <span class="command">
-                >>> 12 / 4<br>
-                3.0<br>
-                >>> 15 / 6<br>
-                2.5<br>
-                >>>
-              </span>
-            </li><br>
-
-            <li>
-              If an expression that is a <b>single scalar value</b>
-              is entered, the <b>PYTHON Interpreter</b>
-              simply echoes that value.<br>
-              <span class="command">
-                >>> 3<br>
-                3<br>
-                >>>
-              </span>
-            </li><br>
-
-            <li>
-              parenthesis have their usual role
-              influencing operator precedence.<br>
-              <span class="command">
-                >>> 3<br>
-                3<br>
-                >>>
-              </span>
-            </li><br>
-          </ol>
-        </div>
-      </p>
-
-      <h3> Basic Arithmatic with Floating Point Numbers.</h3><br>
-
-      <p>
-        <span class="command">
-          >>> 1.1 + 4<br>
-          5.1<br>
-          >>> 1.0 + 4<br>
-          5.0<br>
-          >>> 1.9 - 0.4<br>
-          1.5<br>
-          >>> 3.4 * 2.1<br>
-          7.14<br>
-          >>> 3.4 / 2.1<br>
-          1.6190476190476188<br>
-          >>>
-        </span>
-      </p>
-
-      <p class="hint"><b>Note</b>: Any calculation involving
-         a <b>float</b> could result in a <b>float</b>
-         answer.<br><br>
-
-         Therefore the <b>PYTHON
-         Interpreter</b> delivers a <b>float</b>.
-      </p>
-
-      <h3> Exponentiation.</h3><br>
-
-      <p>
-        <span class="command">
-          >>> 3 ** 3<br>
-          27<br>
-          >>> 3 * 3 * 3<br>
-          27<br>
-          >>> 3.0 ** 3<br>
-          27.0<br>
-          >>> 9 ** 0.5<br>
-          3.0<br>
-          >>> 9 ** 0<br>
-          1<br>
-          >>>
-        </span>
-      </p>
-
-      <div class="hint"><b>Note</b>:<br>
-
-        <ol>
-          <li>
-            "<b>**</b> is used as the exponentiation
-            operator.<br><br>
-
-            That is, "<b>3 ** 3</b>" is "<b>3 raised
-            to the power 3</b>" (or "<b>3 * 3 * 3</b>").<br>
-
-            <span class="command">
-              >>> 3 ** 3<br>
-              27<br>
-              >>> 3 * 3 * 3<br>
-              27<br>
-              >>>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Starting the PYTHON Interpreter in
+              interactive mode.</hh4>
             </span>
-          </li><br>
+          </summary>
 
-          <li>
-            If all arguments are <b>Integer</b>,
-            the answer is <b>Integer</b>.<br><br>
+            <div class="minsect">
 
-            If any argument is a <b>float</b>,
-            the answer is a <b>float</b>.<br>
+              <p>To take a look at the wonders of scalars,
+                 using the <b>PYTHON Interpreter interactively</b>
+                 would seem the best plan. So:
+              </p>
 
-            <span class="command">
-              >>> 3.0 ** 3<br>
-              27.0<br>
-              >>>
+              <ul>
+                <li>
+                  Start up a <b>Terminal</b>
+                  (<b>Ctrl-Alt-T</b> usually does the trick).
+                </li><br>
+
+                <li>
+                  Move into a suitable Directory.
+                </li><br>
+
+                <li>
+                  Start up the <b>PYTHON Interpreter</b> in
+                  <b>Interactive Mode</b> with the command:<br><br>
+                  <span class="command">
+                    python
+                  </span><br><br>
+
+                  to which the response should be
+                  something like:<br><br>
+
+                  <span class="command">
+                    Python 3.5.2 (default, Nov 23 2017,
+                    16:37:01)<br>
+                    [GCC 5.4.0 20160609] on linux<br>
+                    Type "help", "copyright", "credits"
+                    or "license"
+                    for more information.<br>
+                    >>> 
+                  </span><br>
+
+                  <p class="hint"><b>Important Note</b>: If
+                     you are using "<b>Python 2.?.?</b>", not
+                     all of what is
+                     described here will work. I assume
+                     "<b>Python 3.?.?</b>" which is not
+                     backward compatible.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Basic Arithmatic with Integers.</hh4>
             </span>
-          </li><br>
+          </summary>
 
-          <li>
-            "<b> ** 0.5</b>", of course, returns the<br>
-            <b>square root</b>.<br><br>
+            <div class="minsect">
 
-            The are others ways to request the
-            <b>square root</b> of a number, as you will see.<br>
+              <p>Now for some warm up arithmatic to get the
+                 feel of things. Try the following and/or
+                 similar:<br><br>
 
-            <span class="command">
-              >>> 9 ** 0.5<br>
-              3.0<br>
-              >>>
+                <span class="command">
+                  >>> 3<br>
+                  3<br>
+                  >>> 3 + 4<br>
+                  7<br>
+                  >>> 3 - 4<br>
+                  -1<br>
+                  >>> 4 - 3<br>
+                  1<br>
+                  >>> 12 / 4<br>
+                  3.0<br>
+                  >>> 15 / 6<br>
+                  2.5<br>
+                  >>> 12 * 2<br>
+                  24<br>
+                  >>> 12 - 5 * 6<br>
+                  -18<br>
+                  >>> (12 - 5) * 6<br>
+                  42<br>
+                  >>>
+                </span><br><br>
+
+                <div class="hint"><b>Note</b>:
+                  <ol>
+                    <li>
+                      Basic <b>Arithmetic Operators</b> are
+                      those I would hope you expected (?)
+
+                      <ul>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            +&nbsp;&nbsp;Addition
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            -&nbsp;&nbsp;Subtraction
+                            &nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            /&nbsp;&nbsp;Division
+                            &nbsp;&nbsp;
+                            &nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                          <b>&nbsp;&nbsp;
+                          *&nbsp;&nbsp;Multiplication</b>
+                          </span>
+                        </li>
+                      </ul>
+                    </li><br>
+
+                    <li>
+                      All values input here are <b>int</b>
+                      (<b>Integers</b>)
+                    </li><br>
+
+                    <li>
+                      Where results can only be type <b>int</b>,
+                      they are.<br><br>
+                      <span class="command">
+                        >>> 3 + 4<br>
+                        7<br>
+                        >>> 3 - 4<br>
+                        -1<br>
+                        >>> 4 - 3<br>
+                        1<br>
+                        >>> 12 * 2<br>
+                        24<br>
+                        >>>
+                      </span>
+                    </li><br>
+
+                    <li>
+                      Any division, even involving ony <b>ints</b>
+                      could generate a <b>float</b> answer.<br><br>
+
+                      Therefore all divisions generate
+                      <b>float</b> answers (that is, values
+                      including a decimal point).<br>
+                      <span class="command">
+                        >>> 12 / 4<br>
+                        3.0<br>
+                        >>> 15 / 6<br>
+                        2.5<br>
+                        >>>
+                      </span>
+                    </li><br>
+
+                    <li>
+                      If an expression that is a <b>single
+                      scalar value</b> is entered, the
+                      <b>PYTHON Interpreter</b>
+                      simply echoes that value.<br>
+                      <span class="command">
+                        >>> 3<br>
+                        3<br>
+                        >>>
+                      </span>
+                    </li><br>
+
+                    <li>
+                      parenthesis have their usual role
+                      influencing operator precedence.<br>
+                      <span class="command">
+                        >>> 3<br>
+                        3<br>
+                        >>>
+                      </span>
+                    </li><br>
+                  </ol>
+                </div>
+              </p>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Basic Arithmatic with Floating
+              Point Numbers.</hh4>
             </span>
-          </li><br>
+          </summary>
+
+            <div class="minsect">
+              <p>
+                <span class="command">
+                  >>> 1.1 + 4<br>
+                  5.1<br>
+                  >>> 1.0 + 4<br>
+                  5.0<br>
+                  >>> 1.9 - 0.4<br>
+                  1.5<br>
+                  >>> 3.4 * 2.1<br>
+                  7.14<br>
+                  >>> 3.4 / 2.1<br>
+                  1.6190476190476188<br>
+                  >>>
+                </span>
+              </p>
+
+              <p class="hint"><b>Note</b>:
+                 Any calculation involving
+                 a <b>float</b> could result in a <b>float</b>
+                 answer.<br><br>
+
+                 Therefore the <b>PYTHON
+                 Interpreter</b> delivers a <b>float</b>.
+              </p>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Exponentiation.</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+
+              <p>
+                <span class="command">
+                  >>> 3 ** 3<br>
+                  27<br>
+                  >>> 3 * 3 * 3<br>
+                  27<br>
+                  >>> 3.0 ** 3<br>
+                  27.0<br>
+                  >>> 9 ** 0.5<br>
+                  3.0<br>
+                  >>> 9 ** 0<br>
+                  1<br>
+                  >>>
+                </span>
+              </p>
+
+              <div class="hint"><b>Note</b>:<br>
+
+                <ol>
+                  <li>
+                    "<b>**</b> is used as the exponentiation
+                    operator.<br><br>
+
+                    That is, "<b>3 ** 3</b>" is "<b>3 raised
+                    to the power 3</b>"
+                    (or "<b>3 * 3 * 3</b>").<br>
+
+                    There are others ways to raise a number to a
+                    given power, as you will see.<br>
+
+                    <span class="command">
+                      >>> 3 ** 3<br>
+                      27<br>
+                      >>> 3 * 3 * 3<br>
+                      27<br>
+                      >>>
+                    </span>
+                  </li><br>
+
+                  <li>
+                    If all arguments are <b>Integer</b>,
+                    the answer is <b>Integer</b>.<br><br>
+
+                    If any argument is a <b>float</b>,
+                    the answer is a <b>float</b>.<br>
+
+                    <span class="command">
+                      >>> 3.0 ** 3<br>
+                      27.0<br>
+                      >>>
+                    </span>
+                  </li><br>
+
+                  <li>
+                    "<b> ** 0.5</b>", of course, returns the
+                    <b>square root</b>.<br><br>
+
+                    There are others ways to request the
+                    <b>square root</b> of a number,
+                    as you will see.<br>
+
+                    <span class="command">
+                      >>> 9 ** 0.5<br>
+                      3.0<br>
+                      >>>
+                    </span>
+                  </li><br>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Integer Division.</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+              <p>
+                <span class="command">
+                  >>> 12 // 4<br>
+                  3<br>
+                  >>> 12 % 4<br>
+                  0<br>
+                  >>> 14 // 4<br>
+                  3<br>
+                  >>> 14 % 4<br>
+                  2<br>
+                  >>> 12 // 4.0<br>
+                  3.0<br>
+                  >>><br>
+                </span>
+              </p>
+
+              <div class="hint"><b>Note</b>:<br>
+
+                <ol>
+                  <li>
+                    "<b>//</b> is used to request
+                    <b>Integer Division</b>.<br><br>
+
+                   That is, "<b>12 // 3</b>" is "<b>3</b>"
+                    with a <b>Remainder</b> of <b>0</b>.<br><br>
+
+                    To display the <b>Remainder</b>, the "<b>%</b>"
+                    operator is used.<br>
+
+                    <span class="command">
+                      >>> 12 // 4<br>
+                      3<br>
+                      >>> 12 % 4<br>
+                      0<br>
+                      >>> <br>
+                    </span>
+                  </li><br>
+
+                  <li>
+                    Of course, "<b>14 // 3</b>" is also
+                    "<b>3</b>"<br><br>
+
+                    But this time the "<b>Remainder is 2</b>".<br>
+
+                    <span class="command">
+                      >>> 14 // 4<br>
+                      3<br>
+                      >>> 14 % 4<br>
+                      2<br>
+                      >>> <br>
+                    </span>
+
+                  </li><br>
+
+                  <li>
+                    Even though the request is for <b>Integer
+                    Arithmetic</b>, if any argument is a
+                    <b>float</b>,
+                    the answer is a <b>float</b>.<br>
+
+                   <span class="command">
+                     >>> 12 // 4.0<br>
+                     3.0<br>
+                     >>> 
+                   </span>
+                  </li><br>
+                </ol>
+              </div>
+            </div>
+          </details>
         </ol>
       </div>
-
-      <h3> Integer Division.</h3><br>
-
-      <p>
-        <span class="command">
-          >>> 12 // 4
-          3
-          >>> 12 // 4.0
-          3.0
-          >>> 14 // 4
-          3
-          >>> 14 % 4
-          2
-          >>> 
-        </span>
-      </p>
-
-      <div class="hint"><b>Note</b>:<br>
-
-        <ol>
-          <li>
-            "<b>//</b> is used to request Integer Division.<br><br>
-
-            That is, "<b>12 // 3</b>" is "<b>3</b>", but also
-            "<b>12 // 3</b>" is "<b>3</b>". 
-
-<br>
-
-            <span class="command">
-              >>> 3 ** 3<br>
-              27<br>
-              >>> 3 * 3 * 3<br>
-              27<br>
-              >>>
-            </span>
-          </li><br>
-
-          <li>
-            If all arguments are <b>Integer</b>,
-            the answer is <b>Integer</b>.<br><br>
-
-            If any argument is a <b>float</b>,
-            the answer is a <b>float</b>.<br>
-
-            <span class="command">
-              >>> 3.0 ** 3<br>
-              27.0<br>
-              >>>
-            </span>
-          </li><br>
-
-          <li>
-            "<b> ** 0.5</b>", of course, returns the<br>
-            <b>square root</b>.<br><br>
-
-            The are others ways to request the
-            <b>square root</b> of a number, as you will see.<br>
-
-            <span class="command">
-              >>> 9 ** 0.5<br>
-              3.0<br>
-              >>>
-            </span>
-          </li><br>
-        </ol>
-      </div>
-
     </details><br>
   </li>
 
