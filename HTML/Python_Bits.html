@@ -11,6 +11,10 @@
 <title>Critical Guide - Command Line UNIX for Bioinformatics
 </title>
 
+<STYLE>
+A{text-decoration:none}
+</STYLE>
+
 </head>
  
 <!-- ############################################## ---
@@ -157,7 +161,7 @@ Click to record your <b>Start</b> time.</button>
 
         <p>If you have any doubts, here is offered a short
            video outlining how the <b>UNIX Files</b> and
-           <b>Directories</b> are organised and addressed.</b>.
+           <b>Directories</b> are organised and addressed.
         </p>
 
         <details class="video">
@@ -240,9 +244,20 @@ Click to record your <b>Start</b> time.</button>
           </ul>
         </p>
 
+        <p>The two terms <b>type</b> and <b>class</b> are,
+           these days, effectively synonyms. I will use
+           them interchangably in this tutorial.
+           Historically, there was a significant difference.
+           If you are interested, you could look
+           <a href="https://stackoverflow.com/questions/4162578/python-terminology-class-vs-type
+           target="_blank">  here</a>,
+           but I would not advise doing so at this point.
+        </p>
+
         <p>In this section, these entities will be
            investigated using the <b>PYTHON
            Interpreter</b> interactively.
+        </p>
       </div><br>
 
 <!-- ############################################## ---
@@ -310,9 +325,9 @@ Click to record your <b>Start</b> time.</button>
 
             <div class="minsect">
 
-              <p>To take a look at the wonders of scalars,
+              <p>To admire the wonders of <b>Scalar Values</b>,
                  using the <b>PYTHON Interpreter interactively</b>
-                 would seem the best plan. So:
+                 is the best plan. So:
               </p>
 
               <ul>
@@ -349,8 +364,8 @@ Click to record your <b>Start</b> time.</button>
                      you are using "<b>Python 2.?.?</b>", not
                      all of what is
                      described here will work. I assume
-                     "<b>Python 3.?.?</b>" which is not
-                     backward compatible.
+                     "<b>Python 3.?.?</b>" <b><i>which is not
+                     backwards compatible</b></i>.
                   </p>
                 </li>
               </ul>
@@ -381,12 +396,12 @@ Click to record your <b>Start</b> time.</button>
                   -1<br>
                   >>> 4 - 3<br>
                   1<br>
+                  >>> 12 * 2<br>
+                  24<br>
                   >>> 12 / 4<br>
                   3.0<br>
                   >>> 15 / 6<br>
                   2.5<br>
-                  >>> 12 * 2<br>
-                  24<br>
                   >>> 12 - 5 * 6<br>
                   -18<br>
                   >>> (12 - 5) * 6<br>
@@ -396,6 +411,24 @@ Click to record your <b>Start</b> time.</button>
 
                 <div class="hint"><b>Note</b>:
                   <ol>
+
+                    <li>
+                      All values input here are <b>int</b>
+                      (<b>Integers</b>)
+                    </li><br>
+
+                    <li>
+                      If an expression that is a <b>single
+                      scalar value</b> is entered, the
+                      <b>PYTHON Interpreter</b>
+                      simply echoes that value.<br>
+                      <span class="command">
+                        >>> 3<br>
+                        3<br>
+                        >>>
+                      </span>
+                    </li><br>
+
                     <li>
                       Basic <b>Arithmetic Operators</b> are
                       those I would hope you expected (?)
@@ -441,13 +474,8 @@ Click to record your <b>Start</b> time.</button>
                     </li><br>
 
                     <li>
-                      All values input here are <b>int</b>
-                      (<b>Integers</b>)
-                    </li><br>
-
-                    <li>
                       Where results can only be type <b>int</b>,
-                      they are.<br><br>
+                      they are type <b>int</b>.<br>
                       <span class="command">
                         >>> 3 + 4<br>
                         7<br>
@@ -478,23 +506,13 @@ Click to record your <b>Start</b> time.</button>
                     </li><br>
 
                     <li>
-                      If an expression that is a <b>single
-                      scalar value</b> is entered, the
-                      <b>PYTHON Interpreter</b>
-                      simply echoes that value.<br>
-                      <span class="command">
-                        >>> 3<br>
-                        3<br>
-                        >>>
-                      </span>
-                    </li><br>
-
-                    <li>
                       parenthesis have their usual role
                       influencing operator precedence.<br>
                       <span class="command">
-                        >>> 3<br>
-                        3<br>
+                        >>> 12 - 5 * 6<br>
+                       -18<br>
+                       >>> (12 - 5) * 6<br>
+                       42<br>
                         >>>
                       </span>
                     </li><br>
@@ -565,6 +583,8 @@ Click to record your <b>Start</b> time.</button>
                   3.0<br>
                   >>> 9 ** 0<br>
                   1<br>
+                  >>> 0 ** 0<br>
+                  1<br>
                   >>>
                 </span>
               </p>
@@ -620,6 +640,21 @@ Click to record your <b>Start</b> time.</button>
                       >>>
                     </span>
                   </li><br>
+
+                  <li>
+                    Anything raised to the power <b>0</b> is
+                    <b>1</b>. This includes <b>0</b> to the
+                    power of <b>0</b> ... according to
+                    <b>Python</b> at least???<br>
+
+                    <span class="command">
+                      >>> 9 ** 0<br>
+                      1<br>
+                      >>> 0 ** 0<br>
+                      1<br>
+                      >>>
+                    </span>
+                  </li><br>
                 </ol>
               </div>
             </div>
@@ -647,7 +682,9 @@ Click to record your <b>Start</b> time.</button>
                   2<br>
                   >>> 12 // 4.0<br>
                   3.0<br>
-                  >>><br>
+                  >>> 12 % 4.0<br>
+                  0.0<br>
+                  >>>
                 </span>
               </p>
 
@@ -655,10 +692,10 @@ Click to record your <b>Start</b> time.</button>
 
                 <ol>
                   <li>
-                    "<b>//</b> is used to request
+                    "<b>//</b>" is used to request
                     <b>Integer Division</b>.<br><br>
 
-                   That is, "<b>12 // 3</b>" is "<b>3</b>"
+                    That is, "<b>12 // 3</b>" is "<b>3</b>"
                     with a <b>Remainder</b> of <b>0</b>.<br><br>
 
                     To display the <b>Remainder</b>, the "<b>%</b>"
@@ -695,12 +732,14 @@ Click to record your <b>Start</b> time.</button>
                     <b>float</b>,
                     the answer is a <b>float</b>.<br>
 
-                   <span class="command">
-                     >>> 12 // 4.0<br>
-                     3.0<br>
-                     >>> 
-                   </span>
-                  </li><br>
+                    <span class="command">
+                      >>> 12 // 4.0<br>
+                      3.0<br>
+                      >>> 12 % 4.0<br>
+                      0.0<br>
+                      >>> 
+                    </span>
+                  </li>
                 </ol>
               </div>
             </div>
@@ -708,13 +747,13 @@ Click to record your <b>Start</b> time.</button>
         </li><br>
 
         <li>
+
           <details>
           <summary>
             <span class="minsectsum">
               <hh4>Strings.</hh4>
             </span>
           </summary>
-
             <div class="minsect">
 
               <p>
@@ -733,130 +772,98 @@ Click to record your <b>Start</b> time.</button>
                   'abc'<br>
                   >>> "abc" + "def"<br>
                   'abcdef'<br>
+                  >>> 'abc' + "def" + 'mno' + "xyz"<br>
+                  'abcdefmnoxyz'<br>
                   >>>
                 </span>
               </p>
 
-              <div class="hint"><b>Note</b>:<br>
+              <div class="hint"><b>Note</b>:
 
                 <ol>
                   <li>
-                    <p>A <b>string</b> is a series
-                       of <b>characters</b>.
-                    </p>
+                    A <b>string</b> is a series
+                    of <b>characters</b>.<br><br>
 
-                    <p>The number of <b>characters</b> in a
-                       <b>string</b> can vary between
-                       <b>none</b> and <b>lots</b>.
-                    </p>
+                    The number of <b>characters</b> in a
+                    <b>string</b> can vary between
+                    <b>none</b> and <b>lots</b>.<br><br>
 
-                    <p><b>characters</b> comprising a
-                       <b>string</b> must be enclosed in
-                       quotes. Either <b>single</b>
-                       or <b>double quotes</b> will work.
-                    </p>
+                    <b>characters</b> comprising a
+                    <b>string</b> must be enclosed in
+                    quotes. Either <b>single</b>
+                    or <b>double quotes</b> will work.<br>
 
-                    <p>
-                      <span class="command">
-                        >>> ''<br>
-                        ''<br>
-                        >>> ""<br>
-                        ''<br>
-                        >>> 'a'<br>
-                        'a'<br>
-                        >>> "a"<br>
-                        'a'<br>
-                        >>> 'abc'<br>
-                        'abc'<br>
-                        >>> "abc"<br>
-                        'abc'<br>
-                        >>>
-                      </span>
+                    <span class="command">
+                      >>> ''<br>
+                      ''<br>
+                      >>> ""<br>
+                      ''<br>
+                      >>> 'a'<br>
+                      'a'<br>
+                      >>> "a"<br>
+                      'a'<br>
+                      >>> 'abc'<br>
+                      'abc'<br>
+                      >>> "abc"<br>
+                      'abc'<br>
+                      >>>
+                    </span><br><br>
 
-                    <p>Whether to use <b>single</b> or
-                       <b>double quotes</b> is a matter
-                       of personal preference. As you
-                       see, <b>Python</b> appears to
-                       prefer <b>single quotes</b> as it
-                       converts all <b>double quotes</b>
-                       consistently.
-                    </p>
+                    Whether to use <b>single</b> or
+                    <b>double quotes</b> is a matter
+                    of personal preference. As you
+                    see, <b>Python</b> appears to
+                    prefer <b>single quotes</b> as it
+                    converts all <b>double quotes</b>
+                    consistently.<br><br>
 
-                    <p>A common preference is to use
-                       <b>single quotes</b> for
-                       <b>single characters</b>, or short
-                       strings devoid of a significant
-                       "<b>Natural Language</b>" message,
-                       but to use <b>double quotes</b> for
-                       anything that reads coherently as
-                       would, for example, a quote from a
-                       book.
-                    </p>
+                    A common preference is to use
+                    <b>single quotes</b> for
+                    <b>single characters</b>, or short
+                    strings devoid of a significant
+                    "<b>Natural Language</b>" message,
+                    but to use <b>double quotes</b> for
+                    anything that reads coherently as
+                    would, for example, a quote from a
+                    book.<br><br>
 
                     <ul>
-                      <li>So: <b>'a'<b>, <b>'elixir'<b>,
-                          <b>'ICL1904E'<b>, <b>'IBM360'<b>
+                      <li>
+                       So: <b>'elixir'</b>, <b>'ICL1904E'</b>,
+                        <b>'IBM360'</b><br><br>
                       </li>
-                      <li>But:
-                          "<a href="https://www.youtube.com/watch?v=PDd8shcLvHI"
-                            target="_blank"> <b>Yes, we have no
+                      <li>
+                       But:
+                        <a href="https://www.youtube.com/watch?v=PDd8shcLvHI"
+                          target="_blank">
+                                <b>"Yes, we have no
                                 bananas, we have no bananas
-                                today!<b><a>"<br>
-                          "<a href="https://www.youtube.com/watch?v=EQNFKD7W9HE"
-                             target="_blank">
-                                <b>When you gets the taste,
+                                today!"</b></a>,<br>
+                         <a href="https://www.youtube.com/watch?v=EQNFKD7W9HE"
+                          target="_blank">
+                                <b>"When you gets the taste,
                                 you won't wanna waste.
                                 Them lovely
-                                jellied eels<b><a>"<br>
+                                jellied eels"</b></a>
                       </li>
                     </ul>
- 
-
-
-
-<p>
-
-                    That is, "<b>3 ** 3</b>" is "<b>3 raised
-                    to the power 3</b>"
-                    (or "<b>3 * 3 * 3</b>").<br>
-
-                    There are others ways to raise a number to a
-                    given power, as you will see.<br>
-
-                    <span class="command">
-                      >>> 3 ** 3<br>
-                      27<br>
-                      >>> 3 * 3 * 3<br>
-                      27<br>
-                      >>>
-                    </span>
                   </li><br>
 
                   <li>
-                    If all arguments are <b>Integer</b>,
-                    the answer is <b>Integer</b>.<br><br>
-
-                    If any argument is a <b>float</b>,
-                    the answer is a <b>float</b>.<br>
-
-                    <span class="command">
-                      >>> 3.0 ** 3<br>
-                      27.0<br>
-                      >>>
-                    </span>
-                  </li><br>
-
-                  <li>
-                    "<b> ** 0.5</b>", of course, returns the
-                    <b>square root</b>.<br><br>
-
-                    There are others ways to request the
-                    <b>square root</b> of a number,
-                    as you will see.<br>
+                    Only one <b>Operator</b> makes
+                    sense between <b>strings</b>.
+                    That being '<b>+</b>' which means,
+                    in this context <b>concatonate</b>.
+                    That is, join together between <b>two
+                    strings</b> and <b>lots of strings</b>
+                    to make just <b>one string</b>.<br>
 
                     <span class="command">
-                      >>> 9 ** 0.5<br>
-                      3.0<br>
+                      >>> "abc" + "def"<br>
+                      'abcdef'<br>
+                      >>> 'abc' + "def" + 'mno' + "xyz"<br>
+                     'abcdefmnoxyz'<br>
                       >>>
                     </span>
                   </li><br>
@@ -870,7 +877,7 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Boooleans and Conditional Expressions.</hh4>
+              <hh4>Booleans and Conditional Expressions.</hh4>
             </span>
           </summary>
 <p>conditional expressions (T?F) not numbers<br>
@@ -887,7 +894,7 @@ actually int<br>
                   False<br>
                   >>> 6 == 7<br>
                   False<br>
-                   >>> 6 != 7<br>
+                  >>> 6 != 7<br>
                   True<br>
                   >>> 6 >= 6<br>
                   True<br>
@@ -899,7 +906,21 @@ actually int<br>
                   False<br>
                   >>> 6 > 6<br>
                   False<br>
-                  >>> <br>
+                  >>> 'aaa' == 'aaa'<br>
+                  True<br>
+                  >>> 'aaa' != 'aaa'<br>
+                  False<br>
+                  >>> 'aaa' >= 'aab'<br>
+                  False<br>
+                  >>> 'aaa' <= 'aab'<br>
+                  True<br>
+                  >>> 'aaa' > 'xyz'<br>
+                  False<br>
+                  >>> 'aaa' < 'xyz'<br>
+                  True<br>
+                  >>> 'AAA' < 'aaa'<br>
+                  True<br>
+                  >>>
                 </span>
               </p>
 
@@ -907,60 +928,241 @@ actually int<br>
 
                 <ol>
                   <li>
-                    <p>A <b>Conditional Expression</b> is a
-                       <b>Statement</b> that is either
-                       <b>True</b> or <b>False</b>.
-                    </p>
+                    A <b>Conditional Expression</b> is a
+                    <b>Statement</b> that is either
+                    <b>True</b> or <b>False</b>. That is,
+                    a <b>Statement</b> whose <b>value</b>
+                    is of type <b>bool</b>.<br><br>
 
-                    <p>For example, in <b>Python</b>,
-                       "<b>6 == 6</b>" reads "<b>6 is equal
-                       to 6</b>", which is generally considered
-                       to be <b>True</b>, whereas, "<b>6 != 6</b>",
-                       which reads "<b>6 is not equal to 6</b>"
-                       is accepted by most as mendacious!
-                    </p>
+                    For example, in <b>Python</b>,
+                    "<b>6 == 6</b>" reads "<b>6 is equal
+                    to 6</b>", which is generally considered
+                    to be <b>True</b>, whereas, "<b>6 != 6</b>",
+                    which reads "<b>6 is not equal to 6</b>"
+                    is accepted by most as mendacious!<br>
+                    <span class="command">
+                      >>> 6 == 6<br>
+                      True<br>
+                      >>> 6 != 6<br>
+                      False<br>
+                      >>> 6 == 7<br>
+                      False<br>
+                      >>> 6 != 7<br>
+                      True<br>
+                      >>> <br>
+                    </span>
+                  </li><br>
+
+                  <li>
+                    Further Operators for comparing numeric scalar
+                    values are:
+                      <ul>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            >=&nbsp;&nbsp;
+                            "is Greater than or Equal to"</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            <=&nbsp;&nbsp;
+                            "is Less than or Equal to"
+                            &nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                            <b>&nbsp;&nbsp;
+                            >&nbsp;&nbsp;&nbsp;
+                            "is Greater than"
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: courier;">
+                          <b>&nbsp;&nbsp;
+                          <&nbsp;&nbsp;&nbsp;
+                          "is Less than"&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;</b>
+                          </span>
+                        </li>
+                      </ul>
                       <span class="command">
-                        >>> 6 == 6<br>
+                        >>> 6 >= 6<br>
                         True<br>
-                        >>> 6 != 6<br>
+                        >>> 6 <= 6<br>
+                        True<br>
+                        >>> 6 <= 5<br>
                         False<br>
-                        >>> <br>
+                        >>> 6 < 6<br>
+                        False<br>
+                        >>> 6 > 6<br>
+                        False<br>
+                        >>>
                       </span>
+                  </li><br>
 
-                    <p>Further Operators for comparing scalar values
-                    </p>
+                  <li>
+                    <b>Conditional Expressions</b> can be
+                    defined from the comparison of
+                    <b>strings</b> as well as
+                    <b>nuneric values</b>.<br>
 
+                    <span class="command">
+                      >>> 'aaa' == 'aaa'<br>
+                      True<br>
+                      >>> 'aaa' != 'aaa'<br>
+                      False<br>
+                      >>> 'aaa' >= 'aab'<br>
+                      False<br>
+                      >>> 'aaa' <= 'aab'<br>
+                      True<br>
+                      >>> 'aaa' > 'xyz'<br>
+                      False<br>
+                      >>> 'aaa' < 'xyz'<br>
+                      True<br>
+                      >>>
+                    </span><br><br>
 
+                  Comparing two <b>strings</b> for
+                  <b>equality</b> ('<b>==</b>') or
+                  <b>inequality</b> ('<b>!=</b>'),
+                  hopefully needs no explanation.<br><br>
 
+                  The magnitude of a <b>character</b>
+                  (and so a <b>character string</b>) is
+                  determined by the numeric value used to
+                  represent it in the computer
+                  (typically its <b>ASCII code</b>,
+                  more later).<br><br>
 
+                  For purely <b>alphabetic strings</b>,
+                  the order is simply <b>standard
+                  alphabetic order</b>.
+                  </li><br>
 
+                  <li>
+                   <b>Upper Case Letters</b> are "<b>smaller</b>"
+                   than <b>Lower Case Letters</b>.<br>
 
+                    <span class="command">
+                      >>> 'AAA' < 'aaa'<br>
+                      True<br>
+                      >>>
+                    </span>
+                  </li><br>
+ 
+                  <li>
+                    As previously mentioned, <b>Scalar Values/</b>
+                    of type <b>bool</b> can have just one
+                    of two possible values,
+                    <b>True</b> or <b>False</b>.<br><br>
 
-<br><br><br>
-                      <span class="command">
-                  >>> 6==7<br>
-                  False<br>
-                  >>> 6!=7<br>
-                  True<br>
-                  >>> 6>=6<br>
-                  True<br>
-                  >>> 6<=6<br>
-                  True<br>
-                  >>> 6<=5<br>
-                  False<br>
-                  >>> 6 < 6<br>
-                  False<br>
-                  >>> 6 > 6<br>
-                  False<br>
-                  >>> <br>
+                    <b>True</b> and <b>False</b> are represented
+                    in the computer by <b>Integers</b>
+                    (<b>Scalar Values</b> of the type
+                    <b>int</b>). Some arrangement of this
+                    sort is imperative as
+                    <b><i>everything</i></b> is a number
+                    inside a computer,
+                    if you look hard enough.<br><br>
+
+                    So, in a very practical sense,
+                    <b>bools</b>
+                    are a <b>sub-class</b> (<b>sub-type</b>) of
+                    the <b>Python class</b>
+                    (<b>type</b>) <b>int</b>.<br><br>
+
+                    <b><i>Quite arbitrarily</i></b>, as
+                    <b>True</b> and <b>False</b> have no
+                    logical asssociation with any numeric
+                    value, <b>True</b> is represented as the
+                    <b>Integer 1</b> and <b>False</b> as the
+                    <b>Integer 0</b>.<br><br>
+
+                    You <b><i>could</i></b> replace <b>True</b>
+                    and <b>False</b> in your code by <b>1</b>
+                    and <b>0</b>, but why would you ever wish
+                    to???? It would merely obscure and would
+                    represent extremely poor style.<br><br>
+
+                    You <b><i>could</i></b> do arithmetic
+                    with <b>True</b> and <b>False</b> and they
+                    would act as if they were the <b>Integers
+                    1</b> and <b>0</b> respectively. But why
+                    on earth would you want to??? Not only
+                    poor style but evidence of insanity
+                    I opine!<br>
+
+                    <span class="command">
+                      >>> True<br>
+                      True<br>
+                      >>> True +6<br>
+                      7<br>
+                      >>> True * 8<br>
+                      8<br>
+                      >>> False<br>
+                      False<br>
+                      >>> False * 5<br>
+                      0<br>
+                      >>> False + 12<br>
+                      12<br>
+                      >>> 
+                    </span>
+                  </li><br>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Boolean Operators</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+              <p>
+                <span class="command">
+                  >>> 12 // 4<br>
+                  3<br>
+                  >>> 12 % 4<br>
+                  0<br>
+                  >>> 14 // 4<br>
+                  3<br>
+                  >>> 14 % 4<br>
+                  2<br>
+                  >>> 12 // 4.0<br>
+                  3.0<br>
+                  >>> 12 % 4.0<br>
+                  0.0<br>
+                  >>>
                 </span>
               </p>
 
+              <div class="hint"><b>Note</b>:<br>
 
+                <ol>
+                  <li>
                     "<b>//</b> is used to request
                     <b>Integer Division</b>.<br><br>
 
-                   That is, "<b>12 // 3</b>" is "<b>3</b>"
+                    That is, "<b>12 // 3</b>" is "<b>3</b>"
                     with a <b>Remainder</b> of <b>0</b>.<br><br>
 
                     To display the <b>Remainder</b>, the "<b>%</b>"
@@ -974,41 +1176,11 @@ actually int<br>
                       >>> <br>
                     </span>
                   </li><br>
-
-                  <li>
-                    Of course, "<b>14 // 3</b>" is also
-                    "<b>3</b>"<br><br>
-
-                    But this time the "<b>Remainder is 2</b>".<br>
-
-                    <span class="command">
-                      >>> 14 // 4<br>
-                      3<br>
-                      >>> 14 % 4<br>
-                      2<br>
-                      >>> <br>
-                    </span>
-
-                  </li><br>
-
-                  <li>
-                    Even though the request is for <b>Integer
-                    Arithmetic</b>, if any argument is a
-                    <b>float</b>,
-                    the answer is a <b>float</b>.<br>
-
-                   <span class="command">
-                     >>> 12 // 4.0<br>
-                     3.0<br>
-                     >>> 
-                   </span>
-                  </li><br>
                 </ol>
               </div>
             </div>
           </details>
         </li>
-
       </ol>
     </details><br>
   </li>
@@ -2073,7 +2245,7 @@ actually int<br>
          the form:<br>
 
          <div class="code">
-           For </b>
+           For
            <span style="font-weight:normal;">
            <i>&lt;Control Variable&gt;</i></span>
            <b>in </b>
@@ -2100,9 +2272,9 @@ actually int<br>
 
           <b><u>Pseudo-Code</u></b><br>
           <div class="pseudo">
-            for each integer value (</b>i</b>, say)
-            between </b>1</b> and </b>12</b>, prettily
-            print out the value of </b>i * 7</b>.
+            for each integer value (<b>i</b>, say)
+            between <b>1</b> and <b>12</b>, prettily
+            print out the value of <b>i * 7</b>.
           </div><br>
 
           <b><u>Code</u></b><br>
@@ -2460,7 +2632,7 @@ actually int<br>
          something like the following:<br>
 
          <div class="code">
-           While True</b><br>
+           While True<br>
            &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
            &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
            &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
@@ -2639,7 +2811,7 @@ actually int<br>
             <ul>
               <li>
                 This is essentially the second
-                "<b>While Loop<b>"
+                "<b>While Loop</b>"
                 <b>Trivial Example</b> rearranged. Perhaps
                 it feels more natural as a <b>Test at the
                 Bottom Loop</b>? But both ways work.
@@ -2875,7 +3047,7 @@ actually int<br>
                 </span>
               </div><br><br>
 
-              In this instance, the <b>Loop</b > control
+              In this instance, the <b>Loop</b> control
               &lt;<i>List</i>&gt; is generated by
               the <b>Python</b>
               <b>range</b> command. Specifically:<br><br>
@@ -3671,7 +3843,7 @@ actually int<br>
         </p>
 
         <p>Why not include your <b>pseudo-code</b> in your
-           <b>Python Script</b> as a comment?</b>
+           <b>Python Script</b> as a comment?
         </p>
 
         <p>Be sure to comment your
@@ -4922,7 +5094,7 @@ actually int<br>
         </p>
 
         <p>Why not include your <b>pseudo-code</b> in your
-           <b>Python Script</b> as a comment?</b>
+           <b>Python Script</b> as a comment?
         </p>
 
         <p>Be sure to comment your
@@ -5274,7 +5446,7 @@ actually int<br>
         </p>
 
         <p>Why not include your <b>pseudo-code</b> in your
-           <b>Python Script</b> as a comment?</b>
+           <b>Python Script</b> as a comment?
         </p>
 
         <p>Be sure to comment your
