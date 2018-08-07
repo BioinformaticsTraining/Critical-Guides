@@ -246,7 +246,7 @@ Click to record your <b>Start</b> time.</button>
 
         <p>The two terms <b>type</b> and <b>class</b> are,
            these days, effectively synonyms. I will use
-           them interchangably in this tutorial.
+           them interchangeably in this tutorial.
            Historically, there was a significant difference.
            If you are interested, you could look
            <a href="https://stackoverflow.com/questions/4162578/python-terminology-class-vs-type
@@ -305,7 +305,7 @@ Click to record your <b>Start</b> time.</button>
                   <b>Non-interactively</b> - in which the
                   <b>PYTHON Interpreter</b> is started to run an
                   entire <b>PYTHON script</b>. Once this
-                  is acheived, the <b>PYTHON Interpreter</b>
+                  is achieved, the <b>PYTHON Interpreter</b>
                   will <b><i>NOT</i></b> wait for
                   further instruction, it will simply close down.
                 </li>
@@ -377,13 +377,13 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Integers.</hh4>
+              <hh4>Basic Arithmetic with Integers.</hh4>
             </span>
           </summary>
 
             <div class="minsect">
 
-              <p>Now for some warm up arithmatic to get the
+              <p>Now for some warm up arithmetic to get the
                  feel of things. Try the following and/or
                  similar:<br><br>
 
@@ -490,7 +490,7 @@ Click to record your <b>Start</b> time.</button>
                     </li><br>
 
                     <li>
-                      Any division, even involving ony <b>ints</b>
+                      Any division, even involving only <b>ints</b>
                       could generate a <b>float</b> answer.<br><br>
 
                       Therefore all divisions generate
@@ -527,7 +527,7 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Floating
+              <hh4>Basic Arithmetic with Floating
               Point Numbers.</hh4>
             </span>
           </summary>
@@ -854,7 +854,7 @@ Click to record your <b>Start</b> time.</button>
                     Only one <b>Operator</b> makes
                     sense between <b>strings</b>.
                     That being '<b>+</b>' which means,
-                    in this context <b>concatonate</b>.
+                    in this context <b>concatenate</b>.
                     That is, join together between <b>two
                     strings</b> and <b>lots of strings</b>
                     to make just <b>one string</b>.<br>
@@ -880,12 +880,9 @@ Click to record your <b>Start</b> time.</button>
               <hh4>Booleans and Conditional Expressions.</hh4>
             </span>
           </summary>
-<p>conditional expressions (T?F) not numbers<br>
-and/or/xor/not<br>
-actually int<br>
-</p>
 
             <div class="minsect">
+
               <p>
                 <span class="command">
                   >>> 6 == 6<br>
@@ -919,6 +916,8 @@ actually int<br>
                   >>> 'aaa' < 'xyz'<br>
                   True<br>
                   >>> 'AAA' < 'aaa'<br>
+                  True<br>
+                  >>> '999' < 'AAA'<br>
                   True<br>
                   >>>
                 </span>
@@ -1018,7 +1017,7 @@ actually int<br>
                     <b>Conditional Expressions</b> can be
                     defined from the comparison of
                     <b>strings</b> as well as
-                    <b>nuneric values</b>.<br>
+                    <b>numeric values</b>.<br>
 
                     <span class="command">
                       >>> 'aaa' == 'aaa'<br>
@@ -1065,7 +1064,18 @@ actually int<br>
                   </li><br>
  
                   <li>
-                    As previously mentioned, <b>Scalar Values/</b>
+                   <b>Numeric Characters</b> are "<b>smaller</b>"
+                   than <b>Upper Case Letters</b>.<br>
+
+                    <span class="command">
+                      >>> '999' < 'AAA'<br>
+                      True<br>
+                      >>>
+                    </span>
+                  </li><br>
+ 
+                  <li>
+                    As previously mentioned, <b>Scalar Values</b>
                     of type <b>bool</b> can have just one
                     of two possible values,
                     <b>True</b> or <b>False</b>.<br><br>
@@ -1087,7 +1097,7 @@ actually int<br>
 
                     <b><i>Quite arbitrarily</i></b>, as
                     <b>True</b> and <b>False</b> have no
-                    logical asssociation with any numeric
+                    logical association with any numeric
                     value, <b>True</b> is represented as the
                     <b>Integer 1</b> and <b>False</b> as the
                     <b>Integer 0</b>.<br><br>
@@ -1132,25 +1142,29 @@ actually int<br>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Boolean Operators</hh4>
+              <hh4>Boolean Operators (and, or, not)</hh4>
             </span>
           </summary>
 
             <div class="minsect">
               <p>
                 <span class="command">
-                  >>> 12 // 4<br>
-                  3<br>
-                  >>> 12 % 4<br>
-                  0<br>
-                  >>> 14 // 4<br>
-                  3<br>
-                  >>> 14 % 4<br>
-                  2<br>
-                  >>> 12 // 4.0<br>
-                  3.0<br>
-                  >>> 12 % 4.0<br>
-                  0.0<br>
+                  >>> (6 == 6) and (7 == 7)<br>
+                  True<br>
+                  >>> (6 == 6) and (7 == 7) and (3 == 4)<br>
+                  False<br>
+                  >>> (6 == 6) and (7 == 7) and (3 != 4)<br>
+                  True<br>
+                  >>> ('aaa' >= '9') and ('AAA' <= '111')<br>
+                  False<br>
+                  >>> ('aaa' >= '9') or ('AAA' <= '111')<br>
+                  True<br>
+                  >>> not (6 == 7)<br>
+                  True<br>
+                  >>> not ((6 == 'a') or ('b' < 'z'))<br>
+                  False<br>
+                  >>> (not (6 == 'a') or not ('b' < 'z'))<br>
+                  True<br>
                   >>>
                 </span>
               </p>
@@ -1159,29 +1173,200 @@ actually int<br>
 
                 <ol>
                   <li>
-                    "<b>//</b> is used to request
-                    <b>Integer Division</b>.<br><br>
+                    <b>Python</b> offers two <b>Binary
+                    Operators</b> (<b>and</b>, <b>or</b>)
+                    and one <b>Unary Operator</b> (<b>not</b>)
+                    to <b>Combine</b> or <b>Qualify
+                    Conditional Expressions</b>.<br>
 
-                    That is, "<b>12 // 3</b>" is "<b>3</b>"
-                    with a <b>Remainder</b> of <b>0</b>.<br><br>
+                    <span style="background:White;
+                                 color:Blue;
+                                 font-family: monospace;">
 
-                    To display the <b>Remainder</b>, the "<b>%</b>"
-                    operator is used.<br>
+                      <i>&lt;Condition1&gt;</i> <b>and</b>
+                      <i>&lt;Condition2&gt;</i>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
+                      <b>True</b> if <b>BOTH</b>
+                      <i>Condition</i>s are <b>True</b>.
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;<br>
 
-                    <span class="command">
-                      >>> 12 // 4<br>
-                      3<br>
-                      >>> 12 % 4<br>
-                      0<br>
-                      >>> <br>
-                    </span>
+                      <i>&lt;Condition1&gt;</i> <b>or</b>
+                      &nbsp;<i>&lt;Condition2&gt;</i>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
+                      <b>True</b> if <b>EITHER OR BOTH</b>
+                      <i>Condition</i>s are <b>True</b>.<br>
+
+                      <b>not</b> <i>&lt;Condition&gt;</i>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
+                      <b>True</b> if <i>Condition</i>
+                      is <b>NOT True</b>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span><br><br>
+
+                    Hopefully, the examples above, plus your
+                    own experimenting will be sufficient to
+                    make the way these operators work very
+                    clear.<br><br>
+
+                    I have used more <b>parentheses</b> than
+                    are strictly necessary. A personal
+                    preference, I think it is so much clearer
+                    when there are lots of brackets everywhere.
+                    Feel free to disagree.<br>
+
                   </li><br>
+                </ol>
+              </div><br>
+
+              <div class="checkpoint">
+
+                <h2><i><u>Questions</u></i></h2>
+
+                <ol type="1">
+
+                  <li>
+                    <p>What major <b>Binary Boolean Operator</b>
+                       is missing from the selection offerred
+                       by <b>Python</b>?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                        <p><b>Python</b> sets out to be "lean
+                           and mean". It does not try to offer
+                           <b>builtin</b> functionality for
+                           everthing,
+                           preferring instead the "efficiencies" of
+                           simplicity. The user is expected to fill
+                           any gaps.
+                        </p>
+
+                        <p>Generally a defendable polcy, but just
+                           occassionally one does wonder if
+                           <b>Python</b>'s designers might not have
+                           taken a tiny step to far?
+                        </p>
+
+                        <p>In this case, no <b>Exclusive OR
+                           Operator</b> (normally offerred as
+                           "<b>xor</b>")? I wonder why?
+                        </p>
+
+                        <p>Just in case, were <b>xor</b> included,
+                           the interpretation would be:<br><br>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: monospace;">
+                            <i>&lt;Condition1&gt;</i> <b>xor</b>
+                            <i>&lt;Condition2&gt;</i>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
+                            <b>True</b> if <b>EITHER
+                            BUT NOT BOTH</b>
+                            <i>Condition</i>s are <b>True</b>.<br>
+                          </span>
+                        </p>
+
+                        <p>Think about it ... it works, Honest!
+                           It is a bit clumsy, but it reads
+                           nicely (if you take it slowly), which
+                           I think is very important.
+                        </p>
+                      </div>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>How might the functionality of the missing
+                       <b>Boolean Operator</b> be provided using a
+                       combination of the <b>Boolean Operators</b>
+                       that <b>Python</b> does include?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                        <p>Probably the best way to compensate
+                           for the omission of <b>xor</b> is
+                           to extend
+                           <b>Python</b> by bolting
+                           on extra functionalities available
+                           from various sources. We will cover
+                           how to do that very soon.
+                        </p>
+
+                        <p>Or ... you could write your own
+                           extension? We will see how to do that
+                           to ... later.
+                        </p>
+
+                        <p>In the meantime, the solution that
+                           I like the best uses only what we
+                           have discussed thus far. There are
+                           less clumsy (but more enigmatic)
+                           solutions that require tricks we
+                           have not covered, but I would still
+                           prefer the clumsy purity of:
+                        </p>
+
+                        <p>Just in case, were <b>xor</b> included,
+                           the interpretation would be:<br><br>
+                          <span style="background:White;
+                                       color:Blue;
+                                       font-family: monospace;">
+                            (<i>&lt;Cond1&gt;</i>
+                            <b>and not </b>
+                            <i>&lt;Cond2&gt;</i>) <b>or</b>
+                            (<i>&lt;Cond2&gt;</i>
+                            <b>and not</b>
+                            <i>&lt;Cond1&gt;</i>)
+                            &nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
+                            <b>True</b> if <b>EITHER
+                            BUT NOT BOTH</b>
+                            <i>Condition</i>s are <b>True</b>.<br>
+                          </span>
+                        </p>
+                      </div>
+                    </details>
+                  </li>
                 </ol>
               </div>
             </div>
           </details>
-        </li>
-      </ol>
     </details><br>
   </li>
 
@@ -1278,7 +1463,7 @@ actually int<br>
                   <b>Non-interactively</b> - in which the
                   <b>PYTHON Interpreter</b> is started to run an
                   entire <b>PYTHON script</b>. Once this
-                  is acheived, the <b>PYTHON Interpreter</b>
+                  is achieved, the <b>PYTHON Interpreter</b>
                   will <b><i>NOT</i></b> wait for
                   further instruction, it will simply close down.
                 </li>
@@ -1350,13 +1535,13 @@ actually int<br>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Integers.</hh4>
+              <hh4>Basic Arithmetic with Integers.</hh4>
             </span>
           </summary>
 
             <div class="minsect">
 
-              <p>Now for some warm up arithmatic to get the
+              <p>Now for some warm up arithmetic to get the
                  feel of things. Try the following and/or
                  similar:<br><br>
 
@@ -1450,7 +1635,7 @@ actually int<br>
                     </li><br>
 
                     <li>
-                      Any division, even involving ony <b>ints</b>
+                      Any division, even involving only <b>ints</b>
                       could generate a <b>float</b> answer.<br><br>
 
                       Therefore all divisions generate
@@ -1497,7 +1682,7 @@ actually int<br>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Floating
+              <hh4>Basic Arithmetic with Floating
               Point Numbers.</hh4>
             </span>
           </summary>
@@ -1768,7 +1953,7 @@ actually int<br>
                   <b>Non-interactively</b> - in which the
                   <b>PYTHON Interpreter</b> is started to run an
                   entire <b>PYTHON script</b>. Once this
-                  is acheived, the <b>PYTHON Interpreter</b>
+                  is achieved, the <b>PYTHON Interpreter</b>
                   will <b><i>NOT</i></b> wait for
                   further instruction, it will simply close down.
                 </li>
@@ -1840,13 +2025,13 @@ actually int<br>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Integers.</hh4>
+              <hh4>Basic Arithmetic with Integers.</hh4>
             </span>
           </summary>
 
             <div class="minsect">
 
-              <p>Now for some warm up arithmatic to get the
+              <p>Now for some warm up arithmetic to get the
                  feel of things. Try the following and/or
                  similar:<br><br>
 
@@ -1940,7 +2125,7 @@ actually int<br>
                     </li><br>
 
                     <li>
-                      Any division, even involving ony <b>ints</b>
+                      Any division, even involving only <b>ints</b>
                       could generate a <b>float</b> answer.<br><br>
 
                       Therefore all divisions generate
@@ -1987,7 +2172,7 @@ actually int<br>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Basic Arithmatic with Floating
+              <hh4>Basic Arithmetic with Floating
               Point Numbers.</hh4>
             </span>
           </summary>
@@ -4723,7 +4908,7 @@ actually int<br>
               if not rna.isalpha():<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               print "Warning - This Sequence contains
-              non-alpha Charaters?!";<br><br>
+              non-alpha Characters?!";<br><br>
 
               &nbsp;&nbsp;&nbsp;
               RNA=rna.upper();
