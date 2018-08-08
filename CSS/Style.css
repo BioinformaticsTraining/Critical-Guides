@@ -118,6 +118,14 @@ div.exercise {
     width: 750px
 }
 
+/* div for Questions */
+
+div.question {
+    background-color: SeaShell;
+    border-style: solid;
+    width: 800px
+}
+
 /* div for Exercise Checkpoints */
 
 div.checkpoint {

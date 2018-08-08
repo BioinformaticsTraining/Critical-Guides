@@ -868,6 +868,269 @@ Click to record your <b>Start</b> time.</button>
                     </span>
                   </li><br>
                 </ol>
+              </div><br>
+
+              <div class="question">
+
+                <h2><i><u>Questions</u></i></h2>
+
+                <ol type="1">
+
+                    <li>
+                    <p>Can you think of a simple way to include
+                       a single quote character (<b>'</b>
+                       or <b>"</b>) inside a string?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <p>Well neither:
+                        </p>
+
+                        <span class="command">
+                          >>> 'A single quote ' in a string'<br>
+                          &nbsp;&nbsp;File "<stdin>", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;'A single quote
+                          ' in a string'<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>>
+                        </span>
+
+                        <p>nor:<br>
+                        </p>
+ 
+                        <span class="command">
+                          >>> "A double quote " in a string"<br>
+                          &nbsp;&nbsp;File "<stdin>", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;"A double quote
+                          " in a string"<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> 
+                        </span>
+
+                        <p>will do!
+                        </p>
+
+                        <p>In both cases, the
+                           <b>quote embedded</b> in
+                           the string is of the same type as
+                           the <b>enclosing quotes</b>. The
+                           <b>Interpreter</b> is bound to assume
+                           the <b>embedded quote</b> is the
+                           <b>string terminating
+                           quote</b> and so get a
+                           trifle confused as
+                           to what the rest of the line might be!
+                        </p>
+
+                        <p>The solution is transparent! Simply
+                           choose the <b>enclosing quotes</b> to be
+                           distinct from the <b>embedded quote</b>.
+                           The <b>embedded quote</b> will then be
+                           interpreted as just
+                           another character of the string and
+                           all will be well.
+                        </p>
+
+                        <span class="command">
+                          >>> "A single quote ' in a string"<br>
+                          "A single quote ' in a string"<br>
+                          >>> 'A double quote " in a string'<br>
+                          'A double quote " in a string'<br>
+                          >>> 
+                        </span>
+
+                        <p>No reason why this trick should not
+                           work for lots of quotes of the same
+                           type.
+                        </p>
+
+                        <span class="command">
+                          >>> "Lots of single quotes
+                          ''''''''' in a string"<br>
+                          "Lots of single quotes
+                          ''''''''' in a string"<br>
+                          >>> 'Lots of double quotes
+                          """"""""" in a string'<br>
+                          'Lots of double quotes
+                          """"""""" in a string'<br>
+                          >>> 
+                        </span>
+                      </div>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>How would you expect the
+                       <b>Python Interpreter</b> to react to
+                       the gentle stimulus:<br>
+                      <span class="command">
+                        '14' + '7'
+                      </span>
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                        <span class="command">
+                          >>> '14' + '7'<br>
+                          '147'<br>
+                          >>>
+                        </span><br>
+
+                        <p>If anyone mentioned "<b>21</b>"
+                           I am going home!!!! Yes it is a
+                           <b>PLUS</b> sign, but <b><i>it does
+                           not mean arithmetic addition in
+                          this context</b></i>.
+                        </p>
+
+                        <p>'<b>14</b>' and '<b>7</b>' are
+                           <b><i>strings</i></b>! The
+                           <b>+</b> sign is used here for
+                           convenience only ... and because
+                           someone must imagine that
+                           <b>concatenation</b> is in some
+                           distant fashion, beyond my
+                           understanding, tenuously related
+                           to <b>Arithmetic Addition</b>? Maybe I
+                           lack imagination?
+                        </p>
+
+                        <p>Of course, remove the <b>quotes</b>
+                           around the <b>Numeric Characters</b>
+                           and, all of a sudden, they become
+                           <b>NUMBERS</b> and <b><i>NOW</b></i>
+                           the <b>plus sign</b> can be interpreted
+                           as its creator intended.
+                           Behold, <b>21</b>!
+                        </p>
+
+                        <span class="command">
+                         >>> 14 + 7<br>
+                         21<br>
+                         >>> 
+                        </span><br>
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    <p>How about:
+                        <span class="command">
+                        '14' - '7'
+                      </span>
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                        <span class="command">
+                          >>> '14' - '7'<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;File "&lt;stdin&gt;",
+                          line 1, in &lt;module&gt;<br>
+                          TypeError: unsupported operand type(s)
+                          for -: 'str' and 'str'<br>
+                          >>> 
+                        </span><br>
+
+                      <p>The Python Interpreter in
+                         intemperate mode!
+                      </p>
+
+                      <p>Broadly, and loosely translated, this
+                         message reads:<br><br>
+
+                         <i>"What am I supposed to do here?
+                         - Stupid person! Bad enough you
+                         ask me to <b>ADD</b> two strings
+                         together, but now you want me to
+                         <b>SUBTRACT</b> them???
+                         I refuse ... so there!"</i>
+                      </p>
+
+                      <p>Quite right too!!
+                      </p>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>What do you suppose the value of:
+                    </p>
+
+                    <span class="command">
+                      3 * 'a'
+                    </span><br>
+
+                    <p>might be?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command">
+                          >>> 3 * 'a'<br>
+                          aaa'<br>
+                          >>> 
+                        </span><br>
+
+                        <p>In vaguely analogy to <b>Arithmetic
+                           Multiplication</b>, a command of the
+                           form:<br><br>
+
+                           <i>&lt;int&gt;</i> <b>*</b>
+                           <i>&lt;str&gt;</i><br><br>
+
+                           will concatenate the specified
+                           <b>string</b> with itself, the
+                           number of times indicated by the
+                           given <b>integer</b> value.
+                        </p>
+                  </li>
+                  <li>
+                    <p>How about:
+                    </p>
+
+                    <span class="command">
+                      3 * '19'
+                    </span><br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command">
+                          >>> 3 * '19'<br>
+                          '191919'<br>
+                          >>>
+                        </span><br>
+
+                        <p>So very happy no one, even fleetingly,
+                           considered <b>59</b>!!
+                        </p>
+                      </div>
+                    </details>
+                  </li>
+                </ol>
               </div>
             </div>
           </details>
@@ -1133,8 +1396,67 @@ Click to record your <b>Start</b> time.</button>
                     </span>
                   </li><br>
                 </ol>
+              </div><br>
+
+              <div class="question">
+
+                <h2><i><u>Questions</u></i></h2>
+
+                <ol type="1">
+                  <li>
+                    <p>What do you suppose the value of:
+                    </p>
+
+                    <span class="command">
+                      3 * 'a' == 'a' + 'a' + 'a'
+                    </span>
+
+                    <p>Might be?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command">
+                          >>> 3 * 'a' == 'a' + 'a' + 'a'<br>
+                          True<br>
+                          >>>
+                        </span>
+
+                        <p><b>True</b>!!!, because<br><br>
+
+                            <b>3 * 'a'</b><br><br>
+
+                            is '<b>a</b>' <b>concatenated</b>
+                            with itself
+                            <b>3</b> times (see above),
+                            as is<br><br>
+
+                            <b>'a' + 'a' + 'a'</b>
+                        </p>
+
+                        <p>As the <b>Interpreter</b> will
+                           readily confirm,
+                           everything is really <b>'aaa'</b>
+                           in disguise.
+                        </p>
+
+                        <span class="command">
+                          >>> 3 * 'a' == 'a' + 'a' + 'a' ==
+                          'aaa'<br>
+                          True<br>
+                          >>> 3 * 'a', 'a' + 'a' + 'a',  'aaa'<br>
+                          ('aaa', 'aaa', 'aaa')<br>
+                          >>> 
+                        </span><br><br>
+                     </div>
+                    </details>
+                  </li>
+                </ol>
               </div>
-            </div>
+           </div>
           </details>
         </li><br>
 
@@ -1241,7 +1563,7 @@ Click to record your <b>Start</b> time.</button>
                 </ol>
               </div><br>
 
-              <div class="checkpoint">
+              <div class="question">
 
                 <h2><i><u>Questions</u></i></h2>
 
@@ -1249,7 +1571,7 @@ Click to record your <b>Start</b> time.</button>
 
                   <li>
                     <p>What major <b>Binary Boolean Operator</b>
-                       is missing from the selection offerred
+                       is missing from the selection offered
                        by <b>Python</b>?
                     </p>
 
@@ -1260,20 +1582,20 @@ Click to record your <b>Start</b> time.</button>
                         <p><b>Python</b> sets out to be "lean
                            and mean". It does not try to offer
                            <b>builtin</b> functionality for
-                           everthing,
+                           everything,
                            preferring instead the "efficiencies" of
                            simplicity. The user is expected to fill
                            any gaps.
                         </p>
 
-                        <p>Generally a defendable polcy, but just
-                           occassionally one does wonder if
+                        <p>Generally a defendable policy, but just
+                           occasionally one does wonder if
                            <b>Python</b>'s designers might not have
                            taken a tiny step to far?
                         </p>
 
                         <p>In this case, no <b>Exclusive OR
-                           Operator</b> (normally offerred as
+                           Operator</b> (normally offered as
                            "<b>xor</b>")? I wonder why?
                         </p>
 
@@ -1340,8 +1662,6 @@ Click to record your <b>Start</b> time.</button>
                            prefer the clumsy purity of:
                         </p>
 
-                        <p>Just in case, were <b>xor</b> included,
-                           the interpretation would be:<br><br>
                           <span style="background:White;
                                        color:Blue;
                                        font-family: monospace;">
@@ -1367,6 +1687,8 @@ Click to record your <b>Start</b> time.</button>
               </div>
             </div>
           </details>
+        </li>
+      </ol>
     </details><br>
   </li>
 
