@@ -1754,519 +1754,6 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary><b>Exercise - Part IV:</b>
-              Conditional Expressions - if, else, elif
-    </summary>
-
-<!-- ############################################## ---
----- ############################################## ---
----- ############################################## -->
-
-      <div class="ramble">
-
-        <h2>Scalar Values</h2>
-
-        <p>A <b>scalar value</b> is a single item of data.
-              </p>
-
-        <p><b>Scalar data items</b> can be one of
-           a variety of <b>types</b> including:<br>
-
-          <ul>
-            <li>
-              <b>int</b> - Integers, that is
-              "<b>whole numbers</b>".
-            </li><br>
-
-            <li>
-              <b>float</b> - Floating point number,
-              that is numbers
-              with something after the decimal point.
-            </li><br>
-
-            <li>
-              <b>bool</b> - Boolean values, that is
-              <b>True</b> or <b>False</b>.
-            </li><br>
-
-            <li>
-              <b>str</b> - A sequence of <b>Characters</b>.
-            </li>
-          </ul>
-        </p>
-
-        <p>In this section, these entities will be
-           investigated using the <b>PYTHON
-           Interpreter</b> interactively.
-      </div><br>
-
-<!-- ############################################## ---
----- ############################################## ---
----- ############################################## -->
-      <ol>
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>The PYTHON Interpreter.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-
-              <p>The <b>PYTHON Interpreter</b> is the program
-                 that reads your <b>PYTHON code</b>, and
-                 instructs the computer to obey. If you are
-                 very lucky, the computer sometimes
-                 actually does what you intended!
-              </p>
-
-              <p>You can use the <b>PYTHON Interpreter</b> in two
-                 very different ways:<br>
-              </p>
-
-              <ul>
-                <li>
-                  <b>Interactively</b> - great for running
-                  scripts one line at a time, for testing
-                  out ideas or new commands.<br><br>
-
-                  Using the <b>PYTHON Interpreter</b>
-                  interactively is rather like using a calculator
-                  in fact.<br><br>
-
-                  If the <b>PYTHON Interpreter</b> is started
-                  interactively, it remains active having completed
-                  a task(waiting for the
-                  next interactive command) until explicitly
-                  told to go away!
-                </li><br>
-                <li>
-                  <b>Non-interactively</b> - in which the
-                  <b>PYTHON Interpreter</b> is started to run an
-                  entire <b>PYTHON script</b>. Once this
-                  is achieved, the <b>PYTHON Interpreter</b>
-                  will <b><i>NOT</i></b> wait for
-                  further instruction, it will simply close down.
-                </li>
-              </ul>
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Starting the PYTHON Interpreter in
-              interactive mode.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-
-              <p>To take a look at the wonders of scalars,
-                 using the <b>PYTHON Interpreter interactively</b>
-                 would seem the best plan. So:
-              </p>
-
-              <ul>
-                <li>
-                  Start up a <b>Terminal</b>
-                  (<b>Ctrl-Alt-T</b> usually does the trick).
-                </li><br>
-
-                <li>
-                  Move into a suitable Directory.
-                </li><br>
-
-                <li>
-                  Start up the <b>PYTHON Interpreter</b> in
-                  <b>Interactive Mode</b> with the command:<br><br>
-                  <span class="command">
-                    python
-                  </span><br><br>
-
-                  to which the response should be
-                  something like:<br><br>
-
-                  <span class="command">
-                    Python 3.5.2 (default, Nov 23 2017,
-                    16:37:01)<br>
-                    [GCC 5.4.0 20160609] on linux<br>
-                    Type "help", "copyright", "credits"
-                    or "license"
-                    for more information.<br>
-                    >>> 
-                  </span><br>
-
-                  <p class="hint"><b>Important Note</b>: If
-                     you are using "<b>Python 2.?.?</b>", not
-                     all of what is
-                     described here will work. I assume
-                     "<b>Python 3.?.?</b>" which is not
-                     backward compatible.
-                  </p>
-                </li>
-              </ul>
-            </p>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Basic Arithmetic with Integers.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-
-              <p>Now for some warm up arithmetic to get the
-                 feel of things. Try the following and/or
-                 similar:<br><br>
-
-                <span class="command">
-                  >>> 3<br>
-                  3<br>
-                  >>> 3 + 4<br>
-                  7<br>
-                  >>> 3 - 4<br>
-                  -1<br>
-                  >>> 4 - 3<br>
-                  1<br>
-                  >>> 12 / 4<br>
-                  3.0<br>
-                  >>> 15 / 6<br>
-                  2.5<br>
-                  >>> 12 * 2<br>
-                  24<br>
-                  >>> 12 - 5 * 6<br>
-                  -18<br>
-                  >>> (12 - 5) * 6<br>
-                  42<br>
-                  >>>
-                </span><br><br>
-
-                <div class="hint"><b>Note</b>:
-                  <ol>
-                    <li>
-                      Basic <b>Arithmetic Operators</b> are
-                      those I would hope you expected (?)
-
-                      <ul>
-                        <li>
-                          <span style="background:White;
-                                       color:Blue;
-                                       font-family: courier;">
-                            <b>&nbsp;&nbsp;
-                            +&nbsp;&nbsp;&nbsp;Addition
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
-                          </span>
-                        </li>
-                        <li>
-                          <span style="background:White;
-                                       color:Blue;
-                                       font-family: courier;">
-                            <b>&nbsp;&nbsp;
-                            -&nbsp;&nbsp;&nbsp;Subtraction
-                            &nbsp;&nbsp;</b>
-                          </span>
-                        </li>
-                        <li>
-                          <span style="background:White;
-                                       color:Blue;
-                                       font-family: courier;">
-                            <b>&nbsp;&nbsp;
-                            /&nbsp;&nbsp;&nbsp;Division
-                            &nbsp;&nbsp;
-                            &nbsp;&nbsp;</b>
-                          </span>
-                        </li>
-                        <li>
-                          <span style="background:White;
-                                       color:Blue;
-                                       font-family: courier;">
-                          <b>&nbsp;&nbsp;
-                          *&nbsp;&nbsp;&nbsp;Multiplication</b>
-                          </span>
-                        </li>
-                      </ul>
-                    </li><br>
-
-                    <li>
-                      All values input here are <b>int</b>
-                      (<b>Integers</b>)
-                    </li><br>
-
-                    <li>
-                      Where results can only be type <b>int</b>,
-                      they are.<br><br>
-                      <span class="command">
-                        >>> 3 + 4<br>
-                        7<br>
-                        >>> 3 - 4<br>
-                        -1<br>
-                        >>> 4 - 3<br>
-                        1<br>
-                        >>> 12 * 2<br>
-                        24<br>
-                        >>>
-                      </span>
-                    </li><br>
-
-                    <li>
-                      Any division, even involving only <b>ints</b>
-                      could generate a <b>float</b> answer.<br><br>
-
-                      Therefore all divisions generate
-                      <b>float</b> answers (that is, values
-                      including a decimal point).<br>
-                      <span class="command">
-                        >>> 12 / 4<br>
-                        3.0<br>
-                        >>> 15 / 6<br>
-                        2.5<br>
-                        >>>
-                      </span>
-                    </li><br>
-
-                    <li>
-                      If an expression that is a <b>single
-                      scalar value</b> is entered, the
-                      <b>PYTHON Interpreter</b>
-                      simply echoes that value.<br>
-                      <span class="command">
-                        >>> 3<br>
-                        3<br>
-                        >>>
-                      </span>
-                    </li><br>
-
-                    <li>
-                      parenthesis have their usual role
-                      influencing operator precedence.<br>
-                      <span class="command">
-                        >>> 3<br>
-                        3<br>
-                        >>>
-                      </span>
-                    </li><br>
-                  </ol>
-                </div>
-              </p>
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Basic Arithmetic with Floating
-              Point Numbers.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-              <p>
-                <span class="command">
-                  >>> 1.1 + 4<br>
-                  5.1<br>
-                  >>> 1.0 + 4<br>
-                  5.0<br>
-                  >>> 1.9 - 0.4<br>
-                  1.5<br>
-                  >>> 3.4 * 2.1<br>
-                  7.14<br>
-                  >>> 3.4 / 2.1<br>
-                  1.6190476190476188<br>
-                  >>>
-                </span>
-              </p>
-
-              <p class="hint"><b>Note</b>:
-                 Any calculation involving
-                 a <b>float</b> could result in a <b>float</b>
-                 answer.<br><br>
-
-                 Therefore the <b>PYTHON
-                 Interpreter</b> delivers a <b>float</b>.
-              </p>
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Exponentiation.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-
-              <p>
-                <span class="command">
-                  >>> 3 ** 3<br>
-                  27<br>
-                  >>> 3 * 3 * 3<br>
-                  27<br>
-                  >>> 3.0 ** 3<br>
-                  27.0<br>
-                  >>> 9 ** 0.5<br>
-                  3.0<br>
-                  >>> 9 ** 0<br>
-                  1<br>
-                  >>>
-                </span>
-              </p>
-
-              <div class="hint"><b>Note</b>:<br>
-
-                <ol>
-                  <li>
-                    "<b>**</b> is used as the exponentiation
-                    operator.<br><br>
-
-                    That is, "<b>3 ** 3</b>" is "<b>3 raised
-                    to the power 3</b>"
-                    (or "<b>3 * 3 * 3</b>").<br>
-
-                    There are others ways to raise a number to a
-                    given power, as you will see.<br>
-
-                    <span class="command">
-                      >>> 3 ** 3<br>
-                      27<br>
-                      >>> 3 * 3 * 3<br>
-                      27<br>
-                      >>>
-                    </span>
-                  </li><br>
-
-                  <li>
-                    If all arguments are <b>Integer</b>,
-                    the answer is <b>Integer</b>.<br><br>
-
-                    If any argument is a <b>float</b>,
-                    the answer is a <b>float</b>.<br>
-
-                    <span class="command">
-                      >>> 3.0 ** 3<br>
-                      27.0<br>
-                      >>>
-                    </span>
-                  </li><br>
-
-                  <li>
-                    "<b> ** 0.5</b>", of course, returns the
-                    <b>square root</b>.<br><br>
-
-                    There are others ways to request the
-                    <b>square root</b> of a number,
-                    as you will see.<br>
-
-                    <span class="command">
-                      >>> 9 ** 0.5<br>
-                      3.0<br>
-                      >>>
-                    </span>
-                  </li><br>
-                </ol>
-              </div>
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Integer Division.</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect">
-              <p>
-                <span class="command">
-                  >>> 12 // 4<br>
-                  3<br>
-                  >>> 12 % 4<br>
-                  0<br>
-                  >>> 14 // 4<br>
-                  3<br>
-                  >>> 14 % 4<br>
-                  2<br>
-                  >>> 12 // 4.0<br>
-                  3.0<br>
-                  >>><br>
-                </span>
-              </p>
-
-              <div class="hint"><b>Note</b>:<br>
-
-                <ol>
-                  <li>
-                    "<b>//</b> is used to request
-                    <b>Integer Division</b>.<br><br>
-
-                   That is, "<b>12 // 3</b>" is "<b>3</b>"
-                    with a <b>Remainder</b> of <b>0</b>.<br><br>
-
-                    To display the <b>Remainder</b>, the "<b>%</b>"
-                    operator is used.<br>
-
-                    <span class="command">
-                      >>> 12 // 4<br>
-                      3<br>
-                      >>> 12 % 4<br>
-                      0<br>
-                      >>> <br>
-                    </span>
-                  </li><br>
-
-                  <li>
-                    Of course, "<b>14 // 3</b>" is also
-                    "<b>3</b>"<br><br>
-
-                    But this time the "<b>Remainder is 2</b>".<br>
-
-                    <span class="command">
-                      >>> 14 // 4<br>
-                      3<br>
-                      >>> 14 % 4<br>
-                      2<br>
-                      >>> <br>
-                    </span>
-
-                  </li><br>
-
-                  <li>
-                    Even though the request is for <b>Integer
-                    Arithmetic</b>, if any argument is a
-                    <b>float</b>,
-                    the answer is a <b>float</b>.<br>
-
-                   <span class="command">
-                     >>> 12 // 4.0<br>
-                     3.0<br>
-                     >>> 
-                   </span>
-                  </li><br>
-                </ol>
-              </div>
-            </div>
-          </details>
-        </ol>
-      </div>
-    </details><br>
-  </li>
-
-  <li>
-    <details class="msect">
-    <summary><b>Exercise - Part V:</b>
               Scalar Variables
     </summary>
 
@@ -2283,16 +1770,591 @@ Click to record your <b>Start</b> time.</button>
            can be stored.
         </p>
 
-        <p>There are different types of <b>Scalar Value</b>,
-           each with an associated range of properties.
+        <p><b>Scalar Variables</b> are typed according to
+           the <b>Scalar Value</b> they are assigned.
+           That is, a <b>Scalar Variable</b> takes on the same
+           <b>type</b> (or <b>class</b>) as the <b>Scalar Value</b>
+           it "contains".
         </p>
 
-        <p>In this section, these entities will be
+        <p>Loosely, with only <b>Scalar Values</b> we
+           could just do "<b>Arithmetic</b>", adding
+           <b>Scalar Variables</b> enables "<b>Algebra</b>".
+
+        <p>Again, these entities will be
            investigated using the <b>PYTHON
            Interpreter</b> interactively.
       </div><br>
 
       <ol>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Declaration and Typing.</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+
+              <p>There is no requirement to explicitly
+                 <b>declare</b> (<b>create</b>)
+                 <b>Variables</b> in <b>Python</b>.
+                 A <b>Variable</b> is created the moment
+                 it is first assigned a <b>Value</b>. Until it
+                 is <b>assigned</b> a <b>Value</b>,
+                 a <b>Variable</b> does not exist.<br>
+              </p>
+
+              <span class="command">
+                >>> a<br>
+                Traceback (most recent call last):<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;",
+                line 1, in &ltmodule&gt<br>
+                NameError: name 'a' is not defined<br>
+                >>> a = 5<br>
+                >>> a<br>
+                5<br>
+                >>> 
+              </span>
+
+              <p>There is no requirement to explicitly assign a
+                 <b>type</b> to a <b>Variable</b>. It will assume
+                 the <b>type</b> of the <b>Value</b> it is
+                 assigned.<br>
+              </p>
+
+              <p>The <b>type</b> of a <b>Variable</b> is not fixed.
+                 It will change to match the <b>type</b> of each
+                 <b>Value</b> it is assigned<br>
+              </p>
+
+              <span class="command">
+                >>> b = 2<br>
+                >>> b<br>
+                2<br>
+                >>> type(b)<br>
+                &lt;class 'int'&gt;<br>
+                >>> b = 2.7<br>
+                >>> b<br>
+                2.7<br>
+                >>> type(b)<br>
+                &lt;class 'float'&gt;<br>
+                >>> b = True<br>
+                >>> b<br>
+                True<br>
+                >>> type(b)<br>
+                &lt;class 'bool'&gt;<br>
+                >>> b = "I am a very nice string"<br>
+                >>> b<br>
+                'I am a very nice string'<br>
+                >>> type(b)<br>
+                &lt;class 'str'&gt;<br>
+                >>> 
+              </span><br>
+
+              <p class="hint"><b>Note</b>: <b>type()</b> is
+                 a <b>Python Builtin Function</b>. That is,
+                 a facility that <b>Python</b> considers to be
+                 of great sufficient "importance" to be offered,
+                 "ready coded", as part of the language.<br><br>
+
+                We will discuss <b>Builtin Functions</b>, and
+                <b>User Defined Functions</b>, later and in
+                some depth.<br><br>
+
+                I introduce <b>type()</b>, ahead of time as it
+                serves a purpose useful here and now.<br><br>
+
+                <b>type()</b> takes a <b>Variable</b> as an
+                <b>Argument</b>, which is placed between the
+                <b>brackets ()</b>, and it returns the <b>type</b>
+                (or <b>class</b>) of that <b>Variable</b>.
+              </p>
+
+              <div class="question">
+
+                <h2><i><u>Questions</u></i></h2>
+
+                <ol type="1">
+
+                  <li>
+                    <p>
+                      What is the difference between:<br>
+                        <span class="command">
+                          a=6
+                        </span><br>
+                        and<br>
+                        <span class="command">
+                          a==6
+                        </span><br>
+                      ?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+                        <p>A trivial question to start?
+                        </p>
+
+                        <p>A single '<b>=</b>', in <b>Python</b>,
+                           is used for <b>Assignment
+                           Statements</b>. So:<br><br>
+
+                          <span class="command">
+                            a=6
+                          </span><br><br>
+
+                           reads as "<i><b>Assign</b> the
+                           <b>Integer Value</b> '<b>6</b>'
+                           to the <b>Variable</b> called
+                           '<b>a</b>'</i>".
+                        </p>
+
+                        <p>But <b>Python</b> also needs to be
+                           able to say "<i>is equal to</i>"
+                           when constructing <b>Conditional
+                           Expessions</b>.
+                        </p>
+
+                        <p>Trying to use a
+                           single '<b>=</b>' again would be
+                           ambiguous and so unacceptanble.
+                        </p>
+
+                        <p>The <b>Python</b> solution is to use
+                           a double '<b>=</b>' ('<b>==</b>', as
+                           you have already seen when looking
+                           at <b>bool type Scalar Values</b>).
+                        </p>
+
+                        <p>So:<br><br>
+                          <span class="command">
+                            a==6
+                          </span><br><br>
+
+                           reads "<i>'<b>a</b>'
+                           is equal to '<b>6</b>'</i>", which is
+                           either <b>True</b> or <b>False</b>,
+                           that is, a <b>bool Data type</b>.
+                        </p>
+
+                        <span class="command">
+                          >>> a = 6<br>
+                          >>> a<br>
+                          6<br>
+                          >>> type(a)<br>
+                          &lt;class 'int'&gt;<br>
+                          >>> a == 6<br>
+                          True<br>
+                          >>> type (a == 6)<br>
+                          &lt;class 'bool'&gt;<br>
+                          >>> aval = a == 6<br>
+                          >>> aval<br>
+                          True<br>
+                          >>> type(aval)<br>
+                          &lt;class 'bool'&gt;<br>
+                          >>> 
+                        </span><br>
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    <p>Try setting <b>Three Variables</b>
+                       (<b>d</b>, <b>e</b> and <b>f</b>, say)
+                       to the same <b>Value</b> (<b>47.6</b>, say)
+                       all in one line of code.
+                    </p>
+
+                    </p>Always assuming your complete success,
+                        what is the <b>type</b> of <b>e</b>?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                        <span class="command">
+                          >>> d = e = f = 47.6<br>
+                          >>> d, e, f<br>
+                          (47.6, 47.6, 47.6)<br>
+                          >>> type(e)<br>
+                          <class 'float'><br>
+                          >>>  
+                        </span><br>
+
+                        <p>The simple messages of this
+                           question are:
+                        </p>
+
+                        <ul>
+                          <li>
+                            You can assign a single
+                            <b>Value</b> to <b>Multiple
+                            Variables</b> on one line.<br><br>
+
+                            This can occassionally be neater
+                            than the multi-line alternative.
+                          </li><br>
+
+                          <li>
+                            You can diplay the value of more
+                            than one <b>Variable</b> with just one
+                            command on just one line.
+                          </li><br>
+
+                          <li>Hopefully redundant reinforcemment
+                              of the relevation that assigning
+                              a <b>float Value</b> to a
+                              <b>Variable</b> (<b>e</b>, say)
+                              types <b>e</b> as a
+                              <b>float Variable</b>.
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>Now set the same <b>Three Variables</b>
+                       (<b>d</b>, <b>e</b> and <b>f</b>)
+                       to the <b>Value None</b>,
+                       all in one line of code.
+                    </p>
+
+                    </p>Now what is the <b>type</b> of <b>e</b>?
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                        <span class="command">
+                          >>> d = e = f = None<br>
+                          >>> d, e, f<br>
+                          (None, None, None)<br>
+                          >>> type(e)<br>
+                          <class 'NoneType'><br>
+                          >>> 
+                        </span><br>
+
+                        <p>The messages of this
+                           question are:
+                        </p>
+
+                        <ul>
+                          <li>
+                            There is a <b>type</b> of
+                            <b>Scalar Value</b> called
+                            <b>NoneType</b>.
+                          </li><br>
+
+                          <li>
+                            There is only one <b>Value</b>
+                            a <b>Data Item</b> of <b>class
+                            NoneType</b> can be assigned.
+                            That <b>Value</b> is <b>None</b>.
+                          </li><br>
+
+                          <li>
+                            Does it all sound a bit less
+                            than useful so far?<br><br>
+
+                            Well, one use of <b>None</b>,
+                            that will be visited later, is to
+                            represent members of <b>Data
+                            sets</b> that are not
+                            present.<br><br>
+
+                            For example, a Club Membership
+                            Record might include the following
+                            vital statistics:<br><br>
+
+                            <ul>
+                              <li>
+                                <b>Name</b> - Mandatory
+                              </li>
+                              <li>
+                                <b>Age</b> - Mandatory
+                              </li>
+                              <li>
+                                <b>Gender</b> - Mandatory
+                              </li>
+                              <li>
+                                <b>Height</b> - Optional
+                              </li>
+                              <li>
+                                <b>Inside Leg Measurement</b>
+                                - Optional
+                              </li>
+                            </ul><br>
+
+                            Some records might not have one or
+                            both of the
+                            <b>Optional Fields</b>.<br><br>
+
+                            If so, they cannot just be left
+                            blank!<br><br>
+
+                            If there is only one field omitted,
+                            how would you know if the missing
+                            number was a <b>Height</b> or
+                            an <b>Inside Leg Measuremnt</b>?
+                            <br><br>
+
+                            You cannot guess!<br><br>
+
+                            A bigger single value
+                            <b><i>might</b></i> indicate an
+                            exceedingly tall person, happy to
+                            reveal their
+                            <b>Inside Leg Masurement</b> but shy
+                            concerning their overall
+                            Height.<br><br>
+
+                            A smaller number might indicate a
+                            very short person who, whilst proud
+                            to be of restricted overall stature,
+                            refuses to share his/her leg
+                            measurements with the world at
+                            large.<br><br>
+
+                            <b>Solution</b> (one of several)? Fill
+                            the missing fields
+                            with <b>None Values</b>:<br><br>
+
+                            <span style="background:White;
+                                         color:Blue;
+                                         font-family: monospace;">
+                              Jim&nbsp;&nbsp;&nbsp;, 54,
+                              Male&nbsp;&nbsp;,
+                              None&nbsp;, None<br>
+                              Mary&nbsp;&nbsp;, 23, Female,
+                              5' 3", 26"&nbsp;<br>
+                              Jane&nbsp;&nbsp;, 68, Female,
+                              5' 7", None<br>
+                              Percy&nbsp;, 67, Male&nbsp;&nbsp;,
+                              6' 0", None<br>
+                              Steven, 37, Male&nbsp;&nbsp;,
+                              None&nbsp;, 35"
+                            </span><br><br>
+
+                            And all ambiguity is removed.
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Naming Variables: Rules</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+
+
+
+a = 1 ..... note = not == and why<br>
+a = b = 1<br>
+a = b = c<br>
+<br>
+a = 1 = 2<br>
+3 = 4<br>
+<br>
+3.5 = 4<br>
+<br>
+"a" = 6<br>
+Variables in Python follow the standard nomenclature of an alphanumeric name beginning in a letter or underscore. Variable names are case sensitive. <br>
+
+A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:<br>
+A variable name must start with a letter or the underscore character<br>
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )<br>
+Variable names are case-sensitive (age, Age and AGE are three different variables)<br>
+Remember that variables are case-sensitive<br>
+
+
+              <p>
+              </p>
+
+              <ul>
+                <li>
+                </li><br>
+
+                <li>
+                </li><br>
+
+                <li>
+                  <span class="command">
+
+                  </span><br><br>
+
+
+
+                  <p class="hint"><b>Note</b>:
+
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Naming Variables: Reserved Words</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+
+
+
+a = 1 ..... note = not == and why<br>
+a = b = 1<br>
+a = b = c<br>
+<br>
+a = 1 = 2<br>
+3 = 4<br>
+<br>
+3.5 = 4<br>
+<br>
+"a" = 6<br>
+Variables in Python follow the standard nomenclature of an alphanumeric name beginning in a letter or underscore. Variable names are case sensitive. <br>
+
+A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:<br>
+A variable name must start with a letter or the underscore character<br>
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )<br>
+Variable names are case-sensitive (age, Age and AGE are three different variables)<br>
+Remember that variables are case-sensitive<br>
+
+
+              <p>
+              </p>
+
+              <ul>
+                <li>
+                </li><br>
+
+                <li>
+                </li><br>
+
+                <li>
+                  <span class="command">
+
+                  </span><br><br>
+
+
+
+                  <p class="hint"><b>Note</b>:
+
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </li><br>
+
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>Naming Variables: Style</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect">
+
+
+
+a = 1 ..... note = not == and why<br>
+a = b = 1<br>
+a = b = c<br>
+<br>
+a = 1 = 2<br>
+3 = 4<br>
+<br>
+3.5 = 4<br>
+<br>
+"a" = 6<br>
+Variables in Python follow the standard nomenclature of an alphanumeric name beginning in a letter or underscore. Variable names are case sensitive. <br>
+
+A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:<br>
+A variable name must start with a letter or the underscore character<br>
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )<br>
+Variable names are case-sensitive (age, Age and AGE are three different variables)<br>
+Remember that variables are case-sensitive<br>
+
+
+              <p>
+              </p>
+
+              <ul>
+                <li>
+                </li><br>
+
+                <li>
+                </li><br>
+
+                <li>
+                  <span class="command">
+
+                  </span><br><br>
+
+
+
+                  <p class="hint"><b>Note</b>:
+
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </li><br>
+
+      </ol>
+    </details>
+  </li><br>
+
+  <li>
+    <details class="msect">
+    <summary><b>Exercise - Part V:</b>
+              Conditional Statements - if, else, elif
+    </summary>
+
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+      <div class="ramble">
+
+        <h2>Conditional Statements - if, else, elif</h2>
+
+      </div><br>
+
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+        <ol>
         <li>
           <details>
           <summary>
@@ -2401,8 +2463,7 @@ Click to record your <b>Start</b> time.</button>
             </p>
           </details>
         </li><br>
-
-        <li>
+      <li>
           <details>
           <summary>
             <span class="minsectsum">
