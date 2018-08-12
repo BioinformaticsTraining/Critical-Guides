@@ -115,7 +115,7 @@ div.answer {
 div.exercise {
     background-color: MistyRose;
     border-style: solid;
-    width: 750px
+    width: 800px
 }
 
 /* div for Questions */
@@ -154,7 +154,7 @@ span.exeblocksum {
 
 span.exesum {
     display: inline-block;
-    width: 450px;
+    width: 550px;
     background-color: Pink; 
 }
 
@@ -180,7 +180,7 @@ span.comsum {
     display:inline-block;
     background-color: White; color: Black;
     font-family: courier; font-size: 18px; font-weight: bold;
-    width: 800;
+    width: 775px;
 }
 
 /* Class for Code Blocks 18px (Default) */
@@ -189,7 +189,7 @@ span.comsum {
     display:inline-block;
     background-color: White; color: Black;
     font-family: courier; font-size: 18px; font-weight: bold;
-    width: 800;
+    width: 775px;
 }
 
 /* Class for Code Blocks 16px */
@@ -198,7 +198,7 @@ span.comsum {
     display:inline-block;
     background-color: White;
     font-family: courier; font-size: 16px; font-weight: bold;
-    width: 800px;
+    width: 775px;
 }
 
 /* Class for Code Comment Blocks 16px */
@@ -207,7 +207,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: courier; font-size: 16px; font-weight: bold;
-    width: 800px;
+    width: 775px;
 }
 
 /* span for Exercise Commands 22px */
@@ -340,7 +340,7 @@ span.quote {
 
 .example {
     background-color: MistyRose;
-    width: 906px;
+    width: 850px;
 }
 
 /* details for Answers */
@@ -403,7 +403,7 @@ img.sup {
 
 .minsect {
     background: PapayaWhip  ; border-right: 106px;
-    width: 750px;
+    width: 906px;
     margin-left: 0px; margin-right: 15px;
 }
 
@@ -447,6 +447,7 @@ span.minsectsum {
 .experiment {
     background-color: Linen; color: auto;
     margin-right: auto;
+    width: 775px;
 }
 
 /* class for Problem Definitions */
@@ -454,6 +455,7 @@ span.minsectsum {
 .problem {
     background-color: Gainsboro; color: auto;
     margin-right: auto;
+    width: 775px;
 }
 
 /* class for Pseudo Code */
@@ -461,6 +463,7 @@ span.minsectsum {
 .pseudo {
     background-color: Cornsilk; color: auto;
     margin-right: auto;
+    width: 775px;
 }
 
 /* class for Hints  */
