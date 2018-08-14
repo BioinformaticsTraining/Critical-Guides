@@ -226,7 +226,7 @@ Click to record your <b>Start</b> time.</button>
         <p>This short section is comprised of a short
            description of the relevant software plus
            instruction on how to set it going in the
-           fashion appropiate for the initial stages of
+           fashion appropriate for the initial stages of
            the tutorial.
         </p>
       </div><br>
@@ -1490,7 +1490,7 @@ Click to record your <b>Start</b> time.</button>
                            any gaps.
                         </p>
 
-                        <p>Generally a defendable policy, but just
+                        <p>Generally a defensible policy, but just
                            occasionally one does wonder if
                            <b>Python</b>'s designers might not have
                            taken a tiny step to far?
@@ -1615,7 +1615,7 @@ Click to record your <b>Start</b> time.</button>
           </li><br>
 
           <li>
-            <b>Concatinating Strings</b> with the '<b>+</b>'
+            <b>Concatenating Strings</b> with the '<b>+</b>'
             and '<b>*</b>' <b>Operators</b>.
           </li><br>
 
@@ -1633,7 +1633,7 @@ Click to record your <b>Start</b> time.</button>
             a computer can only represent things
             as numbers.<br><br>
 
-            Noting that <b>bool</b> is a <b>subclasss</b>
+            Noting that <b>bool</b> is a <b>subclass</b>
             of <b>int</b>.<br><br>
 
             In <b>Python</b>, <b>0</b> could be used everywhere
@@ -1657,7 +1657,7 @@ Click to record your <b>Start</b> time.</button>
 
           <li>
             <b>Controversially</b>, there is no explicit
-            <b>Excusive OR</b> (usually <b>xor</b>, where
+            <b>Exclusive OR</b> (usually <b>xor</b>, where
             implemented) <b>Operator</b> in <b>Python</b>?
 
             This can be compensated in a number of ways,
@@ -1720,6 +1720,11 @@ Click to record your <b>Start</b> time.</button>
         <p>Loosely, with only <b>Scalar Values</b> we
            could just do "<b>Arithmetic</b>", adding
            <b>Scalar Variables</b> enables "<b>Algebra</b>".
+
+        <p>The discussion that follows applies (unless explicitly stated
+           otherwise) not just to <b>Scalar Variables</b>, but to
+           <b>Variables</b> that "contain" the more complex entities that will
+           be covered later in this tutorial.
 
         <p>Again, these entities will be
            investigated using the <b>PYTHON
@@ -1857,12 +1862,12 @@ Click to record your <b>Start</b> time.</button>
                         <p>But <b>Python</b> also needs to be
                            able to say "<i>is equal to</i>"
                            when constructing <b>Conditional
-                           Expessions</b>.
+                           Expressions</b>.
                         </p>
 
                         <p>Trying to use a
                            single '<b>=</b>' again would be
-                           ambiguous and so unacceptanble.
+                           ambiguous and so unacceptable.
                         </p>
 
                         <p>The <b>Python</b> solution is to use
@@ -1937,7 +1942,7 @@ Click to record your <b>Start</b> time.</button>
                             <b>Value</b> to <b>Multiple
                             Variables</b> on one line.<br><br>
 
-                            This can occassionally be neater
+                            This can occasionally be neater
                             than the multi-line alternative.
                           </li><br>
 
@@ -1947,8 +1952,8 @@ Click to record your <b>Start</b> time.</button>
                             command on just one line.
                           </li><br>
 
-                          <li>Hopefully redundant reinforcemment
-                              of the relevation that assigning
+                          <li>Hopefully redundant reinforcement
+                              of the revelation that assigning
                               a <b>float Value</b> to a
                               <b>Variable</b> (<b>e</b>, say)
                               types <b>e</b> as a
@@ -2052,7 +2057,7 @@ Click to record your <b>Start</b> time.</button>
                             <b><i>might</b></i> indicate an
                             exceedingly tall person, happy to
                             reveal their
-                            <b>Inside Leg Masurement</b> but shy
+                            <b>Inside Leg Measurement</b> but shy
                             concerning their overall
                             Height.<br><br>
 
@@ -2216,27 +2221,223 @@ Click to record your <b>Start</b> time.</button>
 
             <div class="minsect">
 
-              <p>
-              </p>
+              Some words are <b>Reserved</b> by <b>Python</b>
+              to have a particular meaning. Such words are,
+              with breath draining originality, called
+              <b>Reserved Words</b>.<br><br>
 
-              <ul>
-                <li>
-                </li><br>
+              Clearly, <b>Reserved Words</b> can only serve
+              their one anointed purpose and so are not
+              available for use as <b>Variable Names</b>.<br><br>
 
-                <li>
-                </li><br>
+              There are lots of <b>Python Reserved Words</b>.
+              However, thus far, we have only met <b>three</b>.
+              They are the <b>Boolean Operators</b>
+              '<b>and</b>' '<b>or</b>' '<b>not</b>'.<br><br>
 
-                <li>
-                  <span class="command">
+              Any attempt to use these (or any other
+              <b>Reserved Word</b>) as a <b>Variable
+              Name</b> would result in stern rebuke from
+              the <b>Python Interpreter</b>.<br><br>
 
-                  </span><br><br>
+              <span class="command">
+                >>> and = 1<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;and = 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                SyntaxError: invalid syntax<br>
+                >>> or = 2<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;or = 2<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                SyntaxError: invalid syntax<br>
+                >>> not = 3<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;not = 3<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                SyntaxError: invalid syntax<br>
+                >>> xor = 4<br>
+                >>> xor<br>
+                4<br>
+                >>>
+              </span><br><br>
 
-                  <p class="hint"><b>Note</b>:
+              Note that, <b>xor</b> is not a <b>Reserved Word</b>,
+              though some might wonder why not? So, <b>xor</b>
+              works as a <b>Variable Name</b> just fine.<br><br>
 
-                  </p>
-                </li>
-              </ul>
-            </p>
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol type="1">
+
+                  <li>
+                    Look again closely at the three <b>Syntax Errors</b>
+                    reported above.<br><br>
+
+                    <span class="command">
+                      >>> and = 1<br>
+                      &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;and = 1<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                      SyntaxError: invalid syntax<br>
+                      >>> or = 2<br>
+                      &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;or = 2<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                      SyntaxError: invalid syntax<br>
+                      >>> not = 3<br>
+                      &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;not = 3<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                      SyntaxError: invalid syntax<br>
+                      >>>
+                    </span><br><br>
+
+                    The "Eagle Eyed" amongst you might have noticed that the
+                    '<b>^</b>' attempting to pinpont the position of the
+                    <b>Error</b> points to the <b>Boolean Operator</b> in the
+                    case of '<b>and</b>' & '<b>or</b>', but it points at the
+                    '<b>=</b>' sign for the <b>Error</b> associated with
+                    '<b>not</b>'? Can you explain why?<br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+                        The reason for the difference is that '<b>not</b>'
+                        can be a <b>Unary Operator</b>. This is not so
+                        for either '<b>and</b>' or '<b>or</b>'.<br><br>
+
+                        That is to say, "<b>not True</b>" is semantically
+                        meaningful. It means "<b>False</b>".<br><br>
+
+                        <span class="command">
+                          >>> not True<br>
+                          False<br>
+                          >>> 
+                        </span><br><br>
+
+                        Similarly, "<b>not False</b>" is semantically
+                        meaningful. It means "<b>True</b>".<br><br>
+
+                        <span class="command">
+                          >>> not False<br>
+                          True<br>
+                          >>> 
+                        </span><br><br>
+
+                        But "<b>or True</b>", "<b>and True</b>"?
+                        These are both nonsense.<br><br>
+
+                        <span class="command">                              
+                          >>> or True<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;or True<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> and True<br>
+                          &nbsp;&nbsp;File "&lt;tdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;and True<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> 
+                        </span><br><br>
+
+                        So, by the time the <b>Interpreter</b> gets to the end
+                        of the <b>Boolean</b> '<b>and</b>' or '<b>or</b>',
+                        it knows there is an error ... no need to read further
+                        ... either this is an attempt to display the
+                        undefined <b>Value</b>
+                        of '<b>and</b>' or '<b>or</b>'? or an attempt to
+                        assign a <b>Value</b>
+                        to a <b>Reserved Word</b>!<br><br>
+
+                        <span class="command">
+                          >>> and<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;and<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> and = "Naughty Assignment!"<br>
+                          &nbsp;&nbsp;File "&lt;tdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;and = "Naughty Assignment!"<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> or<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;or<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>> or = 99.99<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;or = 99.99<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                          SyntaxError: invalid syntax<br>
+                          >>>
+                        </span><br><br>
+
+                        However, if the first word is '<b>not</b>', it just
+                        could be a legal use of a <b>Reserved Word</b>! Maybe
+                        an attempt to display "<b>not True</b>",
+                        "<b>not False</b>", or
+                        "<b>not x</b>", where '<b>x</b>'
+                        is any numeric value (or even a string!?).<br><br>
+
+                        Remember, as far as the computer is concerned,
+                        <b>False</b> is the same as <b>0</b> and any other
+                        numeric value is seen as <b>True</b>.<br><br>
+
+                        <span class="command">
+                          >>> not 0<br>
+                          True<br>
+                          >>> not 99<br>
+                          False<br>
+                          >>> 
+                        </span><br><br>
+
+                        A <b>String Value</b> fo '<b>x</b>' works because
+                        <b>Python</b> arbitrarily dictates that <b>ANY</b> string
+                        will be interpretted as <b>True</b>, except the empty
+                        string (<b>""</b>) which will be considered
+                        <b>False</b>.<br><br>
+
+                         <span class="command">
+                          >>> not "The Weather is fine in UK"<br>
+                          False<br>
+                          >>> not ""<br>
+                          True<br>
+                          >>> 
+                        </span><br><br>
+
+                        Confused? Me too! Treat this as entertaining, in a sick
+                        sort of way, rather than vital.<br><br>
+
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    It has can be established that type() is a Builtin Function.<br><br>
+
+                    Is type therefore a Reserved Word that cannot be used as a Variable Name?
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+
+
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div>
+            </div>
           </details>
         </li><br>
 
@@ -2280,56 +2481,66 @@ Click to record your <b>Start</b> time.</button>
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-              this section are:</b>
+        <b>Python elements introduced/reinforced in
+              this section are:</b><br><br>
+
         <ol type="1">
           <li>
-            <b><u>Looping Code Constructs:</u></b>
+            <b>Scalar Variables</b> can be thought of
+            as "containers" for <b>Scalar Values</b>.
+          </li><br>
+
+          <li>
+            <b>Scalar Variables</b> are implicitly
+            <b>declared</b> and <b>typed</b> according to
+            their "contents".
+          </li><br>
+
+          <li>
+            The introduction of <b>Scalar Variables</b>
+            allows the <b>Interpreter</b> to be used to
+            consider <b>Algebraic</b> as well as
+            <b>Arithmetic Calculations</b>.
+          </li><br>
+
+          <li>
+            <b>Variable Names</b>:<br>
+
             <ul>
               <li>
+                May be of any length
               </li>
               <li>
+                May only be composed of
+                <b>Alphanumeric Characters</b>
+                or <b>underscore</b>
               </li>
-              </li>
-              </li>
-            </ul>
-          </li>
-          <li>
-          </li>
-          <li>
-            <b><u>Modules:</u></b><br>
-            <ul>
               <li>
-                <ul>
-                  <li>
-                  </li>
-                </ul>
+                May not begin with a <b>Numeric Characters</b>
               </li>
-            </ul>
-          </li>
-        </ol>
-
-        <p><b>Concepts/tricks introduced thus far are:</b>
-        </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-        </ol>
-
-        <p><b>Reflections:</b>
-        </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-          <li>
+              <li>
+                are <b>Case Sensitive</b>.
+              </li>
+               <li>
+                May not be <b>Reserved Words</b>.
+              </li>
+           </ul>
           </li>
         </ol><br>
+
+        <b>Builtin Functions:</b><br><br>
+
+        <ol type="1">
+          <li>
+            The <b>Builtin Function
+            <a href="https://docs.python.org/3.3/library/functions.html#type" target="_blank"> type()</b></a>
+            was introduced (a little ahead of time).<br><br>
+
+            The way <b>type()</b> was used here was simply to
+            reveal the type (or <b>class</b>) of a <b>Scalar
+            Variable</b> (or <b>Value</b>).
+          </li><br>
+        </ol>
       </div>
     </details>
   </li><br>
@@ -2374,7 +2585,7 @@ Click to record your <b>Start</b> time.</button>
         <p><b>type()</b>, which you have already used,
            is an example of a <b>Builtin Functions</b>.
            The way we used it, <b>type()</b> accepts
-           a single <b>Arguement</b> (a <b>Scalar Value</b>
+           a single <b>Argument</b> (a <b>Scalar Value</b>
            or <b>Variable</b>) and returns information
            revealing the <b>Class</b> of that <b>Scalar</b>.
         </p>
@@ -3292,7 +3503,7 @@ Click to record your <b>Start</b> time.</button>
                     <span Class="codecomm16">
                       # Import the random integer generator<br>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;;&nbsp;&nbsp;# from the
                       module random.
@@ -4882,7 +5093,7 @@ Click to record your <b>Start</b> time.</button>
                   <details>
                   <summary><span class="exesum">
                     <b><u>Example 2</u></b>
-                    (Tweakof Example 1)<b>:</b>
+                    (Tweak of Example 1)<b>:</b>
                   </span></summary><br>
 
                     Look carefully at my solution.<br><br>
@@ -5920,7 +6131,7 @@ Major Sections (some huge some small?)
   Overview
   Minor Sections
     Structure (example or text)
-    Note (Hint) - exppansion
+    Note (Hint) - expansion
     Trivial Examples (wrapped)
     Examples (wrapped)
     Questions & Simple Exercises (NOT wrapped)
@@ -5942,18 +6153,18 @@ Beginning
  ... Set up Interactive for firsts sections
 
 Scalar Variables ... major types in Overview
- ... Arithmetics with Integers
- ... Arithmetics with floats
+ ... Arithmetic with Integers
+ ... Arithmetic with floats
  ... Exponentiation
  ... Integer Division
  ... Strings
- ... Boooleans & Conditional Expressions
+ ... Booleans & Conditional Expressions
  ... Booleans Operators
  CHECKPOINT
 
 Scalar Variables ... Arithmetic to Algebra in Overview
  ... Declaration & Typing (implicit)
- ... Naming restrictions (attepmt to justify some)
+ ... Naming restrictions (attempt to justify some)
  ... Naming restrictions - Reserved Words (and, or, not so far?)
  ... Naming Variable - Style
  CHECKPOINT
