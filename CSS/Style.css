@@ -42,6 +42,15 @@ hh4 {
     margin-left: 0px; margin-right: 0px;
 }
 
+hh5m {
+    display : inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px; font-weight: bold;
+    color: blue;
+    margin-top: 0px; margin-bottom: 0px;
+    margin-left: 15px; margin-right: 0px;
+}
 /* p with no left margin (for lists?) */
 
 p.smarg {
@@ -422,6 +431,54 @@ span.minsectsum {
     width: 800px;
     margin-left: 0px;
     margin-right: 15px;
+}
+
+/* class for Major Sections Summary - Admin */
+
+.msectsumadm {
+    display: inline-block;
+    background: Silver;
+    width: 500px;
+}
+
+/* class for Major Sections Summary - Prerequisites */
+
+.msectsumpre {
+    display: inline-block;
+    background: SpringGreen;
+    width: 500px;
+}
+
+/* class for Major Sections Summary - Language Implementation */
+
+.msectsumlan {
+    display: inline-block;
+    background: LightCoral;
+    width: 500px;
+}
+
+/* class for Major Sections Summary - Data Elements & Basic Language Features */
+
+.msectsumdat {
+    display: inline-block;
+    background: Turquoise;
+    width: 500px;
+}
+
+/* class for Major Sections Summary - Language Extension */
+
+.msectsumext {
+    display: inline-block;
+    background: BurlyWood;
+    width: 500px;
+}
+
+/* class for Major Sections Summary - Control & Structure */
+
+.msectsumcon {
+    display: inline-block;
+    background: Yellow;
+    width: 500px;
 }
 
 /* class for Sections List*/
