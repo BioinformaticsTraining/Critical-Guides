@@ -186,7 +186,7 @@ Click to record your <b>Start</b> time.</button>
         <p>I have attempted a series of topics, offering
            <b>Explanation</b> (<b>Text</b> and <b>Video</b>),
            <b>Examples</b> and <b>Exercises</b>, to lead the
-           user to a level of copetance that should enable
+           user to a level of competence that should enable
            the design and implementation using <b>Python</b>
            of solutions to simple problems.
         </p>
@@ -204,14 +204,14 @@ Click to record your <b>Start</b> time.</button>
 
           <li>
             Course Prerequisites - Not that there are many
-            beyond a passing acquaintence with the basics
+            beyond a passing acquaintance with the basics
             of Command Line Unix.
           </li>
           <li>
         </ol><br>
 
 ##Enough!! this is just tooooo dull!
-Must mention platform independance but I am using ubuntu and am not going t o even think about the problems of anyone usinf anything else, especially Windows or a Macintosh!<br><br>
+Must mention platform independence but I am using Ubuntu and am not going to even think about the problems of anyone using anything else, especially Windows or a Macintosh!<br><br>
       </div>
 
     </details><br>
@@ -957,9 +957,8 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
                   An <b>Escape Sequence</b> always starts with a
                   <b>backslash</b> ('<b>\</b>'), which
-                  indicates that the
-                  following <b>Characters(s)</b> are to be
-                  assigned a
+                  indicates that the following
+                  <b>Characters(s)</b> are to be assigned a
                   special meaning within the <b>String</b>.
                   For example,
                   the <b>Character</b> needed to insert a
@@ -994,7 +993,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
                   <p class="hint">
                     <b>Note:</b> Unfortunately the <b>Interactive
-                    Interpeter</b> does not deal properly with
+                    Interpreter</b> does not deal properly with
                     <b>Escape Codes</b> directly.<br><br>
 
                     The easiest way to deal with this problem is to
@@ -1004,6 +1003,137 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                     of schedule.
                     <b>print()</b> is more powerful than is
                     implied here, as you will see soon.
+                  </p>
+                </li>
+
+                <li>
+                  <hh5m>
+                  <a href="https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3"
+                    target="_blank">Slicing Strings</a>
+                  </hh5m><br><br>
+
+                  A rather energetic way to announce methods
+                  to isolate <b>Subsets</b> of
+                  <b>Strings</b> (<b>substrings</b>
+                  if you wish).<br><br>
+
+                  To isolate a single <b>Character</b> of a
+                  <b>String</b>, use square brackets enclosing
+                  the position of the character required.<br><br>
+
+                  <span class="command">
+                    >>> A_Long_String = "The basis of optimism
+                    is sheer terror"<br>
+                    >>> A_Long_String[1]<br>
+                    'h'<br>
+                    >>> A_Long_String[0]<br>
+                    'T'<br>
+                    >>> 
+                  </span><br><br>
+
+                  Good plan, but should not
+                  <b>A_Long_String[1]</b>
+                  have returned the first letter of this gloomy
+                  reflection of 
+                  <a href="https://en.wikipedia.org/wiki/Oscar_Wilde"
+                   target="_blank">Oscar Wilde</a>?<br><br>
+
+                  In fact, the second letter has been returned
+                  due to the tendency for counting to begin
+                  at <b>0</b> in computing.<br><br>
+
+                  Indeed! <b>A_Long_String[0]</b> does the
+                  trick.<br><br>
+
+                  To "<b>Slice</b>" out a section from a
+                  <b>String</b>, you need to use <b>2</b>
+                  numbers separated by a <b>colon</b>
+                  ('<b>:</b>') in the square brackets.<br><br>
+
+                  <span class="command">
+                    >>> Another_one_from_Oscar = "Be yourself;
+                    everyone else is already taken"<br>
+                    >>> Another_one_from_Oscar[0:0]<br>
+                    ''<br>
+                    >>> Another_one_from_Oscar[0:1]<br>
+                    'B'<br>
+                    >>> Another_one_from_Oscar[0:2]<br>
+                    'Be'<br>
+                    >>>
+                  </span><br><br>
+
+                  Notice that the <b>Slice</b> is defined from
+                  the first position to be included in the
+                  <b>Slice</b> to the position following the
+                  last to be included.<br><br>
+
+                  <span class="command">
+                    >>> Another_one_from_Oscar = "Be yourself;
+                    everyone else is already taken"<br>
+                    >>> Another_one_from_Oscar[0:11]<br>
+                    'Be yourself'<br>
+                    >>> Another_one_from_Oscar[:11]<br>
+                    'Be yourself'<br>
+                    >>> 
+                  </span><br><br>
+
+                  Notice that if the first number is omitted,
+                  <b>0</b> is assumed.<br><br>
+
+                  <span class="command">
+                    >>> Another_one_from_Oscar = "Be yourself;
+                    everyone else is already taken"<br>
+                    >>> Another_one_from_Oscar[13:44]<br>
+                    'everyone else is already taken'<br>
+                    >>> Another_one_from_Oscar[13:]<br>
+                    'everyone else is already taken'<br>
+                    >>> 
+                  </span><br><br>
+
+                  If the second number is omitted, the last
+                  position of the <b>String</b> is assumed.<br><br>
+
+                  <span class="command">
+                    >>> Another_one_from_Oscar = "Be yourself;
+                    everyone else is already taken"<br>
+                    >>> Another_one_from_Oscar[27:10]<br>
+                    ''<br>
+                    >>> 
+                  </span><br><br>
+
+                  Asking for the impossible results in a
+                  weary sigh and the empty <b>String</b>.
+
+                </li><br>
+
+                <li>
+                  <hh5m>
+                  <a href="https://docs.python.org/3/reference/expressions.html#membership-test-details"
+                    target="_blank">
+                          Substring Membership Testing</a>
+                  </hh5m><br><br>
+
+                    Using the Python feature '<b>in</b>',
+                    it is possible to test for the presence
+                    of one <b>String</b> within another.
+                    For example, examining the inspirational
+                    boast of the White Queen to a
+                    doubting Alice:<br><br>
+
+                  <span class="command15">
+                    >>> Alice = "Why, sometimes I've believed
+                    as many as six impossible things before
+                    breakfast"<br>
+                    >>> "impossible" in Alice<br>
+                    True<br>
+                    >>> "impossible" not in Alice<br>
+                    False<br>
+                    >>> 
+                  </span><br><br>
+
+                  Clearly, '<b>not in</b>' can be used to test for 
+                  the absence of a <b>substring</b>.<br><br>
+
                 </li>
               </ol>
 
@@ -1108,7 +1238,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                         </span><br>
 
                         <p>The <b>Backslash Character</b> can
-                           be used to suppress the intepretation
+                           be used to suppress the interpretation
                            of characters such as <b>Quotes</b>.
                         </p>
 
@@ -1118,10 +1248,10 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                            <b>String</b> enclosing <b>Quotes</b>,
                            it will incorrectly interpret
                            that <b>Quote</b> as ending the
-                           <b>String</b>. However, preceed the
+                           <b>String</b>. However, precede the
                            embedded <b>Quote</b> by a
                            <b>Backslash</b> and
-                           the <b>Interpreter</b> will dipose of
+                           the <b>Interpreter</b> will dispose of
                            the <b>Backslash</b> and accept
                            the <b>Quote</b> as just another
                            <b>Character</b>.<br>
@@ -1386,7 +1516,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                   <li>
                     <p>Here is a list of the
                        <b>Escape Codes</b> that enable
-                       various forms of whitespace to be
+                       various forms of white space to be
                        included in <b>Strings</b>. Not all are,
                        in my limited experience, particularly
                        vital, but all are worth a quick glance,
@@ -1472,7 +1602,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
                         <p>The first letters of the bit before
                            the <b>CR</b>
-                           are obliterted by the first letters
+                           are obliterated by the first letters
                            after the <b>CR</b>.
                         </p>
 
@@ -1486,8 +1616,8 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                            Line Feed</b>).
                         </p>
 
-                        <p>Basically, one acheived a mess
-                           of over typeing.
+                        <p>Basically, one achieved a mess
+                           of over typing.
                            Used to be regarded as a bit of a
                            disaster in the
                            days of yore. I wonder one needs
@@ -1546,6 +1676,260 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                            <b>FF</b> and <b>VT</b>? Must be
                            one surely?
                         </p>
+
+                        <p>Oh ...dearie dearie me!! I look it up.
+                           I receive enlightenment from one,
+                           <a href="https://bytes.com/topic/c/answers/695713-what-good-vertical-tab-form-feed"
+                              target="_blank">John Bode</a>
+                           who reveals the difference is vital
+                           to those using:
+                        </p>
+
+                        <p>"<b>Hardcopy Terminals</b> and
+                            <b>Line Printers</b>."
+                        </p>
+
+                        <p>John confirms the speculations of
+                           his inquirer thus:
+                        </p>
+
+                        <p><i>" ... Your interpretation of
+                           <b>Form Feed</b> is correct;
+                           it moves to the beginning of
+                           the next page.
+                           <b>Vertical Tab</b> advances the
+                           page by several lines
+                           without a <b>Carriage Return</b>."</i>
+                        </p>
+
+                        <p>Gulp! ... indeed that makes a lot
+                           of sense ... but the last
+                           "<b>Hardcopy Terminal</b>" was
+                           eaten by a <b>Spinosaurus</b>,
+                           just before the Earth cooled???
+                        </p>
+
+                        <p><b>Line printers</b>??? Golly! I used
+                           to print the Royal Navy's pay cheques
+                           out on those. I had three
+                           of them that I controlled using my
+                           <b>Hardcopy Terminal</b> (the very
+                           one that got eaten!). I was
+                           very important back then! Mess with
+                           me Boyoh! and I lose your Pay Cheque!!
+                        </p>
+
+                        <p>Remember cheques? Paper things you could
+                           exchange for beer.
+                        </p>
+
+                        <p>OK, so now we all know about
+                           <b>Form Feeds</b>
+                           and <b>Vertical Tabs</b>? Jolly good.
+                        </p>
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    <b>Oscar</b> again! He had so many good ones.
+                    including:<br><br>
+
+                    “<i>Always forgive your enemies;
+                    nothing annoys them so much</i>”<br><br>
+
+                    Set these wise words up as a
+                    <b>String</b> called <b>Oscar_Again</b>,
+                    say.<br><br>
+
+                    <hh5m>Part (i)</hh5m><br><br>
+
+                    Then try:<br>
+
+                    <ul><b>
+                      <li> Oscar_Again[4:40]</li>
+                      <li> Oscar_Again[4:40:1]</li>
+                      <li> Oscar_Again[4:40:2]</li>
+                      <li> Oscar_Again[4:40:5]</li>
+                      <li> Oscar_Again[:40:2]</li>
+                      <li> Oscar_Again[::2]</li>
+                    </ul></b><br>
+
+                    Can you explain the output you generate in
+                    each case?<br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command15">
+                         >>> Oscar_Again = "Always forgive your
+                          enemies; nothing annoys them so much"<br>
+                          >>> Oscar_Again[4:40]<br>
+                          'ys forgive your enemies;
+                          nothing ann'<br>
+                          >>> 
+                         </span><br><br>
+
+                         Easy! Splice from the 5th character to
+                         the 40th character.<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[4:40:1]<br>
+                          'ys forgive your enemies;
+                           nothing ann'<br>
+                          >>> 
+                        </span><br><br>
+
+                        Exactly the same output? This time
+                        though, the third argument asks
+                        explicitly that every character
+                        (stepping along the string <b>1</b>
+                        character at a time) be selected for
+                        inclusion in the <b>Splice</b>.<br><br>
+
+                        As no explicit "step" argument was
+                        offered in the previous example,
+                        <b>1</b> was assumed and so the result
+                        was identical.<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[4:40:2]<br>
+                          'y ogv oreeis ohn n'<br>
+                          >>> 
+                        </span><br><br>
+
+                        This time a step of <b>2</b> is
+                        requested and the wise sentiments of
+                        <b>Oscar</b> become more than a
+                        little obfuscated!<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[4:40:5]<br>
+                          'yr  innn'<br>
+                          >>> 
+                        </span><br><br>
+
+                        With a step of <b>5</b>, there is not
+                        really much message left!<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[:40:2]<br>
+                          'Awy ogv oreeis ohn n'<br>
+                          >>> <br>
+                        </span><br><br>
+
+                        Omit the first <b>Argument</b> and
+                        <b>0</b> (the start of the
+                        <b>String</b>) is assumed.<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[::2]<br>
+                          'Awy ogv oreeis ohn noste omc'<br>
+                          >>>
+                        </span><br><br>
+
+                        Omit the first 2 <b>Arguments</b> and
+                        the entire length of the
+                        <b>String</b> is assumed.<br><br>
+                      </div>
+                    </details><br>
+
+                    <hh5m>Part (ii)</hh5m><br><br>
+
+                    Next try:<br>
+
+                    <ul><b>
+                      <li>Oscar_Again[-1]</li>
+                      <li>Oscar_Again[-2]</li>
+                      <li>Oscar_Again[-2:-1]</li>
+                      <li>Oscar_Again[-2:0]</li>
+                      <li>Oscar_Again[-2:]</li>
+                      <li>Oscar_Again[-10:-20]</li>
+                      <li>Oscar_Again[-20:-10]</li>
+                    </ul></b><br>
+
+                    Can you explain the output you generate in
+                    each case?<br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command15">
+                          >>> Oscar_Again = "Always forgive your
+                          enemies; nothing annoys them so much"<br>
+                          >>> Oscar_Again[-1]<br>
+                          'h'<br>
+                          >>> Oscar_Again[-2]<br>
+                          'c'<br>
+                          >>> Oscar_Again[-2:-1]<br>
+                          'c'<br>
+                          >>> Oscar_Again[-2:0]<br>
+                          ''<br>
+                          >>> Oscar_Again[-2:]<br>
+                          'ch'<br>
+                          >>> 
+                        </span><br><br>
+
+                        Negative <b>Arguments</b> refer to
+                        positions counting from the end of
+                        the <b>String</b>.<br><br>
+
+                        We cannot start from <b>0</b> this
+                        time as that is already reserved for
+                        the first position, so
+                        <b>Oscar_Again[-1]</b> is the very
+                        last <b>Character</b> of the quote,
+                        which is an '<b>h</b>'.<br><br>
+
+                        <b>Oscar_Again[-2]</b> has to be
+                        the next <b>Character</b> in, which
+                        is a '<b>c</b>'.<br><br>
+
+                        <b>Oscar_Again[-2:-1]</b> is also
+                        just '<b>c</b>'. Remember the second
+                        <b>Argument</b> refers to the
+                        position beyond the last one included
+                        in the slice.<br><br>
+
+                        So, maybe <b>Oscar_Again[-2:0]</b>
+                        will take me to the end of the
+                        <b>String</b>? But no!!! Position
+                        <b>0</b> is the first <b>Character</b>,
+                        so <b>Oscar_Again[-2:0]</b> is
+                        impossible and therefore returns
+                        the <b>Empty String</b>.<br><br>
+
+                        To slice to the end, using negative
+                        indices, requires that the end
+                        <b>Argument</b> be omitted, as in
+                        <b>Oscar_Again[-2:]</b>. The
+                        <b>Default Value</b> is the end of
+                        the <b>String</b>, so all is well.
+                        Something a little uncomfortable
+                        about this? But ... it works.<br><br>
+
+                        <span class="command">
+                          >>> Oscar_Again[-10:-20]<br>
+                          ''<br>
+                          >>> Oscar_Again[-20:-10]<br>
+                          ' annoys th'<br>
+                          >>>
+                        </span><br><br>
+
+                        The point of these two examples is
+                        to make explicit how one has to
+                        provide the start at end points of
+                        the splice form left to right, even
+                        when using negative indices.<br><br>
+
+                        I am not quite sure why, but this
+                        causes me some mental anguish. I get
+                        it wrong nearly every time!<br><br>
+
                       </div>
                     </details>
                   </li>
@@ -2049,8 +2433,9 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <b>Python elements introduced/reinforced in
-           this section are:</b><br><br>
+        <p><b>Python elements introduced/reinforced in
+           this section are:</b><br>
+        </p>
 
         <ol type="1">
           <li>
@@ -2070,6 +2455,23 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
           <li>
             <b>Concatenating Strings</b> with the '<b>+</b>'
             and '<b>*</b>' <b>Operators</b>.
+          </li><br>
+
+          <li>
+            Using a motley selection of <b>Escape Codes</b>
+            embedded in
+            <b>Strings</b>. The most useful of which were
+            '<b>\n</b>' and '<b>\t</b>' I suggest.
+          </li><br>
+
+          <li>
+            Isolating substrings (<b>Slices</b>)
+            from <b>Strings</b>.
+          </li><br>
+
+          <li>
+            Testing for the presence of <b>Strings</b>
+            within <b>Strings</b> using '<b>in</b>'.
           </li><br>
 
           <li>
@@ -2131,10 +2533,27 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
             <b>True</b> if <b>EITHER
             BUT NOT BOTH</b>
-            <i>Condition</i>s are <b>True</b>.<br>
+            <i>Condition</i>s are <b>True</b>.
             </span><br>
            </li>
         </ol>
+
+        <p><b>Builtin Functions:</b><br>
+        </p>
+
+        <ol type="1">
+          <li>
+            The <b>Builtin Function
+            <a href="https://docs.python.org/3.3/library/functions.html#print" target="_blank"> print()</b></a>
+            was introduced (a little ahead of time).<br><br>
+
+            The way <b>print()</b> was used here was simply to
+            display a <b>String</b>. There is more to know of
+            <b>print()</b> ... later.
+          </li><br>
+        </ol>
+
+
       </div>
     </details><br>
 
@@ -2176,9 +2595,11 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
            could just do "<b>Arithmetic</b>", adding
            <b>Scalar Variables</b> enables "<b>Algebra</b>".
 
-        <p>The discussion that follows applies (unless explicitly stated
+        <p>The discussion that follows applies
+           (unless explicitly stated
            otherwise) not just to <b>Scalar Variables</b>, but to
-           <b>Variables</b> that "contain" the more complex entities that will
+           <b>Variables</b> that "contain" the more complex
+           entities that will
            be covered later in this tutorial.
 
         <p>Again, these entities will be
@@ -2277,7 +2698,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
                   <li>
                     <p>
-                      What is the difference between:<br>
+                      What is the difference between:<br><br>
                         <span class="command">
                           a=6
                         </span><br>
@@ -2355,10 +2776,10 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                           >>> type(aval)<br>
                           &lt;class 'bool'&gt;<br>
                           >>> 
-                        </span><br>
+                        </span>
                       </div>
                     </details>
-                  </li><br>
+                  </li>
 
                   <li>
                     <p>Try setting <b>Three Variables</b>
@@ -2539,11 +2960,145 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                               6' 0", None<br>
                               Steven, 37, Male&nbsp;&nbsp;,
                               None&nbsp;, 35"
-                            </span><br><br>
+                            </span><br>
 
                             And all ambiguity is removed.
                           </li>
-                        </ul>
+                      </div>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>Try the commands:
+                    </p>
+
+                      <span class="command">
+                        a = 6<br>
+                        a += 5<br>
+                        a -= 3<br>
+                      </span>
+
+                    <p>Displaying the value of <b>'a'</b> at
+                       each stage.
+                    </p>
+
+                    <p>Comments?<br>
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command">
+                          >>> a = 6<br>
+                          >>> a<br>
+                          6<br>
+                          >>> a += 5<br>
+                          >>> a<br>
+                          11<br>
+                          >>> a -= 3<br>
+                          >>> a<br>
+                          8<br>
+                          >>> <br>
+                        </span><br><br>
+
+                        <span class="command">
+                          a += 5
+                        </span><br>
+
+                        <p>is shorthand for
+                        </p>
+
+                        <span class="command">
+                          a = a + 5
+                        </span><br>
+
+                        <span class="command">
+                          a -= 3
+                        </span><br>
+
+                        <p>is shorthand for
+                        </p>
+
+                        <span class="command">
+                          a = a = 5
+                        </span><br>
+
+                        <p>I think these are very readable and
+                           tidy truncations. I use them all
+                           the time.
+                        </p>
+                      </div>
+                    </details>
+                  </li>
+
+                  <li>
+                    <p>How about
+                    </p>
+
+                    <span class="command">
+                      a /= 2<br>
+                      a *= 4<br>
+                      a //= 5<br>
+                      a %= 2
+                    </span><br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command"
+                          >>>> a /= 2<br>
+                          >>> a<br>
+                          4.0<br>
+                          >>> a *= 4<br>
+                          >>> a<br>
+                          16.0<br>
+                          >>> a //= 5<br>
+                          >>> a<br>
+                          3.0<br>
+                          >>> a %= 2<br>
+                          >>> a<br>
+                          1.0<br>
+                          >>> 
+                        </span><br><br>
+
+                        <p>Yes, indeed the same trick works for
+                           all arithmetic operators
+                        </p>
+
+                        <span class="command"
+                          >>> a = "ba-"<br>
+                          >>> a<br>
+                          'ba-'<br>
+                          >>> a += a<br>
+                          >>> a<br>
+                          'ba-ba-'<br>
+                          >>> a *= 3<br>
+                          >>> a<br>
+                          'ba-ba-ba-ba-ba-ba-'<br>
+                          >>> 
+                        </span><br><br>
+
+                        <p>It even works for Strings!
+                        </p>
+
+                        <p>In this case we construct a single
+                           line of the chorus of the
+                           <a href="https://en.wikipedia.org/wiki/The_Kinks"
+                            target="_blank"> Kinks</a>
+                           under exposed masterpiece
+                           <a href="https://www.azlyrics.com/lyrics/kinks/afternoontea.htm"
+                            target="_blank">
+                                 <b>Afternoon Tea</b></a>.
+                        </p>
+
+                        <p>Should you be inclined to
+                           <a href="https://www.youtube.com/watch?v=TVUxUvyfzFg"
+                            target="_blank">listen</a>?
+                        </p>
                       </div>
                     </details>
                   </li>
@@ -2674,16 +3229,20 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
               <b>Python Reserves</b> certain words
               for particular purposes. Such words are,
               with breath draining originality, called
-              <b>Reserved Words</b>.<br><br>
+              <a href="https://www.programiz.com/python-programming/keyword-list"
+               target="_blank"><b>Reserved Words</b></a>.<br><br>
 
               Clearly, <b>Reserved Words</b> can only serve
               their one anointed purpose and so are not
               available for use as <b>Variable Names</b>.<br><br>
 
               There are lots of <b>Python Reserved Words</b>.
-              However, thus far, we have only met <b>three</b>.
+              However, thus far, we have only met <b>four</b>.
               They are the <b>Boolean Operators</b>
-              '<b>and</b>' '<b>or</b>' '<b>not</b>'.<br><br>
+              '<b>and</b>' '<b>or</b>' '<b>not</b>', plus
+              '<b>in</b>' (used to test the
+              presence of             
+              <b>Strings</b> within <b>Strings</b>).<br><br>
 
               Any attempt to use these (or any other
               <b>Reserved Word</b>) as a <b>Variable
@@ -2704,7 +3263,13 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                 >>> not = 3<br>
                 &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;not = 3<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
+                <br>
+                SyntaxError: invalid syntax<br>
+                >>> in = 2<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;in = 2<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
                 SyntaxError: invalid syntax<br>
                 >>> xor = 4<br>
                 >>> xor<br>
@@ -2748,7 +3313,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
                     The "Eagle Eyed" amongst you might have
                     noticed that the
-                    '<b>^</b>' attempting to pinpont the
+                    '<b>^</b>' attempting to pinpoint the
                     position of the
                     <b>Error</b> points to the <b>Boolean
                     Operator</b> in the
@@ -2803,7 +3368,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
                           SyntaxError: invalid syntax<br>
                           >>> and True<br>
-                          &nbsp;&nbsp;File "&lt;tdin&gt;",
+                          &nbsp;&nbsp;File "&lt;stdin&gt;",
                           line 1<br>
                           &nbsp;&nbsp;&nbsp;&nbsp;and True<br>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
@@ -2879,12 +3444,12 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                           >>> 
                         </span><br><br>
 
-                        A <b>String Value</b> fo '<b>x</b>'
+                        A <b>String Value</b> for '<b>x</b>'
                         works because
                         <b>Python</b> arbitrarily dictates
                         that <b>ANY</b> string, when used
                         as a <b>Conditional Expression</b>,
-                        will be interpretted as
+                        will be interpreted as
                         <b>True</b>, except the empty
                         string (<b>""</b>) which will be considered
                         <b>False</b>.<br><br>
@@ -2934,7 +3499,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                        Using <b>type</b> as a <b>Variable Name</b>
                        works fine.<br><br>
 
-                       One might dimissivly say <i>"Of course,
+                       One might dismissively say <i>"Of course,
                        it is a
                        <b>Builtin Function</b>, not a <b>Reserved
                        Word</b>!"</i>. However, <b>type</b>
@@ -2957,6 +3522,129 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                        <b><i>NOT</i></b> special at all,
                        and so available for
                        use as a <b>Variable Name</b>.<br><br>
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    What about <b>True</b>, <b>False</b>
+                    and <b>None</b>?<br><br>
+
+                    Are they <b>Reserved Words</b>?<br><br>
+
+                    Can they be used as
+                    <b>Variable Names</b>?<br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+                        <span class="command">
+                          >>> True = 1<br>
+                          File "<stdin>", line 1<br>
+                          SyntaxError: can't assign to keyword<br>
+                          >>> False = 2<br>
+                          File "<stdin>", line 1<br>
+                          SyntaxError: can't assign to keyword<br>
+                          >>> None = 3<br>
+                          File "<stdin>", line 1<br>
+                          SyntaxError: can't assign to keyword<br>
+                          >>> 
+                        </span><br><br>
+
+                      So, the simple answers to the questions
+                      posed are:<br><br>
+
+                      <b>True</b>, <b>False</b> and
+                      <b>None</b> are all <b>Reserved Words</b>.
+                      So I lied, we have met <b>7
+                      Reserved Words</b> so far!<br><br>
+
+                      <b>True</b>, <b>False</b> and
+                      <b>None</b> are all unavailable for use
+                      as <b>Variable Names</b>.<br><br>
+
+                      But, look at the <b>Error Message</b>
+                      this time. It specifies the reason
+                      for disallowing <b>True</b>,
+                      <b>False</b>, <b>None</b> is
+                      that they
+                      are <b>Keywords</b>?
+
+                      So, what is the difference between a
+                      <b>Keyword</b> and a
+                      <b>Reserved Word</b>?<br>
+
+                      <p class="hint">In <b>Python</b>,
+                         <i>"There is no
+                         difference that matters a jot!"
+                         </i>, so its fine to skip the
+                         next bit if you wish.
+                      </p>
+
+                      Essentially, my summary, based on my
+                      <a href="https://stackoverflow.com/questions/1078908/what-is-the-difference-between-keyword-and-reserved-word"
+                       target="_blank"> best hit</a> from
+                       many google searches, is as follows:<br><br>
+
+                      <ul>
+                        <li><b>Keywords</b> have a special
+                          meaning in a language, and are
+                          part of the <b>Syntax</b>.
+                        </li>
+                        <li>
+                          <b>Reserved words</b> are words
+                          that cannot be used as
+                          <b>Variable Names</b> (and similar),
+                          because they are <b>Reserved</b>
+                          by the <b>Language</b>.
+                        </li>
+                      </ul><br>
+
+                      OK, I simplify this to:<br><br>
+                      <i>"<b>Keywords</b> are words it would
+                      be silly to use as <b>Variable Names</b>,
+                      <b>Reserved Words</b> are words that the
+                      <b>Language</b> has forbidden to be used
+                      as <b>Variable Names</b>"</i><br><br>
+
+                      In <b>Python</b>, <b>Reserved words</b>
+                      and <b>Keywords</b> <b>Coincide</b>
+                      (that is, all <b>Keywords</b> are
+                      <b>Reserved Words</b> and vice versa),
+                      which surely has to be sensible? The
+                      only mystery remaining is why
+                      <b>Python</b> makes life mysterious
+                      by varying its <b>Error Messages</b>
+                      for different types of
+                      <b>Keywords</b>?<br><br>
+
+                      A <b>Language</b> does
+                      not <b><i>have</i></b> to <b>Reserve</b> any
+                      <b>Keywords</b>! Why not allow a user
+                      to assign any <b>Value</b> he/she wishes
+                      to <b>True</b> (and similar) ... and
+                      then enjoy the chaos? Older languages
+                      <a href="https://en.wikipedia.org/wiki/Reserved_word"
+                       target="_blank">
+                      (<b>FORTRAN</b>, <b>PL/1</b>, <b>Algol</b>)
+                      have lots of <b>Keywords</b> but no
+                      <b>Reserved Words</b></a>!!
+                      We beleived in "Living life on the edge"
+                      in those days!<br><br>
+
+                      It is even possible to have
+                      <b>Reserved Words</b> that are not
+                      <b>Keywords</b>. A word that is not
+                      currently a <b>Keyword</b> might be
+                      <b>Reserved</b> because it might be a
+                      useful <b>Keyword</b> in the future
+                      (<a href=https://stackoverflow.com/questions/2545103/is-there-a-goto-statement-in-java"
+                       target ="_blank"><b>goto</b> in Java</a>
+                      for example).
+
                       </div>
                     </details>
                   </li>
@@ -2983,7 +3671,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
               An issue about which the <b>Interpreter</b>
               will not care a jot!
-              <b><i>BUT</i></b>, is of great imortance if
+              <b><i>BUT</i></b>, is of great importance if
               you are to write code
               that can be easily understood and maintained
               by others ... or
@@ -3009,7 +3697,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                 <li>
                   Maintaining a prominent <b>Outline</b>
                   of what your code is
-                  trying to acheive (<b>psuedo-code</b>?).
+                  trying to achieve (<b>pseudo-code</b>?).
                   Again, something to
                   expand upon later. 
                 </li><br>
@@ -3017,7 +3705,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                 <li>
                   A meaningful choice of <b>Variable Names</b>.
                   It is too
-                  tempting to use anonimous single letter
+                  tempting to use anonymous single letter
                   <b>Variable Names</b>
                   that convey nothing of their purpose for
                   existence.<br><br>
@@ -3074,16 +3762,6 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
                     >>> 
                   </span><br><br>
 
-                </li><br>
-
-                <li>
-                  <span class="command">
-
-                  </span><br><br>
-
-                  <p class="hint"><b>Note</b>:
-
-                  </p>
                 </li>
               </ul>
             </p>
@@ -3096,8 +3774,9 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <b>Python elements introduced/reinforced in
-              this section are:</b><br><br>
+        <p><b>Python elements introduced/reinforced in
+              this section are:</b>
+        </p>
 
         <ol type="1">
           <li>
@@ -3141,9 +3820,10 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
               </li>
            </ul>
           </li>
-        </ol><br>
+        </ol>
 
-        <b>Builtin Functions:</b><br><br>
+        <p><b>Builtin Functions:</b>
+        </p>
 
         <ol type="1">
           <li>
@@ -6652,7 +7332,7 @@ Must mention platform independance but I am using ubuntu and am not going t o ev
 
         <h2>Libraries</h2>
 
-        <p>Simply put all the functions mad so far in
+        <p>Simply put all the functions made so far in
            a file and
            include the file in lots of different ways
         </p>
