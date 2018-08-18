@@ -3859,13 +3859,20 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
       <div class="ramble">
 
-        <h2>Builtin Functions.</h2>
+        <h2>
+          <a href="https://docs.python.org/3.3/library/functions.html"
+           target="_blank">Builtin Functions</a>.
+        </h2>
 
-        <p>As well as enabling basic <b>Arithmetic</b>
-           and <b>Algebraic</b> operations, <b>Python</b>
-           expands its functionality with some
-           "<i>ready coded</i>" features that are
-           integral elements of the language.
+        <p>The <b>Scalars</b> considered thus far enable basic
+           <b>Arithmetic</b>, <b>Algebraic</b> and simple
+           String manipulatory operations.
+        </p>
+
+        <p><b>Python</b>
+            builds on this provision with some
+            "<i>ready coded</i>" <b>Functions</b> that are
+            integral to the language.
         </p>
 
         <p>Such features are called <b>Builtin Functions</b>.
@@ -3875,42 +3882,65 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
            (and similar) will be offered when
            <b>User Defined Functions</b> are considered a
            little later. For now, a <b>Function</b> is
-           something that (<b>Optionally</b>) accepts
+           a code block that (<b>Optionally</b>) accepts
            <b>Arguments</b> and returns a <b>Value</b>.
         </p>
 
-        <p><b>type()</b>, which you have already used,
-           is an example of a <b>Builtin Functions</b>.
-           The way we used it, <b>type()</b> accepts
+        <p><a href="https://docs.python.org/3.3/library/functions.html#print"
+             target="_blank"><b>type()</b></a> and 
+           <a href="https://docs.python.org/3.3/library/functions.html#print"
+            target="_blank"><b>print</b></a>, which you have
+           <p>already superficiially used,
+           are examples of <b>Builtin Functions</b>.
+        </p>
+
+        <p>As used above, <b>type()</b> accepts
            a single <b>Argument</b> (a <b>Scalar Value</b>
            or <b>Variable</b>) and returns information
            revealing the <b>Class</b> of that <b>Scalar</b>.
         </p>
 
-           <span class="command">
-             >>> type (4.657)<br>
-             &lt;class 'float'&gt;<br>
-             >>> type(32)<br>
-             &lt;class 'int'&gt;<br>
-             >>> type("It is Sunday")<br>
-             &lt;class 'str'&gt;<br>
-             >>> 
-           </span><br>
+        <span class="command">
+          >>> type (4.657)<br>
+          &lt;class 'float'&gt;<br>
+          >>> type(32)<br>
+          &lt;class 'int'&gt;<br>
+          >>> type("It is Sunday")<br>
+          &lt;class 'str'&gt;<br>
+          >>> 
+        </span><br>
 
-        <p>There are very many <b>Python Builtin Functions</b>.
-           It seems silly to try and list them all here.
-           Instead, I suggest we introduce a few here (via
-           <b>Examples</b>, <b>Questions</b> and
-           <b>Exercises</b>) and add to the
-           list as the need arises when considering other topics.
+        <p>So far, we have used <b>print</b> just to
+           display simple <b>Strings</b> (as <b>Scalar
+           Values</b> or <b>Variables</b>).
         </p>
 
-        <p>However, a complete list of all
+        <span class="command">
+          >>> print("Saturday night\nJust got paid")<br>
+          Saturday night<br>
+          Just got paid<br>
+          >>> Diminutive_Dick="Fool about my money\nDon't
+          have to save"<br>
+          >>> print (Diminutive_Dick)<br>
+          Fool about my money<br>
+          Don't have to save<br>
+          >>> 
+        </span><br>
+
+        <p>A complete list of all
            <b>Python Builtin Functions</b>, all with very
-           comprehensive descriptions must be useful and
-           can be found
+           comprehensive descriptions will be useful for
+           reference, and can be found
            <a href="https://docs.python.org/3.3/library/functions.html"
             target="_blank">here</a> (amongst other places).
+        </p>
+
+        <p>It would not be useful to try and descibe them
+           all here!
+           Instead, I suggest we introduce a few of the more
+           vital examples and add other as the need arises (via
+           <b>Examples</b>, <b>Questions</b> and
+           <b>Exercises</b>) 
         </p>
 
       </div><br>
@@ -3924,14 +3954,172 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             </span>
           </summary>
 
-            <div class="minsect">
+          <b>Python</b> offers a set of
+          <b>Builtin Functions</b> to "<b>Cast</b>" the
+          initial <b>type</b> of Scalar into another. These
+          are (in their simplest usage):
 
-              <div class="question">
+          <ol>
+            <li><a href="https://docs.python.org/3.3/library/functions.html#int"
+                 target="_blank"><b>int()</b></a> - Converts
+                 a <b>Number</b> or <b>String Argument</b>
+                 to an <b>Integer</b>.
+            </li>
+            <li><a href="https://docs.python.org/3.3/library/functions.html#float"
+                 target="_blank"><b>float()</b></a> - Converts
+                 a <b>Number</b> or <b>String Argument</b>
+                 to a <b>Float</b>.
+            </li>
+            <li><a href="https://docs.python.org/3.3/library/functions.html#bool"
+                 target="_blank"><b>bool()</b></a> - Converts
+                 any value to a <b>bool</b> (that is,
+                 <b>True</b> or <b>False</b>).
+            </li>
+            <li><a href="https://docs.python.org/3.3/library/functions.html#func-str"
+                 target="_blank"><b>str()</b></a> - Converts
+                 any value to a <b>String</b>.
+            </li>
+          </ol><br>
 
-                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+          <div class="minsect">
 
-              </div><br>
-            </div><br>
+            <div class="question">
+
+              <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+              <ol>
+
+                <li>
+                  Might there be some limits to what
+                  <b>int()</b> will accept as a sensible
+                  <b>Argument</b>?<br>
+
+                  Try:<br>
+                    <ul>
+                      <li>The <b>float</b> - '<b>3.4</b>'</li>
+                      <li>The <b>bool</b> - '<b>6==6</b>'</li>
+                      <li>The <b>str</b> - '<b>98</b>'</li>
+                      <li>The <b>str</b> - '<b>98.5</b>'</li>
+                      <li>The <b>str</b> - '<b>two</b>'</li>
+                    </ul>
+
+                  <details class="answer">
+                  <summary><span class="anssum">Answer.</span>
+                  </summary>
+
+                    <div class="answer">
+
+                      <span class="command">
+                        >>> int(3.4)<br>
+                        3<br>
+                        >>> int(6==6)<br>
+                        1<br>
+                        >>> int("98")<br>
+                        98<br>
+                        >>>
+                      </span><br><br>
+
+                      <b>float</b> -> <b>int</b> fine!<br>
+                      <b>bool</b> -> <b>int</b> fine,
+                      if enigmatic!<br>
+                      <b>str</b> -> <b>int</b> fine,
+                      when the <b>String</b> is an
+                      <b>Integer</b> at least!<br><br>
+
+                      <span class="command">
+                        >>> int("98.9")<br>
+                        Traceback (most recent call last):<br>
+                        &nbsp;&nbsp;File "&lt;stdin&gt;", line
+                        1, in &lt;module&gt;<br>
+                        ValueError: invalid literal for
+                        int() with base 10: '98.9'<br>
+                        >>>
+                      </span><br><br>
+
+                      Picky!!! I would have expected this one
+                      to work, but <b>int()</b> will not
+                      convert the <b>float String</b>. I
+                      suspect because that would involve
+                      <b>TWO</b> conversions, and
+                      <b>int()</b> has a strong Union
+                      position to maintain.<br><br>
+
+                      Of course, you could do the first
+                      conversion explicitly and then all
+                      would be fine?<br><br>
+
+                      <span class="command">
+                        >>> int(float("98.9"))<br>
+                        98<br>
+                        >>>
+                      </span><br>
+
+                      <p class="hint"> Just in case I have
+                         not already mentioned it, <b>int</b>
+                         to <b>float</b> conversions
+                         <b><i>ALWAYS</i></b> round
+                         <b><i>DOWN</i></b>.
+                         Rather unsubtle, but that is
+                         universally the <b>Rule</b>.<br><br>
+
+                         So <b>98.9</b> becomes <b>98</b>
+                         and not <b>99</b>.<br>
+                      </p>
+
+                      <span class="command">
+                        >>> int("two")
+                          Traceback (most recent call last):
+                          &nbsp;&nbsp;File "&lt;stdin&gt;",
+                          line 1, in &lt;module&gt;
+                          ValueError: invalid literal
+                          for int() with base 10: 'two'<br><br>
+                          >>> 
+                      </span><br><br>
+
+                      Makes perfect sense to me! But, I
+                      suppose this one was just a weenie
+                      bit optimistic? Maybe in
+                      <b>Python 7</b>?<br><br>
+
+                    </div>
+                  </details>
+                </li><br>
+
+                <li>
+                  What is the value of:<br>
+
+                  <ul>
+                    <li><b>int()</b></li>
+                    <li><b>float()</b></li>
+                    <li><b>bool()</b></li>
+                    <li><b>str()</b>'</li>
+                  </ul>
+
+                  <details class="answer">
+                  <summary><span class="anssum">Answer.</span>
+                  </summary>
+
+                    <div class="answer">
+
+                      <span class="command">
+                        >>> int()<br>
+                        0<br>
+                        >>> float()<br>
+                        0.0<br>
+                        >>> bool()<br>
+                        False<br>
+                        >>> str()<br>
+                        ''<br>
+                        >>> 
+                      </span><br><br>
+
+                      Very reasonable, given some sort of value
+                      is considered better than none.
+                    </div>
+                  </details>
+                </li>
+              </ol>
+            </div> 
           </details>
         </li>
         <li>
@@ -3942,12 +4130,12 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             </span>
           </summary>
 
-            <div class="minsect">
 
-              <div class="question">
 
-                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+abs() 
 
+
+open() close()
               </div><br>
             </div><br>
           </details>
@@ -7475,6 +7663,9 @@ Scalar Variables ... Arithmetic to Algebra in Overview
  CHECKPOINT
 
 Builtin Functions
+
+ ... I/O
+
  CHECKPOINT
 
 Methods
