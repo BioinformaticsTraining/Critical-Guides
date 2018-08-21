@@ -4483,10 +4483,172 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               <hh4>Input/Output from Keyboard/Screen.</hh4>
             </span>
           </summary>
+
+            <div class="minsect"><br>
+
+              <ol>
+                <li>
+                  <hh5m>Input from the Keyboard</hh5m><br><br>
+
+                  The <b>Builtin Function</b>
+                  <a href="https://docs.python.org/3.7/library/functions.html#input"
+                   target="_blank"><b>input()</b></a>
+                  is used
+                  to request input from a user, via
+                  (typically) the <b>Keyboard</b>.<br><br>
+
+                  <b>input()</b> takes one <b>Argument</b>,
+                  which is usually a simple <b>String</b>.
+                  This is displayed (typically) on the
+                  <b>Computer Screen</b> as a <b>Prompt</b>
+                  to the user to enter a response.<br><br>
+
+                  <b>input()</b> returns, as a
+                  <b>String</b>, whatever the user types
+                  in response to the <b>Prompt</b>.<br><br>
+
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    Use <b>input()</b> to ask for a user's
+                    <b>Favourite Integer</b>.
+                    Save the <b>Favoured Number</b> in a
+                    suitably named <b>Variable</b>.
+                    <b>Strings</b>:<br><br>
+
+                    Use <b>input()</b> to ask for a user's
+                    <b>Favourite Floating Point Number</b>.
+                    Save the <b>Favoured Number</b> in a
+                    suitably named <b>Variable</b>.
+                    <b>Strings</b>:<br><br>
+
+
+                    Use <b>input()</b> to ask for a user's
+                    <b>Favourite Colour</b>.
+                    Save the <b>Favoured Colur</b> in a
+                    suitably named <b>Variable</b>.
+                    <b>Strings</b>:<br><br>
+
+                    Display the <b>Numbers</b> with their
+                    <b>Sum</b> and their <b>Product</b>
+                    in a coherent sentence mentioning
+                    the <b>Colour</b> somewhere.
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+                        <span class="command16">
+                          >>> Best_Integer = input("Enter
+                          your Favourite Integer: ")<br>
+                          Enter your Favourite Integer: 24<br>
+                          >>> Best_Float = input("Enter
+                          your Favourite Float: ")<br>
+                          Enter your Favourite Float: 13.694<br>
+                          >>> Best_Colour = input("Enter
+                          your Favourite Colour: ")<br>
+                          Enter your Favourite Colour: Yellow<br>
+                          >>> Sentence&nbsp;&nbsp;= "My favourite
+                          Integer is: " + Best_Integer + ',\n'<br>
+                          >>> Sentence += "My favourite
+                          Float is: " + Best_Float + ',\n'<br>
+                          >>> Sentence += "My favourite
+                          Sum is: "<br>
+                          >>> Sentence += str((int(Best_Integer)
+                          + float(Best_Float))) + ',\n'<br>
+                          >>> Sentence += "My favourite
+                          Product is: "<br>
+                          >>> Sentence += str((int(Best_Integer)
+                          * float(Best_Float))) + ',\n'<br>
+                          >>> Sentence += "My favourite
+                          Colour is: " + Best_Colour + '.'<br>
+                          >>> print(Sentence)<br>
+                          My favourite Integer is: 24,<br>
+                          My favourite Float is: 13.694,<br>
+                          My favourite Sum is: 37.694,<br>
+                          My favourite Product is: 328.656,<br>
+                          My favourite Colour is: Yellow.<br>
+                          >>> 
+                        </span><br><br>
+
+                        Well, pretty straight foward I hope
+                        you will agree?.<br><br>
+
+                        Some points from the example above
+                        might be:<br><br>
+
+                        <ul>
+                          <li>
+                            <b>int()</b> always returns a
+                            <b>String</b>. The <b>Numeric</b>
+                            inputs are therefore treated are
+                            saved as <b>Strings</b>. That is
+                            why they can be appended to the
+                            <b>String Variable Sentence</b>
+                            using just '<b>+</b>' (in this
+                            context, <b>String Concatenation</b>).
+                          </li><br>
+                          <li>
+                            <i>Revision:</i> After <b>Sentence</b>
+                            is given an initial value,
+                            <b>Concatenation</b> was achieved
+                            with the shorthand '<b>+=</b>'.
+                          </li><br>
+                          <li>
+                            <i>Revision:</i> when computing
+                            the <b>Sum</b> of the <b>2</b>
+                            numbers "<b>Best_Integer +
+                            Best_Float</b>" would not work!!
+                            <b>Best_Integer</b> and
+                            <b>Best_Float</b> are both
+                            <b>Strings</b> and so the
+                            '<b>+</b>' operator would
+                            <b>Concatonate</b> not <b>Add</b>.
+                            The answer would be "<b>2413.694</b>".
+                          </li><br>
+                          <li>
+                            "<b>Best_Integer * Best_Float</b>" is
+                            not defined and would produce an
+                            <b>Error Message</b>.
+                          </li><br>
+                          <li>
+                            The solution is to <b>cast</b>
+                            both <b>String Variables</b>
+                            into <b>Numeric types</b> before
+                            doing the arithmetic. That is:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <b>(int(Best_Integer) +
+                            float(Best_Float))</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <b>(int(Best_Integer) *
+                            float(Best_Float))</b><br>
+                          </li><br>
+                          <li>
+                            But these calculations generate
+                            a <b>float Value</b>. A <b>String</b>
+                            is needed to <b>Concatonate</b>
+                            into <b>Sentence</b>. So:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <b>str((int(Best_Integer) +
+                            float(Best_Float)))</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <b>str((int(Best_Integer) *
+                            float(Best_Float)))</b><br><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </li>
+                </ol>
               </div><br>
             </div><br>
           </details>
-        </li>
+        </li><br>
       </ol><br>
 
       <div class="checkpoint">
