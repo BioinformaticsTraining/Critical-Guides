@@ -5297,19 +5297,36 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
         <ol type="1">
           <li>
-            <b>Formal introduction of <b>Builtin
-            Functions</b> as added functionality,
-            integral to the <b>Python Language</b>.
+
+            <b><u>Looping Code Constructs:</u></b>
+
+            <ul>
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <b><u>Modules:</u></b><br>
+            <ul>
+              <li>
+                <ul>
+                  <li>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
           </li>
         </ol>
 
-        <p>
-          <b>Builtin Functions introduced in this section:</b>
+        <p><b>Concepts/tricks introduced thus far are:</b>
         </p>
 
         <ol type="1">
           <li>
-          
           </li>
           <li>
           </li>
