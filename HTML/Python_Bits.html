@@ -2419,7 +2419,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
            this section are:</b><br>
         </p>
 
-        <ol type="1">
+        <ol>
           <li>
             <b>Single Data Item Values</b>
             (<b>Scalar Values</b>) that can be of various
@@ -2523,7 +2523,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         <p><b>Builtin Functions:</b><br>
         </p>
 
-        <ol type="1">
+        <ol>
           <li>
             The <b>Builtin Function
             <a href="https://docs.python.org/3.7/library/functions.html#print" target="_blank"> print()</b></a>
@@ -2534,8 +2534,6 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             <b>print()</b> ... later.
           </li><br>
         </ol>
-
-
       </div>
     </details><br>
 
@@ -3806,7 +3804,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         <p><b>Builtin Functions:</b>
         </p>
 
-        <ol type="1">
+        <ol>
           <li>
             The <b>Builtin Function
             <a href="https://docs.python.org/3.7/library/functions.html#type" target="_blank"> type()</b></a>
@@ -4122,24 +4120,25 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               <ol>
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#abs"
-                     target="_blank"><b>abs()</b></a> - returns
+                   target="_blank"><b>abs()</b></a> - returns
                   the <b>Absolute Value</b> of a
                   <b>Numeric Argument</b>.
                 </li>
 
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#min"
-                     target="_blank"><b>min()</b></a> - returns
+                   target="_blank"><b>min()</b></a> - returns
                   the smallest of a set of <b>Values</b>.
                 </li>
 
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#max"
                    target="_blank"><b>max()</b></a> - returns
-                the largest of a set of <b>Values</b>.
-              </li>
+                  the largest of a set of <b>Values</b>.
+                </li>
 
-              <li><a href="https://docs.python.org/3.7/library/functions.html#round"
+                <li>
+                  <a href="https://docs.python.org/3.7/library/functions.html#round"
                    target="_blank"><b>round()</b></a> - returns
                   a <b>float Argument Rounded</b> to a
                   specified number of decimal places.
@@ -4335,8 +4334,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         All fine so far.<br><br>
 
                         <span class="command">
-                          >>> round(92.675,4)
-                          92.675
+                          >>> round(92.675,4)<br>
+                          92.675<br>
                           >>> 
                         </span><br><br>
 
@@ -4347,8 +4346,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         but no overt comment.<br><br>
 
                         <span class="command">
-                          >>> round(2.675,2)
-                          2.67
+                          >>> round(2.675,2)<br>
+                          2.67<br>
                           >>> 
                         </span><br><br>
 
@@ -5279,6 +5278,46 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           </div>
                         </details>
                       </li><br>
+                      <li>
+                        Compose a <b>print()</b> command that
+                        outputs <b><i>two</i></b> formated sets
+                        of data <b><i>and</i></b> uses both
+                        <b>sep</b> and <b>end</b>.<br><br>
+                        
+                        Did it work?<br><br>
+                        
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.
+                        </span></summary>
+                          <div class="answer">
+
+                            <span class="command">
+                              >>> print("aaa %2d aaa" % (1),
+                              "bbb %2d bbb" % (2), sep='\nsep here\n',
+                              end='\nEND HERE\n')<br>
+                              aaa  1 aaa<br>
+                              sep here<br>
+                              bbb  2 bbb<br>
+                              END HERE<br>
+                              >>>
+                            </span><br><br>
+                        
+                            What a boring example! No poems?
+                            No songs? The muse deserts me this
+                            windy August morn.<br><br>
+                        
+                            Nevertheless, the point is made.
+                            Two formatted
+                            outputs handled but <b>print()</b>
+                            with consummate ease.<br><br>
+                        
+                            Uninspired, but clearly successful uses
+                            of <b>sep</b> and <b>end</b> answer the
+                            question posed with a loud and
+                            proud affirmative!
+                          </div>
+                        </details>
+                      </li>
                     </ol>
                   </div><br>
                 </li>
@@ -5291,39 +5330,193 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
       <div class="checkpoint">
 
         <h2><i><u>Checkpoint</u></i></h2>
+        
+        <p>
+          <b>Issues introduced in this section:</b>
+        </p>
 
-        <p><b>Python elements introduced/reinforced in
-           this section are:</b>
-
-        <ol type="1">
+        <ol>
           <li>
-            <b>Formal introduction of <b>Builtin
+            Formal introduction of <b>Builtin
             Functions</b> as added functionality,
             integral to the <b>Python Language</b>.
           </li>
         </ol>
-
+       
         <p>
-          <b>Builtin Functions introduced in this section:</b>
+          <b>Builtin Functions introduced or reinforced:</b><br>
         </p>
-
-        <ol type="1">
+        
+        <ol>
           <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#int"
+             target="_blank"><b>int()</b></a> - Converts
+            a <b>Number</b> or <b>String Argument</b>
+            to an <b>Integer</b>.
+          </li><br>
           
-          </li>
           <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#float"
+             target="_blank"><b>float()</b></a> - Converts
+            a <b>Number</b> or <b>String Argument</b>
+            to a <b>Float</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#bool"
+             target="_blank"><b>bool()</b></a> - Converts
+            any value to a <b>bool</b> (that is,
+            <b>True</b> or <b>False</b>).
+          </li><br>
+
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#func-str"
+             target="_blank"><b>str()</b></a> - Converts
+            any value to a <b>String</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#type" target="_blank"><b>type()</b></a> - Reveals
+            the type (or <b>class</b>) of a <b>Scalar
+            Variable</b> (or <b>Value</b>).
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#abs"
+             target="_blank"><b>abs()</b></a> - returns
+            the <b>Absolute Value</b> of a
+            <b>Numeric Argument</b>.
+          </li><br>
+
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#min"
+             target="_blank"><b>min()</b></a> - returns
+            the smallest of a set of <b>Values</b>.
+          </li><br>
+
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#max"
+             target="_blank"><b>max()</b></a> - returns
+            the largest of a set of <b>Values</b>.
+          </li><br>
+
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#round"
+             target="_blank"><b>round()</b></a> - returns
+            a <b>float Argument Rounded</b> to a
+            specified number of decimal places.
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#len"
+             target="_blank"><b>len()</b></a> - Returns
+            the <b>Length</b> of any <b>Data Type</b> to
+            which "<b>Length</b>" has a coherent
+            interpretation (including <b>Strings</b>).
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#input"
+             target="_blank"><b>input()</b></a> - Requests
+            data input from (typically) a user at the <b>Keyboard</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#print" target="_blank"><b>print()</b></a> -
+            Displays, formatted or unformatted, data on
+            the <b>Display Screen</b>.
           </li>
         </ol>
-
-        <p><b>Reflections:</b>
+        
+        <p>
+          <b>Points noted in this section:</b>
         </p>
 
-        <ol type="1">
+        <ol>
           <li>
-          </li>
+            Float to Integer conversion always rounds
+            <b>down</b>.
+          </li><br>
+          
           <li>
+            A <b>String</b> containing a legitimate <b>Float</b>
+            can only be converted to an <b>Integer</b> if
+            converted to a <b>Float</b> first.
+          </li><br>
+          
+          <li>
+            With no <b>Argument</b>, all the
+            <b>Type Conversion Functions</b> return a
+            legitimate <b>Value</b>. <b>0</b> for
+            <b>int()</b> and <b>float()</b>, <b>False</b>
+            for <b>bool()</b> and the <b>Empty String</b>
+            for <b>str()</b>.
+          </li><br>
+          
+          <li>
+            Whilst <b>min()</b> and <b>max()</b> are fine with
+            sets of <b>Numbers</b> of mixed <b>type</b>, or
+            sets of <b>Strings</b>, they will not accept data
+            sets including both <b>Numbers</b> and <b>Strings</b>.
+          </li><br>
+          
+          <li>
+            <b>round()</b> will not always return you should
+            expect according to the strict <b>Rules
+            of Mathematics</b>! The "<b>Errors</b>" are due to
+            the imperfections of representing <b>Decimal Values</b>
+            in a <b>Binary Computer</b>.
+            
+            So, why not a <b>Decimal Computer</b>? There has been
+            talk for decades? Maybe I do that next week when I
+            have finished writing all this nonsense?
+          </li><br>
+          
+          <li>
+            <b>len()</b> counts <b>Control Characters</b>
+            as <b>1 Character</b> even though the essential
+            <b>Backslash</b> makes them look like <b>2</b>.
+            
+            Well, of course? Sure you could have worked that
+            one out for yourselves!
+          </li><br>
+          
+          <li>
+            <b>input() <i>ALWAYS</i></b> returns a <b>String</b>.
+            If you need to interpret <b>Values</b> acquired using
+            <b>input()</b> in any other way, you must change
+            its <b>type</b> appropriately first.
+          </li><br>
+          
+          <li>
+            <b>print()</b>can be used in <b>2</b> ways.
+            
+            <ul>
+              <li>
+                It can print a set of <b>Values</b> of mixed
+                <b>type</b> with default formatting.
+              </li><br>
+              
+              <li>
+                It can output one more sets of <b>Values</b>
+                whose formatting specifics are determined by
+                a <b>Format String</b>.
+              </li>
+            </ul>
+          </li><br>
+          
+          <li>
+            In both modes of <b>print()</b> operation, the <b>Output
+            Value Separator</b> (default <b>Space</b>) can
+            be specified using the <b>sep Argument</b>.
+          </li><br>
+          
+          <li>
+            In both modes of <b>print()</b> operation, the <b>Output
+            Value Terminator</b> (default <b>\n</b>) can
+            be specified using the <b>end Argument</b>.
           </li>
-        </ol><br>
+        </ol>
       </div>
     </details>
   </li><br>
