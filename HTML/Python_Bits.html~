@@ -2415,8 +2415,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-           this section are:</b><br>
+        <p><hh6m>Issues introduced or reinforced in
+           this section:</hh6m><br>
         </p>
 
         <ol>
@@ -2514,13 +2514,14 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
             <b>True</b> if <b>EITHER
-            BUT NOT BOTH</b>
+            BUT NOT BOT H</b>
             <i>Condition</i>s are <b>True</b>.
             </span><br>
            </li>
         </ol>
 
-        <p><b>Builtin Functions:</b><br>
+        <p><hh6m>Builtin Functions introduced or reinforced in
+           this section:</hh6m><br>
         </p>
 
         <ol>
@@ -3753,8 +3754,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-              this section are:</b>
+        <p><hh6m>Issues introduced or reinforced in
+              this section:</hh6m>
         </p>
 
         <ol type="1">
@@ -3801,7 +3802,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           </li>
         </ol>
 
-        <p><b>Builtin Functions:</b>
+        <p><hh6m>Builtin Functions introduced or reinforced in
+              this section:</hh6m>
         </p>
 
         <ol>
@@ -5332,7 +5334,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         <h2><i><u>Checkpoint</u></i></h2>
         
         <p>
-          <b>Issues introduced in this section:</b>
+          <hh6m>Issues introduced or reinforced in this section:</hh6m>
         </p>
 
         <ol>
@@ -5344,7 +5346,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         </ol>
        
         <p>
-          <b>Builtin Functions introduced or reinforced:</b><br>
+          <hh6m>Builtin Functions introduced or reinforced in this section:</hh6m><br>
         </p>
         
         <ol>
@@ -5424,17 +5426,17 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#print" target="_blank"><b>print()</b></a> -
             Displays, formatted or unformatted, data on
-            the <b>Display Screen</b>.<br><br>
+            the <b>Display Screen</b>.
           </li>
         </ol>
         
         <p>
-          <b>Points noted in this section:</b>
+          <hh6m>Points noted or reinforced in this section:</hh6m>
         </p>
 
         <ol>
           <li>
-            Float to Integer conversion always rounds
+            <b>Float</b> to <b>Integer</b> conversion always rounds
             <b>down</b>.
           </li><br>
           
@@ -5524,12 +5526,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
-
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumcon"><b>Exercise - Part VI:</b>
-              Conditional Statements - if, else, elif
+      <span class="msectsumdat"><b>Exercise - Part VI:</b>
+              Methods
       <span>
     </summary>
 
@@ -5539,10 +5540,163 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
       <div class="ramble">
 
-        <h2>Conditional Statements - if, else, elif</h2>
+        <h2>Methods</h2>
+        
+        <p>
+          A <b>method</b> is a <b>Function</b> that is
+          specific to a particular <b>Python Data Class</b>
+          (or <b>type</b>).
+        </p>
+        
+        <p> 
+          Of the <b>Data Classes</b> discussed so far, only
+          <b>Strings</b> really have and interesting range
+          of <b>methods</b>.
+        </p>
+        
+        <p>
+          Accordingly, here it is the plan to start by
+          looking at a few 
+          examples of <b>String methods</b>, to get the
+          general idea, and the to discuss further
+          <b>methods</b> as more the complex <b>Data
+          Classes</b> are introduced.
+        </p>
 
+        <p>
+          If you did wish to generate a list of all the
+          available <b>methods</b> for a given <b>Class</b>,
+          it is very easy. Just use the <b>Builtin Function
+          help()</b>. For example, to list all the
+          <b>String methods</b>, type:
+        </p>
+       
+        <span class="command">
+          help(str)                   
+        </span><br>
+        
+        <p>
+          Try it.
+        </p>
+        
+        <div class="hint">
+        
+          <ul>
+            <li><b>e</b> or <b>Enter</b> or <b>&darr;</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Moves you
+              <b>Down</b>
+              the list <b>1 Line</b></li>
+            <li><b>d</b> or <b>f</b> or <b>Space</b>
+              or <b>PgDn</b>
+              - Moves you <b>Down</b>
+              the list <b>1 Page</b></li>
+            <li><b>&uarr;</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;- Move you <b>up</b> the
+              list <b>1 Line</b></li>
+            <li><b>b</b> or <b>u</b> or <b>PgUp</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Moves you
+              <b>up</b>
+              the list <b>1 Page</b></li>
+            <li><b>p</b> or <b>Home</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;
+              - Moves you to
+              the <b>Top</b> of the <b>Help</b></li>
+            <li><b>End</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              - Moves you up the <b>Bottom</b>
+              of the <b>Help</b></li>
+            <li><b>q</b> or <b>Q</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;- Returns you to the
+              <b>Interpreter Prompt</b></li>
+          </ul>
+        
+          <p>
+            What choice!! Have I missed any?
+          </p>
+        </div>
+        
+        <p>
+          <b>Input</b> and <b>Output</b> from files stored
+          on external storage devices (almost inevitably some
+          sort of <b>Disc</b> these days) relies on a
+          Builtin File to create a "<b>File Handle</b>" (or a <b>File
+          Object</b> if you prefer).
+        </p>
+        
+        <p>
+          Once the <b>File</b> reference is created, accessing the file is
+          exclusively (as far as this tutorial is concerned)
+          accomplished using <b>methods</b> associated
+          with <b>File Objects</b>.
+        </p>
+        
+        <p>
+          This being so provides a good excuse to
+          cover <b>File I/O</b> here
+          while discussing the most important <b>File Object
+          methods</b>.
+        </p>
+        
+        <p>
+          Displaying the complete list of <b>methods</b> available
+          for a <b>File Object</b> with <b>help()</b> is not
+          straight forward. <b>file</b> is not a simple single
+          <b>class</b>. However, <b>help()</b>
+          will work successfully on an <b><i>instance</i></b>
+          of a <b>File Handle</b>.
+        </p>
+        
+        <p>
+          So you could create a <b>File Handle</b> with the
+          <b>Builtin Function open</b> and the give
+          that <b>File Handle</b>
+          to <b>help()</b>.
+        </p>
+        
+        <p>
+          The trouble with that plan, is you
+          probably have no <b>file</b> handy to <b>open</b>!
+        </p>
+        
+        <p>
+          No problem! We cannot be defeated! So open a <b>file</b>
+          specifying that you wish to <b><i>WRITE</i></b> to it.
+          Now it does not need to exist. Then use <b>help()</b>
+          on that, hopefully new and empty, <b>file</b>. Clever eh!?
+        </p>
+        
+        <span class="command">
+          >>> Empty_File=open("TEST", 'w')<br>
+          >>> help(Empty_File)
+        </span>
+        
+        <p>
+          It is the <b>'w'</b> bit of the
+          <b>open</b> command that requests a file for <b>writing</b>
+          rather than just <b>reading</b> (the default)
+        </p>
+        
+        <p>
+          Try it ... or for the less adventurous, the entire list can be found
+          <a href="https://www.tutorialspoint.com/python3/file_methods.htm"
+           target="_blank">here</a>.
+        </p>
       </div><br>
-
+      
       <ol>
         <li>
           <details>
@@ -5607,55 +5761,157 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-           this section are:</b>
+        <p>
+          <hh6m>Issues introduced or reinforced in this section:</hh6m>
+        </p>
 
-        <ol type="1">
+        <ol>
           <li>
+            Introduction of <b>methods</b> as
+            functionality specific to a given
+            <b>Python Class</b>.
+          </li>
+        </ol>
+       
+        <p>
+          <hh6m>Builtin Functions introduced or reinforced in this section:</hh6m><br>
+        </p>
+        
+        <ol>
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#help"
+            target="_blank"><b>help()</b></a> - Displays
+            information relating to its single <b>Argument</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#open"
+            target="_blank"><b>open()</b></a> - Opens
+            a dis file for <b>reading</b> or <b>writing</b>.
+          </li><br>
+          
+          <li>
+          </li><br>
 
-            <b><u>Looping Code Constructs:</u></b>
+        </ol>
+        
+        <p>
+          <hh6m>methods introduced or reinforced in this section:</hh6m><br>
+        </p>
+        
+        <p>
+          <hh6m>Points noted or reinforced in this section:</hh6m>
+        </p>
 
-            <ul>
-              <li>
-              </li>
-            </ul>
-          </li>
+        <ol>
           <li>
-          </li>
+          </li><br>
+          
           <li>
-            <b><u>Modules:</u></b><br>
-            <ul>
-              <li>
-                <ul>
-                  <li>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
+          <li>
+          </li><br>
+          
           <li>
           </li>
         </ol>
+      </div>
+    </details>
+  </li><br>
 
-        <p><b>Concepts/tricks introduced thus far are:</b>
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+  <li>
+    <details class="msect">
+    <summary>
+      <span class="msectsumcon"><b>Exercise - Part VI:</b>
+              Conditional Statements - if, else, elif
+      <span>
+    </summary>
+
+<!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+      <div class="ramble">
+
+        <h2>Conditional Statements - if, else, elif</h2>
+
+      </div><br>
+
+      <ol>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>if</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect"><br>
+
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>else</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect"><br>
+            </div>
+            
+          </details>
+        </li><br>
+ 
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>elif</hh4>
+            </span>
+          </summary>
+
+            <div class="minsect"><br>
+            </div>
+            
+          </details>
+        </li><br>
+      </ol>
+
+      <div class="checkpoint">
+
+        <h2><i><u>Checkpoint</u></i></h2>
+
+        <p>
+          <hh6m>Issues introduced or reinforced in
+          this section:</hh6m>
         </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-        </ol>
-
-        <p><b>Reflections:</b>
-        </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-        </ol><br>
       </div>
     </details>
   </li><br>
@@ -7578,8 +7834,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
       <div class="checkpoint">
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-              this section are:</b>
+        <p>
+          <hh6m>Issues introduced or reinforced in
+          this section:</hh6m>
+        </p>
+        
         <ol>
           <li>
             <b><u>Looping Code Constructs:</u></b>
@@ -7598,55 +7857,58 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 <b>While</b>.
               </li>
             </ul>
-          </li><br>
+          </li>
+        </ol>
+        <p>
+          <hh6m>Built in Functions introduced or reinforced in
+          this section:<hh6m>
+        </p>
+
+        <ol>
           <li>
-            <b><u>Built in Functions:</u></b><br>
             <b>chr(i)</b> - Converts <b>ASCII Character Codes</b>
             (<b>i</b>ntegers in the range <b>0...255</b>)
             to <b>ASCII Characters</b>.<br>
+          </li><br>
             <b>ord(c)</b> - Converts <b>ASCII Characters</b>
             to <b>ASCII Character Codes</b>.<br>
           </li><br>
+        </ol>
+
+        <p>
+          <hh6m>Modules introduced or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <ol>
           <li>
-            <b><u>Modules:</u></b><br>
+            <b>random</b> - for constructs related to <b>random
+            number generation</b>,including:
             <ul>
               <li>
-                <b>random</b> - for constructs related to <b>random
-                number generation</b>,including:
-                <ul>
-                  <li>
-                    <b>randint(a, b)</b> - Returns a 
-                    random integer <b>N</b> such that
-                    <b>a <= N <= b</b>.
-                  </li>
-                </ul>
+                <b>randint(a, b)</b> - Returns a 
+                random integer <b>N</b> such that
+                <b>a <= N <= b</b>.
               </li>
             </ul>
-          </li><br>
+          </li>
+        </ol>
+          
+        <p>
+          <hh6m>Points noted or reinforced in this section:</hh6m>
+        </p>
+        
+        <ol>
           <li>
-            <b><u>Dealing with over length lines</u></b><br>
+            <b>Dealing with over length lines</b><br>
             Either by using
             enclosing brackets (<b>Python</b> preferred) or
             <b>Backslash</b> characters.
-          </li>>
-        </ol>
-
-        <p><b>Concepts/tricks introduced thus far are:</b>
-        </p>
-
-        <ol type="1">
-          <li><b>Nesting Loops</b> ... that is,
-              putting one loop inside another.
           </li>
+          
           <li>
-          </li>
-        </ol>
-
-        <p><b>Reflections:</b>
-        </p>
-
-        <ol type="1">
-          <li>
+            <b>Nesting Loops</b> ... that is,
+            putting one loop inside another.
           </li>
         </ol>
       </div>
@@ -8860,64 +9122,25 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
       </div>
 
-      <p> EXERCISE BODY
+      <p>
+        EXERCISE BODY
       </p>
 
       <div class="checkpoint">
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-        <p><b>Python elements introduced/reinforced in
-           this section are:</b>
-
-        <ol type="1">
-          <li>
-
-            <b><u>Looping Code Constructs:</u></b>
-
-            <ul>
-              <li>
-              </li>
-            </ul>
-          </li>
-          <li>
-          </li>
-          <li>
-            <b><u>Modules:</u></b><br>
-            <ul>
-              <li>
-                <ul>
-                  <li>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-          </li>
-        </ol>
-
-        <p><b>Concepts/tricks introduced thus far are:</b>
+        <p>
+          <hh6m>Issues introduced or reinforced in
+          this section:</hh6m>
         </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-        </ol>
-
-        <p><b>Reflections:</b>
+ 
+        <p>         
+          <htt6m>Module introduced or reinforced in
+          this sections:</htt6m><br>
         </p>
-
-        <ol type="1">
-          <li>
-          </li>
-          <li>
-          </li>
-        </ol><br>
+  
       </div>
-
     </details>
   </li>
 
@@ -8940,7 +9163,7 @@ Click to display your <b>Finish</b> time.</button>
 
 <!-- ############################################## ---
 
-Notes on "evolved structure:
+Notes on "evolved(ing)) structure:
 
 Major Sections (some huge some small?)
   Overview
@@ -8986,6 +9209,7 @@ Scalar Variables ... Arithmetic to Algebra in Overview
 
 Builtin Functions
 
+ ... Strings
  ... I/O
 
  CHECKPOINT
@@ -9037,5 +9261,13 @@ First-class    870   1478    104  54211    344  39.45    124    251
                           </div>
                         </details><br>
                       </li>
+                      
+Clearest statement of difference between
+procedure and function. See first answer
+https://stackoverflow.com/questions/721090/what-is-the-difference-between-a-function-and-a-procedure
+Interesting point about a function not having side effects ...
+Makes sense I suppose, but a bit picky even for me.
+
+-->
 
 

@@ -58,7 +58,7 @@ hh6m {
     text-justify: inter-word;
     text-decoration: underline;
     font-size: 17px; font-weight: bold;
-    color: SaddleBrown;
+    color: RosyBrown;
     margin-top: 0px; margin-bottom: 0px;
     margin-left: 0px; margin-right: 0px;
 }
