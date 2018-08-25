@@ -5566,8 +5566,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         <p>
           If you did wish to generate a list of all the
           available <b>methods</b> for a given <b>Class</b>,
-          it is very easy. Just use the <b>Builtin Function
-          help()</b>. For example, to list all the
+          it is very easy. Just use the <b>Builtin Function</b>
+          <a href="https://docs.python.org/3.7/library/functions.html#help"
+            target="_blank"><b>help()</b></a>.
+          For example, to list all the
           <b>String methods</b>, type:
         </p>
        
@@ -5632,13 +5634,14 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         <p>
           <b>Input</b> and <b>Output</b> from files stored
           on external storage devices (almost inevitably some
-          sort of <b>Disc</b> these days) relies on a
+          sort of <b>Disk</b> these days) relies on a
           Builtin File to create a "<b>File Handle</b>" (or a <b>File
           Object</b> if you prefer).
         </p>
         
         <p>
-          Once the <b>File</b> reference is created, accessing the file is
+          Once the <b>File</b> reference is created, accessing
+          the file is
           exclusively (as far as this tutorial is concerned)
           accomplished using <b>methods</b> associated
           with <b>File Objects</b>.
@@ -5697,16 +5700,512 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         </p>
       </div><br>
       
+      <h2><u>Basic SYNTAX for using a method.</u></h2>
+      
+      <p>
+      There are <b>four</b> ways of request
+      the execution of a <b>method</b>.
+      The first two are the more common.
+      Informally the alternatives are:
+      </p>
+      
+      <ol>
+        <li>
+          <i>&lt;Variable Identifier&gt;.&lt;method&gt;(Arguments)</i>
+        </li><br>
+        
+        <li>
+          <i>&lt;Class Value&gt;.&lt;method&gt;(Arguments)</i>
+        </li><br>
+        
+        <li>
+          <i>&lt;Class&gt;.&lt;method&gt;(Variable Identifier,Arguments)</i>
+        </li><br>
+        
+        <li>
+          <i>&lt;Class&gt;.&lt;method&gt;(Class Value,Arguments)</i>
+        </li>
+      </ol>
+      
+      <p>
+        An example requires exposure to at least one particular method.
+      </p>
+      
+      <p>
+        OK, title is a method of the <b>Class str</b>.
+      </p>
+      
+      <p>
+        It capitalizes the first letter of each word of the
+        <b>String</b> it processes. It needs no <b>Arguments</b> except
+        the <b>String</b> to be capitalized.
+      </p>
+      
+      <p>
+        The <b>four</b> options, in order, would be:
+      </p>
+      
+      <ol>
+        <li>
+          <span class="command15">
+            >>> Bon_Mot="these are my principles.
+            if you don't like them, i have others."<br>
+            >>> Bon_Mot.title()<br>
+            "These Are My Principles.
+            If You Don'T Like Them, I Have Others."<br>
+            >>> 
+          </span>
+        </li><br>
+        
+        <li>
+          <span class="command15">
+            >>> "these are my principles.
+            if you don't like them, i have others.".title()<br>
+            "These Are My Principles.
+            If You Don'T Like Them, I Have Others."<br>
+            >>> 
+          </span>
+        </li><br>
+        
+        <li>
+          <span class="command15">
+            >>> Bon_Mot="these are my principles.
+            if you don't like them, i have others."<br>
+            >>> str.title(Bon_Mot)<br>
+            "These Are My Principles.
+            If You Don'T Like Them, I Have Others."<br>
+            >>> 
+          </span>
+        </li><br>
+        
+        <li>
+          <span class="command15">
+            >>> str.title("these are my principles.
+            if you don't like them, i have others.")<br>
+            "These Are My Principles.
+            If You Don'T Like Them, I Have Others."<br>
+            >>> 
+          </span>
+        </li>
+      </ol>
+
+      <p>
+        Interesting that <b>title</b> makes the '<i>t</i>' of
+        '<i>don't</i>' upper case? Perhaps a protest of the
+        ghastly truncation? I certainly does not
+        seem quite correct even so.
+      
+      <p>
+        Thanks to <b>Groucho</b> (<b>Marx</b> that is)
+        for the gloriously flexible ethics. 
+      </p>
+
       <ol>
         <li>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>str methods</hh4>
+              <hh4>String methods</hh4>
             </span>
           </summary>
 
             <div class="minsect"><br>
+            
+              The are, as you will have seen when
+              you typed <b>help(str)</b>, many <b>str</b>
+              methods. For a reminder (and an
+              opportunity to extend the practice
+              offered in this tutorial), try this
+              <a href="https://www.programiz.com/python-programming/strings-method"
+               target="_blank">URL</a>.<br><br>
+<!--
+Sites for list of String methods:
+https://www.programiz.com/python-programming/strings-method
+   Claims to be comprensive andsuccinct descriptions
+   Chose this one *****
+   
+https://www.w3schools.com/python/python_ref_string.asp
+   OK, but incomplete AND does not follow up on all that are listed???
+   Usually like this site!
+   
+https://www.quackit.com/python/reference/python_3_string_methods.cfm
+   Looks good but too much detail for each method.
+   No godd as list to quickly run down
+-->        
+              Several of these will only make full
+              sense after we have looked at a bit
+              more <b>Python</b>. Most of
+              these will be considered later, at
+              a more appropriate stage.<br><br>
+               
+              Here, we will look briefly at a quite
+              extensive selection of
+              simple examples to convey the idea
+              of a <b>method</b>, rather than to
+              acquire the capacity to be able to
+              manipulate <b>Strings</b> in every
+              way possible.<br><br>
+              
+              <p class="hint">
+                <b>It is Important to Note:<i>All</i>
+                String methods</b> returns new values.<br><br>
+                
+                They <b><i>do not change</i></b> the original <b>String</b>.
+              </p>
+              
+              <hh5m>methods to manipulate, primarily, Alpha Strings:</hh5m><br><br>
+              
+                <hh5mm>Case orientated:</hh5mm><br><br>
+                
+                  <table class="c3">
+                    <tr>
+                      <th style="min-width=10%">Method</th>
+                      <th style="min-width=90%">Effect</th>
+                    </tr>
+                    <tr>
+                      <td><b>
+                        <a href="https://www.programiz.com/python-programming/methods/string/lower"
+                         target="_blank">str.lower()</a></b>
+                      </td>
+                      <td>
+                        Returns a copy of all lowercased string.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/casefold"
+                         target="_blank"><b>str.casefold()</b></a>
+                      </td>
+                      <td>
+                        Returns a lowercase string, generally
+                        used for caseless matching. This
+                        is more aggressive than the lower() method.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/upper"
+                         target="_blank"><b>str.upper()</b></a>
+                      </td>
+                      <td>
+                        Returns a copy of all uppercased string.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/swapcase"
+                         target="_blank"><b>str.swapcase()</b></a>
+                      </td>
+                      <td>
+                        Returns a string with lowercase characters
+                        converted to uppercase and vice versa.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/capitalize"
+                         target="_blank"><b>str.capitalize()</b></a>
+                      </td>
+                      <td>
+                        Returns the string with first letter
+                        capitalized and the rest lowercased.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/title"
+                         target="_blank"><b>str.title()<a></b>
+                      </td>
+                      <td>
+                        Returns a title (first character of
+                        each word capitalized, others
+                        lowercased) cased string.
+                      </td> 
+                    </tr>
+                  </table><br><br>
+                  
+                  The difference between <b>casefold()</b> and
+                  <b>lower()</b> is discussed
+                  <a href="https://stackoverflow.com/questions/45745661/python-lower-vs-casefold-in-string-matching-and-converting-to-lowercase"
+                   target="_blank">here</a>.<br><br>
+                  
+                  Essentially, <b>lower()</b> only translates
+                  characters from the <b>Range A-Z</b> into their
+                  counterparts in the <b>Range a-z</b>.<br><br>
+                  
+                  <b>casefold()</b> attempts to cater for
+                  characters from other alphabets,
+                  which is very clever, but
+                  I think I will stick to <b>lower()</b> for the
+                  purposes of this tutorial.<br><br>
+
+<!--
+Change Mixed case sequence into upper case
+
+>>> Forward_Mixed=('acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact')
+>>> Forward_Upper=Forward_Mixed.upper()
+>>> Forward_Upper
+'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'
+>>> 
+
+Complement it 
+
+>>> Forward_Upper = Forward_Mixed.upper()
+>>> Forward_Complement = Forward_Upper.replace('A', 'X')
+>>> Forward_Complement = Forward_Complement.replace('C', 'Z')
+>>> Forward_Complement = Forward_Complement.replace('G', 'C')
+>>> Forward_Complement = Forward_Complement.replace('T', 'A')
+>>> Forward_Complement = Forward_Complement.replace('X', 'T')
+>>> Forward_Complement = Forward_Complement.replace('Z', 'G')
+>>> Forward_Complement
+'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'
+>>> Forward_Upper
+'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'
+>>> 
+
+Complement it in one line!
+>>> Forward_Mixed.upper().replace('A', 'X').replace('C','Z').replace('G','C') \
+... .replace('T', 'A').replace('X','T').replace('Z','G')
+'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'
+>>> 
+
+Reverse and complement in one line!
+needs reversed!! .... must do this and range ... after list
+both are builtin functions
+
+methods not mentioned here, mostly because they involve lists of some sort
+or because they are too weird!
+
+-->
+
+                <hh5mm>Justification and similar:</hh5mm><br><br>
+                
+                  <table class="c3">
+                    <tr>
+                      <th>Method</th>
+                      <th>Effect</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/ljust"
+                         target="_blank"><b>str.ljust()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String
+                        Left Justified</b> within the
+                        provided width, with optional
+                        <b>Fill Characters</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/rjust"
+                         target="_blank"><b>str.rjust()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String
+                        Right Justified</b> within the
+                        provided width, with optional Fill Characters.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/center"
+                         target="_blank"><b>str.center()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String
+                        Centred</b> within the specified
+                        width, with optional </b>Fill Character</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/lstrip"
+                         target="_blank"><b>str.lstrip()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String</b>
+                        with provided leading characters removed.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/rstrip"
+                         target="_blank"><b>str.rstrip()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String</b>
+                         with provided trailing characters removed.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/strip"
+                         target="_blank"><b>str.strip()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns</b> the <b>String</b>
+                        with provided leading and trailing characters removed.
+                      </td> 
+                    </tr>
+                  </table><br><br>
+
+
+
+
+
+                <hh5mm>Testing String content:</hh5mm><br><br>
+                
+                  <table class="c3">
+                    <tr>
+                      <th>Method</th>
+                      <th>Effect</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isalnum"
+                         target="_blank"><b>str.isalnum()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Alphanumeric</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isalpha"
+                         target="_blank"><b>str.isalpha()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Alphabetic</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isdecimal"
+                         target="_blank"><b>str.isdecimal()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Decimal Characters</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isdigit"
+                         target="_blank"><b>str.isdigit()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Digits</b>.
+                      </td> 
+                    </tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/islower"
+                         target="_blank"><b>str.islower()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        has all <b>Lowercased Characters</b> and
+                        at least one is a <b>Cased Character</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isnumeric"
+                         target="_blank"><b>str.isnumeric()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Numeric</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isupper"
+                         target="_blank"><b>str.isupper()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        has all <b>Uppercased Characters</b> and at least one is <b>Cased Character</b>.
+                      </td> 
+                    </tr>
+                   <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isprintable"
+                         target="_blank"><b>str.isprintable()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is empty or all characters are <b>Printable</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isspace"
+                         target="_blank"><b>str.isspace()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and all characters are
+                        <b>Whitespaces</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/istitle"
+                         target="_blank"><b>str.istitle()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is non-empty and <b>Titlecased</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.programiz.com/python-programming/methods/string/isidentifier"
+                         target="_blank"><b>str.isidentifier()</b></a>
+                      </td>
+                      <td>
+                        <b>Returns True</b> if the <b>String</b>
+                        is a <b>Valid Identifier</b>.
+                      </td> 
+                    </tr>
+                    <tr>
+                  </table><br><br>
+
+replace() - Replace all old substrings with new substrings.
+
+
+
+
+
+methods to examine the content of a String:
+
+count() - Count the non-overlapping occurrence of supplied substring in the string.
+startswith() - Return true if the string starts with the provided substring.
+endswith() - Returns ture if the string ends with the supplied substring.
+find() - Return the index of the first occurrence of supplied substring in the string. Return -1 if not found.
+index() - Return the index of the first occurrence of supplied substring in the string. Raise ValueError if not found.
+rfind() - Return the index of the last occurrence of supplied substring in the string. Return -1 if not found.
+rindex() - Return the index of the last occurrence of supplied substring in the string. Raise ValueError if not found.
+
+
+find or index?
+https://stackoverflow.com/questions/22190064/difference-between-find-and-index
+
+
+format() - Format the given string.
+
+
+
 
             </div>
           </details>
@@ -5716,32 +6215,12 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>Input/Output from/to Disc Files</hh4>
+              <hh4>Input/Output from/to Disk Files</hh4>
             </span>
           </summary>
 
             <div class="minsect"><br>
 
-              <p>
-              </p>
-
-              <ul>
-                <li>11111
-                </li><br>
-
-                <li>22222
-                </li><br>
-
-                <li>3333333<br>
-                  <span class="command">
-                    >>> 
-                  </span><br>
-
-                  <p class="hint"><b>Important Note</b>:
-                  </p>
-
-                </li>
-              </ul>
             </div>
           </details>
         </li>
@@ -5764,7 +6243,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         </ol>
        
         <p>
-          <hh6m>Builtin Functions introduced or reinforced in this section:</hh6m><br>
+          <hh6m>Builtin Functions introduced or 
+          reinforced in this section:</hh6m><br>
         </p>
         
         <ol>
@@ -5777,7 +6257,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#open"
             target="_blank"><b>open()</b></a> - Opens
-            a dis file for <b>reading</b> or <b>writing</b>.
+            a disk file for <b>reading</b> or <b>writing</b>.
           </li><br>
           
           <li>
@@ -5786,11 +6266,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         </ol>
         
         <p>
-          <hh6m>methods introduced or reinforced in this section:</hh6m><br>
+          <hh6m>methods introduced or
+          reinforced in this section:</hh6m><br>
         </p>
         
         <p>
-          <hh6m>Points noted or reinforced in this section:</hh6m>
+          <hh6m>Points noted or 
+          reinforced in this section:</hh6m>
         </p>
 
         <ol>

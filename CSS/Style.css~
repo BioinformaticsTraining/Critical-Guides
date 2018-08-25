@@ -52,13 +52,23 @@ hh5m {
     margin-left: 15px; margin-right: 0px;
 }
 
+hh5mm {
+    display : inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px; font-weight: bold;
+    color: DeepSkyBlue;
+    margin-top: 0px; margin-bottom: 0px;
+    margin-left: 25px; margin-right: 0px;
+}
+
 hh6m {
     display : inline-block;
     text-align: justify;
     text-justify: inter-word;
     text-decoration: underline;
     font-size: 17px; font-weight: bold;
-    color: RosyBrown;
+    color: SaddleBrown;
     margin-top: 0px; margin-bottom: 0px;
     margin-left: 0px; margin-right: 0px;
 }
@@ -108,6 +118,36 @@ table.c2 th {
 table.c2 td {
     border:1px solid black;
 }
+
+/* Table 80% ... new version? */
+
+table.c3 {
+    table-layout: auto;
+    margin-left:40px; margin-right:auto;
+    border:1px solid black; border-collapse: collapse;
+    width:100%; background:PowderBlue;
+}
+
+table.c3 th {
+    padding: 15px;
+    border:1px solid black;
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: auto;
+}
+
+table.c3 td {
+    padding: 15px;
+    border:1px solid black;
+}
+
+}
+
+table.absorbing-column {
+    width: 100%;
+}
+
 /* div for blocks of rambling text */
 
 div.ramble {
