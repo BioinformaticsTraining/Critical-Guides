@@ -5936,29 +5936,35 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 <h2><i><u>Questions &
                 Simple Exercises</u></i></h2>                 
                 
-                There are far too many <b>str methods</b>
-                (<b>methods</b> in
-                general even) to try and include all in a
-                sensible
-                number of short exercises. I aim for a
-                representative few.<br><br>
+	             <p> 
+	               There are far too many <b>str methods</b>
+                  (<b>methods</b> in
+                  general even) to try and include all in a
+                  sensible
+                  number of short exercises. I aim for a
+                  representative few.
+                </p>
                 
-                If you wish to know more about any I omit,
-                I draw your
-                attention to the <b>Links</b> I have embedded
-                in the
-                <b>method Tables</b> (and the <b>List of
-                methods</b>
-                in the <b>Checkout</b> section).<br><br>
+	             <p> 
+                  If you wish to know more about any I omit,
+                  I draw your
+                  attention to the <b>Links</b> I have embedded
+                  in the
+                  <b>method Tables</b> (and the <b>List of
+                  methods</b>
+                  in the <b>Checkout</b> section).<br><br>
+                </p>
                 
-                These take you to the section of the
-                <b>Python manual</b> that
-                describes, fully, each <b>method</b>.<br>
+	             <p> 
+                  These take you to the section of the
+                  <b>Python manual</b> that
+                  describes, fully, each <b>method</b>.<br>
+                </p>
                 
                 <ol>
                   <li>
                     Consider the <b>DNA</b> sequence:<br><br>
-                    
+             
                     "<b>acgGTaCCCCCatcaaTTATgcccGT</b>"
                     
                     Assuming the mixture of cases to be pure whimsy,
@@ -6034,7 +6040,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         Pointless <b>Swapped Case Sequence</b>
                         created and stored in <b>four</b> different ways.
                         All good.<br><br>
-                        
+                       
                         From this point I will just use the most
                         common syntactic form.<br><br>
                         
@@ -6173,6 +6179,150 @@ or because they are too weird!
                   </td> 
                 </tr>
               </table><br><br>
+              
+              <div class="question">
+
+                <h2><i><u>Questions &
+                Simple Exercises</u></i></h2>                 
+                
+                <ol>
+                  <li>
+                  Once upon a time, the great <b>Spike</b>
+                  (<b>Milligan</b> that is) composed a poem
+                  that commenced thus:<br><br>
+                  
+                  <i>"a poem by spike - about his granny<br><br>
+                  through every nook and every cranny<br>
+                  the wind blew in on poor old Granny<br>
+                  around her knees, into each ear<br>
+                  (and up nose as well, I fear)"</i><br><br>
+                  
+                  You task is store the entire poem
+                  in a single, suitably named, <b>Variable</b>
+                  so that:<br><br>
+                  
+                  <ul>
+                    <li>
+                      The <b>Title</b>, (using <b>Title Case</b>,
+                      of course)
+                      is centred in <b>60 Characters</b>
+                      with '<b>.</b>' as padding.
+                    </li><br>
+                    <li>
+                       Each line of the poem (with the first
+                       character <b>Upper Case</b>, of course)
+                       is to be right adjusted in <b>40 Characters</b>
+                       (<b>Fill Character</b> '<b>-</b>') and then left
+                       adjusted in <b>60 Characters</b>
+                       (<b>Fill Character</b> '<b>*</b>'))
+                     </li>
+                   </ul><br>
+                   
+                   Tough one? Probably, but have manly/womanly
+                   go before you cheat.<br><br>
+                   <p class="hint">
+                     Note: You need to add <b>Line Feeds</b>
+                     into your creation, or it will spill
+                     out in a single line
+                     (as it has just done for me!).
+                   </p>
+                   
+                   <p class="hint">
+                     A number of the <b>methods</b> you will
+                     need take both <b>Mandatory</b> and
+                     <b>Optional Arguments</b> I have not
+                     told you about.<br><br>
+                     
+                     Look them up using the links to the
+                     <b>Manual</b> provided. What you need to know
+                     is clear at and the top of the page.<br><br>
+                     
+                     From here on, I assume you do this
+                     as a matter of course. To try and include
+                     everything here would be very clumsy.<br><br>
+                     
+                     Also, constant reference to <b>Manual
+                     Pages</b> (and in desperation,
+                     greater <b>Google</b>) is standard
+                     coding practice).
+                   </p>
+                       
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command">
+                          >>> Spike_Poem='\n\n' + "a poem by
+                          spike - about his granny"\
+                          ... .title().center(65,'.') +
+                          '\n\n'<br>
+                          >>> Spike_Poem+="through every nook
+                          and every cranny"\<br>
+                          ...
+                          .capitalize().rjust(40,'-').ljust(60,'*')
+                          + '\n'<br>
+                          >>> Spike_Poem+="the wind blew in on
+                          poor old Granny"\<br>
+                          ...
+                          .capitalize().rjust(40,'-').ljust(60,'*')
+                          + '\n'<br>
+                          >>> Spike_Poem+="around her knees,
+                          into each ear"\<br>
+                          ...
+                          .capitalize().rjust(40,'-').ljust(60,'*')
+                          + '\n'<br>
+                          >>> Spike_Poem+="(and up nose as
+                          well, I fear)"\<br>
+                          ...
+                          .capitalize().rjust(40,'-').ljust(60,'*')
+                          + '\n'<br>
+                          >>> print(Spike_Poem)<br>
+                          <br>
+                          <br>
+                          .............A Poem By Spike - About His Granny.............<br>
+                          <br>
+                          -----Through every nook and every
+                          cranny********************<br>
+                          -----The wind blew in on poor old
+                          granny********************<br>
+                          ---------Around her knees, into each
+                          ear********************<br>
+                          -----------(and up nose as well, i
+                          fear)********************<br>
+                          <br>
+                          >>> <br>
+                        </span><br><br>
+                        
+                        <b>Note</b> the use of he <b>Backslash
+                        Character</b> to deal with very
+                        long lines. The <b>Interpreter</b> will join
+                        together lines separated by a <b>Backslash</b>
+                        and interpret them as a singe line.<br><br>
+                        
+                        I changed all the <b>Upper Case Letters</b> in 
+                        <a href="https://www.poemhunter.com/poem/granny/"
+                         target="_blank"><b>Spike's</b> original composition</a>,
+                        vaguely wondering how many I could put back.<br><br>
+                        
+                        I failed consistently on those not at the start of a line,
+                        but I did have a small hope for "<b>(and</b>" being returned to
+                        "<b>(And</b>" (Last Line). Given the way "<b>don't</b>" was
+                        transformed to "<b>Don'T</b>" earlier. Ho hum, I have
+                        survived greater disappointments.<br><br>
+                        
+                        Note the way <b>methods</b> can be strung together.
+                        For example
+                        "....<b>capitalize().rjust(40,'-').ljust(60,'*')</b>".
+                        If this is not the first time I have mentioned this,
+                        it is called "<b>Reinforcement</b>" and is thus an
+                        absolutely deliberate pedagogic strategy!
+                        
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div><br><br>
 
               <hh5m>methods to test String content:</hh5m><br><br>
                 
@@ -6304,6 +6454,7 @@ or because they are too weird!
               </table><br><br>
 
               <hh5m>methods to modify String content:</hh5m><br><br>
+
                 
               <table class="c3">
                 <tr>
@@ -6320,7 +6471,7 @@ or because they are too weird!
                   </td> 
                 </tr>
               </table><br><br>
-
+              
               <hh5m>methods to examine String content:</hh5m><br><br>
 
               <table class="c3">
