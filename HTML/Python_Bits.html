@@ -6374,6 +6374,17 @@ or because they are too weird!
                     is non-empty and all characters are
                     <b>Digits</b>.
                   </td> 
+                <tr>
+                  <td>
+                    <a href="https://www.programiz.com/python-programming/methods/string/isnumeric"
+                     target="_blank"><b>str.isnumeric()</b></a>
+                  </td>
+                  <td>
+                    <b>Returns True</b> if the <b>String</b>
+                    is non-empty and all characters are
+                    <b>Numeric</b>.
+                  </td> 
+                </tr>
                 </tr>
                   <td>
                     <a href="https://www.programiz.com/python-programming/methods/string/islower"
@@ -6384,17 +6395,6 @@ or because they are too weird!
                     Characters</b> of the <b>String</b>
                     are <b>Lower Case</b> and there is
                     at least one <b>Cased Character</b>.
-                  </td> 
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.programiz.com/python-programming/methods/string/isnumeric"
-                     target="_blank"><b>str.isnumeric()</b></a>
-                  </td>
-                  <td>
-                    <b>Returns True</b> if the <b>String</b>
-                    is non-empty and all characters are
-                    <b>Numeric</b>.
                   </td> 
                 </tr>
                 <tr>
@@ -6452,10 +6452,270 @@ or because they are too weird!
                 </tr>
                 <tr>
               </table><br><br>
+              
+              <div class="question">
 
-              <hh5m>methods to modify String content:</hh5m><br><br>
-
+                <h2><i><u>Questions &
+                Simple Exercises</u></i></h2>                 
                 
+                <ol>
+                  <li>
+                    Not so many inspiring exercises for this
+                    set of methods!<br><br>
+                    
+                    I start by wondering what, precisely, is
+                    the difference between
+                    <b>isdecimal()</b>, <b>isdigit()</b> and
+                    <b>isnumeric()</b>.<br><br>
+                    
+                    The obvious way to find out is to consult
+                    the appropriate <b>Manual
+                    Pages</b> and then test out their
+                    interpretation
+                    with a few examples.<br><br>
+                    
+                    Well, that is what I am about to do, have
+                    a go and I will meet you in the answer.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        I was hoping for "simple here"! Not quite I fear.
+                      
+                        After reading the <b>Manual Pages</b> and a
+                        bit of <b>Googling</b>. I conclude that,
+                        in the world of <b>Python</b>:<br><br>
+                      
+                        <ul>
+                          <li>
+                            <b>Decimals</b> are a subset of <b>Digits</b>.<br>
+                            <b>Digits</b> are a subset of <b>Numerics</b>.<br>
+                          </li><br>
+                        
+                          <li>
+                            <b>Decimals</b> are <b>Characters</b> in the
+                            range <b>0</b> to <b>9</b>.
+                            A mere <b>ten</b> possibilities.
+                          </li><br>
+                        
+                          <li>
+                            <b>Digits</b> are <b>Decimals</b> or:
+                            <ul>
+                              <li>
+                                <b>Superscripts</b>.
+                              </li>
+                              <li>
+                                <b>Subscripts</b>.
+                              </li>
+                            </ul>
+                          </li><br>
+          
+                          <li>
+                            <b>Numerics</b> are <b>Digits</b> or:
+                             <ul>
+                               <li>
+                                <b>Roman Numerals</b>.<br>                            </li>
+                              <li>
+                                <b>Fractions</b>.
+                              </li>
+                              <li>
+                                <b>Currency Numerators</b>.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      
+                        The main complication with actually testing the
+                        performance of the methods is that it is not
+                        possible to just type in <b>Superscripts</b>,
+                        <b>Subscripts</b>, <b>Roman Numerals</b>,
+                        <b>Fractions</b> or <b>Currency Numerators</b>.
+                        They simply do not exist on your
+                        keyboard.<br><br>
+                      
+                        <p class="hint">
+                          Unfortunately, a <b>Roman Numerals</b>,
+                          in this context, is not just a combination
+                          of the Characters <b>I</b>, <b>V</b>,
+                          <b>X</b>, <b>L</b>, <b>C</b>
+                          and <b>M</b>".<br><br>
+                         
+                          Each <b>Roman Numerals</b> has its own
+                          <b>Unicode</b> representation. It is
+                          that which is
+                          <b>Numeric</b>, but not <b>Digital</b>
+                          or <b>Decimal</b>
+                          according to <b>Python</b>.<br><br>
+                        
+                          I am not going to discuss <b>Unicode</b>
+                          representation of <b>Numerals</b> here, but
+                          <a href="https://en.wikipedia.org/wiki/Numerals_in_Unicode"
+                          target="_blank">this <b>Wikipedia
+                          Article</b></a> is very clear if you wish
+                          to know more.
+                        </p>
+                      
+                        <p class="hint">
+                          I am not absolutely clear what
+                          a <b>Currency Numerators</b> is?
+                        
+                          However, I have discovered an example
+                          which will be sufficiency for
+                          current needs.<br><br>
+                        
+                          As you are already probably aware, the
+                          <a href="https://www.fileformat.info/info/unicode/char/09f4/index.htm"
+                           target="_blank"><b>Bengali Currency
+                          Numerator One</b></a> is <b>'৴'</b>, and its
+                          Unicode representation is '<b>\u09F4</b>'.
+                          Enough!
+                        </p>
+                      
+                        <b>Unicode</b> representations for each type of
+                        non <b>Keyboard Character</b> are required.
+                        We have,
+                        sufficient to test the methods.<br><br>
+                      
+                        <ul>
+                          <li>
+                            Example <b>Superscript</b>:
+                            '<b>\u2077</b>'
+                          </li>
+                          <li>
+                            Example <b>Subscript</b>:
+                            '<b>\u2084</b>'
+                          </li>
+                          <li>
+                            Example <b>Fraction</b>:
+                            '<b>\u00BD</b>'
+                          </li>
+                          <li>
+                            Example <b>Currency Numerator</b>:
+                            '<b>\u09F4</b>'
+                          </li>
+                        <ul><br><br>
+                      
+                        Proof they all work:<br><br>
+                      
+                        <span class="command">
+                          >>> print ("Superscripted    7: \u2077")<br>
+                          Superscripted    7: ⁷<br>
+                          >>> print ("Subscripted      4: \u2084")<br>
+                          Subscripted      4: ₄<br>
+                          >>> print ("The Faction   Half: \u00BD")<br>
+                          The Faction   Half: ½<br>
+                          >>> print ("Currency Numerator: \u09F4")<br>
+                          Currency Numerator: ৴<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        Finally the tests:<br><br>
+                      
+                        <span class="command">
+                          >>> All_Decimals="1234567890"<br>
+                          >>> All_Decimals.isdecimal()<br>
+                          True<br>
+                          >>> All_Decimals.isdigit()<br>
+                          True<br>
+                          >>> All_Decimals.isnumeric()<br>
+                          True<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        Which feels fine. <b>0</b> to <b>9</b>
+                        is a <b>Decimal</b>. A <b>Decimal</b>
+                        is a <b>Digit</b>. A <b>Digit</b> is a
+                        <b>Numeric</b>. Jolly good!<br><br>
+                      
+                        <span class="command">
+                          >>> Sub_Sup="\u2077\u2084"<br>
+                          >>> print (Sub_Sup)<br>
+                          ⁷₄<br>
+                          >>> (All_Decimals + Sub_Sup).isdecimal()<br>
+                          False<br>
+                          >>> (All_Decimals + Sub_Sup).isdigit()<br>
+                          True<br>
+                          >>> (All_Decimals + Sub_Sup).isnumeric()<br>
+                          True<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        But add in a <b>Subscript</b> and/or a
+                        <b>Superscript</b> to the test <b>String</b>
+                        and it is no longer a <b>Decimal</b>
+                        <b>String</b>.
+                        This fits expectation nicely.<br><br>
+                                            
+                        <span class="command">
+                          >>> RomCodes="\u2160 \u2161 \u2162
+                          \u2170 \u2171 \u2172 \u2180 \u2181
+                          \u2182"<br>
+                          >>> print (RomCodes)<br>
+                          Ⅰ Ⅱ Ⅲ ⅰ ⅱ ⅲ ↀ ↁ ↂ<br>
+                          >>>
+                          RomCodes="\u2160\u2161\u2162\u2170\u2171\u2172\u2180\u2181\u2182"<br>
+                          >>> RomCodes.isnumeric()<br>
+                          True<br>
+                          >>> RomCodes.isdecimal()<br>
+                          False<br>
+                          >>> RomCodes.isdigit()<br>
+                          False<br>
+                          >>> 
+                        </span><br><br>
+ 
+                        Build a <b>String</b> of
+                        <b>Roman Numeral Codes</b>
+                        and that <b>String</b> will not
+                        register as
+                        <b>Decimal</b> or <b>Digital</b>,
+                        just <b>Numeric</b>.<br><br>
+                       
+                        I built the <b>String</b> twice.
+                        The first time with
+                        <b>Spaces</b> to make it print clearly.
+                        I thought
+                        you would like to see the <b>Roman
+                        Numerals</b> for
+                        really <b>BIG</b> numbers.<br><br>
+                      
+                        Strange ... I never realised the Romans
+                        could count to that many?<br><br>
+                      
+                        The <b>Spaces</b> had to be removed
+                        for the
+                        test of course, as they would register
+                        as non <b>Numeric</b> and spoil
+                        everything.<br><br>
+                      
+                        <span class="command">
+                          >>> print('\u09F4')<br>
+                                ৴<br>
+                          >>> print('\u09F4'.isdigit())<br>
+                          False<br>
+                          >>> print('\u09F4'.isdecimal())<br>
+                          False<br>
+                          >>> print('\u09F4'.isnumeric())<br>
+                          True<br>
+                          >>>
+                        </span><br><br>
+                      
+                        Finally! the <b>Bengali Currency Numerator</b>.
+                        Well, it worked OK. It admits to being a
+                        <b>Numeric</b> but not a <b>Decimal</b>
+                        or a <b>Digit</b>.<br><br>
+                      
+                        I rest, wondering wearily what idiot
+                        thought this might be a good question to ask!!
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div><br><br>
+               
+              <hh5m>methods to modify String content:</hh5m><br><br>
+               
               <table class="c3">
                 <tr>
                   <th>Method</th>
