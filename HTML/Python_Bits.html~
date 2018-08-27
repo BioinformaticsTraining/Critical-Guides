@@ -1,9 +1,9 @@
 <!DOCTYPE html>
- 
+
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
- 
+
 <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
 
 <script src="../JavaScript/Script.js"></script>
@@ -16,11 +16,11 @@ A{text-decoration:none}
 </STYLE>
 
 </head>
- 
+
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
- 
+
 <body style="background-color:LightBlue;
              font-family: 'Times New Roman', Times, serif;
              font-size: 16px;">
@@ -40,7 +40,7 @@ A{text-decoration:none}
          target="_blank">
       <img src="../Images/ToyTown.jpeg"
            alt="Darn!" height="173" width="250"></a>
-    </td>   
+    </td>
     <td style="text-align:right;">
       <a href="https://www.essex.ac.uk/"
          target="_blank">
@@ -49,7 +49,7 @@ A{text-decoration:none}
     </td>
   <tr/>
 </table><br><br>
-     
+
 <!-- Guide Title - Something like -->
 
 <h1 style="text-align:center";>
@@ -175,12 +175,12 @@ Click to record your <b>Start</b> time.</button>
 
         <p>As a swift search of the <b>INTERNET</b> will confirm,
            there are many fine <b>Python Tutorials</b>
-           freely available. Amongst which is this 
+           freely available. Amongst which is this
            <a href="https://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html"
             target="_blank">Python Online Tutorial/Manual</a>.
             Both a <b>Manual</b> and a <b>Tutorial</b>.
         </p>
-  
+
         <h2>Structure</h2>
 
         <p>I have attempted a series of topics, offering
@@ -355,7 +355,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               instructs the computer to obey. If you are
               very lucky, the computer sometimes
               actually does what you intended!<br><br>
-              
+
               You can use the <b>PYTHON Interpreter</b> in two
               very different ways:<br>
 
@@ -431,7 +431,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     Type "help", "copyright", "credits"
                     or "license"
                     for more information.<br>
-                    >>> 
+                    >>>
                   </span><br>
 
                   <p class="hint"><b>Important Note</b>: If
@@ -640,7 +640,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     5<br>
                     >>> +5 - -5<br>
                     10<br>
-                    >>> 
+                    >>>
                   </span>
                 </li>
               </ol>
@@ -818,7 +818,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     3.0<br>
                     >>> 12 % 4.0<br>
                     0.0<br>
-                    >>> 
+                    >>>
                   </span>
                 </li>
               </ol>
@@ -915,7 +915,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   sense between <b>strings</b>
                   is '<b>Concatenation</b>'.<br><br>
 
-                  To '<b>Concatenate</b>' two or more 
+                  To '<b>Concatenate</b>' two or more
                   <b>Strings</b>, is to join them together to make
                   just one longer <b>String</b>.<br><br>
 
@@ -1026,13 +1026,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     'h'<br>
                     >>> A_Long_String[0]<br>
                     'T'<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
                   Good plan, but should not
                   <b>A_Long_String[1]</b>
                   have returned the first letter of this gloomy
-                  reflection of 
+                  reflection of
                   <a href="https://en.wikipedia.org/wiki/Oscar_Wilde"
                    target="_blank">Oscar Wilde</a>?<br><br>
 
@@ -1072,7 +1072,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     'Be yourself'<br>
                     >>> Another_one_from_Oscar[:11]<br>
                     'Be yourself'<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
                   Notice that if the first number is omitted,
@@ -1085,7 +1085,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     'everyone else is already taken'<br>
                     >>> Another_one_from_Oscar[13:]<br>
                     'everyone else is already taken'<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
                   If the second number is omitted, the last
@@ -1096,7 +1096,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     everyone else is already taken"<br>
                     >>> Another_one_from_Oscar[27:10]<br>
                     ''<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
                   Asking for the impossible results in a
@@ -1126,10 +1126,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     True<br>
                     >>> "impossible" not in Alice<br>
                     False<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
-                  Clearly, '<b>not in</b>' can be used to test for 
+                  Clearly, '<b>not in</b>' can be used to test for
                   the absence of a <b>substring</b>.<br><br>
 
                 </li>
@@ -1171,7 +1171,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                         <p>nor:<br>
                         </p>
- 
+
                         <span class="command">
                           >>> "A double quote " in a string"<br>
                           &nbsp;&nbsp;File "<stdin>", line 1<br>
@@ -1183,7 +1183,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
                           SyntaxError: invalid syntax<br>
-                          >>> 
+                          >>>
                         </span>
 
                         <p>will do!
@@ -1215,7 +1215,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           "A single quote ' in a string"<br>
                           >>> 'A double quote " in a string'<br>
                           'A double quote " in a string'<br>
-                          >>> 
+                          >>>
                         </span>
 
                         <p>No reason why this trick should not
@@ -1232,7 +1232,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           """"""""" in a string'<br>
                           'Lots of double quotes
                           """"""""" in a string'<br>
-                          >>> 
+                          >>>
                         </span><br>
 
                         <p>The <b>Backslash Character</b> can
@@ -1276,9 +1276,9 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           backslash protected Quote")<br>
                           A string including " a
                           backslash protected Quote<br>
-                          >>> 
+                          >>>
                         </span><br>
- 
+
                         <p>Using this trick, any number and
                            assortment of <b>Quotes</b> inside
                            a <b>String</b> can be handled.
@@ -1291,7 +1291,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           silly quotes")<br>
                           A String with "''"'" assorted,
                           silly quotes<br>
-                          >>> 
+                          >>>
                         </span>
                       </div>
                     </details>
@@ -1347,7 +1347,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                          >>> 14 + 7<br>
                          21<br>
-                         >>> 
+                         >>>
                         </span><br>
                       </div>
                     </details>
@@ -1371,7 +1371,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           line 1, in &lt;module&gt;<br>
                           TypeError: unsupported operand type(s)
                           for -: 'str' and 'str'<br>
-                          >>> 
+                          >>>
                         </span><br>
 
                       <p>The Python Interpreter in
@@ -1413,7 +1413,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> 3 * 'a'<br>
                           'aaa'<br>
-                          >>> 
+                          >>>
                         </span><br>
 
                         <p>In vaguely analogy to <b>Arithmetic
@@ -1474,7 +1474,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                         <span class="command">
                           >>> print("Hopeful attempt \n ONE")<br>
-                          Hopeful attempt<br> 
+                          Hopeful attempt<br>
                           &nbsp;ONE<br>
                           >>>
                         </span><br>
@@ -1560,7 +1560,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         </p>
 
                         <span class="command15">
-                          >>> print("I can\fbuild steps\fwith this 
+                          >>> print("I can\fbuild steps\fwith this
                           one!\fHow exceptionally\fJolly!")<br>
                           I can<br>
                           &nbsp;&nbsp;&nbsp;&nbsp;
@@ -1643,7 +1643,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           aaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaa<br>
                           aaaa&nbsp;&nbsp;&nbsp;&nbsp;aa<br>
                           aaaaa&nbsp;&nbsp;&nbsp;a<br>
-                          >>> 
+                          >>>
                         </span><br>
 
                         <p>A very tidy display using
@@ -1667,7 +1667,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;..to me?<br>
-                         >>> 
+                         >>>
                         </span><br>
 
                         <p>Anyone spot the difference between
@@ -1767,7 +1767,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> Oscar_Again[4:40]<br>
                           'ys forgive your enemies;
                           nothing ann'<br>
-                          >>> 
+                          >>>
                          </span><br><br>
 
                          Easy! Splice from the 5th character to
@@ -1777,7 +1777,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> Oscar_Again[4:40:1]<br>
                           'ys forgive your enemies;
                            nothing ann'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         Exactly the same output? This time
@@ -1795,7 +1795,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> Oscar_Again[4:40:2]<br>
                           'y ogv oreeis ohn n'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         This time a step of <b>2</b> is
@@ -1806,7 +1806,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> Oscar_Again[4:40:5]<br>
                           'yr  innn'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         With a step of <b>5</b>, there is not
@@ -1869,7 +1869,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           ''<br>
                           >>> Oscar_Again[-2:]<br>
                           'ch'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         Negative <b>Arguments</b> refer to
@@ -2061,7 +2061,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     >>>
                   </span>
                 </li><br>
- 
+
                 <li>
                   <b>Numeric Characters</b> are "<b>smaller</b>"
                   than <b>Upper Case Letters</b>.<br><br>
@@ -2072,7 +2072,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     >>>
                   </span>
                 </li><br>
- 
+
                 <li>
                   As previously mentioned, <b>Scalar Values</b>
                   of type <b>bool</b> can have just one
@@ -2128,7 +2128,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     0<br>
                     >>> False + 12<br>
                     12<br>
-                    >>> 
+                    >>>
                   </span>
                 </li><br>
               </ol><br>
@@ -2184,7 +2184,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           True<br>
                           >>> 3 * 'a', 'a' + 'a' + 'a',  'aaa'<br>
                           ('aaa', 'aaa', 'aaa')<br>
-                          >>> 
+                          >>>
                         </span><br><br>
                      </div>
                     </details>
@@ -2424,7 +2424,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             <b>Single Data Item Values</b>
             (<b>Scalar Values</b>) that can be of various
             <b>type</b> (or <b>class</b>) including
-            <b>int</b>, <b>float</b>, <b>str</b> and <b>bool</b>. 
+            <b>int</b>, <b>float</b>, <b>str</b> and <b>bool</b>.
           </li><br>
 
           <li>
@@ -2616,7 +2616,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 >>> a = 5<br>
                 >>> a<br>
                 5<br>
-                >>> 
+                >>>
               </span><br><br>
 
               There is no requirement to explicitly assign a
@@ -2649,7 +2649,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 'I am a very nice string'<br>
                 >>> type(b)<br>
                 &lt;class 'str'&gt;<br>
-                >>> 
+                >>>
               </span><br>
 
               <p class="hint"><b>Note</b>: <b>type()</b> is
@@ -2756,7 +2756,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           True<br>
                           >>> type(aval)<br>
                           &lt;class 'bool'&gt;<br>
-                          >>> 
+                          >>>
                         </span>
                       </div>
                     </details>
@@ -2783,7 +2783,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           (47.6, 47.6, 47.6)<br>
                           >>> type(e)<br>
                           &lt;class 'float'&gt;<br>
-                          >>>  
+                          >>>
                         </span><br>
 
                         <p>The simple messages of this
@@ -2838,7 +2838,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           (None, None, None)<br>
                           >>> type(e)<br>
                           &lt;class 'NoneType'&gt;<br>
-                          >>> 
+                          >>>
                         </span><br>
 
                         <p>The messages of this
@@ -3043,7 +3043,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> a %= 2<br>
                           >>> a<br>
                           1.0<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         <p>Yes, indeed the same trick works for
@@ -3060,7 +3060,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> a *= 3<br>
                           >>> a<br>
                           'ba-ba-ba-ba-ba-ba-'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         <p>It even works for Strings!
@@ -3145,7 +3145,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 >>> 88 = 44<br>
                 &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
                 SyntaxError: can't assign to literal<br>
-                >>> 
+                >>>
               </span><br><br>
 
               <div class="question">
@@ -3175,7 +3175,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                             >>> age = 69<br>
                             >>> Age, age<br>
                             (70, 69)<br>
-                            >>> 
+                            >>>
                         </span><br><br>
 
                         Well, that seems pretty conclusive
@@ -3222,7 +3222,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               They are the <b>Boolean Operators</b>
               '<b>and</b>' '<b>or</b>' '<b>not</b>', plus
               '<b>in</b>' (used to test the
-              presence of             
+              presence of
               <b>Strings</b> within <b>Strings</b>).<br><br>
 
               Any attempt to use these (or any other
@@ -3325,7 +3325,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> not True<br>
                           False<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         Similarly, "<b>not False</b>" is
@@ -3335,7 +3335,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> not False<br>
                           True<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         But "<b>or True</b>", "<b>and True</b>"?
@@ -3354,7 +3354,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           &nbsp;&nbsp;&nbsp;&nbsp;and True<br>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
                           SyntaxError: invalid syntax<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         So, by the time the <b>Interpreter</b>
@@ -3422,7 +3422,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           True<br>
                           >>> not 99<br>
                           False<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         A <b>String Value</b> for '<b>x</b>'
@@ -3440,7 +3440,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           False<br>
                           >>> not ""<br>
                           True<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         Confused? Me too! Treat this as
@@ -3468,13 +3468,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         First, discovery by experiment.
 
                         <span class="command">
-                          >>> type = "Can I use the Name of a 
+                          >>> type = "Can I use the Name of a
                           Builtin in Function as a
                           Variable Name?"<br>
                           >>> type<br>
                           'Can I use the Name of a Builtin in
                           Function as a Variable Name?'<br>
-                          >>> 
+                          >>>
                        </span><br><br>
 
                        Using <b>type</b> as a <b>Variable Name</b>
@@ -3532,7 +3532,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> None = 3<br>
                           File "<stdin>", line 1<br>
                           SyntaxError: can't assign to keyword<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                       So, the simple answers to the questions
@@ -3680,7 +3680,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   of what your code is
                   trying to achieve (<b>pseudo-code</b>?).
                   Again, something to
-                  expand upon later. 
+                  expand upon later.
                 </li><br>
 
                 <li>
@@ -3740,7 +3740,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     after inhaling stomach towards my chest!<br>
-                    >>> 
+                    >>>
                   </span><br><br>
 
                 </li>
@@ -3868,7 +3868,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         </p>
 
         <p><a href="https://docs.python.org/3.7/library/functions.html#print"
-             target="_blank"><b>type()</b></a> and 
+             target="_blank"><b>type()</b></a> and
            <a href="https://docs.python.org/3.7/library/functions.html#print"
             target="_blank"><b>print</b></a>, which you have
            <p>already superficially used,
@@ -3888,7 +3888,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           &lt;class 'int'&gt;<br>
           >>> type("It is Sunday")<br>
           &lt;class 'str'&gt;<br>
-          >>> 
+          >>>
         </span><br>
 
         <p>So far, we have used <b>print</b> just to
@@ -3905,7 +3905,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           >>> print (Diminutive_Dick)<br>
           Fool about my money<br>
           Don't have to save<br>
-          >>> 
+          >>>
         </span><br>
 
         <p>A complete list of all
@@ -3921,7 +3921,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
            Instead, I suggest we introduce a few of the more
            vital examples and add other as the need arises (via
            <b>Examples</b>, <b>Questions</b> and
-           <b>Exercises</b>) 
+           <b>Exercises</b>)
         </p>
 
       </div><br>
@@ -4057,7 +4057,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           line 1, in &lt;module&gt;
                           ValueError: invalid literal
                           for int() with base 10: 'two'<br><br>
-                          >>> 
+                          >>>
                       </span><br><br>
 
                       Makes perfect sense to me! But, I
@@ -4094,7 +4094,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         False<br>
                         >>> str()<br>
                         ''<br>
-                        >>> 
+                        >>>
                       </span><br><br>
 
                       Very reasonable, given some sort of value
@@ -4103,7 +4103,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   </details>
                 </li><br>
               </ol>
-            </div> 
+            </div>
           </details>
         </li><br>
 
@@ -4148,7 +4148,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               </ol><br>
 
               <div class="question">
- 
+
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
                 <ol>
@@ -4218,7 +4218,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> max(12.7, 8.0, -22.899,
                           4.213, -7.112)<br>
                           12.7<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         As you might expect, both are fine with
@@ -4232,7 +4232,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> max(-3, 8, -12, 4, 7, 8.0,
                           -22.899, 4.213)<br>
                           8<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         There was no real reason to suppose that
@@ -4248,7 +4248,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> max('a', 'aBc', '000', '0df',
                           '4', "Mary had a lamb")<br>
                           'aBc'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         A set of only <b>Strings</b> can be
@@ -4275,7 +4275,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           line 1, in &lt;module&gt;<br>
                           TypeError: unorderable types:
                           str() > int()<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         <b>Python</b> draws the line at a
@@ -4315,7 +4315,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <b>2</b> decimal,places. Any comments
                         on the answer?
                       </li>
-                    </ul> 
+                    </ul>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
@@ -4330,7 +4330,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           -4.678<br>
                           >>> round(7.9275,2)<br>
                           7.93<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         All fine so far.<br><br>
@@ -4338,7 +4338,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> round(92.675,4)<br>
                           92.675<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         <b>Python</b> obeys, as far as it can,
@@ -4350,7 +4350,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <span class="command">
                           >>> round(2.675,2)<br>
                           2.67<br>
-                          >>> 
+                          >>>
                         </span><br><br>
 
                         Seems to have worked, but ... is not the
@@ -4386,11 +4386,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         honestly ... but wrongly (if you
                         wished to be unkind).
                       </div>
-                    </details>                    
+                    </details>
                   </li><br>
                 </ol>
               </div>
-            </div> 
+            </div>
           </details>
         </li><br>
 
@@ -4581,7 +4581,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               My favourite Sum is: 37.694,<br>
                               My favourite Product is: 328.656,<br>
                               My favourite Colour is: Yellow.<br>
-                              >>> 
+                              >>>
                             </span><br><br>
 
                             Well, pretty straight forward I hope
@@ -4798,7 +4798,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               sep=" bananas ")<br>
                               47 ripe bananas  are better than
                               46 ripe bananas anyday!<br>
-                              >>> 
+                              >>>
                             </span><br><br>
 
                             All true and trivial?<br><br>
@@ -4882,7 +4882,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               reared;<br>
                               <br>
                               <br>
-                              >>> 
+                              >>>
                             </span><br><br>
 
                             In contrast, <b>three newlines</b>
@@ -4921,19 +4921,19 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 			                     &nbsp;&nbsp;&nbsp;&nbsp;
 			                     &nbsp;&nbsp;&nbsp;&nbsp;THE END.<br>
                               <br>
-                              
-                              >>> 
+
+                              >>>
                             </span><br><br>
 
                             To be honest, I just thought you
                             would like to read the whole
-                            Limerick. One of 
+                            Limerick. One of
                             <a href="https://www.poemhunter.com/edward-lear/poems/"
-                             target="_blank"> many</a> by 
+                             target="_blank"> many</a> by
                             <a href="https://en.wikipedia.org/wiki/Edward_Lear"
                            target="_blank">Edward Lear</a>.
                             Very good for last thing at night
-                            with the jolly old cocoa! His best is 
+                            with the jolly old cocoa! His best is
                             <a href="https://www.poemhunter.com/poem/the-owl-and-the-pussy-cat/"
                              target="_blank">"The Owl and the
                             Pussy Cat"</a>, do try it sometime,
@@ -4954,19 +4954,19 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                                 prompting for more (with
                                 '<b>...</b>') until it arrives
                                 (Try it).
-                                
+
                                 <p class="hint">
                                   The "<b>breaks</b>" cannot be placed
                                   just anywhere.<br><br>
-                                  
+
                                   You must choose a place that is
                                   not going to confuse the
                                   <b>Interpreter</b> too much.<br><br>
-                                  
+
                                   In the example above, I chose the
                                   end of each line of the Limerick,
                                   which worked fine!
-                                </p> 
+                                </p>
                               </li>
                               <li>
                                 In this command both the
@@ -4979,7 +4979,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                       </li>
                     </ol>
                   </div><br>
-            
+
                   As has been shown, <b>print()</b>
                   can be used to print <b>Numbers</b>,
                   but only with very little control
@@ -5039,11 +5039,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         <li>
                           <b>%8.2f</b> - indicates a
                           <b>Float</b>.<br><br>
-                          
+
                           The <b>8</b> allocates a minimum
                           of <b>8 Character Positions</b>
                           for the entire number.
-                          
+
                           The <b>2</b> specifies that the
                           number is to be represented to
                           <b>2 Decimal Place
@@ -5099,17 +5099,17 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     Exercises</u></i></h2>
 
                     <ol>
-                      <li>                  
+                      <li>
                         Using a <b>Format String approach</b>,
                         display a few
                         <b>Integers</b> allowing <b>Three
                         Output
                         Character Spaces</b> for each.<br><br>
-                        
+
                         Ensure one or more of the
-                        <b>Integers</b> 
+                        <b>Integers</b>
                         are greater than <b>999</b>.<br><br>
- 
+
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
@@ -5123,37 +5123,37 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               X7568X Int3: X 57X
 
                             </span><br><br>
-                            
+
                             Where necessary, each
-                            <b>Integer</b> is padded to 
-                            the left with 
+                            <b>Integer</b> is padded to
+                            the left with
                             spaces to ensure it occupies
                             <b>3 Character
                             Positions</b> in the output.<br><br>
-                            
+
                             Numbers greater than <b>999</b>
                             are allowed as
                             many <b>Output Character
-                            Positions</b> as 
+                            Positions</b> as
                             they require.
 
                           </div>
                         </details>
                       </li><br>
-                      
+
                       <li>
                         Using a <b>Format String approach</b>,
                         display a few
                         <b>Floats</b>.<br><br>
-                        
+
                         Allocate a minimum of <b>8 Output
                         Character Spaces</b> to each
                         number.<br><br>
-                        
+
                         Display each number to a precision
                         of <b>3 Decimal
                         Places</b>.<br><br>
-                        
+
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
@@ -5172,36 +5172,36 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               X&nbsp;&nbsp;&nbsp;3.999X<br>
                               >>>
                             </span><br><br>
-                            
+
                             As required, <b>Floats</b>
-                            are padded to the left with 
+                            are padded to the left with
                             spaces until they occupy
                             <b>8 Output Character
                             Positions</b>.<br><br>
-                            
+
                             <b>Floats</b> with <b>Integral Parts</b>
                             greater than <b>9999</b> are allocated
-                            <b>Output Character Positions</b> as 
+                            <b>Output Character Positions</b> as
                             required.<br><br>
-                            
+
                             After the decimal point, as required,
                             Numbers are either padded with <b>0</b>s or
                             <b>Rounded</b> to occupy
                             exactly <b>3 Output
                             Character Positions</b>.<br><br>
-                            
+
                             Note, a further example of a multi-line
                             command.
                           </div>
                         </details>
                       </li><br>
-                      
+
                       <li>
                         Using a <b>Format String approach</b>,
                         display the <b>float 19.675</b> to
                         an <b>Accuracy</b> of
                         <b>16 Decimal Places</b>.<br><br>
-                        
+
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
@@ -5220,24 +5220,24 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               <br>
                               >>>
                             </span><br><br>
-                            
+
                             <b>16 Places of Decimal</b>
                             and it still gets it wrong!<br><br>
-                            
+
                             Basically for the reasons
                             discussed previously.<br><br>
-                            
+
                             It simply is not possible
                             to represent any <b>float</b>
                             ending "<b>.675</b>" exactly
                             in <b>Binary</b>.<br><br>
-                            
+
                             Note the inclusion of a
                             <b>%s</b> in the <b>Format
                             String</b>. This to indicate
                             a <b>String Argument</b> to
                             be printed.<br><br>
-                            
+
                             <span class="command">
                               >>> print("12.675 to
                               16 decimal places is
@@ -5249,14 +5249,14 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               &nbsp;12.6750000000000007<br>
                               Any Comments?<br>
                               <br>
-                              >>> 
+                              >>>
                             </span><br><br>
-                            
+
                             Just to confuse things further,
                             the <b>Rounding Error</b> is not even
                             consistent? As one might expect
                             it to be?<br><br>
-                            
+
                             The reason is that computers,
                             generally, represent <b>floats</b> in
                             <a href="https://en.wikipedia.org/wiki/Scientific_notation"
@@ -5265,18 +5265,18 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                             a greater range of numbers to be
                             represented, at the cost of some
                             resolution.<br><br>
-                            
+
                             All beyond the objectives of this
                             tutorial. The intention here is
                             simply to warn you that there will be
                             the possibility of weird rounding
                             anomalies every once in a while.<br><br>
-                            
+
                             If you really wish to know more, try
                             <a href="http://steve.hollasch.net/cgindex/coding/ieeefloat.html"
                              target="_blank"> this article</a>,
                             which is relatively gentle.<br><br>
-                            
+
                           </div>
                         </details>
                       </li><br>
@@ -5285,9 +5285,9 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         outputs <b><i>two</i></b> formated sets
                         of data <b><i>and</i></b> uses both
                         <b>sep</b> and <b>end</b>.<br><br>
-                        
+
                         Did it work?<br><br>
-                        
+
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
@@ -5303,16 +5303,16 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                               END HERE<br>
                               >>>
                             </span><br><br>
-                        
+
                             What a boring example! No poems?
                             No songs? The muse deserts me this
                             windy August morn.<br><br>
-                        
+
                             Nevertheless, the point is made.
                             Two formatted
                             outputs handled but <b>print()</b>
                             with consummate ease.<br><br>
-                        
+
                             Uninspired, but clearly successful uses
                             of <b>sep</b> and <b>end</b> answer the
                             question posed with a loud and
@@ -5332,7 +5332,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
       <div class="checkpoint">
 
         <h2><i><u>Checkpoint</u></i></h2>
-        
+
         <p>
           <hh6m>Issues introduced or reinforced in this section:</hh6m>
         </p>
@@ -5344,11 +5344,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             integral to the <b>Python Language</b>.
           </li>
         </ol>
-       
+
         <p>
           <hh6m>Builtin Functions introduced or reinforced in this section:</hh6m><br>
         </p>
-        
+
         <ol>
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#int"
@@ -5356,14 +5356,14 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             a <b>Number</b> or <b>String Argument</b>
             to an <b>Integer</b>.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#float"
              target="_blank"><b>float()</b></a> - Converts
             a <b>Number</b> or <b>String Argument</b>
             to a <b>Float</b>.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#bool"
              target="_blank"><b>bool()</b></a> - Converts
@@ -5376,13 +5376,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
              target="_blank"><b>str()</b></a> - Converts
             any value to a <b>String</b>.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#type" target="_blank"><b>type()</b></a> - Reveals
             the type (or <b>class</b>) of a <b>Scalar
             Variable</b> (or <b>Value</b>).
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#abs"
              target="_blank"><b>abs()</b></a> - returns
@@ -5408,7 +5408,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             a <b>float Argument Rounded</b> to a
             specified number of decimal places.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#len"
              target="_blank"><b>len()</b></a> - Returns
@@ -5416,20 +5416,20 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             which "<b>Length</b>" has a coherent
             interpretation (including <b>Strings</b>).
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#input"
              target="_blank"><b>input()</b></a> - Requests
             data input from (typically) a user at the <b>Keyboard</b>.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#print" target="_blank"><b>print()</b></a> -
             Displays, formatted or unformatted, data on
             the <b>Display Screen</b>.
           </li>
         </ol>
-        
+
         <p>
           <hh6m>Points noted or reinforced in this section:</hh6m>
         </p>
@@ -5439,13 +5439,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             <b>Float</b> to <b>Integer</b> conversion always rounds
             <b>down</b>.
           </li><br>
-          
+
           <li>
             A <b>String</b> containing a legitimate <b>Float</b>
             can only be converted to an <b>Integer</b> if
             converted to a <b>Float</b> first.
           </li><br>
-          
+
           <li>
             With no <b>Argument</b>, all the
             <b>Type Conversion Functions</b> return a
@@ -5454,51 +5454,51 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             for <b>bool()</b> and the <b>Empty String</b>
             for <b>str()</b>.
           </li><br>
-          
+
           <li>
             Whilst <b>min()</b> and <b>max()</b> are fine with
             sets of <b>Numbers</b> of mixed <b>type</b>, or
             sets of <b>Strings</b>, they will not accept data
             sets including both <b>Numbers</b> and <b>Strings</b>.
           </li><br>
-          
+
           <li>
             <b>round()</b> will not always return you should
             expect according to the strict <b>Rules
             of Mathematics</b>! The "<b>Errors</b>" are due to
             the imperfections of representing <b>Decimal Values</b>
             in a <b>Binary Computer</b>.
-            
+
             So, why not a <b>Decimal Computer</b>? There has been
             talk for decades? Maybe I do that next week when I
             have finished writing all this nonsense?
           </li><br>
-          
+
           <li>
             <b>len()</b> counts <b>Control Characters</b>
             as <b>1 Character</b> even though the essential
             <b>Backslash</b> makes them look like <b>2</b>.
-            
+
             Well, of course? Sure you could have worked that
             one out for yourselves!
           </li><br>
-          
+
           <li>
             <b>input() <i>ALWAYS</i></b> returns a <b>String</b>.
             If you need to interpret <b>Values</b> acquired using
             <b>input()</b> in any other way, you must change
             its <b>type</b> appropriately first.
           </li><br>
-          
+
           <li>
             <b>print()</b>can be used in <b>2</b> ways.
-            
+
             <ul>
               <li>
                 It can print a set of <b>Values</b> of mixed
                 <b>type</b> with default formatting.
               </li><br>
-              
+
               <li>
                 It can output one more sets of <b>Values</b>
                 whose formatting specifics are determined by
@@ -5506,13 +5506,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               </li>
             </ul>
           </li><br>
-          
+
           <li>
             In both modes of <b>print()</b> operation, the <b>Output
             Value Separator</b> (default <b>Space</b>) can
             be specified using the <b>sep Argument</b>.
           </li><br>
-          
+
           <li>
             In both modes of <b>print()</b> operation, the <b>Output
             Value Terminator</b> (default <b>\n</b>) can
@@ -5541,22 +5541,22 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
       <div class="ramble">
 
         <h2>Methods</h2>
-        
+
         <p>
           A <b>method</b> is a <b>Function</b> that is
           specific to a particular <b>Python Data Class</b>
           (or <b>type</b>).
         </p>
-        
-        <p> 
+
+        <p>
           Of the <b>Data Classes</b> discussed so far, only
           <b>Strings</b> really have and interesting range
           of <b>methods</b>.
         </p>
-        
+
         <p>
           Accordingly, here it is the plan to start by
-          looking at a few 
+          looking at a few
           examples of <b>String methods</b>, to get the
           general idea, and the to discuss further
           <b>methods</b> as more the complex <b>Data
@@ -5572,17 +5572,17 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           For example, to list all the
           <b>String methods</b>, type:
         </p>
-       
+
         <span class="command">
-          help(str)                   
+          help(str)
         </span><br>
-        
+
         <p>
           Try it.
         </p>
-        
+
         <div class="hint">
-        
+
           <ul>
             <li><b>e</b> or <b>Enter</b> or <b>&darr;</b>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -5625,12 +5625,12 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               &nbsp;- Returns you to the
               <b>Interpreter Prompt</b></li>
           </ul>
-        
+
           <p>
             What choice!! Have I missed any?
           </p>
         </div>
-        
+
         <p>
           <b>Input</b> and <b>Output</b> from files stored
           on external storage devices (almost inevitably some
@@ -5638,7 +5638,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           Builtin File to create a "<b>File Handle</b>" (or a <b>File
           Object</b> if you prefer).
         </p>
-        
+
         <p>
           Once the <b>File</b> reference is created, accessing
           the file is
@@ -5646,14 +5646,14 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           accomplished using <b>methods</b> associated
           with <b>File Objects</b>.
         </p>
-        
+
         <p>
           This being so provides a good excuse to
           cover <b>File I/O</b> here
           while discussing the most important <b>File Object
           methods</b>.
         </p>
-        
+
         <p>
           Displaying the complete list of <b>methods</b> available
           for a <b>File Object</b> with <b>help()</b> is not
@@ -5662,89 +5662,89 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           will work successfully on an <b><i>instance</i></b>
           of a <b>File Handle</b>.
         </p>
-        
+
         <p>
           So you could create a <b>File Handle</b> with the
           <b>Builtin Function open</b> and the give
           that <b>File Handle</b>
           to <b>help()</b>.
         </p>
-        
+
         <p>
           The trouble with that plan, is you
           probably have no <b>file</b> handy to <b>open</b>!
         </p>
-        
+
         <p>
           No problem! We cannot be defeated! So open a <b>file</b>
           specifying that you wish to <b><i>WRITE</i></b> to it.
           Now it does not need to exist. Then use <b>help()</b>
           on that, hopefully new and empty, <b>file</b>. Clever eh!?
         </p>
-        
+
         <span class="command">
           >>> Empty_File=open("TEST", 'w')<br>
           >>> help(Empty_File)
         </span>
-        
+
         <p>
           It is the <b>'w'</b> bit of the
           <b>open</b> command that requests a file for <b>writing</b>
           rather than just <b>reading</b> (the default)
         </p>
-        
+
         <p>
           Try it ... or for the less adventurous, the entire list can be found
           <a href="https://www.tutorialspoint.com/python3/file_methods.htm"
            target="_blank">here</a>.
         </p>
       </div><br>
-      
+
       <h2><u>Basic SYNTAX for using a method.</u></h2>
-      
+
       <p>
       There are <b>four</b> ways of request
       the execution of a <b>method</b>.
       The first two are the more common.
       Informally the alternatives are:
       </p>
-      
+
       <ol>
         <li>
           <i>&lt;Variable Identifier&gt;.&lt;method&gt;(Arguments)</i>
         </li><br>
-        
+
         <li>
           <i>&lt;Class Value&gt;.&lt;method&gt;(Arguments)</i>
         </li><br>
-        
+
         <li>
           <i>&lt;Class&gt;.&lt;method&gt;(Variable Identifier,Arguments)</i>
         </li><br>
-        
+
         <li>
           <i>&lt;Class&gt;.&lt;method&gt;(Class Value,Arguments)</i>
         </li>
       </ol>
-      
+
       <p>
         An example requires exposure to at least one particular method.
       </p>
-      
+
       <p>
         OK, title is a method of the <b>Class str</b>.
       </p>
-      
+
       <p>
         It capitalizes the first letter of each word of the
         <b>String</b> it processes. It needs no <b>Arguments</b> except
         the <b>String</b> to be capitalized.
       </p>
-      
+
       <p>
         The <b>four</b> options, in order, would be:
       </p>
-      
+
       <ol>
         <li>
           <i>&lt;Variable Identifier&gt;.&lt;method&gt;(Arguments)</i><br>
@@ -5754,10 +5754,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             >>> Bon_Mot.title()<br>
             "These Are My Principles.
             If You Don'T Like Them, I Have Others."<br>
-            >>> 
+            >>>
           </span>
         </li><br>
-        
+
         <li>
           <i>&lt;Class Value&gt;.&lt;method&gt;(Arguments)</i><br>
           <span class="command15">
@@ -5765,10 +5765,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             if you don't like them, i have others.".title()<br>
             "These Are My Principles.
             If You Don'T Like Them, I Have Others."<br>
-            >>> 
+            >>>
           </span>
         </li><br>
-        
+
         <li>
           <i>&lt;Class&gt;.&lt;method&gt;(Variable Identifier,Arguments)</i><br>
           <span class="command15">
@@ -5777,10 +5777,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             >>> str.title(Bon_Mot)<br>
             "These Are My Principles.
             If You Don'T Like Them, I Have Others."<br>
-            >>> 
+            >>>
           </span>
         </li><br>
-        
+
         <li>
           <i>&lt;Class&gt;.&lt;method&gt;(Class Value,Arguments)</i><br>
           <span class="command15">
@@ -5788,7 +5788,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             if you don't like them, i have others.")<br>
             "These Are My Principles.
             If You Don'T Like Them, I Have Others."<br>
-            >>> 
+            >>>
           </span>
         </li>
       </ol>
@@ -5798,10 +5798,10 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
         '<i>don't</i>' upper case? Perhaps a protest against the
         ghastly truncation? It certainly does not
         seem quite correct even so.
-      
+
       <p>
         Thanks to <b>Groucho</b> (<b>Marx</b> that is)
-        for the gloriously flexible ethics. 
+        for the gloriously flexible ethics.
       </p>
 
       <ol>
@@ -5814,7 +5814,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           </summary>
 
             <div class="minsect"><br>
-            
+
               The are, as you will have seen when
               you typed <b>help(str)</b>, many <b>str</b>
               methods. For a reminder (and an
@@ -5822,13 +5822,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               offered in this tutorial), try this
               <a href="https://www.programiz.com/python-programming/strings-method"
                target="_blank">URL</a>.<br><br>
-       
+
               Several of these will only make full
               sense after we have looked at a bit
               more <b>Python</b>. Most of
               these will be considered later, at
               a more appropriate stage.<br><br>
-               
+
               Here, we will look briefly at a quite
               extensive selection of
               simple examples to convey the idea
@@ -5836,16 +5836,16 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               acquire the capacity to be able to
               manipulate <b>Strings</b> in every
               way possible.
-              
+
               <p class="hint">
                 <b>It is Important to Note:<i>All</i>
                 String methods</b> return new values.<br><br>
-                
+
                 They <b><i>do not change</i></b> the original <b>String</b>.
               </p>
-              
+
               <hh5m>methods to control the case of a String:</hh5m><br><br>
-                
+
               <table class="c3">
                 <tr>
                   <th style="min-width=10%">Method</th>
@@ -5859,7 +5859,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   <td>
                     <b>Returns</b> a string with <b>Upper Case Characters</b>
                     converted to <b>Lower Case</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -5871,7 +5871,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     converted to <b>Lower Case</b>.
                     Generally used for caseless matching. This
                     is more aggressive than the <b>lower()</b> method.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -5881,7 +5881,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   <td>
                     <b>Returns</b> a string with <b>Lower Case Characters</b>
                     converted to <b>Upper Case</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -5891,7 +5891,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   <td>
                     <b>Returns</b> a string with <b>Lower Case Characters</b>
                     converted to <b>Upper Case</b> and vice versa.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -5901,7 +5901,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   <td>
                     <b>Returns</b> a string with first letter
                     capitalized and the rest in <b>Lower Case</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -5912,19 +5912,19 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     <b>Returns</b> a <b>Title Cased String</b> (first character of
                     each word capitalized, others
                     <b>Lower Case</b>).
-                  </td> 
+                  </td>
                 </tr>
               </table><br><br>
-                  
+
               The difference between <b>casefold()</b> and
               <b>lower()</b> is discussed
               <a href="https://stackoverflow.com/questions/45745661/python-lower-vs-casefold-in-string-matching-and-converting-to-lowercase"
                target="_blank">here</a>.<br><br>
-                  
+
               Essentially, <b>lower()</b> only translates
               characters from the <b>Range A-Z</b> into their
               counterparts in the <b>Range a-z</b>.<br><br>
-                  
+
               <b>casefold()</b> attempts to cater for
               characters from other alphabets,
               which is very clever, but
@@ -5934,9 +5934,9 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               <div class="question">
 
                 <h2><i><u>Questions &
-                Simple Exercises</u></i></h2>                 
-                
-	             <p> 
+                Simple Exercises</u></i></h2>
+
+	             <p>
 	               There are far too many <b>str methods</b>
                   (<b>methods</b> in
                   general even) to try and include all in a
@@ -5944,8 +5944,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   number of short exercises. I aim for a
                   representative few.
                 </p>
-                
-	             <p> 
+
+	             <p>
                   If you wish to know more about any I omit,
                   I draw your
                   attention to the <b>Links</b> I have embedded
@@ -5954,36 +5954,36 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   methods</b>
                   in the <b>Checkout</b> section).<br><br>
                 </p>
-                
-	             <p> 
+
+	             <p>
                   These take you to the section of the
                   <b>Python manual</b> that
                   describes, fully, each <b>method</b>.<br>
                 </p>
-                
+
                 <ol>
                   <li>
                     Consider the <b>DNA</b> sequence:<br><br>
-             
+
                     "<b>acgGTaCCCCCatcaaTTATgcccGT</b>"
-                    
+
                     Assuming the mixture of cases to be pure whimsy,
                     it is going to get in the way in any analysis
                     you might contemplate.!<br><br>
-                    
+
                     The way things are, your code would always have
                     cope with <b>two</b> representations of the
                     same actuality!
                     The first step must be to make the <b>Case</b> of
                     this <b>Sequence</b> consistent.<br><br>
-                    
+
                     Accordingly, write code to save the
                     following versions of the <b>Sequence</b>
                     into suitably named <b>Variables</b>.<br><br>
-                    
+
                     Use as many of the possible forms of syntax as
                     you can remember.<br><br>
-                    
+
                     <ul>
                       <li>
                         The <b>Original Sequence</b>
@@ -6000,7 +6000,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         An <b>Upper Case Sequence</b>.
                       </li>
                     </ul><br>
-                    
+
                     Display the <b>Original Sequence</b>.
                     Comment on its condition.
 
@@ -6013,9 +6013,9 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> Original_Sequence="acgGTaCCCCCatcaaTTATgcccGT"<br>
                           >>> Original_Sequence<br>
                           'acgGTaCCCCCatcaaTTATgcccGT'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
-                        
+
                         <b>Original Sequence</b> stored and tested.<br><br>
 
                         <span class="command">
@@ -6034,30 +6034,30 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> SwapCase_Sequence=str.swapcase("acgGTaCCCCCatcaaTTATgcccGT")<br>
                           >>> SwapCase_Sequence
                           'ACGgtAcccccATCAAttatGCCCgt'<br>
-                          >>> 
+                          >>>
                         </span><br><br>
-                        
+
                         Pointless <b>Swapped Case Sequence</b>
                         created and stored in <b>four</b> different ways.
                         All good.<br><br>
-                       
+
                         From this point I will just use the most
                         common syntactic form.<br><br>
-                        
+
                         <span class="command">
                           >>> LowerCase_Sequence=Original_Sequence.lower()
                           >>> LowerCase_Sequence
                           'acggtacccccatcaattatgcccgt'
-                          >>> 
+                          >>>
                           >>> UpperCase_Sequence=Original_Sequence.upper()
                           >>> UpperCase_Sequence
                           'ACGGTACCCCCATCAATTATGCCCGT'
-                          >>> 
+                          >>>
                           >>> Original_Sequence
                           'acgGTaCCCCCatcaaTTATgcccGT'
-                          >>> 
+                          >>>
                         </span><br><br>
-                        
+
                         <b>Lower</b> and <b>Upper Case</b> versions successful
                         and <b><i>Of Course</i></b> the <b>Original Sequence</b> is
                         completely <b><i>unchanged</i></b>!<br><br>
@@ -6066,47 +6066,9 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   </li>
                 </ol>
               </div><br><br>
-<!--
-Change Mixed case sequence into upper case
-
->>> Forward_Mixed=('acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact')
->>> Forward_Upper=Forward_Mixed.upper()
->>> Forward_Upper
-'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'
->>> 
-
-Complement it 
-
->>> Forward_Upper = Forward_Mixed.upper()
->>> Forward_Complement = Forward_Upper.replace('A', 'X')
->>> Forward_Complement = Forward_Complement.replace('C', 'Z')
->>> Forward_Complement = Forward_Complement.replace('G', 'C')
->>> Forward_Complement = Forward_Complement.replace('T', 'A')
->>> Forward_Complement = Forward_Complement.replace('X', 'T')
->>> Forward_Complement = Forward_Complement.replace('Z', 'G')
->>> Forward_Complement
-'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'
->>> Forward_Upper
-'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'
->>> 
-
-Complement it in one line!
->>> Forward_Mixed.upper().replace('A', 'X').replace('C','Z').replace('G','C') \
-... .replace('T', 'A').replace('X','T').replace('Z','G')
-'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'
->>> 
-
-Reverse and complement in one line!
-needs reversed!! .... must do this and range ... after list
-both are builtin functions
-
-methods not mentioned here, mostly because they involve lists of some sort
-or because they are too weird!
-
--->
 
               <hh5m>methods to effect Justification and similar:</hh5m><br><br>
-                
+
               <table class="c3">
                 <tr>
                   <th>Method</th>
@@ -6122,7 +6084,7 @@ or because they are too weird!
                     Left Justified</b> within the
                     specified width, with optional
                     <b>Fill Characters</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6134,7 +6096,7 @@ or because they are too weird!
                     Right Justified</b> within the
                     specified width, with optional
                     <b>Fill Characters</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6146,7 +6108,7 @@ or because they are too weird!
                     Centred</b> within the specified
                     width, with optional
                     <b>Fill Characters</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6156,7 +6118,7 @@ or because they are too weird!
                   <td>
                     <b>Returns</b> a <b>String</b>
                     with specified leading characters removed.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6166,7 +6128,7 @@ or because they are too weird!
                   <td>
                     <b>Returns</b> a <b>String</b>
                     with specified trailing characters removed.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6176,31 +6138,31 @@ or because they are too weird!
                   <td>
                     <b>Returns</b> a <b>String</b>
                     with specified leading and trailing characters removed.
-                  </td> 
+                  </td>
                 </tr>
               </table><br><br>
-              
+
               <div class="question">
 
                 <h2><i><u>Questions &
-                Simple Exercises</u></i></h2>                 
-                
+                Simple Exercises</u></i></h2>
+
                 <ol>
                   <li>
                   Once upon a time, the great <b>Spike</b>
                   (<b>Milligan</b> that is) composed a poem
                   that commenced thus:<br><br>
-                  
+
                   <i>"a poem by spike - about his granny<br><br>
                   through every nook and every cranny<br>
                   the wind blew in on poor old Granny<br>
                   around her knees, into each ear<br>
                   (and up nose as well, I fear)"</i><br><br>
-                  
+
                   You task is store the entire poem
                   in a single, suitably named, <b>Variable</b>
                   so that:<br><br>
-                  
+
                   <ul>
                     <li>
                       The <b>Title</b>, (using <b>Title Case</b>,
@@ -6217,7 +6179,7 @@ or because they are too weird!
                        (<b>Fill Character</b> '<b>*</b>'))
                      </li>
                    </ul><br>
-                   
+
                    Tough one? Probably, but have manly/womanly
                    go before you cheat.<br><br>
                    <p class="hint">
@@ -6226,27 +6188,27 @@ or because they are too weird!
                      out in a single line
                      (as it has just done for me!).
                    </p>
-                   
+
                    <p class="hint">
                      A number of the <b>methods</b> you will
                      need take both <b>Mandatory</b> and
                      <b>Optional Arguments</b> I have not
                      told you about.<br><br>
-                     
+
                      Look them up using the links to the
                      <b>Manual</b> provided. What you need to know
                      is clear at and the top of the page.<br><br>
-                     
+
                      From here on, I assume you do this
                      as a matter of course. To try and include
                      everything here would be very clumsy.<br><br>
-                     
+
                      Also, constant reference to <b>Manual
                      Pages</b> (and in desperation,
                      greater <b>Google</b>) is standard
                      coding practice).
                    </p>
-                       
+
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
@@ -6293,31 +6255,31 @@ or because they are too weird!
                           <br>
                           >>> <br>
                         </span><br><br>
-                        
+
                         <b>Note</b> the use of he <b>Backslash
                         Character</b> to deal with very
                         long lines. The <b>Interpreter</b> will join
                         together lines separated by a <b>Backslash</b>
                         and interpret them as a singe line.<br><br>
-                        
-                        I changed all the <b>Upper Case Letters</b> in 
+
+                        I changed all the <b>Upper Case Letters</b> in
                         <a href="https://www.poemhunter.com/poem/granny/"
                          target="_blank"><b>Spike's</b> original composition</a>,
                         vaguely wondering how many I could put back.<br><br>
-                        
+
                         I failed consistently on those not at the start of a line,
                         but I did have a small hope for "<b>(and</b>" being returned to
                         "<b>(And</b>" (Last Line). Given the way "<b>don't</b>" was
                         transformed to "<b>Don'T</b>" earlier. Ho hum, I have
                         survived greater disappointments.<br><br>
-                        
+
                         Note the way <b>methods</b> can be strung together.
                         For example
                         "....<b>capitalize().rjust(40,'-').ljust(60,'*')</b>".
                         If this is not the first time I have mentioned this,
                         it is called "<b>Reinforcement</b>" and is thus an
                         absolutely deliberate pedagogic strategy!
-                        
+
                       </div>
                     </details>
                   </li>
@@ -6325,7 +6287,7 @@ or because they are too weird!
               </div><br><br>
 
               <hh5m>methods to test String content:</hh5m><br><br>
-                
+
               <table class="c3">
                 <tr>
                   <th>Method</th>
@@ -6340,7 +6302,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Alphanumeric</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6351,7 +6313,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Alphabetic</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6362,7 +6324,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Decimal Characters</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6373,7 +6335,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Digits</b>.
-                  </td> 
+                  </td>
                 <tr>
                   <td>
                     <a href="https://www.programiz.com/python-programming/methods/string/isnumeric"
@@ -6383,7 +6345,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Numeric</b>.
-                  </td> 
+                  </td>
                 </tr>
                 </tr>
                   <td>
@@ -6395,7 +6357,7 @@ or because they are too weird!
                     Characters</b> of the <b>String</b>
                     are <b>Lower Case</b> and there is
                     at least one <b>Cased Character</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6407,7 +6369,7 @@ or because they are too weird!
                     Characters</b> of the <b>String</b>
                     are <b>Upper Case</b> and there is
                     at least one <b>Cased Character</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6417,7 +6379,7 @@ or because they are too weird!
                   <td>
                     <b>Returns True</b> if the <b>String</b>
                     is empty or all characters are <b>Printable</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6428,7 +6390,7 @@ or because they are too weird!
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and all characters are
                     <b>Whitespaces</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6438,7 +6400,7 @@ or because they are too weird!
                   <td>
                     <b>Returns True</b> if the <b>String</b>
                     is non-empty and <b>Title Cased</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6448,58 +6410,58 @@ or because they are too weird!
                   <td>
                     <b>Returns True</b> if the <b>String</b>
                     is a <b>Valid Identifier</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
               </table><br><br>
-              
+
               <div class="question">
 
                 <h2><i><u>Questions &
-                Simple Exercises</u></i></h2>                 
-                
+                Simple Exercises</u></i></h2>
+
                 <ol>
                   <li>
                     Not so many inspiring exercises for this
                     set of methods!<br><br>
-                    
+
                     I start by wondering what, precisely, is
                     the difference between
                     <b>isdecimal()</b>, <b>isdigit()</b> and
                     <b>isnumeric()</b>.<br><br>
-                    
+
                     The obvious way to find out is to consult
                     the appropriate <b>Manual
                     Pages</b> and then test out their
                     interpretation
                     with a few examples.<br><br>
-                    
+
                     Well, that is what I am about to do, have
                     a go and I will meet you in the answer.<br><br>
-                    
+
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
                       <div class="answer">
 
                         I was hoping for "simple here"! Not quite I fear.
-                      
+
                         After reading the <b>Manual Pages</b> and a
                         bit of <b>Googling</b>. I conclude that,
                         in the world of <b>Python</b>:<br><br>
-                      
+
                         <ul>
                           <li>
                             <b>Decimals</b> are a subset of <b>Digits</b>.<br>
                             <b>Digits</b> are a subset of <b>Numerics</b>.<br>
                           </li><br>
-                        
+
                           <li>
                             <b>Decimals</b> are <b>Characters</b> in the
                             range <b>0</b> to <b>9</b>.
                             A mere <b>ten</b> possibilities.
                           </li><br>
-                        
+
                           <li>
                             <b>Digits</b> are <b>Decimals</b> or:
                             <ul>
@@ -6511,7 +6473,7 @@ or because they are too weird!
                               </li>
                             </ul>
                           </li><br>
-          
+
                           <li>
                             <b>Numerics</b> are <b>Digits</b> or:
                              <ul>
@@ -6526,29 +6488,29 @@ or because they are too weird!
                             </ul>
                           </li>
                         </ul>
-                      
+
                         The main complication with actually testing the
                         performance of the methods is that it is not
                         possible to just type in <b>Superscripts</b>,
                         <b>Subscripts</b>, <b>Roman Numerals</b>,
                         <b>Fractions</b> or <b>Currency Numerators</b>.
                         They simply do not exist on your
-                        keyboard.<br><br>
-                      
+                        keyboard.<br>
+
                         <p class="hint">
                           Unfortunately, a <b>Roman Numerals</b>,
                           in this context, is not just a combination
                           of the Characters <b>I</b>, <b>V</b>,
                           <b>X</b>, <b>L</b>, <b>C</b>
                           and <b>M</b>".<br><br>
-                         
+
                           Each <b>Roman Numerals</b> has its own
                           <b>Unicode</b> representation. It is
                           that which is
                           <b>Numeric</b>, but not <b>Digital</b>
                           or <b>Decimal</b>
                           according to <b>Python</b>.<br><br>
-                        
+
                           I am not going to discuss <b>Unicode</b>
                           representation of <b>Numerals</b> here, but
                           <a href="https://en.wikipedia.org/wiki/Numerals_in_Unicode"
@@ -6556,15 +6518,15 @@ or because they are too weird!
                           Article</b></a> is very clear if you wish
                           to know more.
                         </p>
-                      
+
                         <p class="hint">
                           I am not absolutely clear what
                           a <b>Currency Numerators</b> is?
-                        
+
                           However, I have discovered an example
                           which will be sufficiency for
                           current needs.<br><br>
-                        
+
                           As you are already probably aware, the
                           <a href="https://www.fileformat.info/info/unicode/char/09f4/index.htm"
                            target="_blank"><b>Bengali Currency
@@ -6572,12 +6534,12 @@ or because they are too weird!
                           Unicode representation is '<b>\u09F4</b>'.
                           Enough!
                         </p>
-                      
+
                         <b>Unicode</b> representations for each type of
                         non <b>Keyboard Character</b> are required.
                         We have,
                         sufficient to test the methods.<br><br>
-                      
+
                         <ul>
                           <li>
                             Example <b>Superscript</b>:
@@ -6595,10 +6557,10 @@ or because they are too weird!
                             Example <b>Currency Numerator</b>:
                             '<b>\u09F4</b>'
                           </li>
-                        <ul><br><br>
-                      
+                        </ul><br>
+
                         Proof they all work:<br><br>
-                      
+
                         <span class="command">
                           >>> print ("Superscripted    7: \u2077")<br>
                           Superscripted    7: ⁷<br>
@@ -6608,11 +6570,11 @@ or because they are too weird!
                           The Faction   Half: ½<br>
                           >>> print ("Currency Numerator: \u09F4")<br>
                           Currency Numerator: ৴<br>
-                          >>> 
+                          >>>
                         </span><br><br>
-                      
+
                         Finally the tests:<br><br>
-                      
+
                         <span class="command">
                           >>> All_Decimals="1234567890"<br>
                           >>> All_Decimals.isdecimal()<br>
@@ -6621,14 +6583,14 @@ or because they are too weird!
                           True<br>
                           >>> All_Decimals.isnumeric()<br>
                           True<br>
-                          >>> 
+                          >>>
                         </span><br><br>
-                      
+
                         Which feels fine. <b>0</b> to <b>9</b>
                         is a <b>Decimal</b>. A <b>Decimal</b>
                         is a <b>Digit</b>. A <b>Digit</b> is a
                         <b>Numeric</b>. Jolly good!<br><br>
-                      
+
                         <span class="command">
                           >>> Sub_Sup="\u2077\u2084"<br>
                           >>> print (Sub_Sup)<br>
@@ -6639,16 +6601,16 @@ or because they are too weird!
                           True<br>
                           >>> (All_Decimals + Sub_Sup).isnumeric()<br>
                           True<br>
-                          >>> 
+                          >>>
                         </span><br><br>
-                      
+
                         But add in a <b>Subscript</b> and/or a
                         <b>Superscript</b> to the test <b>String</b>
                         and it is no longer a <b>Decimal</b>
                         <b>String</b>.
                         This fits expectation nicely.<br><br>
-                                            
-                        <span class="command">
+
+                        <span class="command15">
                           >>> RomCodes="\u2160 \u2161 \u2162
                           \u2170 \u2171 \u2172 \u2180 \u2181
                           \u2182"<br>
@@ -6662,16 +6624,16 @@ or because they are too weird!
                           False<br>
                           >>> RomCodes.isdigit()<br>
                           False<br>
-                          >>> 
+                          >>>
                         </span><br><br>
- 
+
                         Build a <b>String</b> of
                         <b>Roman Numeral Codes</b>
                         and that <b>String</b> will not
                         register as
                         <b>Decimal</b> or <b>Digital</b>,
                         just <b>Numeric</b>.<br><br>
-                       
+
                         I built the <b>String</b> twice.
                         The first time with
                         <b>Spaces</b> to make it print clearly.
@@ -6679,16 +6641,16 @@ or because they are too weird!
                         you would like to see the <b>Roman
                         Numerals</b> for
                         really <b>BIG</b> numbers.<br><br>
-                      
+
                         Strange ... I never realised the Romans
                         could count to that many?<br><br>
-                      
+
                         The <b>Spaces</b> had to be removed
                         for the
                         test of course, as they would register
                         as non <b>Numeric</b> and spoil
                         everything.<br><br>
-                      
+
                         <span class="command">
                           >>> print('\u09F4')<br>
                                 ৴<br>
@@ -6700,22 +6662,29 @@ or because they are too weird!
                           True<br>
                           >>>
                         </span><br><br>
-                      
+
                         Finally! the <b>Bengali Currency Numerator</b>.
                         Well, it worked OK. It admits to being a
                         <b>Numeric</b> but not a <b>Decimal</b>
                         or a <b>Digit</b>.<br><br>
-                      
+
                         I rest, wondering wearily what idiot
-                        thought this might be a good question to ask!!
+                        thought this might be a good
+                        question to ask!!<br><br>
+
+                        If I had to make a conclusion from all this
+                        ramble (which I quite enjoyed, to tell the
+                        truth), it would be that I think that
+                        <b>isdecimal()</b> covers <b>99%</b>
+                        of my needs.
                       </div>
                     </details>
                   </li>
                 </ol>
-              </div>
-               
+              </div><br><br>
+
               <hh5m>methods to modify String content:</hh5m><br><br>
-               
+
               <table class="c3">
                 <tr>
                   <th>Method</th>
@@ -6727,11 +6696,190 @@ or because they are too weird!
                      target="_blank"><b>str.replace()</b></a>
                   </td>
                   <td>
-                    <b>Replaces</b> all instances of one <b>substring</b> with another.
-                  </td> 
+                    <b>Replaces</b> all instances of one
+                    <b>substring</b> with another.
+                  </td>
                 </tr>
               </table><br><br>
-              
+
+              <div class="question">
+
+                <h2><i><u>Questions &
+                Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    Consider again the <b>Mixed Case DNA
+                    Sequence</b> 
+                    of a few exercises back:<br><br>
+                
+                    "<b>acgGTaCCCCCatcaaTTATgcccGT</b>"<br><br>
+                
+                    Previously we generated versions
+                    with consistent <b>Case</b>.<br><br>
+                
+                    With the capacity to alter <b>Base Codes</b>
+                    using
+                    the method <b>replace()</b>, it is possible to also
+                    <b>Complement</b> this <b>Sequence</b>
+                    (<b>Reversing</b> will have
+                    to wait a while).<br><br>
+                
+                    This is not as easy as it seems. You cannot,
+                    for
+                    example, simple replace all the '<b>A</b>'s
+                    with
+                    '<b>T</b>'s, '<b>G</b>'s, with '<b>C</b>'s,
+                    '<b>T</b>s with '<b>A</b>'s and '<b>C</b>'s
+                    with '<b>G</b>'s (think about it).<br><br>
+                
+                    I would advise a short planning session.
+                    Jot down in <b>Natural Language</b> how you
+                    intend
+                    to achieve your goal before committing
+                    yourself to <b>Python Code</b>.<br><br>
+                
+                    The result of this process is
+                    called <b>Pseudo Code</b>, one of several ways to
+                    plan out a solution to a problem (an
+                    <b>Algorithm</b>)
+                    before trying to express your requirements
+                    in the stark terms the computer
+                    requires.<br><br>
+                
+                    Trivial (I hope) in this case, but of
+                    importance that grows with the complexity of
+                    the problem you wish to solve.<br><br>
+                
+                    So, the task is, after a bit of careful
+                    planning, to produce
+                    an <b>Upper Case Complemented</b> version of
+                    the <b>Sequence</b> above.<br><br>
+                    
+                    <p class="hint">
+                      <b>replace()</b> requires <b>2 Mandatory
+                      Arguments</b> and accepts a third <b>Optional Argument</b>.<br><br>
+                      
+                      You will need either to be good at guessing, or to look
+                      these up before proceeding.
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        <b><u>Pseudo-Code</u></b><br>
+                        <div class="pseudos">
+                          Start by make the <b>Sequence</b>
+                          all <b>Upper Case</b>.
+                          If this not done straight away, every
+                          other
+                          process must be duplicated to catch
+                          both <b>Case</b> possibilities.<br><br>
+                        
+                          Protect one of each pair of codes that
+                          need
+                          to be exchanged. If this is not done, how
+                          will you distinguish the original
+                          '<b>T</b>'s from
+                          the new '<b>T</b>'s after you
+                          <b>Complement</b>
+                          the '<b>A</b>'s?<br><br>
+                        
+                          "<b>Protecting</b>" could simply be a
+                          matter of
+                          "<b>Replacing</b>" with some neutral
+                          <b>Character</b>?
+                          '<b>X</b>' or '<b>Y</b>' say?<br><br>
+                        
+                          Specifically, Protect the '<b>A</b>'s
+                          as '<b>X</b>'s and the '<b>C</b>'s
+                          as '<b>Z</b>'s.<br><br>
+                        
+                          Now complement the '<b>G</b>'s and
+                          the '<b>T</b>'s<br><br>
+                        
+                          Finally restore the '<b>X</b>'s
+                          (originally '<b>A</b>'s) as '<b>T</b>'s
+                          and restore the '<b>Z</b>'s (originally
+                          '<b>C</b>'s) as '<b>G</b>'s.<br><br>
+                        
+                          Done! Show it to the world along with
+                          the <b>Upper Case Original</b> for
+                          checking.<br><br>
+                        </div><br>
+                      
+                        <span class="command16">
+                          >>> #<br>
+                          ... #Change Mixed case sequence into upper case<br>
+                          ... #<br>
+                          ... Forward_Mixed=('acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact')<br>
+                          >>> Forward_Upper=Forward_Mixed.upper()<br>
+                          >>> Forward_Upper<br>
+                          'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'<br>
+                          >>> #<br>
+                          ... #Complement it<br>
+                          ... #<br>
+                          ... Forward_Upper = Forward_Mixed.upper()<br>
+                          >>> Forward_Complement = Forward_Upper.replace('A', 'X')<br>
+                          >>> Forward_Complement = Forward_Complement.replace('C', 'Z')<br>
+                          >>> Forward_Complement = Forward_Complement.replace('G', 'C')<br>
+                          >>> Forward_Complement = Forward_Complement.replace('T', 'A')<br>
+                          >>> Forward_Complement = Forward_Complement.replace('X', 'T')<br>
+                          >>> Forward_Complement = Forward_Complement.replace('Z', 'G')<br>
+                          >>> #<br>
+                          ... #Display the Answers<br>
+                          ... #<br>
+                          ... Forward_Complement<br>
+                          'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'<br>
+                          >>> Forward_Upper<br>
+                          'ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT'<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        <p class="hint">
+                          <b>Note:</b> The inclusion of <b>Comments</b>
+                          in the code. That is, lines commencing with
+                          '<b>#</b>' <b>Characters</b>. These will be
+                          ignored by the <b>Interpreter</b>.<br><br>
+                          
+                          Not really practical when using the
+                          <b>Interactive Interpreter</b> to execute one
+                          command at a time, but vital when
+                          writing blocks of code (<b>Programs</b>)
+                          to be stored more permanently in disk files
+                          and used repeatedly.
+                        </p>
+                        
+                        The code follows the pseudo code
+                        faithfully and works fine.<br><br>
+                        
+                        <span class="command15">
+                          >>> #<br>
+                          ... #Complement it in one line!<br>
+                          ... #<br>
+                          ... Forward_Mixed.upper().replace('A', 'X').replace('C','Z') \<br>
+                          ... .replace('G','C').replace('T', 'A').replace('X','T').replace('Z','G')<br>
+                          'TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA'<br>
+                          >>> <br>
+                        </span><br><br>
+                        
+                        Why? I suppose because I felt like it.<br><br>
+                        
+                        Very clever (of course!) but not very readable.<br><br>
+                        
+                        <p class="hint">
+                          There is a much better way to <b>Complement</b> a <b>Sequence</b>.
+                          We will look again at this task when we have the requisite tools.
+                        </p>
+                        
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div><br>
+
               <hh5m>methods to examine String content:</hh5m><br><br>
 
               <table class="c3">
@@ -6749,7 +6897,7 @@ or because they are too weird!
                     non-overlapping occurrences
                     of a given <b>substring</b> within a
                     <b>String</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6760,7 +6908,7 @@ or because they are too weird!
                     <b>Returns True</b> if the
                      <b>String</b> starts with
                       a given <b>substring</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6771,7 +6919,7 @@ or because they are too weird!
                     <b>Returns True</b> if the
                     <b>String</b> ends with
                     a given <b>substring</b>.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6783,7 +6931,7 @@ or because they are too weird!
                     first occurrence of a
                     <b>substring</b> in the <b>String</b>.
                     <b>Returns -1</b> if not found.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6795,7 +6943,7 @@ or because they are too weird!
                     first occurrence of a
                     <b>substring</b> in the <b>String</b>.
                     <b>Raises</b> an <b>Error</b> if not found.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6807,7 +6955,7 @@ or because they are too weird!
                     last occurrence of a
                     <b>substring</b> in the <b>String</b>.
                     <b>Returns -1</b> if not found.
-                  </td> 
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -6819,7 +6967,7 @@ or because they are too weird!
                     last occurrence of a
                     <b>substring</b> in the <b>String</b>.
                     <b>Raises</b> an <b>Error</b> if not found.
-                  </td> 
+                  </td>
                 </tr>
               </table><br><br>
 
@@ -6833,28 +6981,175 @@ or because they are too weird!
               rather smack of petulance at first glance!
               I chose to favour the <b>find</b>/<b>rfind</b> approach
               for now.<br><br>
-              
+
               The differences between the two options
               are discussed
               <a href="https://stackoverflow.com/questions/22190064/difference-between-find-and-index"
                target="_blank">here</a>,
               should you be interested.<br><br>
-              
+
               <p class="hint">
-                 In the course of the referenced discussion,
-                 a rather more vital difference between
-                 the two options is mentioned.<br><br>
-                 
-                 <b>find</b>/<b>rfind</b> can only be used for
-                 <b>str Objects</b>!
-                 
-                 <b>index</b>/<b>rindex</b> work with
-                 <b>Strings</b> and more complex
-                 <b>Data Objects</b> that will be discussed soon.
-                 
-                 So, let us not dismiss <b>index</b>/<b>rindex</b>
-                 too early!
-               </p>
+                In the course of the referenced discussion,
+                a rather more vital difference between
+                the two options is mentioned.<br><br>
+
+                <b>find</b>/<b>rfind</b> can only be used for
+                <b>str Objects</b>!
+
+                <b>index</b>/<b>rindex</b> work with
+                <b>Strings</b> and more complex
+                <b>Data Objects</b> that will be discussed soon.
+                So, let us not dismiss <b>index</b>/<b>rindex</b>
+                too early!
+              </p>
+               
+              <div class="question">
+              
+                <h2><i><u>Questions &
+                Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    Consider the minute <b>mRNA Sequence</b>:<br><br>
+                    
+                    "<b>aggGAACtATGcaTCtatTcaTAttTActacACGACTCGCgcacaggatAcctTaACGAttACcaaaAAAAAaaaa</b>"<br><br>
+                    
+                    Identify, copy out and display the <b>Coding
+                    Sequence</b>. Check you have no <b>Frame
+                    Shift</b>.<br><br>
+                    
+                    <p class="hint">
+                      At this stage, we have not covered enough
+                      <b>Python</b> to do this "nicely".<br><br>
+                      
+                      We will have another shot later and produce
+                      a much more delightful solution.<br><br>
+                      
+                      Now we use this as an excuse to use the
+                      tricks we have covered to a vaguely
+                      <i>"real"</i> purpose.
+                    </p>
+                      
+                    <p class="hint">
+                      I am convinced that a bit of planning
+                      in the form of <b>pseudo code</b> would be very
+                      helpful.<br><br>
+                      
+                      This is not such a trivial problem that
+                      <i>"off the top of the head"</i> coding would be
+                      straight forward.
+                    </p>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        <b><u>Pseudo-Code</u></b><br>
+                        <div class="pseudos">
+                          Make an <b>Upper Case</b> version of the <b>mRNA</b>.<br><br>
+                          
+                          Look for the first <b>Methionine Codon</b>.<br><br>
+                          
+                          Trim of the <b>5 prime UTR</b>.<br><br>
+                          
+                          Find the <b>Stop Codon</b> nearest the <b>Start</b> that
+                          is "<i>in frame</i>".<br><br>
+                          
+                          Trim off the <b>3 prime UTR</b>.<br><br>
+                          
+                          Display the <b>CDS</b><br><br>
+                        </div>
+                        
+                        <p class="hint">
+                          OK, I have cheated a lot!!!
+                          There is only one <b>Stop Codon</b> and it is in frame.
+                          This allows me to ignore any possibility of
+                          error anywhere! Maybe a bit more reality later?
+                         </p>
+
+
+                        <span class="command15">
+                          >>> #<br>
+                          ... # First set  up a Variable with the original Sequence<br>
+                          ... # and then make an Upper Case working copy<br>
+                          ... #<br>
+                          ... <br>
+                          >>> mRNA_Original="aggGAACtATGcaTCtatTcaTAttTActacACG\<br>
+                          ... ACTCGCgcacaggatAcctTaACGAttACcaaaAAAAAaaaa"<br>
+                          >>> mRNA_Original.upper()<br>
+                          'AGGGAACTATGCATCTATTCATATTTACTACACGACTCGCGCACAGGATACCTTAACGATTACCAAAAAAAAAAAA'<br>
+                          >>> mRNA_Upper<br>
+                          'AGGGAACTATGCATCTATTCATATTTACTACACGACTCGCGCACAGGATACCTTAACGATTACCAAAAAAAAAAAA'<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Look for the ATG that is the Start of the CDS<br>
+                          ... #<br>
+                          ... <br>
+                          >>> mRNA_Upper.find("ATG")<br>
+                          8<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Trim off the 5 prime UTR and copy to a new Variable<br>
+                          ... #<br>
+                          ... <br>
+                          >>> CDS=mRNA_Upper[8:]<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Count the number of each type of Stop Codon<br>
+                          ... #<br>
+                          ... <br>
+                          >>> CDS.count('TAA')<br>
+                          1<br>
+                          >>> CDS.count('TAG')<br>
+                          0<br>
+                          >>> CDS.count('TGA')<br>
+                          0<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Find the Stop Codon Nearest the front<br>
+                          ... # Use rfind even though find makes more sense!<br>
+                          ... #<br>
+                          ... <br>
+                          >>> CDS.rfind('TAA')<br>
+                          45<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Trim off the 3 prime UTR <br>
+                          ... #<br>
+                          ... <br>
+                          >>> CDS=CDS[:48]<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Check the CDS has no Frame Shift<br>
+                          ... # Its Length should be exactly divisible by 3!<br>
+                          ... #<br>
+                          ... <br>
+                          >>> len(CDS) % 3<br>
+                          0<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Display the resulting CDS<br>
+                          ... #<br>
+                          ... <br>
+                          >>> CDS<br>
+                          'ATGCATCTATTCATATTTACTACACGACTCGCGCACAGGATACCTTAA'<br>
+                          >>> 
+                        </span>
+                        
+                        I have put lots of <b>Comments</b> in my answer in an attempt to
+                        make it more readable. <b>Comments</b> are good!! But not really
+                        when using <b>Python Interpreter interactively</b>.
+                        
+                        Leave the <b>Comments</b> until writing <b>Programs</b> properly (soon).
+                        For now, just admire the principle.
+                        
+                        Hopefully, the code above is self explanatory?
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div> <br>
 
               <hh5m>methods to format Strings:</hh5m><br><br>
 
@@ -6871,7 +7166,7 @@ or because they are too weird!
                   <td>
                     <b>Returns</b> the formatted
                     <b>String</b>.
-                  </td> 
+                  </td>
                 </tr>
               </table>
             </div>
@@ -6908,35 +7203,31 @@ or because they are too weird!
             <b>Python Class</b>.
           </li>
         </ol>
-       
+
         <p>
-          <hh6m>Builtin Functions introduced or 
+          <hh6m>Builtin Functions introduced or
           reinforced in this section:</hh6m><br>
         </p>
-        
+
         <ol>
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#help"
             target="_blank"><b>help()</b></a> - Displays
             information relating to its single <b>Argument</b>.
           </li><br>
-          
+
           <li>
             <a href="https://docs.python.org/3.7/library/functions.html#open"
             target="_blank"><b>open()</b></a> - Opens
             a disk file for <b>reading</b> or <b>writing</b>.
           </li><br>
-          
-          <li>
-          </li><br>
-
         </ol>
-        
+
         <p>
           <hh6m>methods introduced or
           reinforced in this section:</hh6m><br>
         </p>
-        
+
         <ol>
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/lower"
@@ -6944,7 +7235,7 @@ or because they are too weird!
             - <b>Returns</b> a string with <b>Upper Case Characters</b>
                     converted to <b>Lower Case</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/casefold"
              target="_blank"><b>str.casefold()</b></a>
@@ -6952,28 +7243,28 @@ or because they are too weird!
             converted to <b>Lower Case</b>.
             For caseless matching.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/upper"
              target="_blank"><b>str.upper()</b></a>
              - <b>Returns</b> a string with <b>Lower Case Characters</b>
              converted to <b>Upper Case</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/swapcase"
              target="_blank"><b>str.swapcase()</b></a>
              - <b>Returns</b> a string with <b>Lower Case Characters</b>
              converted to <b>Upper Case</b> and vice versa.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/capitalize"
              target="_blank"><b>str.capitalize()</b></a>
             - <b>Returns</b> a string with first letter
             capitalized and the rest <b>Lower Case</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/title"
              target="_blank"><b>str.title()</b><a>
@@ -6981,7 +7272,7 @@ or because they are too weird!
             each word capitalized, others
             <b>Lower Case</b>).
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/ljust"
              target="_blank"><b>str.ljust()</b></a>
@@ -6990,7 +7281,7 @@ or because they are too weird!
             specified width, with optional
             <b>Fill Characters</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/rjust"
              target="_blank"><b>str.rjust()</b></a>
@@ -6998,7 +7289,7 @@ or because they are too weird!
             Right Justified</b> within the
             specified width, with optional <b>Fill Characters</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/center"
              target="_blank"><b>str.center()</b></a>
@@ -7006,28 +7297,28 @@ or because they are too weird!
             Centred</b> within the specified
             width, with optional <b>Fill Characters</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/lstrip"
              target="_blank"><b>str.lstrip()</b></a>
             - <b>Returns</b> a <b>String</b>
             with specified leading characters removed.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/rstrip"
              target="_blank"><b>str.rstrip()</b></a>
             - <b>Returns</b> a <b>String</b>
             with specified trailing characters removed.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/strip"
              target="_blank"><b>str.strip()</b></a>
             - <b>Returns</b> a <b>String</b>
             with specified leading and trailing characters removed.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isalnum"
              target="_blank"><b>str.isalnum()</b></a>
@@ -7035,7 +7326,7 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Alphanumeric</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isalpha"
              target="_blank"><b>str.isalpha()</b></a>
@@ -7043,7 +7334,7 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Alphabetic</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isdecimal"
              target="_blank"><b>str.isdecimal()</b></a>
@@ -7051,7 +7342,7 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Decimal Characters</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isdigit"
              target="_blank"><b>str.isdigit()</b></a>
@@ -7059,7 +7350,7 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Digits</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/islower"
              target="_blank"><b>str.islower()</b></a>
@@ -7068,7 +7359,7 @@ or because they are too weird!
             are <b>Lower Case</b> and there is
             at least one <b>Cased Character</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isnumeric"
              target="_blank"><b>str.isnumeric()</b></a>
@@ -7076,7 +7367,7 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Numeric</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isupper"
              target="_blank"><b>str.isupper()</b></a>
@@ -7085,14 +7376,14 @@ or because they are too weird!
             are <b>Upper Case</b> and there is
             at least one <b>Cased Character</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isprintable"
              target="_blank"><b>str.isprintable()</b></a>
             - <b>Returns True</b> if the <b>String</b>
             is empty or all characters are <b>Printable</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isspace"
              target="_blank"><b>str.isspace()</b></a>
@@ -7100,27 +7391,27 @@ or because they are too weird!
             is non-empty and all characters are
             <b>Whitespaces</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/istitle"
              target="_blank"><b>str.istitle()</b></a>
             - <b>Returns True</b> if the <b>String</b>
             is non-empty and <b>Title Cased</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/isidentifier"
              target="_blank"><b>str.isidentifier()</b></a>
             - <b>Returns True</b> if the <b>String</b>
             is a <b>Valid Identifier</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/replace"
              target="_blank"><b>str.replace()</b></a>
             - <b>Replaces</b> all instances of one <b>substring</b> with another.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/count"
              target="_blank"><b>str.count()</b></a>
@@ -7129,7 +7420,7 @@ or because they are too weird!
             of a given <b>substring</b> within a
             <b>String</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/startswith"
              target="_blank"><b>str.startswith()</b></a>
@@ -7137,7 +7428,7 @@ or because they are too weird!
             <b>String</b> starts with
             a given <b>substring</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/endswith"
              target="_blank"><b>str.endswith()</b></a>
@@ -7145,7 +7436,7 @@ or because they are too weird!
             <b>String</b> ends with
             a given <b>substring</b>.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/find"
              target="_blank"><b>str.find()</b></a>
@@ -7154,7 +7445,7 @@ or because they are too weird!
             <b>substring</b> in the <b>String</b>.
             <b>Returns -1</b> if not found.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/index"
              target="_blank"><b>str.index()</b></a>
@@ -7163,7 +7454,7 @@ or because they are too weird!
             <b>substring</b> in the <b>String</b>.
             <b>Raises</b> an <b>Error</b> if not found.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/rfind"
              target="_blank"><b>str.rfind()</b></a>
@@ -7172,7 +7463,7 @@ or because they are too weird!
             <b>substring</b> in the <b>String</b>.
             <b>Returns -1</b> if not found.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/rindex"
              target="_blank"><b>str.rindex()</b></a>
@@ -7181,7 +7472,7 @@ or because they are too weird!
             <b>substring</b> in the <b>String</b>.
             <b>Raises</b> an <b>Error</b> if not found.
           </li><br>
-          
+
           <li>
             <a href="https://www.programiz.com/python-programming/methods/string/format"
              target="_blank"><b>str.format()</b></a>
@@ -7189,24 +7480,37 @@ or because they are too weird!
             <b>String</b>.
           </li>
         </ol>
- 
+
         <p>
-          <hh6m>Points noted or 
+          <hh6m>Points noted or
           reinforced in this section:</hh6m>
         </p>
 
         <ol>
           <li>
-            The <b>four</b> syntactic options for a <b>method</b>:<br>
+            The <b>four</b> syntactic options for a
+            <b>method</b>:<br>
             <i>&lt;Variable Identifier&gt;.&lt;method&gt;(Arguments)</i><br>
             <i>&lt;Class Value&gt;.&lt;method&gt;(Arguments)</i><br>
             <i>&lt;Class&gt;.&lt;method&gt;(Variable Identifier,Arguments)</i><br>
             <i>&lt;Class&gt;.&lt;method&gt;(Class Value,Arguments)</i>
           </li><br>
- 
-          <li>No <b>String method <i>changes</i></b> the original <b>String</b>.
+
+          <li>
+            No <b>String method <i>changes</i></b> the original
+            <b>String</b>.
           </li>
-        </ol>
+          
+          <li>
+            The advisability of using <b>pseudo code</b> (or similar)
+            to aid <b>Algorithm</b> design.
+          </li><br>
+          
+          <li>
+            The use of comments integrated into code using
+            '<b>#</b>' <b>Characters</b>.
+          </li>
+       </ol>
       </div>
     </details>
   </li><br>
@@ -7258,10 +7562,10 @@ or because they are too weird!
 
             <div class="minsect"><br>
             </div>
-            
+
           </details>
         </li><br>
- 
+
         <li>
           <details>
           <summary>
@@ -7272,7 +7576,7 @@ or because they are too weird!
 
             <div class="minsect"><br>
             </div>
-            
+
           </details>
         </li><br>
       </ol>
@@ -7327,7 +7631,7 @@ or because they are too weird!
              the Video before the class starts.
           </p>
 
-          <p>The video - Improving <b>Algorithm Design</b> 
+          <p>The video - Improving <b>Algorithm Design</b>
              by the use of <b>Repeat Structures</b> (<b>Loops</b>)
             <details class="video">
             <summary Style="color:black;"><b>Loops - A video</b>
@@ -7662,7 +7966,7 @@ or because they are too weird!
                     between <b>1</b> and <b>20</b>.<br>
                     While the <b>2</b> Integers are not the same,
                     replace the second <b>random integer</b>.<br>
-                    Express joy when the integers match. 
+                    Express joy when the integers match.
                   </div><br>
 
                   <b><u>Code</u></b><br>
@@ -7755,7 +8059,7 @@ or because they are too weird!
                     <li>
                       Here is another example of an over length
                       code line. I use a <b>backslash</b>, you
-                      might have 
+                      might have
                       preferred to enclose the entirety of that
                       which is to be printed in parentheses,
                       <b>()</b>.
@@ -7825,7 +8129,7 @@ or because they are too weird!
                  </div>
               </p>
 
-              <p class="hint"><b>Note</b>: Concerning 
+              <p class="hint"><b>Note</b>: Concerning
                  <i>&lt;Conditional</i>&gt;s that always return
                  the value "<b>True</b>".<br><br>
 
@@ -7843,7 +8147,7 @@ or because they are too weird!
 
                  These constants can be used to refer to the
                  two possible <b>bool</b> values in your code.
-                 For example:<br><br> 
+                 For example:<br><br>
 
                  &nbsp;&nbsp;&nbsp;&nbsp;<b>while
                  True</b><br><br>
@@ -7895,7 +8199,7 @@ or because they are too weird!
                  "<b>3>9</b>") or an
                  <b>Integer expression</b> (e.g.
                  <b>"94*(3-4)"</b>) for
-                 the <b>while loop</b> 
+                 the <b>while loop</b>
                  <i>&lt;Conditional</i>&gt;.<br><br>
 
                  If you use an <b>Integer expression</b>,
@@ -7934,7 +8238,7 @@ or because they are too weird!
                     Until a match is found, generate
                     further <b>random integers</b>
                     between <b>1</b> and <b>20</b>.<br>
-                    Express joy when the integers match. 
+                    Express joy when the integers match.
                   </div><br>
 
                   <b><u>Code</u></b><br>
@@ -8067,7 +8371,7 @@ or because they are too weird!
 
                 Well, you could argue you do not need a <b>Loop</b>
                 of any description?<br><br>
- 
+
                 This would work fine:<br><br>
 
                 <div class="code16">
@@ -8250,7 +8554,7 @@ or because they are too weird!
 
                 The full <b>Syntax</b> of the <b>Python range
                 Function</b> is (informally):<br><br>
- 
+
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <b>range(</b><i>&lt;Start&gt</i><b>,</b>
                       <i>&lt;Stop&gt</i><b>,</b>
@@ -8463,9 +8767,9 @@ or because they are too weird!
                 <span Class="codecomm16">
                   # Print the Sequence & Amino Acid Counts
                 </span><br>
-                print "There are " + str(Sequence_Count) + 
+                print "There are " + str(Sequence_Count) +
                 " Protein Sequences in the file"<br>
-                print "There are " + str(AA_Count) + 
+                print "There are " + str(AA_Count) +
                 " Amino Acid Codes in the file"
               </div><br><br>
 
@@ -8530,7 +8834,7 @@ or because they are too weird!
                 item property names to be used as
                 <b>Title Row</b> for <b>Property
                 Tables</b>.<br><br>
- 
+
                 For each category, compose a <b>tuple</b>.<br>
                 Make the first <b>tuple</b> element
                 identify the category.<br>
@@ -8621,7 +8925,7 @@ or because they are too weird!
                 <span Class="codecomm16">
                   # Item Properties are Keyed Values
                 </span><br>
-  
+
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 "Bean":"  0.34     897    992     931",<br>
@@ -8804,7 +9108,7 @@ or because they are too weird!
 
                     What effect would changing the comma
                     to a semi-colon have?<br><br>
- 
+
                     Why not make your own version of this
                     code, edit it and find out?
                   </li>
@@ -8942,7 +9246,7 @@ or because they are too weird!
               stupid user enters something
               that is unequivocally <b>YES</b> or
               <b>NO</b>.<br><br>
-               
+
               Issue a stern reprimand each
               time an ambiguous response is entered.
 
@@ -9211,7 +9515,7 @@ or because they are too weird!
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
         </p>
-        
+
         <ol>
           <li>
             <b><u>Looping Code Constructs:</u></b>
@@ -9252,25 +9556,25 @@ or because they are too weird!
           <hh6m>Modules introduced or reinforced in
           this section:</hh6m>
         </p>
-        
+
         <ol>
           <li>
             <b>random</b> - for constructs related to <b>random
             number generation</b>,including:
             <ul>
               <li>
-                <b>randint(a, b)</b> - Returns a 
+                <b>randint(a, b)</b> - Returns a
                 random integer <b>N</b> such that
                 <b>a <= N <= b</b>.
               </li>
             </ul>
           </li>
         </ol>
-          
+
         <p>
           <hh6m>Points noted or reinforced in this section:</hh6m>
         </p>
-        
+
         <ol>
           <li>
             <b>Dealing with over length lines</b><br>
@@ -9278,7 +9582,7 @@ or because they are too weird!
             enclosing brackets (<b>Python</b> preferred) or
             <b>Backslash</b> characters.
           </li>
-          
+
           <li>
             <b>Nesting Loops</b> ... that is,
             putting one loop inside another.
@@ -9413,7 +9717,7 @@ or because they are too weird!
 
       <p>The basic syntax is as follows:
 
-      <div class="code">def 
+      <div class="code">def
          <span style="font-weight:normal;">
          <i>Function_Name</i>
          </span>
@@ -9762,7 +10066,7 @@ or because they are too weird!
 
                 &nbsp;&nbsp;&nbsp;
                 <span Class="codecomm16">
-                # A Dictionary to associate 
+                # A Dictionary to associate
                 Codons with Amino Acid Codes.
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
@@ -9826,7 +10130,7 @@ or because they are too weird!
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 print "Warning - Sequence contains
                 non-alpha Characters?!";<br><br>
- 
+
                 &nbsp;&nbsp;&nbsp;
                 RNA=rna.upper();
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -9859,7 +10163,7 @@ or because they are too weird!
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
                 CDS_Length  = RNA_Length - Spare_Bases;<br>
-          
+
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -9980,13 +10284,13 @@ or because they are too weird!
 
                     Add a use of the <b>tuple
                     Legal_Codons</b> to the
-                    <b>TEST BED</b> code. (maybe 
+                    <b>TEST BED</b> code. (maybe
                     "<b>print Legal_Codons[14];</b>").<br><br>
 
                     Try it. Did it work?<br><br>
 
                     Add a use of the dictionary Gencode to the
-                    <b>TEST BED</b> code. (maybe 
+                    <b>TEST BED</b> code. (maybe
                     "<b>print Gencode["AUG"];</b>").<br><br>
                     Try it. Did it work?<br><br>
 
@@ -10154,7 +10458,7 @@ or because they are too weird!
                  target="_blank">
                       <b>fun_Example4iii.py</b></a>
             </div><br><br>
- 
+
             <b><u>Experiments & Questions</u></b>
             <div class="experiment">
               <ul>
@@ -10399,7 +10703,7 @@ or because they are too weird!
                   results as of now:<br><br>
 
                   <ul>
-                    <li><b>Version 1</b>, Recursion, function 
+                    <li><b>Version 1</b>, Recursion, function
                       returning a single Series term.<br><br>
                       <b>171m46.585s</b>&nbsp;&nbsp;&nbsp;&nbsp;
                       {<b>for just 50 terms!</b>}
@@ -10507,12 +10811,12 @@ or because they are too weird!
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
         </p>
- 
-        <p>         
+
+        <p>
           <htt6m>Module introduced or reinforced in
           this sections:</htt6m><br>
         </p>
-  
+
       </div>
     </details>
   </li>
@@ -10628,13 +10932,13 @@ First-class    870   1478    104  54211    344  39.45    124    251
                           <div class="answer">
 
                             <span class="command">
-                            
+
                             </span><br><br>
-                      
+
                           </div>
                         </details><br>
                       </li>
-                      
+
 Clearest statement of difference between
 procedure and function. See first answer
 https://stackoverflow.com/questions/721090/what-is-the-difference-between-a-function-and-a-procedure
