@@ -125,7 +125,7 @@ table.c3 {
     table-layout: auto;
     margin-left:40px; margin-right:auto;
     border:1px solid black; border-collapse: collapse;
-    width:100%; background:PowderBlue;
+    width:80%; background:PowderBlue;
 }
 
 table.c3 th {
@@ -570,9 +570,17 @@ span.minsectsum {
 /* class for Pseudo Code */
 
 .pseudo {
-    background-color: Cornsilk; color: auto;
+    background-color: LightBlue; color: auto;
     margin-right: auto;
     width: 775px;
+}
+
+/* class for thin Pseudo Code */
+
+.pseudos {
+    background-color: LightBlue; color: auto;
+    margin-right: auto;
+    width: 600px;
 }
 
 /* class for Hints  */

@@ -570,9 +570,17 @@ span.minsectsum {
 /* class for Pseudo Code */
 
 .pseudo {
-    background-color: Cornsilk; color: auto;
+    background-color: LightBlue; color: auto;
     margin-right: auto;
     width: 775px;
+}
+
+/* class for thin Pseudo Code */
+
+.pseudos {
+    background-color: LightBlue; color: auto;
+    margin-right: auto;
+    width: 650px;
 }
 
 /* class for Hints  */
