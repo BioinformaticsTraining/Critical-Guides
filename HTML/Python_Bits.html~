@@ -5017,6 +5017,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                   <img src="Images/format_string_value_set.png"
                        alt="Fiddle!"
+                       class="centimg"
                        height="97" width="680"></a><br><br>
 
                   <b>print()</b> is shown with <b>3
@@ -5090,6 +5091,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                   <img src="Images/string_modulo_overview.png"
                              alt="Fiddle!"
+                             class="centimg"
                              height="265" width="680"></a>
                   <br><br>
 
@@ -7068,7 +7070,6 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           error anywhere! Maybe a bit more reality later?
                          </p>
 
-
                         <span class="command15">
                           >>> #<br>
                           ... # First set  up a Variable with the original Sequence<br>
@@ -7135,7 +7136,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> CDS<br>
                           'ATGCATCTATTCATATTTACTACACGACTCGCGCACAGGATACCTTAA'<br>
                           >>> 
-                        </span>
+                        </span><br><br>
                         
                         I have put lots of <b>Comments</b> in my answer in an attempt to
                         make it more readable. <b>Comments</b> are good!! But not really
@@ -7168,7 +7169,238 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                     <b>String</b>.
                   </td>
                 </tr>
-              </table>
+              </table><br><br>
+              
+              <b>str.format()</b> acts on a <b>Strings</b> that specifies the way
+              in which its <b>Arguments</b>
+              should be arranged (<b>formatted</b>) into an <b>Output String</b>.<br><br>
+              
+              There are strong similarities with the way <b>Format Strings</b> are
+              used by the <b>print() Builtin Function</b>.<br><br>
+              
+              A very readable description of the way <b>str.format()</b>
+              works and the way <b>print()</b> handles <b>Format Strings</b>
+              can be found
+              <a href="https://www.python-course.eu/python3_formatted_output.php"
+               target-"_blank">here</a><br><br>
+ 
+              In this tutorial, I offer a couple of examples and a
+              few simple exercises. <br><br>
+              
+              <ol>
+                <li>
+                  <hh6m> str.format() for Positional Arguments. </hh6m><br><br>
+                  
+                  The <b>String</b> to which the <b>method str.format()</b>
+                  is applied
+                  looks a bit like the <b>Format Strings</b>
+                  used by the <b>Builtin Function print()</b> discussed
+                  previously. <br><br>
+                  
+                  It includes <b>Code Regions</b> in <b>Curly Brackets {}</b> that
+                  determine the
+                  formatting of the <b>method Arguments</b>.<br><br>
+                  
+                  The code within the <b>curly brackets</b> has two <b>Fields</b>,
+                  separated by a <b>Colon</b> ('<b>:</b>').<br><br>
+                  
+                  The first <b>Fields</b> 
+                  identifies the <b>Argument</b> to which the
+                  formatting is to be applied.<br><br>
+                  
+                  In this first example, the first <b>Field</b>
+                  indicates the <b>Argument</b>
+                  to which the formatting applies by its <b>Position</b>
+                  (starting from <b>0</b>) in the list of items
+                  to be formatted.<br><br>
+                  
+                  The second <b>Fields</b> defines defines
+                  the format details, following extremely similar rules to those
+                  used by <b>print()</b>.<br><br>
+                  
+                  Where there is no second <b>Field</b>. a <b>String
+                  Argument</b> is assumed.<br><br>
+              
+                    <img src="Images/format_method_positional_parameters.png"
+                         alt="Fiddle!"
+                         class="cent40"
+                         height="258px" width="700px"></a><br><br>
+                </li>
+                
+                <li>  
+                  <hh6m> str.format() for Keyword Arguments. </hh6m><br><br>
+           
+                    An alternative to specifying the item to be formatted by
+                    its <b>Position</b> in the list of <b>Arguments</b> sent
+                    to <b>str.format()</b> is to use <b>Keyword</b>s.<br><br>
+                    
+                    Each item it the <b>Argument list</b> is prefixed by 
+                    a <b>Keyword</b>. The <b>Keyword</b> is separated from the
+                    item value by an <b>Equals Character</b> ('<b>=</b>').<br><br>
+                    
+                    The first <b>Field</b> in each <b>Bracketed {} Coding
+                    Element</b> embedded in the <b>Format String</b> is a <b>Keyword</b>
+                    that identifies the item to be formatted.<br><br>
+           
+                    <img src="Images/format_method_keyword_parameters.png"
+                         alt="Fiddle!"
+                         class="cent40"
+                         height="292" width="700"></a><br><br>
+                         
+                    A big advantage of using <b>Keywords</b> is that a single
+                    <b>Format String</b> can be used with <b>Argument Lists</b>
+                    of varying order. 
+                </li>
+              </ol><br><br>  
+
+              <div class="question">
+
+                <h2><i><u>Questions &
+                Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    It is possible to include a <b>str,format()
+                    Argument</b> more than once, and in any order,
+                    in a <b>Format String</b>.<br><br>
+                    
+                    Compose a simple example to illustrate the veracity of this claim.<br><br>
+                  
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                       <span class="command">
+                         >>> Format_Gunga="\n\nWas our regimental bhisti, {1} {0}\n \<br>
+                         ... He was \"{0} {0} {0}\n \<br>
+                         ... You limpin' lump o' brick-dust, Gunga Din!\"\n\n"<br>
+                         >>> print (Format_Gunga.format("Gunga","Din"))<br>
+                         <br>
+                         <br>
+                         Was our regimental bhisti, Din Gunga<br>
+                         He was "Gunga Gunga Gunga<br>
+                         You limpin' lump o' brick-dust, Gunga Din!"<br>
+                         <br>
+                         <br>
+                         >>> 
+                        </span>
+                        
+                        My example is from the first stanza of the famous poem
+                        <a href="https://www.poetryfoundation.org/poems/46783/gunga-din"
+                         target="_blank">"<b>Gunga Din</b>"</a>
+                        by <b>Rudyard Kipling</b>.<br><br>
+                        
+                        <b>Rudyard's</b> analysis
+                        of world affairs were a little dubious, but this
+                        is a jolly good poem.<br><br>
+                        
+                        If you do not know it, <b>Gunga</b> starts of roundly
+                        abused, but ends up as a hero. Dead mind, but
+                        definitely a hero.
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    Data from a (very small) class of children
+                    recording their age and performance in a
+                    (very meticulously assessed) test) is as follows:<br><br>
+                    
+                    <ul>
+                      <li><b>Fred</b>, <b>11</b>, <b>45.553</b></li>
+                      <li><b>22.451</b>, <b>Jimmy</b>, <b>12</b></li>
+                      <li><b>10</b>, <b>14.3</b>, <b>Harry</b></li>
+                    </ul></b><br>
+                    
+                    With changing the order of the data items.<br><br>
+                    
+                    Using only one <b>Format String</b>.<br><br>
+                    
+                    Create and display the data in a tidy table.<br><br>
+                     
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+ 
+                        <span class="command16">
+                          >>> Table_String="{0:10}{1:6}{2:5}\n".format("Name","Age","Score")<br>
+                          >>> Format_String="{Name:10}{Age:3d}{Score:8.2f}\n"<br>
+                          >>> Table_String+=Format_String.format(Name="Fred",Age=11,Score=45.553)<br>
+                          >>> Table_String+=Format_String.format(Score=22.451,Name="Jimmy",Age=12)<br>
+                          >>> Table_String+=Format_String.format(Age=10,Score=14.3,Name="Harry")<br>
+                          >>> print(Table_String)<br>
+                          Name      Age   Score<br>
+                          Fred       11   45.55<br>
+                          Jimmy      12   22.45<br>
+                          Harry      10   14.30<br>
+                          <br>
+                          >>>
+                        </span><br><br>
+                        
+                        A clear case where Keywords are essential?
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    A strange one with which to end.<br><br>
+                    
+                    It is (obviously?) perfectly OK to mix
+                    Positional and Keyword Arguments.<br><br>
+                    
+                    However, if you do mix Positional and Keyword Arguments, all the
+                    Positional Arguments must come before the Keyword Arguments?<br><br>
+                    
+                    I have no idea why  this limitation exists, but it does not
+                    restrict functionality in any way.<br><br>
+                    
+                    Compose simple examples to illustrate these
+                    truth of these claims.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+ 
+                        <span class="command14">
+                          >>> Format_String_BAD="\n\n{2},\n{Middle:},\n{0}.\n\n"<br>
+                          >>> Wodehouse=Format_String_BAD.format("the girl who marries you will need", \<br>
+                          ... Middle="which is the exact quantity", \<br>
+                          ... "And she's got brains enough for two")<br>
+                          &nbsp;&nbsp;File "<stdin>", line 3<br>
+                          SyntaxError: positional argument follows keyword argument<br>
+                          >>> <br>
+                          >>> Format_String_GOOD="\n\n{1},\n{Middle:},\n{0}.\n\n"<br>
+                          >>> Wodehouse=Format_String_GOOD.format("the girl who marries you will need", \<br>
+                          ... "And she's got brains enough for two", \<br>
+                          ... Middle="which is the exact quantity")<br>
+                          >>> print(Wodehouse)<br>
+                          <br>
+                          <br>
+                          And she's got brains enough for two,<br>
+                          which is the exact quantity,<br>
+                          the girl who marries you will need.<br>
+                          <br>
+                          <br>
+                          >>>
+                        </span><br><br>
+                        
+                        Point proven?<br><br>
+                        
+                        More importantly did you like the delicious
+                        <b>P.G. Wodehouse</b>
+                        <a href="https://www.goodreads.com/quotes/637333-and-she-s-got-brains-enough-for-two-which-is-the"
+                         target="_blank">truth</a> 
+                        <a href="https://en.wikipedia.org/wiki/The_Adventures_of_Sally"
+                         target="_blank"><b>(The Adventures of Sally - 1922)</b></a>.<br><br>
+                         
+                        Worth a read, as is everything by <b>P.G.</b>
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </div>            
             </div>
           </details>
         </li><br>
@@ -7220,7 +7452,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             <a href="https://docs.python.org/3.7/library/functions.html#open"
             target="_blank"><b>open()</b></a> - Opens
             a disk file for <b>reading</b> or <b>writing</b>.
-          </li><br>
+          </li>
         </ol>
 
         <p>
@@ -7499,7 +7731,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
           <li>
             No <b>String method <i>changes</i></b> the original
             <b>String</b>.
-          </li>
+          </li><br>
           
           <li>
             The advisability of using <b>pseudo code</b> (or similar)

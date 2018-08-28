@@ -460,9 +460,16 @@ img.sup {
     vertical-align: super;
 }
 
+.centimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 /* class for Minor Sections */
 
 .minsect {
+    display: block;
     background: PapayaWhip  ; border-right: 106px;
     width: 906px;
     margin-left: 0px; margin-right: 15px;
@@ -580,7 +587,7 @@ span.minsectsum {
 .pseudos {
     background-color: LightBlue; color: auto;
     margin-right: auto;
-    width: 600px;
+    width: 650px;
 }
 
 /* class for Hints  */
