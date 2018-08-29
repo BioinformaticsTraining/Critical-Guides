@@ -7415,56 +7415,127 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
             <div class="minsect"><br>
             
-              To enable access to a <b>Disk File</b>, you need
-              to make a representative  <b>File Object</b>
-              (or <b>File Handle</b> as I prefer).<br><br>
+              <hh5m>Opening a File with a Builtin Function</hh5m><br><br>
             
-              In order to make a <b>File Handle</b>, you must use the
-              <b>Builtin Function</b>
-              <a href="https://docs.python.org/3.7/library/functions.html#open"
-               target="_blank"><b>open()</b></a>.<br><br>
+                To enable access to a <b>Disk File</b>, you need
+                to make a representative  <b>File Object</b>
+                (or <b>File Handle</b> as I prefer).<br><br>
+            
+                In order to make a <b>File Handle</b>, you must use the
+                <b>Builtin Function</b>
+                <a href="https://docs.python.org/3.7/library/functions.html#open"
+                 target="_blank"><b>open()</b></a>.<br><br>
              
-              Once the <b>File Handle</b> is made, accessing the associated
-              <b>Disk File</b> is
-              achieved using <b>methods</b> associated with <b>File Objects</b>.<br><br>
+                Once the <b>File Handle</b> is made, accessing the associated
+                <b>Disk File</b> is
+                achieved using <b>methods</b> associated with <b>File Objects</b>.<br><br>
             
-              A simplifies syntax (that is, enough for the immediate
-              needs of this tutorial) for <b>open()</b> is:<br><br>
+                A simplifies syntax (that is, enough for the immediate
+                needs of this tutorial) for <b>open()</b> is:<br><br>
             
-              <b>open(</b><i>&lt;'filename'&gt;</i><b>[</b>&lt;'mode'&gt;</i><b>])</b><br><br>
+                <b>open(</b><i>&lt;'filename'&gt;</i><b>[</b>&lt;'mode'&gt;</i><b>])</b><br><br>
             
-              where <i>&lt;mode&gt;</i> is an optional parameter which is either set to:<br><br>
+                where <i>&lt;mode&gt;</i> is an optional
+                parameter which is either set to:<br><br>
             
-              <ul>
-                <li> '<b>r</b>' - the file is for reading</li>
-                <li> '<b>w</b>' - the file is to be written to</li>
-              </ul>
+                <ul>
+                  <li> '<b>r</b>' - the file is for reading</li>
+                  <li> '<b>w</b>' - the file is to be written to</li>
+                </ul>
             
-              If the <i>&lt;mode&gt;</i> parameter is omitted, '<b>r</b>' is assumed.<br><br>
+                If the <i>&lt;mode&gt;</i> parameter is omitted, '<b>r</b>' is assumed.<br><br>
             
-              For a full description of all you can do with <b>open()</b>,
-              take a look at the
-              <a href="https://docs.python.org/3.7/library/functions.html#open"
-               target="_blank"><b>Manual Page</b></a>, but everything you need
-              for now is described above.<br><br>
+                For a full description of all you can do with <b>open()</b>,
+                take a look at the
+                <a href="https://docs.python.org/3.7/library/functions.html#open"
+                 target="_blank"><b>Manual Page</b></a>, but everything you need
+                for now is described above.<br><br>
+                
+              <hh5m>Reading/Writing/Closing Files with File Object methods</hh5m><br><br>
+
+                There a quite a number of <b>File Object methods</b>. You can find a full list
+                <a href="https://www.tutorialspoint.com/python3/file_methods.htm"
+                 target="_blank">here</a>.<br><br>
+               
+                I will describe only those that are of value at this
+                stage of the tutorial. These are:<br><br>
               
-              <table class="c3">
-                <tr>
-                  <th>Method</th>
-                  <th>Effect</th>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.programiz.com/python-programming/methods/string/format"
-                     target="_blank"><b>str.format()</b></a>
-                  </td>
-                  <td>
-                    <b>Returns</b> the formatted
-                    <b>String</b>.
-                  </td>
-                </tr>
-              </table><br><br>
-                      
+                <table class="c3">
+                  <tr>
+                    <th>Method</th>
+                    <th>Effect</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_read.htm"
+                       target="_blank"><b>file.read()</b></a>
+                    </td>
+                    <td>
+                      <b>Reads</b> at most, a specified number of <b>Bytes</b>
+                      (<b>Characters</b>) from the <b>File</b> (less if the read hits
+                      <b>EOF</b> early).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_readline.htm"
+                       target="_blank"><b>file.readline()</b></a>
+                    </td>
+                    <td>
+                      <b>Reads</b> one entire <b>Line</b> from the <b>File</b>.
+                       A trailing <b>newline Character</b> is kept in the <b>String</b>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_readlines.htm"
+                       target="_blank"><b>file.readlines()</b></a>
+                    </td>
+                    <td>
+                      <b>Reads</b> until <b>EOF</b> using <b>readline()</b> and return a list of <b>Lines</b>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_write.htm"
+                       target="_blank"><b>file.write()</b></a>
+                    </td>
+                    <td>
+                      <b>Writes</b> a <b>String</b> to the <b>File</b>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_writelines.htm"
+                       target="_blank"><b>file.writelines()</b></a>
+                    </td>
+                    <td>
+                      <b>Writes</b> a sequence of <b>Strings</b> to the <b>File</b>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.tutorialspoint.com/python3/file_close.htm"
+                       target="_blank"><b>file.close()</b></a>
+                    </td>
+                    <td>
+                      Close the <b>File<b>. A closed <b>File<b>
+                      cannot be read from or written to.
+                    </td>
+                  </tr>
+                </table>
+                
+                <p class="hint">
+                  It seems odd there is no <b>file.writeline()</b>?<br><br>
+                  
+                  The clearest explanation (that I am not sure I follow entirely) is
+                  <a href="https://stackoverflow.com/questions/2575619/why-python-language-does-not-have-a-writeln-method"
+                   target="_blamk">here</a>.<br><br>
+                   
+                   I only mention this as I imagine you might spot the lack of symmetry.
+                   It really does not matter in the context of what we are trying to achieve.<br><br>
+                 </p>
+                 
               <div class="question">
               
                 <h2><i><u>Questions &
@@ -7783,6 +7854,46 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
              target="_blank"><b>str.format()</b></a>
             - <b>Returns</b> a formatted
             <b>String</b>.
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_read.htm"
+             target="_blank"><b>file.read()</b></a>
+            - <b>Reads</b> at most, a specified number of <b>Bytes</b>
+            (<b>Characters</b>) from the <b>File</b> (less if the read hits
+            <b>EOF</b> early).
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_readline.htm"
+             target="_blank"><b>file.readline()</b></a>
+            - <b>Reads</b> one entire <b>Line</b> from the <b>File</b>.
+            A trailing <b>newline Character</b> is kept in the <b>String</b>.
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_readlines.htm"
+             target="_blank"><b>file.readlines()</b></a>
+            - <b>Reads</b> until <b>EOF</b> using <b>readline()</b> and return a list of <b>Lines</b>.
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_write.htm"
+             target="_blank"><b>file.write()</b></a>
+            - <b>Writes</b> a <b>String</b> to the <b>File</b>.
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_writelines.htm"
+             target="_blank"><b>file.writelines()</b></a>
+            - <b>Writes</b> a sequence of <b>Strings</b> to the <b>File</b>.
+          </li><br>
+
+          <li>
+            <a href="https://www.tutorialspoint.com/python3/file_close.htm"
+             target="_blank"><b>file.close()</b></a>
+            - Close the <b>File</b>. A closed <b>File</b>
+            cannot be read from or written to.
           </li>
         </ol>
 
