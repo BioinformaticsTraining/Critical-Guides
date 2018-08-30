@@ -5918,20 +5918,22 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 </tr>
               </table><br><br>
 
-              The difference between <b>casefold()</b> and
-              <b>lower()</b> is discussed
-              <a href="https://stackoverflow.com/questions/45745661/python-lower-vs-casefold-in-string-matching-and-converting-to-lowercase"
-               target="_blank">here</a>.<br><br>
+              <p class="hint">
+                The difference between <b>casefold()</b> and
+                <b>lower()</b> is discussed
+                <a href="https://stackoverflow.com/questions/45745661/python-lower-vs-casefold-in-string-matching-and-converting-to-lowercase"
+                 target="_blank">here</a>.<br><br>
 
-              Essentially, <b>lower()</b> only translates
-              characters from the <b>Range A-Z</b> into their
+                Essentially, <b>lower()</b> only translates
+                characters from the <b>Range A-Z</b> into their
               counterparts in the <b>Range a-z</b>.<br><br>
-
-              <b>casefold()</b> attempts to cater for
-              characters from other alphabets,
-              which is very clever, but
-              I think I will stick to <b>lower()</b> for the
-              purposes of this tutorial.<br><br>
+     
+                <b>casefold()</b> attempts to cater for
+                characters from other alphabets,
+                which is very clever, but
+                I think I will stick to <b>lower()</b> for the
+                purposes of this tutorial.
+              </p>
 
               <div class="question">
 
@@ -6973,37 +6975,39 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 </tr>
               </table><br><br>
 
-              <b>find</b>/<b>rfind</b> and <b>index</b>/<b>rindex</b> differ only
-              in that <b>index</b>/<b>rindex</b> will react more
-              severely to a failure to succeed in
-              their search for a <b>substring</b>. To the
-              extent, indeed, that they will terminate
-              the proceeding with an <b>Error Message</b>! This
-              must be sensible on occasion, but does
-              rather smack of petulance at first glance!
-              I chose to favour the <b>find</b>/<b>rfind</b> approach
-              for now.<br><br>
+              <div>
+                <b>find</b>/<b>rfind</b> and <b>index</b>/<b>rindex</b> differ only
+                in that <b>index</b>/<b>rindex</b> will react more
+                severely to a failure to succeed in
+                their search for a <b>substring</b>. To the
+                extent, indeed, that they will terminate
+                the proceeding with an <b>Error Message</b>! This
+                must be sensible on occasion, but does
+                rather smack of petulance at first glance!
+                I chose to favour the <b>find</b>/<b>rfind</b> approach
+                for now.<br><br>
 
-              The differences between the two options
-              are discussed
-              <a href="https://stackoverflow.com/questions/22190064/difference-between-find-and-index"
-               target="_blank">here</a>,
-              should you be interested.<br><br>
+                The differences between the two options
+                are discussed
+                <a href="https://stackoverflow.com/questions/22190064/difference-between-find-and-index"
+                 target="_blank">here</a>,
+                should you be interested.<br><br>
 
-              <p class="hint">
-                In the course of the referenced discussion,
-                a rather more vital difference between
-                the two options is mentioned.<br><br>
+                <p class="hint">
+                  In the course of the referenced discussion,
+                  a rather more vital difference between
+                  the two options is mentioned.<br><br>
 
-                <b>find</b>/<b>rfind</b> can only be used for
-                <b>str Objects</b>!
+                  <b>find</b>/<b>rfind</b> can only be used for
+                  <b>str Objects</b>!
 
-                <b>index</b>/<b>rindex</b> work with
-                <b>Strings</b> and more complex
-                <b>Data Objects</b> that will be discussed soon.
-                So, let us not dismiss <b>index</b>/<b>rindex</b>
-                too early!
-              </p>
+                  <b>index</b>/<b>rindex</b> work with
+                  <b>Strings</b> and more complex
+                  <b>Data Objects</b> that will be discussed soon.
+                  So, let us not dismiss <b>index</b>/<b>rindex</b>
+                  too early!
+                </p>
+              </div>
                
               <div class="question">
               
@@ -7171,21 +7175,24 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 </tr>
               </table><br><br>
               
-              <b>str.format()</b> acts on a <b>Strings</b> that specifies the way
-              in which its <b>Arguments</b>
-              should be arranged (<b>formatted</b>) into an <b>Output String</b>.<br><br>
+              <div>
               
-              There are strong similarities with the way <b>Format Strings</b> are
-              used by the <b>print() Builtin Function</b>.<br><br>
+                <b>str.format()</b> acts on a <b>Strings</b> that specifies the way
+                in which its <b>Arguments</b>
+                should be arranged (<b>formatted</b>) into an <b>Output String</b>.<br><br>
               
-              A very readable description of the way <b>str.format()</b>
-              works and the way <b>print()</b> handles <b>Format Strings</b>
-              can be found
-              <a href="https://www.python-course.eu/python3_formatted_output.php"
-               target-"_blank">here</a><br><br>
+                There are strong similarities with the way <b>Format Strings</b> are
+                used by the <b>print() Builtin Function</b>.<br><br>
+               
+                A very readable description of the way <b>str.format()</b>
+                works and the way <b>print()</b> handles <b>Format Strings</b>
+                can be found
+                <a href="https://www.python-course.eu/python3_formatted_output.php"
+                 target-"_blank">here</a><br><br>
  
-              In this tutorial, I offer a couple of examples and a
-              few simple exercises. <br><br>
+                In this tutorial, I offer a couple of examples and a
+                few simple exercises. <br><br>
+              </div>
               
               <ol>
                 <li>
@@ -7217,39 +7224,41 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   The second <b>Fields</b> defines defines
                   the format details, following extremely similar rules to those
                   used by <b>print()</b>.<br><br>
-                  
+                 
                   Where there is no second <b>Field</b>. a <b>String
                   Argument</b> is assumed.<br><br>
               
-                    <img src="Images/format_method_positional_parameters.png"
-                         alt="Fiddle!"
-                         class="cent40"
-                         height="258px" width="700px"></a><br><br>
+                  <img src="Images/format_method_positional_parameters.png"
+                       alt="Fiddle!"
+                       class="cent40"
+                       height="258px" width="700px"></a><br><br>
                 </li>
                 
                 <li>  
                   <hh6m> str.format() for Keyword Arguments. </hh6m><br><br>
            
-                    An alternative to specifying the item to be formatted by
-                    its <b>Position</b> in the list of <b>Arguments</b> sent
-                    to <b>str.format()</b> is to use <b>Keyword</b>s.<br><br>
+                  An alternative to specifying the item to be formatted by
+                  its <b>Position</b> in the list of <b>Arguments</b> sent
+                  to <b>str.format()</b> is to use <b>Keyword</b>s.<br><br>
                     
-                    Each item it the <b>Argument list</b> is prefixed by 
-                    a <b>Keyword</b>. The <b>Keyword</b> is separated from the
-                    item value by an <b>Equals Character</b> ('<b>=</b>').<br><br>
+                  Each item it the <b>Argument list</b> is prefixed by 
+                  a <b>Keyword</b>.<br><br>
+                  
+                  The <b>Keyword</b> is separated from the
+                  item value by an <b>Equals Character</b> ('<b>=</b>').<br><br>
                     
-                    The first <b>Field</b> in each <b>Bracketed {} Coding
-                    Element</b> embedded in the <b>Format String</b> is a <b>Keyword</b>
-                    that identifies the item to be formatted.<br><br>
+                  The first <b>Field</b> in each <b>Bracketed {} Coding
+                  Element</b> of the <b>Format String</b> is a <b>Keyword</b>
+                  that identifies the item to be formatted.<br><br>
            
-                    <img src="Images/format_method_keyword_parameters.png"
-                         alt="Fiddle!"
-                         class="cent40"
-                         height="292" width="700"></a><br><br>
+                  <img src="Images/format_method_keyword_parameters.png"
+                       alt="Fiddle!"
+                       class="cent40"
+                       height="292" width="700"></a><br><br>
                          
-                    A big advantage of using <b>Keywords</b> is that a single
-                    <b>Format String</b> can be used with <b>Argument Lists</b>
-                    of varying order. 
+                  A big advantage of using <b>Keywords</b> is that a single
+                  <b>Format String</b> can be used with <b>Argument Lists</b>
+                  of varying order. 
                 </li>
               </ol><br><br>  
 
@@ -7416,6 +7425,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
             <div class="minsect"><br>
             
               <hh5m>Opening a File with a Builtin Function</hh5m><br><br>
+              
+              <div>
             
                 To enable access to a <b>Disk File</b>, you need
                 to make a representative  <b>File Object</b>
@@ -7450,8 +7461,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 <a href="https://docs.python.org/3.7/library/functions.html#open"
                  target="_blank"><b>Manual Page</b></a>, but everything you need
                 for now is described above.<br><br>
-                
+              </div>
+              
               <hh5m>Reading/Writing/Closing Files with File Object methods</hh5m><br><br>
+              
+              <div>
 
                 There a quite a number of <b>File Object methods</b>. You can find a full list
                 <a href="https://www.tutorialspoint.com/python3/file_methods.htm"
@@ -7532,10 +7546,11 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   <a href="https://stackoverflow.com/questions/2575619/why-python-language-does-not-have-a-writeln-method"
                    target="_blamk">here</a>.<br><br>
                    
-                   I only mention this as I imagine you might spot the lack of symmetry.
-                   It really does not matter in the context of what we are trying to achieve.<br><br>
-                 </p>
-                 
+                  I only mention this as I imagine you might spot the lack of symmetry.
+                  It really does not matter in the context of what we are trying to achieve.<br><br>
+                </p>
+              </div>
+              
               <div class="question">
               
                 <h2><i><u>Questions &
@@ -7543,17 +7558,163 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                 <ol>
                   <li>
-                    Question 1
+                    Create a new <b>File</b> and write into in a minimum of
+                    three lines of data.<br><br>
+                    
+                    <p class="hint">
+                      Use <b>file.write()</b> several times rather
+                      than <b>file.writelines()</b>.<br><br>
+                      
+                      The reason for this advice will  become apparent when
+                      you have got just a little further on in the tutorial.<br><br>
+                      
+                      Note: <b>file.write()</b> will not
+                      append a <b>newline</b> to the <b>String</b> it outputs.
+                      If you want a <b>newline</b>, you must explicitly
+                      include it in the <b>String</b>.
+                    </p>
+                   
+                    Close the new <b>File</b>.<br><br>
+                   
+                    Open the <b>File</b> you have just made for <b>Reading</b>.<br><br>
+                   
+                    Read back and print the first line using <b>File.readline()</b>.<br><br>
+                   
+                    Close the <b>File</b>.<br><br>
                     
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
                       <div class="answer">
  
-                        <span class="command14">
-                  
+                        <span class="command">
+                          >>> #<br>
+                          ... # Make a file for testing<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_w=open("File1", 'w')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Write 3 lines of data to the file<br>
+                          ... # (explicitly including newlines)<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_w.write("CACAGCGGAGTGAATCAGCTCGGTGG\n")<br>
+                          27<br>
+                          >>> Test1_w.write("AGTGGCTCAGGGCCTGCGGACCTCAT\n")<br>
+                          27<br>
+                          >>> Test1_w.write("CATATTCGAGCCCCGTGGAATCCCGC\n")<br>
+                          27<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Close the file<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_w.close()<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Open the new file again for reading<br>
+                          ... # <br>
+                          ... <br>
+                          >>> Test1_r=open("File1", 'r')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Read back just the first line<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Sequence=Test1_r.readline()<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Print the first line.<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print(Sequence)<br>
+                          CACAGCGGAGTGAATCAGCTCGGTGG<br>
+                          <br>
+                          >>> <br>
                         </span><br><br>
-                                          
+                        
+                        <div class="hint">
+                          <b>Note:</b>
+                          <ul>
+                            <li>
+                              Despite the claims of the "<b>Manual Page</b>" I
+                              indicated, <b>file.write() <i>DOES</i></b>
+                              return a <b>Value</b>!!<br><br>
+                              
+                              It returns the <b>Length</b> of the <b>String</b> it has
+                              written to the <b>File</b>. <b>27</b> in this case.<br><br>
+                              
+                              When using the <b>Interactive Interpreter</b>,
+                              this is a nuisance as the <b>return Value</b> gets
+                              enigmatically output!<br><br>
+                              
+                              This is <b><i>NOT</i></b> a problem when writing <b>Python</b>
+                              programs properly (as we will be very soon),
+                              as then the <b>return Value</b> will be thrown away
+                              if not allocated to a <b>Variable</b>.<br><br>
+                              
+                              If it trivial to stop the <b>27</b>s popping out everywhere
+                              when using the <b>Interactive Interpreter</b>.
+                              Just assign the <b>file.write()</b> command
+                              to a <b>Variable</b>.
+                              Looks a bit odd, but it works<br><br>
+                              
+                              In 
+                              <a href="https://stackoverflow.com/questions/41149781/how-to-prevent-f-write-to-output-the-number-of-characters-written"
+                               target="_blank">one discussion of this issue</a>,
+                              the suggestion was to
+                              use a <b>Variable</b> called '<b>_</b>' for such purposes.
+                              That seems a good idea,
+                              so '<b>_</b>' spells "<b>Dustbin</b>" in this context.
+                            </li><br>
+                            
+                            <li>
+                              Remember '<b>r</b>' is the default <b>open() Argument</b> for
+                              determining the type of access to a <b>File</b>. So<br><br>
+                              
+                              <b>open("File1")</b><br><br>
+                             
+                              would have worked fine opening the
+                              <b>File</b> here the second time, for <b>Reading Only</b>.<br><br>
+                              
+                              I like to be careful not to over use defaults,
+                              "explicit" is usually easier to read. But, you must choose
+                              your own preferences. 
+                            </li><br>
+                            
+                            <li>
+                              <b>print()</b> adds a <b>newline</b> to its output.<br><br>
+                              
+                              So here you get <b>2 newlines</b>!
+                              One from the <b>File</b> and one from <b>print()</b>.<br><br>
+                              
+                              We have covered the way to avoid this!<br><br>
+                              
+                              <span class="command">
+                                >>> print(Sequence)<br>
+                                CACAGCGGAGTGAATCAGCTCGGTGG<br>
+                                <br>
+                                >>> print(Sequence, end='')<br>
+                                CACAGCGGAGTGAATCAGCTCGGTGG<br>
+                                >>> 
+                              </span><br><br>
+                              
+                              So, of course, you all worked this out for yourselves.
+                            </li><br>
+                            
+                            <li>
+                              Just is case, there is no significance in my using two different
+                              <b>File Handle Names</b> in this exercise
+                              (<b>File1_w</b> and <b>File1_r</b>).
+                              I just thought it might be clearer.<br><br>
+                              
+                              Both represent the same <b>File</b>? Only the access modes differ?
+                              Doe the same name make more sense?<br><br>
+                              
+                              Does it matter? ... Probably not.
+                          </ul>
+                        </div>
                       </div>
                     </details>
                   </li><br>
