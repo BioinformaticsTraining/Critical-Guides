@@ -5919,19 +5919,19 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               </table><br><br>
 
               <p class="hint">
-                The difference between <b>casefold()</b> and
-                <b>lower()</b> is discussed
+                The difference between <b>str.casefold()</b> and
+                <b>str.lower()</b> is discussed
                 <a href="https://stackoverflow.com/questions/45745661/python-lower-vs-casefold-in-string-matching-and-converting-to-lowercase"
                  target="_blank">here</a>.<br><br>
 
-                Essentially, <b>lower()</b> only translates
+                Essentially, <b>str.lower()</b> only translates
                 characters from the <b>Range A-Z</b> into their
-              counterparts in the <b>Range a-z</b>.<br><br>
+                counterparts in the <b>Range a-z</b>.<br><br>
      
-                <b>casefold()</b> attempts to cater for
+                <b>str.casefold()</b> attempts to cater for
                 characters from other alphabets,
                 which is very clever, but
-                I think I will stick to <b>lower()</b> for the
+                I think I will stick to <b>str.lower()</b> for the
                 purposes of this tutorial.
               </p>
 
@@ -6431,8 +6431,8 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
 
                     I start by wondering what, precisely, is
                     the difference between
-                    <b>isdecimal()</b>, <b>isdigit()</b> and
-                    <b>isnumeric()</b>.<br><br>
+                    <b>str.isdecimal()</b>, <b>str.isdigit()</b> and
+                    <b>str.isnumeric()</b>.<br><br>
 
                     The obvious way to find out is to consult
                     the appropriate <b>Manual
@@ -6724,7 +6724,7 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                 
                     With the capacity to alter <b>Base Codes</b>
                     using
-                    the method <b>replace()</b>, it is possible to also
+                    the method <b>str.replace()</b>, it is possible to also
                     <b>Complement</b> this <b>Sequence</b>
                     (<b>Reversing</b> will have
                     to wait a while).<br><br>
@@ -6976,15 +6976,16 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
               </table><br><br>
 
               <div>
-                <b>find</b>/<b>rfind</b> and <b>index</b>/<b>rindex</b> differ only
-                in that <b>index</b>/<b>rindex</b> will react more
+                <b>str.find()</b>/<b>str.rfind()</b>
+                and <b>str.index()</b>/<b>str.rindex()</b> differ only
+                in that <b>str.index()</b>/<b>str.rindex()</b> will react more
                 severely to a failure to succeed in
                 their search for a <b>substring</b>. To the
                 extent, indeed, that they will terminate
                 the proceeding with an <b>Error Message</b>! This
                 must be sensible on occasion, but does
                 rather smack of petulance at first glance!
-                I chose to favour the <b>find</b>/<b>rfind</b> approach
+                I chose to favour the <b>str.find()</b>/<b>str.rfind()</b> approach
                 for now.<br><br>
 
                 The differences between the two options
@@ -6998,13 +6999,13 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   a rather more vital difference between
                   the two options is mentioned.<br><br>
 
-                  <b>find</b>/<b>rfind</b> can only be used for
+                  <b>str.find()</b>/<b>str.rfind()</b> can only be used for
                   <b>str Objects</b>!
 
-                  <b>index</b>/<b>rindex</b> work with
+                  <b>index()</b>/<b>rindex()</b> work with
                   <b>Strings</b> and more complex
                   <b>Data Objects</b> that will be discussed soon.
-                  So, let us not dismiss <b>index</b>/<b>rindex</b>
+                  So, let us not dismiss <b>index()</b>/<b>rindex()</b>
                   too early!
                 </p>
               </div>
@@ -7143,10 +7144,12 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                         </span><br><br>
                         
                         I have put lots of <b>Comments</b> in my answer in an attempt to
-                        make it more readable. <b>Comments</b> are good!! But not really
+                        make it more readable. <b>Comments</b> are good!! But not
+                        really practical
                         when using <b>Python Interpreter interactively</b>.
                         
-                        Leave the <b>Comments</b> until writing <b>Programs</b> properly (soon).
+                        Leave the <b>Comments</b> until writing
+                        <b>Programs</b> properly (soon).
                         For now, just admire the principle.
                         
                         Hopefully, the code above is self explanatory?
@@ -7549,6 +7552,16 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                   I only mention this as I imagine you might spot the lack of symmetry.
                   It really does not matter in the context of what we are trying to achieve.<br><br>
                 </p>
+                
+                With these <b>methods</b>, and the <b>Builtin function open()</b>,
+                it is possible to <b>create</b> files, <b>write</b>
+                to them and to <b>read</b> from them.<br><br>
+                
+                This is enough for now, however there is
+                more to using <b>Files</b> that is of interest.<br><br>
+                
+                Further possibilities will be introduced later, as they become needed.<br><br>
+                
               </div>
               
               <div class="question">
@@ -7631,7 +7644,12 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                           >>> print(Sequence)<br>
                           CACAGCGGAGTGAATCAGCTCGGTGG<br>
                           <br>
-                          >>> <br>
+                          >>> #<br>
+                          ... # Close the file again<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_r.close()
+                          >>> 
                         </span><br><br>
                         
                         <div class="hint">
@@ -7718,6 +7736,187 @@ Must mention platform independence but I am using Ubuntu and am not going to eve
                       </div>
                     </details>
                   </li><br>
+                  
+                  <li>
+                    Again, <b>Open</b> for <b>Reading</b> the <b>File</b> you created.<br><br>
+                    
+                    Read and display the entire file using <b>file.read()</b>.<br><br>
+                    
+                    <b>Close</b> the <b>File</b>.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+ 
+                        <span class="command">
+                          >>> #<br>
+                          ... # Open the new file again for reading<br>
+                          ... # <br>
+                          ... <br>
+                          >>> Test1_r=open("File1", 'r')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Read back the entire file<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Sequence=Test1_r.read()<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Print the entire file.<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print(Sequence)<br>
+                          CACAGCGGAGTGAATCAGCTCGGTGG<br>
+                          AGTGGCTCAGGGCCTGCGGACCTCAT<br>
+                          CATATTCGAGCCCCGTGGAATCCCGC<br>
+                          <br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Close the file again<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_r.close()<br>
+                          >>>
+                        </span><br><br>
+                        
+                        <div class="hint">
+                          <b>Note:</b><br><br>
+                          
+                          <b>file.read()</b> allows an <b>Optional
+                          Numeric Parameter</b> that determines how
+                          many bytes (<b>Characters</b>) are to be read.<br><br>
+                          
+                            <span class="command16">
+                            >>> Test1_r.close()<br>
+                            >>> Test1_r=open("File1", 'r')<br>
+                            >>> Sequence=Test1_r.read(20)<br>
+                            >>> print(Sequence)<br>
+                            CACAGCGGAGTGAATCAGCT<br>
+                            >>> Sequence=Test1_r.read(20)<br>
+                            >>> print(Sequence)<br>
+                            CGGTGG<br>
+                            AGTGGCTCAGGGC<br>
+                            >>> Sequence=Test1_r.read()<br>
+                            >>> print(Sequence)<br>
+                            CTGCGGACCTCAT<br>
+                            CATATTCGAGCCCCGTGGAATCCCGC<br>
+                            <br>
+                            >>>
+                          </span><br><br>
+
+                          If, as in this exercise, no <b>Argument</b> is supplied,
+                          the <b>File</b> is read to the end.
+                        </div>
+                        
+                        <b>file.read()</b> reads the <b>File</b> as raw data.
+                        It does not see <b>Lines</b>, just <b>bytes</b>.
+                        You told it to read them all,so that is what it did.<br><br>
+                        
+                        The result is the <b>print()</b> interprets the <b>newlines</b>
+                        and the contents of the <b>File</b> are displayed literally.
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    Yet again, <b>Open</b> for <b>Reading</b>
+                    the <b>File</b> you created.<br><br>
+                    
+                    Read and display the entire file using <b>file.readlines()</b>.<br><br>
+                    
+                    <b>Close</b> the <b>File</b>.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+ 
+                        <span class="command12">
+                          >>> #<br>
+                          ... # Open the new file again for reading<br>
+                          ... # <br>
+                          ... <br>
+                          >>> Test1_r=open("File1", 'r')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Read back the entire file<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Sequence=Test1_r.readlines()<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Print the entire file.<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print(Sequence)<br>
+                          ['CACAGCGGAGTGAATCAGCTCGGTGG\n',
+                           'AGTGGCTCAGGGCCTGCGGACCTCAT\n',
+                           'CATATTCGAGCCCCGTGGAATCCCGC\n']<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Close the file again<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Test1_r.close()<br>
+                          >>>
+                        </span><br><br>
+                        
+                        <div class="hint">
+                          <b>Note:</b><br><br>
+                          
+                          <b>file.readlines()</b> allows an <b>Optional
+                          Numeric Parameter</b> that determines how
+                          many bytes (<b>Characters</b>) are to be read.<br><br>
+                          
+                          However many bytes are chosen, reading continues until
+                          the end of the end of the current <b>Line</b>.<br><br>
+                          
+                          I think that is what the "<b>Manual Page</b>"
+                          I refer you to is saying?
+                          But I do not think it is very clear?
+                          I lose faith in this site!<br><br>
+                          
+                          <span class="command16">
+                            >>> Test1_r.close()<br>
+                            >>> Test1_r=open("File1", 'r')<br>
+                            >>> Sequence=Test1_r.readlines(5)<br>
+                            >>> print(Sequence)<br>
+                            ['CACAGCGGAGTGAATCAGCTCGGTGG\n']<br>
+                            >>> Sequence=Test1_r.readlines()<br>
+                            >>> print(Sequence)<br>
+                            ['AGTGGCTCAGGGCCTGCGGACCTCAT\n', 'CATATTCGAGCCCCGTGGAATCCCGC\n']<br>
+                            >>>
+                          </span><br><br>
+                          
+                          If, as in this exercise, no <b>Argument</b> is supplied,
+                          the <b>File</b> is read to the end.<br><br>
+                          
+                        </div>
+                        
+                        <b>file.readlines()</b> reads the <b>File</b> as <b>Lines</b> of data.
+                        You told it to read them all,so that is what it did.<br><br>
+                        
+                        The result is a <b>List</b> of <b>Lines</b>, which is what 
+                        <b>print()</b> displays.
+                        
+                        The <b>newlines</b> remain another character of each Line.
+                        
+                        They are not interpreted by <b>print()</b>.
+                        
+                        <div class="hint">
+                          <b>Note:</b><br><br>
+                          
+                          The <b>List</b> you created here is a
+                          <b>Python Data Object</b> of type <b>list</b>.
+                          
+                          a <b>list</b> is a <b>Python Data
+                          Structure</b> (<b>type</b>, <b>class</b>) that we will
+                          discuss further very shortly.
+                        </div>
+                      </div>
+                    </details>
+                  </li>
                 </ol>
               </div>
             </div>
