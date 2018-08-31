@@ -199,6 +199,7 @@ div.checkpoint {
 
 span.anssum {
     display: inline-block;
+    outline:none;
     width: 200px;
     background-color: LemonChiffon; 
 }
@@ -207,6 +208,7 @@ span.anssum {
 
 span.exeblocksum {
     display: inline-block;
+    outline:none;
     width: 200px;
     background-color: MistyRose; 
 }
@@ -215,6 +217,7 @@ span.exeblocksum {
 
 span.exesum {
     display: inline-block;
+    outline:none;
     width: 550px;
     background-color: Pink; 
 }
@@ -223,6 +226,7 @@ span.exesum {
 
 span.guisum {
     display: inline-block;
+    outline:none;
     width: 200px;
     background-color: DarkGray; 
 }
@@ -231,6 +235,7 @@ span.guisum {
 
 span.comsum {
     display: inline-block;
+    outline:none;
     width: 200px;
     background-color: LightGray; 
 }
@@ -484,6 +489,7 @@ img.sup {
 
 span.minsectsum {
     display: inline-block;
+    outline:none;
     width: 500px;
     background-color: PapayaWhip; 
 }
@@ -493,6 +499,7 @@ span.minsectsum {
 .msect {
     background: LavenderBlush; border-right: 106px;
     width: 800px;
+    outline:none;
     margin-left: 0px;
     margin-right: 15px;
 }
@@ -501,48 +508,71 @@ span.minsectsum {
 
 .msectsumadm {
     display: inline-block;
+    outline:none;
     background: Silver;
-    width: 500px;
+    width: 425px;
 }
 
 /* class for Major Sections Summary - Prerequisites */
 
 .msectsumpre {
     display: inline-block;
+    outline:none;
     background: SpringGreen;
-    width: 500px;
+    width: 425px;
 }
 
 /* class for Major Sections Summary - Language Implementation */
 
 .msectsumlan {
     display: inline-block;
-    background: LightCoral;
-    width: 500px;
+    outline:none;
+    background: LightSalmon;
+    width: 425px;
 }
 
 /* class for Major Sections Summary - Data Elements & Basic Language Features */
 
 .msectsumdat {
     display: inline-block;
+    outline:none;
     background: Turquoise;
-    width: 500px;
+    width: 425px;
+}
+
+/* class for Major Sections Summary - Builtin Functionality */
+
+.msectsumfun {
+    display: inline-block;
+    outline:none;
+    background: CornFlowerBlue;
+    width: 425px;
+}
+/* class for Major Sections Summary - Modules */
+
+.msectsummod {
+    display: inline-block;
+    outline:none;
+    background: Turquoise;
+    width: 425px;
 }
 
 /* class for Major Sections Summary - Language Extension */
 
 .msectsumext {
     display: inline-block;
-    background: BurlyWood;
-    width: 500px;
+    outline:none;
+    background: Moccasin;
+    width: 425px;
 }
 
 /* class for Major Sections Summary - Control & Structure */
 
 .msectsumcon {
     display: inline-block;
-    background: Yellow;
-    width: 500px;
+    outline:none;
+    background: Gold;
+    width: 425px;
 }
 
 /* class for Sections List*/
