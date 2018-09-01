@@ -8426,7 +8426,7 @@ Click to record your <b>Start</b> time.</button>
                        target="_blank"><b>tuple</b></a>
                        
                       <div class="hint">
-                        According to the "<b>lManual Pages</b>l" I referenced.<br><br>
+                        According to the "<b>Manual Pages</b>l" I referenced.<br><br>
                        
                         <i>"Rather than being a function, list is actually
                         a mutable sequence type ... "<br><br>
@@ -8453,7 +8453,7 @@ Click to record your <b>Start</b> time.</button>
                         <li>Create a <b>list</b> of a few values.</li><br>
                         <li>Create a <b>tuple</b> from the <b>list</b> you created</li><br>
                         <li>Create a second <b>list</b> from the <b>tuple</b></li><br>
-                        <li>Display all three creations nicely</li><br>
+                        <li>Display all three creations nicely</li>
                       </ul>
                       
                     </p>
@@ -8478,7 +8478,7 @@ Click to record your <b>Start</b> time.</button>
                       </div>
                     </details>
                     
-                  </li><br>
+                  </li>
               
                   <li>
                     <p>
@@ -8657,6 +8657,105 @@ Click to record your <b>Start</b> time.</button>
                   </li><br>
                   
                   <li>
+                  
+                    Create a <b>tuple</b> with <b>3</b> elements,
+                    <b><i>but</i></b> ... omit the <b>Brackets</b>!<br><br>
+                    
+                    Check your creation with <b>print()</b>
+                    and <b>type()</b>.<br><br>
+                    
+                    <b>In just one command</b>, assign the
+                    elements of your <b>tuple</b> to 
+                    individual <b>Scalar Variables</b>.<br><br>
+                    
+                    Check your creation with <b>print()</b>
+                    and <b>type()</b>.<br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        What we are looking at here is called
+                        <a href="http://www.schoolcoders.com/coding-pythonbeginners-tuples-2"
+                         target="_blank"><b>tuple Packing and Unpacking</b></a>.<br><br>
+                         
+                        The authors of the link provided are very
+                        enthusiastic about this. I am yet to be fully convinced.<br><br>
+                        
+                        If you follow the link it does explain the way
+                        <b>Multiple Assignments</b> are made using <b>tuples</b>.
+                        So, it is a topic of some interest.<br><br>
+
+                        <span class="command">
+                          >>> Tuple_of_three=5,6,7<br>
+                          >>> print(Tuple_of_three)<br>
+                          (5, 6, 7)<br>
+                          >>> type(Tuple_of_three)<br>
+                          <class 'tuple'><br>
+                          >>> <br>
+                          >>> Var1,Var2,Var3=Tuple_of_three<br>
+                          >>> print(Var1,Var2,Var3)<br>
+                          5 6 7<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        A lot of fuss about saving the enormous
+                        effort of typing a pair of <b>Brackets</b>?<br><br>
+                        
+                        But it works, an it does indicate how <b>Multiple
+                        Assignments</b> to <b>Scalar Variables</b> work via
+                        the creation of a temporary <b>tuple</b>.<br><br>
+                        
+                        This is illustrated by the following three images:<br><br>
+                        
+                        <img src="Images/pack-1.png"
+                        alt="Fiddle!"
+                        border="1"
+                        class="centimg"
+                        height="97" width="300"></a><br><br>
+                       
+                        <img src="Images/pack-2.png"
+                        alt="Fiddle!"
+                        border="1"
+                        class="centimg"
+                        height="113" width="300"></a><br><br>
+                       
+                        <img src="Images/pack-3.png"
+                        alt="Fiddle!"
+                        border="1"
+                        class="centimg"
+                        height="118" width="300"></a><br>
+
+                        For a fuller explanation, I repeat the link
+                        <a href="http://www.schoolcoders.com/coding-pythonbeginners-tuples-2"
+                          target="_blank">here</a>.<br><br>
+                          
+                        <span class="command">
+                          >>> Var1,Var2,Var3=5,6,7<br>
+                          >>> print(Var1,Var2,Var3)<br>
+                          5 6 7<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        See now that there was no need to create <b>Tuple_of_three</b>.
+                        You could have just used a single <b>Multiple Assignment</b>.<br><br>
+                        
+                        However, <b>Python</b> will execute your <b>Multiple Assignment
+                        Command</b>, via a <b>tuple</b> (in the background).<br>
+                        
+                        <p class="hint">
+                          Is this the first <b>Multiple Assignment</b> we have done?<br><br>
+                          
+                          If so, that is dreadful!<br><br>
+                          
+                          If not, this is reinforcement.<br><br>
+                          
+                          Whichever is true, I add it as a revelation
+                          for this <b>Section</b> in the <b>Checkpoint</b>.
+                        </p>
+                      </div>
+                    </details>
                   </li>
                 </ol>
               </div>
@@ -8683,12 +8782,6 @@ Click to record your <b>Start</b> time.</button>
 
         <h2><i><u>Checkpoint</u></i></h2>
 
-
-making a singelton tuple
-packing tuples
-
-
-
         <p>
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
@@ -8712,6 +8805,33 @@ packing tuples
             </li>
           </ol>
         </p>
+        
+        <p>
+          <hh6m>Points noted or
+          reinforced in this section:</hh6m>
+        </p>
+
+        <ol>
+          <li>
+            <b>Multiple Assignment</b> of <b>Values</b> to <b>Scalar Variables</b>.
+          </li><br>
+
+          <li>
+            
+            
+          </li><br>
+          
+          <li>
+            
+            
+          </li><br>
+          
+          <li>
+            
+            
+          </li>
+       </ol>
+
       </div>
     </details>
   </li><br>
