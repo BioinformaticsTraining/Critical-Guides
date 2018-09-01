@@ -6939,10 +6939,79 @@ Click to record your <b>Start</b> time.</button>
                         Very clever (of course!) but not very readable.<br><br>
                         
                         <p class="hint">
-                          There is a much better way to <b>Complement</b> a <b>Sequence</b>.
+                          There is an alternative approach (better?) to <b>Complement</b>
+                          a <b>Sequence</b>.
                           We will look again at this task when we have the requisite tools.
-                        </p>
+                       </p>
                         
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    Take the <b>Forward Complemented Sequence</b>
+                    you created in the last exercise and generate
+                    the <b>Reverse Complement</b>.<br><br>
+                    
+                    <p class="hint">
+                      The way to do this is very neat. I 
+                      involves <b>Slicing</b> the <b>Forward Complement</b>
+                      in a particular way.<br><br>
+                      
+                      I admit that the reason I did not include
+                      <b>Reversing</b> previously, is that I have only just
+                      discovered how to do it nicely without using
+                      things we have yet to discuss.<br><br>
+                      
+                      Have a quick struggle before you press
+                      the <b>Answer</b> button. 
+                    </p>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        The
+                        <a href="https://stackoverflow.com/questions/931092/reverse-a-string-in-python"
+                         target="_blank">solution</a> is
+                        to make a <b>Slice</b> of the whole
+                        <b>Forward Complement</b> that starts
+                        at the <b>end</b> and works towards
+                        the <b>front</b> in <b>Steps</b> of <b>1</b>.<br><br>
+                      
+                        As you want the <b>Whole Sequence</b>,
+                        you can omit the first two <b>Splice
+                        Parameters</b> (<b>start to end</b> is the default).<br><br>
+                      
+                        You want to step <b>Backwards</b> so the third parameter,
+                        which determines <b>Step Size</b>, must be <b>Negative</b>.<br><br>
+                      
+                        You want to include <b>Every Base</b> in
+                        the solution, so your <b>Step Size</b> is <b>1</b>.<br><br>
+                      
+                        So the <b>Slice</b> must be .... <b>[::-1]</b><br><br>
+                      
+                        Needs a bit of thought, but so very neat!!!
+                        Here is how it worked for me:<br><br>
+                      
+                        <span class="command15">
+                          >>> Forward_Mixed=('acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact')<br>
+                          >>> Forward_Upper=Forward_Mixed.upper()<br>
+                          >>> Forward_Complement=Forward_Upper.replace('A', 'X').replace('C','Z') \<br>
+                          ... .replace('G','C').replace('T', 'A').replace('X','T').replace('Z','G')<br>
+                          >>><br>
+                          >>> Reverse_Complement=Forward_Complement[::-1]<br>
+                          >>><br>
+                          >>> print (Forward_Mixed,Forward_Upper,Forward_Complement,Reverse_Complement,sep='\n')<br>
+                          acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact<br>
+                          ACGACTCAGCGCTCAGCTGCATGACTCGATGCAGCATGACTGACT<br>
+                          TGCTGAGTCGCGAGTCGACGTACTGAGCTACGTCGTACTGACTGA<br>
+                          AGTCAGTCATGCTGCATCGAGTCATGCAGCTGAGCGCTGAGTCGT<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        Rather nice I think.
                       </div>
                     </details>
                   </li>
@@ -7424,13 +7493,30 @@ Click to record your <b>Start</b> time.</button>
                     A strange one with which to end.<br><br>
                     
                     It is (obviously?) perfectly OK to mix
-                    Positional and Keyword Arguments.<br><br>
+                    <b>Positional</b> and <b>Keyword Arguments</b>.<br><br>
                     
-                    However, if you do mix Positional and Keyword Arguments, all the
-                    Positional Arguments must come before the Keyword Arguments?<br><br>
+                    However, if you do mix <b>Positional</b> and <b>Keyword Arguments</b>, all the
+                    <b>Positional Arguments</b> must come before the <b>Keyword Arguments</b>?<br><br>
                     
                     I have no idea why  this limitation exists, but it does not
-                    restrict functionality in any way.<br><br>
+                    restrict functionality in any way.
+                    
+                    <p class="hint">
+                      I consult higher authorities and the 
+                      consensus is that the reasons for this
+                      restriction are practical rather than
+                      logical.<br><br>
+                      
+                      That is, the goal is to improve
+                      efficiency rather than to avoid
+                      logical inconsistency.<br><br>
+                      
+                      Intuitively, it would certainly seem to
+                      be a greater task for the <b>Interpreter</b>
+                      if all <b>positional Arguments</b> were
+                      not assured to be in an unbroken series
+                      from <b>0</b> to <b>N</b>?
+                    </p>
                     
                     Compose simple examples to illustrate these
                     truth of these claims.<br><br>
