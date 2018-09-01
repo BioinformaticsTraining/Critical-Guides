@@ -8383,7 +8383,7 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>if</hh4>
+              <hh4>lists</hh4>
             </span>
           </summary>
 
@@ -8397,13 +8397,270 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>else</hh4>
+              <hh4>
+                <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+                 target="_blank">tuples</a>
+              </hh4>
             </span>
           </summary>
-
+          
             <div class="minsect"><br>
-            </div>
 
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+
+                  <li>
+                    <p>
+                      One might speculate (correctly) the existence
+                      of <b>Builtin Functions</b> to convert the <b>type</b> of suitable
+                      <b>Python Data Objects</b> to be <b>lists</b> or <b>tuples</b>.<br><br>
+                      
+                      Once might hazard a wild guess that these <b>Functions</b> would be called 
+                      
+                      <a href="https://docs.python.org/3.7/library/functions.html#func-list"
+                       target="_blank"><b>list</b></a> and 
+                      <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
+                       target="_blank"><b>tuple</b></a>
+                       
+                      <div class="hint">
+                        According to the "<b>lManual Pages</b>l" I referenced.<br><br>
+                       
+                        <i>"Rather than being a function, list is actually
+                        a mutable sequence type ... "<br><br>
+                       
+                        "Rather than being a function, tuple is actually 
+                        an immutable sequence type, ..."</i><br><br>
+                       
+                        Possibly so, but, on the same site
+                        both <b>list</b> and
+                        <b>tuple</b> appear in a comprehensive
+                        list of<b> Builtin Functions</b>.<br>
+                       
+                        Both behave exactly as other case changing
+                        <b>Builtin Functions</b> ( <b>int</b>,
+                        <b>float</b>, <b>bool</b> ...)<br><br>
+                         
+                        Accordingly, until I learn better, <b>list</b> 
+                        and <b>tuple</b> are <b>Builtin Functions</b>.
+                      </div><br>
+                     
+                      Write code to:
+                      
+                      <ul>
+                        <li>Create a <b>list</b> of a few values.</li><br>
+                        <li>Create a <b>tuple</b> from the <b>list</b> you created</li><br>
+                        <li>Create a second <b>list</b> from the <b>tuple</b></li><br>
+                        <li>Display all three creations nicely</li><br>
+                      </ul>
+                      
+                    </p>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command">
+                          >>> List01=[2, 5.74, "A String of standing!"]<br>
+                          >>> Tuple01=tuple(List01)<br>
+                          >>> List02=list(Tuple01)<br>
+                          >>> print(List01,tuple01,List02,sep='\n')<br>
+                          [2, 5.74, 'A String of standing!']<br>
+                          (2, 5.74, 'A String of standing!')<br>
+                          [2, 5.74, 'A String of standing!']<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        No surprises? Spiffing!
+                      </div>
+                    </details>
+                    
+                  </li><br>
+              
+                  <li>
+                    <p>
+                      Write code to:
+                    </p>
+                    
+                    <ul>
+                      <li>Create an empty <b>tuple</b></li><br>
+                         
+                      <li>Create a <b>tuple</b> with a single value</li><br>
+                           
+                      <li>Display your creations</li><br>
+                       
+                      <li>Test the <b>type</b> of your creations</li>
+                    </ul>
+                     
+                    <p>
+                      Any surprise? There should be.
+                    </p>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+
+                        <span class="command16">
+                          >>> Tuple_Empty=()<br>
+                          >>> Tuple_One_int=(5)<br>
+                          >>> Tuple_One_float=(4.739)<br>
+                          >>> Tuple_One_str=("A tasty string")<br>
+                          >>> print(Tuple_Empty,Tuple_One_int,Tuple_One_float,Tuple_One_str,sep='\n')<br>
+                          ()<br>
+                          5<br>
+                          4.739<br>
+                          A tasty string<br>
+                          >>> type(Tuple_Empty)<br>
+                          &lt;class 'tuple'&gt;<br>
+                          >>> type(Tuple_One_int)<br>
+                          &lt;class 'int'&gt;<br>
+                          >>> type(Tuple_One_float)<br>
+                          &lt;class 'float'&gt;<br>
+                          >>> type(Tuple_One_str)<br>
+                          &lt;class 'str'&gt;<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        All looks OK until you look carefully at the output of <b>print()</b>.<br><br>
+                        
+                        Should not any <b>tuple</b> be enclosed by <b>brackets ()</b>?<br><br>
+                        
+                        Then look at the results of running <b>type()</b>!<br><br>
+                        
+                        <b>Tuple_Empty</b> is fine, but all the <b>Tuple_One_*</b> attempts have
+                        taken on the <b>type</b> of the <b>Single tuple Element</b>?<br><br>
+                        
+                        <hh5m>The Problem:</hh5m><br><br>
+                        
+                          <div style="margin-left:25px">
+                        
+                          Of course this is the case. The <b>Interpreter</b> sees <b>(5)</b>,
+                          for example, and immediately has a problem.<br><br>
+                         
+                          <b>(5)</b> is ambiguous. It could be:<br><br>
+                         
+	                       <ul>
+	                         <li>An <b>Expression</b>, with the <b>integer value 5</b></li><br>
+	                         <li>A <b>tuple</b> with one element which is the <b>Integer 5</b></li>
+	                       </ul><br>
+	                       
+	                       Very different things!<br><br>
+	                     
+	                       The <b>Interpreter</b> decides to go
+	                       or the first option which leaves the user with the
+	                       problem of not being able to directly make a
+  	                       single entry <b>tuple</b>, which is not acceptable.<br><br>
+	                     </div>
+	                     
+                        <hh5m>The (possible) Solution(s):</hh5m><br><br>
+                        
+                        <ol>
+                          <li>
+                            The most obvious is to use another type
+                            of bracket for <b>tuples</b>. Trouble is,
+                            we have run out.<br><br>
+                        
+                            You cannot use <b><></b> because the <b>Interpreter</b>
+                            will get confused as '<b><</b>' (<b>less
+                            than</b>) and '<b>></b>' (<b>greater than</b>)
+                            both already have "meanings.
+                          </li><br>
+                          
+                          <li>
+                            Next most obvious is to first make a single
+                            entry <b>list</b> and then change it
+                            into a <b>tuple</b>.<br><br>
+	                     
+                            <span class="command">
+                              >>> List_One=[5]<br>
+                              >>> Tuple_One=tuple(List_One)<br>
+                              >>><br>
+                              >>> print(List_One,Tuple_One,sep='\n')<br>
+                              [5]<br>
+                              (5,)<br>
+                              >>><br>
+                              >>> type(List_One)<br>
+                              &lt;class 'list'&gt;<br>
+                              >>> type(Tuple_One)<br>
+                              &lt;class 'tuple'&gt;<br>
+                              >>> 
+                            </span><br><br>
+                        
+                            That works wonderfully! But feels a bit clumsy?<br><br>
+                            
+                            More a work around than a solution?<br><br>
+                        
+                            <div class="hint">                            
+                              <b>Note:</b> look closely at the output of <b>print()</b>.
+                              See the <b>comma</b> that has been added to the
+                              value of the <b>tuple's</b> single element.<br><br>
+                        
+                              This <b>comma</b> is essential!! As far as
+                              the <b>Interpreter</b> is concerned:
+                              
+                              <ul>
+                                <li><b>(5)</b> is an <b>Expression</b></li><br>
+                                <li><b>(5,)</b> is a single entry <b>tuple</b> comprised
+                                of just the <b>Integer 5</b>.</li>
+                              </ul>
+                            </div>
+                          </li><br>
+                        
+                          <li>
+                            <b>Python</b> clearly agrees and declares that if
+                            you terminate the assignment that creates the
+                            <b>Single Element tuple</b> ith a <b>comma</b>,
+                            it will assume you are asking for
+                            a <b>tuple</b> not an <b>Expression</b>. <br><br>
+
+                            <span class="command">
+                              >>> Tuple_One=(5),<br>
+                              >>> print(Tuple_One)<br>
+                              (5,)<br>
+                              >>> type(Tuple_One)<br>
+                              &lt;class 'tuple'&gt;<br>
+                              >>>
+                            </span><br><br>
+                            
+                            Splendid! But just a little more enigmatic than
+                            is entirely essential?
+                          </li><br>
+                          
+                          <li>
+                            Why not put the <b>comma</b> inside the brackets next
+                            to the <b>Single element</b>?<br><br>
+                        
+                            <b>print()</b> has already suggested this should work
+                            and, to me at least, it seems just that tiny
+                            bit more coherent? Make you own minds up, but
+                            the following is my choice)<br><br>
+                        
+                            <span class="command">
+                              >>> Tuple_One=(5,)<br>
+                              >>> print(Tuple_One)<br>
+                              (5,)<br>
+                              >>> type(Tuple_One)<br>
+                              &lt;class 'tuple'&gt;<br>
+                              (5,)<br>
+                              >>>
+                            </span><br><br>
+                            
+                            Done!
+                          </li>
+                        </ol>
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                  </li>
+                </ol>
+              </div>
+            </div>
           </details>
         </li><br>
 
@@ -8411,7 +8668,7 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>elif</hh4>
+              <hh4>dictionaries</hh4>
             </span>
           </summary>
 
@@ -8426,9 +8683,34 @@ Click to record your <b>Start</b> time.</button>
 
         <h2><i><u>Checkpoint</u></i></h2>
 
+
+making a singelton tuple
+packing tuples
+
+
+
         <p>
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Builtin Functions introduced or
+          reinforced in this section:</hh6m><br>
+          
+          <ol>
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-list"
+               target="_blank"><b>list</b></a>
+              - converts a suitable <b>Data Object</b> to a <b>list</b>
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
+                       target="_blank"><b>tuple</b></a>
+              - converts a suitable <b>Data Object</b> to a <b>tuple</b>
+            </li>
+          </ol>
         </p>
       </div>
     </details>
