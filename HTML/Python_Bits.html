@@ -6056,7 +6056,7 @@ Click to record your <b>Start</b> time.</button>
                   in the
                   <b>method Tables</b> (and the <b>List of
                   methods</b>
-                  in the <b>Checkout</b> section).<br><br>
+                  in the <b>Checkpoint</b> section).<br><br>
                 </p>
 
 	             <p>
@@ -8142,7 +8142,8 @@ Click to record your <b>Start</b> time.</button>
             <a href="https://docs.python.org/3.7/library/functions.html#open"
             target="_blank"><b>open()</b></a> - Opens
             a disk file for <b>reading</b> or <b>writing</b>.
-          </li>
+          </li><br>
+          
         </ol>
 
         <p>
@@ -8495,8 +8496,184 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="ramble">
 
-        <h2>Major Python Data Structures</h2>
-
+        <h2>
+          <a href="https://clouds.eos.ubc.ca/~phil/courses/eosc582/pdffiles/Python-data-manipulations.pdf"
+           target="_blank">Major Python Data Structures</a>
+        </h2>
+        
+        <div>
+          The <b>Data Structures</b> that will be discussed here are:<br><br>
+        
+	       <ol>
+	         <li>
+	           <b>list</b> - a <b>Mutable Ordered</b> set of <b>Data Items</b>
+	         </li><br>
+	       
+            <li>
+	           <b>tuple</b> - an <b>Immutable list</b>
+	         </li><br>
+	       
+            <li>
+	           <b>set</b> -
+	           a <b>Mutable Ordered</b> set of <b>Distinct Data Items</b>
+	         </li><br>
+	       
+            <li>
+              <b>dictionary</b> -
+              a <b>Mutable Unordered</b> set of <b>Keyword/Value</b> pairs
+            </li>
+          </ol><br>
+        
+          Each <b>Data Structure</b>
+          (<b>type</b>, <b>class</b> has
+          a an associated <b>Builtin Function</b>
+          that will create a <b>Data Object</b>
+          of that <b>type</b> from any other
+          suitable <b>type</b> of <b>Data Object</b>.<br><br>
+        
+          <b>Builtin Functions</b> are:<br><br>
+        
+ 	       <ol>
+	         <li>
+	           <a href="https://docs.python.org/3.7/library/functions.html#func-list"
+	            target="_blank"><b>list()</b></a>
+	           - converts <b>Data Objects</b> of
+              suitable <b>type</b> to a <b>list</b>
+	         </li><br>
+	       
+	         <li>
+	           <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
+	            target="_blank"><b>tuple()</b></a>
+	           - converts <b>Data Objects</b> of
+	           suitable <b>type</b> to a <b>tuple</b>
+	         </li><br>
+	       
+	         <li>
+	           <a href="https://docs.python.org/3.7/library/functions.html#func-set"
+	            target="_blank"><b>set()</b></a>
+	           - converts <b>Data Objects</b> of
+	           suitable <b>type</b> to a <b>set</b>
+	         </li><br>
+	       
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
+	            target="_blank"><b>dict()</b></a>
+	           - converts <b>Data Objects</b> of
+              suitable <b>type</b> to a <b>dictionary</b>
+            </li>
+          </ol><br>
+        
+          <div class="hint">
+            <b>A word about Strings</b>:<br><br>
+          
+            A <b>string</b> is an <b>Immutable</b>
+            (remember all the adaptations
+            to <b>Strings</b> we considered
+            previously resulted in edited
+            copies, the original was never
+            changed) <b>ordered</b> set of <b>Characters</b>.<br><br>
+          
+            Therefore, according to the
+            definition of a <b>tuple</b> (<b>immutable
+            list</b>) set out
+            here, a <b>String</b> must be a sort of list.<br><br>
+          
+            It is, if you adopt the meaning of
+            <b>list</b> used in common parlance.
+            A <b>String</b> is an <b>Immutable
+            list of Characters</b>.<br><br>
+          
+            But, in <b>Python</b> there is no <b>Data
+            type Character</b>. So a <b>String</b> cannot
+            be a <b>Python Immutable list</b> as
+            what it <b>lists</b>
+            does not exist ... in the twisted
+            world of <b>Python</b> that is!<br><br>
+          
+            So, we must accept a <b>String</b> is not
+            a <b>Python tuple</b>, it is a <b>Python String</b>.<br><br>
+          
+            Never mind, many <b>list/tuple</b> functions
+            and methods apply also to <b>Strings</b>, For example:<br><br>
+          
+            <b>len(</b><i>&lt;str&gt;</i><b>)</b> -
+            returns the number of <b>Characters</b>
+            in a <b>String</b><br>
+            <b>len(</b><i>&lt;list&gt;|&lt;tuple&gt;</i><b>)</b> - returns the number
+            of elements of the
+            <i>&lt;list&gt;|&lt;tuple&gt</i>.<br><br>
+          
+            Any useful functionality that is not available
+            can be trivially obtained by creating from the
+            <b>String</b> an effectively equivalent
+            <i>&lt;list&gt;|&lt;tuple&gt</i>.<br><br>
+          
+            <span class="command">
+              >>> String00="Its Sunday again"<br>
+              >>> tuple00=tuple(String00)<br>
+              >>> list00=list(String00)<br>
+              >>> print(String00,tuple00,list00,sep='\n')<br>
+              Its Sunday again<br>
+              ('I', 't', 's', ' ', 'S', 'u', 'n', 'd', 'a', 'y', ' ', 'a', 'g', 'a', 'i', 'n')<br>
+              ['I', 't', 's', ' ', 'S', 'u', 'n', 'd', 'a', 'y', ' ', 'a', 'g', 'a', 'i', 'n']<br>
+              >>> 
+            </span><br><br>
+          
+            I forgot to mention:
+          
+            <ul>
+              <li>
+                <b>lists</b> are enclosed
+                by <b>Square Brackets []</b>
+              </li>
+              <li>
+                <b>tuples</b> are enclosed
+                by <b>Round Brackets ()</b>
+              </li>
+            </ul><br>
+          
+            The <b>list</b> is a <b>list</b>, <b><i>NOT</i></b> of <b>Characters</b>!!,
+            but of <b>Single Character Strings</b>.<br>
+            The <b>tuple</b> is a <b>tuple</b>, <b><i>NOT</i></b> of <b>Characters</b>!!,
+            but of <b>Single Character Strings</b>.<br><br>
+          
+            Whilst your <b>list Data</b> is masquerading
+            as a <b>list</b> or <b>tuple</b>, you have access
+            to the full range of <i>&lt;list&gt;|&lt;tuple&gt</i>;
+            <b>Functionality</b>.<br><br>
+          
+            Of course, when you are done, you
+            can easily convert back to a <b>String</b>.<br><br>
+          
+            <span class="command">
+              >>> String01=''.join(tuple00)<br>
+              >>> String02=''.join(list00)<br>
+              >>> print(String00,tuple00,String01,list00,String02,sep='\n')<br>
+              Its Sunday again<br>
+              ('I', 't', 's', ' ', 'S', 'u', 'n', 'd', 'a', 'y', ' ', 'a', 'g', 'a', 'i', 'n')<br>
+              Its Sunday again<br>
+              ['I', 't', 's', ' ', 'S', 'u', 'n', 'd', 'a', 'y', ' ', 'a', 'g', 'a', 'i', 'n']<br>
+              Its Sunday again<br>
+              >>> 
+            </span><br><br>
+          
+            <b>''.join(tuple00)</b>??? Yes, sorry about
+            that. It gets explain later honest.
+            For now, it is just a jolly fine way
+            of making <b>Strings</b> from <b>tuples</b> (and <b>lists</b>).<br><br>
+          
+            Finally consider. <b>DNA</b> and <b>Protein Sequence</b>,
+            or one sort of the other, form a substantial
+            portion of <b>Bioinformatics Data</b>.
+            <b>Sequences</b> are <b>Strings</b>, as far as <b>Python</b>
+            is concerned.
+            Being able to process <b>Strings</b> in as
+            many ways as possible is sure to be vital!<br><br>
+           
+            Hopefully, via <b>Exercises</b> and <b>Examples</b> that
+            follow, this claim can be substantiated.<br><br>
+          </div>
+        </div>
       </div><br>
 
       <ol>
@@ -8504,12 +8681,22 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>lists</hh4>
+              <hh4>
+                <a href="https://docs.python.org/3/tutorial/datastructures.html#lists-and-sequences"
+                 target="_blank">lists</a>
+              </hh4>
             </span>
           </summary>
-
+          
             <div class="minsect"><br>
 
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                </ol>
+              </div>
             </div>
           </details>
         </li><br>
@@ -8923,6 +9110,18 @@ Click to record your <b>Start</b> time.</button>
               <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
                        target="_blank"><b>tuple</b></a>
               - converts a suitable <b>Data Object</b> to a <b>tuple</b>
+	         </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-set"
+	            target="_blank"><b>set()</b></a>
+	           - converts a suitable <b>Data Object</b> to a <b>set</b>
+	         </li><br>
+	       
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
+	            target="_blank"><b>dict()</b></a>
+	           - converts a suitable <b>Data Object</b> to a <b>dictionary</b>
             </li>
           </ol>
         </p>
