@@ -884,7 +884,6 @@ Click to record your <b>Start</b> time.</button>
         </li><br>
 
         <li>
-
           <details>
           <summary>
             <span class="minsectsum">
@@ -897,7 +896,7 @@ Click to record your <b>Start</b> time.</button>
                 <li>
                   <hh5m>A Definition</hh5m><br><br>
 
-                  A <b>string</b> is a series
+                  A <b>string</b> is a series (or "ordered set")
                   of <b>characters</b>.<br><br>
 
                   The number of <b>characters</b> in a
@@ -962,7 +961,170 @@ Click to record your <b>Start</b> time.</button>
                               Them lovely
                               jellied eels"</b></a>
                     </li>
-                  </ul>
+                  </ul><br>
+                  
+                  <div class="question">
+
+                    <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                    <ol>
+                      <li>
+                        <p>Can you think of a simple way to include
+                           a single quote character (<b>'</b>
+                           or <b>"</b>) inside a string?
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer">
+
+                            <p>Well neither:
+                            </p>
+
+                            <span class="command">
+                              >>> 'A single quote ' in a string'<br>
+                              &nbsp;&nbsp;File "<stdin>", line 1<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;'A single quote
+                              ' in a string'<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                              SyntaxError: invalid syntax<br>
+                              >>>
+                            </span>
+
+                            <p>nor:<br>
+                            </p>
+
+                            <span class="command">
+                              >>> "A double quote " in a string"<br>
+                              &nbsp;&nbsp;File "<stdin>", line 1<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;"A double quote
+                              " in a string"<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                              SyntaxError: invalid syntax<br>
+                              >>>
+                            </span>
+
+                            <p>will do!
+                            </p>
+
+                            <p>In both cases, the
+                               <b>quote embedded</b> in
+                               the string is of the same type as
+                               the <b>enclosing quotes</b>. The
+                               <b>Interpreter</b> is bound to assume
+                               the <b>embedded quote</b> is the
+                               <b>string terminating
+                               quote</b> and so get a
+                               trifle confused as
+                               to what the rest of the line might be!
+                            </p>
+
+                            <p>The solution is transparent! Simply
+                               choose the <b>enclosing quotes</b> to be
+                               distinct from the <b>embedded quote</b>.
+                               The <b>embedded quote</b> will then be
+                               interpreted as just
+                               another character of the string and
+                               all will be well.
+                            </p>
+ 
+                            <span class="command">
+                              >>> "A single quote ' in a string"<br>
+                              "A single quote ' in a string"<br>
+                              >>> 'A double quote " in a string'<br>
+                              'A double quote " in a string'<br>
+                              >>>
+                            </span>
+
+                            <p>No reason why this trick should not
+                               work for lots of <b>Quotes</b> of
+                               the same type.
+                            </p>
+
+                            <span class="command">
+                              >>> "Lots of single quotes
+                              ''''''''' in a string"<br>
+                              "Lots of single quotes
+                              ''''''''' in a string"<br>
+                              >>> 'Lots of double quotes
+                              """"""""" in a string'<br>
+                              'Lots of double quotes
+                              """"""""" in a string'<br>
+                              >>>
+                            </span><br>
+
+                            <p>The <b>Backslash Character</b> can
+                               be used to suppress the interpretation
+                               of characters such as <b>Quotes</b>.
+                            </p>
+
+                            <p>For example, if the <b>Interpreter</b>
+                               meets an embedded <b>Quote</b>
+                               matching the
+                               <b>String</b> enclosing <b>Quotes</b>,
+                               it will incorrectly interpret
+                               that <b>Quote</b> as ending the
+                               <b>String</b>. However, precede the
+                               embedded <b>Quote</b> by a
+                               <b>Backslash</b> and
+                               the <b>Interpreter</b> will dispose of
+                               the <b>Backslash</b> and accept
+                               the <b>Quote</b> as just another
+                               <b>Character</b>.<br>
+                            </p>
+
+                            <span class="command">
+                              >>> print("A string with an illegal
+                              " in the middle")<br>
+                              &nbsp;&nbsp;File "&lt;stdin&gt;",
+                              line 1<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;print("A
+                              string with an
+                              illegal " in the middle")<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                              SyntaxError: invalid syntax<br>
+                              >>> print("A string including \" a
+                              backslash protected Quote")<br>
+                              A string including " a
+                              backslash protected Quote<br>
+                              >>>
+                            </span><br>
+
+                            <p>Using this trick, any number and
+                               assortment of <b>Quotes</b> inside
+                               a <b>String</b> can be handled.
+                            </p>
+ 
+                            <span class="command">
+                              >>>
+                              print("A String
+                              with \"\'\'\"\'\" assorted,
+                              silly quotes")<br>
+                              A String with "''"'" assorted,
+                              silly quotes<br>
+                              >>>
+                            </span><br><br>
+                          </div>
+                        </details>
+                      </li>
+                    </ol>
+                  </div>    
                 </li><br>
 
                 <li>
@@ -985,7 +1147,176 @@ Click to record your <b>Start</b> time.</button>
                     >>> 'abc' + "def" + 'mno' + "xyz"<br>
                    'abcdefmnoxyz'<br>
                     >>>
-                  </span>
+                  </span><br><br>
+                  
+                  <div class="question">
+
+                    <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                    <ol>
+                      <li>
+                        <p>How would you expect the
+                         <b>Python Interpreter</b> to react to
+                         the gentle stimulus:<br>
+                        <span class="command">
+                          '14' + '7'
+                        </span>
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer"><br>
+                            <span class="command">
+                              >>> '14' + '7'<br>
+                              '147'<br>
+                              >>>
+                            </span><br>
+ 
+                            <p>If anyone mentioned "<b>21</b>"
+                               I am going home!!!! Yes it is a
+                               <b>PLUS</b> sign, but <b><i>it does
+                               not mean arithmetic addition in
+                               this context</b></i>.
+                            </p>
+
+                            <p>'<b>14</b>' and '<b>7</b>' are
+                               <b><i>strings</i></b>! The
+                               <b>+</b> sign is used here for
+                               convenience only ... and because
+                               someone must imagine that
+                               <b>concatenation</b> is in some
+                               distant fashion, beyond my
+                               understanding, tenuously related
+                               to <b>Arithmetic Addition</b>? Maybe I
+                               lack imagination?
+                            </p>
+
+                            <p>Of course, remove the <b>quotes</b>
+                               around the <b>Numeric Characters</b>
+                               and, all of a sudden, they become
+                               <b>NUMBERS</b> and <b><i>NOW</b></i>
+                               the <b>plus sign</b> can be interpreted
+                               as its creator intended.
+                               Behold, <b>21</b>!
+                             </p>
+
+                            <span class="command">
+                             >>> 14 + 7<br>
+                             21<br>
+                             >>>
+                            </span><br>
+                          </div>
+                        </details>
+                      </li>
+                      
+                      <li>
+                        <p>How about:
+                        
+                          <span class="command">
+                            '14' - '7'
+                          </span>
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer"><br>
+                            <span class="command">
+                              >>> '14' - '7'<br>
+                              Traceback (most recent call last):<br>
+                              &nbsp;File "&lt;stdin&gt;",
+                              line 1, in &lt;module&gt;<br>
+                              TypeError: unsupported operand type(s)
+                              for -: 'str' and 'str'<br>
+                              >>>
+                            </span><br>
+
+                            <p>The <b>Python Interpreter</b> in
+                               intemperate mode!
+                            </p>
+
+                            <p>Broadly, and loosely translated, this
+                               message reads:<br><br>
+
+                               <i>"What am I supposed to do here?
+                               - Stupid person! Bad enough you
+                               ask me to <b>ADD</b> two strings
+                               together, but now you want me to
+                               <b>SUBTRACT</b> them???
+                               I refuse ... so there!"</i>
+                            </p>
+
+                            <p>Quite right too!!
+                            </p>
+                          </div>
+                        </details>
+                      </li>
+
+                      <li>
+                        <p>What do you suppose the value of:
+                        </p>
+
+                        <span class="command">
+                          3 * 'a'
+                        </span><br>
+
+                        <p>might be?
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer"><br>
+
+                            <span class="command">
+                              >>> 3 * 'a'<br>
+                              'aaa'<br>
+                              >>>
+                            </span><br>
+
+                            <p>In vaguely analogy to <b>Arithmetic
+                               Multiplication</b>, a command of the
+                               form:<br><br>
+
+                               <i>&lt;int&gt;</i> <b>*</b>
+                               <i>&lt;str&gt;</i><br><br>
+
+                               will concatenate the specified
+                               <b>string</b> with itself, the
+                               number of times indicated by the
+                               given <b>integer</b> value.
+                            </p>
+                          </div>
+                        </details>
+                      </li>
+
+                      <li>
+                        <p>How about:
+                        <span class="command">
+                          3 * '19'
+                        </span>
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer"><br>
+
+                            <span class="command">
+                              >>> 3 * '19'<br>
+                              '191919'<br>
+                              >>>
+                            </span><br>
+
+                            <p>So very happy no one, even fleetingly,
+                               considered <b>57</b>!!
+                            </p>
+                          </div>
+                        </details>
+                      </li>
+                    </ol>
+                  </div>
                 </li><br>
 
                 <li>
@@ -1003,9 +1334,9 @@ Click to record your <b>Start</b> time.</button>
                   line in
                   your code, but not in the <b>String</b>.<br><br>
 
-                  The answer is to use Escape characters
-                  (also called Escape Sequences or Escape
-                  Codes). Click for a
+                  The answer is to use <b>Escape characters</b>
+                  (also called <b>Escape Sequences</b> or <b>Escape
+                  Codes</b>). Click for a
                   <a href="https://linuxconfig.org/list-of-python-escape-sequence-characters-with-examples"
                    target="_blank"> Full List of the Escape
                   Characters available in Python</a>.<br><br>
@@ -1059,7 +1390,232 @@ Click to record your <b>Start</b> time.</button>
                     <b>print()</b> is more powerful than is
                     implied here, as you will see soon.
                   </p>
-                </li>
+                  
+                  <div class="question">
+
+                    <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                    <ol>
+                      <li>
+                        <p>Here is a list of the
+                           <b>Escape Codes</b> that enable
+                           various forms of white space to be
+                           included in <b>Strings</b>. Not all are,
+                           in my limited experience, particularly
+                           vital, but all are worth a quick glance,
+                           at least once in a lifetime?
+                        </p>
+
+                        <ul><b>
+                          <li>\b - Backspace (BS)</li><br>
+                          <li>\f - Formfeed (FF)</li><br>
+                          <li>\n - Linefeed (LF)</li><br>
+                          <li>\r - Carriage Return (CR)</li><br>
+                          <li>\t - Horizontal Tab (TAB)</li><br>
+                          <li>\v - Vertical Tab (VT)</li><br>
+                        </ul></b>
+
+                        <p>Just for the ones we have not
+                           yet considered, construct and
+                           <b>print()</b> a <b>String</b>
+                           to demonstrate
+                           their function.
+                        </p>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer">
+
+                            <p><hh5m>\b - Backspace (BS)</hh5m>
+                            </p>
+ 
+                            <span class="command16">
+                              >>> print("I start 123456789\b\b\b\b\b\b
+                              but back off 6 characters")<br>
+                              I start 123 but back off 6 characters<br>
+                              >>>
+                            </span><br>
+
+                            <p>Super ... wonder when one would
+                               ever use that?
+                            </p>
+
+                            <p><hh5m>\f - Formfeed (FF)</hh5m>
+                            </p>
+
+                            <span class="command15">
+                              >>> print("I can\fbuild steps\fwith this
+                              one!\fHow exceptionally\fJolly!")<br>
+                              I can<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              build steps<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              with this one!<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;How exceptionally<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;
+                              &nbsp;Jolly!<br>
+                              >>>
+                            </span><br>
+
+                            <p><hh5m>\r - Carriage Return (CR)</hh5m>
+                            </p>
+
+                            <p>Remember typewriters? I suppose not.
+                            </p>
+
+                            <span class="command">
+                              >>> print("The barrel slides
+                              back\rbut not forward!")<br>
+                              but not forward!s back<br>
+                              >>>
+                            </span><br>
+
+                            <p>The first letters of the bit before
+                               the <b>CR</b>
+                               are obliterated by the first letters
+                               after the <b>CR</b>.
+                            </p>
+
+                            <p>Exactly what happened when one's
+                               typewriter barrel
+                               returned to the left, ready for
+                               the next line
+                               (<b>Carriage Return</b>), but
+                               forgot to move the paper forward
+                               (a <b><i>REAL</i>
+                               Line Feed</b>).
+                            </p>
+
+                            <p>Basically, one achieved a mess
+                               of over typing.
+                               Used to be regarded as a bit of a
+                               disaster in the
+                               days of yore. I wonder why one needs
+                               to simulate such
+                               a mechanical failure (if a trifle
+                               more tidily) in
+                               a modern computer?
+                            </p>
+
+                            <p>Possibly, because one can?
+                            </p>
+
+                            <p><hh5m>\t - Horizontal Tab (TAB)<br>
+                                     \n - Linefeed (LF)
+                               </hh5m>
+                            </p>
+
+                            <span class="command">
+                              >>>
+                              print("a\taaaaa\naa\taaaa\naaa\taaa\naaaa\taa\naaaaa\ta")<br>
+                              a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              aaaaa<br>
+                              aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              aaaa<br>
+                              aaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaa<br>
+                              aaaa&nbsp;&nbsp;&nbsp;&nbsp;aa<br>
+                              aaaaa&nbsp;&nbsp;&nbsp;a<br>
+                              >>>
+                            </span><br>
+
+                            <p>A very tidy display using
+                               <b>tabs</b>. I am rather proud of
+                               this one. Even threw in a few
+                               <b>Line Feeds</b> for good luck!
+                            </p>
+
+                            <p><hh5m>\v - Vertical Tab (VT)</hh5m>
+                            </p>
+
+                            <span class="command">
+                              >>> print("Looks
+                              remarkably..\v..like FF..\f..to me?")<br>
+                              Looks remarkably..<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;..like FF..<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;..to me?<br>
+                              >>>
+                            </span><br>
+
+                            <p>Anyone spot the difference between
+                              <b>FF</b> and <b>VT</b>? Must be
+                               one surely?
+                            </p>
+
+                            <p>Oh ...dearie dearie me!! I look it up.
+                               I receive enlightenment from one,
+                               <a href="https://bytes.com/topic/c/answers/695713-what-good-vertical-tab-form-feed"
+                                target="_blank">John Bode</a>
+                               who reveals the difference is vital
+                               to those using:
+                            </p>
+
+                            <p>"<b>Hardcopy Terminals</b> and
+                                <b>Line Printers</b>."
+                            </p>
+ 
+                            <p>John confirms the speculations of
+                               his inquirer thus:
+                            </p>
+
+                            <p><i>" ... Your interpretation of
+                               <b>Form Feed</b> is correct;
+                               it moves to the beginning of
+                               the next page.
+                               <b>Vertical Tab</b> advances the
+                               page by several lines
+                               without a <b>Carriage Return</b>."</i>
+                            </p>
+
+                            <p>Gulp! ... indeed that makes a lot
+                               of sense ... but the last
+                               "<b>Hardcopy Terminal</b>" was
+                               eaten by a <b>Spinosaurus</b>,
+                               just before the Earth cooled???
+                            </p>
+
+                            <p><b>Line printers</b>??? Golly! I used
+                               to print the Royal Navy's pay cheques
+                               out on those. I had three
+                               of them that I controlled using my
+                               <b>Hardcopy Terminal</b> (the very
+                               one that got eaten!). I was
+                               very important back then! Mess with
+                               me Boyoh! and I lose your Pay Cheque!!
+                            </p>
+
+                            <p>Remember cheques? Paper things you could
+                               exchange for beer.
+                            </p>
+
+                            <p>OK, so now we all know about
+                               <b>Form Feeds</b>
+                               and <b>Vertical Tabs</b>? Jolly good.
+                            </p>
+                          </div>
+                        </details>
+                      </li><br>
+                    </ol>
+                  </div>   
+                </li><br>
 
                 <li>
                   <hh5m>
@@ -1157,8 +1713,287 @@ Click to record your <b>Start</b> time.</button>
                   </span><br><br>
 
                   Asking for the impossible results in a
-                  weary sigh and the empty <b>String</b>.
+                  weary sigh and the empty <b>String</b>.<br><br>
 
+               	<div class="question">
+
+                  <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                    <ol>
+                      <li>
+                        <b>Oscar</b> again! He had so many good ones.
+                        including:<br><br>
+
+                        “<i>Always forgive your enemies;
+                        nothing annoys them so much</i>”<br><br>
+
+                        Set these wise words up as a
+                        <b>String</b> called <b>Oscar_Again</b>,
+                        say.<br><br>
+
+                        <hh5m>Part (i)</hh5m><br><br>
+
+                        Then try:<br>
+
+                        <ul><b>
+                          <li> Oscar_Again[4:40]</li><br>
+                          <li> Oscar_Again[4:40:1]</li><br>
+                          <li> Oscar_Again[4:40:2]</li><br>
+                          <li> Oscar_Again[4:40:5]</li><br>
+                          <li> Oscar_Again[:40:2]</li><br>
+                          <li> Oscar_Again[::2]</li>
+                        </ul></b><br>
+
+                        Can you explain the output you generate in
+                        each case?<br><br>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer">
+
+                            <span class="command15">
+                              >>> Oscar_Again = "Always forgive your
+                              enemies; nothing annoys them so much"<br>
+                              >>> Oscar_Again[4:40]<br>
+                              'ys forgive your enemies;
+                              nothing ann'<br>
+                              >>>
+                            </span><br><br>
+
+                            Easy! Splice from the 5th character to
+                            the 40th character.<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[4:40:1]<br>
+                              'ys forgive your enemies;
+                               nothing ann'<br>
+                              >>>
+                            </span><br><br>
+
+                            Exactly the same output? This time
+                            though, the third argument asks
+                            explicitly that every character
+                            (stepping along the string <b>1</b>
+                            character at a time) be selected for
+                            inclusion in the <b>Splice</b>.<br><br>
+
+                            As no explicit "step" argument was
+                            offered in the previous example,
+                            <b>1</b> was assumed and so the result
+                            was identical.<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[4:40:2]<br>
+                              'y ogv oreeis ohn n'<br>
+                              >>>
+                            </span><br><br>
+
+                            This time a step of <b>2</b> is
+                            requested and the wise sentiments of
+                            <b>Oscar</b> become more than a
+                            little obfuscated!<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[4:40:5]<br>
+                              'yr  innn'<br>
+                              >>>
+                            </span><br><br>
+
+                            With a step of <b>5</b>, there is not
+                            really much message left!<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[:40:2]<br>
+                              'Awy ogv oreeis ohn n'<br>
+                              >>> <br>
+                            </span><br><br>
+
+                            Omit the first <b>Argument</b> and
+                            <b>0</b> (the start of the
+                            <b>String</b>) is assumed.<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[::2]<br>
+                              'Awy ogv oreeis ohn noste omc'<br>
+                              >>>
+                            </span><br><br>
+
+                            Omit the first 2 <b>Arguments</b> and
+                            the entire length of the
+                            <b>String</b> is assumed.<br><br>
+                          </div>
+                        </details>
+                      </li><br>
+                      
+                      <li>
+                        <b>Oscar</b> again!<br><br>
+                        
+                        <hh5m>Part (ii)</hh5m><br><br>
+
+                        Next try:<br>
+
+                        <ul><b>
+                          <li>Oscar_Again[-1]</li><br>
+                          <li>Oscar_Again[-2]</li><br>
+                          <li>Oscar_Again[-2:-1]</li><br>
+                          <li>Oscar_Again[-2:0]</li><br>
+                          <li>Oscar_Again[-2:]</li><br>
+                          <li>Oscar_Again[-10:-20]</li><br>
+                          <li>Oscar_Again[-20:-10]</li><br>
+                          <li>Oscar_Again[0:4:-1]</li>
+                        </ul></b><br>
+
+                        Can you explain the output you generate in
+                        each case?<br><br>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer">
+
+                            <span class="command15">
+                              >>> Oscar_Again = "Always forgive your
+                              enemies; nothing annoys them so much"<br>
+                              >>> Oscar_Again[-1]<br>
+                              'h'<br>
+                              >>> Oscar_Again[-2]<br>
+                              'c'<br>
+                              >>> Oscar_Again[-2:-1]<br>
+                              'c'<br>
+                              >>> Oscar_Again[-2:0]<br>
+                              ''<br>
+                              >>> Oscar_Again[-2:]<br>
+                              'ch'<br>
+                              >>>
+                            </span><br><br>
+
+                            Negative <b>Arguments</b> refer to
+                            positions counting from the end of
+                            the <b>String</b>.<br><br>
+
+                            We cannot start from <b>0</b> this
+                            time as that is already reserved for
+                            the first position, so
+                            <b>Oscar_Again[-1]</b> is the very
+                            last <b>Character</b> of the quote,
+                            which is an '<b>h</b>'.<br><br>
+
+                            <b>Oscar_Again[-2]</b> has to be
+                            the next <b>Character</b> in, which
+                            is a '<b>c</b>'.<br><br>
+
+                            <b>Oscar_Again[-2:-1]</b> is also
+                            just '<b>c</b>'. Remember the second
+                            <b>Argument</b> refers to the
+                            position beyond the last one included
+                            in the slice.<br><br>
+
+                            So, maybe <b>Oscar_Again[-2:0]</b>
+                            will take me to the end of the
+                            <b>String</b>? But no!!! Position
+                            <b>0</b> is the first <b>Character</b>,
+                            so <b>Oscar_Again[-2:0]</b> is
+                            impossible and therefore returns
+                            the <b>Empty String</b>.<br><br>
+
+                            To slice to the end, using negative
+                            indices, requires that the end
+                            <b>Argument</b> be omitted, as in
+                            <b>Oscar_Again[-2:]</b>. The
+                            <b>Default Value</b> is the end of
+                            the <b>String</b>, so all is well.
+                            Something a little uncomfortable
+                            about this? But ... it works.<br><br>
+
+                            <span class="command">
+                              >>> Oscar_Again[-10:-20]<br>
+                              ''<br>
+                              >>> Oscar_Again[-20:-10]<br>
+                              ' annoys th'<br>
+                              >>>
+                            </span><br><br>
+
+                            The point of these two examples is
+                            to make explicit how one has to
+                            provide the start at end points of
+                            the splice form left to right, even
+                            when using negative indices.<br><br>
+
+                            I am not quite sure why, but this
+                           causes me some mental anguish. I get
+                           it wrong nearly every time!<br><br>
+                          </div>
+                        </details>
+                      </li><br>
+                        <b>Oscar</b> again!<br><br>
+                        
+                        <hh5m>Part (iii)</hh5m><br><br>
+
+                        Finally try:<br>
+
+                        <ul><b>
+                          <li>Oscar_Again[29:36:1]</li><br>
+                          <li>Oscar_Again[-27:-20:1]</li><br>
+                          <li>Oscar_Again[-21:-28:-1]</li><br>
+                          <li>Oscar_Again[::-1]</li>
+                        </ul></b><br>
+
+                        Can you explain the output you generate in
+                        each case?<br><br>
+
+                        <details class="answer">
+                        <summary><span class="anssum">Answer.</span>
+                        </summary>
+                          <div class="answer">
+
+                            <span class="command15">
+                              >>> Oscar_Again = "Always forgive your
+                              enemies; nothing annoys them so much"<br>
+                              >>> Oscar_Again[29:36:1]<br>
+                              'nothing'<br>
+                              >>> Oscar_Again[-27:-20:1]<br>
+                              'nothing'<br>
+                              >>> Oscar_Again[-21:-28:-1]<br>
+                              'gnihton'<br>
+                              >>> Oscar_Again[::-1]<br>
+                              'hcum os meht syonna gnihton ;seimene ruoy evigrof syawlA'<br>
+                              >>>
+                            </span>
+                            
+                            <b>Oscar_Again[29:36:1]</b> picks out the word "<i>nothing</i>",
+                            counting from the front.<br><br>
+                            
+                            <b>Oscar_Again[-27:-20:1]</b> picks out the word "<i>nothing</i>",
+                            counting from the back.<br><br>
+                            
+                            <b>Oscar_Again[-21:-28:-1]</b> picks out the word "<i>nothing</i>",
+                            counting from the back and
+                            processes it right to left
+                            because the <b>Step Argument</b>
+                            is <b>Negative</b>.<br><br>
+                            
+                            In the last two examples, the <b>Indices</b>
+                            are different because
+                            they mean "<b>Start with the first index
+                            and stop just before the second</b>". So
+                            there will be a shift of <b>One Index Position</b>
+                            depending which way you are going.<br><br>
+                            
+                            <b>Oscar_Again[::-1]</b> takes the default
+                            <b>Slice</b> (as the first two <b>Arguments</b>
+                            are missing).<br><br>
+                            
+                            The default <b>Slice</b> is the entire <b>String</b>.<br><br>
+                            
+                            Because the <b>Step</b> value is '<b>-1</b>' the
+                            <b>Characters</b> are delivered in <b>Reverse</b> order.<br><br>
+                            
+                            That just has to be useful when we <b>Reverse</b>
+                            and <b>Complement Sequences</b> a little later on!<br><br>
+                      </li>
+                    </ol>
+                  </div>
                 </li><br>
 
                 <li>
@@ -1168,12 +2003,12 @@ Click to record your <b>Start</b> time.</button>
                           Substring Membership Testing</a>
                   </hh5m><br><br>
 
-                    Using the Python feature '<b>in</b>',
-                    it is possible to test for the presence
-                    of one <b>String</b> within another.
-                    For example, examining the inspirational
-                    boast of the White Queen to a
-                    doubting Alice:<br><br>
+                  Using the Python feature '<b>in</b>',
+                  it is possible to test for the presence
+                  of one <b>String</b> within another.
+                  For example, examining the inspirational
+                  boast of the White Queen to a
+                  doubting Alice:<br><br>
 
                   <span class="command15">
                     >>> Alice = "Why, sometimes I've believed
@@ -1188,812 +2023,12 @@ Click to record your <b>Start</b> time.</button>
 
                   Clearly, '<b>not in</b>' can be used to test for
                   the absence of a <b>substring</b>.<br><br>
-
                 </li>
               </ol>
-
-              <div class="question">
-
-                <h2><i><u>Questions & Simple Exercises</u></i></h2>
-
-                <ol>
-
-                    <li>
-                    <p>Can you think of a simple way to include
-                       a single quote character (<b>'</b>
-                       or <b>"</b>) inside a string?
-                    </p>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer">
-
-                        <p>Well neither:
-                        </p>
-
-                        <span class="command">
-                          >>> 'A single quote ' in a string'<br>
-                          &nbsp;&nbsp;File "<stdin>", line 1<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;'A single quote
-                          ' in a string'<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
-                          SyntaxError: invalid syntax<br>
-                          >>>
-                        </span>
-
-                        <p>nor:<br>
-                        </p>
-
-                        <span class="command">
-                          >>> "A double quote " in a string"<br>
-                          &nbsp;&nbsp;File "<stdin>", line 1<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;"A double quote
-                          " in a string"<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
-                          SyntaxError: invalid syntax<br>
-                          >>>
-                        </span>
-
-                        <p>will do!
-                        </p>
-
-                        <p>In both cases, the
-                           <b>quote embedded</b> in
-                           the string is of the same type as
-                           the <b>enclosing quotes</b>. The
-                           <b>Interpreter</b> is bound to assume
-                           the <b>embedded quote</b> is the
-                           <b>string terminating
-                           quote</b> and so get a
-                           trifle confused as
-                           to what the rest of the line might be!
-                        </p>
-
-                        <p>The solution is transparent! Simply
-                           choose the <b>enclosing quotes</b> to be
-                           distinct from the <b>embedded quote</b>.
-                           The <b>embedded quote</b> will then be
-                           interpreted as just
-                           another character of the string and
-                           all will be well.
-                        </p>
-
-                        <span class="command">
-                          >>> "A single quote ' in a string"<br>
-                          "A single quote ' in a string"<br>
-                          >>> 'A double quote " in a string'<br>
-                          'A double quote " in a string'<br>
-                          >>>
-                        </span>
-
-                        <p>No reason why this trick should not
-                           work for lots of <b>Quotes</b> of
-                           the same type.
-                        </p>
-
-                        <span class="command">
-                          >>> "Lots of single quotes
-                          ''''''''' in a string"<br>
-                          "Lots of single quotes
-                          ''''''''' in a string"<br>
-                          >>> 'Lots of double quotes
-                          """"""""" in a string'<br>
-                          'Lots of double quotes
-                          """"""""" in a string'<br>
-                          >>>
-                        </span><br>
-
-                        <p>The <b>Backslash Character</b> can
-                           be used to suppress the interpretation
-                           of characters such as <b>Quotes</b>.
-                        </p>
-
-                        <p>For example, if the <b>Interpreter</b>
-                           meets an embedded <b>Quote</b>
-                           matching the
-                           <b>String</b> enclosing <b>Quotes</b>,
-                           it will incorrectly interpret
-                           that <b>Quote</b> as ending the
-                           <b>String</b>. However, precede the
-                           embedded <b>Quote</b> by a
-                           <b>Backslash</b> and
-                           the <b>Interpreter</b> will dispose of
-                           the <b>Backslash</b> and accept
-                           the <b>Quote</b> as just another
-                           <b>Character</b>.<br>
-                        </p>
-
-                        <span class="command">
-                          >>> print("A string with an illegal
-                          " in the middle")<br>
-                          &nbsp;&nbsp;File "&lt;stdin&gt;",
-                          line 1<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;print("A
-                          string with an
-                          illegal " in the middle")<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
-                          SyntaxError: invalid syntax<br>
-                          >>> print("A string including \" a
-                          backslash protected Quote")<br>
-                          A string including " a
-                          backslash protected Quote<br>
-                          >>>
-                        </span><br>
-
-                        <p>Using this trick, any number and
-                           assortment of <b>Quotes</b> inside
-                           a <b>String</b> can be handled.
-                        </p>
-
-                        <span class="command">
-                          >>>
-                          print("A String
-                          with \"\'\'\"\'\" assorted,
-                          silly quotes")<br>
-                          A String with "''"'" assorted,
-                          silly quotes<br>
-                          >>>
-                        </span>
-                      </div>
-                    </details>
-                  </li>
-
-                  <li>
-                    <p>How would you expect the
-                       <b>Python Interpreter</b> to react to
-                       the gentle stimulus:<br>
-                      <span class="command">
-                        '14' + '7'
-                      </span>
-                    </p>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer"><br>
-                        <span class="command">
-                          >>> '14' + '7'<br>
-                          '147'<br>
-                          >>>
-                        </span><br>
-
-                        <p>If anyone mentioned "<b>21</b>"
-                           I am going home!!!! Yes it is a
-                           <b>PLUS</b> sign, but <b><i>it does
-                           not mean arithmetic addition in
-                          this context</b></i>.
-                        </p>
-
-                        <p>'<b>14</b>' and '<b>7</b>' are
-                           <b><i>strings</i></b>! The
-                           <b>+</b> sign is used here for
-                           convenience only ... and because
-                           someone must imagine that
-                           <b>concatenation</b> is in some
-                           distant fashion, beyond my
-                           understanding, tenuously related
-                           to <b>Arithmetic Addition</b>? Maybe I
-                           lack imagination?
-                        </p>
-
-                        <p>Of course, remove the <b>quotes</b>
-                           around the <b>Numeric Characters</b>
-                           and, all of a sudden, they become
-                           <b>NUMBERS</b> and <b><i>NOW</b></i>
-                           the <b>plus sign</b> can be interpreted
-                           as its creator intended.
-                           Behold, <b>21</b>!
-                        </p>
-
-                        <span class="command">
-                         >>> 14 + 7<br>
-                         21<br>
-                         >>>
-                        </span><br>
-                      </div>
-                    </details>
-                  </li>
-
-                  <li>
-                    <p>How about:
-                        <span class="command">
-                        '14' - '7'
-                      </span>
-                    </p>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer"><br>
-                        <span class="command">
-                          >>> '14' - '7'<br>
-                          Traceback (most recent call last):<br>
-                          &nbsp;File "&lt;stdin&gt;",
-                          line 1, in &lt;module&gt;<br>
-                          TypeError: unsupported operand type(s)
-                          for -: 'str' and 'str'<br>
-                          >>>
-                        </span><br>
-
-                      <p>The Python Interpreter in
-                         intemperate mode!
-                      </p>
-
-                      <p>Broadly, and loosely translated, this
-                         message reads:<br><br>
-
-                         <i>"What am I supposed to do here?
-                         - Stupid person! Bad enough you
-                         ask me to <b>ADD</b> two strings
-                         together, but now you want me to
-                         <b>SUBTRACT</b> them???
-                         I refuse ... so there!"</i>
-                      </p>
-
-                      <p>Quite right too!!
-                      </p>
-                    </details>
-                  </li>
-
-                  <li>
-                    <p>What do you suppose the value of:
-                    </p>
-
-                    <span class="command">
-                      3 * 'a'
-                    </span><br>
-
-                    <p>might be?
-                    </p>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer"><br>
-
-                        <span class="command">
-                          >>> 3 * 'a'<br>
-                          'aaa'<br>
-                          >>>
-                        </span><br>
-
-                        <p>In vaguely analogy to <b>Arithmetic
-                           Multiplication</b>, a command of the
-                           form:<br><br>
-
-                           <i>&lt;int&gt;</i> <b>*</b>
-                           <i>&lt;str&gt;</i><br><br>
-
-                           will concatenate the specified
-                           <b>string</b> with itself, the
-                           number of times indicated by the
-                           given <b>integer</b> value.
-                        </p>
-                  </li>
-
-                  <li>
-                    <p>How about:
-                    </p>
-
-                    <span class="command">
-                      3 * '19'
-                    </span><br><br>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer"><br>
-
-                        <span class="command">
-                          >>> 3 * '19'<br>
-                          '191919'<br>
-                          >>>
-                        </span><br>
-
-                        <p>So very happy no one, even fleetingly,
-                           considered <b>57</b>!!
-                        </p>
-                      </div>
-                    </details>
-                  </li>
-
-                  <li>
-                    <p>How would you <b>print()</b> a <b>String</b>
-                       that included the characters '<b>\n</b>'?
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer">
-
-                        <p>You cannot just use '<b>\n</b>'
-                           as it will be interpreted as
-                           a <b>Line Feed</b>
-                           and you will have created a
-                           multi line String.
-                        </p>
-
-                        <span class="command">
-                          >>> print("Hopeful attempt \n ONE")<br>
-                          Hopeful attempt<br>
-                          &nbsp;ONE<br>
-                          >>>
-                        </span><br>
-
-                        <p>The problem is the
-                           <b>Backslash Character</b>
-                           which causes the <b>n</b>
-                           to be interpreted
-                           as a <b>Line Feed</b>.
-                        </p>
-
-                        <p>The solution is to disable the
-                           <b>Backslash</b> by preceding it with
-                           another <b>Backslash</b>.
-                        </p>
-
-                        <p>The double <b>Backslash</b> will be seen
-                           as a single inert <b>Backslash</b> that
-                           will not cause the following '<b>n</b>'
-                           to be seen as anything but
-                           an '<b>n</b>'.
-                        </p>
-
-                        <p>Got it?
-                        </p>
-
-                        <span class="command">
-                          >>> print("Confident attempt
-                          \\n TWO")<br>
-                          Confident attempt \n TWO<br>
-                          >>>
-                        </span><br><br>
-                      </div>
-                    </details>
-                  </li>
-
-                  <li>
-                    <p>Here is a list of the
-                       <b>Escape Codes</b> that enable
-                       various forms of white space to be
-                       included in <b>Strings</b>. Not all are,
-                       in my limited experience, particularly
-                       vital, but all are worth a quick glance,
-                       at least once in a lifetime?
-                    </p>
-
-                    <ul><b>
-                      <li>\b - Backspace (BS)</li>
-                      <li>\f - Formfeed (FF)</li>
-                      <li>\n - Linefeed (LF)</li>
-                      <li>\r - Carriage Return (CR)</li>
-                      <li>\t - Horizontal Tab (TAB)</li>
-                      <li>\v - Vertical Tab (VT)</li>
-                    </ul></b>
-
-                    <p>Just for the ones we have not
-                       yet considered, construct and
-                       <b>print()</b> a <b>String</b>
-                       to demonstrate
-                       their function.
-                    </p>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer">
-
-                        <p><hh5m>\b - Backspace (BS)</hh5m>
-                        </p>
-
-                        <span class="command16">
-                          >>> print("I start 123456789\b\b\b\b\b\b
-                          but back off 6 characters")<br>
-                          I start 123 but back off 6 characters<br>
-                          >>>
-                        </span><br>
-
-                        <p>Super ... wonder when one would
-                           ever use that?
-                        </p>
-
-                        <p><hh5m>\f - Formfeed (FF)</hh5m>
-                        </p>
-
-                        <span class="command15">
-                          >>> print("I can\fbuild steps\fwith this
-                          one!\fHow exceptionally\fJolly!")<br>
-                          I can<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          build steps<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          with this one!<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;How exceptionally<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;
-                          &nbsp;Jolly!<br>
-                          >>>
-                        </span><br><br>
-
-                        <p><hh5m>\r - Carriage Return (CR)</hh5m>
-                        </p>
-
-                        <p>Remember typewriters? I suppose not.
-                        </p>
-
-                        <span class="command">
-                          >>> print("The barrel slides
-                          back\rbut not forward!")<br>
-                          but not forward!s back<br>
-                          >>>
-                        </span><br>
-
-                        <p>The first letters of the bit before
-                           the <b>CR</b>
-                           are obliterated by the first letters
-                           after the <b>CR</b>.
-                        </p>
-
-                        <p>Exactly what happened when one's
-                           typewriter barrel
-                           returned to the left, ready for
-                           the next line
-                           (<b>Carriage Return</b>), but
-                           forgot to move the paper forward
-                           (a <b><i>REAL</i>
-                           Line Feed</b>).
-                        </p>
-
-                        <p>Basically, one achieved a mess
-                           of over typing.
-                           Used to be regarded as a bit of a
-                           disaster in the
-                           days of yore. I wonder one needs
-                           to simulate such
-                           a mechanical failure (if a trifle
-                           more tidily) in
-                           a modern computer?
-                        </p>
-
-                        <p>Possibly, because one can?
-                        </p>
-
-                        <p><hh5m>\t - Horizontal Tab (TAB)<br>
-                                 \n - Linefeed (LF)
-                           </hh5m>
-                        </p>
-
-                        <span class="command">
-                          >>>
-                          print("a\taaaaa\naa\taaaa\naaa\taaa\naaaa\taa\naaaaa\ta")<br>
-                          a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          aaaaa<br>
-                          aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          aaaa<br>
-                          aaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaa<br>
-                          aaaa&nbsp;&nbsp;&nbsp;&nbsp;aa<br>
-                          aaaaa&nbsp;&nbsp;&nbsp;a<br>
-                          >>>
-                        </span><br>
-
-                        <p>A very tidy display using
-                           <b>tabs</b>. I am rather proud of
-                           this one. Even threw in a few
-                           <b>Line Feeds</b> for good luck!
-                        </p>
-
-                        <p><hh5m>\v - Vertical Tab (VT)</hh5m>
-                        </p>
-
-                        <span class="command">
-                          >>> print("Looks
-                          remarkably..\v..like FF..\f..to me?")<br>
-                          Looks remarkably..<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;..like FF..<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;
-                          &nbsp;&nbsp;&nbsp;&nbsp;..to me?<br>
-                         >>>
-                        </span><br>
-
-                        <p>Anyone spot the difference between
-                           <b>FF</b> and <b>VT</b>? Must be
-                           one surely?
-                        </p>
-
-                        <p>Oh ...dearie dearie me!! I look it up.
-                           I receive enlightenment from one,
-                           <a href="https://bytes.com/topic/c/answers/695713-what-good-vertical-tab-form-feed"
-                              target="_blank">John Bode</a>
-                           who reveals the difference is vital
-                           to those using:
-                        </p>
-
-                        <p>"<b>Hardcopy Terminals</b> and
-                            <b>Line Printers</b>."
-                        </p>
-
-                        <p>John confirms the speculations of
-                           his inquirer thus:
-                        </p>
-
-                        <p><i>" ... Your interpretation of
-                           <b>Form Feed</b> is correct;
-                           it moves to the beginning of
-                           the next page.
-                           <b>Vertical Tab</b> advances the
-                           page by several lines
-                           without a <b>Carriage Return</b>."</i>
-                        </p>
-
-                        <p>Gulp! ... indeed that makes a lot
-                           of sense ... but the last
-                           "<b>Hardcopy Terminal</b>" was
-                           eaten by a <b>Spinosaurus</b>,
-                           just before the Earth cooled???
-                        </p>
-
-                        <p><b>Line printers</b>??? Golly! I used
-                           to print the Royal Navy's pay cheques
-                           out on those. I had three
-                           of them that I controlled using my
-                           <b>Hardcopy Terminal</b> (the very
-                           one that got eaten!). I was
-                           very important back then! Mess with
-                           me Boyoh! and I lose your Pay Cheque!!
-                        </p>
-
-                        <p>Remember cheques? Paper things you could
-                           exchange for beer.
-                        </p>
-
-                        <p>OK, so now we all know about
-                           <b>Form Feeds</b>
-                           and <b>Vertical Tabs</b>? Jolly good.
-                        </p>
-                      </div>
-                    </details>
-                  </li><br>
-
-                  <li>
-                    <b>Oscar</b> again! He had so many good ones.
-                    including:<br><br>
-
-                    “<i>Always forgive your enemies;
-                    nothing annoys them so much</i>”<br><br>
-
-                    Set these wise words up as a
-                    <b>String</b> called <b>Oscar_Again</b>,
-                    say.<br><br>
-
-                    <hh5m>Part (i)</hh5m><br><br>
-
-                    Then try:<br>
-
-                    <ul><b>
-                      <li> Oscar_Again[4:40]</li>
-                      <li> Oscar_Again[4:40:1]</li>
-                      <li> Oscar_Again[4:40:2]</li>
-                      <li> Oscar_Again[4:40:5]</li>
-                      <li> Oscar_Again[:40:2]</li>
-                      <li> Oscar_Again[::2]</li>
-                    </ul></b><br>
-
-                    Can you explain the output you generate in
-                    each case?<br><br>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer">
-
-                        <span class="command15">
-                         >>> Oscar_Again = "Always forgive your
-                          enemies; nothing annoys them so much"<br>
-                          >>> Oscar_Again[4:40]<br>
-                          'ys forgive your enemies;
-                          nothing ann'<br>
-                          >>>
-                         </span><br><br>
-
-                         Easy! Splice from the 5th character to
-                         the 40th character.<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[4:40:1]<br>
-                          'ys forgive your enemies;
-                           nothing ann'<br>
-                          >>>
-                        </span><br><br>
-
-                        Exactly the same output? This time
-                        though, the third argument asks
-                        explicitly that every character
-                        (stepping along the string <b>1</b>
-                        character at a time) be selected for
-                        inclusion in the <b>Splice</b>.<br><br>
-
-                        As no explicit "step" argument was
-                        offered in the previous example,
-                        <b>1</b> was assumed and so the result
-                        was identical.<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[4:40:2]<br>
-                          'y ogv oreeis ohn n'<br>
-                          >>>
-                        </span><br><br>
-
-                        This time a step of <b>2</b> is
-                        requested and the wise sentiments of
-                        <b>Oscar</b> become more than a
-                        little obfuscated!<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[4:40:5]<br>
-                          'yr  innn'<br>
-                          >>>
-                        </span><br><br>
-
-                        With a step of <b>5</b>, there is not
-                        really much message left!<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[:40:2]<br>
-                          'Awy ogv oreeis ohn n'<br>
-                          >>> <br>
-                        </span><br><br>
-
-                        Omit the first <b>Argument</b> and
-                        <b>0</b> (the start of the
-                        <b>String</b>) is assumed.<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[::2]<br>
-                          'Awy ogv oreeis ohn noste omc'<br>
-                          >>>
-                        </span><br><br>
-
-                        Omit the first 2 <b>Arguments</b> and
-                        the entire length of the
-                        <b>String</b> is assumed.<br><br>
-                      </div>
-                    </details><br>
-
-                    <hh5m>Part (ii)</hh5m><br><br>
-
-                    Next try:<br>
-
-                    <ul><b>
-                      <li>Oscar_Again[-1]</li>
-                      <li>Oscar_Again[-2]</li>
-                      <li>Oscar_Again[-2:-1]</li>
-                      <li>Oscar_Again[-2:0]</li>
-                      <li>Oscar_Again[-2:]</li>
-                      <li>Oscar_Again[-10:-20]</li>
-                      <li>Oscar_Again[-20:-10]</li>
-                    </ul></b><br>
-
-                    Can you explain the output you generate in
-                    each case?<br><br>
-
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer">
-
-                        <span class="command15">
-                          >>> Oscar_Again = "Always forgive your
-                          enemies; nothing annoys them so much"<br>
-                          >>> Oscar_Again[-1]<br>
-                          'h'<br>
-                          >>> Oscar_Again[-2]<br>
-                          'c'<br>
-                          >>> Oscar_Again[-2:-1]<br>
-                          'c'<br>
-                          >>> Oscar_Again[-2:0]<br>
-                          ''<br>
-                          >>> Oscar_Again[-2:]<br>
-                          'ch'<br>
-                          >>>
-                        </span><br><br>
-
-                        Negative <b>Arguments</b> refer to
-                        positions counting from the end of
-                        the <b>String</b>.<br><br>
-
-                        We cannot start from <b>0</b> this
-                        time as that is already reserved for
-                        the first position, so
-                        <b>Oscar_Again[-1]</b> is the very
-                        last <b>Character</b> of the quote,
-                        which is an '<b>h</b>'.<br><br>
-
-                        <b>Oscar_Again[-2]</b> has to be
-                        the next <b>Character</b> in, which
-                        is a '<b>c</b>'.<br><br>
-
-                        <b>Oscar_Again[-2:-1]</b> is also
-                        just '<b>c</b>'. Remember the second
-                        <b>Argument</b> refers to the
-                        position beyond the last one included
-                        in the slice.<br><br>
-
-                        So, maybe <b>Oscar_Again[-2:0]</b>
-                        will take me to the end of the
-                        <b>String</b>? But no!!! Position
-                        <b>0</b> is the first <b>Character</b>,
-                        so <b>Oscar_Again[-2:0]</b> is
-                        impossible and therefore returns
-                        the <b>Empty String</b>.<br><br>
-
-                        To slice to the end, using negative
-                        indices, requires that the end
-                        <b>Argument</b> be omitted, as in
-                        <b>Oscar_Again[-2:]</b>. The
-                        <b>Default Value</b> is the end of
-                        the <b>String</b>, so all is well.
-                        Something a little uncomfortable
-                        about this? But ... it works.<br><br>
-
-                        <span class="command">
-                          >>> Oscar_Again[-10:-20]<br>
-                          ''<br>
-                          >>> Oscar_Again[-20:-10]<br>
-                          ' annoys th'<br>
-                          >>>
-                        </span><br><br>
-
-                        The point of these two examples is
-                        to make explicit how one has to
-                        provide the start at end points of
-                        the splice form left to right, even
-                        when using negative indices.<br><br>
-
-                        I am not quite sure why, but this
-                        causes me some mental anguish. I get
-                        it wrong nearly every time!<br><br>
-
-                      </div>
-                    </details>
-                  </li><br>
-                </ol>
-              </div>
             </div>
           </details>
         </li><br>
-
+	
         <li>
           <details>
           <summary>
@@ -2356,7 +2391,7 @@ Click to record your <b>Start</b> time.</button>
 
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
-                <ol type="1">
+                <ol>
 
                   <li>
                     What major <b>Binary Boolean Operator</b>
@@ -2737,7 +2772,7 @@ Click to record your <b>Start</b> time.</button>
 
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
-                <ol type="1">
+                <ol>
 
                   <li>
                     <p>
@@ -4010,19 +4045,19 @@ Click to record your <b>Start</b> time.</button>
                    target="_blank"><b>int()</b></a> - Converts
                    a <b>Number</b> or <b>String Argument</b>
                    to an <b>Integer</b>.
-              </li>
+              </li><br>
 
               <li><a href="https://docs.python.org/3.7/library/functions.html#float"
                    target="_blank"><b>float()</b></a> - Converts
                    a <b>Number</b> or <b>String Argument</b>
                    to a <b>Float</b>.
-              </li>
+              </li><br>
 
               <li><a href="https://docs.python.org/3.7/library/functions.html#bool"
                    target="_blank"><b>bool()</b></a> - Converts
                    any value to a <b>bool</b> (that is,
                    <b>True</b> or <b>False</b>).
-              </li>
+              </li><br>
 
               <li><a href="https://docs.python.org/3.7/library/functions.html#func-str"
                    target="_blank"><b>str()</b></a> - Converts
@@ -4188,19 +4223,19 @@ Click to record your <b>Start</b> time.</button>
                    target="_blank"><b>abs()</b></a> - returns
                   the <b>Absolute Value</b> of a
                   <b>Numeric Argument</b>.
-                </li>
+                </li><br>
 
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#min"
                    target="_blank"><b>min()</b></a> - returns
                   the smallest of a set of <b>Values</b>.
-                </li>
+                </li><br>
 
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#max"
                    target="_blank"><b>max()</b></a> - returns
                   the largest of a set of <b>Values</b>.
-                </li>
+                </li><br>
 
                 <li>
                   <a href="https://docs.python.org/3.7/library/functions.html#round"
