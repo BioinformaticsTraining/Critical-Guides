@@ -7441,7 +7441,7 @@ Click to record your <b>Start</b> time.</button>
 
                 <ol>
                   <li>
-                    It is possible to include a <b>str,format()
+                    It is possible to include a <b>str.format()
                     Argument</b> more than once, and in any order,
                     in a <b>Format String</b>.<br><br>
                     
@@ -8603,7 +8603,7 @@ Click to record your <b>Start</b> time.</button>
             of elements of the
             <i>&lt;list&gt;|&lt;tuple&gt</i>.<br><br>
             
-            The methods <b>str,count()</b> and <b>str.index()</b>
+            The methods <b>str.count()</b> and <b>str.index()</b>
             have close equivalence for <b>lists</b> and <b>tuples</b>.<br><br>
           
             Any useful functionality that is not available
@@ -8760,6 +8760,27 @@ Click to record your <b>Start</b> time.</button>
               >>> 
 	         </span><br><br>
             
+            <hh5m>list Builtin Functions</hh5m><br><br>
+            
+            I think it useful just to mention only two <b>Builtin
+            Functions</b> at this point. They are:<br><br>
+            
+            <ul>
+              <li>
+                <b>list()</b>, which casts <b>Data Objects</b> of
+                other compatible <b>type</b> into <b>lists</b>.
+              </li><br>
+              <li>
+                <b>len()</b>, which returns the number of              
+                <b>Characters</b> in a <b>String</b> the number of
+                <b>elements</b> in a <b>list</b> ... .
+                Basically it returns 
+                <a href="https://en.wikipedia.org/wiki/Cardinality"
+                 target="_blank"><b>cardinality</b></a>
+                for any <b>Data Type</b> where that concept is relevant.
+              </li>
+            </ul><br>
+            
             <hh5m>list methods</hh5m><br><br>
             
             You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
@@ -8769,307 +8790,356 @@ Click to record your <b>Start</b> time.</button>
             at the <b>Interpreter</b>, or, the are listed nicely
             <a href="https://www.w3schools.com/python/python_ref_list.asp"
              target="_blank">here</a>.<br><br>
-             
 
-ALL except index and count amend the list!! .... exercise ...
-ccopy only makes sense for list .... exercise here!!!
-2 in fact ... on for tuple section one for list section
-Deal withe hte ''.join nonsense .///// exercise.<br><br>
+            <table class="c3">
+              <tr>
+                <th style="min-width=10%">Method</th>
+                <th style="min-width=90%">Effect</th>
+              </tr>
+              <tr>
+                <td><b>
+                  <a href="https://www.w3schools.com/python/ref_list_append.asp"
+                  target="_blank"<b>list.append()</b></a>
+                </td>
+                <td>
+                  Adds an element at the end of the <b>list</b>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_clear.asp"
+                  target="_blank"><b>list.clear()</b></a>
+                </td>
+                <td>
+                  Removes all the elements from the <b>list</b>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_copy.asp"
+                   target="_blank"><b>list.copy()</b></a>
+                </td>
+                <td>
+                  Returns a copy of the <b>list</b>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_count.asp"
+                   target="_blank"><b>list.count()</b></a>
+                </td>
+                <td>
+                  Returns the number of elements with a specified value.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_extend.asp"
+                   target="_blank"><b>list.extend()</b></a>
+                </td>
+                <td>
+                  Add the elements of a specified <b>list</b> (or similar),
+                  to the end of the current <b>list</b>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_index.asp"
+                   target="_blank"><b>list.index()</b></a>
+                </td>
+                <td>
+                  Returns the <b>index</b> of the first
+                  element with a specified value.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_insert.asp"
+                   target="_blank"><b>list.insert()</b><a>
+                </td>
+                <td>
+                  Adds an element at the specified position.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_pop.asp"
+                   target="_blank"><b>list.pop()</b></a>
+                </td>
+                <td>
+                  Removes the element at the specified position.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_remove.asp"
+                   target="_blank"><b>list.remove()</b></a>
+                </td>
+                <td>
+                  Removes the first item with the specified value.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
+                   target="_blank"><b>list.reverse()</b></a>
+                </td>
+                <td>
+                  Reverses the order of the <b>list</b>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_list_sort.asp"
+                   target="_blank"><b>list.sort()</b></a>
+                </td>
+                <td>
+                  Sorts the <b>list</b>.
+                </td>
+              </tr>
+            </table><br><br>
+         
+            <div class="question">         
 
-              <table class="c3">
-                <tr>
-                  <th style="min-width=10%">Method</th>
-                  <th style="min-width=90%">Effect</th>
-                </tr>
-                <tr>
-                  <td><b>
-                    <a href="https://www.w3schools.com/python/ref_list_append.asp"
-                     target="_blank"<b>list.append()</b></a>
-                  </td>
-                  <td>
-                    Adds an element at the end of the list.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_clear.asp"
-                     target="_blank"><b>list.clear()</b></a>
-                  </td>
-                  <td>
-                    Removes all the elements from the list.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_copy.asp"
-                     target="_blank"><b>list.copy()</b></a>
-                  </td>
-                  <td>
-                    Returns a copy of the list.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_count.asp"
-                     target="_blank"><b>list.count()</b></a>
-                  </td>
-                  <td>
-                    Returns the number of elements with the specified value.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_extend.asp"
-                     target="_blank"><b>list.extend()</b></a>
-                  </td>
-                  <td>
-                    Add the elements of a list (or similar), to the end of the current list.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_index.asp"
-                     target="_blank"><b>index()</b></a>
-                  </td>
-                  <td>
-                    Returns the index of the first element with the specified value.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_insert.asp"
-                     target="_blank"><b>list.insert()</b><a>
-                  </td>
-                  <td>
-                    Adds an element at the specified position.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_pop.asp"
-                     target="_blank"><b>list.pop()</b></a>
-                  </td>
-                  <td>
-                    Removes the element at the specified position.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_remove.asp"
-                     target="_blank"><b>list.remove()</b></a>
-                  </td>
-                  <td>
-                    Removes the first item with the specified value.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
-                     target="_blank"><b>list.reverse()</b></a>
-                  </td>
-                  <td>
-                    Reverses the order of the list.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.w3schools.com/python/ref_list_sort.asp"
-                     target="_blank"><b>list.sort()</b></a>
-                  </td>
-                  <td>
-                    Sorts the list.
-                  </td>
-                </tr>
-              </table><br><br>
-            
-              <div class="question">
+              <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
-                <h2><i><u>Questions & Simple Exercises</u></i></h2>
-
-                <ol>
-                  <li>
-                    Why do you need a <b>list.copy() method</b>?<br><br>
+              <ol>
+                <li>
+                  Of all the <b>list methods</b> in the table above, how
+                  many do not alter their <b>list Argument</b>?
+                  
+                  <p class="hint">
+                    Remember that, unlike <b>str methods</b>,
+                    <b>list methods</b> can edit their
+                    <b>list Arguments</b> directly.<br><br>
                     
-                    Surely, you could make a copy of a
-                    <b>list</b>, or anything come to that, using
-                    a simple <b>Assignment Statement</b>?<br><br>
+                    This is possible because <b>lists are mutable</b>.<br><br>
                     
-                    If you cannot answer this question
-                    directly (googling is cheating!!!!),
-                    then try 
-                    <a href="https://www.learning-theories.com/discovery-learning-bruner.html"
-                     target="_blank">discovery by
-                    experimentation</a> (told you I
-                    used to read books too! ... once
-                    ... long ago ... Pedro!).<br><br>
+                    <b>str methods</b> edit copies which they
+                    returned as <b>Function Values</b>.<br><br>
                     
-                    <ul>
-                      <li>Make a <b>list</b></li><br>
-                      <li>Copy the <b>list</b> using an <b>Assignment Command</b>.</li><br>
-                      <li>Copy the <b>list</b> using the <b>list.copy() method</b>.</li><br>
-                      <li>Make alterations to one or more of the <b>lists</b>.</li><br>
-                      <li>Observe the consequences on the others.</li><br>
-                      <li>Explain your observations.</li>
-                    </ul><br><br>
+                    <b>str methods</b> can not edit their <b>str
+                    Arguments</b> directly as <b>strs</b> are <b>immutable</b>.
+                  </p>
+                  
+                  Given your examination of the full set,
+                  which <b>list methods</b> would still work
+                  if <b>lists</b> were <b>immutable</b>?<br><br>
+                  
+                  <details class="answer">
+                  <summary><span class="anssum">Answer.</span>
+                  </summary>
+                    <div class="answer"><br>
                     
-                    <details class="answer">
-                    <summary><span class="anssum">Answer.</span>
-                    </summary>
-                      <div class="answer"><br>
-
-                        <span class="command16">
-                          >>> List00=[1,2,3,4,5]<br>
-                          >>> List00_Assigned_Copy=List00<br>
-                          >>> List00_method_Copy=List00.copy()<br>
-                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                          [1, 2, 3, 4, 5]<br>
-                          [1, 2, 3, 4, 5]<br>
-                          [1, 2, 3, 4, 5]<br>
-                          >>><br>
-                          >>> List00.append(99)<br>
-                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                          [1, 2, 3, 4, 5, 99]<br>
-                          [1, 2, 3, 4, 5, 99]<br>
-                          [1, 2, 3, 4, 5]<br>
-                          >>><br>
-                          >>> List00_method_Copy.reverse()<br>
-                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                          [1, 2, 3, 4, 5, 99]<br>
-                          [1, 2, 3, 4, 5, 99]<br>
-                          [5, 4, 3, 2, 1]<br>
-                          >>>
-                        </span><br><br>
+                      Only <b>3</b> of the <b>11 list methods</b>
+                      will not. potentially at least, alter
+                      the value of the <b>list</b> to which they are
+                      applied.<br><br>
+                      
+                      These are:<br>
+                      
+                      <ul>
+                        <li>
+                          <b>list.copy()</b> - Returns a copy of the <b>list</b>.
+                        </li><br>
                         
-                        <hh5m>Observation:</hh5m><br><br>
+                        <li>                        
+                        <b>list.count()</b> - Returns the number of
+                           elements with a specified value.
+                        </li><br>
                         
-                        <ul>
-                          <li>
-                            <b><u>Section 1:</u></b><br><br>
+                        <li>                        
+                          <b>list.index()</b> - Returns the <b>index</b> of
+                          the first element with the specified value.
+                        </li>
+                      </ul><br>
+                      
+                      Only these <b>3 methods</b> could work on a
+                      form of <b>list</b> that was immutable.<br>
+                </li><br>
+                  
+                <li>
+                  Why do you need a <b>list.copy() method</b>?<br><br>
+                    
+                  Surely, you could make a copy of a
+                  <b>list</b>, or anything come to that, using
+                  a simple <b>Assignment Statement</b>?<br><br>
+                    
+                  If you cannot answer this question
+                  directly (googling is cheating!!!!),
+                  then try 
+                  <a href="https://www.learning-theories.com/discovery-learning-bruner.html"
+                   target="_blank">discovery by
+                  experimentation</a> (told you I
+                  used to read books too! ... once
+                  ... long ago ... Pedro!).<br><br>
+                   
+                  <ul>
+                    <li>Make a <b>list</b></li><br>
+                    <li>Copy the <b>list</b> using an <b>Assignment Command</b>.</li><br>
+                    <li>Copy the <b>list</b> using the <b>list.copy() method</b>.</li><br>
+                    <li>Make alterations to one or more of the <b>lists</b>.</li><br>
+                    <li>Observe the consequences on the others.</li><br>
+                    <li>Explain your observations.</li>
+                  </ul><br>
+                    
+                  <details class="answer">
+                  <summary><span class="anssum">Answer.</span>
+                  </summary>
+                    <div class="answer"><br>
+
+                      <span class="command16">
+                        >>> List00=[1,2,3,4,5]<br>
+                        >>> List00_Assigned_Copy=List00<br>
+                        >>> List00_method_Copy=List00.copy()<br>
+                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                        [1, 2, 3, 4, 5]<br>
+                        [1, 2, 3, 4, 5]<br>
+                        [1, 2, 3, 4, 5]<br>
+                        >>><br>
+                        >>> List00.append(99)<br>
+                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                        [1, 2, 3, 4, 5, 99]<br>
+                        [1, 2, 3, 4, 5, 99]<br>
+                        [1, 2, 3, 4, 5]<br>
+                        >>><br>
+                        >>> List00_method_Copy.reverse()<br>
+                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                        [1, 2, 3, 4, 5, 99]<br>
+                        [1, 2, 3, 4, 5, 99]<br>
+                        [5, 4, 3, 2, 1]<br>
+                        >>>
+                      </span><br><br>
+                        
+                      <hh5m>Observation:</hh5m><br><br>
+                        
+                      <ul>
+                        <li>
+                          <b><u>Section 1:</u></b><br><br>
                             
-	                         Create a <b>list</b>, make
-	                         two copies, one by
-                            <b>Simple Assignment</b>, the other using
-                            the <b>list.copy() method</b>.<br><br>
-                            
-                            Display all <b>3 lists</b> and see they are
-                            all identical.<br><br>
-                            
-                            It would have been a bit worrying had
-                            they not been!
-                          </li><br>
+	                       Create a <b>list</b>, make
+	                       two copies, one by
+                          <b>Simple Assignment</b>, the other using
+                          the <b>list.copy() method</b>.<br><br>
+                           
+                          Display all <b>3 lists</b> and see they are
+                          all identical.<br><br>
+                           
+                          It would have been a bit worrying had
+                          they not been!
+                        </li><br>
                           
-                          <li>
-                            <b><u>Section 2:</u></b><br><br>
+                        <li>
+                          <b><u>Section 2:</u></b><br><br>
                             
-                            Make a change in the <b>Original
-                            List</b>.<br><br>
+                          Make a change in the <b>Original
+                          List</b>.<br><br>
                             
-                            Display all <b>3 lists</b> again and see
-                            that the edit has been applied to both
-                            the <b>Original list <i>AND</i></b>
-                            the copy made by
-                            <b>Simple Assignment</b>?
-                          </li><br>
+                          Display all <b>3 lists</b> again and see
+                          that the edit has been applied to both
+                          the <b>Original list <i>AND</i></b>
+                          the copy made by
+                          <b>Simple Assignment</b>?
+                        </li><br>
+                         
+                        <li>
+                          <b><u>Section 3:</u></b><br><br>
+                            
+                          Make a change in the copy created by
+                          <b>list.copy()</b>.<br><br>
+                            
+                          Display all <b>3 lists</b> yet again and see
+                          that the second edit is unique to the
+                          copy created by
+                          <b>list.copy()</b>.                
+                        </ul><br><br>
                           
-                          <li>
-                            <b><u>Section 3:</u></b><br><br>
-                            
-                            Make a change in the copy created by
-                            <b>list.copy()</b>.<br><br>
-                            
-                            Display all <b>3 lists</b> yet again and see
-                            that the second edit is unique to the
-                            copy created by
-                            <b>list.copy()</b>.                
-                          </ul><br><br>
-                          
-                        <hh5m>Explanation:</hh5m><br><br>
+                      <hh5m>Explanation:</hh5m><br><br>
                         
-                        The explanation must start by knowing a little
-                        more about the way <b>Python
-                        Variable</b> works.<br><br>
+                      The explanation must start by knowing a little
+                      more about the way <b>Python
+                      Variable</b> works.<br><br>
                         
-                        Considering them as <i>"Boxes in which Values
-                        are stored"</i> is not quite as
-                        true in <b>Python</b>
-                        as it is in some other Languages.<br><br>
+                      Considering them as <i>"Boxes in which Values
+                      are stored"</i> is not quite as
+                      true in <b>Python</b>
+                      as it is in some other Languages.<br><br>
                         
-                        In <b>Python</b> it is more accurate to think of
-                        <b>Data Values</b> and <b>Data Variables</b>
-                        as being a
-                        little more independent of each other.<br><br>
+                      In <b>Python</b> it is more accurate to think of
+                      <b>Data Values</b> and <b>Data Variables</b>
+                      as being a
+                      little more independent of each other.<br><br>
                         
-                        A <b>Python Variable</b> is a reference
-                        (or pointer) to an independent
-                        <b>Data Item</b> rather than a container
-                        enclosing a private copy of a
-                        <b>Value</b>.<br><br>
-                
-                        <img src="Images/list-create.png"
-                             alt="Fiddle!"
-                             class="centimg"
-                             style="background:White;
-                                    border-style: solid;
-                                    border-width: 1px;"><br><br>
+                      A <b>Python Variable</b> is a reference
+                      (or pointer) to an independent
+                      <b>Data Item</b> rather than a container
+                      enclosing a private copy of a
+                      <b>Value</b>.<br><br>
+               
+                      <img src="Images/list-create.png"
+                           alt="Fiddle!"
+                           class="centimg"
+                           style="background:White;
+                                  border-style: solid;
+                                  border-width: 1px;"><br><br>
+                       
+                      There is no reason that <b>2</b>
+                      (or more) <b>Python Variables</b> should not
+                      reference the same <b>Data Value</b>!<br><br>
                         
-                        There is no reason that <b>2</b>
-                        (or more) <b>Python Variables</b> should not
-                        reference the same <b>Data Value</b>!<br><br>
+                      This is exactly what we caused
+                      to happen when we copied the
+                      <b>Original list</b> by
+                      <b>Assignment</b>.<br><br>
+                       
+                      Copying by <b>Assignment</b> does not
+                      duplicate the <b>Data Value</b>.
+                      It duplicates the <b>Data Variable</b> which
+                      is a <b>pointer</b> to the <b>Data Value</b>.<br><br>
                         
-                        This is exactly what we caused
-                        to happen when we copied the
-                        <b>Original list</b> by
-                        <b>Assignment</b>.<br><br>
+                      So, in a nutshell, you have <b>TWO
+                      Data Variables</b> both of which point
+                      to the same <b>Data Item</b>.<br><br>
+                       
+                      Anything you do to <b>List00</b> must also
+                      affect <b>List00_Assigned_Copy</b>
+                      (and vice versa).
+                      They both point to the same <b>Data</b>.
+                      Effectively, they are the same!<br><br>
                         
-                        Copying by <b>Assignment</b> does not
-                        duplicate the <b>Data Value</b>.
-                        It duplicates the <b>Data Variable</b> which
-                        is a <b>pointer</b> to the <b>Data Value</b>.<br><br>
-                        
-                        So, in a nutshell, you have <b>TWO
-                        Data Variables</b> both of which point
-                        to the same <b>Data Item</b>.<br><br>
-                        
-                        Anything you do to <b>List00</b> must also
-                        affect <b>List00_Assigned_Copy</b>
-                        (and vice versa).
-                        They both point to the same <b>Data</b>.
-                        Effectively, they are the same!<br><br>
-                        
-                        <img src="Images/list-asscop.png"
-                             alt="Fiddle!"
-                             class="centimg"
-                             style="background:White;
-                                    border-style: solid;
-                                    border-width: 1px;"><br><br>
+                      <img src="Images/list-asscop.png"
+                           alt="Fiddle!"
+                           class="centimg"
+                           style="background:White;
+                                  border-style: solid;
+                                  border-width: 1px;"><br><br>
+                    
+                      Using the <b>list.copy()</b> method, on
+                      the other hand, <b><i>does</i></b> make an
+                      entirely separate version of a <b>list</b>.<br><br>
                      
-                        Using the <b>list.copy()</b> method, on
-                        the other hand, <b><i>does</i></b> make an
-                        entirely separate version of a <b>list</b>.<br><br>
-                     
-                        Editing either or both <b>List00</b> and
-                        <b>List00_method_copy</b> will cause the two
-                        <b>lists</b> to diverge.<br><br>
-                     
-                        <b>List00</b> and <b>List00_Assigned_Copy</b> will,
-                        of course, always be identical
-                        however you edit any of the
-                        <b>3</b> apparent <b>3lists</b>
-                        (really just <b>2 lists</b>
-                        and <b>3 pointers</b>,
-                        of course).<br><br>
-                     
-                        <img src="Images/list-metcop.png"
-                             alt="Fiddle!"
-                             class="centimg"
-                             style="background:White;
-                                    border-style: solid;
-                                    border-width: 1px;"><br><br>
-                      </div>
-                    </details>
-                  </li>
-                </ol>
-              </div>
+                      Editing either or both <b>List00</b> and
+                      <b>List00_method_copy</b> will cause the two
+                      <b>lists</b> to diverge.<br><br>
+                    
+                      <b>List00</b> and <b>List00_Assigned_Copy</b> will,
+                      of course, always be identical
+                      however you edit any of the
+                      <b>3</b> apparent <b>3lists</b>
+                      (really just <b>2 lists</b>
+                      and <b>3 pointers</b>,
+                      of course).<br><br>
+                   
+                      <img src="Images/list-metcop.png"
+                           alt="Fiddle!"
+                           class="centimg"
+                           style="background:White;
+                                  border-style: solid;
+                                  border-width: 1px;"><br><br>
+                    </div>
+                  </details>
+                </li>
+              </ol>
             </div>
           </details>
         </li><br>
@@ -9123,8 +9193,36 @@ Deal withe hte ''.join nonsense .///// exercise.<br><br>
             A <b>tuple</b> with no elements is called the
             "<b>Empty Tuple</b>" and looks like this:<br><br>
             
-            <b>()</b><br><br>
-
+            <b>()</b><br>
+            
+            <p class="hint">
+              Being <b>immutable</b>, a <b>tuple</b> will take up less
+              memory that an equivalent list.<br><br>
+              
+              In particular, whereas a <b>tuple</b> is of fixed
+              memory requirement,
+              an equivalent list will allow extra memory for
+              possible expansion.<br><br>
+              
+              Also due to its <b>immutability</b>, access to a <b>tuple</b>
+              is faster
+              than to an equivalent <b>list</b>.<br><br>
+              
+              Conceptually, the only real difference between
+              <b>lists</b> an <b>tuples</b> is <b>mutability</b>.<br><br>
+              
+              However, in the ways <b>Python</b> chooses to implement
+              these two different <b>Data types</b>, there are greater,
+              more profound, distinctions.<br><br>
+              
+              There are many occassions where either
+              a <b>list</b> or a <b>tuple</b> would suit the
+              purpose of a <b>program</b>.<br><br>
+              
+              In general, it is thought best to use a <b>tuple</b>
+              unless <b>mutability</b> was <b>imperative</b>.
+            </p>
+  
             <hh5m>tuple creation</hh5m><br><br>
                        
             Like most <b>Python Data Objects</b>, <b>tuple Variables</b>
@@ -9155,21 +9253,40 @@ Deal withe hte ''.join nonsense .///// exercise.<br><br>
               >>> 
 	         </span><br><br>
             
+            <hh5m>tuple Builtin Functions</hh5m><br><br>
+            
+            I think it useful just to mention only two <b>Builtin
+            Functions</b> at this point. They are:<br><br>
+            
+            <ul>
+              <li>
+                <b>tuple()</b>, which casts <b>Data Objects</b> of
+                other compatible <b>type</b> into <b>tuples</b>.
+              </li><br>
+              <li>
+                <b>len()</b>, which returns the number of              
+                <b>Characters</b> in a <b>String</b> the number of
+                <b>elements</b> in a <b>list</b> or <b>tuple</b> ... .
+                Basically it returns 
+                <a href="https://en.wikipedia.org/wiki/Cardinality"
+                 target="_blank"><b>cardinality</b></a>
+                for any <b>Data Type</b> where that concept is relevant.
+              </li>
+            </ul><br>
+            
             <hh5m>tuple methods</hh5m><br><br>
             
-            You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
+            You can discover all the <b>methods</b> for the <b>class tuple</b> by typing:<br><br>
             
-            <b>help(list)</b><br><br>
+            <b>help(tuple)</b><br><br>
             
-            at the <b>Interpreter</b>, or, the are listed nicely
-            <a href="https://www.w3schools.com/python/python_ref_list.asp"
-             target="_blank">here</a>.<br><br>
-             
-
-ALL except index and count amend the list!! .... exercise ...
-ccopy only makes sense for list .... exercise here!!!
-2 in fact ... on for tuple section one for list section
-Deal withe hte ''.join nonsense .///// exercise.<br><br>
+            at the <b>Interpreter</b>.
+            Try it, ignoring for now all the methods
+            with identifiers that begin and end with '__'<br><br>
+            
+            <img class="centimg"
+                 src="Images/tuple_methods.png"
+                 alt="Oh Dear!"><br><br>
 
               <div class="question">
 
@@ -9183,8 +9300,7 @@ Deal withe hte ''.join nonsense .///// exercise.<br><br>
                       of <b>Builtin Functions</b> to convert the <b>type</b> of suitable
                       <b>Python Data Objects</b> to be <b>lists</b> or <b>tuples</b>.<br><br>
                       
-                      Once might hazard a wild guess that these <b>Functions</b> would be called 
-                      
+                      Once might hazard a wild guess that these <b>Functions</b> would be called
                       <a href="https://docs.python.org/3.7/library/functions.html#func-list"
                        target="_blank"><b>list</b></a> and 
                       <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
@@ -9212,7 +9328,7 @@ Deal withe hte ''.join nonsense .///// exercise.<br><br>
                         and <b>tuple</b> are <b>Builtin Functions</b>.
                       </div><br>
                      
-                      Write code to:
+                      Write code to:<br>
                       
                       <ul>
                         <li>Create a <b>list</b> of a few values.</li><br>
@@ -9242,7 +9358,6 @@ Deal withe hte ''.join nonsense .///// exercise.<br><br>
                         No surprises? Spiffing!
                       </div>
                     </details>
-                    
                   </li>
               
                   <li>
