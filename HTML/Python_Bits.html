@@ -5922,7 +5922,7 @@ Click to record your <b>Start</b> time.</button>
               methods. For a reminder (and an
               opportunity to extend the practice
               offered in this tutorial), try this
-              <a href="https://www.programiz.com/python-programming/strings-method"
+              <a href="https://www.w3schools.com/python/python_ref_string.asp"
                target="_blank">URL</a>.<br><br>
 
               Several of these will only make full
@@ -8593,22 +8593,25 @@ Click to record your <b>Start</b> time.</button>
             So, we must accept a <b>String</b> is not
             a <b>Python tuple</b>, it is a <b>Python String</b>.<br><br>
           
-            Never mind, many <b>list/tuple</b> functions
+            Never mind, some <b>list/tuple</b> functions
             and methods apply also to <b>Strings</b>, For example:<br><br>
           
-            <b>len(</b><i>&lt;str&gt;</i><b>)</b> -
+            The <b>Builtin Function len(</b><i>&lt;str&gt;</i><b>)</b> -
             returns the number of <b>Characters</b>
             in a <b>String</b><br>
             <b>len(</b><i>&lt;list&gt;|&lt;tuple&gt;</i><b>)</b> - returns the number
             of elements of the
             <i>&lt;list&gt;|&lt;tuple&gt</i>.<br><br>
+            
+            The methods <b>str,count()</b> and <b>str.index()</b>
+            have close equivalence for <b>lists</b> and <b>tuples</b>.<br><br>
           
             Any useful functionality that is not available
             can be trivially obtained by creating from the
             <b>String</b> an effectively equivalent
             <i>&lt;list&gt;|&lt;tuple&gt</i>.<br><br>
           
-            <span class="command">
+            <span class="command15">
               >>> String00="Its Sunday again"<br>
               >>> tuple00=tuple(String00)<br>
               >>> list00=list(String00)<br>
@@ -8645,7 +8648,7 @@ Click to record your <b>Start</b> time.</button>
             Of course, when you are done, you
             can easily convert back to a <b>String</b>.<br><br>
           
-            <span class="command">
+            <span class="command15">
               >>> String01=''.join(tuple00)<br>
               >>> String02=''.join(list00)<br>
               >>> print(String00,tuple00,String01,list00,String02,sep='\n')<br>
@@ -8681,20 +8684,390 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>
-                <a href="https://docs.python.org/3/tutorial/datastructures.html#lists-and-sequences"
-                 target="_blank">lists</a>
-              </hh4>
+              <hh4>lists</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?#lists"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
             </span>
           </summary>
           
             <div class="minsect"><br>
+            
+            <hh5m>list definition</hh5m><br><br>
+            
+            A <b>list</b> is an ordered, mutable set of
+            <b>Data Objects</b>.
+            <b>List</b> elements may be of a variety of
+            suitable <b>Python type</b>.<br><br>
+            
+            Just in case, being <b>mutable</b> means
+            a <b>list</b> may be altered.
+            That is, items in the <b>list</b> may be
+            replaced, removed or added.<br><br>
+            
+            Informally, a <b>list Value</b> is of the form:<br><br>
+            
+            <i>[&lt;list_Item00&gt;,&lt;list_Item01&gt;,&lt;list_Item02&gt;,
+            ... ]</i><br><br>
+            
+            where a "<i>&lt;list_Item&gt;</i>" could be any of
+            many different <b>Python types</b> (<b>int</b>,
+            <b>float</b>, <b>bool</b> ...). For example:<br><br>
+            
+            <b>[2, 5, 7.129, "Mellow Yellow", True]</b><br><br>
+            
+            A <b>list</b> can even include a <b>list</b>
+            (or similar) as an element! For example:<br><br>
+            
+            <b>[44, [1, 2, 3, 4], 66, ['a', 'b', 'c', 'd']]</b><br><br>
+            
+            The number of elements in a <b>list</b> can
+            vary between <b>0</b> and <b>lots</b>.<br><br>
+            
+            A <b>list</b> with no elements is called the
+            "<b>Empty List</b>" and looks like this:<br><br>
+            
+            <b>[]</b><br><br>
 
+            <hh5m>list creation</hh5m><br><br>
+                       
+            Like most <b>Python Data Objects</b>, <b>list Variables</b>
+            are commonly create by <b>Simple Assignment</b>.<br><br>
+            
+            <span class="command">
+              >>> List_Empty=[]<br>
+              >>> List_ints=[1,2,3,4,5]<br>
+              >>> List_mixed=[1,2.337,"abcedf"]<br>
+              >>> List_of_lists=[[1,2,3],['a',3.4,99],['Muddy',"Waters"]]<br>
+              >>> print(List_Empty,List_ints,List_mixed,List_of_lists,sep='\n')<br>
+              []<br>
+              [1, 2, 3, 4, 5]<br>
+              [1, 2.337, 'abcedf']<br>
+              [[1, 2, 3], ['a', 3.4, 99], ['Muddy', 'Waters']]<br>
+              >>>
+	         </span><br><br>
+	         
+	         Alternatively, a <b>list</b> can be created by the
+	         conversion of a <b>Data Object</b> of suitable type
+	         (for example a <b>String</b>), using
+	         the <b>Builtin Function list()</b>.<br><br>
+	         
+            <span class="command">
+              >>> List_from_String=list("abcwxyz")<br>
+              >>> List_from_String<br>
+              ['a', 'b', 'c', 'w', 'x', 'y', 'z']<br>
+              >>> 
+	         </span><br><br>
+            
+            <hh5m>list methods</hh5m><br><br>
+            
+            You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
+            
+            <b>help(list)</b><br><br>
+            
+            at the <b>Interpreter</b>, or, the are listed nicely
+            <a href="https://www.w3schools.com/python/python_ref_list.asp"
+             target="_blank">here</a>.<br><br>
+             
+
+ALL except index and count amend the list!! .... exercise ...
+ccopy only makes sense for list .... exercise here!!!
+2 in fact ... on for tuple section one for list section
+Deal withe hte ''.join nonsense .///// exercise.<br><br>
+
+              <table class="c3">
+                <tr>
+                  <th style="min-width=10%">Method</th>
+                  <th style="min-width=90%">Effect</th>
+                </tr>
+                <tr>
+                  <td><b>
+                    <a href="https://www.w3schools.com/python/ref_list_append.asp"
+                     target="_blank"<b>list.append()</b></a>
+                  </td>
+                  <td>
+                    Adds an element at the end of the list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_clear.asp"
+                     target="_blank"><b>list.clear()</b></a>
+                  </td>
+                  <td>
+                    Removes all the elements from the list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_copy.asp"
+                     target="_blank"><b>list.copy()</b></a>
+                  </td>
+                  <td>
+                    Returns a copy of the list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_count.asp"
+                     target="_blank"><b>list.count()</b></a>
+                  </td>
+                  <td>
+                    Returns the number of elements with the specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_extend.asp"
+                     target="_blank"><b>list.extend()</b></a>
+                  </td>
+                  <td>
+                    Add the elements of a list (or similar), to the end of the current list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_index.asp"
+                     target="_blank"><b>index()</b></a>
+                  </td>
+                  <td>
+                    Returns the index of the first element with the specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_insert.asp"
+                     target="_blank"><b>list.insert()</b><a>
+                  </td>
+                  <td>
+                    Adds an element at the specified position.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_pop.asp"
+                     target="_blank"><b>list.pop()</b></a>
+                  </td>
+                  <td>
+                    Removes the element at the specified position.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_remove.asp"
+                     target="_blank"><b>list.remove()</b></a>
+                  </td>
+                  <td>
+                    Removes the first item with the specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
+                     target="_blank"><b>list.reverse()</b></a>
+                  </td>
+                  <td>
+                    Reverses the order of the list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_sort.asp"
+                     target="_blank"><b>list.sort()</b></a>
+                  </td>
+                  <td>
+                    Sorts the list.
+                  </td>
+                </tr>
+              </table><br><br>
+            
               <div class="question">
 
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
                 <ol>
+                  <li>
+                    Why do you need a <b>list.copy() method</b>?<br><br>
+                    
+                    Surely, you could make a copy of a
+                    <b>list</b>, or anything come to that, using
+                    a simple <b>Assignment Statement</b>?<br><br>
+                    
+                    If you cannot answer this question
+                    directly (googling is cheating!!!!),
+                    then try 
+                    <a href="https://www.learning-theories.com/discovery-learning-bruner.html"
+                     target="_blank">discovery by
+                    experimentation</a> (told you I
+                    used to read books too! ... once
+                    ... long ago ... Pedro!).<br><br>
+                    
+                    <ul>
+                      <li>Make a <b>list</b></li><br>
+                      <li>Copy the <b>list</b> using an <b>Assignment Command</b>.</li><br>
+                      <li>Copy the <b>list</b> using the <b>list.copy() method</b>.</li><br>
+                      <li>Make alterations to one or more of the <b>lists</b>.</li><br>
+                      <li>Observe the consequences on the others.</li><br>
+                      <li>Explain your observations.</li>
+                    </ul><br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command16">
+                          >>> List00=[1,2,3,4,5]<br>
+                          >>> List00_Assigned_Copy=List00<br>
+                          >>> List00_method_Copy=List00.copy()<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          >>><br>
+                          >>> List00.append(99)<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          >>><br>
+                          >>> List00_method_Copy.reverse()<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [5, 4, 3, 2, 1]<br>
+                          >>>
+                        </span><br><br>
+                        
+                        <hh5m>Observation:</hh5m><br><br>
+                        
+                        <ul>
+                          <li>
+                            <b><u>Section 1:</u></b><br><br>
+                            
+	                         Create a <b>list</b>, make
+	                         two copies, one by
+                            <b>Simple Assignment</b>, the other using
+                            the <b>list.copy() method</b>.<br><br>
+                            
+                            Display all <b>3 lists</b> and see they are
+                            all identical.<br><br>
+                            
+                            It would have been a bit worrying had
+                            they not been!
+                          </li><br>
+                          
+                          <li>
+                            <b><u>Section 2:</u></b><br><br>
+                            
+                            Make a change in the <b>Original
+                            List</b>.<br><br>
+                            
+                            Display all <b>3 lists</b> again and see
+                            that the edit has been applied to both
+                            the <b>Original list <i>AND</i></b>
+                            the copy made by
+                            <b>Simple Assignment</b>?
+                          </li><br>
+                          
+                          <li>
+                            <b><u>Section 3:</u></b><br><br>
+                            
+                            Make a change in the copy created by
+                            <b>list.copy()</b>.<br><br>
+                            
+                            Display all <b>3 lists</b> yet again and see
+                            that the second edit is unique to the
+                            copy created by
+                            <b>list.copy()</b>.                
+                          </ul><br><br>
+                          
+                        <hh5m>Explanation:</hh5m><br><br>
+                        
+                        The explanation must start by knowing a little
+                        more about the way <b>Python
+                        Variable</b> works.<br><br>
+                        
+                        Considering them as <i>"Boxes in which Values
+                        are stored"</i> is not quite as
+                        true in <b>Python</b>
+                        as it is in some other Languages.<br><br>
+                        
+                        In <b>Python</b> it is more accurate to think of
+                        <b>Data Values</b> and <b>Data Variables</b>
+                        as being a
+                        little more independent of each other.<br><br>
+                        
+                        A <b>Python Variable</b> is a reference
+                        (or pointer) to an independent
+                        <b>Data Item</b> rather than a container
+                        enclosing a private copy of a
+                        <b>Value</b>.<br><br>
+                
+                        <img src="Images/list-create.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                        
+                        There is no reason that <b>2</b>
+                        (or more) <b>Python Variables</b> should not
+                        reference the same <b>Data Value</b>!<br><br>
+                        
+                        This is exactly what we caused
+                        to happen when we copied the
+                        <b>Original list</b> by
+                        <b>Assignment</b>.<br><br>
+                        
+                        Copying by <b>Assignment</b> does not
+                        duplicate the <b>Data Value</b>.
+                        It duplicates the <b>Data Variable</b> which
+                        is a <b>pointer</b> to the <b>Data Value</b>.<br><br>
+                        
+                        So, in a nutshell, you have <b>TWO
+                        Data Variables</b> both of which point
+                        to the same <b>Data Item</b>.<br><br>
+                        
+                        Anything you do to <b>List00</b> must also
+                        affect <b>List00_Assigned_Copy</b>
+                        (and vice versa).
+                        They both point to the same <b>Data</b>.
+                        Effectively, they are the same!<br><br>
+                        
+                        <img src="Images/list-asscop.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                     
+                        Using the <b>list.copy()</b> method, on
+                        the other hand, <b><i>does</i></b> make an
+                        entirely separate version of a <b>list</b>.<br><br>
+                     
+                        Editing either or both <b>List00</b> and
+                        <b>List00_method_copy</b> will cause the two
+                        <b>lists</b> to diverge.<br><br>
+                     
+                        <b>List00</b> and <b>List00_Assigned_Copy</b> will,
+                        of course, always be identical
+                        however you edit any of the
+                        <b>3</b> apparent <b>3lists</b>
+                        (really just <b>2 lists</b>
+                        and <b>3 pointers</b>,
+                        of course).<br><br>
+                     
+                        <img src="Images/list-metcop.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                      </div>
+                    </details>
+                  </li>
                 </ol>
               </div>
             </div>
@@ -8705,14 +9078,98 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
-              <hh4>
-                <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
-                 target="_blank">tuples</a>
-              </hh4>
+              <hh4>tuples</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?#tuples"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
             </span>
           </summary>
           
             <div class="minsect"><br>
+            
+            <hh5m>tuple definition</hh5m><br><br>
+            
+            A <b>tuple</b> is an ordered, immutable set of
+            <b>Data Objects</b>.
+            <b>List</b> elements may be of a variety of
+            suitable <b>Python type</b>.<br><br>
+            
+            Just in case, being <b>immutable</b> means
+            a <b>tuple</b> may <b><i>not</i></b> be altered.
+            That is, items in the <b>tuple</b> must
+            remain as initially defined for the entire
+            life of the <b>tuple</b>.<br><br>
+            
+            Informally, a <b>tuple Value</b> is of the form:<br><br>
+            
+            <i>(&lt;tuple_Item00&gt;,&lt;tuple_Item01&gt;,&lt;tuple_Item02&gt;,
+            ... )</i><br><br>
+            
+            where a "<i>&lt;tuple_Item&gt;</i>" could be any of
+            many different <b>Python types</b> (<b>int</b>,
+            <b>float</b>, <b>bool</b> ...). For example:<br><br>
+            
+            <b>(2, 5, 7.129, "Mellow Yellow", True)</b><br><br>
+            
+            A <b>tuple</b> can even include <b>lists</b> and/or <b>tuples</b>
+            (or similar) as an element! For example:<br><br>
+            
+            <b>(44, [1, 2, 3, 4], 66, ('a', 'b', 'c', 'd')]</b><br><br>
+            
+            The number of elements in a <b>tuple</b> can
+            vary between <b>0</b> and <b>lots</b>.<br><br>
+            
+            A <b>tuple</b> with no elements is called the
+            "<b>Empty Tuple</b>" and looks like this:<br><br>
+            
+            <b>()</b><br><br>
+
+            <hh5m>tuple creation</hh5m><br><br>
+                       
+            Like most <b>Python Data Objects</b>, <b>tuple Variables</b>
+            are commonly create by <b>Simple Assignment</b>.<br><br>
+            
+            <span class="command">
+              >>> Tuple_Empty=()<br>
+              >>> Tuple_ints=(1,2,3,4,5)<br>
+              >>> Tuple_mixed=(1,2.337,"abcedf")<br>
+              >>> Tuple_with_lists=([1,2,3],('a',3.4,99),('Muddy',"Waters"))<br>
+              >>> print(Tuple_Empty,Tuple_ints,Tuple_mixed,Tuple_with_lists,sep='\n')<br>
+              ()<br>
+              (1, 2, 3, 4, 5)<br>
+              (1, 2.337, 'abcedf')<br>
+              ([1, 2, 3], ('a', 3.4, 99), ('Muddy', 'Waters'))<br>
+              >>> 
+	         </span><br><br>
+	         
+	         Alternatively, a <b>tuple</b> can be created by the
+	         conversion of a <b>Data Object</b> of suitable type
+	         (for example a <b>String</b>), using
+	         the <b>Builtin Function tuple()</b>.<br><br>
+	         
+            <span class="command">
+              >>> Tuple_from_String=tuple("abcwxyz")<br>
+              >>> Tuple_from_String<br>
+              ('a', 'b', 'c', 'w', 'x', 'y', 'z')<br>
+              >>> 
+	         </span><br><br>
+            
+            <hh5m>tuple methods</hh5m><br><br>
+            
+            You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
+            
+            <b>help(list)</b><br><br>
+            
+            at the <b>Interpreter</b>, or, the are listed nicely
+            <a href="https://www.w3schools.com/python/python_ref_list.asp"
+             target="_blank">here</a>.<br><br>
+             
+
+ALL except index and count amend the list!! .... exercise ...
+ccopy only makes sense for list .... exercise here!!!
+2 in fact ... on for tuple section one for list section
+Deal withe hte ''.join nonsense .///// exercise.<br><br>
 
               <div class="question">
 
@@ -9075,7 +9532,175 @@ Click to record your <b>Start</b> time.</button>
           <details>
           <summary>
             <span class="minsectsum">
+              <hh4>ranges</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?#ranges"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
+            </span>
+          </summary>
+          
+            <div class="minsect"><br>
+          
+              <div class="hint">
+
+                Discussion of iterators and the like can be
+                found in great abundance by google
+                ( and similar).<br><br>
+                
+                They tend to veer towards the confusing
+                end of technical.<br><br>
+                
+                I agree with <b>Alois Mahdal</b> (third answer
+                <a href="https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration"
+                 target="_blank">here</a>,
+                when he says (more or less):<br><br>
+                
+                "people tend to get "too Pythonic" ... 
+                the focus on rigorous definition 
+                impedes understanding of the concept
+                in its simplicity."<br><br>
+              
+                <b>Alois</b> offers you some simple definitions,
+                I offer you an <b>analogy to reinforce
+                the discussion that precedes:</b><br><br>
+                
+                <b>========================================</b><br><br>
+
+                Long long ago, in a land called Warminster,
+                lived my fine father, my beautiful mother,
+                my idiot sister and my inestimable self.<br><br>
+
+                In our garden, we had a huge walnut tree,
+                which was only truly functional for the
+                minute part of the year (September/October)
+                when it provided us (generously) with walnuts.<br><br>
+
+                The rest of the year it simply stood around
+                and prevented the warm caress of the sun from
+                assisting the things planted in our garden in
+                their attempts to evade the well meant
+                attentions of my dear father.<br><br>
+              
+                Particularly during its leaf incontinent
+                moments of Autumn, this magnificent walnut
+                generator exercised my father to some
+                significant degree! He would address the
+                tree with vigorous military gesture and
+                expressions which I fear I am far to well
+                bred to share with you, in the particular.<br><br>
+                
+                Suffice it to note, his general theme was
+                that it was, solely, the responsibility of
+                the walnut tree that nothing but spinach
+                (oh ... the spinach! why the spinach ...)
+                would grow in his garden.<br><br>
+                  
+                The tree was unmoved and never interrupted
+                its life consuming study of the
+                heavens and their message for the chosen
+                genus, "Tree".<br><br>
+ 
+                Exasperated, my father would explain to the
+                majestic organism, that, had they met in
+                "the desert" (where my father spent time
+                with a merry band of chums lead by a chap
+                called "Monty"), he would have been
+                inclined to extreme violence involving
+                several tanks and something that shed
+                explosive items weighing around 25 pounds!<br><br>
+
+                That, of which my father would have
+                undoubtedly approved, would have been the
+                replacement of the walnut tree with a single
+                tiny walnut that could be magically expanded
+                only at appropriate times and only to the
+                degree appropriate to the moment.<br><br>
+                
+                So, for example, when our dog (did I not
+                mention him? His name was Monty, just like
+                the chap in the desert) wished to relieve
+                himself, the magic walnut could be expanded
+                into a modest stripling, and then back to a
+                walnut as Monty (the dog that is) had
+                completed his mission and was shaking
+                himself free of excess product.<br><br>
+
+                The need for the full tree,
+                would be just briefly for walnut harvest time.<br><br>
+                 
+                My father would be ecstatic, until he noticed
+                the garden was still full only of spinach!<br><br>
+
+                <b>THE INTERPRETATION</b><br><br>
+
+                The <b>range object</b> is like the magic walnut.
+                Small and inexpensive, in terms of memory at least.<br><br>
+             
+                With the <b>Builtin function iter()</b>, the walnut
+                (<b>range</b>) can be expanded mostly into an
+                <b>iterator object</b> (stripling) suitable for
+                stepping along with the <b>next() Builtin function</b>
+                or <b>method</b> (analogously being watered by Monty
+                the dog).<br><br>
+
+                Only if/when necessary (walnut harvest time) need
+                the magic walnut (<b>range</b>) be expanded into a
+                huge memory hungry <b>list</b> or <b>tuple</b> (walnut tree).<br><br>
+
+                Got it?  Jolly good!<br><br>
+
+                <b>THE END</b><br>
+                
+                <b>========================================</b><br><br>
+                
+              </div>
+
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>sets</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?#set-types-set-frozenset"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
+            </span>
+          </summary>
+          
+            <div class="minsect"><br>
+
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
               <hh4>dictionaries</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?highlight=dictionary#mapping-types-dict"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
             </span>
           </summary>
 
