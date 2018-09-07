@@ -890,6 +890,7 @@ Click to record your <b>Start</b> time.</button>
               <hh4>Strings.</hh4>
             </span>
           </summary>
+          
             <div class="minsect"><br>
 
               <ol>
@@ -1926,6 +1927,8 @@ Click to record your <b>Start</b> time.</button>
                           </div>
                         </details>
                       </li><br>
+                      
+                      <li>
                         <b>Oscar</b> again!<br><br>
                         
                         <hh5m>Part (iii)</hh5m><br><br>
@@ -1991,6 +1994,8 @@ Click to record your <b>Start</b> time.</button>
                             
                             That just has to be useful when we <b>Reverse</b>
                             and <b>Complement Sequences</b> a little later on!<br><br>
+                          </div>
+                        </details>
                       </li>
                     </ol>
                   </div>
@@ -2028,7 +2033,7 @@ Click to record your <b>Start</b> time.</button>
             </div>
           </details>
         </li><br>
-	
+
         <li>
           <details>
           <summary>
@@ -2278,12 +2283,12 @@ Click to record your <b>Start</b> time.</button>
                           ('aaa', 'aaa', 'aaa')<br>
                           >>>
                         </span><br><br>
-                     </div>
+                      </div>
                     </details>
                   </li><br>
                 </ol>
               </div>
-           </div>
+            </div>
           </details>
         </li><br>
 
@@ -3834,8 +3839,8 @@ Click to record your <b>Start</b> time.</button>
                     Arrived to save the Earth the year
                     they invented the NHS<br>
                     Best photographs from the Right<br>
-		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     after inhaling stomach towards my chest!<br>
                     >>>
                   </span><br><br>
@@ -4030,218 +4035,40 @@ Click to record your <b>Start</b> time.</button>
           <summary>
             <span class="minsectsum">
               <hh4>Casting.</hh4>
-            </span>
-          </summary>
-
-          <div class="minsect"><br>
-
-            <b>Python</b> offers a set of
-            <b>Builtin Functions</b> to "<b>Cast</b>" the
-            initial <b>type</b> of Scalar into another. These
-            are (in their simplest usage):
-
-            <ol>
-              <li><a href="https://docs.python.org/3.7/library/functions.html#int"
-                   target="_blank"><b>int()</b></a> - Converts
-                   a <b>Number</b> or <b>String Argument</b>
-                   to an <b>Integer</b>.
-              </li><br>
-
-              <li><a href="https://docs.python.org/3.7/library/functions.html#float"
-                   target="_blank"><b>float()</b></a> - Converts
-                   a <b>Number</b> or <b>String Argument</b>
-                   to a <b>Float</b>.
-              </li><br>
-
-              <li><a href="https://docs.python.org/3.7/library/functions.html#bool"
-                   target="_blank"><b>bool()</b></a> - Converts
-                   any value to a <b>bool</b> (that is,
-                   <b>True</b> or <b>False</b>).
-              </li><br>
-
-              <li><a href="https://docs.python.org/3.7/library/functions.html#func-str"
-                   target="_blank"><b>str()</b></a> - Converts
-                   any value to a <b>String</b>.
-              </li>
-            </ol><br>
-
-            <div class="question">
-
-              <h2><i><u>Questions & Simple Exercises</u></i></h2>
-
-              <ol>
-
-                <li>
-                  Might there be some limits to what
-                  <b>int()</b> will accept as a sensible
-                  <b>Argument</b>?<br>
-
-                  Try:<br>
-                    <ul>
-                      <li>The <b>float</b> - '<b>3.4</b>'</li>
-                      <li>The <b>bool</b> - '<b>6==6</b>'</li>
-                      <li>The <b>str</b> - '<b>98</b>'</li>
-                      <li>The <b>str</b> - '<b>98.5</b>'</li>
-                      <li>The <b>str</b> - '<b>two</b>'</li>
-                    </ul>
-
-                  <details class="answer">
-                  <summary><span class="anssum">Answer.</span>
-                  </summary>
-
-                    <div class="answer">
-
-                      <span class="command">
-                        >>> int(3.4)<br>
-                        3<br>
-                        >>> int(6==6)<br>
-                        1<br>
-                        >>> int("98")<br>
-                        98<br>
-                        >>>
-                      </span><br><br>
-
-                      <b>float</b> -> <b>int</b> fine!<br>
-                      <b>bool</b> -> <b>int</b> fine,
-                      if enigmatic!<br>
-                      <b>str</b> -> <b>int</b> fine,
-                      when the <b>String</b> is an
-                      <b>Integer</b> at least!<br><br>
-
-                      <span class="command">
-                        >>> int("98.9")<br>
-                        Traceback (most recent call last):<br>
-                        &nbsp;&nbsp;File "&lt;stdin&gt;", line
-                        1, in &lt;module&gt;<br>
-                        ValueError: invalid literal for
-                        int() with base 10: '98.9'<br>
-                        >>>
-                      </span><br><br>
-
-                      Picky!!! I would have expected this one
-                      to work, but <b>int()</b> will not
-                      convert the <b>float String</b>. I
-                      suspect because that would involve
-                      <b>TWO</b> conversions, and
-                      <b>int()</b> has a strong Union
-                      position to maintain.<br><br>
-
-                      Of course, you could do the first
-                      conversion explicitly and then all
-                      would be fine?<br><br>
-
-                      <span class="command">
-                        >>> int(float("98.9"))<br>
-                        98<br>
-                        >>>
-                      </span><br>
-
-                      <p class="hint"> Just in case I have
-                         not already mentioned it, <b>int</b>
-                         to <b>float</b> conversions
-                         <b><i>ALWAYS</i></b> round
-                         <b><i>DOWN</i></b>.
-                         Rather unsubtle, but that is
-                         universally the <b>Rule</b>.<br><br>
-
-                         So <b>98.9</b> becomes <b>98</b>
-                         and not <b>99</b>.<br>
-                      </p>
-
-                      <span class="command">
-                        >>> int("two")
-                          Traceback (most recent call last):
-                          &nbsp;&nbsp;File "&lt;stdin&gt;",
-                          line 1, in &lt;module&gt;
-                          ValueError: invalid literal
-                          for int() with base 10: 'two'<br><br>
-                          >>>
-                      </span><br><br>
-
-                      Makes perfect sense to me! But, I
-                      suppose this one was just a weenie
-                      bit optimistic? Maybe in
-                      <b>Python 7</b>?<br><br>
-
-                    </div>
-                  </details>
-                </li><br>
-
-                <li>
-                  What is the value of:<br>
-
-                  <ul>
-                    <li><b>int()</b></li>
-                    <li><b>float()</b></li>
-                    <li><b>bool()</b></li>
-                    <li><b>str()</b>'</li>
-                  </ul>
-
-                  <details class="answer">
-                  <summary><span class="anssum">Answer.</span>
-                  </summary>
-
-                    <div class="answer">
-
-                      <span class="command">
-                        >>> int()<br>
-                        0<br>
-                        >>> float()<br>
-                        0.0<br>
-                        >>> bool()<br>
-                        False<br>
-                        >>> str()<br>
-                        ''<br>
-                        >>>
-                      </span><br><br>
-
-                      Very reasonable, given some sort of value
-                      is considered better than none.
-                    </div>
-                  </details>
-                </li><br>
-              </ol>
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>Numerically Orientated.</hh4>
-            </span>
+              </span>
           </summary>
 
             <div class="minsect"><br>
 
-              These include:
+              <b>Python</b> offers a set of
+              <b>Builtin Functions</b> to "<b>Cast</b>" the
+              initial <b>type</b> of Scalar into another. These
+              are (in their simplest usage):
 
               <ol>
                 <li>
-                  <a href="https://docs.python.org/3.7/library/functions.html#abs"
-                   target="_blank"><b>abs()</b></a> - returns
-                  the <b>Absolute Value</b> of a
-                  <b>Numeric Argument</b>.
+                  <a href="https://docs.python.org/3.7/library/functions.html#int"
+                     target="_blank"><b>int()</b></a> - Converts
+                  a <b>Number</b> or <b>String Argument</b>
+                  to an <b>Integer</b>.
                 </li><br>
 
                 <li>
-                  <a href="https://docs.python.org/3.7/library/functions.html#min"
-                   target="_blank"><b>min()</b></a> - returns
-                  the smallest of a set of <b>Values</b>.
+                  <a href="https://docs.python.org/3.7/library/functions.html#float"
+                    target="_blank"><b>float()</b></a> - Converts
+                    a <b>Number</b> or <b>String Argument</b>
+                    to a <b>Float</b>.
                 </li><br>
 
-                <li>
-                  <a href="https://docs.python.org/3.7/library/functions.html#max"
-                   target="_blank"><b>max()</b></a> - returns
-                  the largest of a set of <b>Values</b>.
+                <li><a href="https://docs.python.org/3.7/library/functions.html#bool"
+                     target="_blank"><b>bool()</b></a> - Converts
+                     any value to a <b>bool</b> (that is,
+                     <b>True</b> or <b>False</b>).
                 </li><br>
 
-                <li>
-                  <a href="https://docs.python.org/3.7/library/functions.html#round"
-                   target="_blank"><b>round()</b></a> - returns
-                  a <b>float Argument Rounded</b> to a
-                  specified number of decimal places.
+                <li><a href="https://docs.python.org/3.7/library/functions.html#func-str"
+                     target="_blank"><b>str()</b></a> - Converts
+                     any value to a <b>String</b>.
                 </li>
               </ol><br>
 
@@ -4250,7 +4077,183 @@ Click to record your <b>Start</b> time.</button>
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
                 <ol>
+                  <li>
+                    Might there be some limits to what
+                    <b>int()</b> will accept as a sensible
+                    <b>Argument</b>?<br>
 
+                    Try:<br><br>
+                      <ul>
+                        <li>The <b>float</b> - '<b>3.4</b>'</li>
+                        <li>The <b>bool</b> - '<b>6==6</b>'</li>
+                        <li>The <b>str</b> - '<b>98</b>'</li>
+                        <li>The <b>str</b> - '<b>98.5</b>'</li>
+                        <li>The <b>str</b> - '<b>two</b>'</li>
+                      </ul><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+
+                        <span class="command">
+                          >>> int(3.4)<br>
+                          3<br>
+                          >>> int(6==6)<br>
+                          1<br>
+                          >>> int("98")<br>
+                          98<br>
+                          >>>
+                        </span><br><br>
+
+                        <b>float</b> -> <b>int</b> fine!<br>
+                        <b>bool</b> -> <b>int</b> fine,
+                        if enigmatic!<br>
+                        <b>str</b> -> <b>int</b> fine,
+                        when the <b>String</b> is an
+                        <b>Integer</b> at least!<br><br>
+
+                        <span class="command">
+                          >>> int("98.9")<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line
+                          1, in &lt;module&gt;<br>
+                          ValueError: invalid literal for
+                          int() with base 10: '98.9'<br>
+                          >>>
+                        </span><br><br>
+
+                        Picky!!! I would have expected this one
+                        to work, but <b>int()</b> will not
+                        convert the <b>float String</b>. I
+                        suspect because that would involve
+                        <b>TWO</b> conversions, and
+                        <b>int()</b> has a strong Union
+                        position to maintain.<br><br>
+
+                        Of course, you could do the first
+                        conversion explicitly and then all
+                        would be fine?<br><br>
+
+                        <span class="command">
+                          >>> int(float("98.9"))<br>
+                          98<br>
+                          >>>
+                        </span><br>
+
+                        <p class="hint"> Just in case I have
+                          not already mentioned it, <b>int</b>
+                          to <b>float</b> conversions
+                          <b><i>ALWAYS</i></b> round
+                          <b><i>DOWN</i></b>.
+                          Rather unsubtle, but that is
+                          universally the <b>Rule</b>.<br><br>
+
+                          So <b>98.9</b> becomes <b>98</b>
+                          and not <b>99</b>.<br>
+                        </p>
+
+                        <span class="command">
+                          >>> int("two")
+                          Traceback (most recent call last):
+                          &nbsp;&nbsp;File "&lt;stdin&gt;",
+                          line 1, in &lt;module&gt;
+                          ValueError: invalid literal
+                          for int() with base 10: 'two'<br><br>
+                          >>>
+                        </span><br><br>
+ 
+                        Makes perfect sense to me! But, I
+                        suppose this one was just a weenie
+                        bit optimistic? Maybe in
+                        <b>Python 7</b>?<br><br>
+                      </div>
+                    </details>
+                  </li><br>
+                  <li>
+                    What is the value of:<br><br>
+                     
+                    <ul>
+                      <li><b>int()</b></li>
+                      <li><b>float()</b></li>
+                      <li><b>bool()</b></li>
+                      <li><b>str()</b>'</li>
+                    </ul><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+
+                      <div class="answer">
+   
+                        <span class="command">
+                          >>> int()<br>
+                          0<br>
+                          >>> float()<br>
+                          0.0<br>
+                          >>> bool()<br>
+                          False<br>
+                          >>> str()<br>
+                          ''<br>
+                          >>>
+                        </span><br><br>
+
+                        Very reasonable, given some sort of value
+                        is considered better than none.
+                      </div>
+                    </details>
+                  </li><br>
+                </ol>
+              </div>
+            </details>
+          </li><br>
+
+          <li>
+            <details>
+            <summary>
+              <span class="minsectsum">
+                <hh4>Numerically Orientated.</hh4>
+              </span>
+            </summary>
+
+              <div class="minsect"><br>
+
+                These include:
+
+                <ol>
+                  <li>
+                    <a href="https://docs.python.org/3.7/library/functions.html#abs"
+                     target="_blank"><b>abs()</b></a> - returns
+                    the <b>Absolute Value</b> of a
+                    <b>Numeric Argument</b>.
+                  </li><br>
+
+                  <li>
+                    <a href="https://docs.python.org/3.7/library/functions.html#min"
+                     target="_blank"><b>min()</b></a> - returns
+                       the smallest of a set of <b>Values</b>.
+                  </li><br>
+
+                  <li>
+                    <a href="https://docs.python.org/3.7/library/functions.html#max"
+                     target="_blank"><b>max()</b></a> - returns
+                    the largest of a set of <b>Values</b>.
+                  </li><br>
+
+                  <li>
+                    <a href="https://docs.python.org/3.7/library/functions.html#round"
+                     target="_blank"><b>round()</b></a> - returns
+                    a <b>float Argument Rounded</b> to a
+                    specified number of decimal places.
+                  </li>
+                </ol><br>
+
+                <div class="question">
+                
+                  <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                  <ol>
                   <li>
                     Just in case you have any doubts, try
                     <b>abs()</b> with a couple of
@@ -4453,33 +4456,33 @@ Click to record your <b>Start</b> time.</button>
 
                         Seems to have worked, but ... is not the
                         usual rule to round up after a <b>5</b>?
-                        Should not the answer be <b>5.68</b>?
+                        Should not the answer be <b>5.68</b>?<br><br>
 
                         Well ... yes it should according to
                         the <b>Rules of Arithmetic</b>, but
                         these are thwarted by the practicalities
                         of the way numbers are represented in
-                        the computer.
+                        the computer.<br><br>
 
                         The computer uses a <b>Binary</b>
                         representation, not <b>Decimal</b>.
                         It is not possible to represent
-                        <b>2.675</b> exactly as a binary number.
+                        <b>2.675</b> exactly as a binary number.<br><br>
 
                         If you do the conversion (using a handy
                         <a href="https://baseconvert.com/"
                          target="_blank"><b>converter</b></a>
                         from the web if you are in a hurry), you
-                        will discover that <b>5.675</b> Decimal is:
+                        will discover that <b>5.675 Decimal</b> is:<br><br>
 
-                            10.1011(0011)*
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>10.1011(0011)*</b><br><br>
 
                         which approaches (from below),
                         but never reaches
                         <b>2.675</b> as it is allowed to get
-                        longer and longer.
+                        longer and longer.<br><br>
 
-                        So, abs() is rounding a number that is
+                        So, <b>abs()</b> is rounding a number that is
                         nearly, but not quite <b>2.675</b>,
                         honestly ... but wrongly (if you
                         wished to be unkind).
@@ -5029,7 +5032,7 @@ Click to record your <b>Start</b> time.</button>
                             <a href="https://www.poemhunter.com/edward-lear/poems/"
                              target="_blank"> many</a> by
                             <a href="https://en.wikipedia.org/wiki/Edward_Lear"
-                           target="_blank">Edward Lear</a>.
+                             target="_blank">Edward Lear</a>.
                             Very good for last thing at night
                             with the jolly old cocoa! His best is
                             <a href="https://www.poemhunter.com/poem/the-owl-and-the-pussy-cat/"
@@ -7758,7 +7761,7 @@ Click to record your <b>Start</b> time.</button>
                 <ol>
                   <li>
                     Create a new <b>File</b> and write into in a minimum of
-                    three lines of data.<br><br>
+                    three lines of data.<br>
                     
                     <p class="hint">
                       Use <b>file.write()</b> several times rather
@@ -8008,7 +8011,7 @@ Click to record your <b>Start</b> time.</button>
                   <li>
                     Yet again, <b>Open</b> for <b>Reading</b>
                     the <b>File</b> you created.<br><br>
-                    
+	                 
                     Read and display the entire file using <b>file.readlines()</b>.<br><br>
                     
                     <b>Close</b> the <b>File</b>.<br><br>
@@ -8102,8 +8105,134 @@ Click to record your <b>Start</b> time.</button>
                         </div>
                       </div>
                     </details>
+                  </li><br>
+                  
+                  <li>
+                    The topic here is "<b>Calculating
+                    Base Composition of a DNA Sequence</b>".<br><br>
+                  
+                    So first you need a <b>Sequence?</b><br><br>
+                  
+                    There is a nice one in the file
+                    <a href="../Data/sequences.raw"
+                     target="_blank"> <b>sequences.raw</b></a>.<br><br>
+                  
+                    Download it and put it in your <b>Current Working
+                    Directory</b>.<br><br>
+                  
+                    Now compute its <b>Base Composition</b>.<br><br>
+                    
+                    <div class="pseudos">
+                      I suggest the following steps:<br><br>
+                    
+                      <ul>
+                        <li>
+                          Open the <b>Sequence File</b>
+                          for <b>Reading</b>
+                        </li><br>
+                        <li>
+                          Read the whole <b>file</b>
+                          as a single <b>String</b>
+                        </li><br>
+                        <li>
+                          Remove the <b>newlines</b>
+		                  </li><br>
+		                  <li>
+		                    Make the <b>String</b> a
+		                    uniform (<b>upper</b>?) case
+		                  </li><br>
+		                  <li>
+		                    Count each <b>Base Type</b> separately
+		                  </li><br>
+		                  <li>
+		                    Display <b>Base Composition</b> prettily
+		                  </li>
+		                </ul><br>
+		                
+                      This list of steps is a very simple form of
+                      <b>pseudo-code</b>.<br><br>
+                    
+                      It represents a bit of <i>"thinking about
+                      the problem"</i> before diving
+                      into <b>Python code</b>.<br><br>
+                    
+                      I strongly suggest that getting the
+                      code correct quickly is much more likely
+                      following these small steps than it would be
+                      trying to go from <i>"end Goal"</i> to code in
+                      one hopeful leap.
+                    </div><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+ 
+                        <span class="command15">
+                          >>> #<br>
+                          ... # Open Sequence File for Reading<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Raw_Sequence_File=open("Sequence.raw",'r')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Read the entire file as a single String<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Raw_Sequence_String = Raw_Sequence_File.read()<br>
+                          >>> <br>
+                          >>> type(Raw_Sequence_String)<br>
+                          &lt;class 'str'&gt;<br>
+                          >>> print(Raw_Sequence_String)<br>
+                          CACAGCGGAGtgaaTCAGCTCGGTGG<br>
+                          AGTGGCTCAGGGCCTGCGGAcctcAT<br>
+                          CATAttcgAGCCCCGTGGAATCCCGC<br>
+                          <br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Remove the newlines<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Raw_Sequence_String=Raw_Sequence_String.replace('\n','')<br>
+                          >>> <br>
+                          >>> print(Raw_Sequence_String)<br>
+                          CACAGCGGAGtgaaTCAGCTCGGTGGAGTGGCTCAGGGCCTGCGGAcctcATCATAttcgAGCCCCGTGGAATCCCGC<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Make Sequence uniformly upper case to avoid confusion.<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Raw_Sequence_String=Raw_Sequence_String.upper()<br>
+                          >>> <br>
+                          >>> print(Raw_Sequence_String)<br>
+                          CACAGCGGAGTGAATCAGCTCGGTGGAGTGGCTCAGGGCCTGCGGACCTCATCATATTCGAGCCCCGTGGAATCCCGC<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Count each Base type separately<br>
+                          ... #<br>
+                          ... <br>
+                          >>> A_Count=Raw_Sequence_String.count('A')<br>
+                          >>> C_Count=Raw_Sequence_String.count('C')<br>
+                          >>> G_Count=Raw_Sequence_String.count('G')<br>
+                          >>> T_Count=Raw_Sequence_String.count('T')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Display Base Composition prettily<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print("Base Composition is %3d As, %3d Cs, %3d Gs, %3d Ts." % \<br>
+                          ... (A_Count,C_Count,G_Count,T_Count))<br>
+                          Base Composition is  15 As,  24 Cs,  25 Gs,  14 Ts.<br>
+                          >>>
+                        </span><br><br>
+ 
+                        Do I fool myself? Or is that all
+                        the above sufficiently transparent as to
+                        require no further explanation?
+                      </div>
+                    </details>
                   </li>
-                </ol>
+                </ol><br>
               </div>
             </div>
           </details>
@@ -8506,62 +8635,107 @@ Click to record your <b>Start</b> time.</button>
         
 	       <ol>
 	         <li>
-	           <b>list</b> - a <b>Mutable Ordered</b> set of <b>Data Items</b>
+	           <a href="https://snakify.org/en/lessons/lists/"
+	            target="_blank"><b>list</b></a>
+	            - a <b>Mutable Ordered</b> set of <b>Data Items</b>
 	         </li><br>
 	       
             <li>
-	           <b>tuple</b> - an <b>Immutable list</b>
+	           <a href="https://www.tutorialspoint.com/python3/python_tuples.htm"
+	           target="_blank"><b>tuple</b></a>
+	           - an <b>Immutable list</b>
 	         </li><br>
 	       
             <li>
-	           <b>set</b> -
-	           a <b>Mutable Ordered</b> set of <b>Distinct Data Items</b>
+	           <a href="https://snakify.org/en/lessons/sets/"
+	            target="_blank"><b>set</b></a>
+	           - a <b>Mutable Unordered</b> set of <b>Distinct Immutable Data Items</b>
 	         </li><br>
 	       
             <li>
-              <b>dictionary</b> -
-              a <b>Mutable Unordered</b> set of <b>Keyword/Value</b> pairs
+	           <a href="http://www.chiark.greenend.org.uk/doc/python3.2/html/library/stdtypes.html#range-type"
+	            target="_blank"><b>range</b></a>
+	            - a memory efficient <i>representation</i> of an <b>Immutable Sequence of Integers</b></b>
+	         </li><br>
+	         
+            <li>
+	           <a href="https://wiki.python.org/moin/Iterator"
+	            target="_blank"><b>iterator</b></a>
+	           - an ordered set of elements which can be delivered, in order, by serial applications
+	           of the <b>Builtin Function next()</b>.
+	         </li><br>
+	         
+            <li>
+              <a href="https://snakify.org/en/lessons/dictionaries_dicts/"
+               target="_blank"><b>dictionary</b></a>
+               - a <b>Mutable Unordered</b> set of <b>Keyword/Value</b> pairs
             </li>
           </ol><br>
         
-          Each <b>Data Structure</b>
-          (<b>type</b>, <b>class</b> has
-          a an associated <b>Builtin Function</b>
-          that will create a <b>Data Object</b>
-          of that <b>type</b> from any other
-          suitable <b>type</b> of <b>Data Object</b>.<br><br>
-        
-          <b>Builtin Functions</b> are:<br><br>
+          Some of these <b>Data Structures</b>
+          have associated <b>casting Builtin Functions</b>.
+          These are:<br>
         
  	       <ol>
 	         <li>
+	           <b>list()</b>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-list"
-	            target="_blank"><b>list()</b></a>
+	            target="_blank"><img src="Images/www.png"
+                                    alt="Fiddle!"
+                                    height="25" width="25"></a>
 	           - converts <b>Data Objects</b> of
               suitable <b>type</b> to a <b>list</b>
 	         </li><br>
 	       
-	         <li>
+	         <li><b>tuple()</b>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
-	            target="_blank"><b>tuple()</b></a>
+	            target="_blank"><img src="Images/www.png"
+                                    alt="Fiddle!"
+                                    height="25" width="25"></a>
 	           - converts <b>Data Objects</b> of
 	           suitable <b>type</b> to a <b>tuple</b>
 	         </li><br>
 	       
-	         <li>
+	         <li><b>set()</b>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-set"
-	            target="_blank"><b>set()</b></a>
+	            target="_blank"><img src="Images/www.png"
+                                    alt="Fiddle!"
+                                    height="25" width="25"></a>
 	           - converts <b>Data Objects</b> of
 	           suitable <b>type</b> to a <b>set</b>
 	         </li><br>
 	       
-            <li>
+            <li><b>dict()</b>
               <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
-	            target="_blank"><b>dict()</b></a>
+	            target="_blank"><img src="Images/www.png"
+                                    alt="Fiddle!"
+                                    height="25" width="25"></a>
 	           - converts <b>Data Objects</b> of
               suitable <b>type</b> to a <b>dictionary</b>
             </li>
           </ol><br>
+          
+          Other Builtin Functions that will be discussed include:<br><br>
+          
+          <ul>
+            <li>
+              <a href="https://docs.python.org/3.7/library/stdtypes.html#range"
+               target="_blank"><b>range()</b></a>
+              - creates a <b>range</b> object
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#iter"
+               target="_blank"><b>iter()</b></a>
+              - returns an <b>iterator</b> object
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#next"
+               target="_blank"><b>next()</b></a>
+              - returns the "next element" from an <b>iterator</b> object
+            </li><br>
+          </ul>
         
           <div class="hint">
             <b>A word about Strings</b>:<br><br>
@@ -8694,452 +8868,462 @@ Click to record your <b>Start</b> time.</button>
           
             <div class="minsect"><br>
             
-            <hh5m>list definition</hh5m><br><br>
+              <hh5m>list definition</hh5m><br><br>
             
-            A <b>list</b> is an ordered, mutable set of
-            <b>Data Objects</b>.
-            <b>List</b> elements may be of a variety of
-            suitable <b>Python type</b>.<br><br>
+              A <b>list</b> is an ordered, mutable set of
+              <b>Data Objects</b>.
+              <b>List</b> elements may be of a variety of
+              suitable <b>Python type</b>.<br><br>
             
-            Just in case, being <b>mutable</b> means
-            a <b>list</b> may be altered.
-            That is, items in the <b>list</b> may be
-            replaced, removed or added.<br><br>
+              Just in case, being <b>mutable</b> means
+              a <b>list</b> may be altered.
+              That is, items in the <b>list</b> may be
+              replaced, removed or added.<br><br>
+              
+              Informally, a <b>list Value</b> is of the form:<br><br>
             
-            Informally, a <b>list Value</b> is of the form:<br><br>
+              <i>[&lt;list_Item00&gt;,&lt;list_Item01&gt;,&lt;list_Item02&gt;,
+              ... ]</i><br><br>
+              
+              where a "<i>&lt;list_Item&gt;</i>" could be any of
+              many different <b>Python types</b> (<b>int</b>,
+              <b>float</b>, <b>bool</b> ...). For example:<br><br>
             
-            <i>[&lt;list_Item00&gt;,&lt;list_Item01&gt;,&lt;list_Item02&gt;,
-            ... ]</i><br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2, 5, 7.129,
+              "Mellow Yellow", True]</b><br><br>
             
-            where a "<i>&lt;list_Item&gt;</i>" could be any of
-            many different <b>Python types</b> (<b>int</b>,
-            <b>float</b>, <b>bool</b> ...). For example:<br><br>
+              A <b>list</b> can even include a <b>list</b>
+              (or similar) as an element! For example:<br><br>
             
-            <b>[2, 5, 7.129, "Mellow Yellow", True]</b><br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[44, [1, 2, 3, 4],
+              66, ['a', 'b', 'c', 'd']]</b><br><br>
             
-            A <b>list</b> can even include a <b>list</b>
-            (or similar) as an element! For example:<br><br>
+              The number of elements in a <b>list</b> can
+              vary between <b>0</b> and <b>lots</b>.<br><br>
             
-            <b>[44, [1, 2, 3, 4], 66, ['a', 'b', 'c', 'd']]</b><br><br>
+              A <b>list</b> with no elements is called the
+              "<b>Empty List</b>" and looks like this:<br><br>
             
-            The number of elements in a <b>list</b> can
-            vary between <b>0</b> and <b>lots</b>.<br><br>
-            
-            A <b>list</b> with no elements is called the
-            "<b>Empty List</b>" and looks like this:<br><br>
-            
-            <b>[]</b><br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[]</b><br><br>
 
-            <hh5m>list creation</hh5m><br><br>
+              <hh5m>list creation</hh5m><br><br>
                        
-            Like most <b>Python Data Objects</b>, <b>list Variables</b>
-            are commonly create by <b>Simple Assignment</b>.<br><br>
+              Like most <b>Python Data Objects</b>, <b>list Variables</b>
+              are commonly create by <b>Simple Assignment</b>.<br><br>
             
-            <span class="command">
-              >>> List_Empty=[]<br>
-              >>> List_ints=[1,2,3,4,5]<br>
-              >>> List_mixed=[1,2.337,"abcedf"]<br>
-              >>> List_of_lists=[[1,2,3],['a',3.4,99],['Muddy',"Waters"]]<br>
-              >>> print(List_Empty,List_ints,List_mixed,List_of_lists,sep='\n')<br>
-              []<br>
-              [1, 2, 3, 4, 5]<br>
-              [1, 2.337, 'abcedf']<br>
-              [[1, 2, 3], ['a', 3.4, 99], ['Muddy', 'Waters']]<br>
-              >>>
-	         </span><br><br>
+              <span class="command">
+                >>> List_Empty=[]<br>
+                >>> List_ints=[1,2,3,4,5]<br>
+                >>> List_mixed=[1,2.337,"abcedf"]<br>
+                >>> List_of_lists=[[1,2,3],['a',3.4,99],['Muddy',"Waters"]]<br>
+                >>> print(List_Empty,List_ints,List_mixed,List_of_lists,sep='\n')<br>
+                []<br>
+                [1, 2, 3, 4, 5]<br>
+                [1, 2.337, 'abcedf']<br>
+                [[1, 2, 3], ['a', 3.4, 99], ['Muddy', 'Waters']]<br>
+                >>>
+	           </span><br><br>
 	         
-	         Alternatively, a <b>list</b> can be created by the
-	         conversion of a <b>Data Object</b> of suitable type
-	         (for example a <b>String</b>), using
-	         the <b>Builtin Function list()</b>.<br><br>
+	           Alternatively, a <b>list</b> can be created by the
+	           conversion of a <b>Data Object</b> of suitable type
+	           (for example a <b>String</b>), using
+	           the <b>Builtin Function list()</b>.<br><br>
 	         
-            <span class="command">
-              >>> List_from_String=list("abcwxyz")<br>
-              >>> List_from_String<br>
-              ['a', 'b', 'c', 'w', 'x', 'y', 'z']<br>
-              >>> 
-	         </span><br><br>
+              <span class="command">
+                >>> List_from_String=list("abcwxyz")<br>
+                >>> List_from_String<br>
+                ['a', 'b', 'c', 'w', 'x', 'y', 'z']<br>
+                >>> 
+	           </span><br><br>
+              
+              <hh5m>list Builtin Functions</hh5m><br><br>
             
-            <hh5m>list Builtin Functions</hh5m><br><br>
+              I think it useful just to mention only two <b>Builtin
+              Functions</b> at this point. They are:<br><br>
             
-            I think it useful just to mention only two <b>Builtin
-            Functions</b> at this point. They are:<br><br>
-            
-            <ul>
-              <li>
-                <b>list()</b>, which casts <b>Data Objects</b> of
-                other compatible <b>type</b> into <b>lists</b>.
-              </li><br>
-              <li>
-                <b>len()</b>, which returns the number of              
-                <b>Characters</b> in a <b>String</b> the number of
-                <b>elements</b> in a <b>list</b> ... .
-                Basically it returns 
-                <a href="https://en.wikipedia.org/wiki/Cardinality"
-                 target="_blank"><b>cardinality</b></a>
-                for any <b>Data Type</b> where that concept is relevant.
-              </li>
-            </ul><br>
-            
-            <hh5m>list methods</hh5m><br><br>
-            
-            You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
-            
-            <b>help(list)</b><br><br>
-            
-            at the <b>Interpreter</b>, or, the are listed nicely
-            <a href="https://www.w3schools.com/python/python_ref_list.asp"
-             target="_blank">here</a>.<br><br>
-
-            <table class="c3">
-              <tr>
-                <th style="min-width=10%">Method</th>
-                <th style="min-width=90%">Effect</th>
-              </tr>
-              <tr>
-                <td><b>
-                  <a href="https://www.w3schools.com/python/ref_list_append.asp"
-                  target="_blank"<b>list.append()</b></a>
-                </td>
-                <td>
-                  Adds an element at the end of the <b>list</b>.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_clear.asp"
-                  target="_blank"><b>list.clear()</b></a>
-                </td>
-                <td>
-                  Removes all the elements from the <b>list</b>.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_copy.asp"
-                   target="_blank"><b>list.copy()</b></a>
-                </td>
-                <td>
-                  Returns a copy of the <b>list</b>.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_count.asp"
-                   target="_blank"><b>list.count()</b></a>
-                </td>
-                <td>
-                  Returns the number of elements with a specified value.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_extend.asp"
-                   target="_blank"><b>list.extend()</b></a>
-                </td>
-                <td>
-                  Add the elements of a specified <b>list</b> (or similar),
-                  to the end of the current <b>list</b>.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_index.asp"
-                   target="_blank"><b>list.index()</b></a>
-                </td>
-                <td>
-                  Returns the <b>index</b> of the first
-                  element with a specified value.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_insert.asp"
-                   target="_blank"><b>list.insert()</b><a>
-                </td>
-                <td>
-                  Adds an element at the specified position.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_pop.asp"
-                   target="_blank"><b>list.pop()</b></a>
-                </td>
-                <td>
-                  Removes the element at the specified position.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_remove.asp"
-                   target="_blank"><b>list.remove()</b></a>
-                </td>
-                <td>
-                  Removes the first item with the specified value.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
-                   target="_blank"><b>list.reverse()</b></a>
-                </td>
-                <td>
-                  Reverses the order of the <b>list</b>.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://www.w3schools.com/python/ref_list_sort.asp"
-                   target="_blank"><b>list.sort()</b></a>
-                </td>
-                <td>
-                  Sorts the <b>list</b>.
-                </td>
-              </tr>
-            </table><br><br>
-         
-            <div class="question">         
-
-              <h2><i><u>Questions & Simple Exercises</u></i></h2>
-
-              <ol>
+              <ul>
                 <li>
-                  Of all the <b>list methods</b> in the table above, how
-                  many do not alter their <b>list Argument</b>?
-                  
-                  <p class="hint">
-                    Remember that, unlike <b>str methods</b>,
-                    <b>list methods</b> can edit their
-                    <b>list Arguments</b> directly.<br><br>
-                    
-                    This is possible because <b>lists are mutable</b>.<br><br>
-                    
-                    <b>str methods</b> edit copies which they
-                    returned as <b>Function Values</b>.<br><br>
-                    
-                    <b>str methods</b> can not edit their <b>str
-                    Arguments</b> directly as <b>strs</b> are <b>immutable</b>.
-                  </p>
-                  
-                  Given your examination of the full set,
-                  which <b>list methods</b> would still work
-                  if <b>lists</b> were <b>immutable</b>?<br><br>
-                  
-                  <details class="answer">
-                  <summary><span class="anssum">Answer.</span>
-                  </summary>
-                    <div class="answer"><br>
-                    
-                      Only <b>3</b> of the <b>11 list methods</b>
-                      will not. potentially at least, alter
-                      the value of the <b>list</b> to which they are
-                      applied.<br><br>
-                      
-                      These are:<br>
-                      
-                      <ul>
-                        <li>
-                          <b>list.copy()</b> - Returns a copy of the <b>list</b>.
-                        </li><br>
-                        
-                        <li>                        
-                        <b>list.count()</b> - Returns the number of
-                           elements with a specified value.
-                        </li><br>
-                        
-                        <li>                        
-                          <b>list.index()</b> - Returns the <b>index</b> of
-                          the first element with the specified value.
-                        </li>
-                      </ul><br>
-                      
-                      Only these <b>3 methods</b> could work on a
-                      form of <b>list</b> that was immutable.<br>
+                  <b>list()</b>, which casts <b>Data Objects</b> of
+                  other compatible <b>type</b> into <b>lists</b>.
                 </li><br>
-                  
                 <li>
-                  Why do you need a <b>list.copy() method</b>?<br><br>
-                    
-                  Surely, you could make a copy of a
-                  <b>list</b>, or anything come to that, using
-                  a simple <b>Assignment Statement</b>?<br><br>
-                    
-                  If you cannot answer this question
-                  directly (googling is cheating!!!!),
-                  then try 
-                  <a href="https://www.learning-theories.com/discovery-learning-bruner.html"
-                   target="_blank">discovery by
-                  experimentation</a> (told you I
-                  used to read books too! ... once
-                  ... long ago ... Pedro!).<br><br>
-                   
-                  <ul>
-                    <li>Make a <b>list</b></li><br>
-                    <li>Copy the <b>list</b> using an <b>Assignment Command</b>.</li><br>
-                    <li>Copy the <b>list</b> using the <b>list.copy() method</b>.</li><br>
-                    <li>Make alterations to one or more of the <b>lists</b>.</li><br>
-                    <li>Observe the consequences on the others.</li><br>
-                    <li>Explain your observations.</li>
-                  </ul><br>
-                    
-                  <details class="answer">
-                  <summary><span class="anssum">Answer.</span>
-                  </summary>
-                    <div class="answer"><br>
-
-                      <span class="command16">
-                        >>> List00=[1,2,3,4,5]<br>
-                        >>> List00_Assigned_Copy=List00<br>
-                        >>> List00_method_Copy=List00.copy()<br>
-                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                        [1, 2, 3, 4, 5]<br>
-                        [1, 2, 3, 4, 5]<br>
-                        [1, 2, 3, 4, 5]<br>
-                        >>><br>
-                        >>> List00.append(99)<br>
-                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                        [1, 2, 3, 4, 5, 99]<br>
-                        [1, 2, 3, 4, 5, 99]<br>
-                        [1, 2, 3, 4, 5]<br>
-                        >>><br>
-                        >>> List00_method_Copy.reverse()<br>
-                        >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
-                        [1, 2, 3, 4, 5, 99]<br>
-                        [1, 2, 3, 4, 5, 99]<br>
-                        [5, 4, 3, 2, 1]<br>
-                        >>>
-                      </span><br><br>
-                        
-                      <hh5m>Observation:</hh5m><br><br>
-                        
-                      <ul>
-                        <li>
-                          <b><u>Section 1:</u></b><br><br>
-                            
-	                       Create a <b>list</b>, make
-	                       two copies, one by
-                          <b>Simple Assignment</b>, the other using
-                          the <b>list.copy() method</b>.<br><br>
-                           
-                          Display all <b>3 lists</b> and see they are
-                          all identical.<br><br>
-                           
-                          It would have been a bit worrying had
-                          they not been!
-                        </li><br>
-                          
-                        <li>
-                          <b><u>Section 2:</u></b><br><br>
-                            
-                          Make a change in the <b>Original
-                          List</b>.<br><br>
-                            
-                          Display all <b>3 lists</b> again and see
-                          that the edit has been applied to both
-                          the <b>Original list <i>AND</i></b>
-                          the copy made by
-                          <b>Simple Assignment</b>?
-                        </li><br>
-                         
-                        <li>
-                          <b><u>Section 3:</u></b><br><br>
-                            
-                          Make a change in the copy created by
-                          <b>list.copy()</b>.<br><br>
-                            
-                          Display all <b>3 lists</b> yet again and see
-                          that the second edit is unique to the
-                          copy created by
-                          <b>list.copy()</b>.                
-                        </ul><br><br>
-                          
-                      <hh5m>Explanation:</hh5m><br><br>
-                        
-                      The explanation must start by knowing a little
-                      more about the way <b>Python
-                      Variable</b> works.<br><br>
-                        
-                      Considering them as <i>"Boxes in which Values
-                      are stored"</i> is not quite as
-                      true in <b>Python</b>
-                      as it is in some other Languages.<br><br>
-                        
-                      In <b>Python</b> it is more accurate to think of
-                      <b>Data Values</b> and <b>Data Variables</b>
-                      as being a
-                      little more independent of each other.<br><br>
-                        
-                      A <b>Python Variable</b> is a reference
-                      (or pointer) to an independent
-                      <b>Data Item</b> rather than a container
-                      enclosing a private copy of a
-                      <b>Value</b>.<br><br>
-               
-                      <img src="Images/list-create.png"
-                           alt="Fiddle!"
-                           class="centimg"
-                           style="background:White;
-                                  border-style: solid;
-                                  border-width: 1px;"><br><br>
-                       
-                      There is no reason that <b>2</b>
-                      (or more) <b>Python Variables</b> should not
-                      reference the same <b>Data Value</b>!<br><br>
-                        
-                      This is exactly what we caused
-                      to happen when we copied the
-                      <b>Original list</b> by
-                      <b>Assignment</b>.<br><br>
-                       
-                      Copying by <b>Assignment</b> does not
-                      duplicate the <b>Data Value</b>.
-                      It duplicates the <b>Data Variable</b> which
-                      is a <b>pointer</b> to the <b>Data Value</b>.<br><br>
-                        
-                      So, in a nutshell, you have <b>TWO
-                      Data Variables</b> both of which point
-                      to the same <b>Data Item</b>.<br><br>
-                       
-                      Anything you do to <b>List00</b> must also
-                      affect <b>List00_Assigned_Copy</b>
-                      (and vice versa).
-                      They both point to the same <b>Data</b>.
-                      Effectively, they are the same!<br><br>
-                        
-                      <img src="Images/list-asscop.png"
-                           alt="Fiddle!"
-                           class="centimg"
-                           style="background:White;
-                                  border-style: solid;
-                                  border-width: 1px;"><br><br>
-                    
-                      Using the <b>list.copy()</b> method, on
-                      the other hand, <b><i>does</i></b> make an
-                      entirely separate version of a <b>list</b>.<br><br>
-                     
-                      Editing either or both <b>List00</b> and
-                      <b>List00_method_copy</b> will cause the two
-                      <b>lists</b> to diverge.<br><br>
-                    
-                      <b>List00</b> and <b>List00_Assigned_Copy</b> will,
-                      of course, always be identical
-                      however you edit any of the
-                      <b>3</b> apparent <b>3lists</b>
-                      (really just <b>2 lists</b>
-                      and <b>3 pointers</b>,
-                      of course).<br><br>
-                   
-                      <img src="Images/list-metcop.png"
-                           alt="Fiddle!"
-                           class="centimg"
-                           style="background:White;
-                                  border-style: solid;
-                                  border-width: 1px;"><br><br>
-                    </div>
-                  </details>
+                  <b>len()</b>, which returns the number of              
+                  <b>Characters</b> in a <b>String</b> the number of
+                  <b>elements</b> in a <b>list</b> ... .
+                  Basically it returns 
+                  <a href="https://en.wikipedia.org/wiki/Cardinality"
+                   target="_blank"><b>cardinality</b></a>
+                  for any <b>Data Type</b> where that concept is relevant.
                 </li>
-              </ol>
+              </ul><br>
+            
+              <hh5m>list methods</hh5m><br><br>
+            
+              You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
+            
+              <b>help(list)</b><br><br>
+            
+              at the <b>Interpreter</b>, or, the are listed nicely
+              <a href="https://www.w3schools.com/python/python_ref_list.asp"
+               target="_blank">here</a>.<br><br>
+
+              <table class="c3">
+                <tr>
+                  <th style="min-width=10%">Method</th>
+                  <th style="min-width=90%">Effect</th>
+                </tr>
+                <tr>
+                  <td><b>
+                    <a href="https://www.w3schools.com/python/ref_list_append.asp"
+                    target="_blank"<b>list.append()</b></a>
+                  </td>
+                  <td>
+                    Adds an element at the end of the <b>list</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_clear.asp"
+                    target="_blank"><b>list.clear()</b></a>
+                  </td>
+                  <td>
+                    Removes all the elements from the <b>list</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_copy.asp"
+                     target="_blank"><b>list.copy()</b></a>
+                  </td>
+                  <td>
+                    Returns a copy of the <b>list</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_count.asp"
+                     target="_blank"><b>list.count()</b></a>
+                  </td>
+                  <td>
+                    Returns the number of elements with a specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_extend.asp"
+                     target="_blank"><b>list.extend()</b></a>
+                  </td>
+                  <td>
+                    Add the elements of a specified <b>list</b> (or similar),
+                    to the end of the current <b>list</b>.
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_index.asp"
+                     target="_blank"><b>list.index()</b></a>
+                  </td>
+                  <td>
+                    Returns the <b>index</b> of the first
+                    element with a specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_insert.asp"
+                     target="_blank"><b>list.insert()</b><a>
+                  </td>
+                  <td>
+                    Adds an element at the specified position.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_pop.asp"
+                     target="_blank"><b>list.pop()</b></a>
+                  </td>
+                  <td>
+                    Removes the element at the specified position.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_remove.asp"
+                     target="_blank"><b>list.remove()</b></a>
+                  </td>
+                  <td>
+                    Removes the first item with the specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
+                     target="_blank"><b>list.reverse()</b></a>
+                  </td>
+                  <td>
+                    Reverses the order of the <b>list</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_list_sort.asp"
+                     target="_blank"><b>list.sort()</b></a>
+                  </td>
+                  <td>
+                    Sorts the <b>list</b>.
+                  </td>
+                </tr>
+              </table><br><br>
+         
+              <div class="question">         
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    Of all the <b>list methods</b> in the table above, how
+                    many do not alter their <b>list Argument</b>?
+                  
+                    <p class="hint">
+                      Remember that, unlike <b>str methods</b>,
+                      <b>list methods</b> can edit their
+                      <b>list Arguments</b> directly.<br><br>
+                    
+                      This is possible because <b>lists are mutable</b>.<br><br>
+                    
+                      <b>str methods</b> edit copies which they
+                      returned as <b>Function Values</b>.<br><br>
+                    
+                      <b>str methods</b> can not edit their <b>str
+                    Arguments</b> directly as <b>strs</b> are <b>immutable</b>.
+                    </p>
+                  
+                    Given your examination of the full set,
+                    which <b>list methods</b> would still work
+                    if <b>lists</b> were <b>immutable</b>?<br><br>
+                  
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                    
+                        Only <b>3</b> of the <b>11 list methods</b>
+                        will not. potentially at least, alter
+                        the value of the <b>list</b> to which they are
+                        applied.<br><br>
+                      
+                        These are:<br>
+                      
+                        <ul>
+                          <li>
+                            <b>list.copy()</b> - Returns a copy of the <b>list</b>.
+                          </li><br>
+                        
+                          <li>                        
+                          <b>list.count()</b> - Returns the number of
+                             elements with a specified value.
+                          </li><br>
+                        
+                          <li>                        
+                            <b>list.index()</b> - Returns the <b>index</b> of
+                            the first element with the specified value.
+                          </li>
+                        </ul><br>
+                      
+                        Only these <b>3 methods</b> could work on a
+                        form of <b>list</b> that was immutable.<br>
+                      </div>
+                    <details>
+                  </li><br>
+                  
+                  <li>
+                    Why do you need a <b>list.copy() method</b>?<br><br>
+                    
+                    Surely, you could make a copy of a
+                    <b>list</b>, or anything come to that, using
+                    a simple <b>Assignment Statement</b>?<br><br>
+                    
+                    If you cannot answer this question
+                    directly (googling is cheating!!!!),
+                    then try 
+                    <a href="https://www.learning-theories.com/discovery-learning-bruner.html"
+                     target="_blank">discovery by
+                    experimentation</a> (told you I
+                    used to read books too! ... once
+                    ... long ago ... Pedro!).<br><br>
+                   
+                    <ul>
+                      <li>Make a <b>list</b></li><br>
+                      
+                      <li>Copy the <b>list</b> using an <b>Assignment Command</b>.</li><br>
+                      
+                      <li>Copy the <b>list</b> using the <b>list.copy() method</b>.</li><br>
+                      
+                      <li>Make alterations to one or more of the <b>lists</b>.</li><br>
+                      
+                      <li>Observe the consequences on the others.</li><br>
+                      
+                      <li>Explain your observations.</li>
+                    </ul><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command16">
+                          >>> List00=[1,2,3,4,5]<br>
+                          >>> List00_Assigned_Copy=List00<br>
+                          >>> List00_method_Copy=List00.copy()<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          >>><br>
+                          >>> List00.append(99)<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5]<br>
+                          >>><br>
+                          >>> List00_method_Copy.reverse()<br>
+                          >>> print(List00,List00_Assigned_Copy,List00_method_Copy,sep='\n')<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [1, 2, 3, 4, 5, 99]<br>
+                          [5, 4, 3, 2, 1]<br>
+                          >>>
+                        </span><br><br>
+                        
+                        <hh5m>Observation:</hh5m><br><br>
+                        
+                        <ul>
+                          <li>
+                            <b><u>Section 1:</u></b><br><br>
+                            
+	                         Create a <b>list</b>, make
+	                         two copies, one by
+                            <b>Simple Assignment</b>, the other using
+                            the <b>list.copy() method</b>.<br><br>
+                           
+                            Display all <b>3 lists</b> and see they are
+                            all identical.<br><br>
+                           
+                            It would have been a bit worrying had
+                            they not been!
+                          </li><br>
+                          
+                          <li>
+                            <b><u>Section 2:</u></b><br><br>
+                            
+                            Make a change in the <b>Original
+                            List</b>.<br><br>
+                            
+                            Display all <b>3 lists</b> again and see
+                            that the edit has been applied to both
+                            the <b>Original list <i>AND</i></b>
+                            the copy made by
+                            <b>Simple Assignment</b>?
+                          </li><br>
+                         
+                          <li>
+                            <b><u>Section 3:</u></b><br><br>
+                            
+                            Make a change in the copy created by
+                            <b>list.copy()</b>.<br><br>
+                            
+                            Display all <b>3 lists</b> yet again and see
+                            that the second edit is unique to the
+                            copy created by
+                            <b>list.copy()</b>.                
+                          </ul><br><br>
+                          
+                        <hh5m>Explanation:</hh5m><br><br>
+                        
+                        The explanation must start by knowing a little
+                        more about the way <b>Python
+                        Variables</b> work.<br><br>
+                        
+                        Considering them as <i>"Boxes in which Values
+                        are stored"</i> is not quite as
+                        true in <b>Python</b>
+                        as it is in some other Languages.<br><br>
+                        
+                        In <b>Python</b> it is more accurate to think of
+                        <b>Data Values</b> and <b>Data Variables</b>
+                        as being a
+                        little more independent of each other.<br><br>
+                        
+                        A <b>Python Variable</b> is a reference
+                        (or pointer) to an independent
+                        <b>Data Item</b> rather than a container
+                        enclosing a private copy of a
+                        <b>Value</b>.<br><br>
+               
+                        <img src="Images/list-create.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                       
+                        There is no reason that <b>2</b>
+                        (or more) <b>Python Variables</b> should not
+                        reference the same <b>Data Value</b>!<br><br>
+                        
+                        This is exactly what we caused
+                        to happen when we copied the
+                        <b>Original list</b> by
+                        <b>Assignment</b>.<br><br>
+                       
+                        Copying by <b>Assignment</b> does not
+                        duplicate the <b>Data Value</b>.
+                        It duplicates the <b>Data Variable</b> which
+                        is a <b>pointer</b> to the <b>Data Value</b>.<br><br>
+                        
+                        So, in a nutshell, you have <b>TWO
+                        Data Variables</b> both of which point
+                        to the same <b>Data Item</b>.<br><br>
+                       
+                        Anything you do to <b>List00</b> must also
+                        affect <b>List00_Assigned_Copy</b>
+                        (and vice versa).
+                        They both point to the same <b>Data</b>.
+                        Effectively, they are the same!<br><br>
+                        
+                        <img src="Images/list-asscop.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                    
+                        Using the <b>list.copy()</b> method, on
+                        the other hand, <b><i>does</i></b> make an
+                        entirely separate version of a <b>list</b>.<br><br>
+                     
+                        Editing either or both <b>List00</b> and
+                        <b>List00_method_copy</b> will cause the two
+                        <b>lists</b> to diverge.<br><br>
+                    
+                        <b>List00</b> and <b>List00_Assigned_Copy</b> will,
+                        of course, always be identical
+                        however you edit any of the
+                        <b>3</b> apparent <b>lists</b>
+                        (really just <b>2 lists</b>
+                        and <b>3 pointers</b>,
+                        of course).<br><br>
+                   
+                        <img src="Images/list-metcop.png"
+                             alt="Fiddle!"
+                             class="centimg"
+                             style="background:White;
+                                    border-style: solid;
+                                    border-width: 1px;"><br><br>
+                      </div>
+                    </details>
+                  </li>                  
+                </ol>
+              </div>
             </div>
           </details>
         </li><br>
@@ -9158,135 +9342,174 @@ Click to record your <b>Start</b> time.</button>
           
             <div class="minsect"><br>
             
-            <hh5m>tuple definition</hh5m><br><br>
+              <hh5m>tuple definition</hh5m><br><br>
             
-            A <b>tuple</b> is an ordered, immutable set of
-            <b>Data Objects</b>.
-            <b>List</b> elements may be of a variety of
-            suitable <b>Python type</b>.<br><br>
+              A <b>tuple</b> is an ordered, immutable set of
+              <b>Data Objects</b>.
+              <b>List</b> elements may be of a variety of
+              suitable <b>Python type</b>.<br><br>
             
-            Just in case, being <b>immutable</b> means
-            a <b>tuple</b> may <b><i>not</i></b> be altered.
-            That is, items in the <b>tuple</b> must
-            remain as initially defined for the entire
-            life of the <b>tuple</b>.<br><br>
+              Just in case, being <b>immutable</b> means
+              a <b>tuple</b> may <b><i>not</i></b> be altered.
+              That is, items in the <b>tuple</b> must
+              remain as initially defined for the entire
+              life of the <b>tuple</b>.<br><br>
             
-            Informally, a <b>tuple Value</b> is of the form:<br><br>
+              Informally, a <b>tuple Value</b> is of the form:<br><br>
             
-            <i>(&lt;tuple_Item00&gt;,&lt;tuple_Item01&gt;,&lt;tuple_Item02&gt;,
-            ... )</i><br><br>
+              <i>(&lt;tuple_Item00&gt;,&lt;tuple_Item01&gt;,&lt;tuple_Item02&gt;,
+              ... )</i><br><br>
             
-            where a "<i>&lt;tuple_Item&gt;</i>" could be any of
-            many different <b>Python types</b> (<b>int</b>,
-            <b>float</b>, <b>bool</b> ...). For example:<br><br>
+              where a "<i>&lt;tuple_Item&gt;</i>" could be any of
+              many different <b>Python types</b> (<b>int</b>,
+              <b>float</b>, <b>bool</b> ...). For example:<br><br>
             
-            <b>(2, 5, 7.129, "Mellow Yellow", True)</b><br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(2, 5, 7.129, "Mellow Yellow", True)</b><br><br>
             
-            A <b>tuple</b> can even include <b>lists</b> and/or <b>tuples</b>
-            (or similar) as an element! For example:<br><br>
+              A <b>tuple</b> can even include <b>lists</b> and/or <b>tuples</b>
+              (or similar) as an element! For example:<br><br>
             
-            <b>(44, [1, 2, 3, 4], 66, ('a', 'b', 'c', 'd')]</b><br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(44, [1, 2, 3, 4], 66, ('a', 'b', 'c', 'd'))</b><br><br>
             
-            The number of elements in a <b>tuple</b> can
-            vary between <b>0</b> and <b>lots</b>.<br><br>
+              The number of elements in a <b>tuple</b> can
+              vary between <b>0</b> and <b>lots</b>.<br><br>
             
-            A <b>tuple</b> with no elements is called the
-            "<b>Empty Tuple</b>" and looks like this:<br><br>
+              A <b>tuple</b> with no elements is called the
+              "<b>Empty Tuple</b>" and looks like this:<br><br>
             
-            <b>()</b><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>()</b><br>
             
-            <p class="hint">
-              Being <b>immutable</b>, a <b>tuple</b> will take up less
-              memory that an equivalent list.<br><br>
+              <p class="hint">
+                Being <b>immutable</b>, a <b>tuple</b> will take up less
+                memory that an equivalent list.<br><br>
               
-              In particular, whereas a <b>tuple</b> is of fixed
-              memory requirement,
-              an equivalent list will allow extra memory for
-              possible expansion.<br><br>
+                In particular, whereas a <b>tuple</b> is of fixed
+                memory requirement,
+                an equivalent list will allow extra memory for
+                possible expansion.<br><br>
               
-              Also due to its <b>immutability</b>, access to a <b>tuple</b>
-              is faster
-              than to an equivalent <b>list</b>.<br><br>
+                Also due to its <b>immutability</b>, access to a <b>tuple</b>
+                is faster
+                than to an equivalent <b>list</b>.<br><br>
               
-              Conceptually, the only real difference between
-              <b>lists</b> an <b>tuples</b> is <b>mutability</b>.<br><br>
+                Conceptually, the only real difference between
+                <b>lists</b> an <b>tuples</b> is <b>mutability</b>.<br><br>
               
-              However, in the ways <b>Python</b> chooses to implement
-              these two different <b>Data types</b>, there are greater,
-              more profound, distinctions.<br><br>
+                However, in the ways <b>Python</b> chooses to implement
+                these two different <b>Data types</b>, there are greater,
+                more profound, distinctions.<br><br>
               
-              There are many occassions where either
-              a <b>list</b> or a <b>tuple</b> would suit the
-              purpose of a <b>program</b>.<br><br>
+                There are many occasions where either
+                a <b>list</b> or a <b>tuple</b> would suit the
+                purpose of a <b>program</b>.<br><br>
               
-              In general, it is thought best to use a <b>tuple</b>
-              unless <b>mutability</b> was <b>imperative</b>.
-            </p>
+                In general, it is thought best to use a <b>tuple</b>
+                unless <b>mutability</b> is <b>imperative</b>.
+              </p>
   
-            <hh5m>tuple creation</hh5m><br><br>
+              <hh5m>tuple creation</hh5m><br><br>
                        
-            Like most <b>Python Data Objects</b>, <b>tuple Variables</b>
-            are commonly create by <b>Simple Assignment</b>.<br><br>
-            
-            <span class="command">
-              >>> Tuple_Empty=()<br>
-              >>> Tuple_ints=(1,2,3,4,5)<br>
-              >>> Tuple_mixed=(1,2.337,"abcedf")<br>
-              >>> Tuple_with_lists=([1,2,3],('a',3.4,99),('Muddy',"Waters"))<br>
-              >>> print(Tuple_Empty,Tuple_ints,Tuple_mixed,Tuple_with_lists,sep='\n')<br>
-              ()<br>
-              (1, 2, 3, 4, 5)<br>
-              (1, 2.337, 'abcedf')<br>
-              ([1, 2, 3], ('a', 3.4, 99), ('Muddy', 'Waters'))<br>
-              >>> 
-	         </span><br><br>
+              Like most <b>Python Data Objects</b>, <b>tuple Variables</b>
+              are commonly create by <b>Simple Assignment</b>.<br><br>
+              
+              <span class="command">
+                >>> Tuple_Empty=()<br>
+                >>> Tuple_ints=(1,2,3,4,5)<br>
+                >>> Tuple_mixed=(1,2.337,"abcedf")<br>
+                >>> Tuple_with_lists=([1,2,3],('a',3.4,99),('Muddy',"Waters"))<br>
+                >>> print(Tuple_Empty,Tuple_ints,Tuple_mixed,Tuple_with_lists,sep='\n')<br>
+                ()<br>
+                (1, 2, 3, 4, 5)<br>
+                (1, 2.337, 'abcedf')<br>
+                ([1, 2, 3], ('a', 3.4, 99), ('Muddy', 'Waters'))<br>
+                >>> 
+	           </span><br><br>
 	         
-	         Alternatively, a <b>tuple</b> can be created by the
-	         conversion of a <b>Data Object</b> of suitable type
-	         (for example a <b>String</b>), using
-	         the <b>Builtin Function tuple()</b>.<br><br>
-	         
-            <span class="command">
-              >>> Tuple_from_String=tuple("abcwxyz")<br>
-              >>> Tuple_from_String<br>
-              ('a', 'b', 'c', 'w', 'x', 'y', 'z')<br>
-              >>> 
-	         </span><br><br>
+	           Alternatively, a <b>tuple</b> can be created by the
+	           conversion of a <b>Data Object</b> of suitable type
+	           (for example a <b>String</b> or a <b>list</b>), using
+	           the <b>Builtin Function tuple()</b>.<br><br>
+	           
+              <span class="command">
+                >>> Tuple_from_String=tuple("abcwxyz")<br>
+                >>> Tuple_from_List=tuple([1,2,3,4,5])<br>
+                >>> print(Tuple_from_String,Tuple_from_List,sep='\n')<br>
+                ('a', 'b', 'c', 'w', 'x', 'y', 'z')<br>
+                (1, 2, 3, 4, 5)<br>
+                >>> 
+	           </span><br><br>
             
-            <hh5m>tuple Builtin Functions</hh5m><br><br>
+              <hh5m>tuple Builtin Functions</hh5m><br><br>
             
-            I think it useful just to mention only two <b>Builtin
-            Functions</b> at this point. They are:<br><br>
+              I think it useful just to mention only two <b>Builtin
+              Functions</b> at this point. They are:<br><br>
             
-            <ul>
-              <li>
-                <b>tuple()</b>, which casts <b>Data Objects</b> of
-                other compatible <b>type</b> into <b>tuples</b>.
-              </li><br>
-              <li>
-                <b>len()</b>, which returns the number of              
-                <b>Characters</b> in a <b>String</b> the number of
-                <b>elements</b> in a <b>list</b> or <b>tuple</b> ... .
-                Basically it returns 
-                <a href="https://en.wikipedia.org/wiki/Cardinality"
-                 target="_blank"><b>cardinality</b></a>
-                for any <b>Data Type</b> where that concept is relevant.
-              </li>
-            </ul><br>
+              <ul>
+                <li>
+                  <b>tuple()</b>, which casts <b>Data Objects</b> of
+                  other compatible <b>type</b> into <b>tuples</b>.
+                </li><br>
+                <li>
+                  <b>len()</b>, which returns the number of              
+                  <b>Characters</b> in a <b>String</b> the number of
+                  <b>elements</b> in a <b>list</b> or <b>tuple</b> ... .
+                  Basically it returns 
+                  <a href="https://en.wikipedia.org/wiki/Cardinality"
+                   target="_blank"><b>cardinality</b></a>
+                  for any <b>Data Type</b> where that concept is relevant.
+                </li>
+              </ul><br>
             
-            <hh5m>tuple methods</hh5m><br><br>
+              <hh5m>tuple methods</hh5m><br><br>
             
-            You can discover all the <b>methods</b> for the <b>class tuple</b> by typing:<br><br>
+              You can discover all the <b>methods</b> for the <b>class tuple</b> by typing:<br><br>
             
-            <b>help(tuple)</b><br><br>
+              <b>help(tuple)</b><br><br>
             
-            at the <b>Interpreter</b>.
-            Try it, ignoring for now all the methods
-            with identifiers that begin and end with '__'<br><br>
+              at the <b>Interpreter</b>.
+              Try it, ignoring for now all the methods
+              with identifiers that begin and end with '__'<br><br>
             
-            <img class="centimg"
-                 src="Images/tuple_methods.png"
-                 alt="Oh Dear!"><br><br>
+              <img class="centimg"
+                   src="Images/tuple_methods.png"
+                   alt="Oh Dear!"><br><br>
+                 
+              Just <b>2</b>! Both shared with <b>list</b>.
+              In fact, these are <b>2</b> of the <b>3
+              list methods</b> that
+              were determined (see <b>list</b>
+              exercises) to be the only <b>list methods</b> that
+              would work on <b>immutable lists</b>
+              (that is to say, <b>tuples</b>).<br><br>
+            
+              So, for <b>tuples</b> the <b>method table</b>
+              is a rather thin affair!<br><br>
+            
+              <table class="c3">
+                <tr>
+                  <th style="min-width=10%">Method</th>
+                  <th style="min-width=90%">Effect</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_tuple_count.asp"
+                     target="_blank"><b>tuple.count()</b></a>
+                  </td>
+                  <td>
+                    Returns the number of elements with a specified value.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_tuple_index.asp"
+                     target="_blank"><b>tuple.index()</b></a>
+                  </td>
+                  <td>
+                    Returns the <b>index</b> of the first
+                    element with a specified value.
+                  </td>
+                </tr>
+              </table><br><br>
 
               <div class="question">
 
@@ -9572,7 +9795,7 @@ Click to record your <b>Start</b> time.</button>
                           >>> print(Tuple_of_three)<br>
                           (5, 6, 7)<br>
                           >>> type(Tuple_of_three)<br>
-                          <class 'tuple'><br>
+                          &lt;class 'tuple'&gt;<br>
                           >>> <br>
                           >>> Var1,Var2,Var3=Tuple_of_three<br>
                           >>> print(Var1,Var2,Var3)<br>
@@ -9618,14 +9841,19 @@ Click to record your <b>Start</b> time.</button>
                           >>> 
                         </span><br><br>
                         
-                        See now that there was no need to create <b>Tuple_of_three</b>.
-                        You could have just used a single <b>Multiple Assignment</b>.<br><br>
+                        See now that there was no
+                        need to create <b>Tuple_of_three</b>.
+                        You could have just used a
+                        single <b>Multiple Assignment</b>.<br><br>
                         
-                        However, <b>Python</b> will execute your <b>Multiple Assignment
-                        Command</b>, via a <b>tuple</b> (in the background).<br>
+                        However, <b>Python</b> will execute
+                        your <b>Multiple Assignment
+                        Command</b>, via a <b>tuple</b>
+                       (in the background).<br>
                         
                         <p class="hint">
-                          Is this the first <b>Multiple Assignment</b> we have done?<br><br>
+                          Is this the first <b>Multiple
+                          Assignment</b> we have done?<br><br>
                           
                           If so, that is dreadful!<br><br>
                           
@@ -9636,6 +9864,157 @@ Click to record your <b>Start</b> time.</button>
                         </p>
                       </div>
                     </details>
+                  </li><br>
+                  
+                  <li>
+                    Why is there no <b>tuple.copy()
+                    method</b>?<br><br>
+                    
+                    After all, it was spotted in the
+                    list exercises as <b>1</b> of
+                    <b>3 list methods</b>
+                    that should work fine with <b>immutable
+                    lists</b> (that is to say,
+                    <b>tuples</b>).<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        There is no <b>tuple.copy()</b>,
+                        not because
+                        it would not work, but because
+                        it is not needed!<br><br>
+                    
+                        For <b>mutable lists</b>,
+                        <b>copy()</b> provides a means to
+                        duplicate the <b>list</b> to allow
+                        it to be transformed
+                        into a different form from
+                        the original.<br><br>
+                    
+                        But, even if you allow <b>tuples</b>
+                        to be copied, you
+                        cannot edit the copies <b><i>OR</i></b>
+                        the original because
+                        they are both <b>immutable</b>!<br><br>
+                    
+                        So there is no reason to make a genuine
+                        <b>copy</b> a <b>tuple</b>.<br><br>
+                    
+                        So there is no need for a
+                        <b>tuple.copy() method</b>.<br>
+                        
+                        <p class="hint">
+                          Of course you can still 
+                          duplicate <b>Pointers</b> to a single
+                          <b>tuple</b> by <b>Assignment</b>.<br><br>
+                          
+                          Just not too sure why you would ever want to?<br><br>
+                          
+                          <span class="command">
+                            >>> Tuple_Original=('a','b',6,8,43.7)<br>
+                            >>> Tuple_Copy=Tuple_Original<br>
+                            >>> print(Tuple_Original,Tuple_Copy,sep='\n')<br>
+                            ('a', 'b', 6, 8, 43.7)<br>
+                            ('a', 'b', 6, 8, 43.7)<br>
+                            >>>
+                          </span>    
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    I have included many links to the clearer
+                    information sources
+                    I have used to construct this tutorial.<br><br>
+                    
+                    Sometimes, there seems to be some
+                    confusions, imprecisions
+                    and even inaccuracies!<br><br>
+                    
+                    Most can be let pass as we are
+                    not aiming for too much rigour here.<br><br>
+                    
+                    I suppose one should always allow
+                    for errors in that which you read
+                    via google (and similar)?<br><br>
+                    
+                    I know this will astound you, but
+                    even I have been known to get things
+                    slightly wrong on occasion!!<br><br>
+                    
+                    Anyway, here is one I cannot live with!!<br><br>
+                    
+                    Where is the 
+                    <a href="http://onlineslangdictionary.com/meaning-definition-of/pork-pie"
+                     target="_blank">porky</a> in the claim:<br><br>
+                    
+                    <a href="https://www.tutorialspoint.com/python3/python_tuples.htm"
+                     target="_blank">
+                    <i>"A tuple is a sequence of
+                    immutable Python objects."</i></a>?<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        First, I need to register mild objection
+                        to the term <i>"sequence"</i>.
+                        Surely this implies the elements of the
+                        <b>tuple</b> are arranged in some
+                        computable order? A pattern?,
+                        A mathematical series??<br><br>
+                      
+                        This is not so!<br><br>
+                      
+                        Far worse, the suggestion is that all the
+                        elements of the <b>tuple</b> must be <b>immutable</b>?<br><br>
+                      
+                        This is most certainly <b><i>not</i></b> true!
+                        If it were true, a <b>tuple</b>
+                        could not include a <b>list</b> amongst its elements.
+                        But it can! <b><i>AND</i></b> that <b>list</b>
+                        can be edited whilst still an element of the
+                        <b>tuple</b>. This I will illustrate:<br><br>
+                      
+                        <span class="command">
+                          >>> #<br>
+                          ... # Make a tuple including a mutable list<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Tuple_with_list=(1,2,3,[1,2,3],'abc')<br>
+                          >>> type(Tuple_with_list)<br>
+                          &lt;class 'tuple'&gt;<br>
+                          >>> Tuple_with_list<br>
+                          (1, 2, 3, [1, 2, 3], 'abc')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Edit the list in situ<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Tuple_with_list[3].reverse()<br>
+                          >>> <br>
+                          >>> #<br>
+                          >>> # Display tuple with edited element<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Tuple_with_list<br>
+                          (1, 2, 3, [3, 2, 1], 'abc')<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        I suspect what these chaps meant to say was:<br><br>
+                    
+                        <i>"A tuple is an immutable ordered set of Python objects."</i><br><br>
+                    
+                        Picky? No, I do not think so!
+                        My version lacks rigour but is correct.
+                        Their version is simply wrong!
+                      <div>
+                    </details> 
                   </li>
                 </ol>
               </div>
@@ -9656,120 +10035,458 @@ Click to record your <b>Start</b> time.</button>
           </summary>
           
             <div class="minsect"><br>
-          
-              <div class="hint">
-
-                Discussion of iterators and the like can be
-                found in great abundance by google
-                ( and similar).<br><br>
-                
-                They tend to veer towards the confusing
-                end of technical.<br><br>
-                
-                I agree with <b>Alois Mahdal</b> (third answer
-                <a href="https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration"
-                 target="_blank">here</a>,
-                when he says (more or less):<br><br>
-                
-                "people tend to get "too Pythonic" ... 
-                the focus on rigorous definition 
-                impedes understanding of the concept
-                in its simplicity."<br><br>
+            
+              <hh5m>range definition</hh5m><br><br>
               
-                <b>Alois</b> offers you some simple definitions,
-                I offer you an <b>analogy to reinforce
-                the discussion that precedes:</b><br><br>
-                
-                <b>========================================</b><br><br>
-
-                Long long ago, in a land called Warminster,
-                lived my fine father, my beautiful mother,
-                my idiot sister and my inestimable self.<br><br>
-
-                In our garden, we had a huge walnut tree,
-                which was only truly functional for the
-                minute part of the year (September/October)
-                when it provided us (generously) with walnuts.<br><br>
-
-                The rest of the year it simply stood around
-                and prevented the warm caress of the sun from
-                assisting the things planted in our garden in
-                their attempts to evade the well meant
-                attentions of my dear father.<br><br>
+              "The <b>range type</b> <i>represents</i>
+              an <b>Immutable Sequence of Integers</b>."<br><br>
               
-                Particularly during its leaf incontinent
-                moments of Autumn, this magnificent walnut
-                generator exercised my father to some
-                significant degree! He would address the
-                tree with vigorous military gesture and
-                expressions which I fear I am far to well
-                bred to share with you, in the particular.<br><br>
-                
-                Suffice it to note, his general theme was
-                that it was, solely, the responsibility of
-                the walnut tree that nothing but spinach
-                (oh ... the spinach! why the spinach ...)
-                would grow in his garden.<br><br>
-                  
-                The tree was unmoved and never interrupted
-                its life consuming study of the
-                heavens and their message for the chosen
-                genus, "Tree".<br><br>
- 
-                Exasperated, my father would explain to the
-                majestic organism, that, had they met in
-                "the desert" (where my father spent time
-                with a merry band of chums lead by a chap
-                called "Monty"), he would have been
-                inclined to extreme violence involving
-                several tanks and something that shed
-                explosive items weighing around 25 pounds!<br><br>
-
-                That, of which my father would have
-                undoubtedly approved, would have been the
-                replacement of the walnut tree with a single
-                tiny walnut that could be magically expanded
-                only at appropriate times and only to the
-                degree appropriate to the moment.<br><br>
-                
-                So, for example, when our dog (did I not
-                mention him? His name was Monty, just like
-                the chap in the desert) wished to relieve
-                himself, the magic walnut could be expanded
-                into a modest stripling, and then back to a
-                walnut as Monty (the dog that is) had
-                completed his mission and was shaking
-                himself free of excess product.<br><br>
-
-                The need for the full tree,
-                would be just briefly for walnut harvest time.<br><br>
-                 
-                My father would be ecstatic, until he noticed
-                the garden was still full only of spinach!<br><br>
-
-                <b>THE INTERPRETATION</b><br><br>
-
-                The <b>range object</b> is like the magic walnut.
-                Small and inexpensive, in terms of memory at least.<br><br>
+              This sounds a bit like a subset of
+              <b>tuples</b> at first reading,
+              but the word "<i>represents</i>"
+              is crucial.<br><br>
              
-                With the <b>Builtin function iter()</b>, the walnut
-                (<b>range</b>) can be expanded mostly into an
-                <b>iterator object</b> (stripling) suitable for
-                stepping along with the <b>next() Builtin function</b>
-                or <b>method</b> (analogously being watered by Monty
-                the dog).<br><br>
-
-                Only if/when necessary (walnut harvest time) need
-                the magic walnut (<b>range</b>) be expanded into a
-                huge memory hungry <b>list</b> or <b>tuple</b> (walnut tree).<br><br>
-
-                Got it?  Jolly good!<br><br>
-
-                <b>THE END</b><br>
+              A range is not a <b>tuple</b>,
+              but it encapsulates all the
+              functionality of a numeric <b>tuple</b>
+              without the potentially
+              huge memory overheads.<br><br>
+              
+              Note also that the elements of a <b>range</b>
+              cannot just be a jumble of unconnected
+              numbers, as can be represented by a <b>tuple</b>.
+              The elements of a <b>range</b> must form a
+              well define "<b>Sequence</b>".
+              For example, <i>"All the even Integers from 2
+              to 42, inclusive"</i>
+            
+              Elements of a <b>range</b> can be accessed
+              by <b>index</b>, in the same way
+              that elements of a <b>tuple</b> can.<br><br>
+              
+              However, the elements of a <b>range</b> cannot
+              be displayed directly by <b>print()</b>
+              (as can those of a <b>tuple</b>). They are
+              simply not directly available. The whole point of a
+              <b>range</b> is that it is not unfolded into
+              a memory consuming
+              <b>tuple</b>, it is instead a set of
+              rules (the "<b>Sequence</b>" specification that defines
+              the <b>range</b>)from which
+              elements can be determined as required.<br><br>
+              
+              A saving in memory at the cost of
+              some computational overhead.<br><br>
+              
+              In order to print out all the elements of a
+              <b>range</b> in one go, it is
+              necessary to <b>cast</b>
+              it to a <b>list</b> or <b>tuple</b>
+              first.<br><br>
+              
+              <hh5m>range creation</hh5m><br><br>
+             
+              <b>range</b> objects can only be created using the
+              <a href="https://docs.python.org/3.7/library/stdtypes.html#range"
+               target="_blank"><b>range()</b></a> ><b>Builtin Function</b>.<br><br>
+               
+              <b>range()</b> has between <b>1</b>
+              and <b>3 Integer Parameters</b> as follows:<br><br>
+              
+              With just one <b>Parameter</b>:<br><br>
+              
+              <b>range(</b><i>&lt;Size&gt;</i><b>)</b><br><br>
+              
+              where <i>Size</i> in an <b>int</b>.<br><br>
+              
+              This form <b>returns</b> a <b>range</b> of
+              <i>Size</i> elements indexed from <b>0</b> in steps
+              of <b>1</b> up to <b>Size-1</b>.<br><br>
+              
+              <span class="command">
+                >>> #<br>
+                ... # Make a range object using a single Argument<br>
+                ... #<br>
+                ... <br>
+                >>> Range_Single_Argument=range(10)<br>
+                >>> <br>
+                >>> type(Range_Single_Argument)<br>
+                &lt;class 'range'&gt;<br>
+                >>> <br>
+                >>> #<br>
+                ... # Access the range created by index<br>
+                ... #<br>
+                ... <br>
+                >>> Range_Single_Argument[0]; Range_Single_Argument[3]; Range_Single_Argument[7]<br>
+                0<br>
+                3<br>
+                7<br>
+                >>> <br>
+                >>> #<br>
+                ... # Try to print the entire range<br>
+                ... #<br>
+                ... <br>
+                >>> print(range)<br>
+                &lt;class 'range'&gt;<br>
+                >>> <br>
+                >>> #<br>
+                ... # Try again after casting to a list and/or tuple<br>
+                ... #<br>
+                ... <br>
+                >>> print(list(Range_Single_Argument))<br>
+                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+                >>> <br>
+                >>> print(tuple(Range_Single_Argument))<br>
+                (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)<br>
+                >>> 
+              </span>
+              
+              <p class="hint">
+                Is this the first time we have seen
+                that one can out more than one <b>command</b>
+                on a single line if they a separated by <b>semicolons</b>?<br><br>
                 
-                <b>========================================</b><br><br>
+                I think so! I will claim it in the <b>Checkpoint</b>
+                Section anyway.<br><br>
                 
+                A number of languages insist that all <b>commands</b> are
+                terminated by <b>semicolons</b>. In fact, <b>Python</b> does not
+                object if you terminate all <b>commands</b> with <b>semicolons</b>
+                ... or not ...<br><br>
+                
+                I rather like lots of <b>semicolons</b>, but it
+                is not common practice with <b>Python Programmers</b>,
+                so I restrain myself to conform.
+              </p>
+       
+              <p class="hint">
+                The nature of a <b>range</b> is something
+                that changed radically between
+                <b>Version 2</b> and <b>Version 3</b> of <b>Python</b>.<br><br>
+                
+                In <b>Python Version 2</b>, the
+                <b>range()</b> function
+                simply returned a <b>list</b>.<br><br>
+                
+                Conceptually much simpler for the user, but the
+                developers of <b>Python 3</b>
+                clearly opined that the 
+                gain in memory efficiency was worth the
+                introduction of the <b>range type</b>.<br><br>
+                
+                So we users have to struggle a
+                little harder to
+                understand exactly what is going
+                on? Well, only
+                a little, thinking of a <b>range</b>
+                as a <b>tuple</b> (rather
+                than a <b>list</b>) is sloppy,
+                but it only breaks down
+                if you try to <b>print</b> the
+                <b>range</b> out without
+                first casting in to a <b>list</b>
+                of <b>tuple</b>.<br><br>
+                
+                <span class="command16">
+                  Python 2.7.12 (default, Dec  4 2017, 14:50:18) <br>
+                  [GCC 5.4.0 20160609] on linux2<br>
+                  Type "help", "copyright", "credits" or "license" for more information.<br>
+                  >>><br>
+                  >>> Python2_range=range(10)<br>
+                  >>><br>
+                  >>> type(Python2_range)<br>
+                  &lt;type 'list'&gt;<br>
+                  >>><br>
+                  >>> print(Python2_range)<br>
+                  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+                  >>>
+                </span>
+              </p><br>
+              
+              <hh5m>range Builtin Functions</hh5m><br><br>
+              
+              Most crucially <b>range()</b>, of course,
+              which has been outlined
+              in the <i>"creation"</i> section.<br><br>
+
+              There is no <b>Builtin Function</b> to <b>cast</b>
+              any other <b>Python Data type</b> to a <b>range</b>.
+              There is no other <b>Python Data type</b> that
+              it makes sense to <b>cast</b> to a <b>range</b>!<br><br>
+              
+              <hh5m>range methods</hh5m><br><br>
+              
+              Exactly as for <b>tuples</b>, unsurprisingly.<br><br>
+              
+              <table class="c3">
+              <tr>
+                <th style="min-width=10%">Method</th>
+                <th style="min-width=90%">Effect</th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_range_count.asp"
+                   target="_blank"><b>range.count()</b></a>
+                </td>
+                <td>
+                  Returns the number of elements with a specified value.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.w3schools.com/python/ref_range_index.asp"
+                   target="_blank"><b>range.index()</b></a>
+                </td>
+                <td>
+                  Returns the <b>index</b> of the first
+                  element with a specified value.
+                </td>
+              </tr>
+            </table><br><br>
+  
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    What is the consequence of using a range indices that are:<br><br>
+                    
+                    <ul>
+                      <li> negative</li><br>
+                      
+                      <li> too big</li><br>
+                      
+	                   <li> too small</li><br>
+	                 </ul>
+	                 
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command">
+                          >>> #<br>
+                          ... # Make a test Range<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Range00=range(4,40,4)<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Inspect the range having cast to a list<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print(list(Range00))<br>
+                          [4, 8, 12, 16, 20, 24, 28, 32, 36]<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Try a negative index ... or 4<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Range00[-1]; Range00[-3]; Range00[-9]; Range00[-7]<br>
+                          36<br>
+                          28<br>
+                          4<br>
+                          12<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Try a big index<br>
+                          ... #<br><br>
+                          ... <br>
+                          >>> Range00[30];<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "<stdin>", line 1, in <module><br>
+                          IndexError: range object index out of range<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Try a big negative index<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Range00[-22];<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                          IndexError: range object index out of range<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        Observations:
+                        
+                        <ul>
+                          <li>
+                            <b>Negative Indices</b> work by counting
+                            from the last <b>range Element</b>.<br>
+                            
+                            Exactly as they do for <b>Strings</b>.
+                          </li><br>
+                          
+                          <li>
+                            <b>[-1]</b> gives the <b>Final Element</b>.
+                          </li><br>
+                          
+                          <li>
+                            In this case, there are <b>9</b>
+                            elements in the <b>range</b>, so
+                            <b>[-9]</b> gives the <b>First Element</b>.
+                          </li><br>
+                          
+                          <li>
+                            Indices out of range generate <b>Error Conditions</b>.<br><br>
+                           
+                            In a <b>Program</b>, this might be a problem.<br><br>
+                           
+                            Later we will look at how <b>Errors</b> can be
+                            caught and reacted to gently, before they
+                            terminate the programs execution.
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    Trying <b>slicing</b> a <b>range</b>.<br><br>
+                    
+                    Comment of any apparent
+                    similarities between accessing elements
+                    of a <b>range</b> by <b>index</b>
+                    and making a <b>slice</b>.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+
+                        <span class="command">
+                          >>> #<br>
+                          ... # Make a test Range<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Range00=range(20)<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Make a slice or three<br>
+                          ... #<br>
+                          ... <br>
+                          >>> Slice00=Range00[1:6]<br>
+                          >>> Slice01=Range00[-5:-1:2]<br>
+                          >>> Slice02=Range00[-1:-5:-2]<br>
+                          >>> Slice03=Range00[0:4:1]<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Take a look<br>
+                          ... #<br>
+                          ... <br>
+                          >>> print(Slice00,Slice01,Slice02,Slice03,sep='\n')<br>
+                          range(1, 6)<br>
+                          range(15, 19, 2)<br>
+                          range(19, 15, -2)<br>
+                          range(0, 4)<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Take another look<br>
+                          ... #<br>
+                          ... <br>
+                          >>> List00=list(Slice00)<br>
+                          >>> List01=list(Slice01)<br>
+                          >>> List02=list(Slice02)<br>
+                          >>> List03=list(Slice03)<br>
+                          >>> print(List00,List01,List02,List03,sep='\n')<br>
+                          [1, 2, 3, 4, 5]<br>
+                          [15, 17]<br>
+                          [19, 17]<br>
+                          [0, 1, 2, 3]<br>
+                          >>> 
+                        </span>
+                       
+                        Nothing too shocking here I hope?
+                        Reinforcement of that observed
+                        when looking at <b>Splicing Strings</b>?<br><br>
+                        
+                        Note that when one splices a <b>range</b>,
+                        one gets another <b>range</b>.
+                        This makes sense. To see exactly what has
+                        been achieved require <b>casting</b>
+                        to a <b>list</b> of
+                        <b>tuple</b>, of course.<br><br>
+                        
+                        I asked about the apparent similarities
+                        of syntax between <b>splicing</b> and access
+                        elements by <b>index</b>.<br><br>
+                        
+                        It is similar, sort of? I think of
+                        <b>splicing</b> as rather different to
+                        accessing a single element by <b>index</b>.
+                        Am I wrong? Does it matter?
+                  </li>
+                </ol>
               </div>
+            </div>
+          </details>
+        </li><br>
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>iterators</hh4>
+                <a href="https://docs.python.org/3/tutorial/classes.html#iterators"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
+            </span>
+          </summary>
+          
+            <div class="minsect"><br>
+            
+              <hh5m>iterator definition</hh5m><br><br>
+              
+              Two definitions are required to start this
+              discussion. Both are set out quite readably
+              <a href="https://wiki.python.org/moin/Iterator"
+               target="_blank">here</a>.
+              
+              I offer slightly less complete, less formal,
+              less rigorous, but adequate versions as follows:<br><br>
+              
+              <ul>
+                <li>
+                  An <b>iterable</b> is an ordered set of
+                  objects (e.g. <b>list</b>, <b>tuple</b>,
+                  <b>range</b>) from which an
+                  <b>iterator</b> can be generated using the
+                  <a href="https://docs.python.org/3.7/library/functions.html#iter"
+                   target="_blank"><b>Builtin Function iter()</b></a>.
+                </li><br>
+                
+                <li>
+                  An <b>iterator</b> is an object that enables the elements
+                  of its associated <b>iterable</b> to be delivered,
+                  in order, by serial
+                  applications of the
+                  <a href="https://docs.python.org/3.7/library/functions.html#next"
+                   target="_blank"><b>Builtin Function next()</b></a>.
+                </li>
+              </ul><br>
+              
+              <b>iterators</b> form  family of <b>Python types</b> including:<br><br>
+                
+              <ul>
+                <li><b>list_iterator</b></li><br>
+                
+                <li><b>tuple_iterator</b></li><br>
+                
+                <li><b>range_iterator</b></li><br>
+              </ul>
+                
+              The primary use of <b>iterators</b> is to control
+              tasks that require <b>iterative execution</b>.
+              That is, <b>repeated execution</b>, possible once
+              for each element of an <b>iterator</b> object?<br><br>
+                
+              <b>iterators</b> will be very evident in this
+              tutorial in the section
+              <i>"Repeated Elements --- Loops"</i>.<br><br>
+                
+              <hh5m>iterator creation</hh5m><br><br>
 
               <div class="question">
 
@@ -9781,7 +10498,7 @@ Click to record your <b>Start</b> time.</button>
             </div>
           </details>
         </li><br>
-
+        
         <li>
           <details>
           <summary>
@@ -9801,6 +10518,21 @@ Click to record your <b>Start</b> time.</button>
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
                 <ol>
+                  <li>
+                    Is a <b>set</b> an <b>iterable</b>? If not, why not?
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                        No! a set cannot be <b>iterable</b> because
+                        its elements are not <b>ordered</b>!
+                        
+                        There can be no concept "<b>next</b>"
+                        unless there is <b>order</b>.
+                      </div>
+                    <details>
+                  </li>
                 </ol>
               </div>
             </div>
@@ -9820,6 +10552,31 @@ Click to record your <b>Start</b> time.</button>
           </summary>
 
             <div class="minsect"><br>
+            
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+                <ol>
+                  <li>
+                    Is a <b>dictionary</b> an <b>iterable</b>? If not, why not?
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                        No! a <b>dictionary</b> cannot be <b>iterable</b> because
+                        its elements are not <b>ordered</b>!
+                        
+                        There can be no concept "<b>next</b>"
+                        unless there is <b>order</b>.
+                      </div>
+                    <details>
+                  </li>
+                </ol>
+              </div>
+
+            
             </div>
 
           </details>
@@ -9862,7 +10619,25 @@ Click to record your <b>Start</b> time.</button>
               <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
 	            target="_blank"><b>dict()</b></a>
 	           - converts a suitable <b>Data Object</b> to a <b>dictionary</b>
-            </li>
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/stdtypes.html#range"
+               target="_blank"><b>range()</b></a>
+	           - creates a <b>range</b> object
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#iter"
+               target="_blank"><b>iter()</b></a>
+              - returns an <b>iterator</b> object
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#next"
+               target="_blank"><b>next()</b></a>
+              - returns the "next element" from an <b>iterator</b> object
+            </li>   
           </ol>
         </p>
         
@@ -9877,8 +10652,9 @@ Click to record your <b>Start</b> time.</button>
           </li><br>
 
           <li>
-            
-            
+            More than one <b>command</b> per line,
+            if <b>commands</b> are separated by
+            <b>semicolons</b>.
           </li><br>
           
           <li>
@@ -12073,6 +12849,7 @@ Click to record your <b>Start</b> time.</button>
             </ul>
           </li>
         </ol>
+        
         <p>
           <hh6m>Built in Functions introduced or reinforced in
           this section:<hh6m>
@@ -12084,6 +12861,8 @@ Click to record your <b>Start</b> time.</button>
             (<b>i</b>ntegers in the range <b>0...255</b>)
             to <b>ASCII Characters</b>.<br>
           </li><br>
+          
+          <li>
             <b>ord(c)</b> - Converts <b>ASCII Characters</b>
             to <b>ASCII Character Codes</b>.<br>
           </li><br>
@@ -12124,7 +12903,7 @@ Click to record your <b>Start</b> time.</button>
             <b>Nesting Loops</b> ... that is,
             putting one loop inside another.
           </li>
-        </ol>
+        </ol><br>
       </div>
     </details>
   </li><br>
@@ -13478,4 +14257,120 @@ Makes sense I suppose, but a bit picky even for me.
 
 -->
 
+
+<!--       
+              <div class="hint">
+
+                Discussion of iterators and the like can be
+                found in great abundance by google
+                ( and similar).<br><br>
+                
+                They tend to veer towards the confusing
+                end of technical.<br><br>
+                
+                I agree with <b>Alois Mahdal</b> (third answer
+                <a href="https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration"
+                 target="_blank">here</a>,
+                when he says (more or less):<br><br>
+                
+                "people tend to get "too Pythonic" ... 
+                the focus on rigorous definition 
+                impedes understanding of the concept
+                in its simplicity."<br><br>
+              
+                <b>Alois</b> offers you some simple definitions,
+                I offer you an <b>analogy to reinforce
+                the discussion that precedes:</b><br><br>
+                
+                <b>========================================</b><br><br>
+
+                Long long ago, in a land called Warminster,
+                lived my fine father, my beautiful mother,
+                my idiot sister and my inestimable self.<br><br>
+
+                In our garden, we had a huge walnut tree,
+                which was only truly functional for the
+                minute part of the year (September/October)
+                when it provided us (generously) with walnuts.<br><br>
+
+                The rest of the year it simply stood around
+                and prevented the warm caress of the sun from
+                assisting the things planted in our garden in
+                their attempts to evade the well meant
+                attentions of my dear father.<br><br>
+              
+                Particularly during its leaf incontinent
+                moments of Autumn, this magnificent walnut
+                generator exercised my father to some
+                significant degree! He would address the
+                tree with vigorous military gesture and
+                expressions which I fear I am far to well
+                bred to share with you, in the particular.<br><br>
+                
+                Suffice it to note, his general theme was
+                that it was, solely, the responsibility of
+                the walnut tree that nothing but spinach
+                (oh ... the spinach! why the spinach ...)
+                would grow in his garden.<br><br>
+                  
+                The tree was unmoved and never interrupted
+                its life consuming study of the
+                heavens and their message for the chosen
+                genus, "Tree".<br><br>
+ 
+                Exasperated, my father would explain to the
+                majestic organism, that, had they met in
+                "the desert" (where my father spent time
+                with a merry band of chums lead by a chap
+                called "Monty"), he would have been
+                inclined to extreme violence involving
+                several tanks and something that shed
+                explosive items weighing around 25 pounds!<br><br>
+
+                That, of which my father would have
+                undoubtedly approved, would have been the
+                replacement of the walnut tree with a single
+                tiny walnut that could be magically expanded
+                only at appropriate times and only to the
+                degree appropriate to the moment.<br><br>
+                
+                So, for example, when our dog (did I not
+                mention him? His name was Monty, just like
+                the chap in the desert) wished to relieve
+                himself, the magic walnut could be expanded
+                into a modest stripling, and then back to a
+                walnut as Monty (the dog that is) had
+                completed his mission and was shaking
+                himself free of excess product.<br><br>
+
+                The need for the full tree,
+                would be just briefly for walnut harvest time.<br><br>
+                 
+                My father would be ecstatic, until he noticed
+                the garden was still full only of spinach!<br><br>
+
+                <b>THE INTERPRETATION</b><br><br>
+
+                The <b>range object</b> is like the magic walnut.
+                Small and inexpensive, in terms of memory at least.<br><br>
+             
+                With the <b>Builtin function iter()</b>, the walnut
+                (<b>range</b>) can be expanded mostly into an
+                <b>iterator object</b> (stripling) suitable for
+                stepping along with the <b>next() Builtin function</b>
+                or <b>method</b> (analogously being watered by Monty
+                the dog).<br><br>
+
+                Only if/when necessary (walnut harvest time) need
+                the magic walnut (<b>range</b>) be expanded into a
+                huge memory hungry <b>list</b> or <b>tuple</b> (walnut tree).<br><br>
+
+                Got it?  Jolly good!<br><br>
+
+                <b>THE END</b><br>
+                
+                <b>========================================</b><br><br>
+                
+              </div>
+-->
 
