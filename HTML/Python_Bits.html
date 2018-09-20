@@ -8647,12 +8647,6 @@ Click to record your <b>Start</b> time.</button>
 	         </li><br>
 	       
             <li>
-	           <a href="https://snakify.org/en/lessons/sets/"
-	            target="_blank"><b>set</b></a>
-	           - a <b>Mutable Unordered</b> set of <b>Distinct Immutable Data Items</b>
-	         </li><br>
-	       
-            <li>
 	           <a href="http://www.chiark.greenend.org.uk/doc/python3.2/html/library/stdtypes.html#range-type"
 	            target="_blank"><b>range</b></a>
 	            - a memory efficient <i>representation</i> of an <b>Immutable Sequence of Integers</b></b>
@@ -8668,48 +8662,61 @@ Click to record your <b>Start</b> time.</button>
             <li>
               <a href="https://snakify.org/en/lessons/dictionaries_dicts/"
                target="_blank"><b>dictionary</b></a>
-               - a <b>Mutable Unordered</b> set of <b>Keyword/Value</b> pairs
-            </li>
+               - a <b>Mutable Ordered</b> set of <b>Distinct Keyword/Value</b> pairs<br><br>
+               
+               <p class="hint">
+                 Comment on "ordered" here. in particular dict only regarded as
+                 ordered from 3,6 onwards. general discussion also. order
+                 for dict essential for popitem(). URLs in QA section.
+                 
+                 dicts are offered as a lifo stack<br><br>
+                 
+                  <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
+                   target="_bank">
+                  <img src="Images/350px-Lifo_stack.png"
+                       alt="Fiddle!"
+                       class="centimg"
+                       height="244" width="350"></a><br><br>
+              </p>
+               
+            </li><br>
+	       
+            <li>
+	           <a href="https://snakify.org/en/lessons/sets/"
+	            target="_blank"><b>set</b></a>
+	           - a <b>Mutable Unordered</b> set of <b>Distinct Immutable Data Items</b>
+	         </li>
           </ol><br>
         
           Some of these <b>Data Structures</b>
           have associated <b>casting Builtin Functions</b>.
-          These are:<br>
+          These are:<br><br>
         
  	       <ol>
 	         <li>
-	           <b>list()</b>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-list"
-	            target="_blank"><img src="Images/www.png"
-                                    alt="Fiddle!"
-                                    height="25" width="25"></a>
+	            target="_blank"><b>list()</b></a>
 	           - converts <b>Data Objects</b> of
               suitable <b>type</b> to a <b>list</b>
 	         </li><br>
 	       
-	         <li><b>tuple()</b>
+	         <li>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
-	            target="_blank"><img src="Images/www.png"
-                                    alt="Fiddle!"
-                                    height="25" width="25"></a>
+	            target="_blank"><b>tuple()</b></a>
 	           - converts <b>Data Objects</b> of
 	           suitable <b>type</b> to a <b>tuple</b>
 	         </li><br>
 	       
-	         <li><b>set()</b>
+	         <li>
 	           <a href="https://docs.python.org/3.7/library/functions.html#func-set"
-	            target="_blank"><img src="Images/www.png"
-                                    alt="Fiddle!"
-                                    height="25" width="25"></a>
+	            target="_blank"><b>set()</b></a>
 	           - converts <b>Data Objects</b> of
 	           suitable <b>type</b> to a <b>set</b>
 	         </li><br>
 	       
-            <li><b>dict()</b>
+            <li>
               <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
-	            target="_blank"><img src="Images/www.png"
-                                    alt="Fiddle!"
-                                    height="25" width="25"></a>
+	            target="_blank"><b>dict()</b></a>
 	           - converts <b>Data Objects</b> of
               suitable <b>type</b> to a <b>dictionary</b>
             </li>
@@ -8963,7 +8970,7 @@ Click to record your <b>Start</b> time.</button>
             
               <b>help(list)</b><br><br>
             
-              at the <b>Interpreter</b>, or, the are listed nicely
+              at the <b>Interpreter</b>, or, they are listed nicely
               <a href="https://www.w3schools.com/python/python_ref_list.asp"
                target="_blank">here</a>.<br><br>
 
@@ -10458,8 +10465,9 @@ Click to record your <b>Start</b> time.</button>
                 </li><br>
                 
                 <li>
-                  An <b>iterator</b> is an object that enables the elements
-                  of its associated <b>iterable</b> to be delivered,
+                  An <b>iterator</b> is an object, associate with a particular iterable,
+                  that enables the elements
+                  of that <b>iterable</b> to be delivered, one at a time and
                   in order, by serial
                   applications of the
                   <a href="https://docs.python.org/3.7/library/functions.html#next"
@@ -10487,31 +10495,52 @@ Click to record your <b>Start</b> time.</button>
               <i>"Repeated Elements --- Loops"</i>.<br><br>
                 
               <hh5m>iterator creation</hh5m><br><br>
-
-              <div class="question">
-
-                <h2><i><u>Questions & Simple Exercises</u></i></h2>
-
-                <ol>
-                </ol>
-              </div>
-            </div>
-          </details>
-        </li><br>
-        
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>sets</hh4>
-                <a href="https://docs.python.org/3/library/stdtypes.html?#set-types-set-frozenset"
-                 target="_blank">
-                <img src="Images/www.png"
-                     alt="Fiddle!" height="25" width="25"></a>
-            </span>
-          </summary>
-          
-            <div class="minsect"><br>
+              
+              An <b>iterator</b> is created from
+              an <b>iterable</b> object
+              (such as a <b>list</b>, <b>tuple</b>
+              or <b>range</b>) using the
+              <b>Builtin function iter()</b>.<br><br>
+                              
+              <span class="command16">
+                >>> #<br>
+                ... # Make an assortment of iterable with identical elements<br>
+                ... #<br>
+                ... <br>
+                >>> List00=[1,2,3,4,5]; Tuple00=(1,2,3,4,5); Range00=range(1,6,1)<br>
+                >>> <br>
+                >>> #<br>
+                ... # For each, make an iterator<br>
+                ... #<br>
+                ... <br>
+                >>> List00_iter=iter(List00); Tuple00_iter=iter(Tuple00); Range00_iter=iter(Range00)<br>
+                >>> <br>
+                >>> #<br>
+                ... # Iterate merrily through the iterables with the iterators<br>
+                ... #<br>
+                ... <br>
+                >>> next(List00_iter); next(Tuple00_iter); next(Range00_iter)<br>
+                1<br>
+                1<br>
+                1<br>
+                >>> next(List00_iter); next(Tuple00_iter); next(Range00_iter)<br>
+                2<br>
+                2<br>
+                2<br>
+                >>> next(List00_iter); next(Tuple00_iter); next(Range00_iter)<br>
+                3<br>
+                3<br>
+                3<br>
+                >>> next(List00_iter); next(Tuple00_iter); next(Range00_iter)<br>
+                4<br>
+                4<br>
+                4<br>
+                >>> next(List00_iter); next(Tuple00_iter); next(Range00_iter)<br>
+                5<br>
+                5<br>
+                5<br>
+                >>> 
+              </span><br><br>
 
               <div class="question">
 
@@ -10519,25 +10548,316 @@ Click to record your <b>Start</b> time.</button>
 
                 <ol>
                   <li>
-                    Is a <b>set</b> an <b>iterable</b>? If not, why not?
+                    What happens if you try to <b>iterate</b> too far?<br><br>
                     
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
                       <div class="answer"><br>
-                        No! a set cannot be <b>iterable</b> because
-                        its elements are not <b>ordered</b>!
-                        
-                        There can be no concept "<b>next</b>"
-                        unless there is <b>order</b>.
+                      
+                        If you <b>iterate</b> beyond the end of the
+                        availability of elements, <b>Python</b>
+                        gets very cross and throws an <b>Exception</b>
+                        (<b>Error Message</b>) at you. <br><br>
+                    
+                        <span class="command16">
+                          >>> Range_Finite=range(3)<br>
+                          >>> Range_Finite_iter=iter(Range_Finite)<br>
+                          >>> <br>
+                          >>> next(Range_Finite_iter)<br>
+                          0<br>
+                          >>> next(Range_Finite_iter)<br>
+                          1<br>
+                          >>> next(Range_Finite_iter)<br>
+                          2<br>
+                          >>> next(Range_Finite_iter)<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                          StopIteration<br>
+                          >>> 
+                        </span><br><br>
+                      
+                        Just leaving the system to explode
+                        when things go wrong is not really
+                        acceptable. Surely some effort should
+                        be made to trap <b>Exceptions</b>
+                        before they unceremoniously terminate
+                        a program's execution?<br><br>
+                      
+                        <b>Python</b> offers a device to allow a command
+                        to be run in a fashion
+                        that does capture any <b>Exceptions</b> and
+                        provide for them to be dealt with in
+                        a civilised fashion.<br><br>
+                      
+                        It is described fully
+                        <a href="https://docs.python.org/3/tutorial/errors.html#errors-and-exceptions"
+                         taget-"_blank">here</a>. I will offer
+                        a simple example as part of this <b>Answer</b>.<br><br>
+                      
+                        The approach is primarily based on
+                        the use of the two <b>Python
+                        Keywords</b> "<b>try</b>" and "<b>except</b>".<br><br>
+                      
+                        A simplified syntax for their use is as follows:<br><br>
+                      
+                        <div class="code">
+	                       try:<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          ...<br>
+                          except
+                          [<span style="font-weight:normal;"><i>&lt;Exception_Type&gt;</i></span>]:<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          ...</b>
+                        </div><br>
+                      
+                        <i>&lt;Exception_Type&gt;</i> is the type
+                        of <b>Exception</b> against which the code is guarding.
+                      
+                        It is possible to specify more than one
+                        <i>&ly;Exception_Type&gt;</i> by
+                        substitution a <b>tuple</b> of all
+                        the possibilities where the one
+                        instance is shown above.<br><br>
+                      
+                        If <i>&lt;Exception_Type&gt;</i> is omitted
+                        altogether, any <i>&lt;Exception_Type&gt;</i>
+                        will cause the <b>except</b> clause to be executed.
+                     
+                        If, when the code is executed, there is no
+                        <b>Exception</b>, the
+                        <b>Indented Code Block</b>
+                        following the <b>try</b> keyword is executed.
+                        The <b>Indented Code Block</b> following the
+                        <b>except</b> keyword is ignored.<br><br>
+                      
+                        If there is an <b>Exception</b> of the type(s)
+                        specified, the
+                        <b>Indented Code Block</b>
+                        following the <b>except</b> keyword is executed.
+                        The <b>Indented Code Block</b> following the
+                        <b>try</b> keyword is ignored.<br><br>
+                      
+                        If there is an <b>Exception</b>, but not of the
+                        type specified, execution ceases in a confusion
+                        of <b>Error Message</b>.<br><br>
+                      
+                        The <b>Indentations</b> that determine the <b>Code
+                        Blocks</b> must be precise (here and everywhere
+                        else the are employed by <b>Python</b>).<br><br>
+                      
+                        The rule is that exactly <b>4 Spaces</b> be used.
+                        Alternatively,
+                        a single <b>tab</b> will work ... usually.
+                        Most experienced <b>Python</b> programmers recommend
+                        sticking to <b>4 Spaces</b>.<br><br>
+                      
+                        And so, to the example (try one yourself,
+                        it is so much easier to believe things
+                        you do yourself!)<br><br>
+                      
+                        <span class="command">
+                          >>> Range_Finite=range(3)<br>
+                          >>> Range_Finite_iter=iter(Range_Finite)<br>
+                          >>> <br>
+                          >>> try:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next(Range_Finite_iter)<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("OK so far ...")<br>
+                          ... except StopIteration:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("End of Range found! Time to bail out chaps")<br>
+                          ... <br>
+                          0<br>
+                          OK so far ...<br>
+                          >>> try:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next(Range_Finite_iter)<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("OK so far ...")<br>
+                          ... except StopIteration:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("End of Range found! Time to bail out chaps")<br>
+                          ... <br>
+                          1<br>
+                          OK so far ...<br>
+                          >>> try:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next(Range_Finite_iter)<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("OK so far ...")<br>
+                          ... except StopIteration:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("End of Range found! Time to bail out chaps")<br>
+                          ... <br>
+                          2<br>
+                          OK so far ...<br>
+                          >>> try:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next(Range_Finite_iter)<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("OK so far ...")<br>
+                          ... except StopIteration:<br>
+                          ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("End of Range found! Time to bail out chaps")<br>
+                          ... <br>
+                          End of Range found! Time to bail out chaps<br>
+                          >>> <br>
+                        </span><br><br>
                       </div>
-                    <details>
+                    </details>
+                  </li><br>
+                  
+                  <li>
+                    <b>next()</b> consumes the elements of
+                    the <b>iterable</b> over which it <b>iterates</b>.<br><br>
+                    
+                    It reads each once and then seems
+                    never to want to take a second look?<br><br>
+                    
+                    How could you make an <b>iterator</b>
+                    go through the elements more than once?<br><br>
+                    
+                    Guess before you cheat!! It is obvious.<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary><br>
+                      <div class="answer">
+                      
+                        Easy, just remake the <b>iterators</b>!<br><br>
+                        
+                        <span class="command">
+                          >>> List_Finite=[1,2]<br>
+                          >>> List_Finite_iter=iter(List_Finite)<br>
+                          >>> <br>
+                          >>> try:<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          1<br>
+                          Not at the end yet<br>
+                          >>> try:<br>
+                          ...     next(List_Finite_iter)<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          2<br>
+                          Not at the end yet<br>
+                          >>> try:<br>
+                          ...     next(List_Finite_iter)<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          Refresh the iterator and round again!<br>
+                          >>> try:<br>
+                          ...     next(List_Finite_iter)<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          1<br>
+                          Not at the end yet<br>
+                          >>> try:<br>
+                          ...     next(List_Finite_iter)<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          2<br>
+                          Not at the end yet<br>
+                          >>> try:<br>
+                          ...     next(List_Finite_iter)<br>
+                          ...     print("Not at the end yet")<br>
+                          ... except:<br>
+                          ...     List_Finite_iter=iter(List_Finite)<br>
+                          ...     print("Refresh the iterator and round again!")<br>
+                          ... <br>
+                          Refresh the iterator and round again!<br>
+                          >>>
+                        </span><br><br>
+                        
+                        This time I wrote the code to be non-specific
+                        concerning the <b>Exception</b> it traps.<br><br>
+                      
+                        Clumsy code though? makes one wish we had some sort
+                        of "repeating code" structure to use?<br><br>
+                      
+                        Soon! soon!<br><br>
+                      </div>
+                    </details>
+                  </li><br>
+
+                  <li>
+                    Would it work if you overwrote the
+                    <b>iterable Variable</b> with the
+                    <b>iterator</b>?<br><br>
+                    
+                    If it does, do you think this might
+                    be a good idea?<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary><br>
+                      <div class="answer">
+                      
+                        <span class="command">
+                          >>> Tuple_Finite=(2,"DPJ",8,23,"Star",27.52,"Super")<br>
+                          >>> Tuple_Finite=iter(Tuple_Finite)<br>
+                          >>> <br>
+                          >>> next(Tuple_Finite);next(Tuple_Finite);next(Tuple_Finite);next(Tuple_Finite)<br>
+                          2<br>
+                          'DPJ'<br>
+                          8<br>
+                          23<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        Well clearly the answer is
+                        "Yes, it is fine to overwrite the
+                        <b>tuple</b> with its own <b>iterator</b>"??<br><br>
+                        
+                        But how can that work? If the <b>tuple</b>
+                        is destroyed, what is the <b>iterator</b>
+                        iterating along?<br><br>
+                        
+                        Aha! but remember, in <b>Python</b>,
+                        <b>Variables</b> contain <b>References</b>
+                        (or <b>Pointers</b>) to data items.
+                        Not the data items themselves.<br><br>
+                        
+                        So, the <b>tuple</b> still exists, and
+                        the <b>iterator</b>, equally clearly,
+                        knows where it is and can still
+                        access its elements.<br><br>
+                        
+                        Jolly good ... but it is no longer
+                        accessible any other way. It cannot be
+                        accessed by <b>index</b>, or
+                        printed out whole.<br><br>
+                        
+                        The <b>iterator</b> cannot be refreshed.<br><br>
+                        
+                        I conclude, that while it is interesting
+                        that overwriting the <b>tuple</b> with
+                        its <b>iterator</b>, sort of, worked.
+                        It was a thoroughly stupid thing to do!<br><br>
+                        
+                        So there!
+                      </div>
+                    </details>
                   </li>
                 </ol>
               </div>
             </div>
           </details>
         </li><br>
+        
 
         <li>
           <details>
@@ -10553,35 +10873,584 @@ Click to record your <b>Start</b> time.</button>
 
             <div class="minsect"><br>
             
+              <hh5m>Dictionary definition</hh5m><br><br>
+
+              <hh5m>Dictionary creation</hh5m><br><br>
+                   
+              <hh5m>Dictionary Builtin Functions</hh5m><br><br>
+            
+              <hh5m>Dictionary Methods</hh5m><br><br>
+              
+              <a href="https://www.w3schools.com/python/python_ref_dictionary.asp"
+               target="_blank">here</a><br><br>
+            
+              <table class="c3">
+                <tr>
+                  <th style="min-width=10%">Method</th>
+                  <th style="min-width=90%">Effect</th>
+                </tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_clear.asp"
+                    target="_blank"><b>dict.clear()</b></a>
+                  </td>
+                  <td>
+                    Removes all the elements from the <b>Dictionary</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_copy.asp"
+                     target="_blank"><b>dict.copy()</b></a>
+                  </td>
+                  <td>
+                    Returns a copy of the <b>Dictionary</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_fromkeys.asp"
+                     target="_blank"><b>dict.fromkeys()</b></a>
+                  </td>
+                  <td>
+                    Returns a <b>Dictionary</b> with the
+                    specified <b>keys</b> and <b>values</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_get.asp"
+                     target="_blank"><b>dict.get()</b></a>
+                  </td>
+                  <td>
+                    Returns the <b>value</b> of the specified <b>key</b>.
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_items.asp"
+                     target="_blank"><b>dict.items()</b></a>
+                  </td>
+                  <td>
+                    Returns a <b>list</b> containing a <b>tuple</b>
+                    for each <b>key value</b> pair.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_keys.asp"
+                     target="_blank"><b>dict.keys()</b><a>
+                  </td>
+                  <td>
+	                 Returns a <b>list</b> containing a <b>Dictionary's keys</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_pop.asp"
+                     target="_blank"><b>dict.pop()</b></a>
+                  </td>
+                  <td>
+                    Removes the element with the specified <b>key</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_popitem.asp"
+                     target="_blank"><b>dict.popitem()</b></a>
+                  </td>
+                  <td>
+                    Removes the last <b>key-value</b> pair.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_setdefault.asp"
+                     target="_blank"><b>dict.setdefault()</b></a>
+                  </td>
+                  <td>
+                    Returns the <b>value</b> of the specified <b>key</b>.
+                    If the <b>key</b> does not exist: insert the <b>key</b>,
+                    with the specified <b>value</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_update.asp"
+                     target="_blank"><b>dict.update()</b></a>
+                  </td>
+                  <td>
+                    "Updates" the <b>Dictionary</b> by appending the
+                    specified <b>key-value</b> pairs.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_dictionary_values.asp"
+                     target="_blank"><b>dict.values()</b></a>
+                  </td>
+                  <td>
+                    Returns a <b>list</b> of all the <b>values</b>
+                    in the <b>Dictionary</b>.
+                  </td>
+                </tr>
+              </table><br><br>
+            
+              <div class="question">
+
+                <h2><i><u>Questions & Simple Exercises</u></i></h2>
+                
+                <ol>
+                  <li>
+                    Is a <b>dictionary</b> an <b>iterable</b>? If not, why not?<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                        Well, I wanted to say:<br><br>
+                        
+                        <i>"No! a <b>dictionary</b>
+                        cannot be <b>iterable</b> because
+                        its elements are not <b>ordered</b>!<br><br>
+                        
+                        There can be no concept "<b>next</b>"
+                        unless there is <b>order</b></i>.<br><br>
+                        
+                        However, a <b>dictionary <i>is</i></b> demonstrably
+                        <b>iterable</b>?<br><br>
+                        
+                        <span class="command">
+                          >>> Dictionary00={'one':1,'two':2,'three':3,'four':4,'five':5,'two':2}<br>
+                          >>> type(Dictionary00)<br>
+                          <class 'dict'><br>
+                          >>> Dictionary00<br>
+                          {'four': 4, 'three': 3, 'five': 5, 'one': 1, 'two': 2}<br>
+                          >>> Dictionary00_iter=iter(Dictionary00)<br>
+                          >>> next(Dictionary00_iter)<br>
+                          'four'<br>
+                          >>> next(Dictionary00_iter)<br>
+                          'three'<br>
+                          >>> next(Dictionary00_iter)<br>
+                          'five'<br>
+                          >>> next(Dictionary00_iter)<br>
+                          'one'<br>
+                          >>> next(Dictionary00_iter)<br>
+                          'two'<br>
+                          >>> 
+                        </span>
+                        
+                        The <b>Builtin Function dict()</b> sorts, in
+                        some mysterious fashion,
+                        the data from which it makes the <b>dict</b>?<br><br>
+                        
+                        I cannot guess the ordering rule employed here,
+                        but it is of no concern as order is not defined
+                        for a <b>Dictionary</b>.
+                        
+                        Sorting could be quite sensible as it might
+                        simplifies the detection of duplicate
+                        elements (<b>two</b> in this case)that
+                        must be eradicated.
+                        
+                        Maybe the argument would be, "if an
+                        "<b>Unordered</b>" <b>dict</b> can be
+                        easily be made <b>iterable</b>,
+                        why not do it?"<br><br> if it can be
+                        useful and the order of delivery of
+                        <b>next()</b> is not important.<br><br>
+                        
+                        There is an order after all, just not one
+                        that is predictable? Maybe a <b>Dictionary</b>
+                        should be defined as "<b>Unpredictably Ordered</b>"
+                        rather than <b>Unordered</b>?
+                        even if it does appear to raise some contradictions.<br><br>
+                        
+                        Just to complete, by stating what I hope is "the obvious", it
+                        makes no sense to access a Dictionary element by its unredictabl position (that is, by positional index).
+                        
+                        by  <b>sets</b> cannot be
+                        accessed by <b>index</b>.<br><br>
+                        
+                        <span class="command">
+                          >>> Set00[0]<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt", line 1, in &lt;module&gt;<br>
+                          TypeError: 'set' object does not support indexing<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        which is understandable given that the association
+                        between <b>set</b> position and <b>index</b> would be
+                        so unpredictable.
+
+                      </div>
+                    <details>
+                  </li><br>
+                  
+                  <li>
+                    Something about popitem<br>
+                    message about the order off a dict<br>
+                    does it claim to be ordered?#<br>
+                    here it is lifo see:<br>
+                  https://docs.python.org/3/library/stdtypes.html?highlight=dictionary#dict.popitem<br>
+                  https://docs.python.org/2/library/collections.html#ordereddict-objects<br>
+                  changes after 3.6<br>
+                  https://stackoverflow.com/questions/39980323/are-dictionaries-ordered-in-python-3-6?rq=1<br>
+                  https://mail.python.org/pipermail/python-dev/2017-December/151283.html<br>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </details>
+        </li><br>
+
+        <li>
+          <details>
+          <summary>
+            <span class="minsectsum">
+              <hh4>sets</hh4>
+                <a href="https://docs.python.org/3/library/stdtypes.html?#set-types-set-frozenset"
+                 target="_blank">
+                <img src="Images/www.png"
+                     alt="Fiddle!" height="25" width="25"></a>
+            </span>
+          </summary>
+          
+            <div class="minsect"><br>
+            
+              <hh5m>
+              <a href="https://www.programiz.com/python-programming/set#what"
+               target="_blank">set</a> definition</hh5m><br><br>
+
+              A <b>Python set</b> is an <b>Unordered Mutable</b>
+              collection of <b>Data Objects</b> of any suitable type.<br><br>
+              
+              Every <b>set</b> element is <b>Unique</b> (no duplicates)
+              and must be <b>Immutable</b>.<br><br>
+              
+              <b>Elements</b> have to be <b>Unique</b> as set elements
+              are referenced by their <b>Value</b>.
+              So, <b>Python</b> could not distinguish between
+              two <b>set</b> elements with the same <b>Value</b>.<br><br>
+
+              <b>Elements</b> have to be <b>Immutable</b>, not because of any
+              conceptual consideration, but because
+              it is more efficient if this
+              restriction is applied.<br><br>
+              
+              To expand slightly, <b>Python</b> uses a
+              <a href="https://en.wikipedia.org/wiki/Hash_function"
+               target="_blank">hash code</a> determined by an
+              element's <b>Value</b> to reference that element.<br><br>
+              
+              This would be immensely clumsy if that <b>Value</b> was
+              allowed to be altered at any moment (the hash code
+              would have to be continually updated).<br><br>
+              
+              Accordingly, <b>Python dictates</b> that,
+              <a href="https://stackoverflow.com/questions/27113676/why-is-it-not-possible-to-have-a-set-as-an-element-of-a-set"
+	            target="_blank">in general, all mutable
+	           types are not <b>hashable</b></a> (that is,
+	           all <b>hashable</b> objects are <b>Immutable</b>.<br><br>
+	           
+	           In particular, <b>Python dictates</b>
+	           that all <b>set</b> elements are <b>Immutable</b>.<br><br>
+              
+              In addition, <b>Immutable</b> objects are more memory efficient.<br><br>
+
+              <hh5m> set creation</hh5m><br><br>
+                 
+              <hh5m> set Builtin Functions</hh5m><br><br>
+
+              <hh5m>set Methods</hh5m><br><br>
+              
+              <a href="https://www.w3schools.com/python/python_ref_set.asp"
+               target="_blank">here</a><br><br>
+            
+              <table class="c3">
+                <tr>
+                  <th style="min-width=10%">Method</th>
+                  <th style="min-width=90%">Effect</th>
+                </tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_add.asp"
+                    target="_blank"><b>set.add()</b></a>
+                  </td>
+                  <td>
+                    Adds an element to the <b>set</b>.
+                  </td>
+                </tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_clear.asp"
+                    target="_blank"><b>set.clear()</b></a>
+                  </td>
+                  <td>
+                    Removes all the elements from the <b>set</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_copy.asp"
+                     target="_blank"><b>set.copy()</b></a>
+                  </td>
+                  <td>
+                    Returns a copy of the <b>set</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_difference.asp"
+                     target="_blank"><b>set.difference()</b></a>
+                  </td>
+                  <td>
+                    Returns a <b>set</b> containing the
+                    <b>Difference</b> between two or more <b>sets</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_difference_update.asp"
+                     target="_blank"><b>set.difference_update()</b></a>
+                  </td>
+                  <td>
+                    Removes the items in a <b>set</b>
+                    that are also included in another,
+                    specified <b>set</b>.
+                    That is, updates a <b>set</b>
+                    to the <b>Difference</b> between
+                    it and another <b>set</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_discard.asp"
+                     target="_blank"><b>set.discard()</b></a>
+                  </td>
+                  <td>
+                    Remove the specified item.
+                    If no element matches the specification,
+                    no action is taken. 
+                 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_intersection.asp"
+                     target="_blank"><b>set.intersection()</b></a>
+                  </td>
+                  <td>
+                    Returns a <b>set</b>, that is the
+                    <b>Intersection</b> of two other <b>sets</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_intersection_update.asp"
+                     target="_blank"><b>set.intersection_update()</b></a>
+                  </td>
+                  <td>
+                    Removes the items
+                    in this <b>set</b> that are not present in other;
+                    specified <b>set(s)</b>.
+                    That is, updates a <b>set</b>
+                    to the <b>Intersection</b> between
+                    it and another <b>set</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_isdisjoint.asp"
+                     target="_blank"><b>set.isdisjoint()</b></a>
+                  </td>
+                  <td>
+                    Returns <b>True</b> if two <b>sets</b>
+                    have a non-empty <b>Intersection</b>,
+                    <b>False</b> otherwise.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_issubset.asp"
+                     target="_blank"><b>set.issubset()</b></a>
+                  </td>
+                  <td>
+                    Returns <b>True</b> if another specified <b>set</b>
+                    contains this <b>set</b>,
+                    <b>False</b> otherwise.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_issuperset.asp"
+                     target="_blank"><b>set.issuperset()</b></a>
+                  </td>
+                  <td>
+                    Returns <b>True</b> if this <b>set</b>
+                    contains another specified <b>set</b>,
+                    <b>False</b> otherwise.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_pop.asp"
+                     target="_blank"><b>set.pop()</b></a>
+                  </td>
+                  <td>
+                    Removes a random element from a <b>set</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_remove.asp"
+                     target="_blank"><b>set.remove()</b></a>
+                  </td>
+                  <td>
+                    Removes a specified element from a <b>set</b>.
+                    If no element matches the specification,
+                    an <b>Error State<b> ensues. 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_symmetric_difference.asp"
+                     target="_blank"><b>set.symmetric_difference()</b></a>
+                  </td>
+                  <td>
+                    Returns a new <b>set</b> which is the
+                    <a href="https://en.wikipedia.org/wiki/Symmetric_difference"
+                     target="_blank"><b>Symmetric Difference</b></a>
+                    (or <b>Disjunctive Union</b>)
+                    of a <b>set</b> and one other specified <b>set</b>.
+                    The <b>Disjunctive Union</b> of two sets is computed
+                    using the
+                    <a href="https://en.wikipedia.org/wiki/Exclusive_or"
+                     target="_blank"><b>Exclusive OR</b></a>
+                    (<b>XOR</b>) <b>Boolean Operator</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_symmetric_difference_update.asp"
+                     target="_blank"><b>set.symmetric_difference_update()</b></a>
+                  </td>
+                  <td>
+                    Replaces a <b>set</b> by its
+                    <a href="https://en.wikipedia.org/wiki/Symmetric_difference"
+                     target="_blank"><b>Symmetric Difference</b></a>
+                    (or <b>Disjunctive Union</b>)
+                    with one other specified <b>set</b>.
+                    The <b>Disjunctive Union</b> of two sets is computed
+                    using the
+                    <a href="https://en.wikipedia.org/wiki/Exclusive_or"
+                     target="_blank"><b>Exclusive OR</b></a>
+                    (<b>XOR</b>) <b>Boolean Operator</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_union.asp"
+                     target="_blank"><b>set.union()</b></a>
+                  </td>
+                  <td>
+                    Return a new <b>set</b> that is the <b>Union</b>
+                    of a set and other specified <b>set(s)</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.w3schools.com/python/ref_set_update.asp"
+                     target="_blank"><b>set.update()</b></a>
+                  </td>
+                  <td>
+                    Update a <b>set</b> with
+                    its <b>Union</b> with other <b>set(s)</b>.
+                  </td>
+                </tr>
+              </table><br><br>
+               
               <div class="question">
 
                 <h2><i><u>Questions & Simple Exercises</u></i></h2>
 
                 <ol>
                   <li>
-                    Is a <b>dictionary</b> an <b>iterable</b>? If not, why not?
+                    Is a <b>set</b> an <b>iterable</b>? If not, why not?<br><br>
                     
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
                       <div class="answer"><br>
-                        No! a <b>dictionary</b> cannot be <b>iterable</b> because
-                        its elements are not <b>ordered</b>!
+                        Well, I wanted to say:<br><br>
+                        
+                        <i>"No! a <b>set</b>
+                        cannot be <b>iterable</b> because
+                        its elements are not <b>ordered</b>!<br><br>
                         
                         There can be no concept "<b>next</b>"
-                        unless there is <b>order</b>.
+                        unless there is <b>order</b></i>.<br><br>
+                        
+                        However, a <b>set <i>is</i></b> demonstrably
+                        <b>iterable</b>?<br><br>
+                        
+                        <span class="command">
+                          >>> Set00=set([1,5,3,7,5,0])<br>
+                          >>> Set00<br>
+                          {0, 1, 3, 5, 7}<br>
+                          >>> Set00_iter=iter(Set00)<br>
+                          >>> next(Set00_iter)<br>
+                          0<br>
+                          >>> next(Set00_iter)<br>
+                          1<br>
+                          >>> next(Set00_iter)<br>
+                          3<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        The <b>Builtin Function set()</b> sorts
+                        the <b>list</b> from which it makes the <b>set</b>?
+                        This could be quite sensible as it might
+                        simplifies the detection of duplicate
+                        elements (<b>5</b> in this case). It also does show the
+                        list order is not relevant to the set, supporting the
+                        "<b>Unordered</b>" claim?<br><br>
+                        
+                        Maybe the argument would be, "if an
+                        "<b>Unordered</b>" set can be easily be made
+                        <b>iterable</b>,
+                        why not do it?"<br><br> if it can be
+                        useful and the order of delivery of
+                        <b>next()</b> is not important.<br><br>
+                        
+                        There is an order after all, just not one
+                        that is entirely controllable? Maybe a <b>set</b>
+                        should be defined as "<b>Unpredictably Ordered</b>"
+                        rather than <b>Unordered</b>?
+                        even if it does appear to raise some contradictions.<br><br>
+                        
+                        Just to complete the confusion, it can also be
+                        demonstrated that <b>sets</b> cannot be
+                        accessed by <b>index</b>.<br><br>
+                        
+                        <span class="command">
+                          >>> Set00[0]<br>
+                          Traceback (most recent call last):<br>
+                          &nbsp;&nbsp;File "&lt;stdin&gt", line 1, in &lt;module&gt;<br>
+                          TypeError: 'set' object does not support indexing<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        which is understandable given that the association
+                        between <b>set</b> position and <b>index</b> would be
+                        so unpredictable.
                       </div>
-                    <details>
+                    </details>
                   </li>
                 </ol>
               </div>
-
-            
             </div>
-
           </details>
-        </li><br>
-      </ol>
+        </li>
+
+      </ol><br>
 
       <div class="checkpoint">
 
@@ -10610,18 +11479,6 @@ Click to record your <b>Start</b> time.</button>
 	         </li><br>
             
             <li>
-              <a href="https://docs.python.org/3.7/library/functions.html#func-set"
-	            target="_blank"><b>set()</b></a>
-	           - converts a suitable <b>Data Object</b> to a <b>set</b>
-	         </li><br>
-	       
-            <li>
-              <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
-	            target="_blank"><b>dict()</b></a>
-	           - converts a suitable <b>Data Object</b> to a <b>dictionary</b>
-            </li><br>
-            
-            <li>
               <a href="https://docs.python.org/3.7/library/stdtypes.html#range"
                target="_blank"><b>range()</b></a>
 	           - creates a <b>range</b> object
@@ -10637,10 +11494,201 @@ Click to record your <b>Start</b> time.</button>
               <a href="https://docs.python.org/3.7/library/functions.html#next"
                target="_blank"><b>next()</b></a>
               - returns the "next element" from an <b>iterator</b> object
-            </li>   
+            </li><br>
+            
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
+	            target="_blank"><b>dict()</b></a>
+	           - converts a suitable <b>Data Object</b> to a <b>Dictionary</b>
+	         </li><br>
+          
+            <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-set"
+	            target="_blank"><b>set()</b></a>
+	           - converts a suitable <b>Data Object</b> to a <b>set</b>
+	         </li>
           </ol>
         </p>
         
+        <p>
+          <hh6m>methods introduced or
+          reinforced in this section:</hh6m><br>
+        </p>
+
+        <ol>
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_append.asp"
+              target="_blank"><b>list.append()</b></a>
+            - Adds an element at the end of the <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_clear.asp"
+             target="_blank"><b>list.clear()</b></a>
+            - Removes all the elements from the <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_copy.asp"
+             target="_blank"><b>list.copy()</b></a>
+            - Returns a copy of the <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_count.asp"
+             target="_blank"><b>list.count()</b></a>
+            - Returns the number of elements with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_extend.asp"
+             target="_blank"><b>list.extend()</b></a>
+            - Add the elements of a specified <b>list</b> (or similar),
+            to the end of the current <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_index.asp"
+             target="_blank"><b>list.index()</b></a>
+            - Returns the <b>index</b> of the first
+            element with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_insert.asp"
+             target="_blank"><b>list.insert()</b><a>
+            - Adds an element at the specified position.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_pop.asp"
+             target="_blank"><b>list.pop()</b></a>
+            - Removes the element at the specified position.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_remove.asp"
+             target="_blank"><b>list.remove()</b></a>
+            Removes the first item with the specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_reverse.asp"
+             target="_blank"><b>list.reverse()</b></a>
+            Reverses the order of the <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_list_sort.asp"
+             target="_blank"><b>list.sort()</b></a>
+            - Sorts the <b>list</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_tuple_count.asp"
+             target="_blank"><b>tuple.count()</b></a>
+            - Returns the number of elements with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_tuple_index.asp"
+             target="_blank"><b>tuple.index()</b></a>
+            - Returns the <b>index</b> of the first
+            element with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_range_count.asp"
+             target="_blank"><b>range.count()</b></a>
+            - Returns the number of elements with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_range_index.asp"
+             target="_blank"><b>range.index()</b></a>
+            - Returns the <b>index</b> of the first
+            element with a specified value.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_clear.asp"
+             target="_blank"><b>dict.clear()</b></a>
+            - Removes all the elements from the <b>Dictionary</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_copy.asp"
+             target="_blank"><b>dict.copy()</b></a>
+            - Returns a copy of the <b>Dictionary</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_fromkeys.asp"
+             target="_blank"><b>dict.fromkeys()</b></a>
+            - Returns a <b>Dictionary</b> with the
+            specified <b>keys</b> and <b>values</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_get.asp"
+             target="_blank"><b>dict.get()</b></a>
+            - Returns the <b>value</b> of the specified <b>key</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_items.asp"
+             target="_blank"><b>dict.items()</b></a>
+            - Returns a <b>list</b> containing a <b>tuple</b>
+            for each <b>key value</b> pair.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_keys.asp"
+             target="_blank"><b>dict.keys()</b><a>
+            - Returns a <b>list</b> containing a <b>Dictionary's keys</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_pop.asp"
+             target="_blank"><b>dict.pop()</b></a>
+            - Removes the element with the specified <b>key</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_popitem.asp"
+             target="_blank"><b>dict.popitem()</b></a>
+            - Removes the last <b>key-value</b> pair.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_setdefault.asp"
+             target="_blank"><b>dict.setdefault()</b></a>
+            - Returns the <b>value</b> of the specified <b>key</b>.
+            If the <b>key</b> does not exist: insert the <b>key</b>,
+            with the specified <b>value</b>.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_update.asp"
+             target="_blank"><b>dict.update()</b></a>
+            - "Updates" the <b>Dictionary</b> by appending the
+            specified <b>key-value</b> pairs.
+          </li><br>
+          
+          <li>
+            <a href="https://www.w3schools.com/python/ref_dictionary_values.asp"
+             target="_blank"><b>dict.values()</b></a>
+            - Returns a <b>list</b> of all the <b>values</b>
+            in the <b>Dictionary</b>.
+          </li><br>
+          
+          <li>
+              <a href="https://docs.python.org/3.7/library/functions.html#func-dict"
+	            target="_blank"><b>dict()</b></a>
+	           - converts a suitable <b>Data Object</b> to a <b>dictionary</b>
+          </li>
+        </ol>
+
         <p>
           <hh6m>Points noted or
           reinforced in this section:</hh6m>
@@ -10655,18 +11703,8 @@ Click to record your <b>Start</b> time.</button>
             More than one <b>command</b> per line,
             if <b>commands</b> are separated by
             <b>semicolons</b>.
-          </li><br>
-          
-          <li>
-            
-            
-          </li><br>
-          
-          <li>
-            
-            
           </li>
-       </ol>
+        </ol>
 
       </div>
     </details>
