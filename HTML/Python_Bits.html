@@ -8809,7 +8809,7 @@ Click to record your <b>Start</b> time.</button>
                 <b>tuples</b> are enclosed
                 by <b>Round Brackets ()</b>
               </li>
-            </ul><br><br>
+            </ul><br>
           
             The <b>list</b> is a <b>list</b>, <b><i>NOT</i></b> of <b>Characters</b>!!,
             but of <b>Single Character Strings</b>.<br>
@@ -8963,7 +8963,7 @@ Click to record your <b>Start</b> time.</button>
             
               You can discover all the <b>methods</b> for the <b>class list</b> by typing:<br><br>
             
-              <b>help(list)</b><br><br>
+              &emsp;<b>help(list)</b><br><br>
             
               at the <b>Interpreter</b>, or, they are listed nicely
               <a href="https://www.w3schools.com/python/python_ref_list.asp"
@@ -9490,7 +9490,7 @@ Click to record your <b>Start</b> time.</button>
             
               You can discover all the <b>methods</b> for the <b>class tuple</b> by typing:<br><br>
             
-              <b>help(tuple)</b><br><br>
+              &emsp;<b>help(tuple)</b><br><br>
             
               at the <b>Interpreter</b>.
               Try it, ignoring for now all the methods
@@ -11258,7 +11258,8 @@ Click to record your <b>Start</b> time.</button>
 	               >>>
 	             </span><br><br>
 	
-	             Expanding the syntax for <b>dict()</b> once more, just slightly, one gets:
+	             Expanding the syntax for <b>dict()</b>
+	             once more, just slightly, one gets:<br><br>
 	               
 		            &emsp;<i>dict(&lt;iterable&gt;, **kwargs)</i><br><br>
 	             
@@ -11310,8 +11311,9 @@ Click to record your <b>Start</b> time.</button>
                 <li>
                   a <b>tuple</b> of <b>2 element lists</b>
                 </li><br>
-                  a <b>tuple</b> of <b>2 element tuples</b>
                 <li>
+                  a <b>tuple</b> of <b>2 element tuples</b>
+                </li>
               </ul><br>
               
               Lost yet? Really quite simple. Time for some examples:<br><br>
@@ -11626,7 +11628,7 @@ Click to record your <b>Start</b> time.</button>
                         
                         If you remove elements in <b>LIFO</b> order
                         (from top to bottom) each removal only requires the
-                        adjustment of the <i>"top of <b>Stack</b>"</i> pointer.<br><br>
+                        adjustment of the <i>"top of <b>Stack</b>"</i> pointer.<br>
                         
                         <p class="hint">
                            <b><u>An analogy:</u></b><br><br>
@@ -11651,31 +11653,187 @@ Click to record your <b>Start</b> time.</button>
                            Every book removal would affect all the books
                            in the pile and involves a lot more
                            work.<br><br>
-                         <p>
+                         <p><br>
                       </div>
                     </details>
                   </li><br>
                   
                   <li>
-                    Something about popitem<br>
-                    message about the order off a dict<br>
-                    does it claim to be ordered?#<br>
-                    here it is lifo see:<br>
-                  https://docs.python.org/3/library/stdtypes.html?highlight=dictionary#dict.popitem<br>
-                  https://docs.python.org/2/library/collections.html#ordereddict-objects<br>
-                  changes after 3.6<br>
-                  https://stackoverflow.com/questions/39980323/are-dictionaries-ordered-in-python-3-6?rq=1<br>
-                  https://mail.python.org/pipermail/python-dev/2017-December/151283.html<br>
-                  </li><br>
-                  <li>
-                    Is {123} same as {321} now dicts are ordered?
+                    It has already been established that:<br><br>
+                    
+                    <ul>
+                      <li>
+				                    <b>next()</b>, can be used
+				                    with an <b>iterator</b>,
+				                    to iterate through
+				                    a <b>Dictionary</b>
+				                    returning its <b>Keys</b>
+				                    in <b>FIFO</b> order.
+				                  </li><br>
+                      <li>
+                        <b>dict.popitem()</b>, used serially,
+				                    reads through a <b>dictionary</b> returning
+				                    <b>Keys</b> in <b>LIFO</b>
+				                    sequence and removing
+				                    <b>Key-Value Pairs</b>, as it goes.
+                      </li>
+                    </ul><br>
+                    
+                    Make a small <b>Dictionary</b> and
+                    demonstrate the two assertions
+                    made above.<br><br>
+                    
+                    Print the <b>Dictionary</b> after
+                    each pass through its <b>Elements</b>.<br><br>
+                    
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
                       <div class="answer"><br>
                       
+                        <span class="command16">
+                          >>> Dict_Crown={'Victoria':1837,'Edward_VII':1901,'George_V':1910}<br>
+                          >>> print(Dict_Crown)<br>
+                          {'Victoria': 1837, 'Edward_VII': 1901, 'George_V': 1910}<br>
+                          >>> <br>
+                          >>> <br>
+                          >>> Dict_Crown_iter=iter(Dict_v)<br>
+                          >>> next(Dict_Crown_iter)<br>
+                          'Victoria'<br>
+                          >>> next(Dict_Crown_iter)<br>
+                          'Edward_VII'<br>
+                          >>> next(Dict_Crown_iter)<br>
+                          'George_V'<br>
+                          >>> <br>
+                          >>> <br>
+                          >>> print(Dict_Crown)<br>
+                          {'Victoria': 1837, 'Edward_VII': 1901, 'George_V': 1910}<br>
+                          >>> <br>
+                          >>> <br>
+                          >>> Dict_Crown.popitem()<br>
+                          ('George_V', 1910)<br>
+                          >>> Dict_Crown.popitem()<br>
+                          ('Edward_VII', 1901)<br>
+                          >>> Dict_Crown.popitem()<br>
+                          ('Victoria', 1837)<br>
+                          >>> <br>
+                          >>> <br>
+                          >>> print(Dict_Crown)<br>
+                          {}<br>
+                          >>> 
+                        </span><br><br>
+                        
+                        A <b>Dictionary</b> to associate
+                        recent British Monarchs with the
+                        year of their coronation.<br><br>
+                        
+                        <b>next()</b> runs though the
+                        Monarchs from first to last.<br><br>
+                        
+                        The <b>Dictionary</b> is unchanged
+                        by next().<br><br>
+                        
+                        <b>dict.popitem()</b> runs though the
+                        Monarchs from last to first.<br><br>
+                        
+                        The <b>Dictionary</b> is <b>Empty</b> after being
+                        savaged by <b>dict.popitem()</b>.<br><br>
                       </div>
                     </details>
+                  </li><br>
+
+                  <li>
+                    Consider the assertion:<br><br>
+                 
+                    <i>"Two <b>Python Dictionaries</b>
+                    that are comprised of exactly the
+                    same elements, but in different orders,
+                    are functionally equivalent for all
+                    core purposes."</i><br><br>
+                    
+                    Do you agree?<br><br>
+
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+		                      If one accepts the <i>"core purpose"</i> of a
+		                      <b>Dictionary</b> is to facilitate access
+		                      to <b>Values</b> by reference to <b>Keys</b>,
+		                      then the assertion is undeniable.<br><br>
+		                      
+		                      The only time the <b>Order</b> of the <b>Dictionary
+		                      Elements</b> is apparent is when they are being
+		                      iterated through with the
+		                      <b>Builtin Function next()</b> in <b>FIFO</b> order
+		                      or read and destroyed by the
+		                      <b>Dictionary method dict.popitem()</b>
+		                      in <b>LIFO order</b>.<br><br>
+		                      
+		                      Generally, both <b>next()</b> and <b>dict.popitem()</b>
+		                      are applied to the whole <b>Dictionary</b>. When
+		                      this is the case, it could be argued
+		                      the order in which the <b>Dictionary Elements</b>
+		                      are processed is of little consequence.<br><br>
+		                      
+		                      I think I accept the assertion, with some
+		                      small reservation. <br><br>
+	                     </div>
+                    </details>
+                  </li><br>
+                  
+                  <li> 
+                    Make two <b>Dictionaries</b> whose
+                    contents are identical except for order.<br><br>
+                    
+                    Does <b>Python</b> regard these <b>dictionaries</b>
+                    as equal?<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer"><br>
+                      
+                        <span class="command15">
+                          >>> #<br>
+                          ... # Dictionary 1, made by simple assignment<br>
+                          ... #<br>
+                          ... Dict_EndCodons00={'ATG':'Start','TAA':'Stop','TAG':'Stop','TGA':'Stop'}<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Dictionary 2, made from lists and tuples and a Keyword Argument<br>
+                          ... #<br>
+                          ... Dict_EndCodons01=dict([('TGA','Stop'),['TAG','Stop'],('TAA','Stop')], \<br>
+                          ... ATG='Start')<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Check they are of equivalent content but different order<br>
+                          ... #<br>
+                          ... print(Dict_EndCodons00,Dict_EndCodons01,sep='\n')<br>
+                          {'ATG': 'Start', 'TAA': 'Stop', 'TAG': 'Stop', 'TGA': 'Stop'}<br>
+                          {'TGA': 'Stop', 'TAG': 'Stop', 'TAA': 'Stop', 'ATG': 'Start'}<br>
+                          >>><br> 
+                          >>> #<br>
+                          ... # Are they the same in the all knowing eyes of Python?<br>
+                          ... #<br>
+                          ... Dict_EndCodons00 == Dict_EndCodons01<br>
+                          True<br>
+                          >>> <br>
+                          >>> #<br>
+                          ... # Yes!!! Sayeth Python<br>
+                          ... #<br>
+                          ... <br>
+                          >>> 
+                        </span><br><br>
+                        
+                        <b><i>Balderdash</i></b>!! Of course the are not the same!<br><br>
+                        
+                        But, <b>Python</b>, sensibly, takes the
+                        pragmatic path and declares equality as
+                        that is the most practically useful
+                        way to view things.<br><br>
+                      </div>
+                    </details><br>
                   </li>
                 </ol>
               </div>
