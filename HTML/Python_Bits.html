@@ -11011,7 +11011,7 @@ Click to record your <b>Start</b> time.</button>
               
               A <b>Python Dictionary</b> has the form:<br><br>
               
-              <i>{&lt;Key:Value&gt;, &lt;Key:Value&gt;,
+              &emsp;<i>{&lt;Key:Value&gt;, &lt;Key:Value&gt;,
               &lt;Key:Value&gt;, &lt;Key:Value&gt;, &lt;Key:Value&gt;, ... }</i><br><br>
               
               The number of <i>&lt;Key:Value&gt;</i>
@@ -11019,13 +11019,13 @@ Click to record your <b>Start</b> time.</button>
               
               An <b>Empty Dictionary</b> is therefore represented thus:<br><br>
               
-              <b>{}</b><br><br>
+              &emsp;<b>{}</b><br><br>
 	             
               For example, a <b>Dictionary</b>
               for associating <b>Base Codes</b> with
               <b>Base Names</b> might be: <br><br>
 
-              <b>{'A':'Adenine', 'C':'Cytosine','G':'Guanine','T':'Thymine'}</b><br><br>
+              &emsp;<b>{'A':'Adenine', 'C':'Cytosine','G':'Guanine','T':'Thymine'}</b><br><br>
               
               Useful(?), should one forget what the letters mean?<br><br>
               
@@ -11035,7 +11035,9 @@ Click to record your <b>Start</b> time.</button>
               <b>Variable Name</b> assigned to the
               example <b>Dictionary</b> above be <b>Base_Resolver</b>:<br><br>
               
-              <b>Base_Resolver['A']</b> would return <b>'Adenine'</b>.<br><br>
+              &emsp;<b>Base_Resolver['A']</b><br><br>
+              
+              would return <b>'Adenine'</b>.<br><br>
               
               Why not try it?<br><br>
               
@@ -11152,7 +11154,7 @@ Click to record your <b>Start</b> time.</button>
                
               A simplified syntax for <b>dict()</b> is:<br><br>
               
-              <i>dict(**kwargs)</i><br><br>
+              &emsp;<i>dict(**kwargs)</i><br><br>
               
               where <i>**kwargs</i> translates to
               <i>"Between <b>0</b> and <b>Lots</b>
@@ -11166,7 +11168,7 @@ Click to record your <b>Start</b> time.</button>
               
               So the command:<br><br>
               
-              <b>dict(a=1,b=2)</b><br><br>
+              &emsp;<b>dict(a=1,b=2)</b><br><br>
               
               Might be read as <i>"Make me a <b>Dictionary</b>
               in which <b>a</b> (the <b>Key</b>) is associated with
@@ -11179,24 +11181,23 @@ Click to record your <b>Start</b> time.</button>
               
               <ul>
                 <li>
-                  Do not need to be enclosed in quotes to
-                  eliminate their interpretation as <i>"the
-                  <b>Value</b> of a
-                  <b>Variable Name</b> in use
-                  for another purpose"</i>.<br><br>
+                  <b><i>must not</i></b> be enclosed in quotes!<br><br>
                   
-                  You can use quotes if you wish, but
-                  they will be ignored.
+                  If they are (e.g. <b>"a"=93</b>,
+                  or <b>'r'=32</b>), the <b>Interpreter</b> will
+                  imagine you wish to assign
+                  a <b>Value</b> to a <b>String</b>,
+                  which does not make sense.
                 </li><br>
                 <li>
-                  Can be the same as <b>Variable
+                  can be the same as <b>Variable
                   Names</b> already in use as there
                   is no confusion once they are
                   incorporated into the new
                   <b>Dictionary</b>.
                 </li><br>
                 <li>
-                  They must obey the normal rules
+                  must obey the normal rules
                   for <b>Variable Names</b> (e.g.
                   no <b>Reserved Words</b>)
                 </li>
@@ -11204,11 +11205,188 @@ Click to record your <b>Start</b> time.</button>
               
               Try it:<br><br>
               
+              <span class="command">
+                >>> Dictionary00=dict(a=1, b=2, c=3, or=4)<br>
+                &nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+                Dictionary00=dict(a=1, b=2, c=3, or=4)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;
+                ^<br>
+                SyntaxError: invalid syntax<br>
+                >>>
+              </span><br><br>
+              
+              The <b>Reserved Word</b> "<b>or</b>" is not
+              allowed as a <b>Variable Name</b>
+              in this context.<br><br>
+              
+              <span class="command">
+                >>> c=94<br>
+                >>> Dictionary00=dict(a=1, b=2, c=3, d=4)<br>
+                >>> print(Dictionary00)<br>
+                {'a': 1, 'b': 2, 'c': 3, 'd': 4}<br>
+                >>> print(Dictionary00['c'], c, sep='\n')<br>
+                3<br>
+                94<br>
+                >>> 
+              </span><br><br>
+               
+              That is better! Not that the <b>Variable c</b>
+              set to <b>94</b> is distinct from the
+              <b>Variable c</b> set to <b>3</b> as an
+              <b>Argument</b> for <b>dict()</b>.
+               
+              A marginally expanded syntax for <b>dict()</b> is:<br><br>
+              
+	             &emsp;<i>dict(&lt;dict&gt;, **kwargs)</i><br><br>
+	             
+	             Everything works as before except the
+	             <b>Keyword Arguments</b> are appended
+	             to the current
+	             contents of the <b>Dictionary</b> that is
+	             the first <b>dict() Argument</b>.<br><br>
+	             
+	             <span class="command">
+		              >>> Dictionary00=dict(a=1, b=2, c=3, d=4)<br>
+	               >>> Dictionary01=dict(Dictionary00,aa=11,
+	               bb=22, cc=33, dd=44)<br>
+	               >>> print(Dictionary00, Dictionary01, sep='\n')<br>
+	               {'a': 1, 'b': 2, 'c': 3, 'd': 4}<br>
+	               {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'aa':
+	               11, 'bb': 22, 'cc': 33, 'dd': 44}<br>
+	               >>>
+	             </span><br><br>
+	
+	             Expanding the syntax for <b>dict()</b> once more, just slightly, one gets:
+	               
+		            &emsp;<i>dict(&lt;iterable&gt;, **kwargs)</i><br><br>
+	             
+              Well, a <b>Dictionary</b> is <b>iterable</b>, so
+              this syntax includes the one
+              we have already discussed.<br><br>
+              
+              <b>lists</b> and <b>tuples</b> are also
+              <b>iterables</b>, so this syntax suggests that
+              the first <b>Argument</b> of
+              <b>dict()</b> can be a <b>list</b>
+              or a <b>tuple</b>
+              (or any other <b>iterable</b>,
+              but <b>lists</b> and <b>tuples</b> are
+              enough for now).<br><br>
+              
+              This is true, <b><i>BUT</i></b>,
+              what the syntax definition above does not
+              stipulate is that only <b>iterables</b>
+              that can represent a series of
+              <b>Key-Value Pairs</b> will work.<br><br>
+              
+              Such an <b>itereable</b>
+              (<b>dict</b>, <b>list</b> or <b>tuple</b>
+              if you prefer) must:<br><br>
+              
+              <ul>
+                <li>
+                  have elements that are all <b>iterables</b>.
+                </li><br>
+                <li>
+                  each element <b>iterable</b> must have
+                  exactly <b>2</b> elements that can represent
+                  a legitimate <b>Dictionary Key-Value Pair</b>.
+                </li>
+              </ul><br>
+              
+              This is trivially true if the <b>iterable</b> is a <b>dict</b>.<br><br>
+              
+              Other possibilities include:<br><br>
+              
+              <ul>
+                <li>
+                  a <b>list</b> of <b>2 element lists</b>
+                </li><br>
+                <li>
+                  a <b>list</b> of <b>2 element tuples</b>
+                </li><br>
+                <li>
+                  a <b>tuple</b> of <b>2 element lists</b>
+                </li><br>
+                  a <b>tuple</b> of <b>2 element tuples</b>
+                <li>
+              </ul><br>
+              
+              Lost yet? Really quite simple. Time for some examples:<br><br>
+              
+	             <span class="command">
+                >>> #<br>
+                ... # Make a dict from a list of 2 element lists<br>
+                ... #<br>
+                ... List_KV_List=[['a',1],['b',2],['c',3]]<br>
+                >>> Dict00=dict(List_KV_List)<br>
+                >>> print(List_KV_List,Dict00,sep='\n')<br>
+                [['a', 1], ['b', 2], ['c', 3]]<br>
+                {'a': 1, 'b': 2, 'c': 3}<br>
+                >>> 
+	             </span><br><br>
+
+	             <span class="command">                        
+                >>> #<br>
+                ... # Make a dict from a list of 2 element lists<br>
+                ... # and a few Keyword Arguments<br>
+                ... #<br>
+                ... List_KV_List=[['a',1],['b',2],['c',3]]<br>
+                >>> Dict01=dict(List_KV_List,dd=44,ee=55,ff=66)<br>
+                >>> print(Dict01)<br>
+                {'a': 1, 'b': 2, 'c': 3, 'dd': 44, 'ee': 55, 'ff': 66}<br>
+                >>> 
+	             </span><br><br>
+	             
+	             <span class="command">
+                >>> #<br>
+                ... # Make a dict from a list of 2-tuples<br>
+                ... # and a few Keyword Arguments<br>
+                ... #<br>
+                ... List_KV_Tuple=[('a',1),('b',2),('c',3)]<br>
+                >>> Dict02=dict(List_KV_Tuple,dd=44,ee=55,ff=66)<br>
+                >>> print(List_KV_Tuple,Dict02,sep='\n')<br>
+                [('a', 1), ('b', 2), ('c', 3)]<br>
+                {'a': 1, 'b': 2, 'c': 3, 'dd': 44, 'ee': 55, 'ff': 66}<br>
+                >>> 
+	             </span><br><br>
+	             
+	             <span class="command">
+                >>> #<br>
+                ... # Make a dict from a tuple of 2-tuples<br>
+                ... #<br>
+                ... Tuple_KV_Tuple=(('a',1),('b',2),('c',3))<br>
+                >>> Dict03=dict(Tuple_KV_Tuple)<br>
+                >>> print(Tuple_KV_Tuple,Dict03,sep='\n')<br>
+                (('a', 1), ('b', 2), ('c', 3))<br>
+                {'a': 1, 'b': 2, 'c': 3}<br>
+                >>> 
+	             </span><br><br>
+	             
+	             Hopefully all clear now?<br><br>
+	             
+	             Making a <b>Dictionary</b> purely from
+	             <b>Keyword Arguments</b> restricts the
+	             <b>Dictionary Keys</b> to objects that
+	             follow the rules for <b>Variable Names</b>.<br><br>
+	             
+	             Using an <b>iterable Argument</b> for <b>dict()</b>
+	             allows <b>Dictionary Keys</b> to be
+	             anything that can be used to
+	             generate a reference to its associated <b>Value</b>.<br><br>
+	             
+	             Hopefully, I will think of an
+	             exercise to illustrate an occasion for
+	             which this restriction is an issue.<br><br>
+
               <hh5m>Dictionary Methods</hh5m><br><br>
               
-              You can discover all the <b>methods</b> for the <b>class dict</b> by typing:<br><br>
+              You can discover all the <b>methods</b>
+              for the <b>class dict</b> by typing:<br><br>
             
-              <b>help(dict)</b><br><br>
+              &emsp;<b>help(dict)</b><br><br>
             
               at the <b>Interpreter</b>, or, they are listed nicely
               <a href="https://www.w3schools.com/python/python_ref_dictionary.asp"
@@ -11475,7 +11653,7 @@ Click to record your <b>Start</b> time.</button>
                            work.<br><br>
                          <p>
                       </div>
-                    <details>
+                    </details>
                   </li><br>
                   
                   <li>
@@ -11567,7 +11745,7 @@ Click to record your <b>Start</b> time.</button>
               
               You can discover all the <b>methods</b> for the <b>class set</b> by typing:<br><br>
             
-              <b>help(set)</b><br><br>
+              &emsp;<b>help(set)</b><br><br>
             
               at the <b>Interpreter</b>, or, they are listed nicely
               <a href="https://www.w3schools.com/python/python_ref_set.asp"
