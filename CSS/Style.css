@@ -510,7 +510,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: Silver;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Prerequisites */
@@ -519,7 +519,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: SpringGreen;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Language Implementation */
@@ -528,7 +528,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: LightSalmon;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Data Elements & Basic Language Features */
@@ -537,7 +537,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: Turquoise;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Builtin Functionality */
@@ -546,7 +546,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: CornFlowerBlue;
-    width: 425px;
+    width: 515px;
 }
 /* class for Major Sections Summary - Modules */
 
@@ -554,7 +554,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: Turquoise;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Language Extension */
@@ -563,7 +563,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: Moccasin;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Major Sections Summary - Control & Structure */
@@ -572,7 +572,7 @@ span.minsectsum {
     display: inline-block;
     outline:none;
     background: Gold;
-    width: 425px;
+    width: 515px;
 }
 
 /* class for Sections List*/

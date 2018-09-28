@@ -8910,7 +8910,7 @@ Click to record your <b>Start</b> time.</button>
 
               <hh5m>list creation</hh5m><br><br>
                        
-              Like most <b>Python Data Objects</b>, <b>list Variables</b>
+              Like most <b>Python Data Objects</b>, <b>list Objects</b>
               are commonly create by <b>Simple Assignment</b>.<br><br>
             
               <span class="command">
@@ -9435,7 +9435,7 @@ Click to record your <b>Start</b> time.</button>
   
               <hh5m>tuple creation</hh5m><br><br>
                        
-              Like most <b>Python Data Objects</b>, <b>tuple Variables</b>
+              Like most <b>Python Data Objects</b>, <b>tuple Objects</b>
               are commonly create by <b>Simple Assignment</b>.<br><br>
               
               <span class="command">
@@ -10615,7 +10615,7 @@ Click to record your <b>Start</b> time.</button>
                               
               <span class="command16">
                 >>> #<br>
-                ... # Make an assortment of iterable with identical elements<br>
+                ... # Make an assortment of iterables with identical elements<br>
                 ... #<br>
                 ... <br>
                 >>> List00=[1,2,3,4,5]; Tuple00=(1,2,3,4,5); Range00=range(1,6,1)<br>
@@ -11112,7 +11112,7 @@ Click to record your <b>Start</b> time.</button>
 
               <hh5m>Dictionary creation</hh5m><br><br>
                        
-              Like most <b>Python Data Objects</b>, <b>dict Variables</b>
+              Like most <b>Python Data Objects</b>, <b>dict Objects</b>
               are commonly create by <b>Simple Assignment</b>, as illustrated
               above (<b>Base_Resolver</b>) and once more, for luck, here:<br><br>
             
@@ -11865,9 +11865,10 @@ Click to record your <b>Start</b> time.</button>
               Every <b>set</b> element is <b>Unique</b> (no duplicates)
               and must be <b>Immutable</b>.<br><br>
               
-              <b>Elements</b> have to be <b>Unique</b> as set elements
+              One practical reason that  <b>Elements</b> have
+              to be <b>Unique</b> is that set elements
               are referenced by their <b>Value</b>.
-              So, <b>Python</b> could not distinguish between
+              <b>Python</b> could therefore not distinguish between
               two <b>set</b> elements with the same <b>Value</b>.<br><br>
 
               <b>Elements</b> have to be <b>Immutable</b>, not because of any
@@ -11886,18 +11887,198 @@ Click to record your <b>Start</b> time.</button>
               
               Accordingly, <b>Python dictates</b> that,
               <a href="https://stackoverflow.com/questions/27113676/why-is-it-not-possible-to-have-a-set-as-an-element-of-a-set"
-	            target="_blank">in general, all mutable
-	           types are not <b>hashable</b></a> (that is,
-	           all <b>hashable</b> objects are <b>Immutable</b>.<br><br>
-	           
-	           In particular, <b>Python dictates</b>
-	           that all <b>set</b> elements are <b>Immutable</b>.<br><br>
+	              target="_blank">in general, all mutable
+			           types are not <b>hashable</b></a> (that is,
+			           all <b>hashable</b> objects are <b>Immutable</b>.<br><br>
+			           
+			           In particular, <b>Python dictates</b>
+			           that all <b>set</b> elements are <b>Immutable</b>.<br><br>
               
-              In addition, <b>Immutable</b> objects are more memory efficient.<br><br>
+              In addition, <b>Immutable</b> objects
+              are more memory efficient.<br><br>
+              
+              A Python <b>set</b> has the form:<br><br>
 
+              &emsp;<i>{&lt;set item&gt;, &lt;set item&gt;,
+              &lt;set item&gt;, &lt;set item&gt;, ... }</i><br><br>
+
+	             The number of &lt;set item&gt; elements
+	             can vary between <b>0</b> and <b>Lots</b>.<br><br>
+
+              An <b>Empty Dictionary</b>, following
+              convention, would be represented thus:<br><br>
+
+              &emsp;<b>{}</b><br><br>
+
+              However, <b>{}</b> has already been
+              designated to represent an <b>Empty
+              dict</b>! So the only way to reference
+              the <b>Empty set</b> is:<br><br>
+
+              &emsp;&emsp;<b>set()</b><br><br>
+              
+              <p class="hint">
+                There is also a <b>Data type frozenset</b>,
+                which is simple a immutable
+                version of a <b>set</b>.<br><br>
+                
+                So <b>set</b> is to <b>frozenset</b>
+                as <b>list</b> is to <b>tuple</b>.<br><br>
+                
+                The main justification of
+                <b>frozensets</b> is to allow <b>sets</b> to
+                include <b>set Elements</b>.<br><br>
+                
+                <b>Python</b> will not allow a normal <b>set</b> to
+                include a <b>set</b> as <b>sets</b> are mutable
+                (and so not hashable in <b>Python</b>).<br><br>
+                
+                However, a <b>set <i>MAY</i></b> include a <b>frozenset</b>,
+                as it is immutable (and so <b>Python</b> hashable)
+                and is in all ways that normally matter,
+                the same as a <b>set</b>.<br><br>
+                
+                That is all I will say about <b>frozensets</b>,
+                unless I can think of a neat exercise
+                that needs one of course.
+              </p>
+              
               <hh5m> set creation</hh5m><br><br>
+              
+              Like most <b>Python Data Objects</b>, <b>set Objects</b>
+              are commonly create by <b>Simple Assignment</b>, as illustrated
+              here:<br><br>
+            
+              <span class="command">
+                >>> Set_Empty=set()<br>
+                >>> Set_V_HydroAA={'V','I','L','M','F','W','C','M'}<br>
+                >>> print(Set_Empty,Set_V_HydroAA,sep='\n')<br>
+                set()<br>
+                {'M', 'C', 'V', 'I', 'L', 'W', 'F'}<br>
+                >>>  
+	             </span><br><br>
+	             
+	             Note that duplication of <b>Key</b> ('<b>M</b>' in this case) was
+	             eliminated.<br><br>
+	         
+	             Alternatively, <b>sets</b> can be
+	             created using the <b>Builtin Function set()</b>.<br><br>
+	             
+	             How, is explained in the next subsection.<br><br>
                  
               <hh5m> set Builtin Functions</hh5m><br><br>
+
+              As a <b>set</b> certainly has
+              <a href="https://en.wikipedia.org/wiki/Cardinality"
+               target="_blank"><b>cardinality</b></a>,
+              <b>len()</b>, will work. It simply
+              returns the number of <b>set Elements</b>
+              in the <b>set</b>.<br><br>
+              
+              <a href="https://docs.python.org/3.7/library/functions.html#func-set"
+               target="_blank">set()</a> is a
+              function to create<b>Python sets</b>.<br><br>
+               
+              A simplified syntax for <b>set()</b> is:<br><br>
+              
+              &emsp;<i>set(&lt;iterable&gt;)</i><br><br>
+              
+              There can be <b>one</b> <i>&lt;iterable&gt;</i> or <b>none</b>.
+              As has already been seen, if set is given no <b>Argument</b>,
+              it returns an <b>Empty set</b>.<br><br>
+              
+              If an <b>Argument</b> is provided, the <b>Data types</b>
+              that would be accepted (<b>iterables</b>)
+              would include <b>list</b>, <b>tuple</b>,
+              <b>range</b>, <b>dict</b> or <b>set</b>.<br><br>
+              
+              It would seem a little perverse to use
+              a <b>set</b> to create a <b>set</b>?
+              One would only achieve
+              a copy of the original which
+              can be done more
+              sensibly with <b>set.copy()</b>
+              (see <b>methods</b> below).
+              However, here we discuss the
+              possible without
+              questioning the sanity.<br><br>
+              
+              Time to try it!<br><br>
+              
+              <span class="command">
+                >>> List_AA_Aliphatic=['A','I','L','M','V']<br>
+                >>> Set_AA_Aliphatic=set(List_AA_Aliphatic)<br>
+                >>> type(List_AA_Aliphatic); type(Set_AA_Aliphatic)<br>
+                &lt;class 'list'&gt;<br>
+                &lt;class 'set'&gt;<br>
+                >>> print(List_AA_Aliphatic,Set_AA_Aliphatic,sep='\n')<br>
+                ['A', 'I', 'L', 'M', 'V']<br>
+                {'L', 'M', 'I', 'V', 'A'}<br>
+                >>> 
+              </span><br><br>
+              
+              <b>list</b> to <b>set</b>. Straight forward?<br><br>
+              
+              <span class="command">
+                >>> Tuple_AA_Aromatic=('F','W','Y')<br>
+                >>> Set_AA_Aromatic=set(Tuple_AA_Aromatic)<br>
+                >>> type(Tuple_AA_Aromatic); type(Set_AA_Aromatic)<br>
+                &lt;class 'tuple'&gt;<br>
+                &lt;class 'set'&gt;<br>
+                >>> print(Tuple_AA_Aromatic,Set_AA_Aromatic,sep='\n')<br>
+                ('F', 'W', 'Y')<br>
+                {'F', 'W', 'Y'}<br>
+                >>> 
+              </span><br><br>
+              
+              <b>tuple</b> to <b>set</b>. Again, straight forward?<br><br>
+              
+
+              <span class="command">
+                >>> Set_Whimsical_Range=set(range(23,94,11))<br>
+                >>> type(Set_Whimsical_Range)<br>
+                &lt;class 'set'&gt;<br>
+                >>> print(Set_Whimsical_Range)<br>
+                {34, 67, 45, 78, 23, 56, 89}<br>
+                >>> 
+              </span><br><br>
+              
+              <b>range</b> to <b>set</b>.<br><br>
+              
+              <span class="command">
+                >>> Dict_AA_Charged={'D':'Acidic','E':'Acidic','R':'Basic','H':'Basic','K':'Basic'}<br>
+                >>> Set_AA_Charged=set(Dict_AA_Charged)<br>
+                >>> type(Dict_AA_Charged); type(Set_AA_Charged)<br>
+                &lt;class 'dict'&gt;<br>
+                &lt;class 'set'&gt;<br>
+                >>> print(Dict_AA_Charged, Set_AA_Charged, sep='\n')<br>
+                {'D': 'Acidic', 'E': 'Acidic', 'R': 'Basic', 'H': 'Basic', 'K': 'Basic'}<br>
+                {'E', 'H', 'D', 'K', 'R'}<br>
+                >>> 
+              </span><br><br>
+              
+              <b>dict</b> to <b>set</b>. The
+              <b>Values</b> get lost, only the
+              <b>Keys</b> appear in the <b>set</b>.<br><br>
+              
+              <span class="command">
+                >>> Set_AA_Unique_IN={'G','P'}<br>
+                >>> Set_AA_Unique_OUT=set(Set_AA_Unique_IN)<br>
+                >>> type(Set_AA_Unique_IN); type(Set_AA_Unique_OUT)<br>
+                &lt;class 'set'&gt;<br>
+                &lt;class 'set'&gt;<br>
+                >>> print(Set_AA_Unique_IN,Set_AA_Unique_OUT,sep='\n')<br>
+                {'G', 'P'}<br>
+                {'G', 'P'}<br>
+                >>> Set_AA_Unique_IN == Set_AA_Unique_OUT<br>
+                True<br>
+                >>> 
+              </span><br><br>
+              
+              <b>set</b> to <b>set</b>. For completeness, I think
+              using <b>set.copy()</b> (see below) is
+              much the better way to make a
+              new copy of a <b>set</b>.<br><br>
 
               <hh5m>set Methods</hh5m><br><br>
               
@@ -12174,8 +12355,8 @@ Click to record your <b>Start</b> time.</button>
                         cannot be <b>iterable</b> because
                         its elements are not <b>ordered</b>!<br><br>
                         
-                        There can be no concept "<b>next</b>"
-                        unless there is <b>order</b></i>.<br><br>
+                        There can be no concept '<b>next</b>'
+                        unless there is <b>order</b>"</i>.<br><br>
                         
                         However, a <b>set <i>is</i></b> demonstrably
                         <b>iterable</b>?<br><br>
@@ -12194,13 +12375,22 @@ Click to record your <b>Start</b> time.</button>
                           >>> 
                         </span><br><br>
                         
-                        The <b>Builtin Function set()</b> sorts
+                        The <b>Builtin Function set()</b> appears to sort
                         the <b>list</b> from which it makes the <b>set</b>?
-                        This could be quite sensible as it might
-                        simplifies the detection of duplicate
-                        elements (<b>5</b> in this case). It also does show the
-                        list order is not relevant to the set, supporting the
-                        "<b>Unordered</b>" claim?<br><br>
+                        Possibly because this
+                        simplifies the detection and elimination of duplicate
+                        elements (<b>5</b> in this case)?<br><br>
+                        
+                        It also
+                        demonstrates that the
+                        <b>list</b> order is not relevant to the set.<br><br>
+                        
+                        The <b>set</b> must have an order,but not one that
+                        is specified or guaranteed by <b>Python</b>.
+                        The claim of <b>Python</b> that <b>sets</b> are
+                        "<b>Unordered</b>" might possible be restated
+                        (more accurately?) as <i>"<b>sets</b>
+                        are ordered unpredictably"</i>.<br><br>
                         
                         Maybe the argument would be, "if an
                         "<b>Unordered</b>" set can be easily be made
@@ -12209,15 +12399,11 @@ Click to record your <b>Start</b> time.</button>
                         useful and the order of delivery of
                         <b>next()</b> is not important.<br><br>
                         
-                        There is an order after all, just not one
-                        that is entirely controllable? Maybe a <b>set</b>
-                        should be defined as "<b>Unpredictably Ordered</b>"
-                        rather than <b>Unordered</b>?
-                        even if it does appear to raise some contradictions.<br><br>
-                        
-                        Just to complete the confusion, it can also be
-                        demonstrated that <b>sets</b> cannot be
-                        accessed by <b>index</b>.<br><br>
+                        <b>Unordered</b> or <b>Unpredictably Ordered</b>,
+                        either way, access by positional <b>Index</b>
+                        (and/or <b>Slicing</b>), whilst possible, makes
+                        absolutely no sense at all and is not
+                        allowed by <b>Python</b>.<br><br>
                         
                         <span class="command">
                           >>> Set00[0]<br>
@@ -12226,10 +12412,6 @@ Click to record your <b>Start</b> time.</button>
                           TypeError: 'set' object does not support indexing<br>
                           >>> 
                         </span><br><br>
-                        
-                        which is understandable given that the association
-                        between <b>set</b> position and <b>index</b> would be
-                        so unpredictable.
                       </div>
                     </details>
                   </li>
@@ -12654,7 +12836,7 @@ Click to record your <b>Start</b> time.</button>
     <details class="msect">
     <summary>
       <span class="msectsumext"><b>Exercise - Part VIII:</b>
-              Extending Python using Modules
+              Extending Python using Standard Modules and Packages
       <span>
     </summary>
 
@@ -12664,53 +12846,56 @@ Click to record your <b>Start</b> time.</button>
 
       <div class="ramble">
 
-        <h2>Extending Python using Modules</h2>
+        <h2>
+          <a href="https://www.geeksforgeeks.org/python-modules/"
+           target="_blank">Extending Python using Standard Modules and Packages</a>
+        </h2> <br><br>
+        
+        
+        
+        <a href="https://docs.python.org/3.7/py-modindex.html"
+         target="_blank">Index of Standard Python modules</a><br><br>
+         
+        <a href="https://www.artima.com/intv/pythonP.html"
+         target="_blank">extensible - guido</a> 4th section<br><br>
+            
+         <a href="https://docs.python.org/3/reference/import.html#the-import-system"
+         target="_blank">import system</a> tough read<br><br>
+         
+         <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
+         target="_blank">Guido_van_Rossum</a><br><br>
+       
+         
+		      <img class="centimg" src="Images/package_closed.png"
+		           alt="Fiddle!" height="76" width="377"></a><br><br>
+		      <img class="centimg" src="Images/package_open.png"
+		           alt="Fiddle!" height="143" width="411"></a><br><br>
+		      <img class="centimg" src="Images/package_dir.png"
+		           alt="Fiddle!" height="198" width="166"></a><br><br>		
+		
+				    <hh4>Extensibility</hh4><br><br>
+				    
+				    The core provision of Python provides much of what
+				    is required for most applications. However, it does
+				    not try as hard as many other Languages to be comprehensive.<br><br>
+				    
+				    There are some omissions that are, at first glance,
+				    quite surprising. For example, the lack of
+				    Mathematical Functions (sin, cos, tan, log ...)
+				    or any sort of capacity to generate Random Numbers.<br><br>
+				    
+				    This sparse approach of deliberate and compensated by
+				    designing Python to be easily expanded by,
+				    primarily, the inclusion of external libraries
+				    defining extra Data Classes,  Functions, Data Objects
+				    etc. to suit the needs of any particular Application.<br><br>
+				    
+				    
 
-      </div><br>
 
-      <ol>
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>if</hh4>
-            </span>
-          </summary>
 
-            <div class="minsect"><br>
 
-            </div>
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>else</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect"><br>
-            </div>
-
-          </details>
-        </li><br>
-
-        <li>
-          <details>
-          <summary>
-            <span class="minsectsum">
-              <hh4>elif</hh4>
-            </span>
-          </summary>
-
-            <div class="minsect"><br>
-            </div>
-
-          </details>
-        </li><br>
-      </ol>
+      </div><br><br>
 
       <div class="checkpoint">
 
@@ -14519,7 +14704,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise1i.py"
+                     "../Solutions-Python/Loops_Exercise1i.txt"
                      target="_blank">
                             <b>Loops_Exercise1i.py</b></a>
                 </div>
@@ -14543,7 +14728,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise1ii.py"
+                     "../Solutions-Python/Loops_Exercise1ii.txt"
                      target="_blank">
                             <b>Loops_Exercise1ii.py</b></a>
                 </div>
@@ -14577,7 +14762,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise2i.py"
+                     "../Solutions-Python/Loops_Exercise2i.txt"
                    target="_blank">
                           <b>Loops_Exercise2i.py</b></a>
                 </div>
@@ -14597,7 +14782,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise2ii.py"
+                     "../Solutions-Python/Loops_Exercise2ii.txt"
                      target="_blank">
                             <b>Loops_Exercise2ii.py</b></a>
                 </div>
@@ -14639,7 +14824,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise2iii.py"
+                     "../Solutions-Python/Loops_Exercise2iii.txt"
                     target="_blank">
                             <b>Loops_Exercise2iii.py</b></a>
                 </div>
@@ -14777,7 +14962,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My first answer to enza challenge is:
                   <a href=
-                     "../Solutions-Python/enza.py"
+                     "../Solutions-Python/enza.txt"
                      target="_blank">
                             <b>enza.py</b></a>
                 </div>
@@ -14785,7 +14970,7 @@ Click to record your <b>Start</b> time.</button>
                 <div class="answer">
                   My best answer to enza challenge is:
                   <a href=
-                     "../Solutions-Python/enza1.py"
+                     "../Solutions-Python/enza1.txt"
                      target="_blank">
                             <b>enza1.py</b></a>
                 </div>
@@ -15126,7 +15311,7 @@ Click to record your <b>Start</b> time.</button>
 
                    My answer is:
                    <a href=
-                      "../Solutions-Python/fun_Example1ia.py"
+                      "../Solutions-Python/fun_Example1ia.txt"
                       target="_blank">
                              <b>fun_Example1ia.py</b></a>
                 </li><br>
@@ -15158,7 +15343,7 @@ Click to record your <b>Start</b> time.</button>
 
                     Fix it! My answer is:
                      <a href=
-                        "../Solutions-Python/fun_Example1ib.py"
+                        "../Solutions-Python/fun_Example1ib.txt"
                         target="_blank">
                                <b>fun_Example1ib.py</b></a>
                   </li>
@@ -15190,7 +15375,7 @@ Click to record your <b>Start</b> time.</button>
             <b><u>Code</u></b><br>
             <div class="code">
               My answer is:
-              <a href="../Solutions-Python/fun_Example1ii.py"
+              <a href="../Solutions-Python/fun_Example1ii.txt"
                  target="_blank">
                       <b>fun_Example1ii.py</b></a>
             </div><br><br>
@@ -15219,7 +15404,7 @@ Click to record your <b>Start</b> time.</button>
             <b><u>Code</u></b><br>
             <div class="code"><br>
               My answer is:
-              <a href="../Solutions-Python/fun_Example1iii.py"
+              <a href="../Solutions-Python/fun_Example1iii.txt"
                  target="_blank">
                       <b>fun_Example1iii.py</b></a>
             </div><br><br>
@@ -15589,7 +15774,7 @@ Click to record your <b>Start</b> time.</button>
                     Fix things so it will work!<br><br>
 
                     My answer is:
-                    <a href="../Solutions-Python/fun_Example4ia.py"
+                    <a href="../Solutions-Python/fun_Example4ia.txt"
                      target="_blank">
                             <b>fun_Example4ia.py</b></a>
                   </li>
@@ -15661,7 +15846,7 @@ Click to record your <b>Start</b> time.</button>
               <b><u>Code</u></b><br>
               <div class="code">
                 My answer is:
-                <a href="../Solutions-Python/fun_Example4ii.py"
+                <a href="../Solutions-Python/fun_Example4ii.txt"
                    target="_blank">
                         <b>fun_Example4ii.py</b></a>
               </div><br><br>
@@ -15744,7 +15929,7 @@ Click to record your <b>Start</b> time.</button>
             <b><u>Code</u></b><br>
             <div class="code">
               My answer is:
-              <a href="../Solutions-Python/fun_Example4iii.py"
+              <a href="../Solutions-Python/fun_Example4iii.txt"
                  target="_blank">
                       <b>fun_Example4iii.py</b></a>
             </div><br><br>
@@ -15826,7 +16011,7 @@ Click to record your <b>Start</b> time.</button>
 
               If you would like a short cut, my answer for the
               Y/N question in a loop is:
-              <a href="../Solutions-Python/Loops_Exercise1ii.py"
+              <a href="../Solutions-Python/Loops_Exercise1ii.txt"
                  target="_blank"> <b>Loops_Exercise1ii.py</b></a>
               <br><br>
 
@@ -15835,7 +16020,7 @@ Click to record your <b>Start</b> time.</button>
               </summary>
                 <div class="answer">
                   My answer is:
-                     <a href="../Solutions-Python/fun_Exercise1i.py"
+                     <a href="../Solutions-Python/fun_Exercise1i.txt"
                       target="_blank"> <b>fun_Exercise1i.py</b></a>
                 </div>
               </details>
@@ -15854,7 +16039,7 @@ Click to record your <b>Start</b> time.</button>
               </summary>
                 <div class="answer">
                   <p>My answer is:
-                   <a href="../Solutions-Python/fun_Exercise1ii.py"
+                   <a href="../Solutions-Python/fun_Exercise1ii.txt"
                     target="_blank"> <b>fun_Exercise1ii.py</b></a>
                 </div>
               </details>
@@ -15895,7 +16080,7 @@ Click to record your <b>Start</b> time.</button>
               </summary>
                 <div class="answer">
                   My answer is:
-                  <a href="../Solutions-Python/Loops_5i.py"
+                  <a href="../Solutions-Python/Loops_5i.txt"
                    target="_blank"> <b>Loops_5i.py</b></a>
                 </div>
               </details><br>
@@ -15912,7 +16097,7 @@ Click to record your <b>Start</b> time.</button>
               </summary>
                 <div class="answer">
                   My first answer is:
-                  <a href="../Solutions-Python/Loops_5iia.py"
+                  <a href="../Solutions-Python/Loops_5iia.txt"
                    target="_blank"> <b>Loops_5iia.py</b></a><br>
 
                   Just build a loop to use the <b>Function</b>
@@ -15948,7 +16133,7 @@ Click to record your <b>Start</b> time.</button>
                   lots faster.<br><br>
 
                   My second answer is:
-                   <a href="../Solutions-Python/Loops_5iib.py"
+                   <a href="../Solutions-Python/Loops_5iib.txt"
                       target="_blank"> <b>Loops_5iib.py</b></a><br>
 
                   Whilst this is much faster than the
@@ -15972,7 +16157,7 @@ Click to record your <b>Start</b> time.</button>
                   This is the best solution by far!<br><br>
 
                   The third answer is:
-                  <a href="../Solutions-Python/Loops_5iic.py"
+                  <a href="../Solutions-Python/Loops_5iic.txt"
                    target="_blank"> <b>Loops_5iic.py</b></a><br>
 
                   Just for fun, I time the <b>3</b>
