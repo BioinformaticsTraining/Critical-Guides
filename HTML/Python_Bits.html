@@ -12517,13 +12517,13 @@ Click to record your <b>Start</b> time.</button>
           <ol>
             <li>
               <a href="https://docs.python.org/3.7/library/functions.html#func-list"
-               target="_blank"><b>list</b></a>
+               target="_blank"><b>list()</b></a>
               - converts a suitable <b>Data Object</b> to a <b>list</b>
             </li><br>
             
             <li>
               <a href="https://docs.python.org/3.7/library/functions.html#func-tuple"
-                       target="_blank"><b>tuple</b></a>
+                       target="_blank"><b>tuple()</b></a>
               - converts a suitable <b>Data Object</b> to a <b>tuple</b>
 	           </li><br>
             
@@ -13248,18 +13248,18 @@ But not now.
 		      
 		      Used in its most simple form, the <b>Syntax</b> is just:<br><br>
 		      
-		      &emsp;&emsp;&emsp;&emsp;<b>import</b> <i>&lt;Libary&gt;</i><br><br>
+		      &emsp;&emsp;&emsp;&emsp;<b>import</b> <i>&lt;Library&gt;</i><br><br>
 		      
-		      Before the import statement, all the wonders of <i>&lt;Libary&gt;</i> are denied the Python program.
+		      Before the import statement, all the wonders of <i>&lt;Library&gt;</i> are denied the Python program.
 		      
-		      After the import, the wonders of <i>&lt;Libary&gt;</i> are available in their entirety!<br><br>
+		      After the import, the wonders of <i>&lt;Library&gt;</i> are available in their entirety!<br><br>
 		      
 		      Two obvious questions have just thrust themselves upon your conscious. To whit:<br><br>
 		      
 		      <ul>
 		        <li>
 		          <b><u>Question:</u></b> "But how does
-		          one know what functionallity <i>&lt;Libary&gt;</i>
+		          one know what functionallity <i>&lt;Library&gt;</i>
 		          has to offer?"<br><br>
 		        
 		          <b><u>Answer:</u></b> Use the 
@@ -13267,7 +13267,7 @@ But not now.
 		           target="_blank"><b>Builtin Function dir()</b></a>
 		          and all will be revealed. That is, type:<br><br>
 		          
-		          &emsp;&emsp;&emsp;&emsp;<b>dir(</b><i>&lt;Libary&gt;</i><b>)</b>
+		          &emsp;&emsp;&emsp;&emsp;<b>dir(</b><i>&lt;Library&gt;</i><b>)</b>
 		          
 		        </li><br>
 		        <li>
@@ -13313,65 +13313,69 @@ But not now.
 		      including a value for <b>Pi</b>.<br><br>
 		      
 		      <span class="command">
-		        >>> #
-										... # See if Python knows the value of Pi without help
-										... #
-										... 
-										>>> print(pi)
-										Traceback (most recent call last):
-										&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-										NameError: name 'pi' is not defined
-										>>> 
-										>>> #
-										... # Give pi a value and try again
-										... #
-										... 
-										>>> pi=47
-										>>> print(pi)
-										47
-										>>> 
-										>>> #
-										... # import the math module
-										... #
-										... 
-										>>> import math
-										>>> 
-										>>> #
-										... # Use the Builtin Function dir to see what math has to offer
-										... #
-										... 
-										>>> dir(math)
-										['__doc__', '__loader__', '__name__', '__package__', '__spec__',
-									 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh',
-									 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc',
-									 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp',
-									 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite',
-									 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p',
-									 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder',
-									 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
-										>>> 
-										>>> #
-										... # print the "math" version of Pi and the version you set to 47
-										... #
-										... 
-										>>> print("math says pi = ",math.pi)
-										math says pi =  3.141592653589793
-										>>> print("I say pi = ", pi)
-										I say pi =  47
-										>>> 
-		      </span>
+		        >>> #<br>
+										... # See if Python knows the value of Pi without help<br>
+										... #<br>
+										... <br>
+										>>> print(pi)<br>
+										Traceback (most recent call last):<br>
+										&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+										NameError: name 'pi' is not defined<br>
+										>>> <br>
+										>>> #<br>
+										... # Give pi a value and try again<br>
+										... #<br>
+										... <br>
+										>>> pi=47<br>
+										>>> print(pi)<br>
+										47<br>
+										>>> <br>
+										>>> #<br>
+										... # import the math module<br>
+										... #<br>
+										... <br>
+										>>> import math<br>
+										>>> <br>
+										>>> #<br>
+										... # Use the Builtin Function dir to see what math has to offer<br>
+										... #<br>
+										... <br>
+										>>> dir(math)<br>
+										['__doc__', '__loader__', '__name__', '__package__', '__spec__',<br>
+									 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh',<br>
+									 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc',<br>
+									 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp',<br>
+									 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite',<br>
+									 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p',<br>
+									 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder',<br>
+									 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']<br>
+										>>> <br>
+										>>> #<br>
+										... # print the "math" version of Pi and the version you set to 47<br>
+										... #<br>
+										... <br>
+										>>> print("math says pi = ",math.pi)<br>
+										math says pi =  3.141592653589793<br>
+										>>> print("I say pi = ", pi)<br>
+										I say pi =  47<br>
+										>>> <br>
+		      </span><br><br>
 		      
-		      There is no Builtin stored value of Pi.
+		      There is no <b>Builtin</b> stored value of <b>Pi</b>.<br><br>
 		      
-		      Importing the <b>Builtin module math</b> adds a number of
-		      <b>Mathematical Functions</b> and similar (listed using the <b>Builtin Function dir()</b>) to the
-		      capacity of <b>Core Python</b>.
+		      Importing the <b>Builtin module
+		      math</b> adds a number of
+		      <b>Mathematical Functions</b> and similar
+		      (listed using the <b>Builtin Function dir()</b>) to the
+		      capacity of <b>Core Python</b>.<br><br>
 		      
-		      The offerings of <b>math</b> include the "constant" value of <b>Pi</b> that can be referred to as:
+		      The offerings of <b>math</b> include the "constant" value
+		      of <b>Pi</b> that can be referred to as:<br><br>
 		      
-		      &emsp;&emsp;&emsp;&emsp;<b>math.pi</b>
+		      &emsp;&emsp;&emsp;&emsp;<b>math.pi</b><br><br>
 		      
-		      If desired, an entirely separate Variable call pi can coexist and be given any value, however silly.
+		      If desired, an entirely separate <b>Variable</b> call <b>pi</b> can
+		      coexist and be given any value, however silly.<br><br>
 	
       </div><br>
                  
@@ -13381,59 +13385,78 @@ But not now.
 
 		      <ol>
 		        <li>
-	           Just how constant are the constants provided in <b>Python Modules<b>?
+	           Just how constant are the "constants"
+	           provided in <b>Python Modules</b>?<br><br>
 	           
-	           Find out by experiment, possibly something like:
+	           Find out by experiment, possibly
+	           something like:<br><br>
 	           
 	           <ul>
 	             <li>
-	               Import the <b>module<b> "<b>random<b>" (enables random number generation and similar)
+	               Import the <b>module</b> "<b>random</b>"
+	               (enables random number generation and similar)
 	             </li><br>
 	             <li>
-	               See what random has to offer and pick a constant ... maybe TWOPI (a gross approximation of Pi).
+	               See what <b>random</b> has to offer and pick a constant
+	               ... maybe <b>TWOPI</b> (a "constant" set to <b>2 * Pi</b>).
 	             </li><br>
 	             </li>
-	               Use help (e.g. help(TWOPI)) to see what sort of object Python reckons TWOPI to be.
+	               Use <b>help</b> (i.e. <b>help(TWOPI)</b>)
+	               to see what sort of <b>Python Object</b>
+	               <b>TWOPI</b> might be.<br>
 	             </li><br>
 	             <li>
-	               Assign an Integer Value to random.TWOPI ... did it work?
+	               Assign an <b>Integer Value</b> to <b>random.TWOPI</b>
+	               ... did it work?<br><br>
 	               
-	               If so, how would you rate the credibility of TWOPI as a Constant?
+	               If so, how would you rate the credibility of
+	               <b>TWOPI</b> as a <b>Constant</b>?
 	             </li><br>
-	           </ul>
+	             <li>
+	               What sort of <b>Python Object</b>
+	               is <b>random.TWOPI</b> now?
+	             </li>
+	           </ul><br>
 	           
-	           
+            <details class="answer">
+            <summary><span class="anssum">Answer.</span>
+            </summary>
+              <div class="answer"><br>
+				            <span class="commmand">
+              
+										    		</span><br><br>
+              
+              </div>
+            </details>
+
 		        </li>
 		        </li><br>
 		        <li>
 				        <span class="commmand">
-						        >>> #
-														... # Try to persuade math to your point of view
-														... #
-														... 
-														>>> math.pi = 47
+						        >>> #<br>
+														... # Try to persuade math to your point of view<br>
+														... #<br>
+														... <br>
+														>>> math.pi = 47<br>
+														>>> <br>
+														>>> #<br>
+														... # Scarily ... this is possible!!!!!!!?????!?!<br>
+														... #<br>
+														... <br>
+														>>> print("math now thinks pi = ", math.pi,"?? math is stupid!")<br>
+														math now thinks pi =  47 ?? math is stupid!<br>
 														>>> 
-														>>> #
-														... # Scarily ... this is possible!!!!!!!?????!?!
-														... #
-														... 
-														>>> print("math now thinks pi = ", math.pi,"?? math is stupid!")
-														math now thinks pi =  47 ?? math is stupid!
-														>>> 
-												</span>
-	
+												</span><br><br>
 		        
-		        
-		        
-		          Strangely, <b>Python<b> allows the user to assign a new value to <b>math.pi<b>! Not
+		          Strangely, <b>Python</b> allows the user to assign a new value to <b>math.pi</b>! Not
 						      that a well brought up user, such as you, would ever dream of
-						      tampering with such a fundamental truth as the value of <b>Pi<b>!
+						      tampering with such a fundamental truth as the value of <b>Pi</b>!<br><br>
 						      
 						      math.pi is NOT a constant. It is simply an float Variable. The assignment
-						      above changed this float Variable into an Integer Variable with a silly value.
+						      above changed this float Variable into an Integer Variable with a silly value.<br><br>
 						      
 						      Even worse, as math is a Builtin module, there is no way to easily repair
-						      distortions of this nature.
+						      distortions of this nature.<br><br>
 						       
 						      <div class="hint">
 						        If <b>reload</b> did not work of you, you will
@@ -13479,7 +13502,8 @@ But not now.
 								      &emsp;&emsp;&emsp;&emsp;<b>import importlib</b><br>
 								      &emsp;&emsp;&emsp;&emsp;<b>importlib.reload math</b><br><br>
 								      
-								      will do just that, as shown above. Try it, why would you believe me!<br><br>
+								      will do just that, as shown above.
+								      Try it, why would you believe me!<br><br>
 								    </div>
 								  </li>
 			      </ol><br>
@@ -13493,6 +13517,120 @@ But not now.
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
         </p>
+        
+        <ol>
+          <li>
+            The use of the <b>Keywords from</b>
+            and <b>import</b> to make <b>modules</b>
+            and/or <b>packages</b> accessible in
+            <b>Python</b> programs.
+          </li><br>
+          <li>
+            A first mention of the <b>Keyword del</b>.<br><br>
+            
+            <b>del</b> is used to delete/remove
+            <b>Objects</b> from a <b>Python</b> program.
+          </li>
+        </ol>
+          
+        <p>
+          <hh6m>Builtin Functions introduced
+          or reinforced in this section:</hh6m>
+        </p>
+          
+        <ol>
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#dir"
+             target="_blank"><b>dir()</b></a>
+            - returns a list of valid attributes
+            for a specified object
+          </li><br>
+          <li>
+            <a href="https://docs.python.org/3.7/library/functions.html#del"
+             target="_blank"><b>del()</b></a>
+            - returns a list of valid attributes
+            for a specified object
+          </li>
+        </ol>
+        
+        <p>
+          <hh6m>Modules and Module Elements noted
+          or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <ol>
+          <li>
+            <b>math</b>
+            <ul>
+              <li>
+                <b>math.pi</b>
+              </li>
+            </ul>
+          </li><br>
+          <li>
+            <b>random</b>
+            <ul>
+              <li>
+                <b>random.TWOPI</b>
+              </li>
+            </ul>
+          </li><br>
+          <li>
+            <b>importlib</b>
+            <ul>
+              <li>
+                <b>importlib.reload()</b>
+              </li>
+          </li>
+        </ol>
+
+        <p>
+          <hh6m>Points noted or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <ol>
+          <li>
+            Constants delivered by
+            imported <b>modules</b> can be
+            overwritten, even retyped!
+            This has to be
+            generally ill advised surely?
+          </li><br>
+          <li>
+            <b>modules</b> can, effectively,
+            only be <b>imported</b> once.
+            Any attempt to <b>import</b> a
+            <b>module</b> more than once
+            will be ignored, even if the
+            <b>module</b> has been edited.
+          </li><br>
+          <li>
+            Once <b>imported</b>, a <b>module</b>
+            cannot be removed without dubious tricks.
+          </li><br>
+          <li>
+            Mention was made of the <b>keyword del</b>.<br><br>
+            
+            <b>del</b> is used to remove <b>Objects</b>.<br><br>
+            
+            It will not, however, remove a
+            <b>module</b> in a way that allows
+            that <b>module</b> to be reimported
+            as a fresh copy.
+          </li><br>
+          <li>
+            <b>modules</b> can be reloaded using the
+            <b>reload</b> function from the
+            <b>module importlib</b>.
+          </li><br>
+          <li>
+            <b>importlib.reload()</b> does not
+            work on <b>Builtin modules</b>
+            such as <b>math</b>.
+          </li>
+        </ol><br>
       </div>
     </details>
   </li><br>
