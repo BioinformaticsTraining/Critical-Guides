@@ -70,7 +70,7 @@ hh6m {
     font-size: 17px; font-weight: bold;
     color: SaddleBrown;
     margin-top: 0px; margin-bottom: 0px;
-    margin-left: 0px; margin-right: 0px;
+    margin-left: 5px; margin-right: 0px;
 }
 
 /* p with no left margin (for lists?) */
@@ -562,7 +562,7 @@ span.minsectsum {
 .msectsumext {
     display: inline-block;
     outline:none;
-    background: Moccasin;
+    background: RosyBrown;
     width: 515px;
 }
 

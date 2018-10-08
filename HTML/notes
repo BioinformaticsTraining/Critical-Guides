@@ -1,0 +1,118 @@
+'G':'Glycine','P':'Proline','A':'Alanine',
+'V':'Valine','L':'Leucine','I':'Isoleucine',
+'M':'Methionine','C':'Cysteine','F':'Phenylalanine',
+'Y':'Tyrosine','W':'Tryptophan','H':'Histidine','K':'Lysine','R':'Arginine',
+'Q':'Glutamine',
+
+'N':'Asparagine',
+
+'E':'Glutamic Acid','D':'Aspartic Acid',
+'S':'Serine','T':'Threonine'
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+# Create a Dictionary by simple assignment
+#
+
+Dict00={'G':'Glycine','P':'Proline','A':'Alanine','Q':'Glutamine'}
+type(Dict00)
+print(Dict00)
+
+#
+# Create a Dictionary with dict and **kwargs
+#
+
+Dict01=dict(V='Valine',L='Leucine',I='Isoleucine',R='Arginine')
+type(Dict01)
+print(Dict01)
+
+#
+# Create an Empty Dictionary and then add some Key-Value Pairs
+# with dict.update()
+#
+
+Dict02={}
+type(Dict02)
+print(Dict02)
+Dict02.update({'M':'Methionine','C':'Cysteine','F':'Phenylalanine','N':'Asparagine'})
+print(Dict02)
+
+#
+# Create a Dictionary from list of 2-tuples
+#
+
+Dict03=dict([('Y','Tyrosine'),('W','Tryptophan'),('H','Histidine'),('K','Lysine')])
+type(Dict03)
+print(Dict03)
+
+#
+# Create a Dictionary from tuple of lists
+#
+
+Dict04=dict((['E','Glutamic Acid'],['D','Aspartic Acid'],['S','Serine'],['T','Threonine']))
+type(Dict04)
+print(Dict04)
+
+#
+# Create item lists from each Dictonary
+#
+
+Ditems00=Dict00.items(); Ditems01=Dict01.items(); Ditems02=Dict02.items(); Ditems03=Dict03.items(); Ditems04=Dict04.items()
+type(Ditems00); type(Ditems01); type(Ditems02); type(Ditems03); type(Ditems04)
+
+
+
+Dlist_All=list(Ditems00)+list(Ditems01)+list(Ditems02)+list(Ditems03)+list(Ditems04)
+type(Dlist_All)
+
+Dict_All=dict(Dlist_All)
+type(Dict_All)
+print(Dict_All)
+
+
+len(Dict_All)
+
+Dict_All_iter=iter(Dict_All)
+
+
+next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); \
+next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); \
+next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); \
+next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter); next(Dict_All_iter)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

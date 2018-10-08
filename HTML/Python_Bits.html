@@ -113,7 +113,7 @@ Click to record your <b>Start</b> time.</button>
              solve trivial <b>Exercises</b>, has been emphasised.
           </p>
 
-          <p>I still to wonder to what degree I have succeeded
+          <p>I am unsure of the degree to which I have succeeded
              in this goal.
           </p>
         </div>
@@ -136,7 +136,7 @@ Click to record your <b>Start</b> time.</button>
           </p>
 
           <p>When complete, the whole thing will be available
-             via github for any who might find it of use.
+             via <b>github</b> for any who might find it of use.
           </p>
 
           <p>I also intend to use this tutorial as training
@@ -191,7 +191,7 @@ Click to record your <b>Start</b> time.</button>
           </p>
         </div>
         
-          <h3>Structure</h3>
+        <h3>Structure</h3>
           
         <div>
           <p>I have attempted a series of topics, offering
@@ -257,20 +257,87 @@ Click to record your <b>Start</b> time.</button>
 
             <li>
               <span class="msectsumext">
-                <b>Extensibility</b> - Or, in English, <b>Extendibility</b>.
                 Sections considering
                 the ways the core functionality of <b>Python</b> can be extended.
                 In the context of this tutorial, essentially the
-                creation and use of <b>modules</b> and <b>Functions</b>.
+                creation and use of <b>modules</b>.
               </span>
             </li><br>
-          </ol><br>
+          </ol>
+        </div>
+        
+        <h3>Assumptions</h3>
+          
+        <div>
+        
+          <p>
+		          I assume you are using some reasonably
+		          current flavour of <b>Linux</b> not too unlike <b>Unbuntu</b>.
+		          If you are not, it should affect very little once
+		          you are actually using writing <b>Python</b>. You might
+		          just occasionally have to think laterally when talking
+		          directly to the <b>Operating System</b> (for example, when
+		          downloading example files and putting them somewhere
+		          they can be accessed by your code).
+          </p>
+		          
+          <p>
+		          I assume you are using <b>Firefox</b>, set to display
+		          text files in the browser. Irritatingly there
+		          seems to be no browser that behaves itself as it should <b>100%</b>!
+		          Even <b>Firefox</b> required some bizarre manipulations (of my
+		          data/code files) to play nicely!
+		          I expect you could cope with any browser
+		          that is convenient to you, I simply suggest that
+		          <b>Firefox</b> might give you the easiest ride.
+          </p>
+		          
+          <p>
+		          I assume you are using
+		          <a href="https://en.wikipedia.org/wiki/CPython"
+		           target="_blank"><b>CPython</b></a>, which is the default
+		          implementation of <b>Python</b>, written in <b>C</b>.
+		          I imagine you are, no need to check as all the practical
+		          elements of this tutorial should work fine what
+		          ever you are using. Only some of the background
+		          discussion will be specific to <b>CPython</b>
+		          (particularly with regard to <b>extensibility</b> and the like)
+          </p>
+		          
+          <p>
+		          I assume you are using <b>Python 3.6</b> or better.
+		          If so, everything will work fine. If you are are using
+		          an earlier version of <b>Python 3</b>, that should be good enough.
+		          Just a few things might not be quite as described
+		          (particularly the ordering of <b>Dictionaries</b>). If you
+		          are using <b>Python 2</b>, you will find significant
+		          differences to the extent I would advise you to
+		          update you <b>Python</b> installation.
+          </p>
+		          
+          <p>
+		          <b>Python 3</b> was introduced in <b>2008</b>
+		          and so <b>Python 2</b>
+		          has been "obsolete" for <b>10 years</b> now.
+		          As <b>Python 3</b>
+		          is significantly different to <b>Python 2</b>, there has
+		          been an understandable reluctance for people
+		          maintaining substantial volumes of <b>Python 2</b> code to
+		          move to <b>Python 3</b>. However, teaching a
+		          new generation of programmers to use a Language
+		          that has not been current for a <b>decade</b> and from
+		          which support will soon be withdrawn
+		          (<b>First day of 2020</b>)
+		          does not seem to be too sensible.
+		          Accordingly. this tutorial presents <b>Python 3</b>
+		          (unlike a number of other training programs
+		          you might find on the web).
+          </p>
         </div>
       </div>
-
     </details><br>
   </li>
-
+ 
 <!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
@@ -545,10 +612,10 @@ Click to record your <b>Start</b> time.</button>
         <h2>Scalar Values</h2>
 
         <div>
-          <p>A <b>scalar value</b> is a single item of data.
+          <p>A <b>Scalar Value</b> is a single item of data.
                 </p>
 
-          <p><b>Scalar data items</b> can be one of
+          <p><b>Scalar Data Items</b> can be one of
              a variety of <b>types</b> including:<br>
 
             <ul>
@@ -3948,40 +4015,46 @@ Click to record your <b>Start</b> time.</button>
         </h2>
 
         <div>
-          <p>The <b>Scalars</b> considered thus far enable basic
-             <b>Arithmetic</b>, <b>Algebraic</b> and simple
-             String manipulatory operations.
+          <p>
+            The <b>Scalars</b> considered thus far enable basic
+            <b>Arithmetic</b>, <b>Algebraic</b> and simple
+            String manipulatory operations.
           </p>
 
-          <p><b>Python</b>
-              builds on this provision with some
-              "<i>ready coded</i>" <b>Functions</b> that are
-              integral to the language.
+          <p>
+            <b>Python</b>
+            builds on this provision with some
+            "<i>ready coded</i>" <b>Functions</b> that are
+            integral to the language.
           </p>
 
-          <p>Such features are called <b>Builtin Functions</b>.
+          <p>
+            Such features are called <b>Builtin Functions</b>.
           </p>
 
-          <p>A more comprehensive discussion of <b>Functions</b>
-             (and similar) will be offered when
-             <b>User Defined Functions</b> are considered a
-             little later. For now, a <b>Function</b> is
-             a code block that (<b>Optionally</b>) accepts
-             <b>Arguments</b> and returns a <b>Value</b>.
+          <p>
+            A more comprehensive discussion of <b>Functions</b>
+            (and similar) will be offered when
+            <b>User Defined Functions</b> are considered a
+            little later. For now, a <b>Function</b> is
+            a code block that (<b>Optionally</b>) accepts
+            <b>Arguments</b> and returns a <b>Value</b>.
           </p>
 
-          <p><a href="https://docs.python.org/3.7/library/functions.html#print"
-              target="_blank"><b>type()</b></a> and
-             <a href="https://docs.python.org/3.7/library/functions.html#print"
-              target="_blank"><b>print</b></a>, which you have
-             already superficially used,
-             are examples of <b>Builtin Functions</b>.
+          <p>
+            <a href="https://docs.python.org/3.7/library/functions.html#print"
+             target="_blank"><b>type()</b></a> and
+            <a href="https://docs.python.org/3.7/library/functions.html#print"
+             target="_blank"><b>print()</b></a>, which you have
+            already superficially used,
+            are examples of <b>Builtin Functions</b>.
           </p>
 
-          <p>As used above, <b>type()</b> accepts
-             a single <b>Argument</b> (a <b>Scalar Value</b>
-             or <b>Variable</b>) and returns information
-             revealing the <b>Class</b> of that <b>Scalar</b>.
+          <p>
+            As used above, <b>type()</b> accepts
+            a single <b>Argument</b> (a <b>Scalar Value</b>
+            or <b>Variable</b>) and returns information
+            revealing the <b>Class</b> of that <b>Scalar</b>.
           </p>
 
           <span class="command">
@@ -3994,9 +4067,10 @@ Click to record your <b>Start</b> time.</button>
             >>>
           </span><br>
 
-          <p>So far, we have used <b>print</b> just to
-             display simple <b>Strings</b> (as <b>Scalar
-             Values</b> or <b>Variables</b>).
+          <p>
+            So far, we have used <b>print</b> just to
+            display simple <b>Strings</b> (as <b>Scalar
+            Values</b> or <b>Variables</b>).
           </p>
 
           <span class="command">
@@ -4011,20 +4085,22 @@ Click to record your <b>Start</b> time.</button>
             >>>
           </span><br>
 
-          <p>A complete list of all
-             <b>Python Builtin Functions</b>, all with very
-             comprehensive descriptions will be useful for
-             reference, and can be found
-             <a href="https://docs.python.org/3.7/library/functions.html"
-              target="_blank">here</a> (amongst other places).
+          <p>
+            A complete list of all
+            <b>Python Builtin Functions</b>, all with very
+            comprehensive descriptions will be useful for
+            reference, and can be found
+            <a href="https://docs.python.org/3.7/library/functions.html"
+             target="_blank">here</a> (amongst other places).
           </p>
 
-          <p>It would not be useful to try and describe them
-             all here!
-             Instead, I suggest we introduce a few of the more
-             vital examples and add other as the need arises (via
-             <b>Examples</b>, <b>Questions</b> and
-             <b>Exercises</b>)
+          <p>
+            It would not be useful to try and describe them
+            all here!
+            Instead, I suggest we introduce a few of the more
+            vital examples and add other as the need arises (via
+            <b>Examples</b>, <b>Questions</b> and
+            <b>Exercises</b>)
           </p>
         </div>
       </div><br>
@@ -11100,7 +11176,9 @@ Click to record your <b>Start</b> time.</button>
 		              way is to remove ("<b>pop</b>") them from the top of the tower.<br><br>
 		              
 		              That is, the <b>Last One</b> to be added is
-		              the <b>First one</b> to be removed ... hence <b>LIFO</b>.<br><br>
+		              the <b>First One</b> to be removed
+		              ... hence <b>L</b>ast <b>I</b>n
+		              <b>F</b>irst <b>O</b>ut (<b>LIFO</b>).<br><br>
 		                 
 		              <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
 		               target="_bank">
@@ -11232,10 +11310,10 @@ Click to record your <b>Start</b> time.</button>
                 >>> 
               </span><br><br>
                
-              That is better! Not that the <b>Variable c</b>
+              That is better! Note that the <b>Variable c</b>
               set to <b>94</b> is distinct from the
               <b>Variable c</b> set to <b>3</b> as an
-              <b>Argument</b> for <b>dict()</b>.
+              <b>Argument</b> for <b>dict()</b>.<br><br>
                
               A marginally expanded syntax for <b>dict()</b> is:<br><br>
               
@@ -12836,7 +12914,7 @@ Click to record your <b>Start</b> time.</button>
     <details class="msect">
     <summary>
       <span class="msectsumext"><b>Exercise - Part VIII:</b>
-              Extending Python using Standard Modules and Packages
+              Enhancing Python using Modules and Packages
       <span>
     </summary>
 
@@ -12848,54 +12926,564 @@ Click to record your <b>Start</b> time.</button>
 
         <h2>
           <a href="https://www.geeksforgeeks.org/python-modules/"
-           target="_blank">Extending Python using Standard Modules and Packages</a>
-        </h2> <br><br>
+           target="_blank">Enhancing Python using Modules and Packages</a>
+        </h2>
         
+        <hh6m>The Core of Python</hh6m><br><br>
         
+        <div>
+		        Everything that has been covered thus far in this tutorial
+		        is available from the <b>Python Interpreter</b> by default.
+		        It is to this I refer as "<b>Core Python</b>".<br><br> 
+        </div>
         
-        <a href="https://docs.python.org/3.7/py-modindex.html"
-         target="_blank">Index of Standard Python modules</a><br><br>
-         
-        <a href="https://www.artima.com/intv/pythonP.html"
-         target="_blank">extensible - guido</a> 4th section<br><br>
-            
-         <a href="https://docs.python.org/3/reference/import.html#the-import-system"
-         target="_blank">import system</a> tough read<br><br>
-         
-         <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
-         target="_blank">Guido_van_Rossum</a><br><br>
-       
-         
-		      <img class="centimg" src="Images/package_closed.png"
-		           alt="Fiddle!" height="76" width="377"></a><br><br>
-		      <img class="centimg" src="Images/package_open.png"
-		           alt="Fiddle!" height="143" width="411"></a><br><br>
-		      <img class="centimg" src="Images/package_dir.png"
-		           alt="Fiddle!" height="198" width="166"></a><br><br>		
+        <hh6m>Modules, Packages and Libraries</hh6m><br><br>
+		        
+        <div>
+		        It is possible, and indeed common,
+		        to expand the <b>Core Python</b> functionality by
+		        the inclusion of <b>Libraries</b> of additional
+		        <b>Routines</b>, <b>Data Objects</b>,
+		        <b>Data Classes</b> etc.<br><br>
+		        
+		        In this way, the <b>Core Language</b> is not obliged to
+		        provide functionality to meet the requirements of
+		        any and every project
+		        to which a user might aspire.
+		        Such an attempt would result
+		        in a very ugly, bloated <b>Language</b>
+		        with huge redundancies.<br><br>
+		        
+		        Instead the <b>core Language</b> offers the
+		        essentials and the user must
+		        "<b>import</b>" <b>Libraries</b> to meet any
+		        specific extra requirement.<br><br>
+		        
+		        <div class="hint">
+				        <b><u>Terminology Pause:</u></b><br><br>
+				        
+				        There is a variety of terms used to refer
+				        to the collections of extra <b>Language
+				        Elements</b> that can be imported into a
+				        program. For <b>Python</b> the most important
+				        are "<b>Module</b>" and <b>Package</b>".
+				        
+				        An informative overview of
+				        <a href="https://stackoverflow.com/questions/19198166/whats-the-difference-between-a-module-and-a-library-in-python"
+				         target="_blank">several
+				        relevant terms and concepts can be found here</a>.
+				        I summarise and slightly modify thus:<br><br>
+				        
+				        <ul>
+				          <li>
+				            A <b>Module</b> is, generally, a file containing
+				            <b>Python</b> definitions and statements.
+				            The file name is the <b>module</b> name
+				            with the suffix "<b>.py</b>" appended.<br><br>
+				            
+				            I say "generally" as there are
+				            <a href="https://stackoverflow.com/questions/18857355/where-are-math-py-and-sys-py"
+				             target="_blank">exceptions</a>.
+				            For example, some very commonly
+				            used modules such as "<b>math</b>"
+				            (a <b>Library</b> of standard Mathematical
+				            Functions, Constants and similar)
+				            is written in <b>C</b> and directly
+				            incorporated into the </b>Python Interpreter</b>.
+				            This is done for reasons of efficiency.
+				            The <b>math</b> module (and others like it) must
+				            still be explicitly "<b>imported</b>" before
+				            its functionality can be accessed.
+				          </li><br>
+				          
+				          <li>
+				            A <b>Package</b> is a hierarchy of <b>Modules</b>
+				            and <b>Packages</b> arranged
+				            in <b>Directories</b>.<br><br>
+				            
+				            Typically, a <b>Package</b> is a collection
+				            of <b>Modules</b> in a single <b>Directory</b>, but
+				            the possibility for a <b>Package</b> to include
+				            a <b>Sub Package(s)</b> (involving
+				            <b>Sub Directories</b>) does exist.
+				          </li><br>
+				          
+				          <li>
+				            A <b>Library</b> is a generic term
+				            which includes both <b>Modules</b>
+				            and <b>Packages</b>.<br><br>
+				            
+				            Often, the term <b>Library</b> is
+				            used to refer to a published
+				            collection of <b>Modules</b>, <b>Packages</b> and similar.
+				          </li>
+				        </ul><br>
+				      </div><br>
+		      </div>
+        
+        <hh6m>The Python Standard Library</hh6m><br><br>
+        
+        <div>
+				      When you install <b>Python</b> on your Computer,
+				      you install all the functionality of the 
+		        <a href="https://docs.python.org/3.7/library/#the-python-standard-library"
+		         target="_blank"><b>The Python Standard Library</b></a>.<br><br>
+		        
+		        This includes all of the <b>Builtin functions</b>,
+		        <b>Data Classes</b>, <b>Data Structures</b> etc.
+		        that have been described so far in this tutorial.
+		        All these are available from the <b>Python
+		        Interpreter</b> by default (<b>The Core of Python</b>).<br><br>
+		         
+		        The bulk of the <b>Python Standard Library</b>,
+		        however, is comprised of <b>Modules</b>
+		        and <b>Packages</b>
+		        that have to be explicitly requested
+		        (or "<b>imported</b>" as <b>Python</b> prefers) before their
+		        functionality is available to a program.<br><br>
+		        
+		        These <b>Modules</b> and <b>Packages</b>
+		        exist in your computer
+		        as files (with a "<b>.py</b>" extension) and
+		        <b>Directories</b> (for the <b>Packages</b>).
+		        Take a look, they are normally in a directory
+		        called something like <b>/usr/lib/python3.7</b>
+		        (for <b>linux</b>, goodness knows
+		        where <b>Windows</b> might hide them!).<br><br>
+		        
+		        <img class="centimg" src="Images/py_module.png"
+				           alt="Fiddle!" height="193" width="305"></a><br>
+				           
+				      Each <b>Directory</b> comprises a <b>Package</b>.
+				      Each "<b>.py</b>" <b>File</b> is a <b>Module</b>.
+				      Note the lack of a <b>Directory</b> called
+				      "<b>math</b>" or a <b>File</b> called "<b>math.py</b>".<br><br>
+				      
+				      <img class="centimg" src="Images/py_package.png"
+				           alt="Fiddle!" height="117" width="318"></a><br>
+				           
+				      Inside the <b>Directory urllib</b> are the <b>Module
+				      Files</b> for the constituents of the
+				      <b>urllib Package</b>.<br><br>
+				      
+				      A <b>Package</b> (such as <b>urllib</b>)
+				      can be "<b>imported</b>" as
+				      a whole or it is possible to "<b>import</b>"
+				      individual elements of a <b>Package</b>.
+				      <b>Individual Package Elements</b> must be
+				      referenced by prepending their names with
+				      the <b>Package</b> name followed by a <b>Full Stop</b>.
+				      This so the <b>Package Element</b> can be
+				      located by the <b>Python interpreter</b>. For
+				      example, the <b>Modules</b> of the
+				      <b>urllib Package</b> would be imported individually as:<br><br>
+				      
+				      &emsp;&emsp;<b>urllib.error<br>
+				      &emsp;&emsp;urllib.parse<br>
+		        &emsp;&emsp;urllib.request<br>
+		        &emsp;&emsp;urllib.response<br>
+		        &emsp;&emsp;urllib.robotparser</b><br><br>
+		        
+		        The <b>Interpreter</b> does not need the
+		        "<b>.py</b>" extension to find the <b>Module</b>.<br><br>
 		
-				    <hh4>Extensibility</hh4><br><br>
-				    
-				    The core provision of Python provides much of what
-				    is required for most applications. However, it does
-				    not try as hard as many other Languages to be comprehensive.<br><br>
-				    
-				    There are some omissions that are, at first glance,
-				    quite surprising. For example, the lack of
-				    Mathematical Functions (sin, cos, tan, log ...)
-				    or any sort of capacity to generate Random Numbers.<br><br>
-				    
-				    This sparse approach of deliberate and compensated by
-				    designing Python to be easily expanded by,
-				    primarily, the inclusion of external libraries
-				    defining extra Data Classes,  Functions, Data Objects
-				    etc. to suit the needs of any particular Application.<br><br>
-				    
-				    
+		        The <b>Modules</b> and <b>Packages</b>
+		        available from the <b>Python Standard Library</b> are many.
+		        As you will see if you take a quick glance at the 
+		        <a href="https://docs.python.org/3.7/py-modindex.html"
+		         target="_blank"><b>Index of Standard Python Modules</b></a>.<br><br>
+		         
+				      <img class="centimg" src="Images/package_closed.png"
+				           alt="Fiddle!" height="76" width="377"></a><br>
+				           
+				      Indexed items that are <b>Packages</b> have a
+				      little <b>Plus Sign</b> to their left.<br><br>
+				      
+				      <img class="centimg" src="Images/package_open.png"
+				           alt="Fiddle!" height="143" width="411"></a><br>
+				           
+				      Click on a <b>Plus Sign</b> and the
+				      <b>Package Elements</b> will be displayed (using the "<b>dot</b>"
+				      notation mentioned above).<br><br>
+				    </div>
+				           
+        <hh6m>
+          <a href="https://en.wikipedia.org/wiki/Python_Package_Index"
+           target-"_blank">The Python Package Index (PyPI)</a>
+        </hh6m><br><br>
+        
+        <div>
+		        Further Packages and Modules are available from
+		        <a href="https://pypi.org/"
+		         target="_blank"><b>The Python
+		                      Package Index (PyPI)</b></a>.<br><br>
+		                      
+		        <b>The Python Package Index (PyPI)</b> is
+		        a repository of <b>Libraries</b> for the <b>Python
+		        Programming Language</b> contributed by the
+		        <b>Python</b> user community. It is immense.<br><br>
+		        
+		        <b>Elements of PyPi</b> are <b><i>not</b></i> to be found on your computer.
+		        If you wish to use anything from this resource,
+		        you need to download and install it.
+		        This is not particularly difficult,
+		        but beyond the current scope of this tutorial.<br><br>
+		        
+		        I thought, however, the existence of <b>PyPi</b> was
+		        something you should know about, especially
+		        as it includes a very wide range of
+		        <b>Bioinformatics Libraries</b>.<br><br>
+		        
+		        Try searching
+		        <a href="https://pypi.org/"
+		         target="_blank"><b>PyPi</b></a>
+		        for <b>Bioinformatics</b>,
+		        or <b>BioPython</b>.<br><br>
+		        
+		        &emsp;&emsp;&emsp;&emsp;
+				      <img src="Images/bio_modules00.png"
+				           alt="Fiddle!" height="202" width="300"></a>
+		        &emsp;&emsp;&emsp;
+				      <img src="Images/bio_modules01.png"
+				           alt="Fiddle!" height="207" width="300"></a><br><br>
+				           
+		        It is very likely that much of the
+		        code you want for your projects has
+		        already been written and tested to a
+		        high standard. To avoid so very much
+		        reprogramming, all you have to do is
+		        to install the appropriate <b>Libraries</b>.<br><br>
+		        
+		        "Reinventing the wheel" is rarely a good idea.<br><br>
+		      </div>
+		      
+<!--
 
+Too unclear/undecu=ided ... maybe if I ever find a succinct way to state all this?
+But not now.
 
+        <hh6m>Python is extensible and embeddable</hh6m><br><br>
+        
+        <div>
+				      <b><i>Background discussion only</b></i>
+				      (possibly to the extent of self indulgence?
+				      Needs to be made clearer or deleted?),
+				      but mention of the
+				      "extensibility" of Python (and to a lesser extent its
+				      embeddability) is ubiquitous. I therefore attempt a
+				      simple explanation (and probably fail!).<br><br>
+				      
+				      I found it difficult to find succinct definitions
+				      for either of the terms in question. I decide to
+				      settle for the following (feel free to suggest improvements):
+				      
+				      <ul>
+				        <li>
+								      An Extensible Programming Language
+								      is one or which the Base Language Definition is capable
+								      of extension, at runtime, particularly by
+								      the inclusion of Libraries written in
+								      other Languages enabling access
+								      to functionality beyond
+								      the Host Language.
+								      
+								      This certainly is possible for Python,
+								      where Libraries written in C can be imported
+								      into Python programs enabling access
+								      to C features not available in Pure Python.
+								      
+								      The process of 
+				      
+				      The benefits of Libraries as a source ready
+				      written and tested code are obvious.
+				      If the code you need has already been written,
+				      and is freely available, why write it again?
+				      Most Programming languages have some way to
+				      share code in this fashion.<br><br>
+		       
+		        <a href="https://en.wikipedia.org/wiki/Extensible_programming"
+		         target="_blank">Extensible programming</a>.<br><br>
+		         
+		        <a href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiEpL7LqPDdAhVEgUsFHTgyDEMQFjAGegQINxAC&url=http%3A%2F%2Fwww.cas.mcmaster.ca%2Fsqrl%2Fpapers%2FSQRLreport47.pdf&usg=AOvVaw0cpaTb9MTrHRVX6AnzcphS"
+		         target="_blank">Modern Extensible Languages"</a>
+		         
+		         
+		         
+		       
+		==============================================================     <br><br>  
+		       
+		        <a href="https://data-flair.training/blogs/features-python/"
+		         target="_blank">extensible (Point 9)</a> tough read<br><br>
+		       
+		        <a href="https://data-flair.training/blogs/features-python/"
+		         target="_blank">embeddable (Point 10)</a> tough read<br><br>
+		
+		        <a href="https://www.artima.com/intv/pythonP.html"
+		         target="_blank">extensible - guido</a> 4th section<br><br>
+		            
+		         <a href="https://docs.python.org/3/reference/import.html#the-import-system"
+		         target="_blank">import system</a> tough read<br><br>
+		         
+		         <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
+		         target="_blank">Guido_van_Rossum</a><br><br>
+		       
+						    <hh4>Extensibility</hh4><br><br>
+						    
+						    
+						    
+		        <a href="https://docs.python.org/3/extending/index.html#extending-and-embedding-the-python-interpreter"
+		         target="_blank"><b>Embedding Python</b></a>.<br><br>
+		      </div>
+-->
+		    </div>
 
+      <h2><u>SYNTAX for Importing Modules/Packages</u></h2>
+      
+      <div>
+		      The <b>Python Keyword</b> used to <b>Import Modules</b> and/or
+		      <b>Packages</b> into a <b>Python</b> program is,
+		      unsurprisingly, 
+		      <a href="https://www.programiz.com/python-programming/keyword-list#from_import"
+		       target="_blank">"<b>import</b>"</a>.<br><br>
+		      
+		      Used in its most simple form, the <b>Syntax</b> is just:<br><br>
+		      
+		      &emsp;&emsp;&emsp;&emsp;<b>import</b> <i>&lt;Libary&gt;</i><br><br>
+		      
+		      Before the import statement, all the wonders of <i>&lt;Libary&gt;</i> are denied the Python program.
+		      
+		      After the import, the wonders of <i>&lt;Libary&gt;</i> are available in their entirety!<br><br>
+		      
+		      Two obvious questions have just thrust themselves upon your conscious. To whit:<br><br>
+		      
+		      <ul>
+		        <li>
+		          <b><u>Question:</u></b> "But how does
+		          one know what functionallity <i>&lt;Libary&gt;</i>
+		          has to offer?"<br><br>
+		        
+		          <b><u>Answer:</u></b> Use the 
+		          <a href="https://docs.python.org/3.7/library/functions.html#dir"
+		           target="_blank"><b>Builtin Function dir()</b></a>
+		          and all will be revealed. That is, type:<br><br>
+		          
+		          &emsp;&emsp;&emsp;&emsp;<b>dir(</b><i>&lt;Libary&gt;</i><b>)</b>
+		          
+		        </li><br>
+		        <li>
+		          <b><u>Question:</u></b> "What if two <b>Libraries</b>, or a
+		          <b>Library</b> and <b>Core Python</b> have a name clash?"<br><br>
+		          
+		          <b><u>Answer:</u></b> Items from a
+		          <b>Library</b>,
+		          if imported as shown above, must
+		          have their names
+		          prefixed by the name of the
+		          <b>Library</b> followed by a
+		          <b>Full Stop</b>. So, a <b>function</b>
+		          called <b>fiddle</b>, from a
+		          <b>Library</b> called <b>diddle</b>
+		          would be invoked thus:<br><br>
+		          
+		          &emsp;&emsp;&emsp;&emsp;<b>diddle.fiddle()</b><br><br>
+		          
+		          which would distinguish it from a <b>function</b>
+		          called <b>fiddle</b>, from a
+		          <b>Library</b> called <b>middle</b> which would be invoked thus:<br><br>
+		          
+		          &emsp;&emsp;&emsp;&emsp;<b>middle.fiddle()</b><br><br>
+		          
+		          Of course a <b>function</b> called <b>fiddle</b> which was
+		          <b>Builtin</b> to <b>Python</b> would be invoked simply thus:<br><br>
+		          
+			         &emsp;&emsp;&emsp;&emsp;<b>fiddle()</b><br><br>
+			          
+			         In this way, all name clash problem fade away
+			         e'en more swiftly and sweetly than the dew
+			         of a summer morn.<br><br>
+		        </li>
+		      </ul>
+		      
+		      Time to try it out, using a <b>Module</b> with the
+		      unfortunately singularised name
+		      <a href="https://docs.python.org/3/library/math.html#module-math"
+		       target="_blank">"<b>math</b>"</a>, which
+		      offers a wide range of mathematical
+		      <b>Functions</b> and <b>Constants</b>,
+		      including a value for <b>Pi</b>.<br><br>
+		      
+		      <span class="command">
+		        >>> #
+										... # See if Python knows the value of Pi without help
+										... #
+										... 
+										>>> print(pi)
+										Traceback (most recent call last):
+										&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+										NameError: name 'pi' is not defined
+										>>> 
+										>>> #
+										... # Give pi a value and try again
+										... #
+										... 
+										>>> pi=47
+										>>> print(pi)
+										47
+										>>> 
+										>>> #
+										... # import the math module
+										... #
+										... 
+										>>> import math
+										>>> 
+										>>> #
+										... # Use the Builtin Function dir to see what math has to offer
+										... #
+										... 
+										>>> dir(math)
+										['__doc__', '__loader__', '__name__', '__package__', '__spec__',
+									 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh',
+									 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc',
+									 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp',
+									 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite',
+									 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p',
+									 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder',
+									 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+										>>> 
+										>>> #
+										... # print the "math" version of Pi and the version you set to 47
+										... #
+										... 
+										>>> print("math says pi = ",math.pi)
+										math says pi =  3.141592653589793
+										>>> print("I say pi = ", pi)
+										I say pi =  47
+										>>> 
+		      </span>
+		      
+		      There is no Builtin stored value of Pi.
+		      
+		      Importing the <b>Builtin module math</b> adds a number of
+		      <b>Mathematical Functions</b> and similar (listed using the <b>Builtin Function dir()</b>) to the
+		      capacity of <b>Core Python</b>.
+		      
+		      The offerings of <b>math</b> include the "constant" value of <b>Pi</b> that can be referred to as:
+		      
+		      &emsp;&emsp;&emsp;&emsp;<b>math.pi</b>
+		      
+		      If desired, an entirely separate Variable call pi can coexist and be given any value, however silly.
+	
+      </div><br>
+                 
+      <div class="question">
 
-      </div><br><br>
+      <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+		      <ol>
+		        <li>
+	           Just how constant are the constants provided in <b>Python Modules<b>?
+	           
+	           Find out by experiment, possibly something like:
+	           
+	           <ul>
+	             <li>
+	               Import the <b>module<b> "<b>random<b>" (enables random number generation and similar)
+	             </li><br>
+	             <li>
+	               See what random has to offer and pick a constant ... maybe TWOPI (a gross approximation of Pi).
+	             </li><br>
+	             </li>
+	               Use help (e.g. help(TWOPI)) to see what sort of object Python reckons TWOPI to be.
+	             </li><br>
+	             <li>
+	               Assign an Integer Value to random.TWOPI ... did it work?
+	               
+	               If so, how would you rate the credibility of TWOPI as a Constant?
+	             </li><br>
+	           </ul>
+	           
+	           
+		        </li>
+		        </li><br>
+		        <li>
+				        <span class="commmand">
+						        >>> #
+														... # Try to persuade math to your point of view
+														... #
+														... 
+														>>> math.pi = 47
+														>>> 
+														>>> #
+														... # Scarily ... this is possible!!!!!!!?????!?!
+														... #
+														... 
+														>>> print("math now thinks pi = ", math.pi,"?? math is stupid!")
+														math now thinks pi =  47 ?? math is stupid!
+														>>> 
+												</span>
+	
+		        
+		        
+		        
+		          Strangely, <b>Python<b> allows the user to assign a new value to <b>math.pi<b>! Not
+						      that a well brought up user, such as you, would ever dream of
+						      tampering with such a fundamental truth as the value of <b>Pi<b>!
+						      
+						      math.pi is NOT a constant. It is simply an float Variable. The assignment
+						      above changed this float Variable into an Integer Variable with a silly value.
+						      
+						      Even worse, as math is a Builtin module, there is no way to easily repair
+						      distortions of this nature.
+						       
+						      <div class="hint">
+						        If <b>reload</b> did not work of you, you will
+						        need to know this tedious
+						        <a href="https://www.programiz.com/python-programming/keyword-list#del"
+						         target="_blank">piece of History</a> and amend my instructions
+						        according to the version of <b>Python</b>
+						        you are using.<br><br>
+						        
+						        If you are using <b>Python 2</b> (please
+						        do not, lots of this tutorial
+						        will not work as advertised),
+						        then <b>reload</b> is <b>Builtin</b>, so you do
+						        not need to <b>import</b> any <b>module</b> in
+						        order to use it. You just type:<br><br>
+						        
+						        &emsp;&emsp;&emsp;&emsp;<b>reload math</b><br><br>
+						        
+						        If you are using <b>Python 3.0</b> to <b>3.3</b> (quite
+						        possible as the default <b>Python 3</b>
+						        version for <b>Ubuntu</b>
+						        is currently <b>3.5.2</b>), you will find
+						        reload in a <b>module</b> called <b>imp</b>.
+						        So you need to type:<br><br>
+						        
+						        &emsp;&emsp;&emsp;&emsp;<b>import imp</b><br>
+						        &emsp;&emsp;&emsp;&emsp;<b>imp.reload math</b><br><br>
+						        
+						        From <b>Python 3.4</b> onwards, the instructions above should work.<br><br>
+						        
+						        Hopefully, all this nonsense will retreat
+						        soon? <b>Version 4</b> maybe?<br><br>
+						        
+						        En passant, it is not possible to
+						        "unimport" a <b>module</b> once it is imported
+						        (without resorting to
+						        <a href="https://stackoverflow.com/questions/1668223/how-to-de-import-a-python-module"
+						         target="_blank">horrible hackery</a> at least). Specifically, the 
+						        <a href="https://www.programiz.com/python-programming/keyword-list#del"
+						         target="_blank">Keyword del</a> will not remove a <b>module</b> satisfactorily.<br><br>
+						         
+						        
+								      &emsp;&emsp;&emsp;&emsp;<b>import importlib</b><br>
+								      &emsp;&emsp;&emsp;&emsp;<b>importlib.reload math</b><br><br>
+								      
+								      will do just that, as shown above. Try it, why would you believe me!<br><br>
+								    </div>
+								  </li>
+			      </ol><br>
+		    </div><br>
 
       <div class="checkpoint">
 
