@@ -9954,7 +9954,7 @@ Click to record your <b>Start</b> time.</button>
                         However, <b>Python</b> will execute
                         your <b>Multiple Assignment
                         Command</b>, via a <b>tuple</b>
-                       (in the background).<br>
+                        (in the background).<br>
                         
                         <p class="hint">
                           Is this the first <b>Multiple
@@ -13157,84 +13157,6 @@ Click to record your <b>Start</b> time.</button>
 		        "Reinventing the wheel" is rarely a good idea.<br><br>
 		      </div>
 		      
-<!--
-
-Too unclear/undecu=ided ... maybe if I ever find a succinct way to state all this?
-But not now.
-
-        <hh6m>Python is extensible and embeddable</hh6m><br><br>
-        
-        <div>
-				      <b><i>Background discussion only</b></i>
-				      (possibly to the extent of self indulgence?
-				      Needs to be made clearer or deleted?),
-				      but mention of the
-				      "extensibility" of Python (and to a lesser extent its
-				      embeddability) is ubiquitous. I therefore attempt a
-				      simple explanation (and probably fail!).<br><br>
-				      
-				      I found it difficult to find succinct definitions
-				      for either of the terms in question. I decide to
-				      settle for the following (feel free to suggest improvements):
-				      
-				      <ul>
-				        <li>
-								      An Extensible Programming Language
-								      is one or which the Base Language Definition is capable
-								      of extension, at runtime, particularly by
-								      the inclusion of Libraries written in
-								      other Languages enabling access
-								      to functionality beyond
-								      the Host Language.
-								      
-								      This certainly is possible for Python,
-								      where Libraries written in C can be imported
-								      into Python programs enabling access
-								      to C features not available in Pure Python.
-								      
-								      The process of 
-				      
-				      The benefits of Libraries as a source ready
-				      written and tested code are obvious.
-				      If the code you need has already been written,
-				      and is freely available, why write it again?
-				      Most Programming languages have some way to
-				      share code in this fashion.<br><br>
-		       
-		        <a href="https://en.wikipedia.org/wiki/Extensible_programming"
-		         target="_blank">Extensible programming</a>.<br><br>
-		         
-		        <a href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiEpL7LqPDdAhVEgUsFHTgyDEMQFjAGegQINxAC&url=http%3A%2F%2Fwww.cas.mcmaster.ca%2Fsqrl%2Fpapers%2FSQRLreport47.pdf&usg=AOvVaw0cpaTb9MTrHRVX6AnzcphS"
-		         target="_blank">Modern Extensible Languages"</a>
-		         
-		         
-		         
-		       
-		==============================================================     <br><br>  
-		       
-		        <a href="https://data-flair.training/blogs/features-python/"
-		         target="_blank">extensible (Point 9)</a> tough read<br><br>
-		       
-		        <a href="https://data-flair.training/blogs/features-python/"
-		         target="_blank">embeddable (Point 10)</a> tough read<br><br>
-		
-		        <a href="https://www.artima.com/intv/pythonP.html"
-		         target="_blank">extensible - guido</a> 4th section<br><br>
-		            
-		         <a href="https://docs.python.org/3/reference/import.html#the-import-system"
-		         target="_blank">import system</a> tough read<br><br>
-		         
-		         <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
-		         target="_blank">Guido_van_Rossum</a><br><br>
-		       
-						    <hh4>Extensibility</hh4><br><br>
-						    
-						    
-						    
-		        <a href="https://docs.python.org/3/extending/index.html#extending-and-embedding-the-python-interpreter"
-		         target="_blank"><b>Embedding Python</b></a>.<br><br>
-		      </div>
--->
 		    </div>
 
       <h2><u>SYNTAX for Importing Modules/Packages</u></h2>
@@ -13377,7 +13299,7 @@ But not now.
 		      If desired, an entirely separate <b>Variable</b> call <b>pi</b> can
 		      coexist and be given any value, however silly.<br><br>
 	
-      </div><br>
+      </div>
                  
       <div class="question">
 
@@ -13400,10 +13322,10 @@ But not now.
 	               See what <b>random</b> has to offer and pick a constant
 	               ... maybe <b>TWOPI</b> (a "constant" set to <b>2 * Pi</b>).
 	             </li><br>
-	             </li>
-	               Use <b>help</b> (i.e. <b>help(TWOPI)</b>)
+	             <li>
+	               Use <b>type</b> (i.e. <b>type(random.TWOPI)</b>)
 	               to see what sort of <b>Python Object</b>
-	               <b>TWOPI</b> might be.<br>
+	               <b>random.TWOPI</b> might be.<br>
 	             </li><br>
 	             <li>
 	               Assign an <b>Integer Value</b> to <b>random.TWOPI</b>
@@ -13422,17 +13344,238 @@ But not now.
             <summary><span class="anssum">Answer.</span>
             </summary>
               <div class="answer"><br>
-				            <span class="commmand">
               
+				            <span class="command16">
+																		>>> #<br>
+																		... # import the random module<br>
+																		... #<br>
+																		... <br>
+																		>>> import random<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Use the Builtin Function dir to see what random has to offer<br>
+																		... #<br>
+																		... <br>
+																		>>> dir(random)
+																		['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random',<br>
+																	 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_BuiltinMethodType',<br>
+																	 '_MethodType', '_Sequence', '_Set', '__all__', '__builtins__',<br>
+																	 '__cached__', '__doc__', '__file__', '__loader__', '__name__',<br>
+																	 '__package__', '__spec__', '_acos', '_bisect', '_ceil', '_cos',<br>
+																	 '_e', '_exp', '_inst', '_itertools', '_log', '_os', '_pi', '_random',<br>
+																	 '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom',<br>
+																	 '_warn', 'betavariate', 'choice', 'choices', 'expovariate',<br>
+																	 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate',<br>
+																	 'normalvariate', 'paretovariate', 'randint', 'random', 'randrange',<br>
+																	 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform',<br>
+																	 'vonmisesvariate', 'weibullvariate']<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Discover the type of random.TWOPI<br>
+																		... #<br>
+																		... <br>
+																		>>> type(random.TWOPI)<br>
+																		&lt;class 'float'&gt;<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Discover the value of random.TWOPI<br>
+																		... #<br>
+																		... <br>
+																		>>> print("random says TWOPI = ",random.TWOPI)<br>
+																		random says TWOPI =  6.283185307179586<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Try to alter the vaue of random.TWOPI to 47<br>
+																		... #<br>
+																		... <br>
+																		>>> random.TWOPI = 47<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Scarily ... this seems possible!!!!!!!?????!?!<br>
+																		... #<br>
+																		... <br>
+																		>>> type(random.TWOPI)<br>
+																		&lt;class 'int'&gt; <br>
+																		>>> print("Now, TWOPI = ", random.TWOPI," some \"constant\"?!")<br>
+																		Now, TWOPI =  47  some "constant"?!<br>
+																		>>><br> 
 										    		</span><br><br>
-              
+										    		
+										    		<b>random</b> was <b>imported</b> and its
+										    		elements displayed with
+										    		<b>dir()</b> successfully.<br><br>
+										    		
+										    		Amongst the elements
+										    		of <b>random</b> is <b>TWOPI</b>, which was
+										    		shown to be a <b>float</b>, set
+										    		to twice the value of <b>Pi</b>.<br><br>
+										    		
+										    		Somewhat illogically, an attempt
+										    	 to alter the value of
+										    	 <b>random.TWOPI</b> to <b>47</b> was made.<br><br>
+										    	 
+										    	 This worked! and <b>random.TWOPI</b> was
+										    	 mutated into an <b>int</b>, set to <b>47</b>.<br><br>
+										    	 
+										    	 Logically, <b>random.TWOPI</b> should
+										    	 be <b>immutable</b> surely? It is not.
+										    	 
+										    	 The fact is that there is
+										    	 <a href="https://stackoverflow.com/questions/2682745/how-do-i-create-a-constant-in-python"
+										    	  target="_blank">no straight
+										    	 forward way to create a constant in Python</a>.
+										    	 The advice is simply to
+										    	 be disciplined and not to change the value of
+										    	 anything that should be constant. If you do,
+										    	 the consequences are yours!
+										    	 
+										    	 Bit harsh? Many other Languages allow
+										    	 the creations of constants and so
+										    	 protect the poor user from him/herself.
+										    	
+										    	 So the message is to be very
+										    	 sure you know what you are
+										    	 doing if you feel inclined to
+										    	 alter the values of <b><i>any</i>
+										    	 Module Elements</b>.<br><br>
+										    	 
+										    	 <b>Python</b> will not protect you from
+										    	 doing potentially foolish things.<br><br>
               </div>
             </details>
-
-		        </li>
 		        </li><br>
 		        <li>
-				        <span class="commmand">
+		          Following on directly from
+		          the previous exercise, assume
+		          there was a good reason to change
+		          the values of some elements
+		          (specifically <b>TWOPI</b>) of <b>random</b>
+		          for some particular purpose.<br><br>
+		          
+		          Consider how you might return
+		          the entire <b>random module</b>
+		          to its original state after
+		          that purpose has been achieved.<br><br>
+		          
+		          You could assign the original
+		          values to all the elements you altered individually?
+		          This would not always be possible,
+		          for example, if you had changed
+		          a <b>Function</b> into an <b>int</b>!!<br><br>
+		          
+		          <span class="command">
+														>>> type(random.randint)<br>
+														&lt;class 'method'&gt;<br>
+														>>> random.randint=47<br>
+														>>> type(random.randint)<br>
+														&lt;class 'int'&gt;<br>
+														>>> 
+												</span><br><br>
+												
+												Even reinstating <b>TWOPI</b> would
+											 not be trivial due to precision issues.<br><br>
+											 
+											 So, you need to refresh the
+											 whole <b>module</b> somehow.<br><br>
+											 
+											 Maybe just <b>import</b> it again?
+											 Try it. Did it work?<br><br>
+											 
+            <details class="answer">
+            <summary><span class="anssum">Answer.</span>
+            </summary>
+              <div class="answer"><br>
+              
+				            <span class="command">
+						            >>> import random<br>
+																		>>> print("random now says TWOPI = ",random.TWOPI)<br>
+																		random now says TWOPI =  47<br>
+																		>>> 
+											    	</span><br><br>
+											    	
+											    	Nice try, but no it did not work.
+											    	<b>random.TWOPI</b> is still
+											     an <b>int</b> with value
+											     <b>47</b>.<br><br>
+											    	
+											    	<a href="https://stackoverflow.com/questions/19077381/what-happens-when-a-module-is-imported-twice"
+											    	 target="_blank">Any given <b>Module</b>/<b>Package</b>
+											    	can only be <b>imported</b> once</a>.
+											    	import will look to see if the
+											     <b>Library</b> it has been asked to
+											     set up has already been <b>imported</b>.
+											     If it has, <b>import</b> will do nothing!<br><br>
+											    	
+											    	Maybe one could "unimport" <b>random</b> and
+											    	then <b>import</b> it again? Apparently,
+											     <a href="https://stackoverflow.com/questions/1668223/how-to-de-import-a-python-module"
+											      target="_blank">this is possible</a>,
+											     if a little unreliably,
+											     but involves some rather dubious tricks.
+											     Not for us, I suggest!<br><br>
+											     
+											     It should be possible to <b>Remove</b>/<b>Delete</b>
+											     the <b>module</b> using the <b>Keyword del</b>.
+											     
+											     <a href="https://www.programiz.com/python-programming/keyword-list#del"
+						           target="_blank">Keyword del</a>
+						          removes <b>Python Objects</b> and works
+											     fine on <b>Integers</b>, <b>Floats</b> and simpler types,
+											     but not on modules.<br><br>
+											     
+											     However, <b>del</b> removes the <b>Name</b> of the <b>module</b>,
+											     not the <b>module</b> contents.
+											     The name is just
+											     a reference or pointer to the <b>module</b> itself
+											     (the same issue as discussed previously with
+											     respect to <b>Scalar Variables</b>).<br><br>
+											     
+											     If the <b>module</b> is <b>imported</b>
+											     again after a <b>del</b>,
+											     the <b>module</b> name is reinstated, but import
+											     sees the <b>module</b> itself still exists ...
+											     and so does nothing more. Try it.<br><br>
+											     
+											     <span class="command">
+																		>>> #<br>
+																		... # TWOPI is still broken<br>
+																		... #<br>
+																		... <br>
+																		>>> print("random still says TWOPI = ",random.TWOPI)<br>
+																		random still says TWOPI =  47<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # Delete the random Module<br>
+																		... #<br>
+																		... <br>
+																		>>> del random<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # random is now disabled (but still there in all but name!)<br>
+																		... #<br>
+																		... <br>
+																		>>> print("random says TWOPI ... where are you?",random.TWOPI)<br>
+																		Traceback (most recent call last):<br>
+																		&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+																		NameError: name 'random' is not defined<br>
+																		>>> <br>
+																		>>> #<br>
+																		... # import random again<br>
+																		... #<br>
+																		... <br>
+																		>>> import random<br>
+																		>>> <br>
+																		>>> print("random says TWOPI ... back again! BUT NOT FIXED!\n",random.TWOPI)<br>
+																		random says TWOPI ... back again! BUT NOT FIXED!<br>
+																		 47<br>
+																		>>>
+               	</span><br><br>
+               	
+               	**********************************************<br><br>
+											 
+		        </li><br>
+		        <li>
+				        <span class="command">
 						        >>> #<br>
 														... # Try to persuade math to your point of view<br>
 														... #<br>
@@ -13490,13 +13633,6 @@ But not now.
 						        Hopefully, all this nonsense will retreat
 						        soon? <b>Version 4</b> maybe?<br><br>
 						        
-						        En passant, it is not possible to
-						        "unimport" a <b>module</b> once it is imported
-						        (without resorting to
-						        <a href="https://stackoverflow.com/questions/1668223/how-to-de-import-a-python-module"
-						         target="_blank">horrible hackery</a> at least). Specifically, the 
-						        <a href="https://www.programiz.com/python-programming/keyword-list#del"
-						         target="_blank">Keyword del</a> will not remove a <b>module</b> satisfactorily.<br><br>
 						         
 						        
 								      &emsp;&emsp;&emsp;&emsp;<b>import importlib</b><br>
@@ -17255,7 +17391,85 @@ Makes sense I suppose, but a bit picky even for me.
                 <b>THE END</b><br>
                 
                 <b>========================================</b><br><br>
-                
+
               </div>
 -->
 
+<!--
+
+Too unclear/undecided ... maybe if I ever find a succinct way to state all this?
+But not now.
+
+        <hh6m>Python is extensible and embeddable</hh6m><br><br>
+        
+        <div>
+				      <b><i>Background discussion only</b></i>
+				      (possibly to the extent of self indulgence?
+				      Needs to be made clearer or deleted?),
+				      but mention of the
+				      "extensibility" of Python (and to a lesser extent its
+				      embeddability) is ubiquitous. I therefore attempt a
+				      simple explanation (and probably fail!).<br><br>
+				      
+				      I found it difficult to find succinct definitions
+				      for either of the terms in question. I decide to
+				      settle for the following (feel free to suggest improvements):
+				      
+				      <ul>
+				        <li>
+								      An Extensible Programming Language
+								      is one or which the Base Language Definition is capable
+								      of extension, at runtime, particularly by
+								      the inclusion of Libraries written in
+								      other Languages enabling access
+								      to functionality beyond
+								      the Host Language.
+								      
+								      This certainly is possible for Python,
+								      where Libraries written in C can be imported
+								      into Python programs enabling access
+								      to C features not available in Pure Python.
+								      
+								      The process of 
+				      
+				      The benefits of Libraries as a source ready
+				      written and tested code are obvious.
+				      If the code you need has already been written,
+				      and is freely available, why write it again?
+				      Most Programming languages have some way to
+				      share code in this fashion.<br><br>
+		       
+		        <a href="https://en.wikipedia.org/wiki/Extensible_programming"
+		         target="_blank">Extensible programming</a>.<br><br>
+		         
+		        <a href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiEpL7LqPDdAhVEgUsFHTgyDEMQFjAGegQINxAC&url=http%3A%2F%2Fwww.cas.mcmaster.ca%2Fsqrl%2Fpapers%2FSQRLreport47.pdf&usg=AOvVaw0cpaTb9MTrHRVX6AnzcphS"
+		         target="_blank">Modern Extensible Languages"</a>
+		         
+		         
+		         
+		       
+		==============================================================     <br><br>  
+		       
+		        <a href="https://data-flair.training/blogs/features-python/"
+		         target="_blank">extensible (Point 9)</a> tough read<br><br>
+		       
+		        <a href="https://data-flair.training/blogs/features-python/"
+		         target="_blank">embeddable (Point 10)</a> tough read<br><br>
+		
+		        <a href="https://www.artima.com/intv/pythonP.html"
+		         target="_blank">extensible - guido</a> 4th section<br><br>
+		            
+		         <a href="https://docs.python.org/3/reference/import.html#the-import-system"
+		         target="_blank">import system</a> tough read<br><br>
+		         
+		         <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
+		         target="_blank">Guido_van_Rossum</a><br><br>
+		       
+						    <hh4>Extensibility</hh4><br><br>
+						    
+						    
+						    
+		        <a href="https://docs.python.org/3/extending/index.html#extending-and-embedding-the-python-interpreter"
+		         target="_blank"><b>Embedding Python</b></a>.<br><br>
+		      </div>
+-->
