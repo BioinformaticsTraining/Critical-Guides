@@ -9220,7 +9220,7 @@ Click to record your <b>Start</b> time.</button>
                       <b>list methods</b> can edit their
                       <b>list Arguments</b> directly.<br><br>
                     
-                      This is possible because <b>lists are mutable</b>.<br><br>
+                      This is because <b>lists are mutable</b>.<br><br>
                     
                       <b>str methods</b> edit copies which they
                       returned as <b>Function Values</b>.<br><br>
@@ -9239,7 +9239,7 @@ Click to record your <b>Start</b> time.</button>
                       <div class="answer"><br>
                     
                         Only <b>3</b> of the <b>11 list methods</b>
-                        will not. potentially at least, alter
+                        will not, potentially at least, alter
                         the value of the <b>list</b> to which they are
                         applied.<br><br>
                       
@@ -9264,7 +9264,7 @@ Click to record your <b>Start</b> time.</button>
                         Only these <b>3 methods</b> could work on a
                         form of <b>list</b> that was immutable.<br>
                       </div>
-                    <details>
+                    </details>
                   </li><br>
                   
                   <li>
@@ -9452,6 +9452,231 @@ Click to record your <b>Start</b> time.</button>
                                     border-width: 1px;"><br><br>
                       </div>
                     </details>
+                  </li><br>
+                  <li>
+                    <div class="hint">
+                      As previously discussed, "<b>==</b>"
+                      and "<b>!=</b>" are used to compare the <b>Values</b> of suitable
+                      <b>Python Objects</b>. For example:<br><br>
+                    
+                      &emsp;&emsp;&emsp;&emsp;<b>List00 == List01</b><br><br>
+                    
+                      would be <b>True</b> if <b>List00</b> and <b>List01</b>
+                      were comprised entirely of corresponding
+                      elements of the same <b>Value</b>.<br><br>
+                    
+                      &emsp;&emsp;&emsp;&emsp;<b>List00 != List01</b><br><br>
+                    
+		                    would be <b>True</b> if there was any difference between
+		                    any of the corresponding elements of <b>List00</b> and
+		                    <b>List01</b>.<br><br>
+		                    
+		                    It is possible also, to determine whether two <b>Variable
+		                    Names</b> refer to the same <b>Python Object</b>
+		                    (such as a <b>list</b>) using the <b>Keywords</b>
+		                    "<b>is</b>"
+		                    and "<b>not</b>".<br><br>
+		                    
+		                    That is, if<br><br>
+		                    
+		                    &emsp;&emsp;&emsp;&emsp;<b>List00 is List01</b><br><br>
+		                    
+		                    is <b>True</b>, both the <b>Variable Names List00</b>
+		                    and <b>List01</b> must reference the same <b>list</b>.<br><br>
+		                    
+		                    "<b>==</b>" compares the <b>Values</b>
+		                    of the <b>Python Objects</b> referenced
+		                    by two <b>Variable Names</b>.
+		                    
+		                    "<b>is</b>" Compares the <b>Reference Values</b> of the two
+		                    <b>Python Variable Names</b> themselves.
+		                    That
+		                    is the <b><i>Pointers</i></b> to the <b>Data
+		                    Objects</b> rather than the <b>Objects</b>
+		                    themselves.<br><br>
+		                    
+		                    Clearly, if:<br><br>
+		                    
+		                    &emsp;&emsp;&emsp;&emsp;<b>List00 is List01</b><br><br>
+		                    
+		                    is <b>True</b>, then:<br><br>
+		                    
+                      &emsp;&emsp;&emsp;&emsp;<b>List00 == List01</b><br><br>
+                    
+		                    must also be <b>True</b> (a <b><i>single</i> list</b>,
+		                    with <b><i>two names</i></b>,
+		                    is being compared with itself).<br><br>
+		                    
+		                    However, if:<br><br>
+		                    
+                      &emsp;&emsp;&emsp;&emsp;<b>List00 == List01</b><br><br>
+                    
+		                    It is quite possible for: <br><br>
+		                    
+		                    &emsp;&emsp;&emsp;&emsp;<b>List00 is not List01</b><br><br>
+		                    
+		                    To also be correct (<b><i>two distinct lists</i></b>
+		                    with <b><i>Identical Values</i></b>).)<br><br>
+                    </div><br>
+                    
+                    Now that is as clear? the questions! Use the <b>Interpreter</b> to
+                    check your answers, unless you are <b>100%</b> confident.<br><br>
+                    
+                    <ol>
+                      <li>
+                        Make an empty <b>list</b>, <b>Listempty_ass00</b>, by assignment<br><br>
+                    
+                        Make an empty <b>list</b>, <b>Listempty_ass01</b>, by assignment<br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listempty_ass00 == Listempty_ass01</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listempty_ass00 is not Listempty_ass01</b>
+		                      </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				                        <span class="command">
+																														>>> Listempty_ass00 = []<br>
+																														>>> Listempty_ass01 = []<br>
+																														>>> Listempty_ass00 == Listempty_ass01<br>
+																														True<br>
+																														>>> Listempty_ass00 is not Listempty_ass01<br>
+																														True<br>
+																														>>>
+				                        </span><br><br>
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Make a <b>list Listmix_ass00</b>, </b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
+
+                        Make a <b>list Listmix_ass01</b>, </b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listmix_ass00 != Listmix_ass01</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listmix_ass00 is Listmix_ass01</b>
+		                      </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+						                        >>> Listmix_ass00 = [1, "abc", '4tt', [7, 8, 9]]<br>
+																														>>> Listmix_ass01 = [1, "abc", '4tt', [7, 8, 9]]<br>
+																														>>> Listmix_ass00 != Listmix_ass01<br>
+																														False<br>
+																														>>> Listmix_ass00 is Listmix_ass01<br>
+																														False<br>
+																														>>>
+				                        </span>
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Create <b>Listmix_cop00</b>, by copying <b>Listmix_ass00</b><br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listmix_ass00 == Listmix_cop00</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listmix_ass00 is Listmix_cop00</b>
+		                      </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+				                          >>> Listmix_cop00 = Listmix_ass00.copy()<br>
+																														>>> Listmix_ass00 == Listmix_cop00<br>
+																														True<br>
+																														>>> Listmix_ass00 is Listmix_cop00<br>
+																														False<br>
+																														>>>
+				                        </span>
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Make a list <b>Listorder_00</b>, <b>[1, "4tt", 'abc', [7, 8, 9]]</b>, by assignment<br><br>
+
+                        Make a list <b>Listorder_01</b>, <b>[[7, 8, 9], 1, "abc", '4tt']</b>, by assignment<br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listorder_00 != Listorder_01</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Listorder_00 is Listorder_01</b>
+                        </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+				                          >>> Listorder_00 = [1, "4tt", 'abc', [7, 8, 9]]<br>
+																														>>> Listorder_01 = [[7, 8, 9], 1, "abc", '4tt']<br>
+																														>>> Listorder_00 != Listorder_01<br>
+																														True<br>
+																														>>> Listorder_00 is Listorder_01<br>
+																														False<br>
+																														>>>
+				                        </span>
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Make a <b>list</b>, <b>Listass_02</b>, <b>[1, 2, 3, 4]</b>, by assignment<br><br>
+                        
+                        Assign <b>Listass_02</b> to <b>Listass_03</b><br><br>
+                        
+                        Assign <b>Listass_03</b> to <b>Listass_04</b><br><br>
+                        
+                        <span style="color:blue">
+                          What are the Values of:<br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Listass_02 == Listass_03 == Listass_04</b><br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Listass_02 is Listass_03 is Listass_04</b><br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Listass_02 is Listass_03 == Listass_04</b>
+                        </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+				                          >>> Listass_02 = [1, 2, 3, 4]<br>
+																														>>> Listass_03 = Listass_02<br>
+																														>>> Listass_04 = Listass_03<br>
+																														>>> Listass_02 == Listass_03 == Listass_04<br>
+																														True<br>
+																														>>> Listass_02 is Listass_03 is Listass_04<br>
+																														True<br>
+																														>>> Listass_02 is Listass_03 == Listass_04<br>
+																														True<br>
+																														>>>
+				                        </span><br><br>
+				                      </div>
+				                    </details><br>
+                      </li>
+                    </ol>
                   </li>                  
                 </ol>
               </div>
