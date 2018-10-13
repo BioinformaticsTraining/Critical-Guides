@@ -9522,7 +9522,7 @@ Click to record your <b>Start</b> time.</button>
                     Now that is as clear? the questions! Use the <b>Interpreter</b> to
                     check your answers, unless you are <b>100%</b> confident.<br><br>
                     
-                    <ol>
+                    <ol type="i">
                       <li>
                         Make an empty <b>list</b>, <b>Listempty_ass00</b>, by assignment<br><br>
                     
@@ -9543,19 +9543,46 @@ Click to record your <b>Start</b> time.</button>
 				                        <span class="command">
 																														>>> Listempty_ass00 = []<br>
 																														>>> Listempty_ass01 = []<br>
+																														
+						                        <img src="Images/list-isnot00.png"
+						                             alt="Fiddle!"
+						                             class="centimg"
+						                             style="background: White;
+						                                    border-style: solid;
+						                                    border-color: red;
+						                                    border-width: 2px;">
+				                                    				                          
 																														>>> Listempty_ass00 == Listempty_ass01<br>
 																														True<br>
 																														>>> Listempty_ass00 is not Listempty_ass01<br>
 																														True<br>
 																														>>>
 				                        </span><br><br>
+				                        
+				                        <b>Listempty_ass00</b> and <b>Listempty_ass01</b>,
+				                        clearly, have identical initial <b>Value</b>.So:<br><br>
+				                        
+				                        &emsp;&emsp;&emsp;&emsp;<b>Listempty_ass00 == Listempty_ass01</b><br><br>
+				                        
+				                        is <b>True</b>.<br><br>
+				                        
+				                        However, as <b>mutable Python Objects</b>, they must
+				                        be distinct to allow for independent
+				                        content edit. Thus:<br><br>
+				                        
+				                        &emsp;&emsp;&emsp;&emsp;<b>Listempty_ass00 is not Listempty_ass01</b><br><br>
+				                        
+				                        must also be <b>True</b> (that is,
+				                        they are <b><i>NOT</i></b> two
+				                        references to the same <b>Object</b>). 
+				                      
 				                      </div>
 				                    </details>
                       </li><br>
                       <li>
-                        Make a <b>list Listmix_ass00</b>, </b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
+                        Make a <b>list Listmix_ass00</b>, <b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
 
-                        Make a <b>list Listmix_ass01</b>, </b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
+                        Make a <b>list Listmix_ass01</b>, <b>[1, "abc", '4tt', [7, 8, 9]]</b> by assignment<br><br>
                         
                         <span style="color:blue">
                           What are the <b>Values</b> of:<br><br>
@@ -9573,12 +9600,29 @@ Click to record your <b>Start</b> time.</button>
 				                        <span class="command">
 						                        >>> Listmix_ass00 = [1, "abc", '4tt', [7, 8, 9]]<br>
 																														>>> Listmix_ass01 = [1, "abc", '4tt', [7, 8, 9]]<br>
+																														
+																														<img src="Images/list-isnot01.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+				                                    				                          
 																														>>> Listmix_ass00 != Listmix_ass01<br>
 																														False<br>
 																														>>> Listmix_ass00 is Listmix_ass01<br>
 																														False<br>
 																														>>>
-				                        </span>
+				                        </span><br><br>
+				                        
+				                        Exactly the same comments apply here as
+				                        did for the last part of this exercise.<br><br>
+				                        
+				                        There is nothing special about <b>Empty Lists</b>.
+				                        The type and complexity of the <b>list</b> contents is not relevant.<br><br>
+				                        
+				                        The only relevant observation is that the <b>list</b> contents are identical.
 				                      </div>
 				                    </details>
                       </li><br>
@@ -9600,12 +9644,30 @@ Click to record your <b>Start</b> time.</button>
 				
 				                        <span class="command">
 				                          >>> Listmix_cop00 = Listmix_ass00.copy()<br>
+						                        <img src="Images/list-isnot02.png"
+						                             alt="Fiddle!"
+						                             class="centimg"
+						                             style="background: White;
+						                                    border-style: solid;
+				                                      border-color: red;
+				                                      border-width: 2px;">
+				                                    				                          
 																														>>> Listmix_ass00 == Listmix_cop00<br>
 																														True<br>
 																														>>> Listmix_ass00 is Listmix_cop00<br>
 																														False<br>
 																														>>>
-				                        </span>
+				                        </span><br><br>
+				                        
+				                        As discussed previously, the <b>method list.copy()</b>
+				                        creates a distinct <b>list Object</b> with <b>Value</b> identical to
+				                        the copied <b>list Object</b>.<br><br>
+				                        
+				                        So, essentially the same situation
+				                        as for the previous two parts of this exercise.<br><br>
+				                        
+				                        The compared <b>Values</b> are the same,
+				                        the compared <b>Objects</b> are <b>distinct</b>.
 				                      </div>
 				                    </details>
                       </li><br>
@@ -9630,12 +9692,34 @@ Click to record your <b>Start</b> time.</button>
 				                        <span class="command">
 				                          >>> Listorder_00 = [1, "4tt", 'abc', [7, 8, 9]]<br>
 																														>>> Listorder_01 = [[7, 8, 9], 1, "abc", '4tt']<br>
+																														
+																														<img src="Images/list-isnot03.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+				                                    				                          
 																														>>> Listorder_00 != Listorder_01<br>
 																														True<br>
 																														>>> Listorder_00 is Listorder_01<br>
 																														False<br>
 																														>>>
-				                        </span>
+				                        </span><br><br>
+				                        
+				                        This time the element <b>Values</b> of the two <b>lists</b>
+				                        are the same, but their <b>Order</b> is different.<br><br>
+				                        
+				                        A <b>list</b> is an <b>Ordered</b> set of <b>Python Objects</b>.
+				                        <b>Order</b> is a definitive property of a <b>list</b> therefore
+				                        even when, as in this case, the <b>Order</b>
+				                        of the elements is the <b><i> only</i> Value</b> difference
+				                        between two <b>lists</b>, the <b>lists</b> are deemed
+				                        to be different by <b>Value</b>.<br><br>
+				                        
+				                        Accordingly, by <b>Value</b> and by <b>Reference</b>,
+				                        <b>Listorder_00</b> and <b>Listorder_01</b> are not the same.                        
 				                      </div>
 				                    </details>
                       </li><br>
@@ -9665,6 +9749,15 @@ Click to record your <b>Start</b> time.</button>
 				                          >>> Listass_02 = [1, 2, 3, 4]<br>
 																														>>> Listass_03 = Listass_02<br>
 																														>>> Listass_04 = Listass_03<br>
+																														
+																														<img src="Images/list-isnot04.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+
 																														>>> Listass_02 == Listass_03 == Listass_04<br>
 																														True<br>
 																														>>> Listass_02 is Listass_03 is Listass_04<br>
@@ -9673,6 +9766,25 @@ Click to record your <b>Start</b> time.</button>
 																														True<br>
 																														>>>
 				                        </span><br><br>
+				                        
+				                        As discussed previously, when a "new <b>list</b>" is
+				                        "created" by assigning one <b>list Variable
+				                        Name</b> to another (as here). No new <b>list
+				                        Data Object</b> is actually created. Instead,
+				                        a copy is made of the <b>Reference</b> (or <b>Pointer</b>)
+				                        which is the <b>Value</b> of the
+				                        copied <b>Variable Name</b>.<br><br>
+				                        
+				                        The result of copying by
+				                        assignment is the duplication of the
+				                        <b>Reference</b> to a <b>Data Object</b>, not a
+				                        duplication of the <b>Data Object</b> itself.<br><br>
+				                        
+				                        Accordingly, all three <b>list Variable
+				                        Names</b> created here refer to the same <b>list</b>.
+				                        They will all register as equal whether
+				                        compared with "<b>==</b>", "<b>is</b>" or any
+				                        combination of the two.
 				                      </div>
 				                    </details><br>
                       </li>
@@ -10283,7 +10395,178 @@ Click to record your <b>Start</b> time.</button>
                       </div>
                     </details>
                   </li><br>
-                  
+                  <li>
+                    <ol type="i">
+                      <li>
+                        Make a <b>tuple Tuplemix_ass00</b>, <b>(1, "abc", '4tt', [7, 8, 9])</b> by assignment<br><br>
+
+                        Make a <b>tuple Tuplemix_ass01</b>, <b>(1, "abc", '4tt', [7, 8, 9])</b> by assignment<br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Tuplemix_ass00 == Tuplemix_ass01</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Tuplemix_ass00 is Tuplemix_ass01</b>
+		                      </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+						                        >>> Tuplemix_ass00 = (1, "abc", '4tt', [7, 8, 9])<br>
+																														>>> Tuplemix_ass01 = (1, "abc", '4tt', [7, 8, 9])<br>
+																														
+																														<img src="Images/tuple-isnot01.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+				                                    				                          
+																														>>> Tuplemix_ass00 == Tuplemix_ass01<br>
+																														True<br>
+																														>>> Tuplemix_ass00 is Tuplemix_ass01<br>
+																														True<br>
+																														>>>
+				                        </span><br><br>
+				                        
+				                        <b>tuples</b> are <b>immutable</b>. As <b>immutable Objects</b>
+				                        cannot be edited, there is no need
+				                        to make more than one
+				                        such <b>Object</b> per <b>Value</b>.<br><br>
+				                        
+				                        The first <b>tuple</b> assignment causes a
+				                        <b>tuple</b> of the specified <b>Value</b> to be created
+				                        at a location that is a function of that <b>Value</b>.
+				                        The <b>Location</b> (<b>Reference</b>) of the new <b>tuple Object</b>
+				                        is stored in the assigned <b>Variable</b>.<br><br>
+				                        
+				                        The second <b>tuple</b> assignment does precisely the same thing.
+				                        As the <b>tuple Value</b> is the same for both assignments, the
+				                        two <b>tuple Variables</b> will reference the same <b>Location</b>,
+				                        that is, the same <b>tuple Object</b>.<br><br>
+				                        
+				                        This being the case, both the <b>tuple Value</b> ("<b>==</b>") and
+				                        the <b>tuple Reference</b> ("<b>is</b>") comparisons
+				                        have to show equality.<br><br>
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Make a tuple <b>Tupleorder_00</b>, <b>(1, "4tt", 'abc', [7, 8, 9])</b>, by assignment<br><br>
+
+                        Make a tuple <b>Tupleorder_01</b>, <b>([7, 8, 9], 1, "abc", '4tt')</b>, by assignment<br><br>
+                        
+                        <span style="color:blue">
+                          What are the <b>Values</b> of:<br><br>
+
+		                        &emsp;&emsp;&emsp;&emsp;<b>Tupleorder_00 == Listorder_01</b><br><br>
+		                        
+		                        &emsp;&emsp;&emsp;&emsp;<b>Tupleorder_00 is Listorder_01</b>
+                        </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+				                          >>> Tupleorder_00 = (1, "4tt", 'abc', [7, 8, 9])<br>
+																														>>> Tupleorder_01 = ([7, 8, 9], 1, "abc", '4tt')<br>
+																														
+																														<img src="Images/tuple-isnot03.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+				                                    				                          
+																														>>> Tupleorder_00 == Tupleorder_01<br>
+																														False<br>
+																														>>> Tupleorder_00 is Tupleorder_01<br>
+																														False<br>
+																														>>>
+				                        </span><br><br>
+				                        
+				                        This time the element <b>Values</b> of the two <b>tuples</b>
+				                        are the same, but their <b>Order</b> is different.<br><br>
+				                        
+				                        A <b>tuple</b> is an <b>Ordered</b> set of <b>Python Objects</b>.
+				                        <b>Order</b> is a definitive property of a <b>tuple</b> therefore
+				                        even when, as in this case, the <b>Order</b>
+				                        of the elements is the <b><i> only</i> Value</b> difference
+				                        between two <b>tuples</b>, the <b>tuples</b> are deemed
+				                        to be different by <b>Value</b>.<br><br>
+				                        
+				                        Accordingly, two distinct tuple Objects are required.
+				                        
+				                        Thus, both by <b>Value</b> and by <b>Reference</b>,
+				                        <b>Tupleorder_00</b> and <b>Tupleorder_01</b> are not the same.
+				                      </div>
+				                    </details>
+                      </li><br>
+                      <li>
+                        Make a <b>tuple</b>, <b>Listass_02</b>, <b>(1, 2, 3, 4)</b>, by assignment<br><br>
+                        
+                        Assign <b>Tupleass_02</b> to <b>Tupleass_03</b><br><br>
+                        
+                        Assign <b>Tupleass_03</b> to <b>Tupleass_04</b><br><br>
+                        
+                        <span style="color:blue">
+                          What are the Values of:<br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Tupleass_02 == Tupleass_03 == Tupleass_04</b><br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Tupleass_02 is Tupleass_03 is Tupleass_04</b><br><br>
+                          
+                          &emsp;&emsp;&emsp;&emsp;<b>Tupleass_02 is Tupleass_03 == Tupleass_04</b>
+                        </span>
+		                      
+				                    <details class="answer">
+				                    <summary><span class="anssum">Answer.</span>
+				                    </summary>
+				                      <div class="answer"><br>
+				
+				                        <span class="command">
+				                          >>> Tupleass_02 = (1, 2, 3, 4)<br>
+																														>>> Tupleass_03 = Listass_02<br>
+																														>>> Tupleass_04 = Listass_03<br>
+																														
+																														<img src="Images/tuple-isnot04.png"
+				                             alt="Fiddle!"
+				                             class="centimg"
+				                             style="background: White;
+				                                    border-style: solid;
+				                                    border-color: red;
+				                                    border-width: 2px;">
+
+																														>>> Tupleass_02 == Tupleass_03 == Tupleass_04<br>
+																														True<br>
+																														>>> Tupleass_02 is Tupleass_03 is Tupleass_04<br>
+																														True<br>
+																														>>> Tupleass_02 is Tupleass_03 == Tupleass_04<br>
+																														True<br>
+																														>>>
+				                        </span><br><br>
+				                        
+				                        From all that precedes, it must be clear that all
+				                        that happens here will create but one <b>tuple
+				                        Object</b> referenced by three <b>Variables</b>.<br><br>
+				                        
+				                        <a href="https://www.youtube.com/watch?v=cEkepygs_bM&index=1&list=RDcEkepygs_bM"
+				                          target="_blank">Anyway you want to</a> think of it,
+				                        the three entities created here must be
+				                        equal by <b>Value</b> and by <b>Reference</b>.
+				                      </div>
+				                    </details>
+                      </li>
+                    </ol>
+                  </li><br>
                   <li>
                     I have included many links to the clearer
                     information sources
@@ -10373,7 +10656,7 @@ Click to record your <b>Start</b> time.</button>
                         My version lacks rigour but is correct.
                         Their version is simply wrong!
                       <div>
-                    </details> 
+                    </details> <br>
                   </li>
                 </ol>
               </div>
