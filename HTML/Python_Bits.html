@@ -11316,7 +11316,7 @@ Click to record your <b>Start</b> time.</button>
                       
                         It is described fully
                         <a href="https://docs.python.org/3/tutorial/errors.html#errors-and-exceptions"
-                         taget-"_blank">here</a>. I will offer
+                         taget="_blank">here</a>. I will offer
                         a simple example as part of this <b>Answer</b>.<br><br>
                       
                         The approach is primarily based on
@@ -13747,8 +13747,8 @@ Click to record your <b>Start</b> time.</button>
 		          
 		          &emsp;&emsp;&emsp;&emsp;<b>diddle.fiddle()</b><br><br>
 		          
-		          which would distinguish it from a <b>function</b>
-		          called <b>fiddle</b>, from a
+		          distinguishing it from a <b>function</b>
+		          called <b>fiddle</b>, of a
 		          <b>Library</b> called <b>middle</b> which would be invoked thus:<br><br>
 		          
 		          &emsp;&emsp;&emsp;&emsp;<b>middle.fiddle()</b><br><br>
@@ -13764,7 +13764,7 @@ Click to record your <b>Start</b> time.</button>
 		        </li>
 		      </ul>
 		      
-		      Time to try it out, using a <b>Module</b> with the
+		      Time to try it out, using a <b>module</b> with the
 		      unfortunately singularised name
 		      <a href="https://docs.python.org/3/library/math.html#module-math"
 		       target="_blank">"<b>math</b>"</a>, which
@@ -14306,7 +14306,7 @@ Click to record your <b>Start</b> time.</button>
 			      </ol><br>
 		    </div><br>
 												  
-				  Especially when <b>Libraries</b> have longer names,
+				  When <b>Libraries</b> have longer names,
 				  prefixing each <b>module element</b> with the <b>module
 				  name</b> and a <b>Full Stop</b> can be clumsy.<br><br>
 				  
@@ -14338,7 +14338,78 @@ Click to record your <b>Start</b> time.</button>
 								3.141592653589793<br>
 								>>> 
 						</span><br><br>
-                 
+						
+						A further expansion of the <b>import Syntax</b> introduces
+					 the <b>Keyword from</b>, as follows:<br><br>
+						
+				  &emsp;&emsp;&emsp;&emsp;<b>from</b>
+				  <i>&lt;Library&gt;</i> <b>import</b>
+				  <i>&lt;Library_Element&gt;</i><br><br>
+				  
+				  This <b>Syntax</b> allows the
+				  <b>import</b> of a single <b>Element</b> of a
+				  <b>module</b> in such a fashion it can
+				  be access with no prefix to its name.<br><br>
+				  
+				  For example:<br><br>
+				  
+				  &emsp;&emsp;&emsp;&emsp;<b>from math import pi</b><br><br>
+				  
+				  Try it:<br><br>
+				  
+      <span class="command">
+        >>> from math import pi<br>
+								>>> pi<br>
+								3.141592653589793<br>
+								>>>
+      </span><br><br>
+      
+      There could be problems with name
+      clashes here of course.
+      Caution is advised.<br><br>
+      
+      Potential name clash issues could be
+      minimised by renaming the <b>imported
+      Library Element</b> with the
+      <b>Keyword as</b>.<br><br>
+      
+  			 &emsp;&emsp;&emsp;&emsp;<b>from</b>
+				  <i>&lt;Library&gt;</i> <b>import</b>
+				  <i>&lt;Library_Element&gt;</i>
+				  <b>as</b>
+				  <i>&lt;Library_Element_Alias&gt;</i><br><br>
+				  
+				  For example:<br><br>
+				  
+				  &emsp;&emsp;&emsp;&emsp;<b>from math import pi as Pi</b><br><br>
+				  
+      <span class="command">
+        >>> from math import Pi<br>
+								>>> Pi<br>
+								3.141592653589793<br>
+								>>>
+      </span><br><br>
+      
+      Finally, for the truly bold, one can
+      <b>import</b> all the elements of a <b>Library</b> at
+      once by using the wildcard '<b>*</b>' thus:<br><br>
+      
+      &emsp;&emsp;&emsp;&emsp;<b>from math import *</b><br><br>
+      
+      After this command, every element of the <b>module math</b> can be
+      accessed without any prefix. Fine, as long as there are no name clashes.
+      <a href="https://docs.quantifiedcode.com/python-anti-patterns/maintainability/from_module_import_all_used.html"
+       target="_blank">This approach is not recommended</a>, unless you are absolutely
+      certain its consequences will be exactly as you intended.<br><br>
+      
+      Maybe to <b>import</b> a <b>module</b> you have written
+      yourself (covered later) with a very particular <b>Name Space</b>?<br><br>
+      
+      But, for example, there are a number of
+      <b>Mathematically Orientated Libraries</b>
+      you might well want to use in parallel
+      that have copious name duplications.<br><br>
+               
       <div class="question">
 
       <h2><i><u>Questions & Simple Exercises</u></i></h2>
@@ -14460,16 +14531,147 @@ Click to record your <b>Start</b> time.</button>
 												</details>
 		        </li><br>
 		        <li>
+		        
+		         Continuing on from the
+		         previous exercise, import the function <b>pow()</b>
+		         from the <b>math module</b> in such a way it can
+		         be invoke with any prefix.<br><br>
+		         
+		         Now, when you give the command:<br><br>
+		         
+		         &emsp;&emsp;&emsp;&emsp;&emsp;<b>pow(3,9)</b><br><br>
+		         
+		         are you using the <b>Builtin Version</b> of
+		         <b>pow()</b>, or the version from the <b>module math</b>?<br><br>
+		         
+		         <div class="hint">
+		           There is more than one way to discover
+		           the answer to this question.<br><br>
+		           
+		           For the most elegant approach it
+		           would help to remember that, just like any other
+		           <b>Python Data Objects</b>, <b>module methods</b>
+		           can be compared using "<b>is</b>" and
+		           "<b>is not</b>".<br>
+		         </div><br>
 											 
             <details class="answer">
             <summary><span class="anssum">Answer.</span>
             </summary>
               <div class="answer"><br>
+              
 								        <span class="command">
-	
+																		>>> from math import pow<br>
+																		>>> <br>
+																		>>> pow is math.pow<br>
+																		True<br>
+																		>>>
 																</span><br><br>
 																
+																Remember, first you imported the whole
+															 <b>Builtin math module</b> using:<br><br>
+																
+																&emsp;&emsp;&emsp;&emsp;<b>import math</b><br><br>
+																
+																This would have installed all the
+															 elements of <b>math</b> and made them available
+															 as long as elements names are prefixed
+															 with "<b>math.</b>".<br><br>
+																
+																Then you <b>imported <i>just</i></b> the <b>math
+															 method pow()</b> in a fashion that allowed
+															 its access without the "<b>math.</b>" prefix.<br><br>
+																
+																Recall that you cannot <b>import</b> a <b>module</b>
+															 twice, so the <b>math method pow()</b> already
+															 loaded, will not have been overwritten.
+															 However, the evidence is that a new
+															 <b>Reference</b> to <b>math.pow()</b> has been created
+															 and has <b><i>overwritten</i></b> the <b>Reference</b>
+															 to the <b>Builtin</b> version of <b>pow()</b>.<br><br>
+															 
+															 The destruction of the only <b>Reference</b> to
+															 the <b>Builtin version of pow()</b> does not feel
+															 too comfortable to me?<br><br>
+															 
+															 There is no way to reinstate it short
+															 of restarting the <b>Python Interpreter</b>.<br><br>
+															 
+															 Maybe one should consider a little more
+															 carefully when facing potential name clashes
+															 between <b>modules</b> and <b>Core Python</b>? After all,
+															 the <b>import Syntax</b> does make very simple
+															 provision for a less cavalier approach.<br><br>
+															 
+															 Instead of:<br><br>
+															 
+															 &emsp;&emsp;&emsp;&emsp;<b>from math import pow</b><br><br>
+															 
+															 why not:<br><br>
+															 
+															 &emsp;&emsp;&emsp;&emsp;<b>from math import pow as m_pow</b><br><br>
+															 
+															 Not so slick, but far safer.<br><br>
+															 
+								        <span class="command">
+																	 >>> import math<br>
+																		>>> from math import pow as m_pow<br>
+																		>>> pow(3,4,2)<br>
+																		1<br>
+																		>>> math.pow(3,4)<br>
+																		81.0<br>
+																		>>> m_pow(3,4)<br>
+																		81.0<br>
+																		>>> m_pow is math.pow<br>
+																		True<br>
+																		>>>
+																</span><br><br>
+																
+																Well, suit yourself really, I just attempt
+															 to point out the pitfalls. If you are sure that
+															 name clashes are not an issue,
+															 there cannot be a problem.<br><br>
+															 
+															 My preference would be just to <b>import</b> the
+															 whole <b>module</b> with as short a name as
+															 possible. That is:<br><br>
+															 
+															 &emsp;&emsp;&emsp;&emsp;<b>import math as m</b><br><br>
+															 
+															 simple, slightly less to type, and safe.<br><br>			
 
+																An alternative method of answering the question of this exercise would be to run <b>pow()</b>
+															 with a third argument. The fact
+															 that <b>pow()</b>
+															 would complain would indicate that you were
+															 using the <b>math</b> version
+															 of the function which does
+															 not accept a third argument.
+															 This works, but is very ugly!!<br><br>
+															 
+								        <span class="command">
+																		>>> pow(2,3,4)<br>
+																		Traceback (most recent call last):<br>
+																		&nbsp;&nbsp;File "&lt;stdin&gt:", line 1, in &lt;module&gt;<br>
+																		TypeError: pow() takes exactly 2 arguments (3 given)<br>
+																		>>> 
+																</span><br><br>
+																
+															 Of course, you could make this option
+															 more acceptable if you used
+															 the <b>try</b> and <b>except Keywords</b>
+															 (discussed previously) thus:<br><br>
+															 
+								        <span class="command">
+								          >>> try:<br>
+																		... &nbsp;&nbsp;&nbsp;&nbsp;pow(2,3,4)<br>
+																		... &nbsp;&nbsp;&nbsp;&nbsp;print("Sucess! Implying the Builtin pow()")<br>
+																		... except TypeError:<br>
+																		... &nbsp;&nbsp;&nbsp;&nbsp;print("Failure! Implying the math pow()")<br>
+																		... <br>
+																		Failure! Implying the math pow()<br>
+																		>>>
+																</span><br><br>
 														</div>
 												</details>
 								  </li>
