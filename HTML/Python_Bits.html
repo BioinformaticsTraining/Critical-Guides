@@ -15074,8 +15074,101 @@ Click to record your <b>Start</b> time.</button>
           </summary>
 
             <div class="minsect"><br>
-            </div>
-
+              Running <b>Python Programs</b> by explicitly
+              invoking the <b>Interpreter</b>, with the
+              file containing the <b>Python code</b>
+              as an <b>Argument</b>, is fine for the
+              code development stages.<br><br>
+              
+              It is clumsy however, especially
+              when you consider that the full
+              path to the code file must be
+              provided. The file is likely
+              to be in the "<b>Current Directory</b>"
+              during development, but for
+              production use, it would be foolish
+              to expect users to make local
+              copies of all the programs they
+              might want to use!<br><br>
+              
+              Should a user be bored and/or
+              insane enough to want to run
+              your <b>Hello.py</b> program. He/She
+              would expect just to have to type:<br><br>
+              
+              &emsp;&emsp;&emsp;&emsp;<b>Hello</b><br><br>
+              
+              to sate his/her astoundingly
+              limited drive for thrill and
+              excitement.<br><br>
+              
+              This goal can be simply achieved
+              in three steps.<br><br>
+              
+              <ol>
+                <li>
+                  Add a line at the very top of the
+                  <b>Python Code File</b> that informs the
+                  <b>Operating System</b> how to <b>Execute</b>
+                  this <b>File</b> as a <b>Program</b>.<br><br>
+                  
+                  This is a simple line that only
+                  has to record where to find the
+                  <b>Python Interpreter</b>.<br><br>
+                  
+                  So, where is the
+                  <b>Python Interpreter</b>??????<br><br>
+                  
+                  <b>Linux</b> will tell you if you type:<br><br>
+                  
+                  &emsp;&emsp;&emsp;&emsp;<b>which python</b><br><br>
+                  
+                  in a <b>Terminal Window</b>. This command and reads as:<br><br>
+                  
+                  <i>"If I type python, which program will you execute?"</i><br><br>
+                  
+                  As you see, the answer is usually (but not always):<br><br>
+                  
+                  &emsp;&emsp;&emsp;&emsp;<b>/usr/bin/python</b><br><br>
+                  
+                  In front of this address, you must put a '<b>#</b>', to
+                  ensure that the <b>Python Interpreter</b> does
+                  not try to make sense of this line
+                  (remember that anything following a '<b>#</b>'
+                  is comment as far as the <b>Interpreter</b>
+                  is concerned).<br><br>
+                  
+                  Between the '<b>#</b>' and the
+                  address you need a '<b>!</b>',
+                  which informs the <b>Operating
+                  System</b> that it must interpret
+                  this line.<br><br>
+                  
+                  So the extra line for you <b>Code File</b> is therefore:<br><br>
+                  
+                  &emsp;&emsp;&emsp;&emsp;<b>#!/usr/bin/python</b><br><br>
+                  
+                  Add it to your <b>Hello.py</b>
+                  file and save. You should now have:<br><br>
+                  
+			 								      <span class="code">
+												        #!/usr/bin/python<br><br>
+												        
+												        print("Hello Flipping World!")<br>
+												        print("This is my very first
+												        miserable program!!")<br>
+												        print("and the last time I allow my
+												        computer to patronize me!!!")
+												      </span>
+												    </li><br>
+												    <li>
+	                 Next, you need to upgrade
+	                 your <b>Code File</b> from just a
+	                 simple <b>Text File</b> to a
+	                 <b>Program File</b> that can be <b>Executed</b>.<br><br>
+												    </li><br>
+												  </ol>
+	           </div>
           </details>
         </li>
       </ol><br>
