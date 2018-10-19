@@ -5,6 +5,11 @@
  https://www.w3schools.com/html/html_css.asp
 -- ############################################## */
 
+details
+  {
+	   outline:none;
+	 }
+	 
 /* Text justification for all p, div, h2, h3, h4 */
 
 p {

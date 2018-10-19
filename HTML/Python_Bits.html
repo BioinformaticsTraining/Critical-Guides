@@ -15135,7 +15135,7 @@ Click to record your <b>Start</b> time.</button>
                   
                   in a <b>Terminal Window</b>. This command and reads as:<br><br>
                   
-                  <i>"If I type python, which program will you execute?"</i><br><br>
+                  <i>"If I type <b>python</b>, <b>which</b> program will you execute?"</i><br><br>
                   
 												    		<img src="Images/which_python.png"
 												           alt="Fiddle!"
@@ -15234,21 +15234,110 @@ Click to record your <b>Start</b> time.</button>
 												                  border-width: 2px;">
 								        </li><br>
 								        <li>
-								          Finally, it is required to find some way to avoid
-								          including the full path of the Code File in the Hello command.<br><br>
+								          Finally, it is required to find
+								          some way to avoid
+								          including the full path of the <b>Code
+								          File</b> in the <b>Hello</b> command.<br><br>
 								          
+								          When a command is issued, a set of
+								          directories are searched, in turn,
+								          for a program that matches the command.<br><br>
+								          
+								          If no match is found, and error message is issued.<br><br>
+								          
+								          <img src="Images/hello_missing.png"
+												           alt="Fiddle!"
+												           class="centimg"
+												           style="background: White;
+												                  border-style: solid;
+												                  border-color: red;
+												                  border-width: 2px;"><br>
+												                  
+												      The ordered set of directories that are
+												      recorded by the <b>Systems Variable</b>
+												      called <b>PATH</b>.<br><br>
+												      
+												      The contents of <b>PATH</b> can be
+												      viewed using the command:<br><br>
+												      
+												      &emsp;&emsp;&emsp;&emsp;<b>echo $PATH</b><br><br>
+												      
+												      "<b>$PATH</b>" meaning <i>"The <b>Value</b>
+												      of the <b>Variable</b> called
+												      <b>PATH</b>"</i>.<br><br>
+												      
+												      The simplest way to make a program
+												      accessible to all users of a
+												      given system would be to copy it to
+												      one of the directories listed.<br><br>
+												      
+												      &emsp;&emsp;&emsp;&emsp;<b>/usr/local/bin</b><br><br>
+												      
+												      generally exists for that very purpose.<br><br>
+												      
+												      Or, you could extend the list of directories
+												      using the following commands:<br><br>
+												      
+												      &emsp;&emsp;&emsp;&emsp;<b>PATH=$PATH:/home/dpjudge/Desktop/Python3</b><br>
+												      &emsp;&emsp;&emsp;&emsp;<b>export PATH</b><br><br>
+												      
+												      The first command reads:<br><br>
+												      
+												      <i>"Make the <b>Value</b> of <b>PATH</b> be its
+												      current <b>Value</b> (<b>$PATH</b>) appended
+												      by <b>:/home/dpjudge/Desktop/Python3</b>"</i><br><br>
+												      
+												      The "<b>export</b>" command makes
+												      the new value of <b>PATH</b> active
+												      ("<b>exports</b>"it).<br><br>
+												      
+												      Outside of the context of this tutorial,
+												      this is not a good solution. Amongst other
+												      objections, it only works for the current
+												      user (you), and the current session.<br><br>
+												      
+												      But it does work:<br><br>
+								
 												    		<img src="Images/PATH.png"
 												           alt="Fiddle!"
 												           class="centimg"
 												           style="background: White;
 												                  border-style: solid;
 												                  border-color: red;
-												                  border-width: 2px;"><br><br>
-								          
-								          
-								        
+												                  border-width: 2px;"><br>
+												      
+												      Finally, you need to lose the requirement
+												      to included the "<b>.py</b>" file
+												      extension in the command.<br><br>
+												      
+												      There are lots of ways to do this, including:<br>
+												      
+												      <ul>
+												        <li>
+												          an alias
+												        </li>
+											         <li>
+												          a soft link
+												        </li>
+											         <li>
+												        		rename the Code File
+												        </li>
+											         <li>
+												          copy the Code File
+												        </li>
+												      </ul><br>
+												      
+														    Of which I think the last is the tidiest.<br><br>
+										          
+												    		<img src="Images/Hello_found.png"
+												           alt="Fiddle!"
+												           class="centimg"
+												           style="background: White;
+												                  border-style: solid;
+												                  border-color: red;
+												                  border-width: 2px;">
 								        </li>
-												  </ol>
+												  </ol><br>
 	           </div>
           </details>
         </li>
