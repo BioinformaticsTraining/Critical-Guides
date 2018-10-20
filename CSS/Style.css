@@ -610,24 +610,27 @@ span.minsectsum {
 
 .problem {
     background-color: Gainsboro; color: auto;
-    margin-right: auto;
-    width: 775px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: auto;
 }
 
 /* class for Pseudo Code */
 
 .pseudo {
     background-color: LightBlue; color: auto;
-    margin-right: auto;
-    width: 775px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: auto;
 }
 
 /* class for thin Pseudo Code */
 
 .pseudos {
     background-color: LightBlue; color: auto;
-    margin-right: auto;
-    width: 725px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: auto;
 }
 
 /* class for Hints  */
