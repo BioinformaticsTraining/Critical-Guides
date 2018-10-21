@@ -346,7 +346,7 @@ Click to record your <b>Start</b> time.</button>
     <details class="msect">
     <summary>
       <span class="msectsumpre">
-        <b>Exercise - Part I:</b>
+        <b>Section - I:</b>
         Familiarity with the UNIX Command Line</b>
       </span>
     </summary>
@@ -429,7 +429,7 @@ Click to record your <b>Start</b> time.</button>
 
     <details class="msect">
     <summary>
-      <span class="msectsumlan"><b>Exercise - Part II:</b>
+      <span class="msectsumlan"><b>Section - II:</b>
               Preparing to investigate Python Commands
       </span>
     </summary>
@@ -598,7 +598,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumdat"><b>Exercise - Part III:</b>
+      <span class="msectsumdat"><b>Section - III:</b>
               Scalar Values
      </span>
     </summary>
@@ -2711,7 +2711,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumdat"><b>Exercise - Part IV:</b>
+      <span class="msectsumdat"><b>Section - IV:</b>
               Scalar Variables
       </span>
     </summary>
@@ -3621,7 +3621,7 @@ Click to record your <b>Start</b> time.</button>
                   </li><br>
 
                   <li>
-                    It has can be established that
+                    It has been established that
                     <b>type()</b> is a
                     <b>Builtin Function</b>.<br><br>
 
@@ -3755,21 +3755,37 @@ Click to record your <b>Start</b> time.</button>
 
                       OK, I simplify this to:<br><br>
                       <i>"<b>Keywords</b> are words it would
-                      be silly to use as <b>Variable Names</b>,
+                      be silly to use as <b>Variable Names</b>
+                      as they already have already been assigned
+                      constant <b>Values</b>.<br><br>
+                      
                       <b>Reserved Words</b> are words that the
                       <b>Language</b> has forbidden to be used
-                      as <b>Variable Names</b>"</i><br><br>
+                      as <b>Variable Names</b>, for any
+                      of a number of reasons."</i><br><br>
 
                       In <b>Python</b>, <b>Reserved words</b>
                       and <b>Keywords</b> <b>Coincide</b>
                       (that is, all <b>Keywords</b> are
                       <b>Reserved Words</b> and vice versa),
-                      which surely has to be sensible? The
-                      only mystery remaining is why
+                      which surely has to be sensible?<br><br>
+                      
+                      The only mystery remaining is why
                       <b>Python</b> makes life mysterious
                       by varying its <b>Error Messages</b>
                       for different types of
-                      <b>Keywords</b>?<br><br>
+                      <b>Keywords</b>? No mystery really,
+                      the <b>Interpreter</b> just notices
+                      that <b>and</b> and <b>or</b> are
+                      both <b>Binary Operators</b> and so
+                      cannot be the first word of a
+                      command, <b><i>before</i></b> it
+                      notices they are also <b>Reserved Words</b>.
+                      Strictly speaking, there should
+                      be two <b>Error Messages</b>,
+                      but the <b>Interpreter</b> is
+                      content to rush on once the
+                      first terminal failure is detected.<br><br>
 
                       A <b>Language</b> does
                       not <b><i>have</i></b> to <b>Reserve</b> any
@@ -3998,7 +4014,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumfun"><b>Exercise - Part V:</b>
+      <span class="msectsumfun"><b>Section - V:</b>
              Builtin Functions.
       </span>
     </summary>
@@ -5708,7 +5724,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumfun"><b>Exercise - Part VI:</b>
+      <span class="msectsumfun"><b>Section - VI:</b>
               Methods
       <span>
     </summary>
@@ -8724,7 +8740,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumdat"><b>Exercise - Part VII:</b>
+      <span class="msectsumdat"><b>Section - VII:</b>
               Major Python Data Structures
       <span>
     </summary>
@@ -13450,7 +13466,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumext"><b>Exercise - Part VIII:</b>
+      <span class="msectsumext"><b>Section - VIII:</b>
               Enhancing Python using Modules and Packages
       <span>
     </summary>
@@ -14841,7 +14857,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumlan"><b>Exercise - Part IX:</b>
+      <span class="msectsumlan"><b>Section - IX:</b>
               Preparing to write Python Programs
       <span>
     </summary>
@@ -15362,7 +15378,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumcon"><b>Exercise - Part X:</b>
+      <span class="msectsumcon"><b>Section - X:</b>
         Conditional Code Block Execution
       </span>
     </summary>
@@ -15376,48 +15392,187 @@ Click to record your <b>Start</b> time.</button>
         <h2>Conditional Code Block Execution</h2>
         
         <div>
-         In the next three sections we will
-         how the coding elements introduced
-         above can be arranged into a
-         coherently structured program.<br><br>
-         
-         First, the simple idea of making the
-         execution of blocks of code depend upon
-         evaluation of some Condition.<br><br>
-         
-         Or ... more crudely ... only executing
-         certain blocks of instructions if some
-         Condition Expression is True.<br><br>
-         
-         <div class="pseudo">
-           <b><u>Pseudo-Code</u></b><br><br>
-		         Do some interesting things<br><br>
-		         
-		         Only if conditions are favorable:<br>
-		         &emsp;&emsp;&emsp;&emsp; Do some more interesting things<br><br>
-		         
-		         Carrying on doing yet more interesting things<br><br>
-         </div>
-         
-         Cleverer still!! being enabling a
-         choice between two blocks of code,
-         one to be executed if a Condition be
-         True, the other if the Conditional
-         Value is False.<br><br>
-         
-         
-         
-          to decide which of <br><br>
-         
-          considered the ways in which the programming elements that have been discussed pre <br><br>
-        
-        
-        
-        
-        
+	         In the next three tutorial sections we will
+	         how the coding elements introduced
+	         above can be arranged into a
+	         coherently structured program.<br><br>
+	         
+	         First, the simple idea of making the
+	         execution of blocks of code depend upon
+	         evaluation of some <b>Condition(s)</b>.<br><br>
+	         
+	         Or ... more crudely ... only executing
+	         certain blocks of instructions if some
+	         <b>Conditional Expression</b> is <b>True</b>.<br><br>
+	         
+	         <b><u>Pseudo-Code</u></b><br>
+	         <div class="pseudo">
+	           
+			         Do some interesting things<br><br>
+			         
+			         Only if conditions are favourable:<br>
+			         &emsp;&emsp;&emsp;&emsp; Do some more interesting things<br><br>
+			         
+			         Carrying on doing yet more interesting things<br><br>
+	         </div><br>
+	         
+	         Cleverer still!! being enabling a
+	         choice between two blocks of code,
+	         one to be executed if a <b>Condition</b> be
+	         <b>True</b>, the other if the <b>Conditional
+	         Value</b> is <b>False</b>.<br><br>
+	         
+	         <b><u>Pseudo-Code</u></b><br>
+	         <div class="pseudo">
+			         Do interesting things<br><br>
+			         
+			         if conditions are favourable:<br>
+			         &emsp;&emsp;&emsp;&emsp; Do celebratory things<br>
+			         Otherwise, as conditions are not favourable:<br>
+	           &emsp;&emsp;&emsp;&emsp; Do more cautious things<br><br>
+	           
+			         Carrying on doing further things of
+			         unconditional interest<br><br>
+	         </div><br>
+	         
+	         Ultimately, choose one of several courses of action,
+	         dependant upon a number of mutually exclusive conditions:<br><br>
+	         
+	         <b><u>Pseudo-Code</u></b><br>
+	         <div class="pseudo">
+	         
+			         Do interesting things<br><br>
+			         
+			         if condition <b>A</b> applies:<br>
+			         &emsp;&emsp;&emsp;&emsp; Do <b>A</b> compatible things<br>
+			         if condition <b>B</b> applies:<br>
+			         &emsp;&emsp;&emsp;&emsp; Do <b>B</b> compatible things<br>
+			         if condition <b>C</b> applies:<br>
+			         &emsp;&emsp;&emsp;&emsp; Do <b>C</b> compatible things<br>
+			         &emsp;&emsp;&emsp;&emsp;...<br>
+			         Otherwise, as no specified conditions apply:<br>
+	           &emsp;&emsp;&emsp;&emsp; Do some very general things<br><br>
+	           
+			         Carrying on doing further things of
+			         unconditional interest<br><br>
+	         </div><br>
         </div>
-        
       </div><br>
+
+      <h2><u>SYNTAX for a Single Conditional Code Block</u></h2>
+
+      <div class="code">
+        if
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ...
+      </div><br><br>
+      
+      The <b>Code Block</b> comprised of
+      <b>Statements 1, 2, 3, 4, ...</b>
+      will only be executed when the
+      <i>&lt;Conditional Expression&gt;</i> is <b>True</b>.<br><br>
+      
+      As discussed previously, the <b>Code Block</b>
+      is defined by indentation of exactly
+      <b>4 spaces</b> (or, less reliably, a single <b>Tab</b>).<br><br>
+      
+      Just the <b>Python Keyword</b>
+      <a href="https://www.programiz.com/python-programming/keyword-list#if_else_elif"
+       target="_blank">if<a> is required here.<br><br>
+
+      <summary><span class = "exeblocksum">
+        <h3>Trivial Example 1</h3>
+      </summary></span>
+
+        <div class = "example">
+          <b><u>The Problem</u></b><br>
+          <div class="problem">
+            Detect whether 
+            <b>7</b> times table.
+          </div><br>
+
+          <b><u>Pseudo-Code</u></b><br>
+          <div class="pseudo">
+            for each integer value (<b>i</b>, say)
+            between <b>1</b> and <b>12</b>, prettily
+            print out the value of <b>i * 7</b>.
+          </div><br>
+
+          <b><u>Code</u></b><br>
+          <div class="code16">
+            for i in [1,2,3,4,5,6,7,8,9,10,11,12]:
+            <span Class="codecomm16">
+              # For every integer value from 1 to 12<br>
+            </span>
+            &nbsp;&nbsp;&nbsp;
+            print str(i) + "\ttimes 7 is:\t" + str(i * 7);
+          </div>
+        </div><br>
+      </details><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2><u>SYNTAX for Option of Two Code Blocks</u></h2>
+
+      <div class="code">
+        if
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 1<br>
+        else:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 2
+      </div><br><br>
+
+      <h2><u>SYNTAX for Multiple Conditional Code Blocks</u></h2>
+
+      <div class="code">
+        if&nbsp;&nbsp;
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression 1&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 1<br>
+        elif
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression 2&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 2<br>
+        elif
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression 3&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 3<br>
+        elif
+        <span style="font-weight:normal;">
+          <i>&lt;Conditional Expression 4&gt;</i></span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 4<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ...<br>
+        else:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Code Block Default
+      </div><br><br>
+
+
+
+
 
       <ol>
         <li>
@@ -15482,7 +15637,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumcon"><b>Exercise - Part XI:</b>
+      <span class="msectsumcon"><b>Section - XI:</b>
              Repeated Elements --- Loops
       </span>
     </summary>
@@ -15787,11 +15942,11 @@ Click to record your <b>Start</b> time.</button>
                         preferred solution.<br><br>
 
                         &nbsp;<b>a = 1 + 2 + 3 + 4 + 5 + 6
-                        +&nbsp;&nbsp;&nbsp;\<br><br>
+                        +&nbsp;&nbsp;&nbsp;\<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
 
-                        will also work, for people that like
+                        will also work, for people who like
                         backslashes.
                       </li>
                     </ul>
@@ -17485,7 +17640,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumcon"><b>Exercise - Part XII:</b>
+      <span class="msectsumcon"><b>Section - XII:</b>
              User Defined Functions
       </span>
     </summary>
@@ -18654,7 +18809,7 @@ Click to record your <b>Start</b> time.</button>
   <li>
     <details class="msect">
     <summary>
-      <span class="msectsumext"><b>Exercise - Part XIII:</b>
+      <span class="msectsumext"><b>Section - XIII:</b>
              User Defined Modules
       </span>
     </summary>
