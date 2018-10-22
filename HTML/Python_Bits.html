@@ -15513,29 +15513,54 @@ Click to record your <b>Start</b> time.</button>
 								
 								          <b><u>Pseudo-Code</u></b><br>
 								          <div class="pseudo">
-								            Ask for and Input an <b>Letter</b>
-								            from the <b>Keyboard</b>.
+                    Make a representation of all the <b>Valid Base Codes</b>.<br><br>
 								            
-								            If what is <b>Input</b> is not a <b>Valid
-								            Single Alpha Character</b>, snarl and
-								            exit the program
-								            in disgust!
+								            Ask for and <b>Input</b> an <b>Letter</b>
+								            from the <b>Keyboard</b>.<br><br>
 								            
-								            If the <b>Letter</b> is a <b>Base Code</b>,
-								            <div style="left-margin=20px">
-								              celebrate.
-									           </div>
+								            Discard any <b>Input</b> beyond the first <b>Character</b>.<br><br>
 								            
-								            If the <b>Letter</b> is not a <b>Base Code</b>,
-								            <div style="left-margin=20px">
-								              express remorse.
+								            If the first <b>Character</b> entered is amongst the <b>Valid Base Codes</b><br>
+							             <div style="left-margin=20px">
+								              be Joyful!
+									           </div><br>
+								            
+								            If the first Character entered is not amongst the Valid Base Codes<br>
+							             <div style="left-margin=20px">
+								              express sorrow.
 									           </div>
 								          </div><br>
 								
 								          <b><u>Code</u></b><br>
-								          <div class="code">
-                    <span class="codecomm">								            
-
+								          <div class="code16">
+                    <span class="codecomm16">
+		                    # Make a string of all the Valid Base Codes<br>
+		                  </span>
+                    <br>
+																				Base_Codes = "acgtACGT"<br>
+																				<br>
+	                   <span class="codecomm16">
+																						# Input a Value from the Keyboard<br>
+		                  </span>
+																				<br>
+																				Potential_Base = input("Type in the Alpha Character to be tested for Basehood: ")<br>
+																				<br>
+	                   <span class="codecomm16">
+																						# Discard anything entered beyond the first Character
+		                  </span><br>
+																				<br>
+																				Potential_Base = Potential_Base[0]<br>
+																				<br>
+	                   <span class="codecomm16">
+																						# Check trimmed Input for Validity<br>
+		                  </span>
+																				<br>
+																				if Potential_Base in Base_Codes:<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print(Potential_Base, " is a Valid Base Code\n\n")<br>
+																				<br>
+																				if Potential_Base not in Base_Codes:<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print(Potential_Base, " is not a Valid Base_Code\n\n")
+								          </div><br>
 										        
 								          <b><u>The Output</u></b><br>
 								          <div class="output">
@@ -15555,51 +15580,23 @@ Click to record your <b>Start</b> time.</button>
 								          
 								          <b><u>Notes, Experiments & Questions</u></b><br>
 								          <div class="experiment">
-								          
-								          <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)"
-								           target="_blank">"<b>An Epoch</b>"</a>, in general,
-								          is a point in History from which time is counted.
-								          In this context,
-								          <a href="https://en.wikipedia.org/wiki/Unix_time"
-								           target="_blank">"<b>The Epoch</b>"</a> is the point in
-								          time (<b>January 1st 1970</b>) when some extraordinarily
-								          young people decided time began for "real" computing.
-                  <a href="https://www.collinsdictionary.com/dictionary/english/poppycock"
-                   target="_blank"><b><i>Poppycock</i></b></a>!!!
-                  Speaking as one who was there, we had
-								          very fine computers in <b>1969</b> and before! Much
-								          bigger than the tiny things you all play around with today!
-								          Oh well, some battles are just not worth fighting, <b>January
-								          1970</b> it is then.<br><br>
-								          
-								          In this example there were two conditional
-								          <b>Code Blocks</b> that were mutually exclusive and
-								          covered all possible conditions.Both were tested.<br><br>
-								          
-								          Note that the continued lines were not indented
-								          as they were when using the <b>Python Interpreter
-								          Interactively</b>. Had they been indented, the
-								          extra white  space would have been assumed
-								          to be part of the code.<br><br>
-								          
-								          It is generally good practice to avoid making
-								          the same computation more than once. I have
-								          tried to follow that practice here. Can you
-								          see where?<br><br>
-								          
-								          On my system, a <b>Tab</b> ('<b>\t</b>') fills to the
-								          next line position divisible by <b>8</b>. I am not
-								          sure how consistent that behaviour might be
-								          across different platforms.
-								          
+										          
+										          In this example there were two conditional
+										          <b>Code Blocks</b> that were mutually exclusive and
+										          covered all possible conditions. Both were tested.<br><br>
+										          
+										          Was this the first time for using the <b>Keyword</b> "<b>in</b>" to
+										          determine whether a given <b>String</b> occurred within
+										          another <b>String</b>? I do hope not! I will include it
+										          in the <b>Checkpoint</b> for this section, just in case.
+										          It is very useful!
 								          </div>
-
-
-22222222222222222222222222222222222222222222222
-
+								        </div>
+								      </details>
+								      
 								      <details>
 								      <summary><span class = "exeblocksum">
-								        <h3>Trivial Example 3</h3>
+								        <h3>Trivial Example 2</h3>
 								      </summary></span>
 								
 								        <div class = "example">
@@ -15633,14 +15630,9 @@ Click to record your <b>Start</b> time.</button>
 								            </div>
 								            
 								          </div><br>
-
-
-
-
-333333333333333333333333333333333333333333
-
-
-
+                </div>
+              </details>
+              
 								      <details>
 								      <summary><span class = "exeblocksum">
 								        <h3>Trivial Example 3</h3>
