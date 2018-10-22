@@ -1,0 +1,34 @@
+# Import the module sys, which offers a method
+# to abandon the program at any point returning
+# an Error Code.
+
+import sys
+
+# Make a dictionary relating Base Codes to Base Names
+
+Base_Codes_Names = {'a':"Adenine", 'A':"Adenine",'c': "Cytosine", 'C': "Cytosine",
+                    'g':"Guanine", 'G':"Guanine",'t': "Thymine",  'T':"Thymine"}
+
+# Input a Value from the Keyboard
+
+Potential_Base = input("Type in the Alpha Charater to be tested for Basehood: ")
+
+# Disgard anything entered beyond the first Character
+#print(Potential_Base)
+#print(Potential_Base[0])
+#Potential_Base = Potential_Base[0]
+
+# Check trimmed Input for Validity
+
+#if not Potential_Base.isalpha():    # if the Charater input is non-Alpha,
+#    print("/n/n", Potential_Base, " is non Alpha, I give up/n/n")
+#    sys.exit(14)                    # Exit the program with Error code 14
+
+Valid_Base_Code = bool(Base_Codes_Names[Potential_Base] != None)
+
+if Valid_Base_Code:
+    print(Potential_Base, " is ", Base_Codes_Names[Potential_Base], "\n\n")
+
+if not Valid_Base_Code:
+    print(Potential_Base, " is not a Valid Base_Code", "\n\n")
+

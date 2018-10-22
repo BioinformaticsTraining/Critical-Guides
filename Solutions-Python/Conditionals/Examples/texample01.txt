@@ -1,0 +1,20 @@
+# Make a string of all the Valid Base Codes
+
+Base_Codes = "acgtACGT"
+
+# Input a Value from the Keyboard
+
+Potential_Base = input("Type in the Alpha Charater to be tested for Basehood: ")
+
+# Disgard anything entered beyond the first Character
+
+Potential_Base = Potential_Base[0]
+
+# Check trimmed Input for Validity
+
+if Potential_Base in Base_Codes:
+    print(Potential_Base, " is a Valid Base Code/n/n")
+
+if Potential_Base not in Base_Codes:
+    print(Potential_Base, " is not a Valid Base_Code\n\n")
+

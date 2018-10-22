@@ -1,51 +1,51 @@
 # Import the module time as t
 # time includes a method time()
 # that returns the number of
-# seconds since the Epoc
+# seconds since the Epoch
 
 import time as t
 
 # Record and display the number of
-# seconds since the Epoc
+# seconds since the Epoch
 
-Seconds_From_Epoc_float = t.time()
+Seconds_From_Epoch_float = t.time()
 print("\n\nIts been a long weary %20.6f seconds \
-since the beginning of time!\n\n" % Seconds_From_Epoc_float)
+since the beginning of time!\n\n" % Seconds_From_Epoch_float)
 
 # Compute the Number seconds as an Integer
 
-Seconds_From_Epoc_int = int(Seconds_From_Epoc_float)
+Seconds_From_Epoch_int = int(Seconds_From_Epoch_float)
 
 # Compute whether the Second Count is even or not
 
-Even_Second = not bool(Seconds_From_Epoc_int % 2)
+Even_Second = not bool(Seconds_From_Epoch_int % 2)
 
 if (Even_Second):          # Only if even,
 
     # Compute time in various other time units
 
-    Minutes_From_Epoc  = Seconds_From_Epoc_int  // 60
-    Hours_From_Epoc    = Minutes_From_Epoc      // 60
-    Days_From_Epoc     = Hours_From_Epoc        // 24
-    Years_From_Epoc    = int(Days_From_Epoc     /  365.25)
+    Minutes_From_Epoch  = Seconds_From_Epoch_int  // 60
+    Hours_From_Epoch    = Minutes_From_Epoch      // 60
+    Days_From_Epoch     = Hours_From_Epoch        // 24
+    Years_From_Epoch    = int(Days_From_Epoch     /  365.25)
 
     # Display the Computed Values nicely
 
     print("Rejoice! We live in the even moment, \
-%10d seconds since the Epoc!" % int(Seconds_From_Epoc_int))
+%10d seconds since the Epoch!" % int(Seconds_From_Epoch_int))
 
-    print("That is\t\t\t\t     %10d minutes from the Epoc" \
-% Minutes_From_Epoc)
+    print("That is\t\t\t\t     %10d minutes from the Epoch" \
+% Minutes_From_Epoch)
 
-    print("Which is a mere\t\t\t     %10d hours from the Epoc" \
-% Hours_From_Epoc)
+    print("Which is a mere\t\t\t     %10d hours from the Epoch" \
+% Hours_From_Epoch)
 
-    print("Or just\t\t\t\t     %10d days from the Epoc" \
-% Days_From_Epoc)
+    print("Or just\t\t\t\t     %10d days from the Epoch" \
+% Days_From_Epoch)
 
-    print("Or a trifling \t\t\t     %10d years from the Epoc" \
-% Years_From_Epoc)
+    print("Or a trifling \t\t\t     %10d years from the Epoch" \
+% Years_From_Epoch)
 
 if (not Even_Second):      # If seconds were odd,
     print("On Odd seconds, such as %10d, I rest!" \
-% Seconds_From_Epoc_int)   # Grumble a bit!
+% Seconds_From_Epoch_int)   # Grumble a bit!
