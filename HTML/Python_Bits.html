@@ -15497,7 +15497,7 @@ Click to record your <b>Start</b> time.</button>
 								      
 								      Just the <b>Python Keyword
 								      <a href="https://www.programiz.com/python-programming/keyword-list#if_else_elif"
-								       target="_blank">if<a></b> is required here.<br><br>
+								       target="_blank">if</a></b> is required here.<br><br>
 								
 								      <details>
 								      <summary><span class = "exeblocksum">
@@ -15510,7 +15510,7 @@ Click to record your <b>Start</b> time.</button>
 								            To disclose the number of
 								            various time units we are from
 								            "The Epoc", but only if the value
-								            sought, in seconds, is even! 
+								            sought, in seconds, is even!
 								          </div><br>
 								
 								          <b><u>Pseudo-Code</u></b><br>
@@ -15537,14 +15537,92 @@ Click to record your <b>Start</b> time.</button>
 								          </div><br>
 								
 								          <b><u>Code</u></b><br>
-								          <div class="code16">
-								            for i in [1,2,3,4,5,6,7,8,9,10,11,12]:
-								            <span Class="codecomm16">
-								              # For every integer value from 1 to 12<br>
+								          <div class="code">
+                    <span class="codecomm">								            
+										            # Import the module time as t<br>
+										            # time includes a method time()<br>
+										            # that returns the number of<br>
+										            # seconds since the Epoc<br>
 								            </span>
-								            &nbsp;&nbsp;&nbsp;
-								            print str(i) + "\ttimes 7 is:\t" + str(i * 7);
-								          </div>
+								            <br>
+																				import time as t<br>
+																				<br>
+                    <span class="codecomm">
+																						# Record and display the number of<br>
+																						# seconds since the Epoc<br>
+								            </span>
+																				<br>
+																				Seconds_From_Epoc_float = t.time()<br>
+																				print("\n\nIts been a long weary %20.6f seconds \<br>
+																				since the beginning of time!\n\n" % Seconds_From_Epoc_float)<br>
+                    <br>
+																				<span class="codecomm">
+		                    # Compute the Number seconds as an Integer
+								            </span>
+                    <br>
+                    Seconds_From_Epoc_int = int(Seconds_From_Epoc_float)
+																				<br>
+																				<span class="codecomm">
+																						# Compute whether the Second Count is even or not<br>
+								            </span>
+																				<br>
+																				Even_Second = not bool(Seconds_From_Epoc_int % 2)<br>
+																				<br>
+																				if (Even_Second):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="codecomm">
+																				  # Only if even,<br>
+		                    <br>
+																						&nbsp;&nbsp;&nbsp;&nbsp;# Compute time in various other time units<br>
+																				</span>
+																				<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;Minutes_From_Epoc  = Seconds_From_Epoc_int  // 60<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;Hours_From_Epoc    = Minutes_From_Epoc      // 60<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;Days_From_Epoc     = Hours_From_Epoc        // 24<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;Years_From_Epoc    = int(Days_From_Epoc     /  365.25)<br>
+																				<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="codecomm">
+																						# Display the Computed Values nicely<br>
+																				</span>
+																				<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("Rejoice! We live in the even moment, \<br>
+																				%10d seconds since the Epoc!" % int(Seconds_From_Epoc_int))<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("That is\t\t\t\t     %10d minutes from the Epoc" \<br>
+																				% Minutes_From_Epoc)<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("Which is a mere\t\t\t     %10d hours from the Epoc" \<br>
+																				% Hours_From_Epoc)<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("Or just\t\t\t\t     %10d days from the Epoc" \<br>
+																				% Days_From_Epoc)<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("Or a trifling \t\t\t     %10d years from the Epoc" \<br>
+																				% Years_From_Epoc)<br>
+																				<br>
+																				if (not Even_Second):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="codecomm">								            
+																				  # If seconds were odd,<br>
+																				</span>
+																				&nbsp;&nbsp;&nbsp;&nbsp;print("On Odd seconds, such as %10d, I rest!" \<br>
+																				% Seconds_From_Epoc_int)&nbsp;&nbsp;
+                    <span class="codecomm">
+																				  # Grumble a bit!<br>
+																				</span>
+																		</div><br><br>
+										        
+								          <b><u>The Output</u></b><br>
+								          <div class="output">
+								          
+								          		The Code above is available in
+																				<a href="../Solutions-Python/Conditionals/Examples/texample00.py"
+																				 target="_blank">this file</a>.<br><br>
+								  
+												    		<img src="Images/texample_cond00.png"
+												           alt="Fiddle!"
+												           class="centimg"
+												           style="background: White;
+												                  border-style: solid;
+												                  border-color: red;
+												                  border-width: 2px;"><br>
+								          </div><br>
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 								        </div><br>
 								      </details><br>
             </div>
@@ -15621,10 +15699,10 @@ Click to record your <b>Start</b> time.</button>
         <p>
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
-        </p> dddddddddddddddddddddddddd
-      </div> aaaaaaaaaaaaaaaaaa
-    </details> bbbbbbbbbbbbbbbbbbb
-  </li><br> cccccccccccccccccccccccc
+        </p>
+      </div>
+    </details>
+  </li><br>
 
 <!-- ############################################## ---
 ---- ############################################## ---
