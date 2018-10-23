@@ -46,6 +46,6 @@ if (Even_Second):          # Only if even,
     print("Or a trifling \t\t\t     %10d years from the Epoch" \
 % Years_From_Epoch)
 
-if (not Even_Second):       # If seconds were odd,
+else:                       # If seconds were odd,
     print("On Odd seconds, such as %10d, I rest!" \
 % Seconds_From_Epoch_int)   # Grumble a bit!

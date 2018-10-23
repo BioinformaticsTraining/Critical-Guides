@@ -15668,13 +15668,15 @@ Click to record your <b>Start</b> time.</button>
 																				<br>
 																				if Random_AA <= 3:<br>
 																				    print("Charged (side chains often makes salt bridges)")<br>
-																				<br>
-																				if Random_AA > 3 and Random_AA <= 11:<br>
-																				    print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")<br>
-																				<br>
-																				if Random_AA > 11:<br>
-																				    print("Hydrophobic (normally buried inside the protein core)")
-																		</div><br><br>
+<pre class="code16">if Random_AA <= 3:
+    print("Charged (side chains often makes salt bridges)")
+			 
+if Random_AA > 3 and Random_AA <= 11:
+			 print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")
+
+if Random_AA > 11:
+    print("Hydrophobic (normally buried inside the protein core)")</pre>
+    														</div><br><br>
 
 									         <b><u>The Output</u></b><br>
 								          <div class="output">
@@ -15808,7 +15810,7 @@ Click to record your <b>Start</b> time.</button>
 								          <div class="problem">
 								            To disclose the number of
 								            various time units we are from
-								            "The Epoch", but only if the value
+								            "<b>The Epoch</b>", but only if the value
 								            sought, in seconds, is even!
 								          </div><br>
 								
@@ -15816,10 +15818,10 @@ Click to record your <b>Start</b> time.</button>
 								          <div class="pseudo">
 								            Discover and display the
 								            Number of seconds
-								            since "The Epoch".
+								            since "<b>The Epoch</b>".
 								            
 								            If the number of seconds
-								            since "The Epoch" is even,
+								            since "<b>The Epoch</b>" is even,
 								            
 								            <div style="left-margin=20px">
 								              Compute and display the
@@ -15828,7 +15830,7 @@ Click to record your <b>Start</b> time.</button>
 								            </div>
 								            
 								            If the number of seconds
-								            since the Epoch is odd,
+								            since <b>The Epoch</b> is odd,
 								            <div style="left-margin=20px">
 								              Sneer a bit.
 								            </div>
@@ -15901,7 +15903,7 @@ Click to record your <b>Start</b> time.</button>
 																				<br>
 																				if (not Even_Second):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span class="codecomm">								            
-																				  # If seconds were odd,<br>
+																				&nbsp;# If seconds were odd,<br>
 																				</span>
 																				&nbsp;&nbsp;&nbsp;&nbsp;print("On Odd seconds, such as %10d, I rest!" \<br>
 																				% Seconds_From_Epoch_int)&nbsp;&nbsp;
@@ -16165,25 +16167,27 @@ Click to record your <b>Start</b> time.</button>
                     <span class="codecomm16">
 																				# Declare the type of AA that has been selected<br>
 		                  </span>
-																				<br>
-																				if Random_AA <= 3:<br>
-																				    print("Charged (side chains often makes salt bridges)")<br>
-																				<br>
-																				if Random_AA > 3 and Random_AA <= 11:<br>
-																				    print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")<br>
-																				<br>
-																				if Random_AA > 11:<br>
-																				    print("Hydrophobic (normally buried inside the protein core)")
+<pre class="code16">if Random_AA <= 3:
+    print("Charged")
+else:
+    if Random_AA > 3 and Random_AA <= 11:
+        print("Polar")
+    else:
+        if Random_AA > 11:
+            print("Hydrophobic")
+        else:
+            print("I do not beleive you!")
+</pre>
 																		</div><br><br>
 
 									         <b><u>The Output</u></b><br>
 								          <div class="output">
 								          
 								          		The Code above is available in
-																				<a href="../Solutions-Python/Conditionals/Examples/texample02.py"
+																				<a href="../Solutions-Python/Conditionals/Examples/texample11.py"
 																				 target="_blank">this file</a>.<br><br>
 								  
-														    		<img src="Images/texample_cond02.png"
+														    		<img src="Images/texample_cond11.png"
 														           alt="Fiddle!"
 														           class="centimg"
 														           style="background: White;
@@ -16194,48 +16198,17 @@ Click to record your <b>Start</b> time.</button>
 								          
 								          <b><u>Notes, Experiments & Questions</u></b><br>
 								          <div class="experiment">
-										          This example is based upon information found
-										          <a href="https://proteinstructures.com/Structure/Structure/amino-acids.html"
-										           target="_blank">"<b>here</b>"</a>.
-										           
-										          The code includes three conditionally
-										          executed single statements blocks
-										          of code that
-										          justifies its place her.
-										          However it is an offensively poor program!<br><br>
+											         Some improvement by using a
+											         structure of nested "<b>if ... else</b>" commands.<br><br>
 										          
-										          <ol>
-										            <li>
-										              Three mutually exclusive conditionals?
-										              If the conditions of the first are met,
-										              one still continues to test for match
-										              with the other two?
-										            </li><br>
-										            <li>
-										              In theory, the three conditions tested
-										              cover all possibilities. However, I
-										              would still be inclined to code for
-										              the unexpected (maybe just me?). I would
-										              always want a clause that  said:<br><br>
-										              
-										              <i>"and if anything else is true, let me
-										              know, maybe someone has invented a new Integer?!"</i>
-										            </li><br>
-										            <li>
-										              Would you really use conditionals
-										              like this at all!
-										              
-										              Lots of better ways, maybe an extended <b>Dictionary</b>?
-										              Or a second
-										              <b>Dictionary</b> for the <b>Amino Acid Types</b>? Can you
-										              design a better program?
-										              
-										              Much improved versions of this code are
-										              possible when more sophisticated conditional
-										              statements have been introduced,
-										              as you will see.
-										            </li>
-										          </ol>
+										          Now, at least, <b>Conditional Expressions</b>
+										          are only tested until one is found to be <b>True</b>.
+										          Pretty ugly though! Imagine taking this
+										          approach if there were <b>50</b> possible
+										          <b>Amino Acid Types</b>!<br><br>
+										          
+										          I shortened the messages for convenience and added a
+										          final impossible else clause in the name of pedantry.
 								          </div><br>
                 </div>
               </details>
@@ -16250,7 +16223,7 @@ Click to record your <b>Start</b> time.</button>
 								          <div class="problem">
 								            To disclose the number of
 								            various time units we are from
-								            "The Epoch", but only if the value
+								            "<b>The Epoch</b>", but only if the value
 								            sought, in seconds, is even!
 								          </div><br>
 								
@@ -16258,10 +16231,10 @@ Click to record your <b>Start</b> time.</button>
 								          <div class="pseudo">
 								            Discover and display the
 								            Number of seconds
-								            since "The Epoch".
+								            since "<b>The Epoch</b>".
 								            
 								            If the number of seconds
-								            since "The Epoch" is even,
+								            since "<b>The Epoch</b>" is even,
 								            
 								            <div style="left-margin=20px">
 								              Compute and display the
@@ -16269,8 +16242,7 @@ Click to record your <b>Start</b> time.</button>
 								              time units, since the "Epoch".
 								            </div>
 								            
-								            If the number of seconds
-								            since the Epoch is odd,
+								            Otherwise
 								            <div style="left-margin=20px">
 								              Sneer a bit.
 								            </div>
@@ -16283,14 +16255,14 @@ Click to record your <b>Start</b> time.</button>
 										            # Import the module time as t<br>
 										            # time includes a method time()<br>
 										            # that returns the number of<br>
-										            # seconds since the Epoch<br>
+										            # seconds since <b>The Epoch</b><br>
 								            </span>
 								            <br>
 																				import time as t<br>
 																				<br>
                     <span class="codecomm">
 																						# Record and display the number of<br>
-																						# seconds since the Epoch<br>
+																						# seconds since <b>The Epoch</b><br>
 								            </span>
 																				<br>
 																				Seconds_From_Epoch_float = t.time()<br>
@@ -16341,9 +16313,10 @@ Click to record your <b>Start</b> time.</button>
 																				&nbsp;&nbsp;&nbsp;&nbsp;print("Or a trifling \t\t\t     %10d years from the Epoch" \<br>
 																				% Years_From_Epoch)<br>
 																				<br>
-																				if (not Even_Second):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				else:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span class="codecomm">								            
-																				  # If seconds were odd,<br>
+																				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+																				# If seconds were odd,<br>
 																				</span>
 																				&nbsp;&nbsp;&nbsp;&nbsp;print("On Odd seconds, such as %10d, I rest!" \<br>
 																				% Seconds_From_Epoch_int)&nbsp;&nbsp;
@@ -16356,57 +16329,23 @@ Click to record your <b>Start</b> time.</button>
 								          <div class="output">
 								          
 								          		The Code above is available in
-																				<a href="../Solutions-Python/Conditionals/Examples/texample00.py"
+																				<a href="../Solutions-Python/Conditionals/Examples/texample12.py"
 																				 target="_blank">this file</a>.<br><br>
-								  
-												    		<img src="Images/texample_cond00.png"
-												           alt="Fiddle!"
-												           class="centimg"
-												           style="background: White;
-												                  border-style: solid;
-												                  border-color: red;
-												                  border-width: 2px;"><br>
-								          </div><br>
+																				 
+																				The output of this version of the code will be exactly as it
+																			 was previously. The improvements are in the efficiency
+																			 and readability of the code.
+																		</div><br>
 								          
 								          <b><u>Notes, Experiments & Questions</u></b><br>
 								          <div class="experiment">
-								          
-								          <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)"
-								           target="_blank">"<b>An Epoch</b>"</a>, in general,
-								          is a point in History from which time is counted.
-								          In this context,
-								          <a href="https://en.wikipedia.org/wiki/Unix_time"
-								           target="_blank">"<b>The Epoch</b>"</a> is the point in
-								          time (<b>January 1st 1970</b>) when some extraordinarily
-								          young people decided time began for "real" computing.
-                  <a href="https://www.collinsdictionary.com/dictionary/english/poppycock"
-                   target="_blank"><b><i>Poppycock</i></b></a>!!!
-                  Speaking as one who was there, we had
-								          very fine computers in <b>1969</b> and before! Much
-								          bigger than the tiny things you all play around with today!
-								          Oh well, some battles are just not worth fighting, <b>January
-								          1970</b> it is then.<br><br>
-								          
-								          In this example there were two conditional
-								          <b>Code Blocks</b> that were mutually exclusive and
-								          covered all possible conditions.Both were tested.<br><br>
-								          
-								          Note that the continued lines were not indented
-								          as they were when using the <b>Python Interpreter
-								          Interactively</b>. Had they been indented, the
-								          extra white  space would have been assumed
-								          to be part of the code.<br><br>
-								          
-								          It is generally good practice to avoid making
-								          the same computation more than once. I have
-								          tried to follow that practice here. Can you
-								          see where?<br><br>
-								          
-								          On my system, a <b>Tab</b> ('<b>\t</b>') fills to the
-								          next line position divisible by <b>8</b>. I am not
-								          sure how consistent that behaviour might be
-								          across different platforms.
-								          
+                  The only change in the code	of this
+                  example as it appeared previously,
+                  is to substitute an <b>else</b> clause for
+                  the second <b>if</b> statement.
+                  This is more efficient because you
+                  ask only one question instead of two,
+                  plus it is much tidier and logical.							          
 								          </div>
 								        </div>
 								      </details><br>
