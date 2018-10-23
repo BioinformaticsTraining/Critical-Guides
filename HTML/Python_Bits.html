@@ -15560,7 +15560,7 @@ Click to record your <b>Start</b> time.</button>
 																				<br>
 																				if Potential_Base not in Base_Codes:<br>
 																				&nbsp;&nbsp;&nbsp;&nbsp;print(Potential_Base, " is not a Valid Base_Code\n\n")
-								          </div><br>
+								          </div><br><br>
 										        
 								          <b><u>The Output</u></b><br>
 								          <div class="output">
@@ -15602,33 +15602,139 @@ Click to record your <b>Start</b> time.</button>
 								        <div class = "example">
 								          <b><u>The Problem</u></b><br>
 								          <div class="problem">
-								            To disclose the number of
-								            various time units we are from
-								            "The Epoch", but only if the value
-								            sought, in seconds, is even!
+								            To identify and display the type of
+								            a randomly selected <b>Amino Acid</b>.
 								          </div><br>
 								
 								          <b><u>Pseudo-Code</u></b><br>
 								          <div class="pseudo">
-								            Discover and display the
-								            Number of seconds
-								            since "The Epoch".
+								            Set up and initiate a <b>Random Number
+								            Generation System</b>.<br><br>
 								            
-								            If the number of seconds
-								            since "The Epoch" is even,
+								            Build an information resource
+								            relating numbers to <b>Amino Acid
+								            Identity/Type</b>.<br><br>
 								            
-								            <div style="left-margin=20px">
-								              Compute and display the
-								              number of other
-								              time units, since the "Epoch".
-								            </div>
+								            Select a <b>Random Number</b>.<br><br>
 								            
-								            If the number of seconds
-								            since the Epoch is odd,
-								            <div style="left-margin=20px">
-								              Sneer a bit.
-								            </div>
-								            
+								            Display the <b>Associated Information</b>.<br><br>
+								          </div><br>
+									
+								          <b><u>Code</u></b><br>
+								          <div class="code16">
+                    <span class="codecomm16">
+		                    # Import random to enable pseudo random number generation<br>
+		                  </span>
+                    <br>
+                    import random as r<br>
+                    <br>
+                    <span class="codecomm16">
+																				# Create a dictionary to associate the integers 0->19 with Amino Acids.<br>
+		                  </span>
+
+<pre class="code16">AA_Codes = { 0:"Arginine - Arg - R",      1:"Lysine - Lys - K",
+             2:"Aspartic acid - Asp - D", 3:"Glutamic acid - Glu - E",
+             4:"Glutamine - Gln - Q",     5:"Asparagine - Asn - N",
+             6:"Histidine - His - H",     7:"Serine - Ser - S",
+             8:"Threonine - Thr - T",     9:"Tyrosine - Tyr - Y",
+            10:"Cysteine - Cys - C",     11:"Tryptophan - Trp - W",
+            12:"Alanine - Ala - A",      13:"Isoleucine - Ile - I",
+            14:"Leucine - Leu - L",      15:"Methionine - Met - M",
+            16:"Phenylalanine - Phe - F",17:"Valine - Val - V",
+            18:"Proline - Pro - P",      19:"Glycine - Gly - G"}</pre>
+																				<br>
+                    <span class="codecomm16">
+																				# Seed the Random number generator<br>
+		                  </span>
+																				<br>
+																				r.seed()<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Pick a Random AA<br>
+		                  </span>
+																				<br>
+																				Random_AA = r.randint(0,19)<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Reveal the identity of the Random AA<br>
+		                  </span>
+																				<br>
+																				print("The randomly selected Amino Acid is ... ", AA_Codes[Random_AA])<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Declare the type of AA that has been selected<br>
+		                  </span>
+																				<br>
+																				if Random_AA <= 3:<br>
+																				    print("Charged (side chains often makes salt bridges)")<br>
+																				<br>
+																				if Random_AA > 3 and Random_AA <= 11:<br>
+																				    print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")<br>
+																				<br>
+																				if Random_AA > 11:<br>
+																				    print("Hydrophobic (normally buried inside the protein core)")
+																		</div><br><br>
+
+									         <b><u>The Output</u></b><br>
+								          <div class="output">
+								          
+								          		The Code above is available in
+																				<a href="../Solutions-Python/Conditionals/Examples/texample02.py"
+																				 target="_blank">this file</a>.<br><br>
+								  
+														    		<img src="Images/texample_cond02.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+								          </div><br>
+								          
+								          <b><u>Notes, Experiments & Questions</u></b><br>
+								          <div class="experiment">
+										          This example is based upon information found
+										          <a href="https://proteinstructures.com/Structure/Structure/amino-acids.html"
+										           target="_blank">"<b>here</b>"</a>.
+										           
+										          The code includes three conditionally
+										          executed single statements blocks
+										          of code that
+										          justifies its place her.
+										          However it is an offensively poor program!<br><br>
+										          
+										          <ol>
+										            <li>
+										              Three mutually exclusive conditionals?
+										              If the conditions of the first are met,
+										              one still continues to test for match
+										              with the other two?
+										            </li><br>
+										            <li>
+										              In theory, the three conditions tested
+										              cover all possibilities. However, I
+										              would still be inclined to code for
+										              the unexpected (maybe just me?). I would
+										              always want a clause that  said:<br><br>
+										              
+										              <i>"and if anything else is true, let me
+										              know, maybe someone has invented a new Integer?!"</i>
+										            </li><br>
+										            <li>
+										              Would you really use conditionals
+										              like this at all!
+										              
+										              Lots of better ways, maybe an extended <b>Dictionary</b>?
+										              Or a second
+										              <b>Dictionary</b> for the <b>Amino Acid Types</b>? Can you
+										              design a better program?
+										              
+										              Much improved versions of this code are
+										              possible when more sophisticated conditional
+										              statements have been introduced,
+										              as you will see.
+										            </li>
+										          </ol>
 								          </div><br>
                 </div>
               </details>
