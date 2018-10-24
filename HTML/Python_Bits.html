@@ -15608,11 +15608,16 @@ Click to record your <b>Start</b> time.</button>
 										          <b>Code Blocks</b> that were mutually exclusive and
 										          covered all possible conditions. Both were tested.<br><br>
 										          
-										          Was this the first time for using the <b>Keyword</b> "<b>in</b>" to
+										          Was this the first time for using the <b>Keyword</b> "
+										          <a href="https://www.programiz.com/python-programming/keyword-list#in"
+										           target="_blank"><b>in</b></a>" to
 										          determine whether a given <b>String</b> occurred within
 										          another <b>String</b>? I do hope not! I will include it
 										          in the <b>Checkpoint</b> for this section, just in case.
 										          It is very useful!
+										          
+										          "<b>in</b>" can also be used to detect the presence
+										          of a <b>list/tuple/similar</b> element.
 								          </div>
 								        </div>
 								      </details>
@@ -16676,11 +16681,45 @@ else:
 										        might have been easier to read?
 											     </li>
 											   </ul><br>
-			      
-								      My answer for this exercise is in
+											   
+											   And now! Admission time. As I hope you
+											   will have spotted for yourselves, there
+											   is a much cleaner way to code this problem.<br><br>
+											   
+											   The <b>Keyword</b> "<b>in</b>" works on <b>lists</b> and <b>tuples</b>
+											   as well as <b>Strings</b>.<br><br>
+											   
+											   Had I represented the <b>Valid Answers</b>
+											   as elements of a <b>tuple</b>, rather than
+											   hacking them all together as a single string,
+											   there would have been no need for all the nonsense
+											   with enclosing everything with '<b>-</b>'s!<br><br>
+											   
+											   The improved code sections would be:<br><br>
+											   
+											   <span class=code>
+													   Valid_YES = ('Y','YES','AFFIRMATIVE','QUITE','ABSOLUTELY')<br>
+		              Valid_NO  = ('N','NO','NEGATIVE','NEVER','I BEG TO DIFFER')<br>
+		             
+		              &emsp;&emsp;&emsp;&emsp;&emsp;...<br>
+		              
+		              Response = input("Would you agree<br>
+		              that today is a splendid day? ").upper()
+              </span><br><br>
+              
+              This is a very much better solution,
+              but I will stick with my original
+              strangled <b>String</b> attempt. I have
+              grown rather fond of it now.<br><br>
+              
+								      My initial answer for this exercise is in
 								      <a href="../Solutions-Python/Conditionals/Exercises/exer00.py"
 															target="_blank">this file</a>.<br><br>
 																									 
+								      The improved "tuple" answer for this exercise is in
+								      <a href="../Solutions-Python/Conditionals/Exercises/exer00-tuple.py"
+															target="_blank">this file</a>.<br><br>
+															
 								      Some example output to prove it worked.<br><br>
 								      
 														<img src="Images/exercise_cond00.png"
@@ -16704,6 +16743,21 @@ else:
           this section:</hh6m>
         </p>
         
+        <ol>
+          <li>
+            Conditional execution of a single
+            <b>Code Block</b> (<b>if</b>).
+          </li><br>
+          <li>
+            Conditional choice between two
+            <b>Code Blocks</b> (<b>if</b>, <b>else</b>).
+          </li><br>
+          <li>
+            Conditional choice between multiple
+            <b>Code Blocks</b> (<b>if</b>, <b>elif</b>, <b>else</b>).
+          </li>
+        </ol>
+          
         <p>
           <hh6m>Builtin Functions introduced
           or reinforced in this section:</hh6m>
@@ -16714,6 +16768,15 @@ else:
           or reinforced in
           this section:</hh6m>
         </p>
+        
+        <ol>
+          <li>
+		          <a href="https://www.programiz.com/python-programming/keyword-list#in"
+		           target="_blank"><b>in</b></a>
+		          - tests if a sequence (<b>list</b>,
+		          <b>tuple</b>, <b>String</b> etc.) contains a specified value.
+		        </li>
+		      </ol>
 
         <p>
           <hh6m>Modules and Module Elements introduced
@@ -16725,6 +16788,14 @@ else:
           <hh6m>Points noted or reinforced in
           this section:</hh6m>
         </p>
+        
+        <ol>
+          <li>
+            Discussion covering pseudo-random
+            numbers and the need to "seed" their generation.
+          </li>
+        </ol><br>
+        
       </div>
     </details>
   </li><br>
