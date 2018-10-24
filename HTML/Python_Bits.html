@@ -15367,6 +15367,28 @@ Click to record your <b>Start</b> time.</button>
           <hh6m>Issues introduced or reinforced in
           this section:</hh6m>
         </p>
+        
+        <p>
+          <hh6m>Builtin Functions introduced
+          or reinforced in this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Keywords introduced
+          or reinforced in
+          this section:</hh6m>
+        </p>
+
+        <p>
+          <hh6m>Modules and Module Elements introduced
+          or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Points noted or reinforced in
+          this section:</hh6m>
+        </p>
       </div>
     </details>
   </li><br>
@@ -16536,6 +16558,142 @@ else:
           </details>
         </li><br>
       </ol>
+              
+      <div class="question">
+
+      <h2><i><u>Questions & Simple Exercises</u></i></h2>
+
+		      <ol>
+		        <li>
+		          Write some code to:
+		          
+		          <ul>
+		            <li>
+		              Ask a question requiring a Yes/No response
+		            </li><br>
+		            <li>
+		              React in a Positive/Negative fashion according to the Answer given
+		            </li><br>
+		            <li>
+		              Complain bitterly if the response cannot be interpreted as Yes or No
+		            </li>
+		          </ul><br>
+		          
+            <details class="answer">
+            <summary><span class="anssum">Answer.</span>
+            </summary>
+            
+              <div class="code14">
+            	              
+																<span class="codecomm14">#
+																# Pseudo-Code:<br>
+																# ============<br>
+																# <br>
+																# Define acceptable Upper case Values for Yes and No<br>
+																#<br>
+																# Ask the Question, save the response as Upper Case<br>
+																#<br>
+																# Respond appropriately according to the Value of the Response<br>
+																#<br>
+																<br>
+																# Construct strings of Valid upper case Y/N responses<br>
+																# Each response bracketed by '-'s to avoid partial matches
+																</span><br>
+
+<pre class="code14">
+Valid_YES = "-Y-YES-AFFIRMATIVE-QUITE-ABSOLUTELY-"
+Valid_NO  = "-N-NO-NEGATIVE-NEVER-I BEG TO DIFFER-"
+</pre><br>
+
+																<span class="codecomm14">
+																# Ask Question and make response upper case<br>
+																# Bracket upper case response with '-'s<br>
+																</span><br>
+
+																Response = '-' + input("Today is a splendid day.
+															 Do you agree? ").upper() + '-'<br><br>
+
+																<span class="codecomm14">
+																# Check response and react appropriately
+																</span><br>
+
+<pre class="code14">
+if   Response in Valid_YES:
+    print("So very glad you agree dear chap!")
+elif  Response in Valid_NO:
+    print("I am mortified that you cannot see the splendour that surrounds thee!")
+else:
+    print("You answer neither Yes not No? Maybe you cannot make your mind up?")
+</pre><br>
+										    </div><br>
+										    
+										    This exercise will have a much more natural solution when
+										    <b>Repetition</b> of <b>Code Blocks</b> have been discussed in the next
+										    <b>Section</b>. This code is a bit awkward I feel.<br><br>
+										    
+										    Answering a <b>Y/N</b> question is a common requirement.
+										    I intend to develop this code into something useful
+										    as the tutorial proceeds.<br><br>
+										    
+										    With regard to the current solution, note the following:<br><br>
+										    
+										    <ul>
+										      <li>
+										        The strings of <b>Valid YES</b> and <b>NO</b>
+										        responses were entirely upper case.<br><br>
+										        
+										        It has to be neater to allow mixed
+										        case responses by "<b>upper casing</b>"
+										        the <b>Response String</b> rather than
+										        including every combination of upper
+										        and lower case "<b>Valid Answer</b>"
+										        in these <b>Strings</b>.
+										      </li><br>
+										      <li>
+										        Each <b>Valid Response</b> was enclosed by '<b>-</b>'
+										        characters. The response itself was also
+										        similarly encased.<br><br>
+										        
+										        This was to avoid matches with partial
+										        correct responses. For example:<br><br>
+										        
+										        <span class="code">'A' in Valid_YES</span> is (incorrectly) <b>True</b>!!!, but<br><br>
+										        
+										        <span class="code">'-A-' in Valid_YES</span> is (correctly) <b>False</b>.
+										      </li><br>
+										      <li>
+										        The input command is a bit of a monster!
+										        Maybe it would have been clearer not to
+										        use a single command?<br><br>
+										        
+										        For exactly the same effect:<br><br>
+										        
+										        <span class="code">Response = input("Today is a splendid day. Do you agree? ")<br>
+										        Response = Response.upper()<br>
+										        Response = '-' + Response + '-'
+										        </span><br><br>
+										        
+										        might have been easier to read?
+											     </li>
+											   </ul><br>
+			      
+								      My answer for this exercise is in
+								      <a href="../Solutions-Python/Conditionals/Exercises/exer00.py"
+															target="_blank">this file</a>.<br><br>
+																									 
+								      Some example output to prove it worked.<br><br>
+								      
+														<img src="Images/exercise_cond00.png"
+								           alt="Fiddle!"
+								           class="centimg"
+								           style="background: White;
+								                  border-style: solid;
+								                  border-color: red;
+								                  border-width: 2px;"><br>
+            </details>
+		        </li>
+			     </ol><br>
+		    </div><br>
 
       <div class="checkpoint">
 
@@ -16543,6 +16701,28 @@ else:
 
         <p>
           <hh6m>Issues introduced or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Builtin Functions introduced
+          or reinforced in this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Keywords introduced
+          or reinforced in
+          this section:</hh6m>
+        </p>
+
+        <p>
+          <hh6m>Modules and Module Elements introduced
+          or reinforced in
+          this section:</hh6m>
+        </p>
+        
+        <p>
+          <hh6m>Points noted or reinforced in
           this section:</hh6m>
         </p>
       </div>

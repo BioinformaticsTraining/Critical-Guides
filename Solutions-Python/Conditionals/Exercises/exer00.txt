@@ -1,0 +1,31 @@
+#
+# Pseudo-Code:
+# ============
+# 
+# Define acceptable Uppercase Values for Yes and No
+#
+# Ask the Question, save the response as Upper Case
+#
+# Respond appropriately according to the Value of the Response
+#
+
+# Construct strings of Valid uppercase Y/N responses
+# Each response bracketed by '-'s to avoid partial matches
+
+Valid_YES = "-Y-YES-AFFIRMATIVE-QUITE-ABSOLUTELY-"
+Valid_NO  = "-N-NO-NEGATIVE-NEVER-I BEG TO DIFFER-"
+
+# Ask Question and make response upper case
+# Bracket upper case respose with '-'s
+
+Response = '-' + input("Would you agree that today is a splendid day? ").upper() + '-'
+
+# Check response and react appropriately
+
+if   Response in Valid_YES:
+    print("So very glad you agree dear chap!")
+elif  Response in Valid_NO:
+    print("I am mortified that you cannot see the splendour that surrounds thee!")
+else:
+    print("You answer neither Yes not No? Maybe you cannot make your mind up?")
+
