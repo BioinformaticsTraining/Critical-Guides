@@ -15468,7 +15468,7 @@ Click to record your <b>Start</b> time.</button>
             </span>
           </summary>
 
-		          <div class="minsect"><br>
+		          <div class="minsect">
 		
 						        <h2><u>SYNTAX for a Single Conditional Code Block</u></h2>
 						
@@ -15982,7 +15982,7 @@ if Random_AA > 11:
             </span>
           </summary>
 
-            <div class="minsect"><br>
+            <div class="minsect">
             
 								      <h2><u>SYNTAX for Choice of Two Code Blocks</u></h2>
 								
@@ -16362,7 +16362,7 @@ else:
             </span>
           </summary>
 
-            <div class="minsect"><br>
+            <div class="minsect">
 
 								      <h2><u>SYNTAX for Multiple Conditional Code Blocks</u></h2>
 								
@@ -16371,15 +16371,15 @@ else:
 								        <span style="font-weight:normal;">
 								          <i>&lt;Conditional Expression 1&gt;</i></span>:<br>
 								        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 1<br>
-								        elif
+								        elif:
 								        <span style="font-weight:normal;">
 								          <i>&lt;Conditional Expression 2&gt;</i></span>:<br>
 								        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 2<br>
-								        elif
+								        elif:
 								        <span style="font-weight:normal;">
 								          <i>&lt;Conditional Expression 3&gt;</i></span>:<br>
 								        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 3<br>
-								        elif
+								        elif:
 								        <span style="font-weight:normal;">
 								          <i>&lt;Conditional Expression 4&gt;</i></span>:<br>
 								        &nbsp;&nbsp;&nbsp;&nbsp;Code Block 4<br>
@@ -16388,6 +16388,150 @@ else:
 								        else:<br>
 								        &nbsp;&nbsp;&nbsp;&nbsp;Code Block Default
 								      </div><br><br>
+								      
+								      The new <b>Python Keyword</b> here is
+								      <a href="https://www.programiz.com/python-programming/keyword-list#if_else_elif"
+								       target="_blank"><b>elif</a></b>, which is
+								      simply a contraction of "<b>else if</b>".<br><br>
+								       
+								      "<b>elif:</b>" is neater than, but semantically identical to
+								      "<b>else: if:</b>". Its use does not extend the
+								      way a problem can be defined, but it does
+								      allow the construction of much more readable
+								      code. Code that does not indent uncontrollably
+								      to the left as was the case in the second
+								      example of the preceding sub section.<br><br>
+								      
+								      To illustrate this point, the first
+								      <b>Trivial Example</b> here is a rewrite of
+								      that example from the last sub section.
+								      
+								      <details>
+								      <summary><span class = "exeblocksum">
+								        <h3>Trivial Example 1</h3>
+								      </summary></span>
+								
+								        <div class = "example">
+								          <b><u>The Problem</u></b><br>
+								          <div class="problem">
+								            To identify and display the type of
+								            a randomly selected <b>Amino Acid</b>.
+								          </div><br>
+								
+								          <b><u>Pseudo-Code</u></b><br>
+								          <div class="pseudo">
+								            Set up and initiate a <b>Random Number
+								            Generation System</b>.<br><br>
+								            
+								            Build an information resource
+								            relating numbers to <b>Amino Acid
+								            Identity/Type</b>.<br><br>
+								            
+								            Select a <b>Random Number</b>.<br><br>
+								            
+								            Display the <b>Associated Information</b>.<br><br>
+								          </div><br>
+									
+								          <b><u>Code</u></b><br>
+								          <div class="code16">
+                    <span class="codecomm16">
+		                    # Import random to enable pseudo random number generation<br>
+		                  </span>
+                    <br>
+                    import random as r<br>
+                    <br>
+                    <span class="codecomm16">
+																				# Create a dictionary to associate the integers 0->19 with Amino Acids.<br>
+		                  </span>
+
+<pre class="code16">AA_Codes = { 0:"Arginine - Arg - R",      1:"Lysine - Lys - K",
+             2:"Aspartic acid - Asp - D", 3:"Glutamic acid - Glu - E",
+             4:"Glutamine - Gln - Q",     5:"Asparagine - Asn - N",
+             6:"Histidine - His - H",     7:"Serine - Ser - S",
+             8:"Threonine - Thr - T",     9:"Tyrosine - Tyr - Y",
+            10:"Cysteine - Cys - C",     11:"Tryptophan - Trp - W",
+            12:"Alanine - Ala - A",      13:"Isoleucine - Ile - I",
+            14:"Leucine - Leu - L",      15:"Methionine - Met - M",
+            16:"Phenylalanine - Phe - F",17:"Valine - Val - V",
+            18:"Proline - Pro - P",      19:"Glycine - Gly - G"}</pre>
+																				<br>
+                    <span class="codecomm16">
+																				# Seed the Random number generator<br>
+		                  </span>
+																				<br>
+																				r.seed()<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Pick a Random AA<br>
+		                  </span>
+																				<br>
+																				Random_AA = r.randint(0,19)<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Reveal the identity of the Random AA<br>
+		                  </span>
+																				<br>
+																				print("The randomly selected Amino Acid is ... ", AA_Codes[Random_AA])<br>
+																				<br>
+                    <span class="codecomm16">
+																				# Declare the type of AA that has been selected<br>
+		                  </span>
+																				<br>
+																				if Random_AA <= 3:<br>
+																				    print("Charged (side chains often makes salt bridges)")<br>
+<pre class="code16">if Random_AA <= 3:
+    print("Charged (side chains often makes salt bridges)")
+			 
+elif Random_AA > 3 and Random_AA <= 11:
+			 print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")
+
+elif Random_AA > 11:
+    print("Hydrophobic (normally buried inside the protein core)")
+    
+else:
+    print("If you ever get here, something is seriously wrong!")</pre>
+    														</div><br><br>
+
+									         <b><u>The Output</u></b><br>
+								          <div class="output">
+								          
+								          		The Code above is available in
+																				<a href="../Solutions-Python/Conditionals/Examples/texample20.py"
+																				 target="_blank">this file</a>.<br><br>
+																				 
+																		  The output is not interestingly
+																		  different from previous versions of this program,
+																		  but, here it is anyway.<br><br>
+								  
+														    		<img src="Images/texample_cond20.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+								          </div><br>
+								          
+								          <b><u>Notes, Experiments & Questions</u></b><br>
+								          <div class="experiment">
+								          Actually, this code is far closer to the version
+								          two sub sections back, just using "<b>if</b>". The only
+								          change was to substitute <b>elif</b> for <b>if</b>.<br><br>
+								          
+								          This simple change does alter the interpretation
+								          of the code however. With <b>elif</b>,
+								          conditions are only tested until one is found
+								          to be <b>True</b>. The efficiency gain, of course,
+								          increases linearly with the number of conditions involved.<br><br>
+								          
+								          I used the longer printed comments here, now the code
+								          stopped wandering off to the left so assiduously.<br><br>
+								          
+								          I also added the impossible else clause at the
+								          end, because ... it made me feel good?
+								          </div><br>
+                </div>
+              </details>
             </div>
           </details>
         </li><br>

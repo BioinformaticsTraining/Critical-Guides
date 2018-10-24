@@ -1,0 +1,43 @@
+# Import random to enable pseudo random number generation
+
+import random as r
+
+# Create a dictionary to associate the integers 0->19 with Amino Acids.
+
+AA_Codes = { 0:"Arginine - Arg - R",      1:"Lysine - Lys - K",
+             2:"Aspartic acid - Asp - D", 3:"Glutamic acid - Glu - E",
+             4:"Glutamine - Gln - Q",     5:"Asparagine - Asn - N",
+             6:"Histidine - His - H",     7:"Serine - Ser - S",
+             8:"Threonine - Thr - T",     9:"Tyrosine - Tyr - Y",
+            10:"Cysteine - Cys - C",     11:"Tryptophan - Trp - W",
+            12:"Alanine - Ala - A",      13:"Isoleucine - Ile - I",
+            14:"Leucine - Leu - L",      15:"Methionine - Met - M",
+            16:"Phenylalanine - Phe - F",17:"Valine - Val - V",
+            18:"Proline - Pro - P",      19:"Glycine - Gly - G"}
+
+# Seed the Random number generator
+
+r.seed()
+
+# Pick a Random AA
+
+Random_AA = r.randint(0,19)
+
+# Reveal the identity of the Random AA
+
+print("The randomly selected Amino Acid is ... ", AA_Codes[Random_AA])
+
+# Declare the type of AA that has been selected
+
+if Random_AA <= 3:
+    print("Charged (side chains often makes salt bridges)")
+
+elif Random_AA > 3 and Random_AA <= 11:
+    print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")
+
+elif Random_AA > 11:
+    print("Hydrophobic (normally buried inside the protein core)")
+
+else:
+    print("If you ever get here, something is seriously wrong!")
+
