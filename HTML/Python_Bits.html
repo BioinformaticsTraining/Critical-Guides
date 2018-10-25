@@ -16601,22 +16601,20 @@ else:
 																# Respond appropriately according to the Value of the Response<br>
 																#<br>
 																<br>
-																# Construct strings of Valid upper case Y/N responses<br>
-																# Each response bracketed by '-'s to avoid partial matches
+																# Construct tuples of Valid uppercase Y/N responses
 																</span><br>
 
 <pre class="code14">
-Valid_YES = "-Y-YES-AFFIRMATIVE-QUITE-ABSOLUTELY-"
-Valid_NO  = "-N-NO-NEGATIVE-NEVER-I BEG TO DIFFER-"
+Valid_YES = ('Y','YES','AFFIRMATIVE','QUITE','ABSOLUTELY')
+Valid_NO  = ('N','NO','NEGATIVE','NEVER','I BEG TO DIFFER')
 </pre><br>
 
 																<span class="codecomm14">
 																# Ask Question and make response upper case<br>
-																# Bracket upper case response with '-'s<br>
 																</span><br>
 
-																Response = '-' + input("Today is a splendid day.
-															 Do you agree? ").upper() + '-'<br><br>
+																Response = input("Today is a splendid day.
+															 Do you agree? ").upper()<br><br>
 
 																<span class="codecomm14">
 																# Check response and react appropriately
@@ -16630,12 +16628,8 @@ elif  Response in Valid_NO:
 else:
     print("You answer neither Yes not No? Maybe you cannot make your mind up?")
 </pre><br>
-										    </div><br>
-										    
-										    This exercise will have a much more natural solution when
-										    <b>Repetition</b> of <b>Code Blocks</b> have been discussed in the next
-										    <b>Section</b>. This code is a bit awkward I feel.<br><br>
-										    
+										    </div><br><br>
+
 										    Answering a <b>Y/N</b> question is a common requirement.
 										    I intend to develop this code into something useful
 										    as the tutorial proceeds.<br><br>
@@ -16644,8 +16638,14 @@ else:
 										    
 										    <ul>
 										      <li>
+										        This code illustrates the way the
+										        <b>Keyword</b> "<b>in</b>" can be
+										        used with <b>tuples</b> (and
+										        <b>lists</b> etc.) as well as <b>Strings</b>.
+										      </li><br>
+										      <li>
 										        The strings of <b>Valid YES</b> and <b>NO</b>
-										        responses were entirely upper case.<br><br>
+										        responses are entirely upper case.<br><br>
 										        
 										        It has to be neater to allow mixed
 										        case responses by "<b>upper casing</b>"
@@ -16655,71 +16655,34 @@ else:
 										        in these <b>Strings</b>.
 										      </li><br>
 										      <li>
-										        Each <b>Valid Response</b> was enclosed by '<b>-</b>'
-										        characters. The response itself was also
-										        similarly encased.<br><br>
-										        
-										        This was to avoid matches with partial
-										        correct responses. For example:<br><br>
-										        
-										        <span class="code">'A' in Valid_YES</span> is (incorrectly) <b>True</b>!!!, but<br><br>
-										        
-										        <span class="code">'-A-' in Valid_YES</span> is (correctly) <b>False</b>.
+										        A <b>list</b> could have been used
+										        here instead of a <b>tuple</b>.
+										        A <b>tuple</b> was chosen as an
+										        immutable data structure
+										        was required. As discussed
+										        previously, <b>tuples</b>
+										        should always be preferred
+										        unless mutability is essential.
 										      </li><br>
 										      <li>
-										        The input command is a bit of a monster!
-										        Maybe it would have been clearer not to
-										        use a single command?<br><br>
+										        The input command might be
+										        clearer if split into
+										        two statements?<br><br>
 										        
 										        For exactly the same effect:<br><br>
 										        
-										        <span class="code">Response = input("Today is a splendid day. Do you agree? ")<br>
+										        <span class="code">Response =
+										        input("Today is a splendid day. Do you agree? ")<br>
 										        Response = Response.upper()<br>
-										        Response = '-' + Response + '-'
 										        </span><br><br>
-										        
-										        might have been easier to read?
 											     </li>
 											   </ul><br>
 											   
-											   And now! Admission time. As I hope you
-											   will have spotted for yourselves, there
-											   is a much cleaner way to code this problem.<br><br>
-											   
-											   The <b>Keyword</b> "<b>in</b>" works on <b>lists</b> and <b>tuples</b>
-											   as well as <b>Strings</b>.<br><br>
-											   
-											   Had I represented the <b>Valid Answers</b>
-											   as elements of a <b>tuple</b>, rather than
-											   hacking them all together as a single string,
-											   there would have been no need for all the nonsense
-											   with enclosing everything with '<b>-</b>'s!<br><br>
-											   
-											   The improved code sections would be:<br><br>
-											   
-											   <span class=code>
-													   Valid_YES = ('Y','YES','AFFIRMATIVE','QUITE','ABSOLUTELY')<br>
-		              Valid_NO  = ('N','NO','NEGATIVE','NEVER','I BEG TO DIFFER')<br>
-		             
-		              &emsp;&emsp;&emsp;&emsp;&emsp;...<br>
-		              
-		              Response = input("Would you agree<br>
-		              that today is a splendid day? ").upper()
-              </span><br><br>
-              
-              This is a very much better solution,
-              but I will stick with my original
-              strangled <b>String</b> attempt. I have
-              grown rather fond of it now.<br><br>
-              
-								      My initial answer for this exercise is in
+	              
+								      My answer for this exercise is in
 								      <a href="../Solutions-Python/Conditionals/Exercises/exer00.py"
 															target="_blank">this file</a>.<br><br>
-																									 
-								      The improved "tuple" answer for this exercise is in
-								      <a href="../Solutions-Python/Conditionals/Exercises/exer00-tuple.py"
-															target="_blank">this file</a>.<br><br>
-															
+																									 													
 								      Some example output to prove it worked.<br><br>
 								      
 														<img src="Images/exercise_cond00.png"
