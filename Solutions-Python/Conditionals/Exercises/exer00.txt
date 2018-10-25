@@ -5,9 +5,10 @@
 # Define acceptable Uppercase Values for Yes and No
 #
 # Ask the Question, save the response as Upper Case
-#																# Respond appropriately according to the Value of the Response<br>
 #
-													
+# Respond appropriately according to the Value of the Response<br>
+#
+
 # Construct tuples of Valid uppercase Y/N responses
 
 Valid_YES = ('Y','YES','AFFIRMATIVE','QUITE','ABSOLUTELY')
