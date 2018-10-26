@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<font size="+1"><font size="+1"><font size="+1"></font></font></font><!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -17203,11 +17203,9 @@ else:
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     # While the Target is not matched,
                   </span><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;print "Target ("
-                  + str(Target) + ")
-                  does not match Guess (" \<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;+ str(Guess) + ").
-                  \tTry again!";<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;print("Target
+                  (", Target, ") does not match Guess
+                  (", Guess, "). \tTry again!")<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Guess = randint(1,20);
                   <span Class="codecomm16">
                     &nbsp;# Sadly admit failure,and try again.
@@ -17244,30 +17242,21 @@ else:
                       to be interesting (justified).<br><br>
 
                       I manufacture that here with
-                      <b>pseudo random numbers</b>, which are
-                      interesting in their own right. You need
-                      the <b>random module</b> to access the
-                      function <b>randint</b> in this example.
-                      <b>randint(a,b)</b> generates and returns
-                      a <b>pseudo random number</b>, <b>N</b> say,
-                      in the range <b>a <= N <= b</b>.
-
-                      Of course, there are lots of other
-                      good things
-                      in <b>random</b>, you can list them with
-                      command <b>dir(random)</b>. If any
-                      particularly
-                      catch your eye, you can discover more with,
-                      for example, <b>help(random.randint)</b>.
-                    </li><br>
-
-                    <li>
-                      Here is another example of an over length
-                      code line. I use a <b>backslash</b>, you
-                      might have
-                      preferred to enclose the entirety of that
-                      which is to be printed in parentheses,
-                      <b>()</b>.
+                      <b>pseudo random numbers</b>.
+                      Here, only the one method <b>randint()</b>
+                      is required, so just that method is
+                      <b>imported</b> from the
+                      <b>module random</b>.<br><br>
+                      
+                      As there is no name clash issue,
+                      <b>randint()</b> can be imported
+                      to be addressed without any prefix.<br><br>
+                     
+                      If you need reminding of how to use <b>randint()</b>, try typing:<br><br>
+                      
+                      &emsp;&emsp;&emsp;&emsp;<b>help(random.randint)</b><br><br>
+                      
+                      at the <b>Interactive Interpreter</b>.
                     </li>
                   </ul><br><br>
                   
