@@ -16835,19 +16835,52 @@ else:
                  the form:<br>
 
                 <div class="code">
-                  For
+                  for
                   <span style="font-weight:normal;">
                     <i>&lt;Control Variable&gt;</i></span>
                     <b>in </b>
                   <span style="font-weight:normal;">
-                    <i>&lt;List&gt;</i></span>:<br>
+                    <i>&lt;Iterable Object&gt;</i></span>:<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 4<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   ...
-                </div>
+                </div><br><br>
+                
+                The <i>&lt;Iterable Object&gt;</i> could be a
+                <b>range</b>, <b>string</b>, <b>list</b> etc.
+                Anything from which the <b>Builtin Function
+                iter()</b> can create an <b>iterator</b>.<br><br>
+                
+                From that <b>iterator</b>, the  <b>Builtin Function
+                next()</b> can deliver elements in a ordered series.<br><br>
+                
+                The use of <b>iter()</b> and <b>next()</b> is implicit.
+                The <b>for ... in</b> structure handles the
+                details in the background. The user
+                can simply consider the
+                <i>&lt;Iterable Object&gt;</i> as a set
+                of values to be processed by the
+                <b>Code Block</b> controlled by the <b>for
+                Loop</b>, one at a time, until the
+                set is exhausted.<br><br>
+                
+                For a bit more formality and detail, try
+                <a href="https://www.programiz.com/python-programming/iterator#for-loop"
+                 target="_blank">here</a>.<br><br>
+                
+                The way the <b>in Keyword</b> is
+                used in a <b>for Loop</b> is somewhat
+                different to that seen previously.<br><br>
+                
+                The <b>for Loop Syntax</b> reads, informally:<br><br>
+                
+                <i>"<b><u>for</u></b> each of the elements <b><u>in</u></b> the
+                specified <b><u>Iterable Object</u></b>, in turn,
+                assign the element to a <b><u>variable</u></b>
+                and execute the <b>for loop Code Block</b>"</i>
               </p>
 
               <details>
@@ -16876,10 +16909,27 @@ else:
                       # For every integer value from 1 to 12<br>
                     </span>
                     &nbsp;&nbsp;&nbsp;
-                    print str(i) + "\ttimes 7 is:\t" + str(i * 7);
-                  </div>
-                </div><br>
-              </details><br>
+                    print(i, "\ttimes 7 is:\t", i * 7)
+                  </div><br><br>
+                  
+                  Hopefully self explanatory?
+                  
+                  Code is in
+                  <a href="../Solutions-Python/Loops/Examples/Loops_TE1_For.txt"
+													    		target="_blank">this file</a>.<br><br>
+																									 													
+								          Output is predictably:<br><br>
+								      
+																		<img src="Images/Loops_TE1_For.png"
+												           alt="Fiddle!"
+												           class="centimg"
+												           style="background: White;
+												                  border-style: solid;
+												                  border-color: red;
+												                  border-width: 2px;"><br>
+
+                </div>
+              </details>
 
               <details>
               <summary><span class = "exeblocksum">
@@ -16908,71 +16958,71 @@ else:
 
                   <b><u>Code</u></b><br>
                   <div class="code16">
-                    Message_Coded = [
+                    Message_Coded = (
                     <span Class="codecomm16">
                       &nbsp;&nbsp;&nbsp;
                       &nbsp;
                       # The Coded message.
-                    </span> \<br>
+                    </span><br>
                     &nbsp;79, 110, 101,&nbsp;&nbsp;39,
                     115,&nbsp;&nbsp;32,&nbsp;&nbsp;77,
-                    111, 106, \<br>
+                    111, 106,<br>
                     111,&nbsp;&nbsp;32, 105, 115,&nbsp;&nbsp;32,
-                    102, 117, 110,&nbsp;&nbsp;99, \<br>
+                    102, 117, 110,&nbsp;&nbsp;99,<br>
                     116, 105, 111, 110,&nbsp;&nbsp;97, 108,
-                    &nbsp;44,&nbsp;&nbsp;32,&nbsp;&nbsp;97, \<br>
+                    &nbsp;44,&nbsp;&nbsp;32,&nbsp;&nbsp;97,<br>
                     115,&nbsp;&nbsp;32, 105, 115,&nbsp;&nbsp;32,
-                    111, 110, 101,&nbsp;&nbsp;39, \<br>
+                    111, 110, 101,&nbsp;&nbsp;39,<br>
                     115,&nbsp;&nbsp;32,&nbsp;&nbsp;74, 111, 104,
                     110,
-                    &nbsp;32, 116, 104, \<br>
+                    &nbsp;32, 116, 104,<br>
                     101,&nbsp;&nbsp;32,&nbsp;&nbsp;67, 111, 110,
-                    113, 117, 101, 114, \<br>
+                    113, 117, 101, 114,<br>
                     111, 111,&nbsp;&nbsp;46,&nbsp;&nbsp;10,
-                    &nbsp;79, 110, 101,&nbsp;&nbsp;39, 115, \<br>
+                    &nbsp;79, 110, 101,&nbsp;&nbsp;39, 115,<br>
                     &nbsp;32, 108,&nbsp;&nbsp;97, 100, 121,
-                    &nbsp;32,&nbsp;&nbsp;99, 111, 109, \<br>
+                    &nbsp;32,&nbsp;&nbsp;99, 111, 109,<br>
                     112,&nbsp;&nbsp;97, 110, 105, 111, 110,
-                    &nbsp;32, 105, 115, \<br>
+                    &nbsp;32, 105, 115,<br>
                     &nbsp;32, 102, 117, 108, 108,
-                    121,&nbsp;&nbsp;32, 101, 113, \<br>
+                    121,&nbsp;&nbsp;32, 101, 113,<br>
                     117, 105, 112, 112, 101, 100,&nbsp;&nbsp;32,
-                    119, 105, \<br>
+                    119, 105,<br>
                     116, 104,&nbsp;&nbsp;32,&nbsp;&nbsp;66, 105,
-                    103,&nbsp;&nbsp;32,&nbsp;&nbsp;76, 101, \<br>
+                    103,&nbsp;&nbsp;32,&nbsp;&nbsp;76, 101,<br>
                     103, 115,&nbsp;&nbsp;32,&nbsp;&nbsp;97, 110,
-                    100,&nbsp;&nbsp;32,&nbsp;&nbsp;72, 101, \<br>
+                    100,&nbsp;&nbsp;32,&nbsp;&nbsp;72, 101,<br>
                     &nbsp;97, 118, 121,&nbsp;&nbsp;32,
-                    &nbsp;72, 105, 112, 115,&nbsp;&nbsp;44, \<br>
+                    &nbsp;72, 105, 112, 115,&nbsp;&nbsp;44,<br>
                     &nbsp;10,&nbsp;&nbsp;97, 115,&nbsp;&nbsp;32,
-                    115, 112, 101,&nbsp;&nbsp;99, 105, \<br>
+                    115, 112, 101,&nbsp;&nbsp;99, 105,<br>
                     102, 105, 101, 100,&nbsp;&nbsp;32, 111, 112,
-                    116, 105, \<br>
+                    116, 105,<br>
                     109,&nbsp;&nbsp;97, 108,&nbsp;&nbsp;32,
-                    &nbsp;98, 121,&nbsp;&nbsp;32, 116, 104, \<br>
+                    &nbsp;98, 121,&nbsp;&nbsp;32, 116, 104,<br>
                     101,&nbsp;&nbsp;32, 105, 110, 101, 115, 116,
-                    105, 109, \<br>
+                    105, 109,<br>
                     &nbsp;97,&nbsp;&nbsp;98, 108,
                     101,&nbsp;&nbsp;32,
-                    &nbsp;77, 117, 100, 100, \<br>
+                    &nbsp;77, 117, 100, 100,<br>
                     121,&nbsp;&nbsp;32,&nbsp;&nbsp;87, &nbsp;97,
-                    116, 101, 114, 115,&nbsp;&nbsp;46, \<br>
+                    116, 101, 114, 115,&nbsp;&nbsp;46,<br>
                     &nbsp;10,&nbsp;&nbsp;65, 108, 108,
-                    &nbsp;32, 105, 115,&nbsp;&nbsp;32, 119, \<br>
+                    &nbsp;32, 105, 115,&nbsp;&nbsp;32, 119,<br>
                     101, 108, 108,&nbsp;&nbsp;32, 119, 105, 116,
-                    104,&nbsp;&nbsp;32, \<br>
+                    104,&nbsp;&nbsp;32,<br>
                     116, 104, 101,&nbsp;&nbsp;32, 119, 111, 114,
-                    108, 100, \<br>
+                    108, 100,<br>
                     &nbsp;32,&nbsp;&nbsp;46,&nbsp;&nbsp;46,
                     &nbsp;46,&nbsp;&nbsp;32,&nbsp;&nbsp;66,
-                    121,&nbsp;&nbsp;32, 116, \<br>
+                    121,&nbsp;&nbsp;32, 116,<br>
                     104, 101,&nbsp;&nbsp;32,&nbsp;&nbsp;76,
                     111, 114, 100,&nbsp;&nbsp;32,&nbsp;
-                    72, \<br>
+                    72,<br>
                     &nbsp;97, 114, 114, 121,&nbsp;&nbsp;33,
-                    10];<br><br>
+                    10)<br><br>
 
-                    Message_Decoded = "";
+                    Message_Decoded = ""
                     <span Class="codecomm16">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;# Initialise a variable for
@@ -16981,18 +17031,18 @@ else:
 
                     for char in Message_Coded:
                     <span Class="codecomm16">
-                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;
                       # Build the decoded message
                     </span><br>
                           &nbsp;
-                          Message_Decoded += chr(char);
+                          Message_Decoded += chr(char)
                     <span Class="codecomm16">
                       # one character at a time.
                     </span><br><br>
 
-                    print Message_Decoded;
+                    print(Message_Decoded)
                     <span Class="codecomm16">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;# Output the decoded message.
                     </span><br>
                   </div><br><br>
@@ -17005,84 +17055,93 @@ else:
                         To read the "<b>secret message</b>",
                         <b>Copy/Paste</b>
                         the <b>Code</b> to a file and
-                        run it.<br><br>
+                        run it (or if you are feeling
+                        lazy, just scroll down a trifle).<br><br>
 
                         The strategy of the "<b>secret code</b>"
                         was to substitute
-                        <b>ASCII</b> codes for
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg"
+                         target="_blank"><b>ASCII</b> codes</a> for
                         <b>characters</b>.<br><br>
 
                         To <b>decode</b> was simply case of
                         using the
                         <b>chr() builtin function</b>
                         to convert each
-                        code, in turn, to a <b>character</b>,
+                        code, in turn, to a <b>Character</b>,
                         building
                         up a <b>string object</b> representing the
                         <b>decoded message</b>.<br><br>
 
                         To <b>encode</b> a message, the <b>ord()
                         builtin function</b> might have been used.
-                        <b>ord(c)</b> returns the <b>ASCII code</b>
+                        <b>ord(c)</b>, where <b>c</b> is a
+                        <b>Character</b> (or more
+                        <i>"Pythonically"</i>, a
+                        <b>str</b> of length <b>1</b>), returns
+                        the <b>ASCII code</b>
                         corresponding to <b>c</b>.
                       </li><br>
 
                       <li>
-                        <b>Note (Long Lines):</b> That is, the use
-                        of <b>backslash</b> ("<b>\</b>") characters
-                        in this <b>Example</b>,
-                        to indicate code lines that are too long
-                        too fit on one text line.<br><br>
+                        Note the lines defining the <b>Message_Coded tuple</b>.
+                        Logically, they are all the same line, broken at
+                        arbitrary points to allow readability.
+                        
+                        <b>backslash</b> ("<b>\</b>") characters
+                        were not required in this case as the
+                        <b>tuple</b> elements are entirely inside
+                        <b>()</b> brackets.<br><br>
 
-                        Actually, for anything inside any form of
-                        bracket <b>()</b>, <b>{}</b> or <b>[]</b>,
-                        the interpreter will not regard an
-                        <b>E</b>nd <b>O</b>f <b>L</b>ine
-                        (<b>EOL</b>)
-                        as an "end" of the <b>Python</b>
-                        instruction.
-                        Instead it will look for the closing
-                        half of
-                        the bracket pair.<br><br>
-
-                        As the list here is entirely inside
-                        <b>[]</b>
-                        brackets, the backslashes are completely
-                        redundant. I just like them.<br><br>
-
-                        The <b>Python</b> style guidelines
+                        <a href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length"
+                         target="_blank">The <b>Python Style Guidelines</b></a>
                         suggest that enclosing
                         instructions that require more than one
-                        line in brackets, is a preferred solution
+                        line in brackets (of any flavour that
+                        makes syntactic sense:
+                        <b>()</b>, <b>[]</b>, or <b>{}</b>),
+                        is a preferred solution
                         to using <b>backslashes</b>. However,
                         it invites the user to make his/her
                         own choice.<br><br>
 
-                        So, in summary:<br><br>
+                        So, for example:<br><br>
 
                         &nbsp;<b>a = 1 + 2 + 3 + 4 + 5 + 6 +<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
+                        7 + 8 + 9 + 10 + 11 + 12</b><br><br>
 
                         <span Style = "color:Red">will not work ...
                         <b>Error Error</b>!!</span><br><br>
 
                         &nbsp;<b>a = (1 + 2 + 3 + 4 + 5 + 6 +<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        7 + 8 + 9 + 10 + 11 + 12);</b><br><br>
+                        7 + 8 + 9 + 10 + 11 + 12)</b><br><br>
 
-                        will work and is the official Python
-                        preferred solution.<br><br>
+                        will work and is the official <b>Python</b>
+                        preferred solution. Enclosing an expression in round
+                        brackets, though optional, is sound.<br><br>
 
                         &nbsp;<b>a = 1 + 2 + 3 + 4 + 5 + 6
                         +&nbsp;&nbsp;&nbsp;\<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        7 + 8 + 9 + 10 + 11 + 12;</b><br><br>
+                        7 + 8 + 9 + 10 + 11 + 12</b><br><br>
 
                         will also work, for people who like
-                        backslashes.
+                        <b>backslashes</b>. I probably use
+                        more <b>backslashes</b> than the
+                        <b>Python Style Guidelines</b> advises.
+                        You must decide you own policy.
                       </li>
-                    </ul>
+                    </ul><br>
+                    
+                    https://www.youtube.com/watch?v=aI_JFcrTooM mojo<br>
+                    https://www.youtube.com/watch?v=UOP61h6cAoQ mojo/john<br>
+                    https://en.wikipedia.org/wiki/John_the_Conqueror<br>
+                    https://en.wikipedia.org/wiki/Mojo_(African-American_culture)<br>
+                    https://www.youtube.com/watch?v=n6kUs4rTFUU big leg<br>
+                    https://www.youtube.com/watch?v=YbpNov5kIKg jlh - big leg<br><br>
+                    
                   </div>
                 </div>
               </details>
