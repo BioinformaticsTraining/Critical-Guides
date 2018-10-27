@@ -1,0 +1,4 @@
+dna = "AGCTTCGACTTGAGC" # Define the DNA for analysis
+
+for bp in ["A","C","G","T"]:                # For each Base Code in turn,
+    print(bp, " Count is: ", dna.count(bp)) # Count & Display base types

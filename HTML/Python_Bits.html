@@ -17618,7 +17618,6 @@ else:
 																                  border-style: solid;
 																                  border-color: red;
 																                  border-width: 2px;"><br><br>
-
                   </div>
                 </div>
               </details>
@@ -17678,19 +17677,19 @@ else:
                   <span Class="codecomm16">
                     # Define the DNA for analysis<br><br>
                   </span>
-                  print "A Count is: " + str(dna.count("A"));
+                  print("A Count is: ", dna.count("A"))
                   <span Class="codecomm16">
                     # Count & Display the 'A' count<br>
                   </span>
-                  print "C Count is: " + str(dna.count("C"));
+                  print("C Count is: ", dna.count("C"))
                   <span Class="codecomm16">
                     # Count & Display the 'C' count<br>
                   </span>
-                  print "T Count is: " + str(dna.count("T"));
+                  print("T Count is: ", dna.count("T"))
                   <span Class="codecomm16">
                     # Count & Display the 'T' count<br>
                   </span>
-                  print "G Count is: " + str(dna.count("G"));
+                  print("G Count is: ", dna.count("G"))
                   <span Class="codecomm16">
                     # Count & Display the 'G' count<br>
                   </span>
@@ -17711,25 +17710,38 @@ else:
 
                 The proper code solution is to use a simple
                 <b>Counting Loop</b>, something like:<br>
+                
                 <div class="code16">
-                  dna = "AGCTTCGACTTGAGC";
+                  dna = "AGCTTCGACTTGAGC"
                   <span Class="codecomm16">
                     # Define the DNA for analysis<br><br>
                   </span>
                   for bp in ["A","C","G","T"]:
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <span Class="codecomm16">
-                    # <i>bp</i> is &lt;<i>Control
-                    Variable</i>&gt;
-                    <i>[A,C,G,T]</i> is
-                    &lt;<i>List</i>&gt<br>
-                  </span>
+                    # For each Base Code in turn,
+                  </span><br>
                   &nbsp;&nbsp;&nbsp;
-                  print bp + " Count is: " +
-                  str(dna.count(bp));
+                  print(bp, " Count is: ", dna.count(bp))
                   <span Class="codecomm16">
                     # Count & Display base types<br>
                   </span>
-                </div>
+                </div><br><br>
+                
+                Code is in
+                <a href="../Solutions-Python/Loops/Examples/Loops_For_Example00.txt"
+											    		target="_blank">this file</a>.<br><br>
+																							 													
+						          Output is:<br>
+						      
+																<img src="Images/Loops_For_Example00.png"
+										           alt="Fiddle!"
+										           class="centimg"
+										           style="background: White;
+										                  border-style: solid;
+										                  border-color: red;
+										                  border-width: 2px;">
               </details>
             </li><br>
 
@@ -18851,7 +18863,7 @@ else:
           <li>
             <b>ord(c)</b> - Converts <b>ASCII Characters</b>
             to <b>ASCII Character Codes</b>.<br>
-          </li><br>
+          </li>
         </ol>
 
         <p>
