@@ -17141,7 +17141,7 @@ else:
                 <div class="code">
                   While
                   <span style="font-weight:normal;">
-                    <i>&lt;Conditional&gt;</i>:
+                    <i>&lt;Conditional Expression&gt;</i>:
                   </span><br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
@@ -17176,7 +17176,7 @@ else:
 
                   <b><u>Code</u></b><br>
                   <div class="code16">
-                    from random import randint;
+                    from random import randint&nbsp;
                     <span Class="codecomm16">
                       # Import the random integer generator<br>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -17186,14 +17186,14 @@ else:
                       module random.
                   </span><br>
 
-                  Target = randint(1,20);
-                  <span Class="codecomm16">
-                    &nbsp;&nbsp;&nbsp;
-                    # Generate the Integer to be matched.
-                  </span><br>
-                  Guess  = randint(1,20);
+                  Target = randint(1,20)
                   <span Class="codecomm16">
                     &nbsp;&nbsp;&nbsp;&nbsp;
+                    # Generate the Integer to be matched.
+                  </span><br>
+                  Guess  = randint(1,20)
+                  <span Class="codecomm16">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     # Generate the first attempt to
                     match the Target.
                   </span><br><br>
@@ -17205,14 +17205,15 @@ else:
                   </span><br>
                   &nbsp;&nbsp;&nbsp;&nbsp;print("Target
                   (", Target, ") does not match Guess
-                  (", Guess, "). \tTry again!")<br>
+                  (", Guess,<br>
+                  "). \tTry again!")<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Guess = randint(1,20);
                   <span Class="codecomm16">
                     &nbsp;# Sadly admit failure,and try again.
                   </span><br><br>
 
-                  print "Hooray! Target and Guess are both = "
-                  + str(Guess);<br>
+                  print("Hoorah! Target and Guess
+                  are both = ", Guess)<br>
                   <span Class="codecomm16">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -17300,7 +17301,7 @@ else:
 
               <p>The easiest way to do this is to use a
                  <b>While loop</b> with a
-                 <i>&lt;Conditional</i>&gt;
+                 <i>&lt;Conditional Expression</i>&gt;
                  that always evaluates to <b>True</b>. That is a
                  <b>While Loop</b> that, it left to its
                  own devices,
@@ -17308,7 +17309,7 @@ else:
               </p>
 
               <p>In addition, an explicit
-                 <i>&lt;Conditional</i>&gt;
+                 <i>&lt;Conditional Expression</i>&gt;
                  is added at the end of the <b>Loop</b>
                  to detect the
                  appropriate moment to leave.
@@ -17333,41 +17334,35 @@ else:
                    ...<br>
                    &nbsp;&nbsp;&nbsp;&nbsp;if
                    <span style="font-weight:normal;">
-                     <i>&lt;Conditional</i>&gt;:
+                     <i>&lt;Conditional Expression</i>&gt;:
                    </span> break<br>
                  </div>
               </p>
 
-              <p class="hint"><b>Note</b>: Concerning
-                 <i>&lt;Conditional</i>&gt;s that always return
+              <div class="hint"><b>Note (partly recap)</b>: Concerning
+                 <i>&lt;Conditional Expression</i>&gt;s that always return
                  the value "<b>True</b>".<br><br>
 
                  <b>Python</b> includes the <b>Class bool</b>.
                  An object
                  of the <b>Class bool</b> may take one of
-                 two values,
+                 two <b>Builtin Keyword Values</b>,
                  <b>True</b> or <b>False</b>.<br><br>
-
-                 <b>Python</b> offers the two
-                 "<b>Built in</b>" constants,
-                 <b>True</b> (set to the <b>bool value True</b>)
-                 and <b>False</b> (set to the <b>bool
-                 value False</b>).<br><br>
 
                  These constants can be used to refer to the
                  two possible <b>bool</b> values in your code.
                  For example:<br><br>
 
-                 &nbsp;&nbsp;&nbsp;&nbsp;<b>while
-                 True</b><br><br>
+                 <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<b>while
+                 True</b>
+                 </span><br><br>
 
                  which feels like a nice way to make
                  the everlasting <b>loop</b>
                  required to me?<br><br>
 
-                 Things are actually more flexible
-                 than the discussion
-                 so far implies.The <b>Class bool</b>
+                 Things are actually more "flexible" then this.
+                 The <b>Class bool</b>
                  is a <b>Subclass</b>
                  of the <b>Class Integer</b>. That is to say,
                  the values
@@ -17380,54 +17375,136 @@ else:
                  you could also
                  use <b>1</b>. So:<br><br>
 
-                 &nbsp;&nbsp;&nbsp;&nbsp;<b>while 1</b><br><br>
-
+                 <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<b>while 1</b>
+                 </span><br><br>
+                 
                  would meet the current needs, if with a large
-                 slice of avoidable enigma!<br><br>
+                 slice of easily avoidable enigma!<br><br>
 
                  If you like, it is OK to think of <b>True</b>
                  and <b>1</b>
                  as "the same". That works. <b>But it is not
-                 true</b>! Maybe to get a feel for the
-                 differences, try
-                 throwing the following at the <b>Python
-                 Interpreter</b> (one at a time!):<br><br>
-
-                 <b>True False 6==6 6==7 True-1 False+3</b>
-                 ... and similar<br><br>
-
-                 If this makes things clear, Jolly Good. If not,
-                 then just
-                 believe <b>True</b> is the same as <b>1</b>
-                 and <b>False</b>
-                 and <b>0</b> are equivalents (but not near
-                 me!).<br><br>
-
-                 Finally, and to summarise, you can use either
-                 a <b>boolean expression</b> (e.g. "<b>6==6</b>",
-                 "<b>3>9</b>") or an
-                 <b>Integer expression</b> (e.g.
-                 <b>"94*(3-4)"</b>) for
-                 the <b>while loop</b>
-                 <i>&lt;Conditional</i>&gt;.<br><br>
-
-                 If you use an <b>Integer expression</b>,
-                 a result
-                 of <b>0</b> is <b>False</b>, any other
-                 result is <b>True</b>. You can test
-                 this assertion
-                 by presenting the <b>Python Interpreter</b> with
-                 numbers given as <b>Arguments</b> to the
-                 <b>Built in
-                 Function bool</b>. <b>bool</b> takes a
-                 <b>Numeric
-                 Parameter</b> and returns the appropriate
-                 <b>boolean</b> value. For example, try the
-                 <b>Interpreter</b> with such as:<br><br>
-
-                 <b>bool(-2) bool(-1) bool(0) bool(0.99) bool(1)
-                 bool(1.001) bool(2) bool(3) ...</b><br>
-              </p>
+                 true</b>!<br><br>
+                 
+                 <b>False</b> is not the same as <b>0</b>???
+                 <b>False</b> is the
+                 state of <i>"not being <b>True</b>"</i>.
+                 Its not a number at all!<br><br>
+                 
+                 However, from <b>Python</b>'s point of view,
+                 it is most convenient to represent everything
+                 as some sort of number. So, analogously
+                 to the way <b>Characters</b> are
+                 represented by numbers
+                 assigned by the
+                 <a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg"
+                  target="_blank"><b>ASCII Table</b></a>,
+                 <b>False</b> is represented by
+                 <b>0</b> and </b>True</b> by <b>1</b>
+                 (actually, any value except <b>0</b> is
+                 interpreted as <b>True</b>, but the value assigned
+                 to the <b>Keyword True</b> is <b>1</b>).<br><br>
+                 
+                 Maybe to get a feel for the
+                 differences, consider the following
+                 experiments with the <b>Python
+                 Interpreter</b>:<br><br>
+                 
+                 <ul>
+                   <li>
+                     Genuine <b>Boolean Constants</b> and <b>Expressions</b>:<br>
+																					<img src="Images/boolint00.png"
+															           alt="Fiddle!"
+															           class="centimg"
+															           style="background: White;
+															                  border-style: solid;
+															                  border-color: red;
+															                  border-width: 2px;">
+															    </li><br>
+															    <li>
+															      Genuine <b>Boolean Constants</b> and <b>Expressions</b>
+															      bullied, illogically, into being <b>Integers</b>:
+																					<img src="Images/boolint01.png"
+															           alt="Fiddle!"
+															           class="centimg"
+															           style="background: White;
+															                  border-style: solid;
+															                  border-color: red;
+															                  border-width: 2px;"><br>
+															      <b>True - 1 = 0</b>? Really? Sounds like nonsense to me.
+															      Of course, it is true as far as the computer
+															      is concerned, but I am not sure I
+															      really want to look at it.
+															    </li><br>
+															    <li>
+															      Finally, just a some support for the assertion
+															      that any value other than <b>0</b> is
+															      interpreted as <b>True</b>.<br>
+																					<img src="Images/boolint02.png"
+															           alt="Fiddle!"
+															           class="centimg"
+															           style="background: White;
+															                  border-style: solid;
+															                  border-color: red;
+															                  border-width: 2px;"><br>
+															    </li>
+															  </ul>
+															  
+															  The main reason for this diversion
+															  is to suggest that:<br><br>
+															  
+															  <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<b>while True:</b>
+															  </span><br><br>
+															  
+															  is far preferable to:<br><br>
+															  
+															  <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<b>while 1:</b>
+															  </span><br><br>
+															  
+															  on the very important grounds of code readability.<br><br>
+															  
+															  Using <b>1</b> instead of <b>True</b> is strangely common.
+															  Partially because:<br><br>
+															  
+															  <ul>
+															    <li>
+															      Prior to
+															      <b>Python 2.3</b> the <b>Keywords
+															      True</b> and <b>False</b> did
+															      not exist! (long ago now, but habits persist)
+															    </li><br>
+															    <li>
+															      In more recent <b>Python 2 Versions</b>,
+															      <b>True</b> and <b>False</b> were
+															      <b>Keywords</b> but not <b>Reserved Words</b>!
+															      So it was possible
+															      to assign <b>True</b> and <b>False</b> values
+															      other than <b>1</b> and <b>0</b>.
+															      
+															      It is difficult to imagine anyone doing anything so
+															      unimaginably stupid, but still an argument against
+															      relying on the <b>Keywords</b>.
+															    </li>
+															  </ul><br>
+															  
+															  For a more technical and complete version of the above,
+															  try
+															  <a href="https://stackoverflow.com/questions/2261987/whats-the-difference-between-while-1-and-while-true/2262162"
+															   target="_blank">here</a>. The author of the "best" answer
+															   does not regard the choice of <b>True</b> or <b>1</b> as very
+															   important. I (and some of the other contributors to this
+															   post) disagree (in a friendly fashion).
+															   Clear code is vital.<br><br>
+															   
+															  If you like lots of computing orientated detail,
+															  the 
+															  <a href="https://www.python.org/dev/peps/pep-0285/"
+															   target="_blank">notes on the
+															    introduction of a <b>bool class</b></a>
+															  is an interesting read. It includes the
+															  decision to allow <b>bools</b> to appear in
+															  "non Boolean" expressions (e.g. <b>True + 6</b>) or not.
+              </div>
 
               <details>
               <summary><span class = "exeblocksum">
@@ -17452,7 +17529,7 @@ else:
 
                   <b><u>Code</u></b><br>
                   <div class="code16">
-                    from random import randint;
+                    from random import randint&nbsp;
                     <span Class="codecomm16">
                       # Import the random integer generator<br>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -17462,9 +17539,9 @@ else:
                       module random.
                     </span><br>
 
-                    Target = randint(1,20);
+                    Target = randint(1,20)
                     <span Class="codecomm16">
-                      &nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;
                       # Generate the Integer to be matched.
                     </span><br><br>
 
@@ -17475,9 +17552,9 @@ else:
                       # While ...
                     </span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;Guess =
-                    randint(1,20);
+                    randint(1,20)
                     <span Class="codecomm16">
-                      &nbsp;# Attempt to match the target.
+                      &nbsp;&nbsp;# Attempt to match the target.
                     </span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;if Guess == Target:
                     <span Class="codecomm16">
@@ -17485,9 +17562,9 @@ else:
                       Guess matches the Target,
                     </span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    break;
+                    break
                     <span Class="codecomm16">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Leave
                       the Loop, Job done!
                     </span><br>
@@ -17499,14 +17576,11 @@ else:
                       admit failure,and try again.
                     </span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    print
-                    "Target (" + str(Target) + ")
-                    does not match Guess (" \<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    + str(Guess) + "). \tTry again!";<br><br>
+                    print("Target (", Target, ")
+                    does not match Guess (", Guess,<br>
+                    "). \tTry again!")<br><br>
 
-                    print "Hooray! Target and Guess are both = "
-                    + str(Guess);<br>
+																		  print("Hoorah! Target and Guess both = ", Guess)<br>
                     <span Class="codecomm16">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -17515,20 +17589,36 @@ else:
                       match is achieved, be happy.
                     </span>
                   </div><br><br>
-
+		  
                   <b><u>Notes, Experiments & Questions
                   </u></b><br><br>
                   <div class="experiment">
                     <ul>
                       <li>
-                        This is essentially the second
+                        This is essentially one of the
                         "<b>While Loop</b>"
                         <b>Trivial Example</b>
                         rearranged. Perhaps
                         it feels more natural as a <b>Test at the
-                        Bottom Loop</b>? But both ways work.
+                        Bottom Loop</b>? I cannot make my mind up,
+                        but both ways work.
                       </li><br>
                     </ul>
+                    
+				                Code is in
+				                  <a href="../Solutions-Python/Loops/Examples/Loops_TE_Repeat.txt"
+																	    		target="_blank">this file</a>.<br><br>
+																													 													
+												          Output is:<br><br>
+												      
+																						<img src="Images/Loops_TE_Repeat00.png"
+																           alt="Fiddle!"
+																           class="centimg"
+																           style="background: White;
+																                  border-style: solid;
+																                  border-color: red;
+																                  border-width: 2px;"><br><br>
+
                   </div>
                 </div>
               </details>

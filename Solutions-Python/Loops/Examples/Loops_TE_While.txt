@@ -4,7 +4,8 @@ Target = randint(1,20)      # Generate the Integer to be matched.
 Guess = randint(1,20)       # Generate the first attempt to match the Target. 
 
 while Guess != Target:      # While the Target is not matched, 
-    print("Target (", Target, ") does not match Guess (", Guess, "). \tTry again!")
+    print("Target (", Target, ") does not match Guess (", Guess,
+"). \tTry again!")
     Guess = randint(1,20)   # Sadly admit failure, and try again. 
 
 print("Hoorah! Target and Guess are both = ", Guess)
