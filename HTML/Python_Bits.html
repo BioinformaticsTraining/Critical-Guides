@@ -35,11 +35,19 @@ A{text-decoration:none}
       <img src="../Images/aberystwyth_web.jpeg"
            alt="Fiddle!" height="117" width="300"></a>
     </td>
+<!--
     <td style="text-align:center;">
       <a href="https://en.wikipedia.org/wiki/Cambridge,_Gloucestershire"
          target="_blank">
       <img src="../Images/ToyTown.jpeg"
            alt="Darn!" height="173" width="250"></a>
+    </td>
+-->
+    <td style="text-align:center;">
+      <a href="http://gtpb.igc.gulbenkian.pt/bicourses/index.html"
+         target="_blank">
+      <img src="../Images/GTPB2015logo.png"
+           alt="Darn!"></a>
     </td>
     <td style="text-align:right;">
       <a href="https://www.essex.ac.uk/"
@@ -16839,7 +16847,7 @@ else:
                     <i>&lt;Control Variable&gt;</i></span>
                     <b>in </b>
                   <span style="font-weight:normal;">
-                    <i>&lt;Iterable Object&gt;</i></span>:<br>
+                    <i>&lt;iterable Object&gt;</i></span>:<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 1<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 2<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Statement 3<br>
@@ -16848,7 +16856,7 @@ else:
                   ...
                 </div><br><br>
                 
-                The <i>&lt;Iterable Object&gt;</i> could be a
+                The <i>&lt;iterable Object&gt;</i> could be a
                 <b>range</b>, <b>string</b>, <b>list</b> etc.
                 Anything from which the <b>Built-in Function
                 iter()</b> can create an <b>iterator</b>.<br><br>
@@ -16860,7 +16868,7 @@ else:
                 The <b>for ... in</b> structure handles the
                 details in the background. The user
                 can simply consider the
-                <i>&lt;Iterable Object&gt;</i> as a set
+                <i>&lt;iterable Object&gt;</i> as a set
                 of values to be processed by the
                 <b>Code Block</b> controlled by the <b>for
                 Loop</b>, one at a time, until the
@@ -16877,7 +16885,7 @@ else:
                 The <b>for Loop Syntax</b> reads, informally:<br><br>
                 
                 <i>"<b><u>for</u></b> each of the elements <b><u>in</u></b> the
-                specified <b><u>Iterable Object</u></b>, in turn,
+                specified <b><u>iterable Object</u></b>, in turn,
                 assign the element to a <b><u>variable</u></b>
                 and execute the <b>for loop Code Block</b>"</i>
               </p>
@@ -18035,7 +18043,7 @@ else:
                 ... banners
                 furled ... vinho bottles uncorked ... 
                 <a href="https://en.wikipedia.org/wiki/Super_Bock"
-                 taget="_blank">bock supered</a> ... <br><br>
+                 target="_blank">bock supered</a> ... <br><br>
                 And then relax in the assurance of a job done
                 well, possibly with a nice cup of tea? enhanced
                 by a knowing, but also winning, smile.
@@ -18063,17 +18071,17 @@ else:
               Directory</b><br><br>
 
               <div class="code16">
-                Sequence_file = open("homeobox_human.fasta");
+                Sequence_file = open("homeobox_human.fasta")
                 <span Class="codecomm16">
                   # Open the target file for reading
                 </span><br><br>
 
-                Sequence_Count = 0;
+                Sequence_Count = 0
                 <span Class="codecomm16">
                   # Initialise the Annotation Line
                   Counter variable
                 </span><br>
-                AA_Count = 0;
+                AA_Count = 0
                 <span Class="codecomm16">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   # Initialise the Amino Acid Counter variable
@@ -18081,84 +18089,207 @@ else:
 
                 for Line in Sequence_file:
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;# For each Line of Sequence_file
+                  &nbsp;&nbsp;&nbsp;# For each Line of Sequence_file,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
                 if Line[0] == ">":
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   # If this is an Annotation Line,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;
-                print Line;
+                print(Line, end='')
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;
-                  # Print the Line,
+                  &nbsp;&nbsp;# Print the Line,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;
-                Sequence_Count += 1;
+                Sequence_Count += 1
                 <span Class="codecomm16">
-                  # Increment the Sequence Counter.
+                  &nbsp;&nbsp;# Increment the Sequence Counter,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;
-                continue;
+                continue
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# move to the top
-                  of the Loop for the next Line
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Move to the top
+                  of the Loop for the next Line,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
-                AA_Count += len(Line);
+                AA_Count += len(Line) - 1
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;# Increment the Sequence Counter.
+                  # Otherwise increment the Amino Acid Counter
                 </span><br><br>
-                Sequence_file.close();
+                
+                Sequence_file.close()
                 <span Class="codecomm16">
                   # Close the file of sequences
                 </span><br><br>
+                
                 <span Class="codecomm16">
                   # Print the Sequence & Amino Acid Counts
                 </span><br>
-                print "There are " + str(Sequence_Count) +
-                " Protein Sequences in the file"<br>
-                print "There are " + str(AA_Count) +
-                " Amino Acid Codes in the file"
+                print("There are ", Sequence_Count,
+                " Protein Sequences in the file")<br>
+                print("There are ", AA_Count,
+                " Amino Acid Codes in the file")
               </div><br><br>
 
-              The <b>Python open Function</b> returns a
+              The <b>Python open() Function</b> returns a
               "<b>File Handle</b>" (fancy name for something
               that points to the contents of the file that has
               just been read).<br><br>
 
               In <b>Python</b>, a file handle can be regarded
-              as <b>List</b> of the lines of the file,
+              as <b>iterable Object</b> whose elements are
+              the lines of the file,
               in the order in which they are read.<br><br>
 
               This is extremely convenient here! It means that
               the <b>File Handle</b> (<b>Sequence_file</b>)
-              can be used directly as the <b>Loop</b > control
-              &lt;<i>List</i>&gt; for looking at the <b>File
+              can be used directly as the <b>For Loop</b > control
+              &lt;<i>iterable Object</i>&gt;. An
+              &lt;<i>iterable Object</i>&gt; that will step through
+              the <b>File
               homeobox_human.fasta</b> line by line.<br><br>
 
-              Leaving <b>open</b> files around, even when empty,
-              is not good practice. They should be neatly
+              Leaving <b>open</b> files around after use,
+              is not good. They should be neatly
               <b>closed</b>, as here. It is all too easy to
-              forget to do this!<br><br>
+              forget to do this! Usually, nothing untoward
+              occurs if files are not explicitly closed.
+              They are closed automatically when the
+              program terminates. However, there can be
+              <a href="https://stackoverflow.com/questions/25070854/why-should-i-close-files-in-python"
+               target="_blank">consequences</a>, and in any case,
+              it is very poor programming style not to
+              explicitly <b>close</b> your files.<br><br>
+              
+              This code does no data checking whatsoever!
+              <b><i>Dreadful</i></b>, in real life, but in the context
+              of this tutorial, one can grimace and accept
+              the practicalities.<br><br>
+              
+              In particular, the sequence lines of the
+              file are assumed to contain only genuine
+              <b>Amino Acids Codes</b>.
+              Well, they should in a <b>FASTA Format
+              Sequence File</b>, but I would never trust
+              that assumption to be generally true.<br><br>
+              
+              I hope you followed to way the <b>continue</b> command
+              worked in the above code? It is a silly use of
+              <b>continue</b>, much better to use an <b>else</b>
+              clause (see below)
+              I simply wanted you to know about <b>continue</b>,
+              so I forced it in here.<br><br>
+              
+              Like 
+              <a href="https://www.programiz.com/python-programming/keyword-list#break_continue"
+               target="_blank"><b>break</b>, <b>continue</b></a>
+              disturbs the normal progression
+              of a <b>Loop Structure</b>.<br><br>
+              
+              <b>break</b> commands that the next statement to be
+              executed is the first to follow the <b>Loop</b>.
+              <br><br>
+             
+              <b>continue</b> demands that the current iteration
+              be abandoned and execution be resumed
+              at the top of the <b>Loop</b>.<br><br>
+              
+              Code is in
+              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example3.txt"
+											    		target="_blank">this file</a>.<br><br>
+											    		
+											   The <b>Output</b> for this one is enormous, so I put it in a
+              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example3_Output.txt"
+											    		target="_blank">this file</a>.<br><br>
 
               <b><u>Notes, Experiments & Questions</u></b><br>
                 <div class="experiment">
                   <ol>
                     <li>
-                      <b>Copy/Paste</b> the code for this
+                      Why do you think the default
+                      terminator ('<b>/n</b>')
+                      for the <b>print()</b> command
+                      to display each
+                      <b>Annotation Line</b> was changed to the
+                      empty string (<b>''</b>)?<br><br>
+                      
+                      Why do you suppose the <b>Amino Acid
+                      Counter</b> was incremented by
+                      "<b>len(Line) - 1</b>"
+                      rather than just "<b>len(Line)</b>?
+                      
+                      <p class="hint">
+                        The <b>Answer</b> to both these <b>Questions</b> is the same.
+                      </p>
+                      
+								              <details class="answer">
+								              <summary><span class="anssum">Answer.</span>
+								              </summary>
+								                <div class="answer">
+								                  Lines read from a file using in
+								                  the fashion employed by the
+								                  <b>For Loop</b>, include a terminating
+								                  <b>E</b>nd <b>O</b>f <b>L</b>ine
+								                  (<b>EOL</b>, or '<b>\n</b>') character.
+								                  This means that, by default,
+								                  the <b>print()</b> function would print
+								                  <b><i>TWO</i> EOLs</b> for each
+								                  <b>Annotation Line</b>.<br><br>
+								                  
+								                  Good grief! the output for this
+								                  simple program is long enough without
+								                  such extravagance!<br><br>
+								                  
+								                  Of course, the <b>EOL</b> will be counted
+								                  by <b>len()</b> as a character, so the value
+								                  that <b>len()</b> returns will be
+								                  <b>1</b> greater
+								                  than the number of <b>Amino Acids</b> in a
+								                  <b>sequence line</b>. Hence, the code must
+								                  subtract <b>1</b> from the value <b>len()</b>
+								                  returns in order to compensate.
+								                </div>
+								              </details>
+								            </li><br> 
+                    <li>
+                      <b>Download</b> the code for this
                       <b>Example</b> into a local file so you can
-                      amend/run it on your own computer.
-                    </li>
-                    <li>Edit the code to avoid the use
-                        of <b>continue</b>
+                      amend/run it on your own computer.<br><br>
+                      
+                      Edit the code to avoid the use
+                      of <b>continue</b>.<br><br>
+                      
+								              <details class="answer">
+								              <summary><span class="anssum">Answer.</span>
+								              </summary>
+								                <div class="answer">
+								                  The use of <b>continue</b> in
+								                  the original answer
+								                  was really quite crazy! I was desperate
+								                  to expose you to the use of
+								                  <b>continue</b> and
+								                  could think of no way to do so sensibly,
+								                  to be honest. If the opportunity arises,
+								                  I will try again later.<br><br>
+								                  
+								                  In the meantime, as I am sure you noticed, a
+								                  sensible person would have just
+								                  introduced an <b>else</b> clause to replace
+								                  the continue.<br><br>
+								                  
+												              The revised code is in
+												              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example3_else.txt"
+																							    		target="_blank">this file</a>.<br><br>
+								                  
+							                   The <b>Output</b> is unchanged, of course.
+								                </div>
+								              </details>
                     </li>
                   </ol>
                 </div>
