@@ -1,10 +1,10 @@
-Property_Names = "Name Price Stock Sold Order"; # Row Headers for all Tables 
+Property_Names = "Name Price Stock Sold Order" # Row Headers for all Tables 
 
 # A tuple of tuples for each Category.
 # Category tuples identify a Category and its items 
 All_Items = (("Category Food", "Egg ", "Bean", "Cake", "Chip"),
              ("Category Bits", "Sock", "Tie ", "Shoe"),
-             ("Category Toys", "Car ", "Bear", "Doll", "Book", "Ball"));
+             ("Category Toys", "Car ", "Bear", "Doll", "Book", "Ball"))
 
 Properties = { "Egg ":" 0.99 64 86 93",    # A Dictionary for all items 
                "Book":" 4.99 326 390 400", # and their properties. 
@@ -17,14 +17,14 @@ Properties = { "Egg ":" 0.99 64 86 93",    # A Dictionary for all items
                "Doll":" 3.99 42 50 63",
                "Chip":" 0.55 604 451 557", # The order is not relevant 
                "Shoe":" 5.44 744 660 629", # in most Dictionaries. 
-               "Car ":" 3.21 214 113 121",};
+               "Car ":" 3.21 214 113 121",}
 
 for Category_Items in All_Items: # For each Category tuple, 
     for Item in Category_Items:  # Consider each Item in turn. 
-        if "Category" in Item: # If this element identifies the Category, 
-            print "Table for the " + Item; # use it to make Table Title, 
-            print Property_Names;          # and print a Header Row. 
-        else:                        # If this element identifies the Item, 
-            print Item + " " + Properties[Item]; # print the Item Name. 
-                                                 # followed by its Properties. 
-    print; # Print an empty line between Tables. 
+        if "Category" in Item:   # If this element identifies the Category, 
+            print("Table for the ", Item) # use it to make Table Title, 
+            print(Property_Names)         # and print a Header Row. 
+        else:                    # If this element identifies the Item, 
+            print(Item, Properties[Item]) # print the Item Name. 
+                                          # followed by its Properties. 
+    print() # Print an empty line between Tables. 

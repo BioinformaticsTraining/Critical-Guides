@@ -18304,7 +18304,7 @@ else:
 
               <b><u>The problem</u></b>
               <div class="problem">
-                class="smarg">A shop sells "stuff"
+                A shop sells "stuff"
                 that can be divided into categories<br>
                 Each category contains items<br>
                 Each item possesses properties<br>
@@ -18312,14 +18312,13 @@ else:
                 the available data nicely
               </div><br>
 
-              <b><u>Pseudo-Code</u></b><br><br>
+              <b><u>Pseudo-Code</u></b><br>
               <div class="pseudo">
-
                 <b><u>Organise the Data:</u></b><br><br>
 
                 Compose a <b>string</b> of all
-                item property names to be used as
-                <b>Title Row</b> for <b>Property
+                item property names to be used as a
+                <b>Title Row</b> for the <b>Property
                 Tables</b>.<br><br>
 
                 For each category, compose a <b>tuple</b>.<br>
@@ -18365,7 +18364,7 @@ else:
               <div class="code16">
 
                 Property_Names =
-                "Name    Price   Stock   Sold    Order";
+                "Name    Price   Stock   Sold    Order"
                 <span Class="codecomm16">
                   # Row Headers for all Tables
                 </span><br><br>
@@ -18383,7 +18382,7 @@ else:
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 ("Category Toys", "Car ", "Bear", "Doll",
-                                  "Book", "Ball"));<br><br>
+                                  "Book", "Ball"))<br><br>
 
                 Properties = {
                 "Egg ":"  0.99      64     86      93",
@@ -18445,7 +18444,7 @@ else:
                 </span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                "Car ":"  3.21     214    113     121",};<br><br>
+                "Car ":"  3.21     214    113     121",}<br><br>
 
                 for Category_Items in All_Items:
                 <span Class="codecomm16">
@@ -18459,17 +18458,17 @@ else:
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 if "Category" in Item:
                 <span Class="codecomm16">
-                  # If this element identifies the Category,
+                  &nbsp;&nbsp;# If this element identifies the Category,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                print "Table for the " + Item;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                print("Table for the ", Item)
                 <span Class="codecomm16">
                   # use it to make Table Title,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;
-                print Property_Names;
+                print(Property_Names)
                 <span Class="codecomm16">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;
@@ -18478,33 +18477,45 @@ else:
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 else:
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
                   # If this element identifies the Item,
                 </span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                print Item + "   " + Properties[Item];
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                print(Item, Properties[Item])
                 <span Class="codecomm16">
                   # print the Item Name.
                 </span><br>
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;# followed by its Properties.
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
-                print;
+                print()
                 <span Class="codecomm16">
                   # Print an empty line between Tables.
                 </span><br>
               </div><br><br>
+
+              Code is in
+              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example4.txt"
+									    		target="_blank">this file</a>.<br><br>
+																					 													
+				          Output is:<br>
+																<img src="Images/Loops_For_Example4.png"
+										           alt="Fiddle!"
+										           class="centimg"
+										           style="background: White;
+										                  border-style: solid;
+										                  border-color: red;
+										                  border-width: 2px;"><br>
 
               <b><u>Notes, Experiments & Questions</u></b>
                 <div class="experiment">
@@ -18601,7 +18612,7 @@ else:
                   </li>
                 </ul>
               </div>
-            </li><br>
+            </li><!--<br>
 
             <li>
               <details>
@@ -18651,7 +18662,7 @@ else:
               <div class="experiment">
               </div>
             </details>
-          </li>
+          </li>-->
         </ol>
       </details><br>
 
