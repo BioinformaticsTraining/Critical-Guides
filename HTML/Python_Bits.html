@@ -7992,7 +7992,7 @@ Click to record your <b>Start</b> time.</button>
                               as then the <b>return Value</b> will be thrown away
                               if not allocated to a <b>Variable</b>.<br><br>
                               
-                              If it trivial to stop the <b>27</b>s popping out everywhere
+                              It is trivial to stop the <b>27</b>s popping out everywhere
                               when using the <b>Interactive Interpreter</b>.
                               Just assign the <b>file.write()</b> command
                               to a <b>Variable</b>.
@@ -8133,7 +8133,7 @@ Click to record your <b>Start</b> time.</button>
                         It does not see <b>Lines</b>, just <b>bytes</b>.
                         You told it to read them all,so that is what it did.<br><br>
                         
-                        The result is the <b>print()</b> interprets the <b>newlines</b>
+                        The result is that <b>print()</b> interprets the <b>newlines</b>
                         and the contents of the <b>File</b> are displayed literally.
                       </div>
                     </details>
@@ -13549,7 +13549,7 @@ Click to record your <b>Start</b> time.</button>
 				            (a <b>Library</b> of standard Mathematical
 				            Functions, Constants and similar)
 				            is written in <b>C</b> and directly
-				            incorporated into the </b>Python Interpreter</b>.
+				            incorporated into the <b>Python Interpreter</b>.
 				            This is done for reasons of efficiency.
 				            The <b>math</b> module (and others like it) must
 				            still be explicitly "<b>imported</b>" before
@@ -13674,7 +13674,8 @@ Click to record your <b>Start</b> time.</button>
         </hh6m><br><br>
         
         <div>
-		        Further Packages and Modules are available from
+		        Further <b>Packages</b> and <b>Modules</b>
+		        are available from
 		        <a href="https://pypi.org/"
 		         target="_blank"><b>The Python
 		                      Package Index (PyPI)</b></a>.<br><br>
@@ -13729,15 +13730,71 @@ Click to record your <b>Start</b> time.</button>
 		      <a href="https://www.programiz.com/python-programming/keyword-list#from_import"
 		       target="_blank">"<b>import</b>"</a>.<br><br>
 		      
-		      Used in its most simple form, the <b>Syntax</b> is just:<br><br>
+		      Used in its most simple form, the
+		      <b>Syntax</b> is just:<br><br>
 		      
-		      &emsp;&emsp;&emsp;&emsp;<b>import</b> <i>&lt;Library&gt;</i><br><br>
+		      &emsp;&emsp;&emsp;&emsp;<b>import</b>
+		      <i>&lt;Library&gt;</i><br><br>
 		      
-		      Before the import statement, all the wonders of <i>&lt;Library&gt;</i> are denied the Python program.
+		      <div class="hint">
+		        This syntax is accepted as correct
+		        by <b>Python</b> if the <b>Library</b>
+		        is a <b>Package</b>.
+		        However,
+		        <a href="https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html#importing-packages"
+		         target="_blank">nothing very useful
+		         is "<b>imported</b>"</a>.<br><br>
+		        
+          Specifically, all the <b>Modules</b> of
+          the named <b>Package</b> are not loaded
+          in one go, as one might have hoped.<br><br>
+          
+		        Exactly why this is so is beyond
+		        the scope of this
+		        tutorial, but the reference offered
+		        is a good place to start if
+		        you are interested in discovering more
+		        for yourselves.<br><br>
+		        
+		        The full story from the
+		        <a href="https://docs.python.org/3/reference/import.html"
+		         target="_blank"><b>Official Python Documentation</b></a>
+		        is a tough read, but comprehensive.<br><br>
+		        
+		        To load an individual <b>Module</b> from
+		        a <b>Package</b> using the syntax above,
+		        you must specifically name the <b>Module</b> 
+		        using the <b>Dot Convention</b> mentioned
+		        previously.<br><br>
+		        
+		        So, for example:<br><br>
+		        
+		        <span class="code">
+		          &emsp;&emsp;import urllib.request
+		        </span><br><br>
+		        
+		        would import the <b>Module request</b>
+		        from the <b>Package urllib</b>.<br><br>
+		        
+		        <b>importing</b> is generally a
+		        <b>Module</b> level activity.
+		        However, I will continue to use the
+		        more general term <b>Library</b>, and add a note when
+		        the effect is interestingly different 
+		        if the <b>Library</b> is a <b>Package</b>.<br><br>
+		      </div><br>
+		       
+		      Before the <b>import</b> statement, all
+		      the wonders of <i>&lt;Library&gt;</i>
+		      are denied the <b>Python</b> program.
 		      
-		      After the import, the splendours of <i>&lt;Library&gt;</i> are available in their entirety!<br><br>
+		      After the <b>import</b>, the splendours
+		      of <i>&lt;Library&gt;</i> are
+		      available in their entirety!<br><br>
 		      
-		      Two obvious questions have just thrust themselves upon your conscious. To whit:<br><br>
+		      Two obvious questions have just
+		      thrust themselves upon your
+		      conscious. To whit:<br><br>
 		      
 		      <ul>
 		        <li>
@@ -14369,6 +14426,23 @@ Click to record your <b>Start</b> time.</button>
 				  <i>&lt;Library&gt;</i> <b>import</b>
 				  <i>&lt;Library_Element&gt;</i><br><br>
 				  
+				  <div class="hint">
+				    In this case, if the <b>Library</b>
+				    was a <b>Package</b>, and the
+				    <b>Library_Element</b>
+				    was a constituent <b>Module</b>
+				    of that <b>Package</b>,
+				    then the effect of the statement would
+				    be to import the <b>Module
+				    Library_Element</b>.<br><br>
+				    
+				    The statement would be equivalent to:<br><br>
+				    
+				    <span class="code">
+				      &emsp;&emsp;import Library.Library_Element
+				    </span><br><br>
+				  </div><br>
+				  
 				  This <b>Syntax</b> allows the
 				  <b>import</b> of a single <b>Element</b> of a
 				  <b>module</b> in such a fashion it can
@@ -14418,6 +14492,44 @@ Click to record your <b>Start</b> time.</button>
       once by using the wildcard '<b>*</b>' thus:<br><br>
       
       &emsp;&emsp;&emsp;&emsp;<b>from math import *</b><br><br>
+      
+      <div class="hint">
+        Now, if <b>math</b> was replaced by a
+        <b>Package Name</b> in this form,
+        every <b>Module</b> of that <b>Package</b> would
+        be <b>imported</b> with one statement!<br><br>
+        
+        So for example:<br><br>
+        
+        <span class="code">
+          &emsp;&emsp;from urllib import *
+        </span><br><br>
+        
+        would import all the <b>Modules</b>
+        of the <b>urllib Package</b>, namely:<br><br>
+        
+        <b>urllib.error<br>
+						  urllib.parse<br>
+						  urllib.request<br>
+						  urllib.response<br>
+						  urllib.robotparser</b><br><br>
+						  
+						  Making:<br><br>
+						  
+        <span class="code">
+          &emsp;&emsp;from urllib import *
+        </span><br><br>
+						  
+						  Equivalent to:<br><br>
+						  
+        <span class="code">
+          &emsp;&emsp;import urllib.error<br>
+								  import urllib.parse<br>
+								  import urllib.request<br>
+								  import urllib.response<br>
+								  import urllib.robotparser<br>
+        </span><br><br>
+      </div><br>
       
       After this command, every element of the <b>module math</b> can be
       accessed without any prefix. Fine, as long as there are no name clashes.
@@ -18154,7 +18266,60 @@ else:
               &lt;<i>iterable Object</i>&gt; that will step through
               the <b>File
               homeobox_human.fasta</b> line by line.<br><br>
-
+              
+              <div class="hint">
+                <b>Note:</b><br><br>
+                
+                In this example, the line:<br><br>
+                
+                <span class="code">
+                  for Line in Sequence_file:
+                </span><br><br>
+                
+                could be replaced by:<br><br>
+                
+                <span class="code">
+                 for Line in Sequence_file.readlines():
+                </span><br><br>
+                
+                and the <b>Output</b> would be
+                unchanged. Both
+                alternatives regard the file as
+                a <b>list of
+                lines</b>, each terminated by
+                an <b>EOL Character</b>.<br><br>
+                
+                However, using the <b>File Handle</b> as an
+                <b>iterable Object</b> directly (first option)
+                will read the lines of the file one at
+                a time, as required, thus requiring
+                enough memory for the longest
+                single line only. Effectively,
+                if not literally, using the
+                <b>method file.readline()</b> each time
+                round the <b>Loop</b>.)<br><br>
+                
+                Whereas, using the <b>method
+                file.readlines()</b>
+                (second option) involves reading
+                the entire
+                file into a <b>list</b> and then
+                using the
+                <b>list iterable Object</b> to
+                control the <b>For Loop</b>.
+                To do this, you require enough
+                memory for the entire file!<br><br>
+                
+                The larger your file is, the more
+                preferred the first option
+                becomes.<br><br>
+                
+                This issue is rather energetically
+                considered
+                <a href="http://stupidpythonideas.blogspot.com/2013/06/readlines-considered-silly.html"
+                target="_blank">here</a>.<br>
+              </div><br>
+								                  
               Leaving <b>open</b> files around after use,
               is not good. They should be neatly
               <b>closed</b>, as here. It is all too easy to
@@ -18203,8 +18368,13 @@ else:
               Code is in
               <a href="../Solutions-Python/Loops/Examples/Loops_For_Example3.txt"
 											    		target="_blank">this file</a>.<br><br>
+											   
+											   The version using file.readlines()is in 
+                <a href=""
+                 target="_blank">this file</a>) 
 											    		
-											   The <b>Output</b> for this one is enormous, so I put it in a
+											   The <b>Outputs</b> for both versions are identical
+											   and enormous, so I put it in
               <a href="../Solutions-Python/Loops/Examples/Loops_For_Example3_Output.txt"
 											    		target="_blank">this file</a>.<br><br>
 
