@@ -23,10 +23,10 @@ Response = raw_input("Do you understand Loops yet???");
 print Response;
 
 if   Response in Yes:
-    print "Jolly Good!";
+    print("Jolly Good!")
 elif Response in No:
-    print "Well, Try harder!";
+    print("Well, Try harder!")
 else:
-    print "Answer must be Yes or No!";
+    print("Answer must be Yes or No!")
 
 

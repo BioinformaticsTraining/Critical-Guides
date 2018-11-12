@@ -3,9 +3,10 @@ import urllib.request # import the code to access remote files.
 File_URL = 'http://www.uniprot.org/uniprot/P12931.fasta'
 Sequence_file = urllib.request.urlopen(File_URL) # Open remote file for reading
 
-while True:                        # Repeat ... 
-   Line = Sequence_file.readline() # Read the next line using readline
-   if not Line: break              # If at the end of the, stop reading/printing
-   print(Line.decode("utf-8"), end='') # print this Line and go round for more
+while True:                             # Repeat ... 
+    Line = Sequence_file.readline()     # Read the next line using readline()
+    if not Line:                        # If at the end of the file,
+        break                           # stop reading/printing,
+    print(Line.decode("utf-8"), end='') # print Line, go round for more.
 
 Sequence_file.close() # Close file tidily. 

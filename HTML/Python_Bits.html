@@ -120,10 +120,7 @@ Click to record your <b>Start</b> time.</button>
              <b>Algorithms</b>, rather than simply generating code to
              solve trivial <b>Exercises</b>, has been emphasised.
           </p>
-
-          <p>I am unsure of the degree to which I have succeeded
-             in this goal.
-          </p>
+          
         </div>
 
         <h3>Target Audience</h3>
@@ -280,9 +277,9 @@ Click to record your <b>Start</b> time.</button>
         
           <p>
 		          I assume you are using some reasonably
-		          current flavour of <b>Linux</b> not too unlike <b>Unbuntu</b>.
+		          current flavour of <b>Linux</b> similar to <b>Ubuntu</b>.
 		          If you are not, it should affect very little once
-		          you are actually using writing <b>Python</b>. You might
+		          you are actually using <b>Python</b>. You might
 		          just occasionally have to think laterally when talking
 		          directly to the <b>Operating System</b> (for example, when
 		          downloading example files and putting them somewhere
@@ -6417,14 +6414,12 @@ Click to record your <b>Start</b> time.</button>
 
                    Tough one? Probably, but have manly/womanly
                    go before you cheat.<br><br>
-                   <p class="hint">
+                   <div class="hint">
                      Note: You need to add <b>Line Feeds</b>
                      into your creation, or it will spill
                      out in a single line
-                     (as it has just done for me!).
-                   </p>
+                     (as it has just done for me!).<br><br>
 
-                   <p class="hint">
                      A number of the <b>methods</b> you will
                      need take both <b>Mandatory</b> and
                      <b>Optional Arguments</b> I have not
@@ -6442,7 +6437,7 @@ Click to record your <b>Start</b> time.</button>
                      Pages</b> (and in desperation,
                      greater <b>Google</b>) is standard
                      coding practice).
-                   </p>
+                   </div><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
@@ -7327,7 +7322,7 @@ Click to record your <b>Start</b> time.</button>
                     Sequence</b>. Check you have no <b>Frame
                     Shift</b>.<br><br>
                     
-                    <p class="hint">
+                    <div class="hint">
                       At this stage, we have not covered enough
                       <b>Python</b> to do this "nicely".<br><br>
                       
@@ -7337,9 +7332,7 @@ Click to record your <b>Start</b> time.</button>
                       Now we use this as an excuse to use the
                       tricks we have covered to a vaguely
                       <i>"real"</i> purpose.
-                    </p>
                       
-                    <p class="hint">
                       I am convinced that a bit of planning
                       in the form of <b>pseudo code</b> would be very
                       helpful.<br><br>
@@ -7347,7 +7340,7 @@ Click to record your <b>Start</b> time.</button>
                       This is not such a trivial problem that
                       <i>"off the top of the head"</i> coding would be
                       straight forward.
-                    </p>
+                    </div>
                     
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
@@ -17334,8 +17327,7 @@ else:
                   </span><br>
                   &nbsp;&nbsp;&nbsp;&nbsp;print("Target
                   (", Target, ") does not match Guess
-                  (", Guess,<br>
-                  "). \tTry again!")<br>
+                  (", Guess, "). \tTry again!")<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;Guess = randint(1,20);
                   <span Class="codecomm16">
                     &nbsp;# Sadly admit failure,and try again.
@@ -18722,64 +18714,218 @@ else:
               </div><br>
 
               <b><u>Code</u></b><br>
-              <div class="code">
-                import urllib;
+              <div class="code16">
+                import urllib.request
                 <span Class="codecomm16">
                   # import the code to access remote files.
                 </span><br><br>
 
                 File_URL =
-                'http://www.uniprot.org/uniprot/P12931.fasta';<br>
-                Sequence_file = urllib.urlopen(File_URL);
+                'http://www.uniprot.org/uniprot/P12931.fasta'<br>
+                Sequence_file = urllib.urlopen(File_URL)
                 <span Class="codecomm16">
                   # Open remote file for reading.
                 </span><br><br>
 
                 while True:
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;# Repeat ...
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Repeat ...
                 </span><br>
                 &nbsp;&nbsp;&nbsp;
-                Line = Sequence_file.readline();
+                Line = Sequence_file.readline()
                 <span Class="codecomm16">
-                  # Read the next line using readline.
+                  &nbsp;&nbsp;&nbsp;&nbsp;# Read next line using readline()
                 </span><br>
-                &nbsp;&nbsp;&nbsp;if not Line: break;
+                &nbsp;&nbsp;&nbsp;&nbsp;if not Line:
                 <span Class="codecomm16">
-                  # If at the end of the, stop reading/printing.
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;# If at the end of the file,
                 </span><br>
-                &nbsp;&nbsp;&nbsp;print Line,
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;break
                 <span Class="codecomm16">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  # print this Line and go round for more.
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;# stop reading/printing,
+                </span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(Line.decode("utf-8"), end='')
+                <span Class="codecomm16">
+                  # print Line, go round for more.
                 </span><br><br>
 
                 Sequence_file.close();
                 <span Class="codecomm16">
                    # Close file tidily.
-                </span><br>
-              </div>
+                </span><br><br>
+              </div><br><br>
+              
+              Code is in
+              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example5.txt"
+									    		target="_blank">this file</a>.<br><br>
+																					 													
+				          Output is:<br><br>
+																<img src="Images/Loops_For_Example5.png"
+										           alt="Fiddle!"
+										           class="centimg"
+										           style="background: White;
+										                  border-style: solid;
+										                  border-color: red;
+										                  border-width: 2px;"><br>
 
               <b><u>Experiments & Questions</u></b>
               <div class="experiment">
-                <ul>
+                <ol>
                   <li>
-                    Notice that the "<b>print Line</b>" command
-                    at the end of the <b>loop</b> is
-                    terminated with a <b>comma</b>
-                    ('<b>,</b>') rather then the usual
-                    <b>semi-colon</b>
-                    ('<b>;</b>').<br><br>
+                    The feature that catches most attention
+                    in this solution is the print statement.<br><br>
+                    
+                    In particular, why is the
+                    "<b>.decode("utf-8")</b>"
+                    needed, and what does it do anyway?<br><br>
+                    
+                    Maybe, before discussing this further
+                    (but superficially at this point), it
+                    would be a good idea to tweak the code
+                    solution for this examples so that:
+                    
+                    <ul>
+                      <li>
+                        The Loop was "<b>Test at the top</b>" (I think
+                        a more natural here to be honest?)
+                      </li><br>
+                      <li>
+                        The print statement was simplified to omit the
+                        decode method and maybe also the explicit
+                        <b>Newline</b>.
+                      </li>
+                    </ul>
+                    
+                    <b><u>Code</u></b><br>
+						              <div class="code14"><pre><span Class="codecomm14"># Revised Pseudo-Code:
+#
+# Import the code features that allow remote file access
+# Open the file from Uniprot
+#
+# Read the first Line of the file (into the variable Line)
+#
+# While the file is not exhausted (i.e. Line is not empty)
+#     Print the current line (without decoding or explicit Newline)
+#     Read the next line of the file (into the variable Line)
+#
+# Tidily close the remote file
+##################################################################
+</span>
+import urllib.request # import the code to access remote files.
 
-                    Why do you suppose that might be?<br><br>
+<span Class="codecomm14"># Open remote file for reading</span>
+File_URL = 'http://www.uniprot.org/uniprot/P12931.fasta'
+Sequence_file = urllib.request.urlopen(File_URL)
 
-                    What effect would changing the comma
-                    to a semi-colon have?<br><br>
+Line = Sequence_file.readline()     <span Class="codecomm14"># Read the first line using readline()</span>
+while Line:                         <span Class="codecomm14"># While the contents of Line are not empty,</span> 
+    print(Line)                     <span Class="codecomm14"># print the current Line,</span>
+    Line = Sequence_file.readline() <span Class="codecomm14"># read the next line using readline(),</span>
+                                    <span Class="codecomm14"># go round for more.</span>
 
-                    Why not make your own version of this
-                    code, edit it and find out?
+Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
+                    </div><br><br>
+                    
+                    Code is in
+						              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example5_tweak.txt"
+															    		target="_blank">this file</a>.<br><br>
+																											 													
+										          Output is:<br><br>
+										          
+																						<img src="Images/Loops_For_Example5_tweak.png"
+																           alt="Fiddle!"
+																           class="centimg"
+																           style="background: White;
+																                  border-style: solid;
+																                  border-color: red;
+																                  border-width: 2px;"><br>
+																    
+																    Comments include:
+																    
+																    <ol>
+																      <li>
+																        I think the need
+																        read the first line of the file
+																        outside the <b>while Loop</b> is a big shame.
+																        It makes this "<b>Test at the top</b>" solution
+																        look unnecessarily clumsy.<br><br>
+																        
+																        If an assignment returned a value,
+																        specifically the value being assigned,
+																        reading the first line of the file outside the
+																        <b>Loop</b> would not be necessary and
+																        the <b>readline()</b> command within the loop could
+																        be incorporated into the <b>Loop Control</b>
+																        structure. The entire <b>Loop Code</b>
+																        would become.<br><br>
+																        
+																        <div class="code">
+																          while Line = Sequence_file.readline():<br>
+																          &nbsp;&nbsp;&nbsp;&nbsp;print(Line)
+																        </div><br><br>
+																        
+																        I make specific mention of this
+																        because this is the approach with which
+																        any of you who
+																        have experience with <b>C</b> (or several
+																        other languages) would naturally adopt.<br><br>
+																        
+																        So the overall message is:<br><br>
+																        
+																        <a href="https://stackoverflow.com/questions/4869770/why-does-python-assignment-not-return-a-value"
+																         target="_blank">"In <b>Python</b>, an assignment
+																         does not return a value".</a><br><br>
+																         
+																        Or
+																        <a href="http://effbot.org/pyfaq/why-can-t-i-use-an-assignment-in-an-expression.htm"
+																         target="_blank">more formally</a>:<br><br>
+																         
+																        "An assignment in
+																        <b>Python</b> is a
+																        <a href="https://en.wikipedia.org/wiki/Statement_(computer_science)"
+																         target="_blank"><b>Statement</b></a>,
+																        but not an
+																        <a href="https://en.wikipedia.org/wiki/Expression_(computer_science)"
+																         target="_blank"><b>Expression</b></a>".<br><br>
+																         
+																        In <b>C</b> (and other languages)
+																        an assignment is both a
+																        <b>Statement</b> and an <b>Expression</b>.
+																        In <b>C</b> an assignment is a
+																        <a href="https://docs.python.org/2.0/ref/exprstmts.html"
+																         target="_blank"><b>Statement Expression</b></a>.<br><br>
+																         
+																        Finally, a brief statement of the reasons
+																        why things are
+																        the way they are in <b>Python</b> and
+																        a proposal of a way to
+																        circumvent the perceived problems can be found
+																        <a href="https://www.python.org/dev/peps/pep-0572/#why-not-just-turn-existing-assignment-into-an-expression"
+																         target="_blank">here</a>.<br><br>
+																      </li><br>
+																      <li>
+																      </li>
+																    </ol>
+				 
+                    <br><br>
+                    <a href="https://stackoverflow.com/questions/6224052/what-is-the-difference-between-a-string-and-a-byte-string"
+                     target="_blank">xxx</a> 
                   </li>
-                </ul>
+                </ol>
               </div>
             </li><!--<br>
 
@@ -18897,11 +19043,11 @@ else:
               <summary><span class="anssum">Answer.</span>
               </summary>
                 <div class="answer">
-                  My answer is:
+                  My answer is in
                   <a href=
-                     "../Solutions-Python/Loops_Exercise1i.txt"
+                     "../Solutions-Python/Loops/Exercises/Loops_Exercise1i.txt"
                      target="_blank">
-                            <b>Loops_Exercise1i.txt</b></a>
+                            <b>this file</b></a>.
                 </div>
               </details><br>
 

@@ -1,0 +1,27 @@
+# Revised Pseudo-Code:
+#
+# Import the code features that allow remote file access
+# Open the file from Uniprot
+#
+# Read the first Line of the file (into the variable Line)
+#
+# While the file is not exhausted (i.e. Line is not empty)
+#     Print the current line (without decoding or explicit Newline)
+#     Read the next line of the file (into the variable Line)
+#
+# Tidily close the remote file
+##################################################################
+
+import urllib.request # import the code to access remote files. 
+
+# Open remote file for reading.
+File_URL = 'http://www.uniprot.org/uniprot/P12931.fasta'
+Sequence_file = urllib.request.urlopen(File_URL)
+
+Line = Sequence_file.readline()     # Read the first line using readline()
+while Line:                         # While the contents of Line are not empty, 
+    print(Line)                     # print the current Line,
+    Line = Sequence_file.readline() # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file.close() # Close file tidily. 
