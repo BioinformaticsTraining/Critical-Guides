@@ -10,9 +10,15 @@
 # Open sequences.fasta making the "File Handle" Sequence_File.
 Sequence_File = open("sequences.fasta");
 
-# File Handles can be treated as Lists of the Lines of the file,
-for Line in Sequence_File:   # So for each Line in turn,
-    print Line;              # Print out the Line.
+# File Handles are iterable objects that can be used by "for"
+# to construct an iterator (using iter()) to read the lines of
+# a file in order (using next())
 
-Sequence_File.close();       # Tidily close the file.
+for Line in Sequence_File:   # So for each Line in turn,
+    print(Line, end='')      # Print out the Line, supressing the
+                             # default EOL that print() adds to
+                             # its output (there is already an EOL
+                             # at the end of each line of the file)
+
+Sequence_File.close()        # Tidily close the file.
 

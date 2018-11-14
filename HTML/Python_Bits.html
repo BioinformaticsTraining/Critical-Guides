@@ -10527,6 +10527,9 @@ Click to record your <b>Start</b> time.</button>
 				                    </details>
                       </li><br>
                       <li>
+                      
+                      <b>**********BROKEN BROKEN BROKEN ..... FIX after thought!************</b><br><br>
+                      
                         Make a <b>tuple</b>, <b>Listass_02</b>, <b>(1, 2, 3, 4)</b>, by assignment<br><br>
                         
                         Assign <b>Tupleass_02</b> to <b>Tupleass_03</b><br><br>
@@ -10607,7 +10610,7 @@ Click to record your <b>Start</b> time.</button>
                     
                     Where is the 
                     <a href="http://onlineslangdictionary.com/meaning-definition-of/pork-pie"
-                     target="_blank">porky</a> in the claim:<br><br>
+                     target="_blank">porky</a> in this claim from the <b>INTERNET</b>:<br><br>
                     
                     <a href="https://www.tutorialspoint.com/python3/python_tuples.htm"
                      target="_blank">
@@ -19006,6 +19009,151 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
                         Now we need some code to illustrate the issues discussed. As this is an
                         example (gone completely out of control!) rather than an exercise.
                         I will write the code. It is pretty large I fear.<br><br>
+<div class="code"><pre><span class ="codecomm">                        
+# Revised Pseudo-Code:
+#
+# Import the code features that allow remote file access
+#
+# Stage 1 (Outline only)
+# ======================
+#
+# Open the file from Uniprot
+# Open a local file for writing in binary
+#
+# Read the remote file, write it to an identical local file
+# Print each line without decoding as it is read
+#
+# Close both the remote input file and the local output file
+#
+# Stage 2
+# =======
+#
+# Open the local input file for reading in binary
+#
+# Print each line as it is read
+# Report the type of the first line
+#
+# Tidily close the local input file
+#
+# Stage 3
+# =======
+#
+# Open the local input file for reading in binary
+#
+# Print each line decoded as UTF-8 (the default Character encoding)
+# Suppress the EOL that print() would append by default
+#
+# Close the local input file
+#
+# Stage 4 (Just for fun, this generates nonsense!)
+# ================================================
+#
+# Open the local input file for reading in binary
+#
+# Ensure each Line is comprised of an even number of bytes
+# (essential for a two byte encoding)
+#
+# Print each line decoded as UTF-16
+#
+# Close the local input file
+# 
+##################################################################
+</span>
+import urllib.request # import the code to access remote files. 
+
+
+print("\n\n########################################################")
+print("#")
+print("# Step 1: Read Remote File and print its lines as read (i.e. as Byte Stream)")
+print("#         also write lines to a Local File Copy")
+print("#")
+print("########################################################\n\n")
+
+# Open remote file for reading.
+File_URL = 'http://www.uniprot.org/uniprot/P12931.fasta'
+Sequence_file = urllib.request.urlopen(File_URL)
+
+# Open a Local file for writing in binary to receive a copy of the remote file.
+Sequence_file_local = open("P12931.fasta","wb")
+
+Line = Sequence_file.readline()     # Read the first line using readline().
+print("The first line of the remote input file is of type: ",type(Line),end='\n\n')
+                                    # Display the type of the Byte Stream Line.
+
+while Line:                         # While the contents of Line are not empty, 
+    Sequence_file_local.write(Line)
+                                    # write the current Line to a local file,
+    print(Line)                     # print the current Line,
+    Line = Sequence_file.readline() # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file.close()       # Close the input  file tidily.
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 2: Read Local Files and print its lines as read (i.e. as Byte Stream)")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+print("The first line of the local input file is of type: ",type(Line),end='\n\n')
+                                      # Display the type of the Byte Stream Line.
+
+while Line:                         # While the contents of Line are not empty, 
+    print(Line)                     # print the current Line,
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 3: Read Local Files and print its lines decoded to UTF-8")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+
+while Line:                         # While the contents of Line are not empty, 
+    print(Line.decode("utf-8"), end='')
+                                    # print the current Line decoded to UTF-8,
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 4: Read Local Files and print its lines decoded to UTF-16")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+
+while Line:                         # While the contents of Line are not empty, 
+    print((b' ' + Line).decode("utf-16"))
+                                    # print the current Line decoded to UTF-16,
+                                    # As UTF-16 decodes bytes in pairs,
+                                    # ensure the line length is even.
+                                    # For this file, the simplest way to
+                                    # do that is to prepend a single byte
+                                    # (b' ') to every line.
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.
+</div>                       
                         
                         Code is in
 										              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example5_tweak2.txt"
@@ -19144,169 +19292,231 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
               </u></b>:
               </span></summary><br>
 
-              <b>Part (i)</b><br><br>
-              
-              Consider again the exercise
-              from the <b>Conditional Code Block</b> section
-              in which you wrote code to:
-              
-              <ul>
-                <li>
-                  Ask a question requiring a Yes/No response
-                </li><br>
-                <li>
-                  React in a Positive/Negative fashion
-                  according to the Answer given
-                </li><br>
-                <li>
-                  Complain bitterly if the response
-                  cannot be interpreted as Yes or No
-                </li>
-              </ul><br>
-              
-              As a starting point for part (ii) of this exercise, find
-              your solution for this exercise,
-              or, if you are feeling lazy, I have written new,
-              less decorative version which is in
-              <a href=
-                 "../Solutions-Python/Loops/Exercises/Loops_Exercise1i.txt"
-                 target="_blank">
-                        <b>this file</b></a>.<br><br>
-
-              <b>Part (ii)</b><br><br>
-
-              Using the appropriate <b>Python Loop
-              Structure</b>, make the relevant
-              part of the code <b>Repeat</b> until the
-              stupid user enters something
-              that is unequivocally <b>YES</b> or
-              <b>NO</b>.<br><br>
-
-              Issue a stern reprimand each
-              time an ambiguous response is entered.
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer"><br>
-                
-                  My answer is:
-                  <a href=
-                     "../Solutions-Python/Loops/Exercises/Loops_Exercise1ii.txt"
-                     target="_blank">
-                            <b>Loops_Exercise1ii.txt</b></a><br><br>
-                            
-                  Output is:<br><br>
-										          
-																		<img src="Images/Loops_Exercise1ii.png"
-												           alt="Fiddle!"
-												           class="centimg"
-												           style="background: White;
-												                  border-style: solid;
-												                  border-color: red;
-												                  border-width: 2px;"><br>
-                </div>
-              </details>
-
+		              <b>Part (i)</b><br><br>
+		              
+		              Consider again the exercise
+		              from the <b>Conditional Code Block</b> section
+		              in which you wrote code to:<br><br>
+		              
+		              <ul>
+		                <li>
+		                  Ask a question requiring a Yes/No response
+		                </li><br>
+		                <li>
+		                  React in a Positive/Negative fashion
+		                  according to the Answer given
+		                </li><br>
+		                <li>
+		                  Complain bitterly if the response
+		                  cannot be interpreted as Yes or No
+		                </li>
+		              </ul><br>
+		              
+		              As a starting point for part (ii) of this exercise, find
+		              your solution for this exercise,
+		              or, if you are feeling lazy, I have written new,
+		              less decorative version which is in
+		              <a href=
+		                 "../Solutions-Python/Loops/Exercises/Loops_Exercise1i.txt"
+		                 target="_blank">
+		                        <b>this file</b></a>.<br><br>
+		
+		              <b>Part (ii)</b><br><br>
+		
+		              Using the appropriate <b>Python Loop
+		              Structure</b>, make the relevant
+		              part of the code <b>Repeat</b> until the
+		              stupid user enters something
+		              that is unequivocally <b>YES</b> or
+		              <b>NO</b>.<br><br>
+		
+		              Issue a stern reprimand each
+		              time an ambiguous response is entered.
+		
+		              <details class="answer">		
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer"><br>
+		                
+		                  My answer is
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise1ii.txt"
+		                     target="_blank">
+		                            <b>here</b></a><br><br>
+		                            
+		                  Output is:<br><br>
+												          
+																				<img src="Images/Loops_Exercise1ii.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+		                </div>
+		              </details>
+		            </details>
             </li><br>
-
             <li>
               <details>
               <summary><span class="exesum"><b><u>Exercise 2
               </u></b>:
               </span></summary><br>
 
-              <b>Part (i)</b><br><br>
+		              <b>Part (i)</b><br><br>
+		
+		              Download the file
+		              <a href="../Data/sequences.fasta"
+		               target="_blank"> <b>sequences.fasta</b></a>,
+		              and put it in your <b>Current Working
+		              Directory</b>.<br><br>
+		
+		              <b>Part (ii)</b><br><br>
+		
+		              Write code to read in the file
+		              <b>sequences.fasta</b> one line at a time and
+		              then print out that line.<br><br>
+		
+		              <details class="answer">
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer">
+		                  My answer is
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise2i.txt"
+		                   target="_blank">
+		                          <b>here</b></a>.<br><br>
+		                          
+		                  The <b>Output</b> is exactly the contents of the file
+						              <a href="../Data/sequences.fasta"
+						               target="_blank"> <b>sequences.fasta</b></a>.<br><br>
+						              
+						              Comments include:<br><br>
+						              
+						              <ul>
+						                <li>
+						                  The file handle <b>Sequence_File</b> is used in the
+						                  for <b>Loop Structure</b> as an <b>iterator</b>.<br><br>
+						                  
+						                  <b>Sequence_File</b> is and <b>iterable object</b> that
+						                  <b>for</b> converts to an <b>iterator</b>
+						                  (using <b>iter()</b>) and
+						                  then extracts lines, in order (using <b>next()</b>).
+						                </li><br>
+						                <li>
+						                  The <b>EOL print()</b> would normally append to each line
+						                  is suppressed (<b>end=''</b>), as each line of the file is
+						                  already terminated with an <b>EOL</b>.
+						                  Just <b>1 EOL</b> is sufficient!
+						                </li>
+						              </ul>
+		                </div>
+		              </details><br>
 
-              Download the file
-              <a href="../Data/sequences.fasta"
-               target="_blank"> <b>sequences.fasta</b></a>,
-              and put it in your <b>Current Working
-              Directory</b>.<br><br>
-
-              <b>Part (ii)</b><br><br>
-
-              Write code to read in the file
-              <b>sequences.fasta</b> one line at a time and
-              then print out that line.<br><br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  My answer is:
-                  <a href=
-                     "../Solutions-Python/Loops_Exercise2i.txt"
-                   target="_blank">
-                          <b>Loops_Exercise2i.txt</b></a>
-                </div>
-              </details><br>
-
-              <b>Part (iii)</b><br><br>
-
-              Using the <b>Python</b> command <b>continue</b>,
-              Amend the code of <b>Part (ii)</b> so that
-              only the sequence <b>Annotation Lines</b>
-              (the ones that start with a '<b>></b>'
-              are printed.<br><br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  My answer is:
-                  <a href=
-                     "../Solutions-Python/Loops_Exercise2ii.txt"
-                     target="_blank">
-                            <b>Loops_Exercise2ii.txt</b></a>
-                </div>
-              </details><br>
-
-              <b>Part (iv)</b><br><br>
-
-              Amend the code of <b>Part (iii)</b>
-              to allow that
-              a count of <b>Hydrophobic Amino Acids</b>
-              to be printed after the file is
-              completely read through.<br><br>
-
-              Just to remind you,<br>
-              <b>Hydrophobic Amino Acids</b>
-              (normally buried inside the protein core) are:
-              <ul>
-                <li><b>Alanine</b> - <b>Ala</b>
-                    - <b>A</b></li>
-                <li><b>Isoleucine</b> - <b>Ile</b>
-                    - <b>I</b></li>
-                <li><b>Leucine</b> - <b>Leu</b>
-                    - <b>L</b></li>
-                <li><b>Methionine</b> - <b>Met</b>
-                    - <b>M</b></li>
-                <li><b>Phenylalanine</b> - <b>Phe</b>
-                    - <b>F</b></li>
-                <li><b>Valine</b> - <b>Val</b>
-                    - <b>V</b></li>
-                <li><b>Proline</b> - <b>Pro</b>
-                    - <b>P</b></li>
-                <li><b>Glycine</b> - <b>Gly</b>
-                    - <b>G</b></li>
-              </ul><br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  My answer is:
-                  <a href=
-                     "../Solutions-Python/Loops_Exercise2iii.txt"
-                    target="_blank">
-                            <b>Loops_Exercise2iii.txt</b></a>
-                </div>
-              </details>
-
+		              <b>Part (iii)</b><br><br>
+		
+		              Using the <b>Python</b> command <b>continue</b>,
+		              Amend the code of <b>Part (ii)</b> so that
+		              only the sequence <b>Annotation Lines</b>
+		              (the ones that start with a '<b>></b>'
+		              are printed.<br><br>
+		
+		              <details class="answer">
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer">
+		                  My answer is:
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise2ii.txt"
+		                     target="_blank">
+		                            <b>here</b></a><br><br>
+		                            
+		                  Output is:
+												          
+																				<img src="Images/Loops_Exercise2ii.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+														                  
+						              Comments include:<br><br>
+						              
+						              <ul>
+						                <li>
+						                  The employment of <b>continue</b> is very artificial here?
+						                  There will be better examples elsewhere.
+						                  If you just see what <b>continue</b> is doing here, then that
+						                  will justify the clumsy code I suppose, but ... how much
+						                  cleaner is the code:<br><br>
+						                  
+						                  <div class="code">
+						                    for Line in Sequence_File:<br>
+						                    &nbsp;&nbsp;&nbsp;&nbsp;if Line[0] == '>':<br>
+						                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(Line,end='')
+						                  </div>
+						                </li>
+						              </ul>
+		
+		                </div>
+		              </details><br>
+		
+		              <b>Part (iv)</b><br><br>
+		
+		              Amend the code of <b>Part (iii)</b>
+		              to allow that
+		              a count of <b>Hydrophobic Amino Acids</b>
+		              to be printed after the file is
+		              completely read through.<br><br>
+		
+		              Just to remind you,<br>
+		              <b>Hydrophobic Amino Acids</b>
+		              (normally buried inside the protein core) are:
+		              <ul>
+		                <li><b>Alanine</b> - <b>Ala</b>
+		                    - <b>A</b></li>
+		                <li><b>Isoleucine</b> - <b>Ile</b>
+		                    - <b>I</b></li>
+		                <li><b>Leucine</b> - <b>Leu</b>
+		                    - <b>L</b></li>
+		                <li><b>Methionine</b> - <b>Met</b>
+		                    - <b>M</b></li>
+		                <li><b>Phenylalanine</b> - <b>Phe</b>
+		                    - <b>F</b></li>
+		                <li><b>Valine</b> - <b>Val</b>
+		                    - <b>V</b></li>
+		                <li><b>Proline</b> - <b>Pro</b>
+		                    - <b>P</b></li>
+		                <li><b>Glycine</b> - <b>Gly</b>
+		                    - <b>G</b></li>
+		              </ul><br>
+		
+		              <details class="answer">
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer">
+		                  My answer is
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise2iii.txt"
+		                    target="_blank">
+		                            <b>here</b></a><br><br>
+		                            
+		                  Output is:
+												          
+																				<img src="Images/Loops_Exercise2iii.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+		                </div>
+		              </details>
+		            </details>
             </li><br>
 
-            <li>
+<!--            <li>
               <details>
               <summary><span class="exesum"><b><u>Exercise 3
               </u></b>:
@@ -19321,104 +19531,220 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
                   Code goes here ... with pseudo-code?
                 </div>
               </details>
-            </li><br>
+            </li><br> -->
 
             <li>
               <details>
-              <summary><span class="exesum"><b><u>Exercise 4
+              <summary><span class="exesum"><b><u>Exercise 3
               </u></b>:
               </span></summary><br>
 
-              <b>Part (i)</b><br><br>
+		              <b>Part (i)</b><br><br>
+		
+		              Download the file
+		                 <a href="../Data/reads.fastq"
+		                  target="_blank"> <b>reads.fastq</b></a>,
+		                       and put it in your <b>Current Working
+		                       Directory</b>.<br><br>
+		
+		              This is a very very small <b>fastq</b> file.<br><br>
+		
+		              I will assume you have all, at least, heard of
+		              <b>fastq</b> files?.<br><br>
+		
+		              <b>fastq</b> is a file format for <b>H</b>igh
+		              <b>T</b>hroughput <b>S</b>equencing
+		              (<b>HTS</b>) reads,
+		              usually each <b>fastq</b> file will contain
+		              millions of reads.<br>
+		
+		              If you wish to know more about this format,
+		              we offer a short video outlining the
+		              wonders of the
+		              <b>fastq Format</b> and related issues.<br>
+		
+		              <details class="video">
+		              <summary><b>FASTQ File Format - A video</b>
+		              </summary>
+		                <video width="320" height="240" controls preload>
+		                  <source src="Videos/00-FASTQ_PHRED_ASCII-Part_1/00-FASTQ_PHRED_ASCII-Part_1.mp4"></src>
+		                </video>
+		              </details><br>
+		
+		              However, all you <b><u><i>need</i></u></b> to
+		              know about this format to do this exercise is;<br>
+		
+		              <ol>
+		                <li>
+		                  Each <b>read</b> uses <b>4</b>
+		                  lines of the file
+		                </li>
+		
+		                <li>
+		                  The first line of each read is the
+		                  <b>Annotation</b> line and begins with
+		                  a "<b>@</b>"
+		                </li>
+		              </ol><br>
+		
+		              <b>Part (ii)</b><br>
+		
+		              <p>Write code to read in the file
+		              <b>reads.fastq</b> one line at a time and
+		              then print out only the sequence
+		              <b>Annotation Lines</b>
+		              (the ones that start with a '<b>@</b>').<br><br>
+		
+		              When the entire file is read, print out the
+		              number of <b>Reads</b> it contains.<br>
+		
+		              <details class="answer">
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer">
+		                  My answer is
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise3ii.txt"
+		                    target="_blank">
+		                            <b>here</b></a><br><br>
+		                            
+		                  Output is (at the top):
+												        
+																				<img src="Images/Loops_Exercise3ii_outputa.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+														                  
+		                  Output is (at the bottom):
+														                  
+																				<img src="Images/Loops_Exercise3ii_outputc.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+														                  
+						              Comments include:<br><br>
+						              
+						              <ul>
+						                <li>
+						                  <b>3503</b> reads? Not actually true!!!
+						                  
+						                  I realise, upon reflection, that lines other than the
+						                  <b>Annotation Lines</b>
+						                  can occasionally begin with a '<b>@</b>'.
+						                  
+						                  If you wrote your own code for this exercise,
+						                  you will find in your own output, things
+						                  like this:
+						                  
+						                  <img src="Images/Loops_Exercise3ii_outputb.png"
+																		           alt="Fiddle!"
+																		           class="centimg"
+																		           style="background: White;
+																		                  border-style: solid;
+																		                  border-color: red;
+																		                  border-width: 2px;"><br>
+																		                  
+																		      What these lines are is explained in the second half of the video
+																		      I offered a while back (which I have not yet finished).
+																		      Their existence means you have to be a bit cleverer than
+																		      I have been here if you
+																		      want to count the number of reads.<br><br>
+																		      
+																		      For this particular file, you can improve things by counting
+																		      lines that begin "<b>@SRR</b>". But even this is not fool proof.
+																		      Other lines could begin "<b>@SRR</b>" too,
+																		      if you were outrageously unlucky.<br><br>
+																		      
+																		      This strategy <b><i>WILL</i></b> however, suffice for the
+																		      next stage of this simple(?) exercise.
+						                </li>
+						              </ul>
+		                </div>
+		              </details><br>
+		
+		              <b>Part (iii)</b><br><br>
 
-              Download the file
-                 <a href="../Data/reads.fastq"
-                  target="_blank"> <b>reads.fastq</b></a>,
-                       and put it in your <b>Current Working
-                       Directory</b>.<br><br>
-
-              This is a very very small <b>fastq</b> file.<br><br>
-
-              I will assume you have all, at least, heard of
-              <b>fastq</b> files?.<br><br>
-
-              <b>fastq</b> is a file format for <b>H</b>igh
-              <b>T</b>hroughput <b>S</b>equencing
-              (<b>HTS</b>) reads,
-              usually each fastq file will contain
-              millions of reads.<br>
-
-              If you wish to know more about this format,
-              we offer a short video outlining the
-              wonders of the
-              <b>fastq Format</b> and related issues.<br>
-
-              <details class="video">
-              <summary><b>FASTQ File Format - A video</b>
-              </summary>
-                <video width="320" height="240" controls preload>
-                  <source src="Videos/00-FASTQ_PHRED_ASCII-Part_1/00-FASTQ_PHRED_ASCII-Part_1.mp4"></src>
-                </video>
-              </details><br>
-
-              However, all you <b><u><i>need</i></u></b> to
-              know about this format to do this exercise is;<br>
-
-              <ol>
-                <li>
-                  Each <b>read</b> uses <b>4</b>
-                  lines of the file
-                </li>
-
-                <li>
-                  The first line of each read is the
-                  <b>Annotation</b> line and begins with
-                  a "<b>@</b>"
-                </li>
-              </ol><br>
-
-              <b>Part (ii)</b><br>
-
-              <p>Write code to read in the file
-              <b>reads.fastq</b> one line at a time and
-              then print out only the sequence
-              <b>Annotation Lines</b>
-              (the ones that start with a '<b>@</b>'.<br><br>
-
-              When the entire file is read, print out the
-              number of <b>Reads</b> its contained.<br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  Code goes here ... with pseudo-code?
-                </div>
-              </details><br>
-
-              <b>Part (iii)</b><br><br>
-
-              Using the <b>Python</b> command <b>break</b>,
-              Amend the code of <b>Part (ii)</b> so that
-              only the reads with <b>Annotation Lines</b>
-              less than <b>@SRR1030347.124000</b>
-              are processed.<br><br>
-
-              It is safe to assume that the reads are
-              strictly ordered by their
-              <b>Annotation Lines</b>.<br><br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  Code goes here ... with pseudo-code?
-                </div>
-              </details>
-
+		              Using the <b>Python</b> command <b>break</b>,
+		              Amend the code of <b>Part (ii)</b> so that
+		              only the reads with <b>Annotation Lines</b>
+		              less than <b>@SRR1030347.124000</b>
+		              are printed.<br><br>
+		
+		              It is safe to assume that the reads are
+		              strictly ordered by their
+		              <b>Annotation Lines</b>.<br><br>
+		              
+		              Count the reads with <b>Accession codes</b> less than
+		              <b>@SRR1030347.124000</b> and those with
+		              <b>Accession codes</b>
+		              greater than or equal to <b>@SRR1030347.124000</b>.
+		              
+		              Display the counts along with a <b>Grand Total</b>
+		              once the entire file is read.<br><br>
+		
+		              <details class="answer">
+		              <summary><span class="anssum">Answer.</span>
+		              </summary>
+		                <div class="answer">
+		                  My answer is
+		                  <a href=
+		                     "../Solutions-Python/Loops/Exercises/Loops_Exercise3iii.txt"
+		                    target="_blank">
+		                            <b>here</b></a><br><br>
+		                            
+		                  Output is (at the top):
+												        
+																				<img src="Images/Loops_Exercise3iiia.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+														                  
+		                  Output is (at the bottom):
+														                  
+																				<img src="Images/Loops_Exercise3iiib.png"
+														           alt="Fiddle!"
+														           class="centimg"
+														           style="background: White;
+														                  border-style: solid;
+														                  border-color: red;
+														                  border-width: 2px;"><br>
+														                  
+						              Comments include:<br><br>
+						              
+						              <ul>
+						                <li>
+						                  Another attempt at a dimple exercise
+						                  that turned into a monster!!<br><br>
+						                  
+						                  I need to think how to react ... for now I will 
+						                  explain the answer live, if required.<br><br>
+						                  
+						                  Is it good to find lots of interesting
+						                  problems?<br><br>
+						                  
+						                  Or do they just get it the way of the
+						                  Basic message?<br><br>
+						                  
+						                  I think, a bit of both, but one needs
+						                  SIMPLE exercises
+						                  to precede the challenging ones!<br><br>
+						                </li>
+						              </ul>
+		                </div>
+		              </details>
+		            </details>
             </li><br>
 
-            <li>
+<!--            <li>
               <details>
               <summary><span class="exesum"><b><u>Exercise 5
               </u></b>:
@@ -19449,7 +19775,7 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
                             <b>enza1.txt</b></a>
                 </div>
               </details>
-            </li><br>
+            </li><br> -->
           </ol>
         </div>
       </details><br>

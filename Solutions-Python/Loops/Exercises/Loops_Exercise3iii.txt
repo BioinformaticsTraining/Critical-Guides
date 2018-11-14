@@ -1,0 +1,59 @@
+######################################################
+### Open the file reads.fastq for reading as text
+###
+### Initialise a Count for the Reads with low  Accession Codes.
+### Initialise a Count for the Reads with high Accession Codes.
+###
+### Keep reading the file one line at a time until reaching an
+### Accession Code with a high value.
+###
+###    if the Current Line begins with an "@SRR"
+###        if the Accession Code is low enough
+###           print it out
+###           Add 1 to the Count of low Accession Code Reads
+###        otherwise break off this inteation through the file.
+###
+### Continue reading through the file until the bitter end
+### 
+###     if the Current Line begins with an "@SRR"
+###         Add 1 to the Count of high Accession Code Reads
+###
+### Announce the requested Read Counts
+###
+### Close the file.
+###
+#######################################################
+
+Fastq_File = open("reads.fastq")  # Open input file, requesting
+                                  # read & text (the defaults)
+                                  # implicitly
+
+Read_Count_hi = Read_Count_lo = 0 # Initialise low and high Read Counts
+
+for Line in Fastq_File:       # For each Line of the fastq file, in turn,
+    if Line[0:4] == '@SRR':   # if it is the first line of a new read,
+        Acc_int = int(Line[12:].rstrip())
+        if Acc_int < 124000:
+                              # and if the Accession Code is low enough,
+            print(Line, end = '')
+                              # print it out,
+            Read_Count_lo += 1
+                              # and add 1 to the count of low Accession reads.
+        else:                 # Otherwise,
+            break             # Stop reading lines from the file.
+
+while Line:                   # Until the End of the File
+    if Line[0:4] == '@SRR':     # if the current line is the first line of a read,
+        Read_Count_hi += 1    # increment the count of high Accession reads.
+
+    Line = Fastq_File.readline()
+                              # Read the next line of the file and go round again.
+
+# Declare the Counts of Reads.
+print("The low   Accession Read count for reads.fastq is " \
+                        + str(Read_Count_lo))
+print("The high  Accession Read count for reads.fastq is " \
+                        + str(Read_Count_hi))
+print("The total Accession Read count for reads.fastq is " \
+                        + str(Read_Count_lo + Read_Count_hi))
+

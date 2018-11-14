@@ -1,0 +1,31 @@
+######################################################
+### Open the file reads.fastq for reading as text
+###
+### Initialise a Count for the Reads.
+###
+### Keep reading the file one line at a time until it is empty
+###
+###    if the Current Line begins with an "@"
+###        print it out
+###        Add 1 to the Count of Reads
+###
+### Announce the count of Reads
+###
+### Close the file.
+###
+#######################################################
+
+Fastq_File = open("reads.fastq","rt") # Open input file, requesting
+                                      # read & text (the defaults)
+                                      # explicitly
+
+Read_Count = 0                        # Initialise Read Count
+
+for Line in Fastq_File:       # For each Line of the fastq file, in turn,
+    if Line[0] == '@':        # if it is the first line of a new read,
+        print(Line, end = '') # print it out,
+        Read_Count += 1       # and add 1 to the count of reads.
+
+# Decare the Count of Reads.
+print("The number of reads in the file reads.fastq is " + str(Read_Count) + ".\n\n")
+

@@ -9,14 +9,14 @@
 #######################################################
 
 # Open sequences.fasta making the "File Handle" Sequence_File.
-Sequence_File = open("sequences.fasta");
+Sequence_File = open("sequences.fasta")
 
 for Line in Sequence_File:   # So for each Line in turn,
-    if Line[0] != ">":       # If the first character is not ">"
-        continue;            # ignore it.
-    print Line;              # Print out the Line.
+    if Line[0] != '>':       # If the first character is not ">"
+        continue;            # ignore it. continue round the Loop.
+    print(Line,end='')       # Print out the Line.
 
-Sequence_File.close();       # Tidily close the file.
+Sequence_File.close()        # Tidily close the file.
 
 # This just feels horrid??? Such a struggle to use continue
 # Hope you see how continue works from this , but just

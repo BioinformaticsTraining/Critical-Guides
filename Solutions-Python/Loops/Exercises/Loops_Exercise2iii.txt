@@ -25,23 +25,22 @@
 #######################################################
 
 # A tuple of Hydrophobic Amino Acids.
-
-Hydrophobics = ('A', 'I', 'L', 'M', 'F', 'V', 'P', 'G');
+Hydrophobics = ('A', 'I', 'L', 'M', 'F', 'V', 'P', 'G')
 
 # Open sequences.fasta making the "File Handle" Sequence_File.
-Sequence_File = open("sequences.fasta");
+Sequence_File = open("sequences.fasta")
 
-Hydrophobic_Count = 0;         # Initialise Count of Hydrophobics.
+Hydrophobic_Count = 0         # Initialise Count of Hydrophobics.
 
 for Line in Sequence_File:   # So for each Line in turn,
     if Line[0] == ">":       # If the first character is  ">"
-        print Line;          # print it.
+        print(Line,end='')   # print it.
     else:                    # Otherwise it is a sequence line, so
         for aa in Line:      # for each amino acid in the line,
-            if aa in Hydrophobics:      # if it is a Hydrophobic,
-                Hydrophobic_Count += 1; # add 1 to the count.
+            if aa in Hydrophobics:     # if it is a Hydrophobic,
+                Hydrophobic_Count += 1 # add 1 to the count.
+
 # Display the Hydrophobic Count.
-print "There were " + str(Hydrophobic_Count) + " Hydrophobics.";
+print("There were " + str(Hydrophobic_Count) + " Hydrophobics.")
 
-Sequence_File.close();       # Tidily close the file.
-
+Sequence_File.close()        # Tidily close the file.
