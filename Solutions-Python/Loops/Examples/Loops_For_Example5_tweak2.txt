@@ -1,0 +1,143 @@
+# Revised Pseudo-Code:
+#
+# Import the code features that allow remote file access
+#
+# Stage 1 (Outline only)
+# ======================
+#
+# Open the file from Uniprot
+# Open a local file for writing in binary
+#
+# Read the remote file, write it to an identical local file
+# Print each line without decoding as it is read
+#
+# Close both the remote input file and the local output file
+#
+# Stage 2
+# =======
+#
+# Open the local input file for reading in binary
+#
+# Print each line as it is read
+# Report the type of the first line
+#
+# Tidily close the local input file
+#
+# Stage 3
+# =======
+#
+# Open the local input file for reading in binary
+#
+# Print each line decoded as UTF-8 (the default Character encoding)
+# Suppress the EOL that print() would append by default
+#
+# Close the local input file
+#
+# Stage 4 (Just for fun, this generates nonsense!)
+# ================================================
+#
+# Open the local input file for reading in binary
+#
+# Ensure each Line is comprised of an even number of bytes
+# (essential for a two byte encoding)
+#
+# Print each line decoded as UTF-16
+#
+# Close the local input file
+# 
+##################################################################
+
+import urllib.request # import the code to access remote files. 
+
+
+print("\n\n########################################################")
+print("#")
+print("# Step 1: Read Remote File and print its lines as read (i.e. as Byte Stream)")
+print("#         also write lines to a Local File Copy")
+print("#")
+print("########################################################\n\n")
+
+# Open remote file for reading.
+File_URL = 'http://www.uniprot.org/uniprot/P12931.fasta'
+Sequence_file = urllib.request.urlopen(File_URL)
+
+# Open a Local file for writing in binary to receive a copy of the remote file.
+Sequence_file_local = open("P12931.fasta","wb")
+
+Line = Sequence_file.readline()     # Read the first line using readline().
+print("The first line of the remote input file is of type: ",type(Line),end='\n\n')
+                                    # Display the type of the Byte Stream Line.
+
+while Line:                         # While the contents of Line are not empty, 
+    Sequence_file_local.write(Line)
+                                    # write the current Line to a local file,
+    print(Line)                     # print the current Line,
+    Line = Sequence_file.readline() # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file.close()       # Close the input  file tidily.
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 2: Read Local Files and print its lines as read (i.e. as Byte Stream)")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+print("The first line of the local input file is of type: ",type(Line),end='\n\n')
+                                      # Display the type of the Byte Stream Line.
+
+while Line:                         # While the contents of Line are not empty, 
+    print(Line)                     # print the current Line,
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 3: Read Local Files and print its lines decoded to UTF-8")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+
+while Line:                         # While the contents of Line are not empty, 
+    print(Line.decode("utf-8"), end='')
+                                    # print the current Line decoded to UTF-8,
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.
+
+Sequence_file_local.close() # Close the output file tidily.
+
+print("\n\n########################################################")
+print("#")
+print("# Step 4: Read Local Files and print its lines decoded to UTF-16")
+print("#")
+print("########################################################\n\n")
+
+# Reopen the Local file for reading in binary.
+Sequence_file_local = open("P12931.fasta","rb")
+
+Line = Sequence_file_local.readline() # Read the first line using readline().
+
+while Line:                         # While the contents of Line are not empty, 
+    print((b' ' + Line).decode("utf-16"))
+                                    # print the current Line decoded to UTF-16,
+                                    # As UTF-16 decodes bytes in pairs,
+                                    # ensure the line length is even.
+                                    # For this file, the simplest way to
+                                    # do that is to prepend a single byte
+                                    # (b' ') to every line.
+    Line = Sequence_file_local.readline()
+                                    # read the next line using readline(),
+                                    # go round for more.

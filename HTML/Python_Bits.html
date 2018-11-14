@@ -572,7 +572,7 @@ Click to record your <b>Start</b> time.</button>
                      If you are looking at "<b>Python 2</b>"
                      rather than "<b>Python 3</b>", you might
                      try leaving the <b>Interpreter</b> by
-                     typing in <b>Ctrl+D</b> (<b>exit</b>,
+                     typing in "<b>Ctrl+D</b>" (<b>exit</b>,
                      <b>stop</b>, <b>halt</b>, <b>quit</b>,
                      <b>go away</b> ... all will have no
                      effect, hold the <b>Ctrl Key</b> down
@@ -18769,6 +18769,33 @@ else:
                 </span><br><br>
               </div><br><br>
               
+              <div class="hint">
+		              Recall that after all the lines of a file have been read and processed,
+		              if <b>readline()</b> is called again, it will return
+		              <b>NULL</b> (essentially <b>ZERO</b>).<br><br>
+		              
+		              Remember further that <b>ZERO</b> used as a
+		              <b>Boolean</b>, uniquely maps to <b>FALSE</b>.<br><br>
+		              
+		              So, as long as <b>readline()</b> is successfully
+		              reading <b>Lines</b> of the file,
+		              <b>Line</b> will never be <b>ZERO</b> and so will
+		              consistently evaluate to <b>TRUE</b> when used as a
+		              <b>Conditional Expression</b> (as here).<br><br>
+		              
+		              This is why:<br><br>
+		              
+		              <div class="code">
+		              while Line:
+		              </div><br><br>
+		              
+		              will, to the joy
+		              and thunderous applause of all, keep the
+		              <b>Loop</b> rolling along until an
+		              attempt to read a line beyond the
+		              last line of the file has been made.
+              </div><br><br>
+              
               Code is in
               <a href="../Solutions-Python/Loops/Examples/Loops_For_Example5.txt"
 									    		target="_blank">this file</a>.<br><br>
@@ -18796,11 +18823,11 @@ else:
                     Maybe, before discussing this further
                     (but superficially at this point), it
                     would be a good idea to tweak the code
-                    solution for this examples so that:
+                    solution for this examples so that:<br><br>
                     
                     <ul>
                       <li>
-                        The Loop was "<b>Test at the top</b>" (I think
+                        The Loop becomes "<b>Test at the top</b>" (I think
                         a more natural here to be honest?)
                       </li><br>
                       <li>
@@ -18808,7 +18835,7 @@ else:
                         decode method and maybe also the explicit
                         <b>Newline</b>.
                       </li>
-                    </ul>
+                    </ul><br>
                     
                     <b><u>Code</u></b><br>
 						              <div class="code14"><pre><span Class="codecomm14"># Revised Pseudo-Code:
@@ -18918,12 +18945,107 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
 																         target="_blank">here</a>.<br><br>
 																      </li><br>
 																      <li>
+																        And so to the strange complexities of the original print() statement
+																        whose removal results in lines of the form:<br><br>
+																        
+																        <b>b'GYRMPCPPECPESLHDLMCQCWRKEPEERPTFEYLQAFLEDYFTSTEPQYQPGENL\n'</b><br><br>
+																        
+																        The '<b>b</b>' at the start of each line declares that the line
+																        (and so the whole file) has been read as a
+																        <a href="https://en.wikipedia.org/wiki/Bitstream"
+																         target+"_blank"><b>Byte Stream</b></a>.<br><br>
+																        
+																        That is to say, <b>readline()</b> reads the file,
+																        up to the first byte that represents an <b>EOL</b>
+																        character ('<b>/n</b>'). Then it has returns what it has read
+																        as a "<b>Stream</b> of <b>Bytes</b>" <b><i>NOT TEXT</i></b>!
+																        Do not be fooled by the way the <b>print()</b> function displays
+																        the bytes as if the were characters.<br><br>
+																        
+																        How the file contents are interpreted depends on the
+																        way the file is opened. The default (as in "<b><i>ONLY</i></b>")
+																        open option when using <b>urllib.request.urlopen()</b>
+																        is to read a
+																        file in binary mode (i.e. as undecoded bytes).<br><br>
+																        
+																        A local file can be read as a <b>Byte Stream</b> using the
+																        '<b>b</b>' flag. The default for the local file 
+																        <a href="https://docs.python.org/3/library/functions.html#open"
+																         target="_blank"><b>open()</b></a>
+																        function is to assume the file to be read is a text file.<br><br>
+																        
+																        If you wish to print a decoded version of the
+																        <b>Byte Stream</b>, it needs to be decoded into the form required.
+																        Hence the use of the "<b>bytes</b>" method <b>decode()</b>
+																        (the type of the <b>Byte Stream</b> lines is <b>byte</b>).<br><br>
+																        
+																        If you decode the <b>Byte Stream</b> into a
+																        <b>Text String</b>, there a number of coding strategies
+																        you could adopt. These include:<br><br>
+																        
+																        <ul>
+																          <li>
+																            <b>UTF-8</b> - A strategy that assigns one
+																            byte to each character (enabling a total of
+																            <b>256</b> different characters, including
+																            letters with various accents)
+																          </li><br>
+																          <li>
+																            <b>UTF 16</b> - A strategy that assigns two bytes to each character
+																            (enabling ... ummm ... lots and lots more characters
+																            including Chinese looking ones)
+																          </li>
+																        </ul>
+																        
+																        If you did not follow all of the above, that is because I need to
+																        describe things more clearly! I will do that in the fullness of time.
+																        Meanwhile here is a link to a very nice 
+																        <a href="https://stackoverflow.com/questions/6224052/what-is-the-difference-between-a-string-and-a-byte-string"
+                         target="_blank">explanation of what a <b>Byte Stream</b> is</a>.<br><br>
+                         
+                        Now we need some code to illustrate the issues discussed. As this is an
+                        example (gone completely out of control!) rather than an exercise.
+                        I will write the code. It is pretty large I fear.<br><br>
+                        
+                        Code is in
+										              <a href="../Solutions-Python/Loops/Examples/Loops_For_Example5_tweak2.txt"
+																			    		target="_blank">this file</a>.<br><br>
+																															 													
+														          Output is:<br><br>
+														          
+																										<img src="Images/Loops_For_Example5_tweak2a.png"
+																				           alt="Fiddle!"
+																				           class="centimg"
+																				           style="background: White;
+																				                  border-style: solid;
+																				                  border-color: red;
+																				                  border-width: 2px;"><br><br>
+
+																										<img src="Images/Loops_For_Example5_tweak2b.png"
+																				           alt="Fiddle!"
+																				           class="centimg"
+																				           style="background: White;
+																				                  border-style: solid;
+																				                  border-color: red;
+																				                  border-width: 2px;"><br><br>
+                        
+																										<img src="Images/Loops_For_Example5_tweak2c.png"
+																				           alt="Fiddle!"
+																				           class="centimg"
+																				           style="background: White;
+																				                  border-style: solid;
+																				                  border-color: red;
+																				                  border-width: 2px;"><br><br>
+                        
+																										<img src="Images/Loops_For_Example5_tweak2d.png"
+																				           alt="Fiddle!"
+																				           class="centimg"
+																				           style="background: White;
+																				                  border-style: solid;
+																				                  border-color: red;
+																				                  border-width: 2px;"><br><br>
 																      </li>
 																    </ol>
-				 
-                    <br><br>
-                    <a href="https://stackoverflow.com/questions/6224052/what-is-the-difference-between-a-string-and-a-byte-string"
-                     target="_blank">xxx</a> 
                   </li>
                 </ol>
               </div>
@@ -19023,39 +19145,39 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
               </span></summary><br>
 
               <b>Part (i)</b><br><br>
-
-              Write some code to inquire of a user's health,
-              requesting
-              the response "<b>Yes</b>" or "<b>No</b>".<br><br>
-
-              If the user responds in a way that is
-              encouraging, respond as if encouraged.
-
-              If the user responds negatively, suggest
-              he/she goes away and
-              suffers in silence!<br><br>
-
-              Treat "<b>Y</b>", "<b>y</b>", "<b>YES</b>",
-               "<b>yes</b>" as
-               <b>YES</b> ... anything else as <b>NO</b>.<br><br>
-
-              <details class="answer">
-              <summary><span class="anssum">Answer.</span>
-              </summary>
-                <div class="answer">
-                  My answer is in
-                  <a href=
-                     "../Solutions-Python/Loops/Exercises/Loops_Exercise1i.txt"
-                     target="_blank">
-                            <b>this file</b></a>.
-                </div>
-              </details><br>
+              
+              Consider again the exercise
+              from the <b>Conditional Code Block</b> section
+              in which you wrote code to:
+              
+              <ul>
+                <li>
+                  Ask a question requiring a Yes/No response
+                </li><br>
+                <li>
+                  React in a Positive/Negative fashion
+                  according to the Answer given
+                </li><br>
+                <li>
+                  Complain bitterly if the response
+                  cannot be interpreted as Yes or No
+                </li>
+              </ul><br>
+              
+              As a starting point for part (ii) of this exercise, find
+              your solution for this exercise,
+              or, if you are feeling lazy, I have written new,
+              less decorative version which is in
+              <a href=
+                 "../Solutions-Python/Loops/Exercises/Loops_Exercise1i.txt"
+                 target="_blank">
+                        <b>this file</b></a>.<br><br>
 
               <b>Part (ii)</b><br><br>
 
               Using the appropriate <b>Python Loop
               Structure</b>, make the relevant
-              part of the code of <b>Repeat</b> until the
+              part of the code <b>Repeat</b> until the
               stupid user enters something
               that is unequivocally <b>YES</b> or
               <b>NO</b>.<br><br>
@@ -19066,12 +19188,23 @@ Sequence_file.close() <span Class="codecomm14"># Close file tidily.</span></pre>
               <details class="answer">
               <summary><span class="anssum">Answer.</span>
               </summary>
-                <div class="answer">
+                <div class="answer"><br>
+                
                   My answer is:
                   <a href=
-                     "../Solutions-Python/Loops_Exercise1ii.txt"
+                     "../Solutions-Python/Loops/Exercises/Loops_Exercise1ii.txt"
                      target="_blank">
-                            <b>Loops_Exercise1ii.txt</b></a>
+                            <b>Loops_Exercise1ii.txt</b></a><br><br>
+                            
+                  Output is:<br><br>
+										          
+																		<img src="Images/Loops_Exercise1ii.png"
+												           alt="Fiddle!"
+												           class="centimg"
+												           style="background: White;
+												                  border-style: solid;
+												                  border-color: red;
+												                  border-width: 2px;"><br>
                 </div>
               </details>
 
@@ -20951,4 +21084,9 @@ But not now.
 		        <a href="https://docs.python.org/3/extending/index.html#extending-and-embedding-the-python-interpreter"
 		         target="_blank"><b>Embedding Python</b></a>.<br><br>
 		      </div>
+		      
+		      NOTES FOR exit()
+		      https://docs.python.org/3/library/site.html#module-site
+		      https://help.semmle.com/wiki/pages/viewpage.action?pageId=5933809
+		      https://docs.python.org/3/library/site.html#module-site
 -->
