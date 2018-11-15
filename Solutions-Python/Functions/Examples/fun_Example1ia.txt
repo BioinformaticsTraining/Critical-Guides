@@ -16,19 +16,18 @@
 
 def AverageN (*Numbers): # Using a Variable number of Parameters
 
-    Total = 0; # Initialise Variable to store the Sum of all Arguments.
+    Total = 0 # Initialise Variable to store the Sum of all Arguments.
 
     for Number in Numbers: # For each Argument,
-        Total += Number;   # increment the Total.
+        Total += Number    # increment the Total.
 
-    return (Total / len(Numbers)); # Return the Average.
+    return (Total / len(Numbers))  # Return the Average.
 
 #TEST BED 
 #======== 
 
-print str(AverageN(1 , 2, 4));                # 3 Integers 
-print str(AverageN(0.1 , 2.95, 7));           # 3 Mix float/Integer
-print str(AverageN(1 , 2.6));                 # 2 Numbers 
-print str(AverageN(1 , 13.2, 9.2, 4, 6, 10)); # 6 Numbers 
-print str(AverageN(2.9999));                  # 1 Number 
-
+print(AverageN(1, 2, 4))                 # 3 Integers 
+print(AverageN(0.1 , 2.95, 7))           # 3 Mix float/Integer
+print(AverageN(1 , 2.6))                 # 2 Numbers 
+print(AverageN(1 , 13.2, 9.2, 4, 6, 10)) # 6 Numbers 
+print(AverageN(2.9999))                  # 1 Number 

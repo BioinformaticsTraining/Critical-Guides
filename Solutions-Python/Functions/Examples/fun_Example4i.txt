@@ -9,7 +9,7 @@ def rnatoaa(rna):       # A Procedure to turn RNA into Protein.
      "AUU", "AUC", "AUA", "AUG", "ACU", "ACC", "ACA", "ACG",
      "AAU", "AAC", "AAA", "AAG", "AGU", "AGC", "AGA", "AGG",
      "GUU", "GUC", "GUA", "GUG", "GCU", "GCC", "GCA", "GCG",
-     "GAU", "GAC", "GAA", "GAG", "GGU", "GGC", "GGA", "GGG");
+     "GAU", "GAC", "GAA", "GAG", "GGU", "GGC", "GGA", "GGG")
 
     # A Dictionary to assosiate Codons with Amino Acid Codes. 
     Gencode = { "UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
@@ -27,32 +27,33 @@ def rnatoaa(rna):       # A Procedure to turn RNA into Protein.
                 "GUU":"V", "GUC":"V", "GUA":"V", "GUG":"V",
                 "GCU":"A", "GCC":"A", "GCA":"A", "GCG":"A",
                 "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
-                "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G",}
+                "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
 
     # First check for impossible Bases, Issue a Warning if found and continue
     if not rna.isalpha():
-        print "Warning - This Sequence contains non-alpha Charaters?!";
+        print("Warning - This Sequence contains non-alpha Characters?!")
 
-    RNA=rna.upper();              # All Upper Case, as Dictionary expects. 
-    RNA=RNA.replace("T","U");     # All "T"s "U"s, as Dictionary expects. 
+    RNA=rna.upper()               # All Upper Case, as Dictionary expects. 
+    RNA=RNA.replace("T","U")      # All "T"s "U"s, as Dictionary expects. 
 
-    RNA_Length = len(RNA);        # Compute the Length of the Sequence. 
-    Codon_Count = RNA_Length / 3; # Compute the Number of Codons. 
-    Spare_Bases = RNA_Length % 3; # Compute the Number of Bases left over. 
-    CDS_Length = RNA_Length - Spare_Bases;
+    RNA_Length = len(RNA)         # Compute the Length of the Sequence. 
+    Codon_Count = RNA_Length // 3 # Compute the Number of Codons. 
+    Spare_Bases = RNA_Length % 3  # Compute the Number of Bases left over. 
+    CDS_Length = RNA_Length - Spare_Bases
                                   # Compute the Length of the Coding Sequence. 
 
     for Codon_Start in range( 0, CDS_Length, 3):       # Along the CDS, 
-        Next_Codon = RNA[Codon_Start:Codon_Start + 3]; # pick the Codon. 
+        Next_Codon = RNA[Codon_Start:Codon_Start + 3]  # pick the Codon. 
         if Next_Codon in Legal_Codons: # If the codon is good, 
-            print Gencode[Next_Codon], # print its corresponding aa code. 
-        else:                             # Otherwise, 
-            print "?",                   # print a query. 
+            print(Gencode[Next_Codon], end='')
+                                       # print its corresponding aa code. 
+        else:                          # Otherwise, 
+            print("?", end='')         # print a query. 
 
     for Extra_Bases in range(Spare_Bases): # Print "."s to indicate 
-        print ".",                            # Spare_Bases. 
+        print(".", end='')                 # Spare_Bases. 
 
-    print; # Done! Print a Newline to celebrate. 
+    print() # Done! Print a Newline to celebrate. 
 
 #TEST BED
 #========
@@ -61,7 +62,7 @@ Sequences = ("AGCGACTCGATGCATGACGCACGCGATATCGAGCTATAG", # All Good
              "AGCGACTCGGACGCACGCGATATCGAGCTATAGGA",     # 2 extra Bases 
              "gcgCGCCGCAGCCCCCCccccccGGTGTAGACTGCA",    # Some Lower Case 
              "gcgCGCCGCAGCCCCC123CCCCGGTGTAGACTGCA",    # Some Numeric 
-             "acagggtcgcgcGCATTTCHchshahGGACTTTTACAS"); # Some illegal BP codes 
+             "acagggtcgcgcGCATTTCHchshahGGACTTTTACAS")  # Some illegal BP codes 
 
 for Sequence in Sequences:
-    rnatoaa(Sequence);
+    rnatoaa(Sequence)
