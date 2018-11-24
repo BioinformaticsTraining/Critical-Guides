@@ -1,4 +1,4 @@
-<font size="+1"><font size="+1"><font size="+1"></font></font></font><!DOCTYPE html>
+-<font size="+1"><font size="+1"><font size="+1"></font></font></font><!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -334,7 +334,7 @@ Click to record your <b>Start</b> time.</button>
 		          which support will soon be withdrawn
 		          (<b>First day of 2020</b>)
 		          does not seem to be too sensible.
-		          Accordingly. this tutorial presents <b>Python 3</b>
+		          Accordingly, this tutorial presents <b>Python 3</b>
 		          (unlike a number of other training programs
 		          you might find on the web).
           </p>
@@ -9956,7 +9956,7 @@ Click to record your <b>Start</b> time.</button>
             
               <img class="centimg"
                    src="Images/tuple_methods.png"
-                   alt="Oh Dear!"><br><br>
+                   alt="Oh Dear!"><br>
                  
               Just <b>2</b>! Both shared with <b>list</b>.
               In fact, these are <b>2</b> of the <b>3
@@ -9964,7 +9964,10 @@ Click to record your <b>Start</b> time.</button>
               were determined (see <b>list</b>
               exercises) to be the only <b>list methods</b> that
               would work on <b>immutable lists</b>
-              (that is to say, <b>tuples</b>).<br><br>
+              (that is to say, <b>tuples</b>).
+              The reason for the absence of the third method
+              (<b>list.copy()</b>), will become clear when you
+              work through the exercises.<br><br>
             
               So, for <b>tuples</b> the <b>method table</b>
               is a rather thin affair!<br><br>
@@ -10052,7 +10055,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> List01=[2, 5.74, "A String of standing!"]<br>
@@ -10092,7 +10095,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command16">
                           >>> Tuple_Empty=()<br>
@@ -10203,7 +10206,7 @@ Click to record your <b>Start</b> time.</button>
                           <li>
                             <b>Python</b> clearly agrees and declares that if
                             you terminate the assignment that creates the
-                            <b>Single Element tuple</b> ith a <b>comma</b>,
+                            <b>Single Element tuple</b> with a <b>comma</b>,
                             it will assume you are asking for
                             a <b>tuple</b> not an <b>Expression</b>. <br><br>
 
@@ -10264,7 +10267,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
                       
                         What we are looking at here is called
                         <a href="http://www.schoolcoders.com/coding-pythonbeginners-tuples-2"
@@ -10338,7 +10341,7 @@ Click to record your <b>Start</b> time.</button>
                         Command</b>, via a <b>tuple</b>
                         (in the background).<br>
                         
-                        <p class="hint">
+                        <div class="hint">
                           Is this the first <b>Multiple
                           Assignment</b> we have done?<br><br>
                           
@@ -10348,7 +10351,7 @@ Click to record your <b>Start</b> time.</button>
                           
                           Whichever is true, I add it as a revelation
                           for this <b>Section</b> in the <b>Checkpoint</b>.
-                        </p>
+                        </div>
                       </div>
                     </details>
                   </li><br>
@@ -10367,7 +10370,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
                       
                         There is no <b>tuple.copy()</b>,
                         not because
@@ -10388,7 +10391,7 @@ Click to record your <b>Start</b> time.</button>
                         they are both <b>immutable</b>!<br><br>
                     
                         So there is no reason to make a genuine
-                        <b>copy</b> a <b>tuple</b>.<br><br>
+                        <b>copy</b> of a <b>tuple</b>.<br><br>
                     
                         So there is no need for a
                         <b>tuple.copy() method</b>.<br>
@@ -10410,7 +10413,8 @@ Click to record your <b>Start</b> time.</button>
                           </span>    
                       </div>
                     </details>
-                  </li><br>
+                  </li>
+                  
                   <li>
                     <ol type="i">
                       <li>
@@ -10424,7 +10428,7 @@ Click to record your <b>Start</b> time.</button>
 		                        &emsp;&emsp;&emsp;&emsp;<b>Tuplemix_ass00 == Tuplemix_ass01</b><br><br>
 		                        
 		                        &emsp;&emsp;&emsp;&emsp;<b>Tuplemix_ass00 is Tuplemix_ass01</b>
-		                      </span>
+		                      </span><br><br>
 		                      
 				                    <details class="answer">
 				                    <summary><span class="anssum">Answer.</span>
@@ -10451,9 +10455,10 @@ Click to record your <b>Start</b> time.</button>
 				                        </span><br><br>
 				                        
 				                        <b>tuples</b> are <b>immutable</b>. As <b>immutable Objects</b>
-				                        cannot be edited, there is no need
+				                        cannot be edited, there is no need (as there
+				                        was for <b>mutable lists</b>)
 				                        to make more than one
-				                        such <b>Object</b> per <b>Value</b>.<br><br>
+				                        <b>Object</b> per <b>Value</b>.<br><br>
 				                        
 				                        The first <b>tuple</b> assignment causes a
 				                        <b>tuple</b> of the specified <b>Value</b> to be created
@@ -10468,7 +10473,7 @@ Click to record your <b>Start</b> time.</button>
 				                        
 				                        This being the case, both the <b>tuple Value</b> ("<b>==</b>") and
 				                        the <b>tuple Reference</b> ("<b>is</b>") comparisons
-				                        have to show equality.<br><br>
+				                        have to show equality.
 				                      </div>
 				                    </details>
                       </li><br>
@@ -10483,7 +10488,7 @@ Click to record your <b>Start</b> time.</button>
 		                        &emsp;&emsp;&emsp;&emsp;<b>Tupleorder_00 == Listorder_01</b><br><br>
 		                        
 		                        &emsp;&emsp;&emsp;&emsp;<b>Tupleorder_00 is Listorder_01</b>
-                        </span>
+                        </span><br><br>
 		                      
 				                    <details class="answer">
 				                    <summary><span class="anssum">Answer.</span>
@@ -10513,13 +10518,14 @@ Click to record your <b>Start</b> time.</button>
 				                        are the same, but their <b>Order</b> is different.<br><br>
 				                        
 				                        A <b>tuple</b> is an <b>Ordered</b> set of <b>Python Objects</b>.
-				                        <b>Order</b> is a definitive property of a <b>tuple</b> therefore
+				                        <b>Order</b> is a definitive property of a <b>tuple</b>
+				                        (exactly as it is for a <b>list</b>). Therefore
 				                        even when, as in this case, the <b>Order</b>
 				                        of the elements is the <b><i> only</i> Value</b> difference
 				                        between two <b>tuples</b>, the <b>tuples</b> are deemed
 				                        to be different by <b>Value</b>.<br><br>
 				                        
-				                        Accordingly, two distinct tuple Objects are required.
+				                        Accordingly, two distinct <b>tuple Objects</b> are required.
 				                        
 				                        Thus, both by <b>Value</b> and by <b>Reference</b>,
 				                        <b>Tupleorder_00</b> and <b>Tupleorder_01</b> are not the same.
@@ -10527,10 +10533,7 @@ Click to record your <b>Start</b> time.</button>
 				                    </details>
                       </li><br>
                       <li>
-                      
-                      <b>**********BROKEN BROKEN BROKEN ..... FIX after thought!************</b><br><br>
-                      
-                        Make a <b>tuple</b>, <b>Listass_02</b>, <b>(1, 2, 3, 4)</b>, by assignment<br><br>
+                        Make a <b>tuple</b>, <b>Tupleass_02</b>, <b>(1, 2, 3, 4)</b>, by assignment<br><br>
                         
                         Assign <b>Tupleass_02</b> to <b>Tupleass_03</b><br><br>
                         
@@ -10544,7 +10547,7 @@ Click to record your <b>Start</b> time.</button>
                           &emsp;&emsp;&emsp;&emsp;<b>Tupleass_02 is Tupleass_03 is Tupleass_04</b><br><br>
                           
                           &emsp;&emsp;&emsp;&emsp;<b>Tupleass_02 is Tupleass_03 == Tupleass_04</b>
-                        </span>
+                        </span><br><br>
 		                      
 				                    <details class="answer">
 				                    <summary><span class="anssum">Answer.</span>
@@ -10553,8 +10556,8 @@ Click to record your <b>Start</b> time.</button>
 				
 				                        <span class="command">
 				                          >>> Tupleass_02 = (1, 2, 3, 4)<br>
-																												  >>> Tupleass_03 = Listass_02<br>
-																												  >>> Tupleass_04 = Listass_03<br>
+																												  >>> Tupleass_03 = Tupleass_02<br>
+																												  >>> Tupleass_04 = Tupleass_03<br>
 																																													
 																												  <img src="Images/tuple-isnot04.png"
 						                             alt="Fiddle!"
@@ -10576,6 +10579,14 @@ Click to record your <b>Start</b> time.</button>
 				                        From all that precedes, it must be clear that all
 				                        that happens here will create but one <b>tuple
 				                        Object</b> referenced by three <b>Variables</b>.<br><br>
+				                        
+				                        No difference to the story for <b>lists</b>?
+				                        True, except that the single <b>tuple</b> will
+				                        be more memory and computationally efficient
+				                        than the single <b>list</b>.
+				                        With small apology for repetition,
+				                        <b>lists</b> are only justified where
+				                        <b>mutability</b> is essential.<br><br>
 				                        
 				                        <a href="https://www.youtube.com/watch?v=cEkepygs_bM&index=1&list=RDcEkepygs_bM"
 				                          target="_blank">Anyway you want to</a> think of it,
@@ -10620,7 +10631,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br><br>
                       
                         First, I need to register mild objection
                         to the term <i>"sequence"</i>.
@@ -10947,13 +10958,13 @@ Click to record your <b>Start</b> time.</button>
                       
                       <li> too big</li><br>
                       
-	                   <li> too small</li><br>
-	                 </ul>
+	                     <li> too small</li><br>
+	                   </ul><br><br>
 	                 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer"><br>
+                      <div class="answer"><br><br>
 
                         <span class="command">
                           >>> #<br>
@@ -11045,7 +11056,7 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer"><br>
+                      <div class="answer"><br><br>
 
                         <span class="command">
                           >>> #<br>
@@ -13684,10 +13695,10 @@ Click to record your <b>Start</b> time.</button>
 		        If you wish to use anything from this resource,
 		        you need to download and install it.
 		        This is not particularly difficult,
-		        but beyond the current scope of this tutorial.<br><br>
+		        and will be covered later in this tutorial.<br><br>
 		        
-		        I thought, however, the existence of <b>PyPi</b> was
-		        something you should know about, especially
+		        Here, is offered just mention of <b>PyPi</b> as
+		        something of which you should be aware, especially
 		        as it includes a very wide range of
 		        <b>Bioinformatics Libraries</b>.<br><br>
 		        
@@ -15194,7 +15205,7 @@ Click to record your <b>Start</b> time.</button>
 								      For completeness, I will describe
 								      how you might set up a fully
 								      developed and testing program for
-								      production use, in the next section.<br><br>
+								      production use, in the next subsection.<br><br>
 								      
 								      Feel free to skip for now if
 								      you wish. You only need to know
@@ -15774,7 +15785,7 @@ Click to record your <b>Start</b> time.</button>
 																				# Create a dictionary to associate the integers 0->19 with Amino Acids.<br>
 		                  </span>
 
-<pre class="code16">AA_Codes = { 0:"Arginine - Arg - R",      1:"Lysine - Lys - K",
+<pre class="code15">AA_Codes = { 0:"Arginine - Arg - R",      1:"Lysine - Lys - K",
              2:"Aspartic acid - Asp - D", 3:"Glutamic acid - Glu - E",
              4:"Glutamine - Gln - Q",     5:"Asparagine - Asn - N",
              6:"Histidine - His - H",     7:"Serine - Ser - S",
@@ -15785,35 +15796,32 @@ Click to record your <b>Start</b> time.</button>
             16:"Phenylalanine - Phe - F",17:"Valine - Val - V",
             18:"Proline - Pro - P",      19:"Glycine - Gly - G"}</pre>
 																				<br>
-                    <span class="codecomm16">
+                    <span class="codecomm15">
 																				# Seed the Random number generator<br>
 		                  </span>
 																				<br>
 																				r.seed()<br>
 																				<br>
-                    <span class="codecomm16">
+                    <span class="codecomm15">
 																				# Pick a Random AA<br>
 		                  </span>
 																				<br>
 																				Random_AA = r.randint(0,19)<br>
 																				<br>
-                    <span class="codecomm16">
+                    <span class="codecomm15">
 																				# Reveal the identity of the Random AA<br>
 		                  </span>
 																				<br>
 																				print("The randomly selected Amino Acid is ... ", AA_Codes[Random_AA])<br>
 																				<br>
-                    <span class="codecomm16">
+                    <span class="codecomm15">
 																				# Declare the type of AA that has been selected<br>
 		                  </span>
-																				<br>
-																				if Random_AA <= 3:<br>
-																				    print("Charged (side chains often makes salt bridges)")<br>
-<pre class="code16">if Random_AA <= 3:
+<pre class="code15">if Random_AA <= 3:
     print("Charged (side chains often makes salt bridges)")
-			 
+
 if Random_AA > 3 and Random_AA <= 11:
-			 print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")
+    print("Polar (usually participates in hydrogen bonds as proton donor/acceptor)")
 
 if Random_AA > 11:
     print("Hydrophobic (normally buried inside the protein core)")</pre>
@@ -19946,7 +19954,14 @@ while Line:                         # While the contents of Line are not empty,
          <ul>
            <li><b>len</b>(<i>&lt;string&gt;</i>) -
                <b>returns</b> the
-               <b>length</b> of a
+               <b>length</b> of a                
+               @@@@@@@@@@@@@@@@@@@@@@@@@
+               sequence (such as a string, bytes, tuple, list,
+               or range) or a collection (such as a dictionary,
+               set, or frozen set)
+               @@@@@@@@@@@@@@@@@@@@@@@@@
+               
+               
                <b>string argument</b>
            </li>
            <li><b>range(</b><i>&lt;integer&gt;</i>,
@@ -20237,8 +20252,8 @@ while Line:                         # While the contents of Line are not empty,
               <b>return</b> the result.
             </div><br>
 
-            <b><u>Code</u></b>
-            <div class="code"><br>
+            <b><u>Code</u></b><br>
+            <div class="code">
               My answer is:
               <a href="../Solutions-Python/Functions/Examples/fun_Example1iii.txt"
                  target="_blank">
@@ -20290,7 +20305,9 @@ while Line:                         # While the contents of Line are not empty,
                   trailing <b>comma</b> so important, just
                   in this <b>tuple</b> and none of the others?<br><br>
                   
-                  NEED TO ANSWER THIS SOMETIME. BY DISCUSSION FOR NOW.
+                  <a href="https://ubuntuforums.org/showthread.php?t=2232993"
+                   target="_blank">NEED TO ANSWER THIS SOMETIME</a>.
+                  BY DISCUSSION FOR NOW.
                 </li>
               </ul>
             </div>
@@ -20875,20 +20892,20 @@ while Line:                         # While the contents of Line are not empty,
               of <b>false</b>, for a <b>N</b> answer.<br><br>
 
               If you would like a short cut, my answer for the
-              Y/N question in a loop is:
-              <a href="../Solutions-Python/Loops_Exercise1ii.txt"
-                 target="_blank"> <b>Loops_Exercise1ii.txt</b></a>
+              <b>Y</b>/<b>N</b> question in the previous section is
+              <a href="../Solutions-Python/Loops/Exercises/Loops_Exercise1ii.txt"
+                 target="_blank"> <b>here</b></a>
               <br><br>
 
               <details class="answer">
               <summary><span class="anssum">Answer.</span>
               </summary>
                 <div class="answer">
-                  My answer is:
-                     <a href="../Solutions-Python/fun_Exercise1i.txt"
-                      target="_blank"> <b>fun_Exercise1i.txt</b></a>
+                  My answer is
+                     <a href="../Solutions-Python/Functions/Exercises/fun_Exercise1i.txt"
+                      target="_blank"> <b>here</b></a>
                 </div>
-              </details>
+              </details><br>
 
               <b>Part (ii)</b><br><br>
 
@@ -20904,8 +20921,8 @@ while Line:                         # While the contents of Line are not empty,
               </summary>
                 <div class="answer">
                   <p>My answer is:
-                   <a href="../Solutions-Python/fun_Exercise1ii.txt"
-                    target="_blank"> <b>fun_Exercise1ii.txt</b></a>
+                   <a href="../Solutions-Python/Functions/Exercises/fun_Exercise1ii.txt"
+                    target="_blank"> <b>here</b></a>
                 </div>
               </details>
             </li><br>
@@ -21153,9 +21170,49 @@ while Line:                         # While the contents of Line are not empty,
 
       </div>
     </details>
-  </li>
+  </li><br>
+
+  <li>
+    <details class="msect">
+    <summary>
+      <span class="msectsumext"><b>Section - XIV:</b>
+             Modules from The Python Package Index (PyPI) 
+      </span>
+    </summary>
 
 <!-- ############################################## ---
+---- ############################################## ---
+---- ############################################## -->
+
+      <div class="ramble">
+
+        <h2>Modules from The Python Package Index (PyPI)</h2>
+        <div>
+
+        </div>
+      </div>
+
+      <p>
+        EXERCISE BODY
+      </p>
+
+      <div class="checkpoint">
+
+        <h2><i><u>Checkpoint</u></i></h2>
+
+        <p>
+          <hh6m>Issues introduced or reinforced in
+          this section:</hh6m>
+        </p>
+
+        <p>
+          <htt6m>Module introduced or reinforced in
+          this sections:</htt6m><br>
+        </p>
+
+      </div>
+    </details>
+  </li><!-- ############################################## ---
 ---- ############################################## ---
 ---- ############################################## -->
 
@@ -21324,11 +21381,11 @@ Makes sense I suppose, but a bit picky even for me.
                 attentions of my dear father.<br><br>
               
                 Particularly during its leaf incontinent
-                moments of Autumn, this magnificent walnut
+                moments during Autumn, this magnificent walnut
                 generator exercised my father to some
                 significant degree! He would address the
                 tree with vigorous military gesture and
-                expressions which I fear I am far to well
+                expression which I fear I am far to well
                 bred to share with you, in the particular.<br><br>
                 
                 Suffice it to note, his general theme was

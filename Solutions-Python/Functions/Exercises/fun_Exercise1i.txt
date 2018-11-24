@@ -18,22 +18,21 @@
 
 def Y_N():
 
-    Yes = ('Y', 'y', 'yes', 'Yes', 'YES');
-    No  = ('N', 'n', 'no' , 'No' , 'NO' );
+    Yes = ('Y', 'y', 'yes', 'Yes', 'YES')
+    No  = ('N', 'n', 'no' , 'No' , 'NO' )
 
     while True:
-        Response = raw_input("Do you understand Loops yet???");
+        Response = input("Do you understand Loops yet???  ")
 
         if   Response in Yes:
-            print "Jolly Good!";       break;
+            print("Jolly Good!");       break
         elif Response in No:
-            print "Well, Try harder!"; break;
+            print("Well, Try harder!"); break
         else:
-            print "Answer must be Yes or No!";
+            print("Answer must be Yes or No!")
 
 #############################################################################
 # TEST BED
 
 
-Y_N();
-
+Y_N()

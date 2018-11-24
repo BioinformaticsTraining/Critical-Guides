@@ -272,6 +272,14 @@ span.comsum {
     min-width: 120px; max-width: 800;   
 }
 
+/* Class for Code Blocks 15px */
+
+.code15 {
+    display:inline-block;
+    background-color: White;
+    font-family: Courier; font-size: 15px; font-weight: bold;
+    min-width: 120px; max-width: 800;   
+}
 /* Class for Code Blocks 14px */
 
 .code14 {
@@ -308,6 +316,14 @@ span.comsum {
     min-width: 120px; max-width: 800;   
 }
 
+/* Class for Code Comment Blocks 15px */
+
+.codecomm15 {
+    display:inline;
+    background-color: White; color: Blue;
+    font-family: Courier; font-size: 15px; font-weight: bold;
+    min-width: 120px; max-width: 800;   
+}
 /* Class for Code Comment Blocks 14px */
 
 .codecomm14 {
