@@ -173,7 +173,8 @@ div.suggestion {
 
 div.answer {
     background-color: LemonChiffon;
-    width: 700px
+    width: 700px;
+    border-left: 10px solid LemonChiffon;
 }
 
 /* div for Exercises */
@@ -251,7 +252,7 @@ span.comsum {
     display:inline-block;
     background-color: White; color: Black;
     font-family: Courier; font-size: 18px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 /* Class for Code Blocks 18px (Default) */
@@ -260,7 +261,7 @@ span.comsum {
     display:inline-block;
     background-color: White; color: Black;
     font-family: Courier; font-size: 18px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 /* Class for Code Blocks 16px */
@@ -269,7 +270,7 @@ span.comsum {
     display:inline-block;
     background-color: White;
     font-family: Courier; font-size: 16px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 /* Class for Code Blocks 15px */
@@ -278,7 +279,7 @@ span.comsum {
     display:inline-block;
     background-color: White;
     font-family: Courier; font-size: 15px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 /* Class for Code Blocks 14px */
 
@@ -286,7 +287,7 @@ span.comsum {
     display:inline-block;
     background-color: White;
     font-family: Courier; font-size: 14px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 /* Class for Code Comment Blocks */
 
@@ -294,7 +295,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: Courier; font-size: 18px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 
@@ -304,7 +305,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: Courier; font-size: 18px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 /* Class for Code Comment Blocks 16px */
@@ -313,7 +314,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: Courier; font-size: 16px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 
 /* Class for Code Comment Blocks 15px */
@@ -322,7 +323,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: Courier; font-size: 15px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 /* Class for Code Comment Blocks 14px */
 
@@ -330,7 +331,7 @@ span.comsum {
     display:inline;
     background-color: White; color: Blue;
     font-family: Courier; font-size: 14px; font-weight: bold;
-    min-width: 120px; max-width: 800;   
+    min-width: 20px; max-width: 800;   
 }
 /* span for Exercise Commands 22px */
 

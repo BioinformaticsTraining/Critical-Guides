@@ -559,9 +559,9 @@ Click to record your <b>Start</b> time.</button>
                     or "license"
                     for more information.<br>
                     >>>
-                  </span><br>
+                  </span><br><br>
 
-                  <p class="hint"><b>Important Note</b>: If
+                  <div class="hint"><b>Important Note</b>: If
                      you are using "<b>Python 2.?.?</b>", not
                      all of what is
                      described here will work. I assume the
@@ -585,11 +585,11 @@ Click to record your <b>Start</b> time.</button>
 
                      Sometimes, <b>Python 3</b> is installed but
                      is not the default version of
-                     <b>Python</b>.<br>
-                  </p>
+                     <b>Python</b>.
+                  </div>
                 </li>
               </ul>
-            </p>
+            </div>
           </details>
         </li>
       </ol>
@@ -686,7 +686,8 @@ Click to record your <b>Start</b> time.</button>
                   If an expression that is a <b>single
                   scalar value</b> is entered, the
                   <b>Python Interpreter</b>
-                  simply echoes that value.<br>
+                  simply echoes that value.<br><br>
+                  
                   <span class="command">
                     >>> 3<br>
                     3<br>
@@ -717,7 +718,8 @@ Click to record your <b>Start</b> time.</button>
 
                 <li>
                   Where results can only be type <b>int</b>,
-                  they are type <b>int</b>.<br>
+                  they are type <b>int</b>.<br><br>
+                  
                   <span class="command">
                     >>> 3 + 4<br>
                     7<br>
@@ -737,11 +739,13 @@ Click to record your <b>Start</b> time.</button>
 
                   Therefore all divisions generate
                   <b>float</b> answers (that is, values
-                  including a decimal point).<br>
+                  including a decimal point).<br><br>
+                  
                   <span class="command">
                     >>> 12 / 4<br>
                     3.0<br>
-                    >>> 15 / 6<br>
+                    >>> 15 / 6
+                   
                     2.5<br>
                     >>>
                   </span>
@@ -749,7 +753,8 @@ Click to record your <b>Start</b> time.</button>
 
                 <li>
                   <b>Parenthesis</b> have their usual role
-                  influencing <b>Operator Precedence</b>.<br>
+                  influencing <b>Operator Precedence</b>.<br><br>
+                  
                   <span class="command">
                     >>> 12 - 5 * 6<br>
                     -18<br>
@@ -761,7 +766,8 @@ Click to record your <b>Start</b> time.</button>
 
                 <li>
                   <b>+</b> and <b>-</b> can be used as
-                  <b>Unary Operators</b> in the usual way.<br>
+                  <b>Unary Operators</b> in the usual way.<br><br>
+                  
                   <span class="command">
                     >>> -+5<br>
                     -5<br>
@@ -793,7 +799,8 @@ Click to record your <b>Start</b> time.</button>
               answer.<br><br>
 
               Therefore the <b>Python
-              Interpreter</b> delivers a <b>float</b>.<br>
+              Interpreter</b> delivers a <b>float</b>.<br><br>
+              
               <span class="command">
                 >>> 1.1 + 4<br>
                 5.1<br>
@@ -831,7 +838,7 @@ Click to record your <b>Start</b> time.</button>
                   (or "<b>3 * 3 * 3</b>").<br>
 
                   There are others ways to raise a number to a
-                  given power, as you will see.<br>
+                  given power, as you will see.<br><br>
 
                   <span class="command">
                     >>> 3 ** 3<br>
@@ -847,7 +854,7 @@ Click to record your <b>Start</b> time.</button>
                   the answer is <b>Integer</b>.<br><br>
 
                   If any argument is a <b>float</b>,
-                  the answer is a <b>float</b>.<br>
+                  the answer is a <b>float</b>.<br><br>
 
                   <span class="command">
                     >>> 3.0 ** 3<br>
@@ -862,7 +869,7 @@ Click to record your <b>Start</b> time.</button>
 
                   There are others ways to request the
                   <b>square root</b> of a number,
-                  as you will see.<br>
+                  as you will see.<br><br>
 
                   <span class="command">
                     >>> 9 ** 0.5<br>
@@ -875,7 +882,7 @@ Click to record your <b>Start</b> time.</button>
                   Anything raised to the power <b>0</b> is
                   <b>1</b>. This includes <b>0</b> to the
                   power of <b>0</b> ... according to
-                  <b>Python</b> at least???<br>
+                  <b>Python</b> at least???<br><br>
 
                   <span class="command">
                     >>> 9 ** 0<br>
@@ -909,7 +916,7 @@ Click to record your <b>Start</b> time.</button>
                   with a <b>Remainder</b> of <b>0</b>.<br><br>
 
                   To display the <b>Remainder</b>, the "<b>%</b>"
-                  operator is used.<br>
+                  operator is used.<br><br>
 
                   <span class="command">
                     >>> 12 // 4<br>
@@ -924,7 +931,7 @@ Click to record your <b>Start</b> time.</button>
                   Of course, "<b>14 // 4</b>" is also
                   "<b>3</b>"<br><br>
 
-                  But this time the "<b>Remainder is 2</b>".<br>
+                  But this time the "<b>Remainder is 2</b>".<br><br>
 
                   <span class="command">
                     >>> 14 // 4<br>
@@ -940,7 +947,7 @@ Click to record your <b>Start</b> time.</button>
                   Even though the request is for <b>Integer
                   Arithmetic</b>, if any argument is a
                   <b>float</b>,
-                  the answer is a <b>float</b>.<br>
+                  the answer is a <b>float</b>.<br><br>
 
                   <span class="command">
                     >>> 12 // 4.0<br>
@@ -979,7 +986,7 @@ Click to record your <b>Start</b> time.</button>
                   <b>characters</b> comprising a
                   <b>string</b> must be enclosed in
                   quotes. Either <b>single</b>
-                  or <b>double quotes</b> will work.<br>
+                  or <b>double quotes</b> will work.<br><br>
 
                   <span class="command">
                     >>> ''<br>
@@ -1192,9 +1199,9 @@ Click to record your <b>Start</b> time.</button>
                               A String with "''"'" assorted,
                               silly quotes<br>
                               >>>
-                            </span><br><br>
+                            </span>
                           </div>
-                        </details>
+                        </details><br>
                       </li>
                     </ol>
                   </div>    
@@ -1229,11 +1236,11 @@ Click to record your <b>Start</b> time.</button>
                     <ol>
                       <li>
                         <p>How would you expect the
-                         <b>Python Interpreter</b> to react to
-                         the gentle stimulus:<br>
-                        <span class="command">
-                          '14' + '7'
-                        </span>
+	                         <b>Python Interpreter</b> to react to
+	                         the gentle stimulus:
+		                        <span class="code">
+		                          '14' + '7'
+		                        </span>
                         </p>
 
                         <details class="answer">
@@ -1244,35 +1251,32 @@ Click to record your <b>Start</b> time.</button>
                               >>> '14' + '7'<br>
                               '147'<br>
                               >>>
-                            </span><br>
+                            </span><br><br>
  
-                            <p>If anyone mentioned "<b>21</b>"
-                               I am going home!!!! Yes it is a
-                               <b>PLUS</b> sign, but <b><i>it does
-                               not mean arithmetic addition in
-                               this context</b></i>.
-                            </p>
+                            If anyone mentioned "<b>21</b>"
+                            I am going home!!!! Yes it is a
+                            <b>PLUS</b> sign, but <b><i>it does
+                            not mean arithmetic addition in
+                            this context</b></i>.<br><br>
 
-                            <p>'<b>14</b>' and '<b>7</b>' are
-                               <b><i>strings</i></b>! The
-                               <b>+</b> sign is used here for
-                               convenience only ... and because
-                               someone must imagine that
-                               <b>concatenation</b> is in some
-                               distant fashion, beyond my
-                               understanding, tenuously related
-                               to <b>Arithmetic Addition</b>? Maybe I
-                               lack imagination?
-                            </p>
+                            '<b>14</b>' and '<b>7</b>' are
+                            <b><i>strings</i></b>! The
+                            <b>+</b> sign is used here for
+                            convenience only ... and because
+                            someone must imagine that
+                            <b>concatenation</b> is in some
+                            distant fashion, beyond my
+                            understanding, tenuously related
+                            to <b>Arithmetic Addition</b>? Maybe I
+                            lack imagination?<br><br>
 
-                            <p>Of course, remove the <b>quotes</b>
-                               around the <b>Numeric Characters</b>
-                               and, all of a sudden, they become
-                               <b>NUMBERS</b> and <b><i>NOW</b></i>
-                               the <b>plus sign</b> can be interpreted
-                               as its creator intended.
-                               Behold, <b>21</b>!
-                             </p>
+                            Of course, remove the <b>quotes</b>
+                            around the <b>Numeric Characters</b>
+                            and, all of a sudden, they become
+                            <b>NUMBERS</b> and <b><i>NOW</b></i>
+                            the <b>plus sign</b> can be interpreted
+                            as its creator intended.
+                            Behold, <b>21</b>!<br><br>
 
                             <span class="command">
                              >>> 14 + 7<br>
@@ -1286,7 +1290,7 @@ Click to record your <b>Start</b> time.</button>
                       <li>
                         <p>How about:
                         
-                          <span class="command">
+                          <span class="code">
                             '14' - '7'
                           </span>
                         </p>
@@ -1303,39 +1307,32 @@ Click to record your <b>Start</b> time.</button>
                               TypeError: unsupported operand type(s)
                               for -: 'str' and 'str'<br>
                               >>>
-                            </span><br>
+                            </span><br><br>
 
-                            <p>The <b>Python Interpreter</b> in
-                               intemperate mode!
-                            </p>
+                            The <b>Python Interpreter</b> in
+                            intemperate mode!<br><br>
 
-                            <p>Broadly, and loosely translated, this
-                               message reads:<br><br>
+                            Broadly, and loosely translated, this
+                            message reads:<br><br>
 
-                               <i>"What am I supposed to do here?
-                               - Stupid person! Bad enough you
-                               ask me to <b>ADD</b> two strings
-                               together, but now you want me to
-                               <b>SUBTRACT</b> them???
-                               I refuse ... so there!"</i>
-                            </p>
+                            <i>"What am I supposed to do here?
+                            - Stupid person! Bad enough you
+                            ask me to <b>ADD</b> two strings
+                            together, but now you want me to
+                            <b>SUBTRACT</b> them???
+                            I refuse ... so there!"</i><br><br>
 
-                            <p>Quite right too!!
-                            </p>
+                            Quite right too!!
                           </div>
-                        </details>
+                        </details><br>
                       </li>
 
                       <li>
-                        <p>What do you suppose the value of:
-                        </p>
-
-                        <span class="command">
+                        What do you suppose the value of:
+                        <span class="code">
                           3 * 'a'
-                        </span><br>
-
-                        <p>might be?
-                        </p>
+                        </span>
+																								might be?<br><br>
 
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
@@ -1346,30 +1343,37 @@ Click to record your <b>Start</b> time.</button>
                               >>> 3 * 'a'<br>
                               'aaa'<br>
                               >>>
-                            </span><br>
+                            </span><br><br>
 
-                            <p>In vaguely analogy to <b>Arithmetic
-                               Multiplication</b>, a command of the
-                               form:<br><br>
+                            In vaguely analogy to <b>Arithmetic
+                            Multiplication</b>, a command of the
+                            form:<br><br>
 
-                               <i>&lt;int&gt;</i> <b>*</b>
-                               <i>&lt;str&gt;</i><br><br>
+                            <i>&lt;int&gt;</i> <b>*</b>
+                            <i>&lt;str&gt;</i><br><br>
 
-                               will concatenate the specified
-                               <b>string</b> with itself, the
-                               number of times indicated by the
-                               given <b>integer</b> value.
-                            </p>
+                            will concatenate the specified
+                            <b>string</b> with itself, the
+                            number of times indicated by the
+                            given <b>integer</b> value.<br><br>
+                            
+                            so
+                            <span class="code">
+				                          3 * 'a'
+				                        </span>
+				                        is exactly equivalent to
+				                        <span class="code">
+				                          'a' + 'a' + 'a'
+				                        </span><br>
                           </div>
-                        </details>
+                        </details><br>
                       </li>
 
                       <li>
-                        <p>How about:
-                        <span class="command">
+                        How about:
+                        <span class="code">
                           3 * '19'
-                        </span>
-                        </p>
+                        </span><br><br>
 
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
@@ -1380,13 +1384,12 @@ Click to record your <b>Start</b> time.</button>
                               >>> 3 * '19'<br>
                               '191919'<br>
                               >>>
-                            </span><br>
+                            </span><br><br>
 
-                            <p>So very happy no one, even fleetingly,
-                               considered <b>57</b>!!
-                            </p>
+                            So very happy no one, even fleetingly,
+                            considered <b>57</b>!!
                           </div>
-                        </details>
+                        </details><br>
                       </li>
                     </ol>
                   </div>
@@ -1470,15 +1473,14 @@ Click to record your <b>Start</b> time.</button>
 
                     <ol>
                       <li>
-                        <p>Here is a list of the
-                           <b>Escape Codes</b> that enable
-                           various forms of white space to be
-                           included in <b>Strings</b>. Not all are,
-                           in my limited experience, particularly
-                           vital, but all are worth a quick glance,
-                           at least once in a lifetime?
-                        </p>
-
+                        Here is a list of the
+                        <b>Escape Codes</b> that enable
+                        various forms of white space to be
+                        included in <b>Strings</b>. Not all are,
+                        in my limited experience, particularly
+                        vital, but all are worth a quick glance,
+                        at least once in a lifetime?<br><br>
+                           
                         <ul><b>
                           <li>\b - Backspace (BS)</li><br>
                           <li>\f - Formfeed (FF)</li><br>
@@ -1487,13 +1489,12 @@ Click to record your <b>Start</b> time.</button>
                           <li>\t - Horizontal Tab (TAB)</li><br>
                           <li>\v - Vertical Tab (VT)</li><br>
                         </ul></b>
-
-                        <p>Just for the ones we have not
-                           yet considered, construct and
-                           <b>print()</b> a <b>String</b>
-                           to demonstrate
-                           their function.
-                        </p>
+                        
+                        Just for the ones we have not
+                        yet considered, construct and
+                        <b>print()</b> a <b>String</b>
+                        to demonstrate
+                        their function.<br><br>
 
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
@@ -1810,10 +1811,15 @@ Click to record your <b>Start</b> time.</button>
 
                         <ul><b>
                           <li> Oscar_Again[4:40]</li><br>
+                          
                           <li> Oscar_Again[4:40:1]</li><br>
+                          
                           <li> Oscar_Again[4:40:2]</li><br>
+                          
                           <li> Oscar_Again[4:40:5]</li><br>
+                          
                           <li> Oscar_Again[:40:2]</li><br>
+                          
                           <li> Oscar_Again[::2]</li>
                         </ul></b><br>
 
@@ -1823,7 +1829,7 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
                         </summary>
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command15">
                               >>> Oscar_Again = "Always forgive your
@@ -1894,7 +1900,7 @@ Click to record your <b>Start</b> time.</button>
 
                             Omit the first 2 <b>Arguments</b> and
                             the entire length of the
-                            <b>String</b> is assumed.<br><br>
+                            <b>String</b> is assumed.
                           </div>
                         </details>
                       </li><br>
@@ -1908,12 +1914,19 @@ Click to record your <b>Start</b> time.</button>
 
                         <ul><b>
                           <li>Oscar_Again[-1]</li><br>
+                          
                           <li>Oscar_Again[-2]</li><br>
+                          
                           <li>Oscar_Again[-2:-1]</li><br>
+                          
                           <li>Oscar_Again[-2:0]</li><br>
+                          
                           <li>Oscar_Again[-2:]</li><br>
+                          
                           <li>Oscar_Again[-10:-20]</li><br>
+                          
                           <li>Oscar_Again[-20:-10]</li><br>
+                          
                           <li>Oscar_Again[0:4:-1]</li>
                         </ul></b><br>
 
@@ -1923,7 +1936,7 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
                         </summary>
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command15">
                               >>> Oscar_Again = "Always forgive your
@@ -1995,7 +2008,7 @@ Click to record your <b>Start</b> time.</button>
 
                             I am not quite sure why, but this
                            causes me some mental anguish. I get
-                           it wrong nearly every time!<br><br>
+                           it wrong nearly every time!<br>
                           </div>
                         </details>
                       </li><br>
@@ -2009,8 +2022,11 @@ Click to record your <b>Start</b> time.</button>
 
                         <ul><b>
                           <li>Oscar_Again[29:36:1]</li><br>
+                          
                           <li>Oscar_Again[-27:-20:1]</li><br>
+                          
                           <li>Oscar_Again[-21:-28:-1]</li><br>
+                          
                           <li>Oscar_Again[::-1]</li>
                         </ul></b><br>
 
@@ -2020,7 +2036,7 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.</span>
                         </summary>
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command15">
                               >>> Oscar_Again = "Always forgive your
@@ -2065,9 +2081,9 @@ Click to record your <b>Start</b> time.</button>
                             <b>Characters</b> are delivered in <b>Reverse</b> order.<br><br>
                             
                             That just has to be useful when we <b>Reverse</b>
-                            and <b>Complement Sequences</b> a little later on!<br><br>
+                            and <b>Complement Sequences</b> a little later on!
                           </div>
-                        </details>
+                        </details><br>
                       </li>
                     </ol>
                   </div>
@@ -2099,7 +2115,7 @@ Click to record your <b>Start</b> time.</button>
                   </span><br><br>
 
                   Clearly, '<b>not in</b>' can be used to test for
-                  the absence of a <b>substring</b>.<br><br>
+                  the absence of a <b>substring</b>.
                 </li>
               </ol>
             </div>
@@ -2185,7 +2201,7 @@ Click to record your <b>Start</b> time.</button>
                   <b>Conditional Expressions</b> can be
                   defined from the comparison of
                   <b>strings</b> as well as
-                  <b>numeric values</b>.<br>
+                  <b>numeric values</b>.<br><br>
 
                   <span class="command">
                     >>> 'aaa' == 'aaa'<br>
@@ -2282,7 +2298,7 @@ Click to record your <b>Start</b> time.</button>
                   1</b> and <b>0</b> respectively. But why
                   on earth would you want to??? Not only
                   poor style but evidence of insanity
-                  I opine!<br>
+                  I opine!<br><br>
 
                   <span class="command">
                     >>> True<br>
@@ -2299,7 +2315,7 @@ Click to record your <b>Start</b> time.</button>
                     12<br>
                     >>>
                   </span>
-                </li><br>
+                </li>
               </ol><br>
 
               <div class="question">
@@ -2308,15 +2324,11 @@ Click to record your <b>Start</b> time.</button>
 
                 <ol>
                   <li>
-                    <p>What do you suppose the value of:
-                    </p>
-
-                    <span class="command">
+                    What do you suppose the value of
+				                    <span class="code">
                       3 * 'a' == 'a' + 'a' + 'a'
                     </span>
-
-                    <p>Might be?
-                    </p>
+                    might be?<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
@@ -2327,25 +2339,24 @@ Click to record your <b>Start</b> time.</button>
                           >>> 3 * 'a' == 'a' + 'a' + 'a'<br>
                           True<br>
                           >>>
+                        </span><br><br>
+
+                        <b>True</b>!!!, because
+																								<span class="code">
+                          3 * 'a'
                         </span>
+																								is '<b>a</b>' <b>concatenated</b>
+                        with itself
+                        <b>3</b> times (see above),
+                        as is
+																								<span class="code">
+                            'a' + 'a' + 'a'
+                        </span>.<br><br>
 
-                        <p><b>True</b>!!!, because<br><br>
-
-                            <b>3 * 'a'</b><br><br>
-
-                            is '<b>a</b>' <b>concatenated</b>
-                            with itself
-                            <b>3</b> times (see above),
-                            as is<br><br>
-
-                            <b>'a' + 'a' + 'a'</b>
-                        </p>
-
-                        <p>As the <b>Interpreter</b> will
-                           readily confirm,
-                           everything is really <b>'aaa'</b>
-                           in disguise.
-                        </p>
+                        As the <b>Interpreter</b> will
+                        readily confirm,
+                        everything is really <b>'aaa'</b>
+                        in disguise.<br><br>
 
                         <span class="command">
                           >>> 3 * 'a' == 'a' + 'a' + 'a' ==
@@ -2354,7 +2365,7 @@ Click to record your <b>Start</b> time.</button>
                           >>> 3 * 'a', 'a' + 'a' + 'a',  'aaa'<br>
                           ('aaa', 'aaa', 'aaa')<br>
                           >>>
-                        </span><br><br>
+                        </span>
                       </div>
                     </details>
                   </li><br>
@@ -2372,7 +2383,7 @@ Click to record your <b>Start</b> time.</button>
             </span>
           </summary>
 
-            <div class="minsect"><br>
+            <div class="minsect">
               <p>
                 <span class="command">
                   >>> (6 == 6) and (7 == 7)<br>
@@ -2401,7 +2412,7 @@ Click to record your <b>Start</b> time.</button>
                   Operators</b> (<b>and</b>, <b>or</b>)
                   and one <b>Unary Operator</b> (<b>not</b>)
                   to <b>Combine</b> or <b>Qualify
-                  Conditional Expressions</b>.<br>
+                  Conditional Expressions</b>.<br><br>
 
                   <span style="background:White;
                                color:Blue;
@@ -2446,7 +2457,7 @@ Click to record your <b>Start</b> time.</button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-</b>
                     <b>True</b> if <i>Condition</i>
                     is <b>NOT True</b>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </span><br><br>
 
@@ -2853,14 +2864,10 @@ Click to record your <b>Start</b> time.</button>
 
                   <li>
                     <p>
-                      What is the difference between:<br><br>
-                        <span class="command">
-                          a=6
-                        </span><br>
-                        and<br>
-                        <span class="command">
-                          a==6
-                        </span><br>
+                      What is the difference between
+                        <span class="code">a=6</span>
+                        and
+                        <span class="code">a==6</span>
                       ?
                     </p>
 
@@ -2868,52 +2875,43 @@ Click to record your <b>Start</b> time.</button>
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
-                        <p>A trivial question to start?
-                        </p>
+                     What is the difference between
+                        <span class="code">a=6</span>
+                        and
+                        <span class="code">a==6</span>
+                        A trivial question to start?<br><br>
 
-                        <p>A single '<b>=</b>', in <b>Python</b>,
-                           is used for <b>Assignment
-                           Statements</b>. So:<br><br>
+                        A single '<b>=</b>', in <b>Python</b>,
+                        is used for <b>Assignment
+                        Statements</b>. So
+                        <span class="code">a=6</span>
+                        reads as "<i><b>Assign</b> the
+                        <b>Integer Value</b> '<b>6</b>'
+                        to the <b>Variable</b> called
+                        '<b>a</b>'</i>".<br><br>
 
-                          <span class="command">
-                            a=6
-                          </span><br><br>
+                        But <b>Python</b> also needs to be
+                        able to say "<i>is equal to</i>"
+                        when constructing <b>Conditional
+                        Expressions</b>.<br><br>
 
-                           reads as "<i><b>Assign</b> the
-                           <b>Integer Value</b> '<b>6</b>'
-                           to the <b>Variable</b> called
-                           '<b>a</b>'</i>".
-                        </p>
+                        Trying to use a
+                        single '<b>=</b>' again would be
+                        ambiguous and so unacceptable.<br><br>
 
-                        <p>But <b>Python</b> also needs to be
-                           able to say "<i>is equal to</i>"
-                           when constructing <b>Conditional
-                           Expressions</b>.
-                        </p>
+                        The <b>Python</b> solution is to use
+                        a double '<b>=</b>' ('<b>==</b>'), as
+                        you have already seen when looking
+                        at <b>bool type Scalar Values</b>).<br><br>
 
-                        <p>Trying to use a
-                           single '<b>=</b>' again would be
-                           ambiguous and so unacceptable.
-                        </p>
-
-                        <p>The <b>Python</b> solution is to use
-                           a double '<b>=</b>' ('<b>==</b>'), as
-                           you have already seen when looking
-                           at <b>bool type Scalar Values</b>).
-                        </p>
-
-                        <p>So:<br><br>
-                          <span class="command">
-                            a==6
-                          </span><br><br>
-
-                           reads "<i>'<b>a</b>'
-                           is equal to '<b>6</b>'</i>", which is
-                           either <b>True</b> or <b>False</b>,
-                           that is, a <b>bool Data type</b>.
-                        </p>
+                        So
+	                       <span class="code">a==6</span>
+	                       reads "<i>'<b>a</b>'
+                        is equal to '<b>6</b>'</i>", which is
+                        either <b>True</b> or <b>False</b>,
+                        that is, a <b>bool Data type</b>.<br><br>
 
                         <span class="command">
                           >>> a = 6<br>
@@ -2950,7 +2948,8 @@ Click to record your <b>Start</b> time.</button>
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
+                      
                         <span class="command">
                           >>> d = e = f = 47.6<br>
                           >>> d, e, f<br>
@@ -2958,11 +2957,10 @@ Click to record your <b>Start</b> time.</button>
                           >>> type(e)<br>
                           &lt;class 'float'&gt;<br>
                           >>>
-                        </span><br>
+                        </span><br><br>
 
-                        <p>The simple messages of this
-                           question are:
-                        </p>
+                        The simple messages of this
+                        question are:<br><br>
 
                         <ul>
                           <li>
@@ -2990,22 +2988,21 @@ Click to record your <b>Start</b> time.</button>
                         </ul>
                       </div>
                     </details>
-                  </li>
+                  </li><br>
 
                   <li>
-                    <p>Now set the same <b>Three Variables</b>
-                       (<b>d</b>, <b>e</b> and <b>f</b>)
-                       to the <b>Value None</b>,
-                       all in one line of code.
-                    </p>
+                    Now set the same <b>Three Variables</b>
+                    (<b>d</b>, <b>e</b> and <b>f</b>)
+                    to the <b>Value None</b>,
+                    all in one line of code.<br><br>
 
-                    </p>Now what is the <b>type</b> of <b>e</b>?
-                    </p>
+                    Now what is the <b>type</b> of <b>e</b>?<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
+                      
                         <span class="command">
                           >>> d = e = f = None<br>
                           >>> d, e, f<br>
@@ -3013,11 +3010,10 @@ Click to record your <b>Start</b> time.</button>
                           >>> type(e)<br>
                           &lt;class 'NoneType'&gt;<br>
                           >>>
-                        </span><br>
+                        </span><br><br>
 
-                        <p>The messages of this
-                           question are:
-                        </p>
+	                       The messages of this
+	                       question are:<br><br>
 
                         <ul>
                           <li>
@@ -3115,35 +3111,32 @@ Click to record your <b>Start</b> time.</button>
                               6' 0", None<br>
                               Steven, 37, Male&nbsp;&nbsp;,
                               None&nbsp;, 35"
-                            </span><br>
+                            </span><br><br>
 
                             And all ambiguity is removed.
                           </li>
                       </div>
                     </details>
-                  </li>
+                  </li><br>
 
                   <li>
-                    <p>Try the commands:
-                    </p>
-
-                      <span class="command">
+                    Try the commands:<br><br>
+                    
+                      <span class="code">
                         a = 6<br>
                         a += 5<br>
-                        a -= 3<br>
-                      </span>
+                        a -= 3
+                      </span><br><br>
 
-                    <p>Displaying the value of <b>'a'</b> at
-                       each stage.
-                    </p>
+                    Displaying the value of <b>'a'</b> at
+                    each stage.<br><br>
 
-                    <p>Comments?<br>
-                    </p>
+                    Comments?<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> a = 6<br>
@@ -3158,41 +3151,34 @@ Click to record your <b>Start</b> time.</button>
                           >>> <br>
                         </span><br><br>
 
-                        <span class="command">
+                        <span class="code">
                           a += 5
                         </span><br>
-
-                        <p>is shorthand for
-                        </p>
-
-                        <span class="command">
+                        is shorthand for
+                        <span class="code">
                           a = a + 5
                         </span><br>
 
-                        <span class="command">
+                        <span class="code">
                           a -= 3
-                        </span><br>
-
-                        <p>is shorthand for
-                        </p>
-
-                        <span class="command">
+                        </span>
+                        is shorthand for
+                        <span class="code">
                           a = a - 3
-                        </span><br>
+                        </span><br><br>
 
-                        <p>I think these are very readable and
-                           tidy truncations. I use them all
-                           the time.
-                        </p>
+                        I think these are very readable and
+                        tidy truncations. I use them all
+                        the time.
+                        
                       </div>
                     </details>
-                  </li>
+                  </li><br>
 
                   <li>
-                    <p>How about
-                    </p>
+                    How about:<br><br>
 
-                    <span class="command">
+                    <span class="code">
                       a /= 2<br>
                       a *= 4<br>
                       a //= 5<br>
@@ -3220,9 +3206,8 @@ Click to record your <b>Start</b> time.</button>
                           >>>
                         </span><br><br>
 
-                        <p>Yes, indeed the same trick works for
-                           all arithmetic operators
-                        </p>
+                        Yes, indeed the same trick works for
+                        all arithmetic operators<br><br>
 
                         <span class="command"
                           >>> a = "ba-"<br>
@@ -3237,23 +3222,20 @@ Click to record your <b>Start</b> time.</button>
                           >>>
                         </span><br><br>
 
-                        <p>It even works for Strings!
-                        </p>
+                        It even works for Strings!<br><br>
 
-                        <p>In this case, we construct a
-                           line of the chorus of the
-                           <a href="https://en.wikipedia.org/wiki/The_Kinks"
-                            target="_blank"> Kinks</a>
-                           under exposed masterpiece
-                           <a href="https://www.azlyrics.com/lyrics/kinks/afternoontea.htm"
-                            target="_blank">
-                                 <b>Afternoon Tea</b></a>.
-                        </p>
+                        In this case, we construct a
+                        line of the chorus of the
+                        <a href="https://en.wikipedia.org/wiki/The_Kinks"
+                         target="_blank"> Kinks</a>
+                        under exposed masterpiece
+                        <a href="https://www.azlyrics.com/lyrics/kinks/afternoontea.html"
+                         target="_blank">
+                              <b>Afternoon Tea</b></a>.<br><br>
 
-                        <p>Should you be inclined to
-                           <a href="https://www.youtube.com/watch?v=TVUxUvyfzFg"
-                            target="_blank">listen</a>?
-                        </p>
+                        Should you be inclined to
+                        <a href="https://www.youtube.com/watch?v=TVUxUvyfzFg"
+                         target="_blank">listen</a>?
                       </div>
                     </details>
                   </li><br>
@@ -3361,7 +3343,7 @@ Click to record your <b>Start</b> time.</button>
 
                         I wonder why I did not make myself
                         a bit younger? After all, nobody
-                        watching!!!<br><br>
+                        watching!!!
                       </div>
                     </details>
                   </li><br>
@@ -3476,13 +3458,13 @@ Click to record your <b>Start</b> time.</button>
                     but it points at the
                     '<b>=</b>' sign for the
                     <b>Error</b> associated with
-                    '<b>not</b>'? Can you explain why?<br>
+                    '<b>not</b>'? Can you explain why?<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         The reason for the difference is
                         that '<b>not</b>'
@@ -3619,7 +3601,7 @@ Click to record your <b>Start</b> time.</button>
 
                         Confused? Me too! Treat this as
                         entertaining, in a sick
-                        sort of way, rather than vital.<br><br>
+                        sort of way, rather than vital.
 
                       </div>
                     </details>
@@ -3632,14 +3614,15 @@ Click to record your <b>Start</b> time.</button>
 
                     Is <b>type</b> therefore a
                     <b>Reserved Word</b> that
-                    cannot be used as a <b>Variable Name</b>?
+                    cannot be used as a <b>Variable Name</b>?<br><br>
+                    
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
-                        First, discovery by experiment.
+                        First, discovery by experiment.<br><br>
 
                         <span class="command">
                           >>> type = "Can I use the Name of a
@@ -3676,7 +3659,7 @@ Click to record your <b>Start</b> time.</button>
                        word <b>type</b> is
                        <b><i>NOT</i></b> special at all,
                        and so available for
-                       use as a <b>Variable Name</b>.<br><br>
+                       use as a <b>Variable Name</b>.
                       </div>
                     </details>
                   </li><br>
@@ -3688,13 +3671,13 @@ Click to record your <b>Start</b> time.</button>
                     Are they <b>Reserved Words</b>?<br><br>
 
                     Can they be used as
-                    <b>Variable Names</b>?<br>
+                    <b>Variable Names</b>?<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> True = 1<br>
@@ -4139,7 +4122,7 @@ Click to record your <b>Start</b> time.</button>
               <b>Python</b> offers a set of
               <b>Built-in Functions</b> to "<b>Cast</b>" the
               initial <b>type</b> of Scalar into another. These
-              are (in their simplest usage):
+              are (in their simplest usage):<br><br>
 
               <ol>
                 <li>
@@ -4176,7 +4159,7 @@ Click to record your <b>Start</b> time.</button>
                   <li>
                     Might there be some limits to what
                     <b>int()</b> will accept as a sensible
-                    <b>Argument</b>?<br>
+                    <b>Argument</b>?<br><br>
 
                     Try:<br><br>
                       <ul>
@@ -4191,7 +4174,7 @@ Click to record your <b>Start</b> time.</button>
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> int(3.4)<br>
@@ -4236,9 +4219,10 @@ Click to record your <b>Start</b> time.</button>
                           >>> int(float("98.9"))<br>
                           98<br>
                           >>>
-                        </span><br>
+                        </span><br><br>
 
-                        <p class="hint"> Just in case I have
+                        <div class="hint">
+                          Just in case I have
                           not already mentioned it, <b>int</b>
                           to <b>float</b> conversions
                           <b><i>ALWAYS</i></b> round
@@ -4248,7 +4232,7 @@ Click to record your <b>Start</b> time.</button>
 
                           So <b>98.9</b> becomes <b>98</b>
                           and not <b>99</b>.<br>
-                        </p>
+                        </div><br>
 
                         <span class="command">
                           >>> int("two")
@@ -4263,7 +4247,7 @@ Click to record your <b>Start</b> time.</button>
                         Makes perfect sense to me! But, I
                         suppose this one was just a weenie
                         bit optimistic? Maybe in
-                        <b>Python 7</b>?<br><br>
+                        <b>Python 7</b>?
                       </div>
                     </details>
                   </li><br>
@@ -4281,7 +4265,7 @@ Click to record your <b>Start</b> time.</button>
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
    
                         <span class="command">
                           >>> int()<br>
@@ -4315,7 +4299,7 @@ Click to record your <b>Start</b> time.</button>
 
               <div class="minsect"><br>
 
-                These include:
+                These include:<br><br>
 
                 <ol>
                   <li>
@@ -4360,13 +4344,13 @@ Click to record your <b>Start</b> time.</button>
                     magnitude of your input without regard to
                     its sign"</i>, or <i>"the distance of your
                     input Value from Zero"</i>.
-                    Whichever you prefer.<br>
+                    Whichever you prefer.<br><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> abs(46)<br>
@@ -4388,7 +4372,7 @@ Click to record your <b>Start</b> time.</button>
 
                   <li>
                     Do you suppose <b>min()</b> & <b>max()</b>
-                    will work with:
+                    will work with:<br><br>
 
                     <ul>
                       <li>a mixture of <b>int</b>s and
@@ -4396,13 +4380,13 @@ Click to record your <b>Start</b> time.</button>
                       <li><b>strings</b>?</li>
                       <li>a mixture of <b>strings</b> and
                           <b>Numbers</b>?</li>
-                    </ul>
+                    </ul><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> min(-3, 8, -12, 4, 7)<br>
@@ -4484,7 +4468,7 @@ Click to record your <b>Start</b> time.</button>
 
                         Never mind the merits of the case!
                         That is demonstrably the <b>Rule
-                        of Python</b>!<br><br>
+                        of Python</b>!
 
                       </div>
                     </details>
@@ -4512,13 +4496,13 @@ Click to record your <b>Start</b> time.</button>
                         <b>2</b> decimal,places. Any comments
                         on the answer?
                       </li>
-                    </ul>
+                    </ul><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> round(4.6783,3)
@@ -4631,13 +4615,13 @@ Click to record your <b>Start</b> time.</button>
                     <ul>
                       <li>"<b>abcdef</b>"</li>
                       <li>"<b>a\f\vbc\t\tde\\f\n</b>"</li>
-                    </ul>
+                    </ul><br>
 
                     <details class="answer">
                     <summary><span class="anssum">Answer.</span>
                     </summary>
 
-                      <div class="answer">
+                      <div class="answer"><br>
 
                         <span class="command">
                           >>> len("abcdef")<br>
@@ -4668,7 +4652,7 @@ Click to record your <b>Start</b> time.</button>
                         is <b>11</b>.
                       </div>
                     </details>
-                  </li>
+                  </li><br>
                 </ol>
               </div>
             </div>
@@ -4740,7 +4724,7 @@ Click to record your <b>Start</b> time.</button>
                         <summary><span class="anssum">Answer.
                         </span></summary>
 
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command16">
                               >>> Best_Integer = input("Enter
@@ -4855,12 +4839,12 @@ Click to record your <b>Start</b> time.</button>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;
                                 <b>str((int(Best_Integer) *
-                                float(Best_Float)))</b><br><br>
+                                float(Best_Float)))</b>
                               </li>
                             </ul>
                           </div>
                         </details>
-                      </li>
+                      </li><br>
                     </ol>
                   </div>
                 </li><br>
@@ -4896,19 +4880,19 @@ Click to record your <b>Start</b> time.</button>
                         <b>print()</b> a collection of
                         <b>Scalar Values</b> including an
                         <b>Integer</b>, a <b>Float</b>, a
-                        <b>Boolean</b> and a <b>String</b>.
+                        <b>Boolean</b> and a <b>String</b>.<br><br>
 
-                        <p class="hint">
+                        <div class="hint">
                           <b>Arguments</b> to <b>print()</b>
                           are presented as a <b>Comma</b>
                           separated list.
-                        </p>
+                        </div><br>
 
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
 
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command16">
                               >>> print(1, 2, 3, 0.1, 1.2,
@@ -4937,7 +4921,7 @@ Click to record your <b>Start</b> time.</button>
                         <summary><span class="anssum">Answer.
                         </span></summary>
 
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command16">
                               >>> print (True, False,
@@ -4981,7 +4965,7 @@ Click to record your <b>Start</b> time.</button>
                         <summary><span class="anssum">Answer.
                         </span></summary>
 
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command16">
                               >>> print(1, 2, 3, 4, "abc",
@@ -4998,7 +4982,7 @@ Click to record your <b>Start</b> time.</button>
                               >>>
                             </span><br><br>
 
-                            All true and trivial?<br><br>
+                            All true and trivial?
                           </div>
                         </details>
                       </li><br>
@@ -5039,7 +5023,7 @@ Click to record your <b>Start</b> time.</button>
                         <summary><span class="anssum">Answer.
                         </span></summary>
 
-                          <div class="answer">
+                          <div class="answer"><br>
 
                             <span class="command16">
                               >>> print()<br>
@@ -5170,10 +5154,10 @@ Click to record your <b>Start</b> time.</button>
                                 <b>sep</b> and the
                                 <b>end Arguments</b> are used.
                               </li>
-                            </ul><br>
+                            </ul>
                           </div>
                         </details>
-                      </li>
+                      </li><br>
                     </ol>
                   </div><br>
 
@@ -5215,7 +5199,7 @@ Click to record your <b>Start</b> time.</button>
                   <img src="Images/format_string_value_set.png"
                        alt="Fiddle!"
                        class="centimg"
-                       height="97" width="680"><br><br>
+                       height="97" width="680"><br>
 
                   <b>print()</b> is shown with <b>3
                   Arguments</b>:<br><br>
@@ -5289,8 +5273,7 @@ Click to record your <b>Start</b> time.</button>
                   <img src="Images/string_modulo_overview.png"
                              alt="Fiddle!"
                              class="centimg"
-                             height="265" width="680">
-                  <br><br>
+                             height="265" width="680"><br>
 
                   <div class="question">
 
@@ -5312,7 +5295,8 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
-                          <div class="answer">
+                        
+                          <div class="answer"><br>
 
                             <span class="command">
                               >>> print("Int1: X%3dX Int2:
@@ -5356,7 +5340,8 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
-                          <div class="answer">
+                        
+                          <div class="answer"><br>
 
                             <span class="command">
                               >>> print("Float1: X%8.3fX
@@ -5404,7 +5389,8 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
-                          <div class="answer">
+                        
+                          <div class="answer"><br>
 
                             <span class="command">
                               >>> print("2.675 to
@@ -5474,7 +5460,7 @@ Click to record your <b>Start</b> time.</button>
                             If you really wish to know more, try
                             <a href="http://steve.hollasch.net/cgindex/coding/ieeefloat.html"
                              target="_blank"> this article</a>,
-                            which is relatively gentle.<br><br>
+                            which is relatively gentle.
 
                           </div>
                         </details>
@@ -5490,7 +5476,8 @@ Click to record your <b>Start</b> time.</button>
                         <details class="answer">
                         <summary><span class="anssum">Answer.
                         </span></summary>
-                          <div class="answer">
+                        
+                          <div class="answer"><br>
 
                             <span class="command">
                               >>> print("aaa %2d aaa" % (1),
@@ -5518,9 +5505,9 @@ Click to record your <b>Start</b> time.</button>
                             proud affirmative!
                           </div>
                         </details>
-                      </li>
+                      </li><br>
                     </ol>
-                  </div><br>
+                  </div>
                 </li>
               </ol>
             </div>
@@ -8394,7 +8381,7 @@ Click to record your <b>Start</b> time.</button>
             <a href="https://docs.python.org/3.7/library/functions.html#open"
             target="_blank"><b>open()</b></a> - Opens
             a disk file for <b>reading</b> or <b>writing</b>.
-          </li><br>
+          </li>
           
         </ol>
 
@@ -8728,7 +8715,7 @@ Click to record your <b>Start</b> time.</button>
             The use of comments integrated into code using
             '<b>#</b>' <b>Characters</b>.
           </li>
-        </ol>
+        </ol><br>
       </div>
     </details>
   </li><br>
