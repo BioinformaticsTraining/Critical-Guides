@@ -10,7 +10,13 @@ details
 	   outline:none;
 	 }
 	 
-/* Text justification for all p, div, h2, h3, h4 */
+/* Text justification class & for all p, div, h2, h3, h4 */
+
+.just {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 15px; margin-right: 15px;
+}
 
 p {
     text-align: justify;
