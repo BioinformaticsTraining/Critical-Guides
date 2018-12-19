@@ -1,0 +1,90 @@
+########################################
+# Program: garnier
+# Rundate: Tue 11 Dec 2018 12:43:41
+# Commandline: garnier
+#    [-sequence] ../../Data/pax6_human.fasta
+# Report_format: tagseq
+# Report_file: pax6_human.garnier
+########################################
+
+#=======================================
+#
+# Sequence: PAX6_HUMAN     from: 1   to: 422
+# HitCount: 117
+#
+# DCH = 0, DCS = 0
+# 
+#  Please cite:
+#  Garnier, Osguthorpe and Robson (1978) J. Mol. Biol. 120:97-120
+# 
+#
+#=======================================
+
+          .   10    .   20    .   30    .   40    .   50
+      MQNSHSGVNQLGGVFVNGRPLPDSTRQKIVELAHSGARPCDISRILQVSN
+helix                          HH     H                 
+sheet EE       EEEEEEEE          EEEEE         EEEEEE   
+turns                       T          TTTT TTT      TTT
+ coil   CCCCCCC        CCCCC CC            C            
+          .   60    .   70    .   80    .   90    .  100
+      GCVSKILGRYYETGSIRPRAIGGSKPRVATPEVVSKIAQYKRECPSIFAW
+helix                               HHHHHHHHH        HHH
+sheet   EEEEEEEE      EEEE       EEE                    
+turns TT        TTTTT     TTT   T            TTTT TT    
+ coil                C       CCC                 C  C   
+          .  110    .  120    .  130    .  140    .  150
+      EIRDRLLSEGVCTNDNIPSVSSINRVLRNLASEKQQMGADGMYDKLRMLN
+helix HHH                           HHHHHHHHHHHHHHHH    
+sheet                    EEEEEEEEE                  EEE 
+turns    TT TTTTTTTTT   T                               
+ coil      C         CCC          CC                   C
+          .  160    .  170    .  180    .  190    .  200
+      GQTGSWGTRPGWYPGTSVPGQPTQDGCQQQEGGGENTNSISSNGEDSDEA
+helix                                                HHH
+sheet                            EEE                    
+turns TT  TT   TTT TTT  TT  TTTTT    TT                 
+ coil   CC  CCC   C   CC  CC        C  CCCCCCCCCCCCCC   
+          .  210    .  220    .  230    .  240    .  250
+      QMRLQLKRKLQRNRTSFTQEQIEALEKEFERTHYPDVFARERLAAKIDLP
+helix HHHHHHH            HHHHHHHHHHHH     HHHHHHHHHHHHHH
+sheet          E                                        
+turns        TT TTTT                 T   T              
+ coil               CCCCC             CCC               
+          .  260    .  270    .  280    .  290    .  300
+      EARIQVWFSNRRAKWRREEKLRNQRRQASNTPSHIPISSSFSTSVYQPIP
+helix HHHH           HHHH    H                          
+sheet     EEE                          EEEEE            
+turns           TT       TTTT TTTTT   T       TTTTTT    
+ coil        CCC  CCC              CCC      CC      CCCC
+          .  310    .  320    .  330    .  340    .  350
+      QPTTPVSSFTSGSMLGRTDTALTNTYSALPPMPSFTMANNLPMQPPVPSQ
+helix                                                   
+sheet     EEEEE       EE EEEE         EEEEE        EEE  
+turns  T                     TTTT          TT  TT     TT
+ coil C CC     CCCCCCC  C        CCCCC       CC  CC     
+          .  360    .  370    .  380    .  390    .  400
+      TSSYSCMLPTSPSVNGRSYDTYTPPHMQTHMNSQPMGTSGTTSTGLISPG
+helix                                                   
+sheet     EEEE                  EEE              EEEE   
+turns TTTT    TT  T  TTTTTTT  TT     T   T             T
+ coil           CC CC       CC     CC CCC CCCCCCC    CC 
+          .  410    .  420
+      VSVPVQVPGSEPDMSQYWPRLQ
+helix                       
+sheet EEEEEEE               
+turns         T   TTTTT  TTT
+ coil        C CCC     CC   
+
+#---------------------------------------
+#
+#  Residue totals: H: 79   E: 97   T:124   C:122
+#         percent: H: 19.5 E: 23.9 T: 30.5 C: 30.0
+#
+#---------------------------------------
+
+#---------------------------------------
+# Total_sequences: 1
+# Total_length: 422
+# Reported_sequences: 1
+# Reported_hitcount: 117
+#---------------------------------------
