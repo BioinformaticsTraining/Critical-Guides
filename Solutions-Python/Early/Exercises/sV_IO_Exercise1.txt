@@ -1,0 +1,14 @@
+Best_Integer = input("Enter your Favourite Integer: ")
+
+Best_Float   = input("Enter your Favourite Float: ")
+
+Best_Colour  = input("Enter your Favourite Colour: ")
+
+Sentence     = "My favourite Integer is: " + Best_Integer + ',\n'
+Sentence    += "My favourite Float is: " + Best_Float + ',\n'
+Sentence    += "My favourite Sum is: "
+Sentence    += str((int(Best_Integer) + float(Best_Float))) + ',\n'
+Sentence    += "My favourite Product is: "
+Sentence    += str((int(Best_Integer) * float(Best_Float))) + ',\n'
+Sentence    += "My favourite Colour is: " + Best_Colour + '.'
+print(Sentence)
