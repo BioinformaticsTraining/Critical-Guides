@@ -1,0 +1,8 @@
+Spike_Poem='\n\n' + "a poem by spike - about his granny".title().center(65,'.') + '\n\n'
+
+Spike_Poem+="through every nook and every cranny".capitalize().rjust(40,'-').ljust(60,'*') + '\n'
+Spike_Poem+="the wind blew in on poor old Granny".capitalize().rjust(40,'-').ljust(60,'*') + '\n'
+Spike_Poem+="around her knees, into each ear".capitalize().rjust(40,'-').ljust(60,'*') + '\n'
+Spike_Poem+="(and up nose as well, I fear)".capitalize().rjust(40,'-').ljust(60,'*') + '\n'
+
+print(Spike_Poem)
