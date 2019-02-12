@@ -1,0 +1,83 @@
+# TEST SEQUENCE
+# aggGAACtATGcaTCtatTcaTAttTActacACGACTCGCgcacaggatAcctTaACGAttACcaaaAAAAAaaaa
+
+#
+# First erquest a sequence to be saved in a Variable,
+# and then make an Upper Case working copy
+#
+
+mRNA_Original=input("Enter the Sequence to be processed: ")
+mRNA_Upper = mRNA_Original.upper()
+
+#
+# Look for the ATG that is the Start of the CDS
+#
+
+Start_Position = mRNA_Upper.find("ATG")
+
+#
+# Trim off the 5 prime UTR and copy to a new Variable
+#
+
+CDS=mRNA_Upper[Start_Position:]
+
+#
+# Count the number of each type of Stop Codon
+# and print the results
+#
+
+TAA_Count = CDS.count('TAA')
+TAG_Count = CDS.count('TAG')
+TGA_Count = CDS.count('TGA')
+print("TAA_Count %4d\nTAG_Count %4d\nTGA_Count %4d\n" % (TAA_Count,TAG_Count,TGA_Count))
+
+#
+# Find the Stop Codon Nearest the front
+# Use rfind even though find makes more sense!
+#
+# Oh dear! if no match is found, rfind returns -1
+# That will mess thins up, so wee need to change any -1 to somwthing
+# big, such as the elength of the CDS
+#
+# I can see no way to do this without using a conditional statement ("if")
+# which we hae not covered yet! Ho hum, I expect you can cope
+#
+# More important to understand why leaving the -1 in place would mess things up!
+#
+
+CDS_Length = len(CDS)
+
+TAA_Pos = CDS.rfind('TAA')
+if (TAA_Pos == -1): TAA_Real_Pos = CDS_Length
+else: TAA_Real_Pos = TAA_Pos
+
+TAG_Pos = CDS.rfind('TAG')
+if (TAG_Pos == -1): TAG_Real_Pos = CDS_Length
+else: TAG_Real_Pos = TAG_Pos
+
+TGA_Pos = CDS.rfind('TGA')
+if (TGA_Pos == -1): TGA_Real_Pos = CDS_Length
+else: TGA_Real_Pos = TGA_Pos
+
+First_Stop = min(TAA_Real_Pos,TAG_Real_Pos,TGA_Real_Pos)
+
+print("First TAA is at: %4d\nFirst TAG is at: %4d\nFirst TGA is at: %4d\nFirst Stop is at: %4d" % (TAA_Pos,TAG_Pos,TGA_Pos,First_Stop))
+
+#
+# Trim off the 3 prime UTR
+#
+...
+CDS=CDS[:First_Stop]
+
+#
+# Check the CDS has no Frame Shift
+#
+
+print("CDS length is %4d\nCDS frame is %4d {if this is not zero, one is in trouble!}" % (len(CDS),len(CDS) % 3))
+
+#
+# Display the resulting CDS
+#
+
+print("the CDS sequence is: %s" % (CDS))
+
