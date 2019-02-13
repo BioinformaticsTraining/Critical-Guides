@@ -8554,64 +8554,172 @@ Click to record your <b>Start</b> time.</button>
                     Some, if not all, of the exercises in this section might have been
                     more sensibly written in program files? Maybe you did this? Anyway,
                     try this next task as a "program file" exercises.<br><br>
-                    
-                    What we have omitted to do so far is to consider how one might read
-                    an entire file comprised of an unknown number of lines in such a way
-                    that each line can be processed individually.<br><br>
-                    
-                    <div class="pseudos">
-                      In pseudo-code:<br><br>
+                   
+                    <div class="hint">
+                      What we have omitted to do so far is to consider how one might read
+                      an entire file comprised of an unknown number of lines in such a way
+                      that each line can be processed individually.<br><br>
                       
-                      <ul>
-                        <li>
-                          Open the <b>Sequence File</b>
-                          for <b>Reading</b>
-                        </li><br>
-                        <li>
-                          for every line in the file:<br><br>
-                          <ul>
-                            <li>
-                              Read in the line
-                            </li><br>
-                            <li>
-                              Process it
-                            </li>
-                          </ul>
-                        </li><br>
-                        <li>
-                          Close the file and say Boa Noite!
-                        </li>
-		                </ul><br>
-		              </div>
-		              		                
-		                And so to the arms of Morpheus I submit my ragged soul ... for t'is late! Or early? Dependent upon one's view of these things.
-<br><br>As Alexander (Puskin the is) would enigmatically put it:<br><br>
-
-Oh, Morpheus, give me joy till morning<br>
-For my forever painful love:<br>
-Just blow out candles' burning<br>
-And let my dreams in blessing move.<br>
-Let from my soul disappear<br>
-The separation's sharp rebuke!<br>
-And let me see that dear look,<br>
-And let me hear voice that dear.<br>
-And when will vanish dark of night<br>
-And you will free my eyes at leaving,<br>
-Oh, if my heart would have a right<br>
-To lose its love till dark of evening!<br><br>
-
-Alexander Sergeyevich Pushkin<br><br>
-
-Nice words ... not that I am entirely sure of all of the message? ...
-needs a short manual I opine!<br>
-Is he missing someone?
-Feeling frisky?
-Who is it blowing out the candles?
-and/or doing the rebuking?
-
-<br><br>Python is easier than this! If not so rounded ...
-		            </li>
-                </ol><br>
+                      <div class="pseudos">
+                        In pseudo-code:<br><br>
+                        <ul>
+                          <li>
+                            Open the <b>Sequence File</b>
+                            for <b>Reading</b>
+                          </li><br>
+                          <li>
+                            for every line in the file:<br><br>
+                            <ul>
+                              <li>
+                                Read in the line
+                              </li><br>
+                              <li>
+                                Process it
+                              </li>
+                            </ul>
+                          </li><br>
+                          <li>
+                            Close the file and say Boa Noite!
+                          </li>
+                        </ul>
+		                </div><br>
+		              
+		                The concept/syntax we have not yet considered relates to the
+		                pseudo-code line:<br><br>
+		              
+                      <div class="pseudos">
+                        for every line in the file:
+		                </div><br>
+		              
+		                This is a <b>Loop</b>, or means of repeating a section of code
+		                a number of times. <b>Loops</b> we consider in detail a little
+		                further on. For now, we need just enough understanding to
+		                one form of <b>Loop</b> in a very simple fashion for a restricted
+		                number of situations.<br><br>
+		              
+		                OK ... it goes like this:<br><br>
+		              
+		                <div class="code14", style="font-weight:normal">
+		                  <i>for &lt;Variable Name& in &lt;File Handle | List like Object&gt;:<br>
+		                  &nbsp;&nbsp;&nbsp;&nbsp;Do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interesting
+		                  things to whatever is in the Named Variable<br>
+		                  &nbsp;&nbsp;&nbsp;&nbsp;Do more interesting
+		                  things to whatever is in the Named Variable</i><br>
+		                </div><br><br>
+		              
+		                The program runs the indented code <i>for</i> each <i>Line</i> of the <i>File</i>
+		                in turn and leaves
+		                the <b>Loop</b> only when the <b>E</b>nd <b>O</b>f <b>F</b>ile (<b>EOF</b>)
+		                is encountered.<br><br> 
+		              
+		                The indentation is vital! Conventionally, the indentation is <b>4 Spaces</b>
+		                or a <b>Tab</b>. <b>Tabs</b> are generally not advised as they can be interpreted
+		                differently on different systems. For <b>Python3</b>, it is not mandatory
+		                to use exactly <b>4 Spaces</b>, you can choose the size of indent you like,
+		                as long as you do so consistently.<br><br>
+		              
+		                So, for example, to read, line by line, a file whose handle is
+		                <b>fh</b>, and print out each line in turn, one might try:<br><br>
+		              
+		                <div class="code14">		
+		                  for Line in fh:<br>
+		                  &nbsp;&nbsp;&nbsp;&nbsp;print("This is a nice Line ",Line)<br>
+		                  &nbsp;&nbsp;&nbsp;&nbsp;print("So nice, I will display
+		                  it again! ",Line)<br>
+		                  print("At this point ALL the lines of the file fh
+		                  have been printed - Hoorah!")<br>
+		                </div>
+		              </div><br>
+		                
+		              After all that preamble, I have forgotten the task for this exercise!
+		              Possibly it was to (in a program file):<br><br>
+		                
+		              <ul>
+		                <li>
+		                  Write a file with a number of lines of text using just one write() command
+		                </li><br>
+		                <li>
+		                  Using a for loop, read back each line in turn and:<br><br>
+		                  <ul>
+		                    <li>
+		                      print out the line
+		                    </li><br>
+		                    <li>
+		                      print out an <b>upper case</b> version of the line
+		                    </li><br>
+		                    <li>
+		                      print out an <b>case swapped</b> version of the line
+		                    </li><br>
+		                    <li>
+		                      print out the <b>case swapped</b> version of the line <b>backwards</b>
+		                    </li>
+		                  </ul>
+		                </li><br>
+		                <li>
+		                  Display some sort of nauseous message of self congratulation
+		                </li>
+		              </ul><br>
+		               
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                        My answer for this exercise is in
+                        <a href="../Solutions-Python/Early/Exercises/sVI_fileread_Exercise5.txt"
+                           target="_blank">this file</a>.<br>
+                           
+                        <p class="hint">
+                          <b>Note</b>
+                          The line:<br><br>
+                            <span class=code14>
+                              Line=Line.rstrip('\n')
+                            </span><br><br>
+                            What does this acheive? Try commenting it out and see what difference it make to the output.
+                        </p>
+                              
+                      </div>
+                    </details>
+                  </li><br>
+                  <li>
+                    A small general, but important point.<br><br>
+                    
+                    In my answer to the last Exercise I wrote:<br><br>
+                    
+                    <div class="code12">
+                      print(Line.upper())            # print the uppercase version of the current line<br>
+                      Line_Case_Swap=Line.swapcase() # make a case swapped version of the current line<br>
+                      print(Line_Case_Swap)          # print the case swapped version of the current line<br>
+                      print(Line_Case_Swap[::-1])    # print the case swapped version of the current line backwards<br>
+                    </div><br><br>
+                    
+                    Why do you suppose I used a variable to store <b>Line.swapcase()</b> but
+                    elected to print out <b>Line.upper()</b> directly?<br><br>
+                    
+                    <details class="answer">
+                    <summary><span class="anssum">Answer.</span>
+                    </summary>
+                      <div class="answer">
+                      
+                        Because .... to write the only believable alternative:<br><br>
+                      
+                        <div class="code12">
+                          print(Line.upper())          # print the uppercase version of the current line<br>
+                          print(Line.swapcase())       # print the case swapped version of the current line<br>
+                          print(Line.swapcase()[::-1]) # print the case swapped version of the current line backwards<br>
+                        </div><br>
+                    
+                        This gives the same result (<b>GOOD</b>) but involves calling the <b>swapcase()</b> method
+                        twice(<b>BAD!</b> The first 
+                        version only calls <b>swapcase()</b> once and is therefore more efficient.<br><br>
+                    
+                        It is generally good practice to avoid doing he same calculation more than once wherever
+                        possible. Not a huge saving in this case, so more a matter of style than making any efficiency
+                        gain, but <i>"good practice should never be overlooked"</i> (Quote, accompanied by minor violence to
+                        loving son, from <b>P. H. F. Judge</b> circa <b>1954</b> ... and repeated at regular intervals thereafter).
+                      </div>
+                    </detail>
+                  </li>
+                </ol>
               </div>
             </div>
           </details>
@@ -21726,4 +21834,33 @@ But not now.
 		      https://docs.python.org/3/library/site.html#module-site
 		      https://help.semmle.com/wiki/pages/viewpage.action?pageId=5933809
 		      https://docs.python.org/3/library/site.html#module-site
+		      
+		      
+		      And so to the arms of Morpheus I submit my ragged soul ... for t'is late! Or early? Dependent upon one's view of these things.
+<br><br>As Alexander (Puskin the is) would enigmatically put it:<br><br>
+
+Oh, Morpheus, give me joy till morning<br>
+For my forever painful love:<br>
+Just blow out candles' burning<br>
+And let my dreams in blessing move.<br>
+Let from my soul disappear<br>
+The separation's sharp rebuke!<br>
+And let me see that dear look,<br>
+And let me hear voice that dear.<br>
+And when will vanish dark of night<br>
+And you will free my eyes at leaving,<br>
+Oh, if my heart would have a right<br>
+To lose its love till dark of evening!<br><br>
+
+Alexander Sergeyevich Pushkin<br><br>
+
+Nice words ... not that I am entirely sure of all of the message? ...
+needs a short manual I opine!<br>
+Is he missing someone?
+Feeling frisky?
+Who is it blowing out the candles?
+and/or doing the rebuking?
+
+<br><br>Python is easier than this! If not so rounded ...
+
 -->
