@@ -1,0 +1,22 @@
+# TEST Sequence
+# acgactcagCGCTCAGCTGCATGACTCGATgcagcatgactgact
+
+# Enter the Sequence to be processed
+
+Forward_Mixed=input("Type in the sequence to be Reversed and Complemented: ")
+
+# Create an Upper Case copy of the input Sequence
+
+Forward_Upper=Forward_Mixed.upper()
+
+# In one gloroous fell swoop ... complement the uppercase input Sequence
+
+Forward_Complement=Forward_Upper.replace('A', 'X').replace('C','Z').replace('G','C').replace('T', 'A').replace('X','T').replace('Z','G')
+
+# Reverse the complemented sequence using pretty tricky slice
+
+Reverse_Complement=Forward_Complement[::-1]
+
+# Display all the steps in the input sequence traverse from on strand to the other
+
+print ("Forward_Mixed:\t\t%s\nForward_Upper:\t\t%s\nForward_Complement:\t%s\nReverse_Complement:\t%s\n" % (Forward_Mixed,Forward_Upper,Forward_Complement,Reverse_Complement))
